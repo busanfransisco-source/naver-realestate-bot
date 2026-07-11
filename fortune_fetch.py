@@ -53,27 +53,38 @@ def find_today_document_srl(month, day):
         if best_srl is None or srl > best_srl:
             best_srl = srl
 
-    return best_srl
+    return best_srl, title_needle
 
 
-def fetch_document_text(srl):
+def fetch_document_text(srl, title_needle):
     url = f"{BASE}?mid=today&document_srl={srl}"
     resp = requests.get(url, headers=HEADERS, timeout=20)
     resp.raise_for_status()
     resp.encoding = "utf-8"
     soup = BeautifulSoup(resp.text, "html.parser")
-    full_text = soup.get_text("\n")
 
-    # 날짜/조회수 줄 (예: "2026.07.08" ...) 다음부터 "이 게시물을" 전까지가 본문
-    date_match = re.search(r"\d{4}\.\d{2}\.\d{2}", full_text)
+    # 공백 구분자를 써서, 숫자/한글이 개별 태그로 쪼개져 있어도
+    # 단어 단위가 줄바꿈 없이 이어지도록 한다.
+    full_text = soup.get_text(" ")
+    full_text = re.sub(r"[ \t]+", " ", full_text)
+
+    # 사이트가 제목/음력 줄의 숫자를 태그별로 잘게 쪼개놓아서 title_needle과
+    # 정확히 문자열 일치가 안 될 수 있다. 대신 실제 본문(띠별 운세)은 항상
+    # "〈...띠〉" 로 시작하므로 그 첫 등장 지점을 본문 시작으로 삼는다.
+    start_idx = full_text.find("〈")
     end_idx = full_text.find("이 게시물을")
 
-    if date_match and end_idx != -1 and end_idx > date_match.end():
-        body = full_text[date_match.end():end_idx]
+    if start_idx != -1 and end_idx != -1 and end_idx > start_idx:
+        body = full_text[start_idx:end_idx]
     else:
         body = full_text
 
-    # 빈 줄 정리
+    # 띠별 문단 앞에서 줄바꿈을 넣어 보기 좋게 정리
+    body = re.sub(r"\s*(〈[^〉]+〉)\s*", r"\n\n\1\n", body)
+    # "운세지수 NN%. 금전 NN 건강 NN 애정 NN" 뒤에도 문단 구분
+    body = re.sub(r"(애정\s*\d+)\s*", r"\1\n", body)
+    body = re.sub(r"\n{3,}", "\n\n", body)
+
     lines = [ln.strip() for ln in body.splitlines()]
     lines = [ln for ln in lines if ln]
     return "\n".join(lines)
@@ -85,10 +96,10 @@ def build_report():
     header = f"{now.year}년 {now.month}월 {now.day}일 {weekday_kr}\n\n❒ 오늘의 운세 ❒\n"
 
     try:
-        srl = find_today_document_srl(now.month, now.day)
+        srl, title_needle = find_today_document_srl(now.month, now.day)
         if not srl:
             return header + "\n(오늘 날짜의 운세 글을 아직 찾지 못했습니다.)"
-        body = fetch_document_text(srl)
+        body = fetch_document_text(srl, title_needle)
         if not body:
             return header + "\n(오늘 날짜의 운세 글을 찾았지만 본문을 추출하지 못했습니다.)"
         return header + "\n" + body
