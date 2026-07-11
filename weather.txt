@@ -8,12 +8,12 @@
 ✫춘천(🌤️)➠(🌤️)  23℃ ~ 33℃
 ✫강릉(☁️)➠(☁️)  26℃ ~ 36℃
 ✫청주(☀️)➠(☀️)  24℃ ~ 34℃
-✫대전(☀️)➠(☀️)  22℃ ~ 34℃
+✫대전(?)➠(?)  가져오기 실패: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)
 ✫세종(☀️)➠(☀️)  23℃ ~ 35℃
 ✫전주(☀️)➠(☀️)  23℃ ~ 35℃
 ✫광주(☀️)➠(☀️)  23℃ ~ 33℃
 ✫대구(☀️)➠(☀️)  23℃ ~ 35℃
 ✫부산(☀️)➠(☀️)  24℃ ~ 34℃
 ✫울산(☀️)➠(☀️)  22℃ ~ 30℃
-✫창원(?)➠(?)  가져오기 실패: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=15)
-✫제주(?)➠(?)  가져오기 실패: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=15)
+✫창원(☀️)➠(☀️)  23℃ ~ 33℃
+✫제주(?)➠(?)  가져오기 실패: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)
