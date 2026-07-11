@@ -2,8 +2,9 @@ name: Fortune Fetch
 
 on:
   schedule:
-    # 매일 21:50 UTC = 06:50 KST (다음날) - 7시 전달 준비를 위해 10분 여유
-    - cron: "50 21 * * *"
+    # 매일 20:30 UTC = 05:30 KST (다음날) - 7시 전달까지 90분 여유를 둬서
+    # GitHub Pages/CDN 캐시가 확실히 갱신될 시간을 확보한다.
+    - cron: "30 20 * * *"
   workflow_dispatch: {}   # Actions 탭에서 수동 실행 테스트용
 
 permissions:
