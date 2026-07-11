@@ -64,25 +64,31 @@ def fetch_document_text(srl, title_needle):
     resp.encoding = "utf-8"
     soup = BeautifulSoup(resp.text, "html.parser")
 
-    # 공백 구분자를 써서, 숫자/한글이 개별 태그로 쪼개져 있어도
-    # 단어 단위가 줄바꿈 없이 이어지도록 한다.
-    full_text = soup.get_text(" ")
+    # 구분자를 넣지 않고(빈 문자열) 이어붙인다. 이 사이트는 숫자/기호를
+    # 낱개 태그로 쪼개서 렌더링하는데(스크래핑 방지 목적으로 보임), 실제
+    # 단어 사이 공백은 원본에 이미 별도 텍스트 노드로 존재한다. 여기서
+    # 구분자로 공백을 넣으면 오히려 "84년생" 같은 것이 "84 년생"처럼
+    # 없던 공백이 낱개 태그 경계마다 끼어들어 버린다.
+    full_text = soup.get_text("")
     full_text = re.sub(r"[ \t]+", " ", full_text)
 
-    # 사이트가 제목/음력 줄의 숫자를 태그별로 잘게 쪼개놓아서 title_needle과
-    # 정확히 문자열 일치가 안 될 수 있다. 대신 실제 본문(띠별 운세)은 항상
-    # "〈...띠〉" 로 시작하므로 그 첫 등장 지점을 본문 시작으로 삼는다.
+    # 대신 실제 본문(띠별 운세)은 항상 "〈...띠〉" 로 시작하므로 그
+    # 첫 등장 지점을 본문 시작으로 삼는다.
     start_idx = full_text.find("〈")
     end_idx = full_text.find("이 게시물을")
 
     # 본문(〈) 바로 앞에 있는 "[음력 N월 N일] 일진: OO(한자)" 줄을
-    # 헤드라인 2번째 줄로 쓰기 위해 별도로 뽑아둔다.
+    # 헤드라인 2번째 줄로 쓰기 위해 별도로 뽑아둔다. 혹시라도 공백이
+    # 남아있는 경우까지 대비해 공백을 다 지운 뒤 매칭하고, 자리표시자로
+    # 다시 정갈하게 조립한다.
     lunar_line = ""
     if start_idx != -1:
-        window = full_text[max(0, start_idx - 200):start_idx]
-        m = re.search(r"\[음력[^\]]*\]\s*일진[:\s]*\S+(?:\([^)]*\))?", window)
+        window = full_text[max(0, start_idx - 300):start_idx]
+        compact = re.sub(r"\s+", "", window)
+        m = re.search(r"\[음력(\d+)월(\d+)일\]일진:?([^\(\)\[\]]+?)(?:\(([^)]*)\))?(?=\[|$)", compact)
         if m:
-            lunar_line = m.group(0).strip()
+            lm, ld, ganji, hanja = m.groups()
+            lunar_line = f"[음력 {lm}월 {ld}일] 일진: {ganji.strip()}" + (f"({hanja})" if hanja else "")
 
     if start_idx != -1 and end_idx != -1 and end_idx > start_idx:
         body = full_text[start_idx:end_idx]
