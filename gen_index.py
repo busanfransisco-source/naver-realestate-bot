@@ -37,11 +37,20 @@ def main():
     lines.append("</ul>")
     lines.append("</body></html>")
 
+    content = "\n".join(lines)
+
+    # index.html은 사람이 보기 위한 용도로 계속 유지.
     with open("index.html", "w", encoding="utf-8") as f:
-        f.write("\n".join(lines))
+        f.write(content)
+
+    # hub.html: 예약 작업(스케줄러)이 매일 여는 "진입점" 전용 파일.
+    # index.html은 예전에 이미 여러 번 조회된 적이 있어 캐시가 오래된 채로
+    # 굳어버릴 수 있으므로, 한 번도 조회된 적 없는 새 파일명을 진입점으로 쓴다.
+    with open("hub.html", "w", encoding="utf-8") as f:
+        f.write(content)
 
     print(
-        f"index.html 생성 완료: weather 파일 {len(weather_files)}개, "
+        f"index.html/hub.html 생성 완료: weather 파일 {len(weather_files)}개, "
         f"news 파일 {len(news_files)}개, fortune 파일 {len(fortune_files)}개"
     )
 
