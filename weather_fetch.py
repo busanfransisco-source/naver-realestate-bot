@@ -7,6 +7,7 @@ Open-Meteo(무료, API 키 불필요)에서 도시별 오전/오후 하늘상태
 """
 
 import sys
+import time
 from collections import Counter
 from datetime import datetime, timezone, timedelta
 
@@ -72,9 +73,18 @@ def fetch_city_weather(lat, lon):
         "&daily=temperature_2m_max,temperature_2m_min"
         "&timezone=Asia%2FSeoul&forecast_days=1"
     )
-    resp = requests.get(url, timeout=15)
-    resp.raise_for_status()
-    data = resp.json()
+    last_err = None
+    for attempt in range(3):
+        try:
+            resp = requests.get(url, timeout=30)
+            resp.raise_for_status()
+            data = resp.json()
+            break
+        except Exception as e:
+            last_err = e
+            time.sleep(2)
+    else:
+        raise last_err
 
     hourly_codes = data["hourly"]["weathercode"]  # 24 values, local hour 0~23
     am_codes = hourly_codes[6:12]   # 06시~11시
@@ -103,6 +113,7 @@ def build_report():
             lines.append(f"✫{name}(?)➠(?)  가져오기 실패: {e}")
             continue
         lines.append(f"✫{name}({am_emoji})➠({pm_emoji})  {tmin}℃ ~ {tmax}℃")
+        time.sleep(0.5)
 
     return "\n".join(lines)
 
