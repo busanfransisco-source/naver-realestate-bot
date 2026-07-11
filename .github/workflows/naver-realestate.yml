@@ -1,13 +1,16 @@
-name: Naver Realestate to Telegram
+name: Naver Realestate Fetch
 
 on:
   schedule:
-    # 매일 22:00 UTC = 07:00 KST (다음날)
-    - cron: "0 22 * * *"
+    # 매일 21:50 UTC = 06:50 KST (다음날) - 7시 전달 준비를 위해 10분 여유
+    - cron: "50 21 * * *"
   workflow_dispatch: {}   # Actions 탭에서 수동 실행 테스트용
 
+permissions:
+  contents: write
+
 jobs:
-  send:
+  fetch:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
@@ -21,8 +24,12 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run script
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python naver_realestate_to_telegram.py
+      - name: Run fetch script
+        run: python naver_realestate_fetch.py
+
+      - name: Commit and push latest.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add latest.json
+          git diff --cached --quiet && echo "No changes" || (git commit -m "Update latest.json" && git push)
