@@ -102,6 +102,9 @@ def fetch_document_text(srl, title_needle):
     else:
         body = full_text
 
+    # "...받는다.운세지수" 처럼 마지막 문장 뒤 공백까지 같이 지워진 경우 복원
+    body = re.sub(r"\.(운세지수)", r". \1", body)
+
     # 띠별 문단 앞에서 줄바꿈을 넣어 보기 좋게 정리
     body = re.sub(r"\s*(〈[^〉]+〉)\s*", r"\n\n\1\n", body)
     # "운세지수 NN%. 금전 NN 건강 NN 애정 NN" 뒤에도 문단 구분
