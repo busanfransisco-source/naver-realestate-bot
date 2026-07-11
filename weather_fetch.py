@@ -3,7 +3,7 @@
 지역별 아침 날씨전망 -> weather.txt 로 저장 (GitHub Actions용)
 ------------------------------------------------------------
 Open-Meteo(무료, API 키 불필요)에서 도시별 오전/오후 하늘상태와 최저/최고기온을
-가져와 사용자가 원하는 고정 포맷의 텍스트로 저장한다.
+한 번의 API 호출(다중 좌표)로 가져와 사용자가 원하는 고정 포맷의 텍스트로 저장한다.
 """
 
 import sys
@@ -36,7 +36,7 @@ CITIES = [
     ("제주", 33.4996, 126.5312),
 ]
 
-# WMO weather code -> 이모지
+
 def code_to_emoji(code):
     if code == 0:
         return "☀️"
@@ -65,38 +65,29 @@ def most_common_code(codes):
     return Counter(codes).most_common(1)[0][0]
 
 
-def fetch_city_weather(lat, lon):
+def fetch_all_cities():
+    """모든 도시를 한 번의 요청(다중 좌표)으로 가져온다."""
+    lats = ",".join(str(lat) for _, lat, _ in CITIES)
+    lons = ",".join(str(lon) for _, _, lon in CITIES)
+
     url = (
         "https://api.open-meteo.com/v1/forecast"
-        f"?latitude={lat}&longitude={lon}"
-        "&hourly=weathercode"
+        f"?latitude={lats}&longitude={lons}"
+        "&hourly=weather_code"
         "&daily=temperature_2m_max,temperature_2m_min"
         "&timezone=Asia%2FSeoul&forecast_days=1"
     )
+
     last_err = None
     for attempt in range(3):
         try:
             resp = requests.get(url, timeout=30)
             resp.raise_for_status()
-            data = resp.json()
-            break
+            return resp.json()
         except Exception as e:
             last_err = e
-            time.sleep(2)
-    else:
-        raise last_err
-
-    hourly_codes = data["hourly"]["weathercode"]  # 24 values, local hour 0~23
-    am_codes = hourly_codes[6:12]   # 06시~11시
-    pm_codes = hourly_codes[12:18]  # 12시~17시
-
-    am_emoji = code_to_emoji(most_common_code(am_codes))
-    pm_emoji = code_to_emoji(most_common_code(pm_codes))
-
-    tmax = round(data["daily"]["temperature_2m_max"][0])
-    tmin = round(data["daily"]["temperature_2m_min"][0])
-
-    return am_emoji, pm_emoji, tmin, tmax
+            time.sleep(3)
+    raise last_err
 
 
 def build_report():
@@ -106,14 +97,28 @@ def build_report():
 
     lines = [date_line, "", "❒ 지역별 날씨전망 ❒", ""]
 
-    for name, lat, lon in CITIES:
+    try:
+        results = fetch_all_cities()
+    except Exception as e:
+        lines.append(f"(날씨 데이터를 가져오지 못했습니다: {e})")
+        return "\n".join(lines)
+
+    # 도시가 1개면 dict 하나만, 여러 개면 리스트로 온다
+    if isinstance(results, dict):
+        results = [results]
+
+    for (name, _, _), data in zip(CITIES, results):
         try:
-            am_emoji, pm_emoji, tmin, tmax = fetch_city_weather(lat, lon)
+            hourly_codes = data["hourly"]["weather_code"]
+            am_codes = hourly_codes[6:12]
+            pm_codes = hourly_codes[12:18]
+            am_emoji = code_to_emoji(most_common_code(am_codes))
+            pm_emoji = code_to_emoji(most_common_code(pm_codes))
+            tmax = round(data["daily"]["temperature_2m_max"][0])
+            tmin = round(data["daily"]["temperature_2m_min"][0])
+            lines.append(f"✫{name}({am_emoji})➠({pm_emoji})  {tmin}℃ ~ {tmax}℃")
         except Exception as e:
             lines.append(f"✫{name}(?)➠(?)  가져오기 실패: {e}")
-            continue
-        lines.append(f"✫{name}({am_emoji})➠({pm_emoji})  {tmin}℃ ~ {tmax}℃")
-        time.sleep(0.5)
 
     return "\n".join(lines)
 
