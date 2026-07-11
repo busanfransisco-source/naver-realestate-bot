@@ -13,6 +13,7 @@ import glob
 def main():
     weather_files = sorted(glob.glob("weather-*.txt"), reverse=True)
     news_files = sorted(glob.glob("latest-*.json"), reverse=True)
+    fortune_files = sorted(glob.glob("fortune-*.txt"), reverse=True)
 
     lines = [
         "<!DOCTYPE html>",
@@ -29,12 +30,20 @@ def main():
     for f in news_files:
         lines.append(f'<li><a href="{f}">{f}</a></li>')
     lines.append("</ul>")
+    lines.append("<h2>Fortune</h2>")
+    lines.append("<ul>")
+    for f in fortune_files:
+        lines.append(f'<li><a href="{f}">{f}</a></li>')
+    lines.append("</ul>")
     lines.append("</body></html>")
 
     with open("index.html", "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
 
-    print(f"index.html 생성 완료: weather 파일 {len(weather_files)}개, news 파일 {len(news_files)}개")
+    print(
+        f"index.html 생성 완료: weather 파일 {len(weather_files)}개, "
+        f"news 파일 {len(news_files)}개, fortune 파일 {len(fortune_files)}개"
+    )
 
 
 if __name__ == "__main__":
