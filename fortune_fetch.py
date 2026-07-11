@@ -64,15 +64,20 @@ def fetch_document_text(srl, title_needle):
     resp.encoding = "utf-8"
     soup = BeautifulSoup(resp.text, "html.parser")
 
-    # 구분자를 넣지 않고(빈 문자열) 이어붙인다. 이 사이트는 숫자/기호를
-    # 낱개 태그로 쪼개서 렌더링하는데(스크래핑 방지 목적으로 보임), 실제
-    # 단어 사이 공백은 원본에 이미 별도 텍스트 노드로 존재한다. 여기서
-    # 구분자로 공백을 넣으면 오히려 "84년생" 같은 것이 "84 년생"처럼
-    # 없던 공백이 낱개 태그 경계마다 끼어들어 버린다.
+    # 구분자를 넣지 않고(빈 문자열) 이어붙인다.
     full_text = soup.get_text("")
     full_text = re.sub(r"[ \t]+", " ", full_text)
 
-    # 대신 실제 본문(띠별 운세)은 항상 "〈...띠〉" 로 시작하므로 그
+    # 이 사이트는 숫자/기호를 낱개 텍스트 노드로 쪼개서 서버가 내려주고,
+    # 실제로는 브라우저에서 JS가 화면 표시용으로 공백을 정리해준다.
+    # requests로 받는 원본 HTML(=JS 실행 전)에는 그 공백이 그대로 남아있으므로
+    # 자주 나타나는 패턴을 규칙 기반으로 후처리해서 정리한다.
+    full_text = re.sub(r"\s+년생", "년생", full_text)
+    full_text = re.sub(r"\s+([.%,)])", r"\1", full_text)
+    full_text = re.sub(r"([(〈])\s+", r"\1", full_text)
+    full_text = re.sub(r"\s+([〉])", r"\1", full_text)
+
+    # 실제 본문(띠별 운세)은 항상 "〈...띠〉" 로 시작하므로 그
     # 첫 등장 지점을 본문 시작으로 삼는다.
     start_idx = full_text.find("〈")
     end_idx = full_text.find("이 게시물을")
@@ -83,7 +88,9 @@ def fetch_document_text(srl, title_needle):
     # 다시 정갈하게 조립한다.
     lunar_line = ""
     if start_idx != -1:
-        window = full_text[max(0, start_idx - 300):start_idx]
+        # 거리 제한 없이 본문(〈) 앞부분 전체에서 찾는다 (사이트가 랜덤하게
+        # 더 잘게 쪼개서 내려줄 때 고정 길이 윈도우로는 놓칠 수 있어서).
+        window = full_text[:start_idx]
         compact = re.sub(r"\s+", "", window)
         m = re.search(r"\[음력(\d+)월(\d+)일\]일진:?([^\(\)\[\]]+?)(?:\(([^)]*)\))?(?=\[|$)", compact)
         if m:
