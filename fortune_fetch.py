@@ -20,6 +20,7 @@ from bs4 import BeautifulSoup
 
 KST = timezone(timedelta(hours=9))
 WEEKDAY_KR = ["월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"]
+WEEKDAY_EN = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 
 HEADERS = {
     "User-Agent": (
@@ -109,9 +110,13 @@ def build_report():
 
 def main():
     report = build_report()
-    today = datetime.now(KST).strftime("%Y-%m-%d")
+    now = datetime.now(KST)
+    today = now.strftime("%Y-%m-%d")
     dated_file = f"fortune-{today}.txt"
-    for fname in ("fortune.txt", dated_file):
+    weekday_file = f"fortune-{WEEKDAY_EN[now.weekday()]}.txt"
+    # 요일별 고정 파일명으로 저장: 매일 URL이 안 바뀌면서도(provenance 문제 없음),
+    # 같은 URL을 일주일에 한 번만 재사용하므로 캐시가 오래 굳어버리는 문제를 피한다.
+    for fname in ("fortune.txt", dated_file, weekday_file):
         with open(fname, "w", encoding="utf-8") as f:
             f.write(report)
     print(report)

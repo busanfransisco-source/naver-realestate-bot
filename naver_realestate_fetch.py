@@ -27,6 +27,7 @@ HEADERS = {
 }
 
 KST = timezone(timedelta(hours=9))
+WEEKDAY_EN = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 
 
 def fetch_real_estate_headlines(url, max_articles=20):
@@ -76,20 +77,23 @@ def main():
         print("기사를 하나도 못 찾았어요. 네이버가 페이지 구조를 바꿨을 수 있습니다.")
         sys.exit(1)
 
-    today = datetime.now(KST).strftime("%Y-%m-%d")
+    now = datetime.now(KST)
+    today = now.strftime("%Y-%m-%d")
     data = {
-        "updated_at_kst": datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S"),
+        "updated_at_kst": now.strftime("%Y-%m-%d %H:%M:%S"),
         "source": SECTION_URL,
         "articles": articles,
     }
 
-    # 캐시 문제를 피하기 위해 날짜가 들어간 파일명으로도 저장 (매일 새 URL)
+    # 요일별 고정 파일명으로 저장: 매일 URL이 안 바뀌면서도(provenance 문제 없음),
+    # 같은 URL을 일주일에 한 번만 재사용하므로 캐시가 오래 굳어버리는 문제를 피한다.
     dated_file = f"latest-{today}.json"
-    for fname in (OUTPUT_FILE, dated_file):
+    weekday_file = f"latest-{WEEKDAY_EN[now.weekday()]}.json"
+    for fname in (OUTPUT_FILE, dated_file, weekday_file):
         with open(fname, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
 
-    print(f"{len(articles)}개 기사를 {OUTPUT_FILE}, {dated_file} 에 저장했습니다.")
+    print(f"{len(articles)}개 기사를 {OUTPUT_FILE}, {dated_file}, {weekday_file} 에 저장했습니다.")
 
 
 if __name__ == "__main__":
