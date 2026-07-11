@@ -36,6 +36,6 @@ jobs:
           git diff --cached --quiet && echo "No changes" || git commit -m "Update latest.json"
           git pull --rebase origin main
           python gen_index.py
-          git add index.html
-          git diff --cached --quiet && echo "No index changes" || git commit -m "Update index.html"
+          git add index.html hub.html
+          git diff --cached --quiet && echo "No index changes" || git commit -m "Update index.html/hub.html"
           git push
