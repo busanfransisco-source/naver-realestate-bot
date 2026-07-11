@@ -27,6 +27,7 @@ HEADERS = {
 }
 
 KST = timezone(timedelta(hours=9))
+WEEKDAY_KR = ["월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"]
 WEEKDAY_EN = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 
 
@@ -79,9 +80,13 @@ def main():
 
     now = datetime.now(KST)
     today = now.strftime("%Y-%m-%d")
+    weekday_kr = WEEKDAY_KR[now.weekday()]
+    headline = f"{now.strftime('%y')}년 {now.month}월 {now.day}일 {weekday_kr} 부동산 주요뉴스"
+
     data = {
         "updated_at_kst": now.strftime("%Y-%m-%d %H:%M:%S"),
         "source": SECTION_URL,
+        "headline": headline,
         "articles": articles,
     }
 
@@ -93,7 +98,23 @@ def main():
         with open(fname, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
 
-    print(f"{len(articles)}개 기사를 {OUTPUT_FILE}, {dated_file}, {weekday_file} 에 저장했습니다.")
+    # 헤드라인 + 기사 목록을 사람이 읽을 최종 포맷 그대로 완성해서 텍스트 파일로도 저장한다.
+    # (weather.txt/fortune.txt와 동일한 방식 — 예약 작업이 서식을 직접 조립하다가
+    # 틀리는 문제를 없애기 위해, 여기서 완성된 텍스트를 그대로 내려준다.)
+    report_lines = [headline, ""]
+    for art in articles:
+        report_lines.append(art["title"])
+        report_lines.append(art["url"])
+        report_lines.append("")
+    report_text = "\n".join(report_lines).rstrip() + "\n"
+
+    report_dated = f"realestate-{today}.txt"
+    report_weekday = f"realestate-{WEEKDAY_EN[now.weekday()]}.txt"
+    for fname in ("realestate.txt", report_dated, report_weekday):
+        with open(fname, "w", encoding="utf-8") as f:
+            f.write(report_text)
+
+    print(f"{len(articles)}개 기사를 {OUTPUT_FILE}, {dated_file}, {weekday_file}, realestate.txt, {report_dated}, {report_weekday} 에 저장했습니다.")
 
 
 if __name__ == "__main__":

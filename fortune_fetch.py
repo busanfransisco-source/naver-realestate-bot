@@ -75,6 +75,15 @@ def fetch_document_text(srl, title_needle):
     start_idx = full_text.find("〈")
     end_idx = full_text.find("이 게시물을")
 
+    # 본문(〈) 바로 앞에 있는 "[음력 N월 N일] 일진: OO(한자)" 줄을
+    # 헤드라인 2번째 줄로 쓰기 위해 별도로 뽑아둔다.
+    lunar_line = ""
+    if start_idx != -1:
+        window = full_text[max(0, start_idx - 200):start_idx]
+        m = re.search(r"\[음력[^\]]*\]\s*일진[:\s]*\S+(?:\([^)]*\))?", window)
+        if m:
+            lunar_line = m.group(0).strip()
+
     if start_idx != -1 and end_idx != -1 and end_idx > start_idx:
         body = full_text[start_idx:end_idx]
     else:
@@ -88,24 +97,25 @@ def fetch_document_text(srl, title_needle):
 
     lines = [ln.strip() for ln in body.splitlines()]
     lines = [ln for ln in lines if ln]
-    return "\n".join(lines)
+    return lunar_line, "\n".join(lines)
 
 
 def build_report():
     now = datetime.now(KST)
-    weekday_kr = WEEKDAY_KR[now.weekday()]
-    header = f"{now.year}년 {now.month}월 {now.day}일 {weekday_kr}\n\n❒ 오늘의 운세 ❒\n"
+    # 사용자 레퍼런스 포맷: "오늘의 운세, 7월 12일" + "[음력 5월 28일] 일진: 정해(丁亥)"
+    header_line1 = f"오늘의 운세, {now.month}월 {now.day}일"
 
     try:
         srl, title_needle = find_today_document_srl(now.month, now.day)
         if not srl:
-            return header + "\n(오늘 날짜의 운세 글을 아직 찾지 못했습니다.)"
-        body = fetch_document_text(srl, title_needle)
+            return header_line1 + "\n\n(오늘 날짜의 운세 글을 아직 찾지 못했습니다.)"
+        lunar_line, body = fetch_document_text(srl, title_needle)
         if not body:
-            return header + "\n(오늘 날짜의 운세 글을 찾았지만 본문을 추출하지 못했습니다.)"
-        return header + "\n" + body
+            return header_line1 + "\n\n(오늘 날짜의 운세 글을 찾았지만 본문을 추출하지 못했습니다.)"
+        header = header_line1 + ("\n" + lunar_line if lunar_line else "")
+        return header + "\n\n" + body
     except Exception as e:
-        return header + f"\n(운세 데이터를 가져오지 못했습니다: {e})"
+        return header_line1 + f"\n\n(운세 데이터를 가져오지 못했습니다: {e})"
 
 
 def main():
