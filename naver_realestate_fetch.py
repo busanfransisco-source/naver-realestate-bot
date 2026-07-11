@@ -76,16 +76,20 @@ def main():
         print("기사를 하나도 못 찾았어요. 네이버가 페이지 구조를 바꿨을 수 있습니다.")
         sys.exit(1)
 
+    today = datetime.now(KST).strftime("%Y-%m-%d")
     data = {
         "updated_at_kst": datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S"),
         "source": SECTION_URL,
         "articles": articles,
     }
 
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    # 캐시 문제를 피하기 위해 날짜가 들어간 파일명으로도 저장 (매일 새 URL)
+    dated_file = f"latest-{today}.json"
+    for fname in (OUTPUT_FILE, dated_file):
+        with open(fname, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
 
-    print(f"{len(articles)}개 기사를 {OUTPUT_FILE} 에 저장했습니다.")
+    print(f"{len(articles)}개 기사를 {OUTPUT_FILE}, {dated_file} 에 저장했습니다.")
 
 
 if __name__ == "__main__":

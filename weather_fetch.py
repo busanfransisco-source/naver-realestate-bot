@@ -125,8 +125,12 @@ def build_report():
 
 def main():
     report = build_report()
-    with open("weather.txt", "w", encoding="utf-8") as f:
-        f.write(report)
+    today = datetime.now(KST).strftime("%Y-%m-%d")
+    dated_file = f"weather-{today}.txt"
+    # 캐시 문제를 피하기 위해 날짜가 들어간 파일명으로도 저장 (매일 새 URL)
+    for fname in ("weather.txt", dated_file):
+        with open(fname, "w", encoding="utf-8") as f:
+            f.write(report)
     print(report)
 
 
