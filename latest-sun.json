@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-07-12 19:13:11",
+  "updated_at_kst": "2026-07-12 19:47:57",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 7월 12일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "대구도시개발공사, 시민참여단 '어반어스 2기' 출범",
+      "url": "https://n.news.naver.com/mnews/article/018/0006328654"
+    },
     {
       "title": "장동혁 대표 “이재명 정권이 집값 올려, 청와대에서 쫓겨날 것”…‘대토론회’는 면피용",
       "url": "https://n.news.naver.com/mnews/article/021/0002804108"
@@ -78,10 +82,6 @@
     {
       "title": "“잔금일 코앞인데”…은행권 대출 셧다운 ‘초읽기’ 돌입",
       "url": "https://n.news.naver.com/mnews/article/021/0002804101"
-    },
-    {
-      "title": "토지·주택 호가 30% 뛰고 계약 취소도…“중개소엔 외지인 붐벼”[달아오르는 광주 부동산]",
-      "url": "https://n.news.naver.com/mnews/article/011/0004640718"
     }
   ]
 }
