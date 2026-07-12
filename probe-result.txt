@@ -1,2 +1,4 @@
-매매 ERROR: KeyError('SttsApiTblData')
-전세 ERROR: KeyError('SttsApiTblData')
+### 기본 status=200
+{"RESULT":{"CODE":"ERROR-300","MESSAGE":"필수 값이 누락되어 있습니다. 요청인자를 참고 하십시오."}}
+### cycle 포함 status=200
+{"SttsApiTblData":[{"head":[{"list_total_count":167752},{"RESULT":{"CODE":"INFO-000","MESSAGE":"정상 처리되었습니다."}}]},{"row":[{"STATBL_ID":"T244183132827305","DTACYCLE_CD":"WK","WRTTIME_IDTFR_ID":"201219","GRP_ID":null,"GRP_NM":null,"CLS_ID":50071,"CLS_NM":"과천시","ITM_ID":10001,"ITM_NM":"지수","DTA_VAL":58.2810985505133,"UI_NM":"지수","GRP_FULLNM":null,"CLS_FULLNM":"경기>경부1권>과천시","ITM_FULLNM":"지수","WRTTIME_DESC":"2012-05-07"},{"STATBL_ID":"T244183132827305","DTACYCLE_CD":"WK","WRTTIME_IDTFR_ID":"201219","GRP_ID":null,"GRP_NM":null,"CLS_ID":50187,"CLS_NM":"상당구","ITM_ID":10001,"ITM_NM":"지수","DTA_VAL":109.738735697755,"UI_NM":"지수","GRP_FULLNM":null,"CLS_FULLNM":"충북>청주시>상당구","ITM_FULLNM":"지수","WRTTIME_DESC":"2012-05-07"},{"STATBL_ID":"T244183132827305","DTACYCLE_CD":"WK","WRTTIME_IDTFR_ID":"201219","GRP_ID":null,"GRP_NM":null,"CLS_ID":50125,"CLS_NM":"중구","ITM_ID":10001,"ITM_NM":"지수","DTA_VAL":98.3671167915146,"UI_NM":"지수","GRP_FULLNM":null,"CLS_FULLNM":"인천>중구","ITM_FULLNM":"지수","WRTTIME_DESC":"2012-05-07"}]}]}
