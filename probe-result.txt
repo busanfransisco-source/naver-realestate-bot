@@ -1,0 +1,35 @@
+### 청약홈 캘린더뷰 GET
+status=404 len=1647
+                                  <!DOCTYPE html>  <html lang="ko">  	<head>  	    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>  	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>  	    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1"/>  	    <meta name="format-detection" content="telephone=no"/>  	    <link rel="icon" type="image/ico" href="/images/favicon.ico"/>  	  	    <link rel="stylesheet" type="text/css" href="/css/kabhom/main/hom.css"/>  	  	    <title>한국부동산원 주택청약</title>  	    <script src="/js/kabhom/plugin/jquery.3.1.1.min.js"></script>  		<script src="/js/kabhom/plugin/jquery-ui.min.js"></script
+
+### 청약홈 APT목록 GET
+status=200 len=78845
+                                      <!DOCTYPE html> <html lang="ko"> <head> 	<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1" /> 	<meta name="format-detection" content="telephone=no" /> 	<link rel="icon" type="image/ico" href="https://static.applyhome.co.kr/images/kabhom/common/favicon.ico" /> 	<link rel="apple-touch-icon" href="https://static.applyhome.co.kr/images/kabhom/common/phone.png"/> 	<link rel="shortcut icon" href="https://static.applyhome.co.kr/images/kabhom/common/phone.png"/>  	 	<link rel="stylesheet" type="text/css" href="/css/kabhom/main/leftSubMenu.css"/> 	<link 
+
+### 청약홈 APT목록 POST
+status=200 len=78845
+                                      <!DOCTYPE html> <html lang="ko"> <head> 	<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1" /> 	<meta name="format-detection" content="telephone=no" /> 	<link rel="icon" type="image/ico" href="https://static.applyhome.co.kr/images/kabhom/common/favicon.ico" /> 	<link rel="apple-touch-icon" href="https://static.applyhome.co.kr/images/kabhom/common/phone.png"/> 	<link rel="shortcut icon" href="https://static.applyhome.co.kr/images/kabhom/common/phone.png"/>  	 	<link rel="stylesheet" type="text/css" href="/css/kabhom/main/leftSubMenu.css"/> 	<link 
+
+### 네이버검색 청약캘린더
+status=200 len=903329
+<!doctype html> <html lang="ko"><head> <meta charset="utf-8"> <meta name="referrer" content="strict-origin-when-cross-origin">  <meta name="format-detection" content="telephone=no,address=no,email=no"> <meta property="og:title" content="청약캘린더 : 네이버 검색"/> <meta property="og:image" content="https://ssl.pstatic.net/sstatic/search/common/og_v3.png"> <meta property="og:description" content="'청약캘린더'의 네이버 검색 결과입니다."> <meta name="description" lang="ko" content="'청약캘린더'의 네이버 검색 결과입니다."> <title>청약캘린더 : 네이버 검색</title> <link rel="shortcut icon" href="https://ssl.pstatic.net/sstatic/search/favicon/favicon_32x32_240820.ico">  <link rel="search" type="application/opensearchdescription+xml" href="https://ss
+
+### 네이버검색 분양캘린더
+status=200 len=335595
+<!doctype html> <html lang="ko"><head> <meta charset="utf-8"> <meta name="referrer" content="strict-origin-when-cross-origin">  <meta name="format-detection" content="telephone=no,address=no,email=no"> <meta property="og:title" content="분양캘린더 : 네이버 검색"/> <meta property="og:image" content="https://ssl.pstatic.net/sstatic/search/common/og_v3.png"> <meta property="og:description" content="'분양캘린더'의 네이버 검색 결과입니다."> <meta name="description" lang="ko" content="'분양캘린더'의 네이버 검색 결과입니다."> <title>분양캘린더 : 네이버 검색</title> <link rel="shortcut icon" href="https://ssl.pstatic.net/sstatic/search/favicon/favicon_32x32_240820.ico">  <link rel="search" type="application/opensearchdescription+xml" href="https://ss
+
+### 네이버뉴스검색 주간동향
+status=200 len=326544
+<!doctype html> <html lang="ko"><head> <meta charset="utf-8"> <meta name="referrer" content="strict-origin-when-cross-origin">  <meta name="format-detection" content="telephone=no,address=no,email=no"> <meta property="og:title" content="주간 아파트가격 동향 : 네이버 뉴스검색"/> <meta property="og:image" content="https://ssl.pstatic.net/sstatic/search/common/og_v3.png"> <meta property="og:description" content="'주간 아파트가격 동향'의 네이버 뉴스검색 결과입니다."> <meta name="description" lang="ko" content="'주간 아파트가격 동향'의 네이버 뉴스검색 결과입니다."> <title>주간 아파트가격 동향 : 네이버 뉴스검색</title> <link rel="shortcut icon" href="https://ssl.pstatic.net/sstatic/search/favicon/favicon_32x32_240820.ico">  <link rel="search" type="application/opensearchd
+
+### 다음뉴스검색 주간동향
+status=200 len=84261
+<!doctype html> <html xmlns="http://www.w3.org/1999/xhtml" lang="ko"> <head profile="http://a9.com/-/spec/opensearch/1.1/"> <meta http-equiv="content-Type" content="text/html;charset=utf-8" /> <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <meta name="autocomplete" content="off" /> <meta name="referrer" content="always"> <meta name="format-detection" content="telephone=no,address=no,email=no" /> <meta property="og:title" content="주간 아파트가격 &ndash; Daum 검색" /> <meta property="og:url" content="https://search.daum.net/search?w=news&amp;q=%EC%A3%BC%EA%B0%84&#43;%EC%95%84%ED%8C%8C%ED%8A%B8%EA%B0%80%EA%B2%A9" /> <meta property="og:description" content="Daum 검색에서 주간 아파트가격에 대한 최신정보를 찾아보세요." 
+
+### 부동산원 보도자료 목록
+status=200 len=251
+<!DOCTYPE html><html lang="ko"><head><title>시스템안내</title><meta charset="utf-8"><meta name="referrer" content="no-referrer-when-downgrade"/> <script language='javascript'> alert('게시판이 존재하지않습니다.'); location.href='/reb/main.do'; </script> </head></html> 
+
+### 부동산원 메인
+status=200 len=947
+   <!DOCTYPE html> <html lang="ko"> 	<head> 		<meta charset="utf-8"> 		<meta http-equiv="refresh" content="0;url=/reb/main.do"> 		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"> 		<title>한국부동산원</title> 		<meta name="keywords" content="한국부동산원, 부동산원"> 		<meta name="description" content="한국부동산원 홈페이지에 오신 것을 환영합니다. 부동산 조사, 관리&공시, 통계 전문기관."> 		<meta name="referrer" content="no-referrer-when-downgrade" /> 		<meta property="og:type" content="website"> 		<meta property="og:title" content="한국부동산원"> 		<meta property="og:description" content="한국부동산원 홈페이지에 오신 것을 환영합니다."> 		<meta property="og:
