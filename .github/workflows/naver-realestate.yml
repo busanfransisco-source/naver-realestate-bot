@@ -39,3 +39,11 @@ jobs:
           git add index.html hub.html
           git diff --cached --quiet && echo "No index changes" || git commit -m "Update index.html/hub.html"
           git push
+
+      - name: Generate briefing.html (원터치 복사 페이지)
+        run: |
+          python gen_briefing.py
+          git add briefing.html
+          git diff --cached --quiet && echo "No briefing changes" || git commit -m "Update briefing.html"
+          git pull --rebase origin main
+          git push
