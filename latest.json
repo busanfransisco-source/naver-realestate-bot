@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-07-13 07:29:58",
+  "updated_at_kst": "2026-07-13 07:36:24",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 7월 13일 월요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "양천구, 목동 재건축 대비 '100년 하수도 체계' 구축한다",
+      "url": "https://n.news.naver.com/mnews/article/001/0016190068"
+    },
     {
       "title": "반도체 기대감에 ‘브레이크’…토허제 묶인 광주, 부동산 영향은",
       "url": "https://n.news.naver.com/mnews/article/119/0003110590"
@@ -78,10 +82,6 @@
     {
       "title": "모아주택 사업 속도 높인다…서울시, 전자투표·온라인총회 지원",
       "url": "https://n.news.naver.com/mnews/article/008/0005384859"
-    },
-    {
-      "title": "서울시, 모아주택에 '전자투표·총회' 도입…최대 300만원 지원",
-      "url": "https://n.news.naver.com/mnews/article/421/0009054975"
     }
   ]
 }
