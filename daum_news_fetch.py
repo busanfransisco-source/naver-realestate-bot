@@ -246,7 +246,7 @@ def main():
     weekday_en = WEEKDAY_EN[now.weekday()]
     weekday_kr = WEEKDAY_KR[now.weekday()]
 
-    header = f"{now.year % 100}년 {now.month}월 {now.day}일 {weekday_kr} 간추린 숏뉴스입니다."
+    header = f"{now.year % 100}년 {now.month}월 {now.day}일 {weekday_kr} 오늘의 퀵뉴스⚡"
 
     try:
         news_items = collect_news()
