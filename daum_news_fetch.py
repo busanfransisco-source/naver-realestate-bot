@@ -95,7 +95,14 @@ def article_summary(url, max_sentences=2, max_chars=280):
     picked = []
     for s in sentences:
         s = s.strip()
+        # 앞머리 군더더기 제거: [헤럴드경제=홍아무개 기자], 【서울=뉴시스】 등
+        s = re.sub(r"^\[[^\]]{2,40}\]\s*", "", s)
+        s = re.sub(r"^【[^】]{2,40}】\s*", "", s)
+        s = re.sub(r"^[가-힣A-Za-z]+=\S*\s*기자\s*", "", s)
         if len(s) < 10:
+            continue
+        # 첫 문장이 접속사로 시작하면 본문 순서가 꼬인 것 → 건너뜀
+        if not picked and re.match(r"^(반면|하지만|그러나|한편|또한|이에 따라|이어)\b", s):
             continue
         picked.append(s)
         if len(picked) >= max_sentences:
@@ -212,22 +219,16 @@ def get_indicators():
     except Exception:
         pass
 
-    # 해외 지수 + 금 (stooq CSV)
-    try:
-        resp = get("https://stooq.com/q/l/?s=^ndq,^dji,^spx,xauusd&f=sc&h&e=csv")
-        closes = {}
-        for line in resp.text.strip().splitlines():
-            parts = line.split(",")
-            if len(parts) >= 2:
-                try:
-                    closes[parts[0].lower()] = float(parts[1])
-                except ValueError:
-                    pass
-        for sym, name in [("^ndq", "나스닥"), ("^dji", "다우지수"), ("^spx", "S&P500"), ("xauusd", "GOLD(금)")]:
-            if sym in closes:
-                rows.append((name, fmt_num(closes[sym])))
-    except Exception:
-        pass
+    # 해외 지수 + 금 (야후 파이낸스 chart API)
+    for sym, name in [("^IXIC", "나스닥"), ("^DJI", "다우지수"), ("^GSPC", "S&P500"), ("GC=F", "GOLD(금)")]:
+        try:
+            resp = get(
+                f"https://query1.finance.yahoo.com/v8/finance/chart/{requests.utils.quote(sym)}?range=1d&interval=1d"
+            )
+            price = resp.json()["chart"]["result"][0]["meta"]["regularMarketPrice"]
+            rows.append((name, fmt_num(float(price))))
+        except Exception:
+            pass
 
     # 비트코인 (업비트, 원화)
     try:
@@ -271,16 +272,4 @@ def main():
     if indicators:
         lines.append("[주요 경제 지표]")
         for name, val in indicators:
-            lines.append(f"  - {name} : {val}")
-
-    content = "\n".join(lines).strip() + "\n"
-
-    for fname in ("shortnews.txt", f"shortnews-{weekday_en}.txt"):
-        with open(fname, "w", encoding="utf-8") as f:
-            f.write(content)
-
-    print(f"shortnews 생성 완료: 뉴스 {len(news_items)}건, 지표 {len(indicators)}개")
-
-
-if __name__ == "__main__":
-    main()
+            lines
