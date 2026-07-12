@@ -37,6 +37,9 @@ jobs:
       - name: Fetch realestate news
         run: python naver_realestate_fetch.py
 
+      - name: Fetch daum short news
+        run: python daum_news_fetch.py || echo "shortnews failed"
+
       - name: Regenerate pages and commit everything
         run: |
           git config user.name "github-actions[bot]"
@@ -44,6 +47,7 @@ jobs:
           python gen_index.py
           python gen_briefing.py
           date -u +"%Y-%m-%dT%H:%M:%SZ" > last-refresh.txt
+          git add shortnews.txt shortnews-*.txt || true
           git add weather.txt weather-*.txt fortune.txt fortune-*.txt realestate.txt realestate-*.txt latest.json latest-*.json index.html hub.html briefing.html last-refresh.txt
           git commit -m "Manual briefing refresh"
           git pull --rebase origin main

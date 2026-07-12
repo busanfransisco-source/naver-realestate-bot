@@ -30,6 +30,7 @@ SECTIONS = [
     ("fortune", "🔮 오늘의 운세", "fortune"),
     ("weather", "☀️ 날씨", "weather"),
     ("realestate", "🏠 부동산 뉴스", "realestate"),
+    ("shortnews", "📰 간추린 숏뉴스", "shortnews"),
 ]
 
 
