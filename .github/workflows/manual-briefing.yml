@@ -1,0 +1,50 @@
+name: Manual Briefing Refresh
+
+on:
+  push:
+    paths:
+      - "trigger.txt"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: manual-briefing
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch weather
+        run: python weather_fetch.py
+
+      - name: Fetch fortune
+        run: python fortune_fetch.py
+
+      - name: Fetch realestate news
+        run: python naver_realestate_fetch.py
+
+      - name: Regenerate pages and commit everything
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          python gen_index.py
+          python gen_briefing.py
+          date -u +"%Y-%m-%dT%H:%M:%SZ" > last-refresh.txt
+          git add weather.txt weather-*.txt fortune.txt fortune-*.txt realestate.txt realestate-*.txt latest.json latest-*.json index.html hub.html briefing.html last-refresh.txt
+          git commit -m "Manual briefing refresh"
+          git pull --rebase origin main
+          git push
