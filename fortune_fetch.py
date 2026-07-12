@@ -113,7 +113,10 @@ def fetch_document_text(srl, title_needle):
 
     lines = [ln.strip() for ln in body.splitlines()]
     lines = [ln for ln in lines if ln]
-    return lunar_line, "\n".join(lines)
+    body = "\n".join(lines)
+    # 띠 블록 사이에 빈 줄 유지 (카톡 가독성)
+    body = body.replace("\n〈", "\n\n〈")
+    return lunar_line, body
 
 
 def build_report():
