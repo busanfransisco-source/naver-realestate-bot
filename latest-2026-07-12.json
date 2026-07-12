@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-07-12 12:44:49",
+  "updated_at_kst": "2026-07-12 12:49:53",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 7월 12일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "오세훈 “부동산 토론회, 세금보다 정비사업·전월세 안정 다뤄야”",
+      "url": "https://n.news.naver.com/mnews/article/029/0003036548"
+    },
     {
       "title": "李 대통령 주재하는 부동산 대토론회 앞두고 여야 충돌…국힘 \"사실상 증세 수순\"",
       "url": "https://n.news.naver.com/mnews/article/138/0002233911"
@@ -78,10 +82,6 @@
     {
       "title": "작년 종부세 강남3구에서 3분의 1 납부",
       "url": "https://n.news.naver.com/mnews/article/001/0016189503"
-    },
-    {
-      "title": "작년 종부세 강남3구에서 3분의 1 납부",
-      "url": "https://n.news.naver.com/mnews/article/001/0016189502"
     }
   ]
 }
