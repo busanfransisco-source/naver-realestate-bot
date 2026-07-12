@@ -26,10 +26,10 @@ try:
             break
         for row in rows:
             nm = str(row.get("STATBL_NM", ""))
-            if ("주간" in nm or "주별" in nm) and "아파트" in nm:
-                found.append(f"{row.get('STATBL_ID')} | {nm} | cycle={row.get('DTACYCLE_CD')}")
+            if row.get("DTACYCLE_CD") == "WK" or nm.startswith("(주)"):
+                found.append(f"{row.get('STATBL_ID')} | {nm} | cycle={row.get('DTACYCLE_CD')} | {row.get('DATA_START_YY')}~{row.get('DATA_END_YY')}")
     out.append("### 주간 아파트 통계표 후보")
-    out.extend(found[:40] or ["(없음)"])
+    out.extend(found[:80] or ["(없음)"])
 except Exception as e:
     out.append(f"목록 ERROR: {e}")
 
