@@ -74,10 +74,12 @@ def fetch_subscriptions(today):
                 continue
             am = DATE_RE.search(cells[8])
             announce = parse_d(am.group(0)) if am else None
+            kind_raw = cells[1]
+            kind = "공공" if "국민" in kind_raw else ("민간" if "민영" in kind_raw else kind_raw)
             rows.append({
                 "region": cells[0],
                 "name": cells[3],
-                "kind": cells[2],
+                "kind": kind,
                 "start": start,
                 "end": end,
                 "announce": announce,
@@ -174,7 +176,7 @@ def main():
             status = " ◀ 접수중" if r["start"] <= today <= r["end"] else ""
             announce = f" | 발표 {r['announce'].month}/{r['announce'].day}" if r["announce"] else ""
             lines.append(
-                f"[{r['region']}] {r['name']} | 접수 {r['start'].month}/{r['start'].day}~{r['end'].month}/{r['end'].day}{announce}{status}"
+                f"[{r['region']}·{r['kind']}] {r['name']} | 접수 {r['start'].month}/{r['start'].day}~{r['end'].month}/{r['end'].day}{announce}{status}"
             )
     elif subs is None:
         lines.append("(청약 정보를 가져오지 못했습니다)")
