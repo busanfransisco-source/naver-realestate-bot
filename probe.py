@@ -1,38 +1,34 @@
 # -*- coding: utf-8 -*-
-"""R-ONE API 프로브: 주간 아파트 변동률 통계표 찾기"""
+"""R-ONE 주간 매매/전세 지수 데이터 구조 확인"""
 import os
 import requests
 
 KEY = os.environ["RONE_KEY"]
-BASE = "https://www.reb.or.kr/r-one/openapi"
+URL = "https://www.reb.or.kr/r-one/openapi/SttsApiTblData.do"
 out = []
 
-# 1) 통계표 목록에서 주간+아파트 관련 표 찾기
-try:
-    found = []
-    for p in range(1, 6):
-        r = requests.get(f"{BASE}/SttsApiTbl.do", params={"KEY": KEY, "Type": "json", "pIndex": p, "pSize": 1000}, timeout=20)
-        if p == 1:
-            out.append("### raw head\n" + r.text[:500])
-        try:
-            js = r.json()
-        except Exception:
-            break
-        rows = []
-        for block in js.get("SttsApiTbl", []):
-            if isinstance(block, dict) and "row" in block:
-                rows = block["row"]
-        if not rows:
-            break
-        for row in rows:
-            nm = str(row.get("STATBL_NM", ""))
-            if row.get("DTACYCLE_CD") == "WK" or nm.startswith("(주)"):
-                found.append(f"{row.get('STATBL_ID')} | {nm} | cycle={row.get('DTACYCLE_CD')} | {row.get('DATA_START_YY')}~{row.get('DATA_END_YY')}")
-    out.append("### 주간 아파트 통계표 후보")
-    out.extend(found[:80] or ["(없음)"])
-except Exception as e:
-    out.append(f"목록 ERROR: {e}")
+for statbl, label in [("T244183132827305", "매매"), ("T247713133046872", "전세")]:
+    try:
+        r = requests.get(URL, params={"KEY": KEY, "Type": "json", "pIndex": 1, "pSize": 1, "STATBL_ID": statbl}, timeout=20)
+        js = r.json()
+        head = js["SttsApiTblData"][0]["head"]
+        total = head[0]["list_total_count"]
+        out.append(f"### {label} total={total}")
+        last_page = total // 500 + 1
+        r = requests.get(URL, params={"KEY": KEY, "Type": "json", "pIndex": last_page, "pSize": 500, "STATBL_ID": statbl}, timeout=20)
+        rows = r.json()["SttsApiTblData"][1]["row"]
+        out.append(f"마지막 페이지 rows={len(rows)}")
+        out.append("샘플 row 전체 필드: " + str(rows[-1]))
+        times = sorted({str(x.get("WRTTIME_IDTF_ID")) for x in rows})
+        out.append(f"시점들: {times[-4:]}")
+        latest = times[-1]
+        latest_rows = [x for x in rows if str(x.get("WRTTIME_IDTF_ID")) == latest]
+        out.append(f"최신 시점 {latest} row수={len(latest_rows)}")
+        for x in latest_rows[:40]:
+            out.append(f"  CLS={x.get('CLS_NM')} | ITM={x.get('ITM_NM')} | VAL={x.get('DTA_VAL')}")
+    except Exception as e:
+        out.append(f"{label} ERROR: {repr(e)}")
 
 with open("probe-result.txt", "w", encoding="utf-8") as f:
     f.write("\n".join(out))
-print("probe done")
+print("done")
