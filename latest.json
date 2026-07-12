@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-07-12 18:30:00",
+  "updated_at_kst": "2026-07-12 18:46:55",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 7월 12일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "김종훈 한미글로벌 회장, 인구의 날 모란장 수훈",
+      "url": "https://n.news.naver.com/mnews/article/014/0005547039"
+    },
     {
       "title": "동영상뉴스재생시간02:30",
       "url": "https://n.news.naver.com/mnews/article/422/0000884307"
@@ -78,10 +82,6 @@
     {
       "title": "초고가·비거주 주택 보유세 올린다…장특공제 실거주 중심 개편",
       "url": "https://n.news.naver.com/mnews/article/020/0003733273"
-    },
-    {
-      "title": "스쳐 지나던 일본 無人역…관광객 북적이는 핫플로",
-      "url": "https://n.news.naver.com/mnews/article/011/0004640713"
     }
   ]
 }
