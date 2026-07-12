@@ -33,6 +33,8 @@ jobs:
 
       - name: Fetch aptinfo
         run: python aptinfo_fetch.py || echo "aptinfo failed"
+        env:
+          RONE_KEY: ${{ secrets.RONE_KEY }}
 
       - name: Commit and push latest.json
         run: |
@@ -40,7 +42,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add latest.json latest-*.json realestate.txt realestate-*.txt
           git add shortnews.txt shortnews-*.txt || true
-          git add aptinfo.txt aptinfo-*.txt || true
+          git add subs.txt subs-*.txt trend.txt trend-*.txt || true
           git diff --cached --quiet && echo "No changes" || git commit -m "Update latest.json"
           git pull --rebase origin main
           python gen_index.py

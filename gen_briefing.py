@@ -29,9 +29,10 @@ def read_text(path):
 SECTIONS = [
     ("fortune", "🔮 오늘의 운세", "fortune"),
     ("weather", "☀️ 날씨", "weather"),
-    ("realestate", "🏠 부동산 뉴스", "realestate"),
     ("shortnews", "⚡ 오늘의 퀵뉴스", "shortnews"),
-    ("aptinfo", "🏗️ 청약·시세 동향", "aptinfo"),
+    ("subs", "🏗️ 청약 소식", "subs"),
+    ("trend", "📈 부동산 주간 시세동향", "trend"),
+    ("realestate", "🏠 부동산 뉴스", "realestate"),
 ]
 
 
