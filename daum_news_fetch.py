@@ -272,4 +272,16 @@ def main():
     if indicators:
         lines.append("[주요 경제 지표]")
         for name, val in indicators:
-            lines
+            lines.append(f"  - {name} : {val}")
+
+    content = "\n".join(lines).strip() + "\n"
+
+    for fname in ("shortnews.txt", f"shortnews-{weekday_en}.txt"):
+        with open(fname, "w", encoding="utf-8") as f:
+            f.write(content)
+
+    print(f"shortnews 생성 완료: 뉴스 {len(news_items)}건, 지표 {len(indicators)}개")
+
+
+if __name__ == "__main__":
+    main()
