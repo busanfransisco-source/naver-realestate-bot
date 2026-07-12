@@ -128,33 +128,45 @@ def build_html():
   {sections_html}
 
 <script>
-function copySection(key, btn) {{
-  const text = window['__content_' + key];
-  const done = () => {{
-    const original = btn.textContent;
-    btn.textContent = '복사됨';
-    btn.classList.add('copied');
-    setTimeout(() => {{
-      btn.textContent = original;
-      btn.classList.remove('copied');
-    }}, 1200);
-  }};
-  if (navigator.clipboard && navigator.clipboard.writeText) {{
-    navigator.clipboard.writeText(text).then(done).catch(() => fallbackCopy(key, done));
-  }} else {{
-    fallbackCopy(key, done);
-  }}
+function markCopied(btn) {{
+  const original = btn.textContent;
+  btn.textContent = '복사됨';
+  btn.classList.add('copied');
+  setTimeout(() => {{
+    btn.textContent = original;
+    btn.classList.remove('copied');
+  }}, 1200);
 }}
-function fallbackCopy(key, done) {{
+
+function copySection(key, btn) {{
+  // execCommand는 동기적으로 바로 결과가 나오고 권한 프롬프트로 멈추는 일이
+  // 없어서 이걸 기본으로 쓴다. navigator.clipboard는 일부 브라우저(특히
+  // 자동화/인앱 웹뷰 환경)에서 권한 대기 상태로 무한정 멈출 수 있어서
+  // 보조 수단으로만 쓴다.
   const ta = document.getElementById('ta-' + key);
-  ta.style.position = 'fixed';
-  ta.style.top = '0';
-  ta.focus();
-  ta.select();
+  let copied = false;
   try {{
-    document.execCommand('copy');
-    done();
+    ta.style.position = 'fixed';
+    ta.style.top = '0';
+    ta.focus();
+    ta.select();
+    ta.setSelectionRange(0, ta.value.length);
+    copied = document.execCommand('copy');
   }} catch (e) {{
+    copied = false;
+  }}
+
+  if (copied) {{
+    markCopied(btn);
+    return;
+  }}
+
+  const text = window['__content_' + key];
+  if (navigator.clipboard && navigator.clipboard.writeText) {{
+    navigator.clipboard.writeText(text).then(() => markCopied(btn)).catch(() => {{
+      alert('복사에 실패했습니다. 아래 미리보기 텍스트를 직접 길게 눌러 복사해주세요.');
+    }});
+  }} else {{
     alert('복사에 실패했습니다. 아래 미리보기 텍스트를 직접 길게 눌러 복사해주세요.');
   }}
 }}
