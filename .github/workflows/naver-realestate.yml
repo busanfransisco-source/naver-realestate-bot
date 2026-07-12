@@ -2,9 +2,9 @@ name: Naver Realestate Fetch
 
 on:
   schedule:
-    # 매일 21:50 UTC = 06:50 KST (다음날) - 부동산 뉴스는 날씨/운세와 달리
+    # 매일 20:55 UTC = 05:55 KST - 6시 30분 이용 기준, 지연(실행 대기+배포+캐시)을 감안해 미리 수집
     # 실시간성이 중요해서, 7시 공유 10분 전인 6시50분에 최대한 가깝게 가져온다.
-    - cron: "50 21 * * *"
+    - cron: "55 20 * * *"
   workflow_dispatch: {}   # Actions 탭에서 수동 실행 테스트용
 
 permissions:

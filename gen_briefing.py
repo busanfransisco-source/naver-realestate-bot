@@ -41,6 +41,7 @@ def build_html():
     weekday_en = WEEKDAY_EN[now.weekday()]
     weekday_kr = WEEKDAY_KR[now.weekday()]
     date_line = f"{now.year}년 {now.month}월 {now.day}일 {weekday_kr}"
+    build_date = now.strftime("%Y-%m-%d")
 
     section_blocks = []
     for key, label, fname_prefix in SECTIONS:
@@ -131,6 +132,16 @@ def build_html():
   {sections_html}
 
 <script>
+// 홈 화면/사파리가 옛 사본을 보여줄 때: 페이지 날짜가 오늘과 다르면 캐시를 우회해 1회 다시 불러온다
+var BUILD_DATE = '{build_date}';
+(function() {{
+  var d = new Date();
+  var today = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  if (today !== BUILD_DATE && location.search.indexOf('r=') === -1) {{
+    location.replace(location.pathname + '?r=' + Date.now());
+  }}
+}})();
+
 function markCopied(btn) {{
   const original = btn.textContent;
   btn.textContent = '복사됨';
