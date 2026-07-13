@@ -77,7 +77,7 @@ def fetch_subscriptions(today):
 
 # ---------------- 시세동향 (R-ONE) ----------------
 
-def rone_call(params, tries=4):
+def rone_call(params, tries=6):
     for i in range(tries):
         try:
             r = requests.get(RONE_URL, params=params, headers=HEADERS, timeout=25)
@@ -85,7 +85,7 @@ def rone_call(params, tries=4):
         except Exception:
             if i == tries - 1:
                 raise
-            time.sleep(4 * (i + 1))
+            time.sleep(5 * (i + 1))
 
 
 def rone_weekly_changes(statbl):
@@ -153,14 +153,30 @@ def main():
 
     # ---- 주간 시세동향 ----
     tlines = [f"{date_head} 부동산 주간 시세동향", ""]
-    sale = jeonse = None
+    import json as _json
     try:
-        sale = rone_weekly_changes(STATBL_SALE)
+        with open("rone-cache.json", "r", encoding="utf-8") as f:
+            cache = _json.load(f)
     except Exception:
-        pass
-    time.sleep(2)
+        cache = {}
+
+    def get_with_cache(statbl, key):
+        try:
+            d, ch = rone_weekly_changes(statbl)
+            cache[key] = {"date": d, "changes": ch}
+            return d, ch
+        except Exception:
+            c = cache.get(key)
+            if c and c.get("changes"):
+                return c["date"], c["changes"]
+            return None
+
+    sale = get_with_cache(STATBL_SALE, "sale")
+    time.sleep(3)
+    jeonse = get_with_cache(STATBL_JEONSE, "jeonse")
     try:
-        jeonse = rone_weekly_changes(STATBL_JEONSE)
+        with open("rone-cache.json", "w", encoding="utf-8") as f:
+            _json.dump(cache, f, ensure_ascii=False)
     except Exception:
         pass
 
