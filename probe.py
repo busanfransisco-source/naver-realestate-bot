@@ -59,6 +59,26 @@ try:
 except Exception as e:
     out.append(f"은 ERROR: {repr(e)}")
 
+# 6) 예스24 베스트셀러
+try:
+    r = requests.get("https://www.yes24.com/product/category/bestseller?categoryNumber=001&pageNumber=1&pageSize=24", headers=H, timeout=15)
+    soup = BeautifulSoup(r.text, "html.parser")
+    out.append(f"### 예스24 status={r.status_code} len={len(r.text)}")
+    titles = [a.get_text(" ", strip=True) for a in soup.select("a.gd_name")[:8]]
+    out.append(" / ".join(titles) if titles else "(a.gd_name 없음)")
+except Exception as e:
+    out.append(f"예스24 ERROR: {repr(e)}")
+
+# 7) 알라딘 주간 베스트셀러
+try:
+    r = requests.get("https://www.aladin.co.kr/shop/common/wbest.aspx?BestType=Bestseller&BranchType=1&CID=0", headers=H, timeout=15)
+    soup = BeautifulSoup(r.text, "html.parser")
+    out.append(f"### 알라딘 status={r.status_code} len={len(r.text)}")
+    titles = [a.get_text(" ", strip=True) for a in soup.select("a.bo3")[:8]]
+    out.append(" / ".join(titles) if titles else "(a.bo3 없음)")
+except Exception as e:
+    out.append(f"알라딘 ERROR: {repr(e)}")
+
 with open("probe-result.txt", "w", encoding="utf-8") as f:
     f.write("\n".join(out))
 print("done")
