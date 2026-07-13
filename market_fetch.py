@@ -102,6 +102,9 @@ def coins_top10():
         name = c.get("name", "")
         if sym in STABLES or any(w in name for w in ("Staked", "Wrapped", "Bridged", "Heloc")):
             continue
+        rank = c.get("market_cap_rank")
+        if rank is None or rank > 30:
+            continue
         out.append((COIN_KR.get(sym, sym), c["current_price"], c.get("price_change_percentage_24h")))
         if len(out) >= 10:
             break
@@ -142,7 +145,7 @@ def main():
             fuel_rows.append(f"휘발유 {v:,.2f}원/L ({sign_fmt(c)})")
     except Exception:
         items = {}
-    for code, label in [("OIL_LO", "경유"), ("OIL_GSL", "고급휘발유")]:
+    for code, label in [("OIL_LO", "경유")]:
         try:
             v, c = oil_detail(code)
             chg_s = f" ({sign_fmt(c)})" if c is not None else ""
