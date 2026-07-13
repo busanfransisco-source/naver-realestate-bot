@@ -31,6 +31,9 @@ jobs:
       - name: Fetch daum short news
         run: python daum_news_fetch.py || echo "shortnews failed"
 
+      - name: Fetch market info
+        run: python market_fetch.py || echo "market failed"
+
       - name: Fetch aptinfo
         run: python aptinfo_fetch.py || echo "aptinfo failed"
         env:
@@ -43,6 +46,7 @@ jobs:
           git add latest.json latest-*.json realestate.txt realestate-*.txt
           git add shortnews.txt shortnews-*.txt || true
           git add subs.txt subs-*.txt trend.txt trend-*.txt rone-cache.json || true
+          git add fuelfx.txt fuelfx-*.txt metalcoin.txt metalcoin-*.txt books.txt books-*.txt fx-cache.json || true
           git diff --cached --quiet && echo "No changes" || git commit -m "Update latest.json"
           git pull --rebase origin main
           python gen_index.py

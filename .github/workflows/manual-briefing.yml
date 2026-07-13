@@ -40,6 +40,9 @@ jobs:
       - name: Fetch daum short news
         run: python daum_news_fetch.py > shortnews-debug.log 2>&1 || true; tail -20 shortnews-debug.log
 
+      - name: Fetch market info
+        run: python market_fetch.py || echo "market failed"
+
       - name: Fetch aptinfo
         run: python aptinfo_fetch.py || echo "aptinfo failed"
         env:
@@ -54,6 +57,7 @@ jobs:
           date -u +"%Y-%m-%dT%H:%M:%SZ" > last-refresh.txt
           git add shortnews.txt shortnews-*.txt shortnews-debug.log || true
           git add subs.txt subs-*.txt trend.txt trend-*.txt rone-cache.json || true
+          git add fuelfx.txt fuelfx-*.txt metalcoin.txt metalcoin-*.txt books.txt books-*.txt fx-cache.json || true
           git add weather.txt weather-*.txt fortune.txt fortune-*.txt realestate.txt realestate-*.txt latest.json latest-*.json index.html hub.html briefing.html last-refresh.txt
           git commit -m "Manual briefing refresh"
           git pull --rebase origin main
