@@ -1,10 +1,6 @@
 name: Manual Briefing Refresh
 
-on:
-  push:
-    paths:
-      - "trigger.txt"
-  workflow_dispatch: {}
+on: { push: { paths: ["trigger.txt"] }, workflow_dispatch: {}, schedule: [{ cron: "25 18 * * *" }] }
 
 permissions:
   contents: write
