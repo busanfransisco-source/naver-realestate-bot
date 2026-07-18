@@ -116,6 +116,8 @@ def fetch_document_text(srl, title_needle):
     body = "\n".join(lines)
     # 띠 블록 사이에 빈 줄 유지 (카톡 가독성)
     body = body.replace("\n〈", "\n\n〈")
+    # "운세지수 NN%..." 줄을 본문과 빈 줄로 분리 (카톡 가독성)
+    body = re.sub(r"[ \t]*(운세지수 ?\d+%)", r"\n\n\1", body)
     return lunar_line, body
 
 
