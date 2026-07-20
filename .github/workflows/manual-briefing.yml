@@ -1,6 +1,18 @@
 name: Manual Briefing Refresh
 
-on: { push: { paths: ["trigger.txt"] }, workflow_dispatch: {}, schedule: [{ cron: "15 18 * * *" }] }
+on:
+  push:
+    paths:
+      - "trigger.txt"
+  workflow_dispatch: {}
+  schedule:
+    - cron: "5 20 * * *"
+    - cron: "15 20 * * *"
+    - cron: "25 20 * * *"
+    - cron: "35 20 * * *"
+    - cron: "45 20 * * *"
+    - cron: "55 20 * * *"
+    - cron: "5 21 * * *"
 
 permissions:
   contents: write
@@ -16,35 +28,63 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      - name: Skip if already refreshed recently (scheduled retries)
+        id: gate
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            LAST_ISO=$(cat last-refresh.txt 2>/dev/null || echo "1970-01-01T00:00:00Z")
+            LAST_EPOCH=$(date -d "$LAST_ISO" +%s 2>/dev/null || echo 0)
+            NOW_EPOCH=$(date -u +%s)
+            DIFF=$((NOW_EPOCH - LAST_EPOCH))
+            echo "마지막 새로고침: $LAST_ISO ( ${DIFF}초 전 )"
+            if [ "$DIFF" -lt 10800 ]; then
+              echo "이미 최근(3시간 이내)에 새로고침되어 이번 예약 실행은 건너뜁니다."
+              echo "run=false" >> "$GITHUB_OUTPUT"
+            else
+              echo "run=true" >> "$GITHUB_OUTPUT"
+            fi
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Set up Python
+        if: steps.gate.outputs.run == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
       - name: Install dependencies
+        if: steps.gate.outputs.run == 'true'
         run: pip install -r requirements.txt
 
       - name: Fetch weather
+        if: steps.gate.outputs.run == 'true'
         run: python weather_fetch.py
 
       - name: Fetch fortune
+        if: steps.gate.outputs.run == 'true'
         run: python fortune_fetch.py
 
       - name: Fetch realestate news
+        if: steps.gate.outputs.run == 'true'
         run: python naver_realestate_fetch.py
 
       - name: Fetch daum short news
+        if: steps.gate.outputs.run == 'true'
         run: python daum_news_fetch.py > shortnews-debug.log 2>&1 || true; tail -20 shortnews-debug.log
 
       - name: Fetch market info
+        if: steps.gate.outputs.run == 'true'
         run: python market_fetch.py || echo "market failed"
 
       - name: Fetch aptinfo
+        if: steps.gate.outputs.run == 'true'
         run: python aptinfo_fetch.py || echo "aptinfo failed"
         env:
           RONE_KEY: ${{ secrets.RONE_KEY }}
 
       - name: Regenerate pages and commit everything
+        if: steps.gate.outputs.run == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
