@@ -6,13 +6,16 @@ on:
       - "trigger.txt"
   workflow_dispatch: {}
   schedule:
-    - cron: "5 20 * * *"
-    - cron: "15 20 * * *"
-    - cron: "25 20 * * *"
-    - cron: "35 20 * * *"
-    - cron: "45 20 * * *"
-    - cron: "55 20 * * *"
-    - cron: "5 21 * * *"
+    - cron: "0 19 * * *"
+    - cron: "20 19 * * *"
+    - cron: "40 19 * * *"
+    - cron: "0 20 * * *"
+    - cron: "20 20 * * *"
+    - cron: "40 20 * * *"
+    - cron: "0 21 * * *"
+    - cron: "20 21 * * *"
+    - cron: "40 21 * * *"
+    - cron: "0 22 * * *"
 
 permissions:
   contents: write
