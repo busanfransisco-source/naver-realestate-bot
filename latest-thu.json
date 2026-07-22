@@ -1,8 +1,20 @@
 {
-  "updated_at_kst": "2026-07-23 08:17:25",
+  "updated_at_kst": "2026-07-23 08:34:18",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 7월 23일 목요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "상반기 생애 첫 서울 아파트 매수인 44% 늘었다…절반 이상은 30대",
+      "url": "https://n.news.naver.com/mnews/article/366/0001181140"
+    },
+    {
+      "title": "서울 주택 생애 첫 매수인 44.4% 늘었다…30대가 큰손",
+      "url": "https://n.news.naver.com/mnews/article/018/0006335120"
+    },
+    {
+      "title": "에너지 인프라 시대 온다…DL그룹, 밸류체인 경쟁력 주목",
+      "url": "https://n.news.naver.com/mnews/article/016/0002673750"
+    },
     {
       "title": "서울 분양권 거래, 전년比 34% 줄었는데…수억원 플피 물량 속출",
       "url": "https://n.news.naver.com/mnews/article/277/0005793382"
@@ -70,18 +82,6 @@
     {
       "title": "'몸집은 줄어든' 메이저 건설사, 속 사정은 천차만별",
       "url": "https://n.news.naver.com/mnews/article/648/0000049105"
-    },
-    {
-      "title": "오늘 부동산 정책 국민 대토론회…민심 톺아보니 [시장톡]",
-      "url": "https://n.news.naver.com/mnews/article/015/0005312841"
-    },
-    {
-      "title": "개포 구룡마을 2120가구 주거단지로…남은 서울 마지막 판자촌은",
-      "url": "https://n.news.naver.com/mnews/article/011/0004644210"
-    },
-    {
-      "title": "[오늘 부동산] 대통령 세종 집무실, 2029년 8월 입주 전망",
-      "url": "https://n.news.naver.com/mnews/article/119/0003113930"
     }
   ]
 }
