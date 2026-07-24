@@ -39,21 +39,36 @@ def parse_d(s):
 # ---------------- 청약 ----------------
 
 def fetch_subscriptions(today):
-    this_month = today.strftime("%Y%m")
-    next_month = (today.replace(day=1) + timedelta(days=32)).strftime("%Y%m")
-    try:
-        resp = requests.post(APPLYHOME_URL, headers=HEADERS, data={"beginPd": this_month, "endPd": next_month}, timeout=15)
-        resp.raise_for_status()
-    except Exception:
-        resp = requests.get(APPLYHOME_URL, headers=HEADERS, timeout=15)
-        resp.raise_for_status()
-    soup = BeautifulSoup(resp.text, "html.parser")
+    # 국민(공공)분양은 접수 시작 1~2개월 전에 공고가 나는 경우가 많아서,
+    # 조회 시작월을 이번달이 아니라 두 달 전으로 넉넉히 잡아야 놓치지 않는다.
+    # (한 페이지에 10건씩만 나오므로 여러 페이지를 넘기면서 모은다.)
+    begin_month = (today.replace(day=1) - timedelta(days=60)).strftime("%Y%m")
+    end_month = (today.replace(day=1) + timedelta(days=32)).strftime("%Y%m")
     rows = []
-    for table in soup.find_all("table"):
-        for tr in table.find_all("tr"):
-            cells = [td.get_text(" ", strip=True) for td in tr.find_all("td")]
-            if len(cells) < 9 or not REGION_RE.match(cells[0]):
-                continue
+    page = 1
+    while page <= 15:
+        try:
+            resp = requests.post(
+                APPLYHOME_URL, headers=HEADERS,
+                data={"beginPd": begin_month, "endPd": end_month, "pageIndex": str(page)},
+                timeout=15,
+            )
+            resp.raise_for_status()
+        except Exception:
+            if page == 1:
+                raise
+            break
+        soup = BeautifulSoup(resp.text, "html.parser")
+        page_rows = []
+        for table in soup.find_all("table"):
+            for tr in table.find_all("tr"):
+                cells = [td.get_text(" ", strip=True) for td in tr.find_all("td")]
+                if len(cells) < 9 or not REGION_RE.match(cells[0]):
+                    continue
+                page_rows.append(cells)
+        if not page_rows:
+            break
+        for cells in page_rows:
             m = DATE_RANGE_RE.search(cells[7])
             if not m:
                 continue
@@ -66,6 +81,8 @@ def fetch_subscriptions(today):
             rows.append({"region": cells[0], "name": cells[3], "kind": kind,
                          "start": start, "end": end,
                          "announce": parse_d(am.group(0)) if am else None})
+        page += 1
+        time.sleep(0.5)
     seen, uniq = set(), []
     for r in sorted(rows, key=lambda r: (r["start"], r["region"])):
         key = (r["region"], r["name"])
