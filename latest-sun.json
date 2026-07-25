@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-07-26 07:13:19",
+  "updated_at_kst": "2026-07-26 07:33:42",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 7월 26일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "주택공급·세운4구역·야간경제…오세훈 표 정책들 '풍전등화'",
+      "url": "https://n.news.naver.com/mnews/article/001/0016214764"
+    },
     {
       "title": "[르포]공실만 파도 치는 거북섬...물 들어올 날 올까?",
       "url": "https://n.news.naver.com/mnews/article/648/0000049200"
@@ -78,10 +82,6 @@
     {
       "title": "“강남서 광교까지 번진다”…국힘, 李 대통령 ‘17억 매도인 근저당’ 집중 포화",
       "url": "https://n.news.naver.com/mnews/article/009/0005712125"
-    },
-    {
-      "title": "국힘 “대통령 거래가 새 관행…‘매도인 금융’ 확산 우려”",
-      "url": "https://n.news.naver.com/mnews/article/011/0004645139"
     }
   ]
 }
