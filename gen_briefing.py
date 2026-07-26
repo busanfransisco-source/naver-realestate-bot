@@ -30,6 +30,7 @@ SECTIONS = [
     ("fortune", "🔮 오늘의 운세", "fortune"),
     ("weather", "☀️ 날씨", "weather"),
     ("shortnews", "⚡ 오늘의 퀵뉴스", "shortnews"),
+    ("world", "🌏 세계 뉴스", "world"),
     ("subs", "🏗️ 청약 소식", "subs"),
     ("trend", "📈 부동산 주간 시세동향", "trend"),
     ("fuelfx", "⛽ 기름값·환율", "fuelfx"),
