@@ -1,8 +1,20 @@
 {
-  "updated_at_kst": "2026-07-26 15:51:21",
+  "updated_at_kst": "2026-07-26 15:59:42",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 7월 26일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "'셔세권' 인기에 들썩…동탄 아파트값 6.25% 급등",
+      "url": "https://n.news.naver.com/mnews/article/629/0000519060"
+    },
+    {
+      "title": "[그래픽] 연령별 거주 주택 보유 비율 추이",
+      "url": "https://n.news.naver.com/mnews/article/001/0016215396"
+    },
+    {
+      "title": "서울 상위 5% 주택, 5년간 2배로 비싸졌다",
+      "url": "https://n.news.naver.com/mnews/article/648/0000049209"
+    },
     {
       "title": "성수대교 램프 전면 통제…서울시, 포장 걷어내고 지반 직접 조사",
       "url": "https://n.news.naver.com/mnews/article/138/0002235465"
@@ -70,18 +82,6 @@
     {
       "title": "“집값 오르는데 대출 막혀”…2030 거주주택 보유율 27.7% 역대 최저",
       "url": "https://n.news.naver.com/mnews/article/020/0003736513"
-    },
-    {
-      "title": "'전세안심신탁' 3분기 윤곽…가입은 자율, 보증보험 의무 면제",
-      "url": "https://n.news.naver.com/mnews/article/014/0005552914"
-    },
-    {
-      "title": "당근까지 파고든 ‘매도자 대출’…대출 옥죄자 번진 ‘풍선효과’",
-      "url": "https://n.news.naver.com/mnews/article/029/0003038906"
-    },
-    {
-      "title": "집 가진 청년 10명 중 2명뿐… 9년 만에 최대로 벌어진 '내 집 격차'",
-      "url": "https://n.news.naver.com/mnews/article/469/0000944418"
     }
   ]
 }
