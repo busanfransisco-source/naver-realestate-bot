@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-07-26 20:53:59",
+  "updated_at_kst": "2026-07-26 21:43:27",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 7월 26일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "국세청장 “현행 장특공제, 비싼 주택일수록 혜택…과하게 역진적”",
+      "url": "https://n.news.naver.com/mnews/article/032/0003460490"
+    },
     {
       "title": "동영상뉴스재생시간00:41",
       "url": "https://n.news.naver.com/mnews/article/422/0000889105"
@@ -78,10 +82,6 @@
     {
       "title": "이주비 규제 푼다더니…‘40%·6억원’ 큰 틀은 그대로",
       "url": "https://n.news.naver.com/mnews/article/014/0005553015"
-    },
-    {
-      "title": "'전세 안심신탁' 선택형으로 추진… 9월 윤곽 나온다",
-      "url": "https://n.news.naver.com/mnews/article/014/0005553014"
     }
   ]
 }
