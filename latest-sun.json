@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-07-26 15:59:42",
+  "updated_at_kst": "2026-07-26 16:13:54",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 7월 26일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "[그래픽] 연령별 주택 보유율",
+      "url": "https://n.news.naver.com/mnews/article/421/0009079539"
+    },
+    {
+      "title": "얼굴 마주한 오세훈-김윤덕…용산국제업무지구, 돌파구 마련될까",
+      "url": "https://n.news.naver.com/mnews/article/008/0005391077"
+    },
     {
       "title": "'셔세권' 인기에 들썩…동탄 아파트값 6.25% 급등",
       "url": "https://n.news.naver.com/mnews/article/629/0000519060"
@@ -74,14 +82,6 @@
     {
       "title": "이주비 규제완화...결국 '40%·6억원'은 바뀌지 않는다",
       "url": "https://n.news.naver.com/mnews/article/014/0005552918"
-    },
-    {
-      "title": "'똘똘한 1채' 세금 부담 커진다…종부세 3그룹 차등 과세 검토",
-      "url": "https://n.news.naver.com/mnews/article/031/0001044832"
-    },
-    {
-      "title": "“집값 오르는데 대출 막혀”…2030 거주주택 보유율 27.7% 역대 최저",
-      "url": "https://n.news.naver.com/mnews/article/020/0003736513"
     }
   ]
 }
