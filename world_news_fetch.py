@@ -91,7 +91,7 @@ def main():
     now = datetime.now(KST)
     today = now.strftime("%Y-%m-%d")
     weekday_kr = WEEKDAY_KR[now.weekday()]
-    headline = f"{now.strftime('%y')}년 {now.month}월 {now.day}일 {weekday_kr} 세계 뉴스"
+    headline = f"🌏 {now.strftime('%y')}년 {now.month}월 {now.day}일 {weekday_kr} 세계 뉴스"
 
     report_lines = [headline, ""]
     for art in articles:
