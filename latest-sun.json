@@ -1,8 +1,20 @@
 {
-  "updated_at_kst": "2026-07-26 16:37:18",
+  "updated_at_kst": "2026-07-26 16:45:10",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 7월 26일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "동탄 아파트값 ‘숨 고르기’…분당·수지 강세, 서울은 성북·노원이 견인",
+      "url": "https://n.news.naver.com/mnews/article/138/0002235466"
+    },
+    {
+      "title": "[부동산 손품노트] 요즘 뜨는 재개발 … 동의·비례·용적률 '3개 숫자' 보세요",
+      "url": "https://n.news.naver.com/mnews/article/009/0005712288"
+    },
+    {
+      "title": "낡은 빌라만 사두면 아파트 된다는 착각",
+      "url": "https://n.news.naver.com/mnews/article/009/0005712287"
+    },
     {
       "title": "동영상뉴스재생시간00:45",
       "url": "https://n.news.naver.com/mnews/article/422/0000889055"
@@ -70,18 +82,6 @@
     {
       "title": "KB \"7월 서울 아파트값 상승세 소폭 둔화…동탄 6%대 최고 상승\"",
       "url": "https://n.news.naver.com/mnews/article/001/0016215340"
-    },
-    {
-      "title": "멀어진 내 집 마련…2030세대 주택 보유율 30% 아래로",
-      "url": "https://n.news.naver.com/mnews/article/029/0003038911"
-    },
-    {
-      "title": "임광현 \"1세대 1주택 장특공제 역진성 끝판왕…서울 90% 차지\"",
-      "url": "https://n.news.naver.com/mnews/article/003/0014088665"
-    },
-    {
-      "title": "종부세 '초부자' 타깃…12억 기준 상향, 초고가 1주택 중과 '가닥'",
-      "url": "https://n.news.naver.com/mnews/article/421/0009079454"
     }
   ]
 }
