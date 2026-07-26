@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-07-26 16:13:54",
+  "updated_at_kst": "2026-07-26 16:37:18",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 7월 26일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "동영상뉴스재생시간00:45",
+      "url": "https://n.news.naver.com/mnews/article/422/0000889055"
+    },
     {
       "title": "[그래픽] 연령별 주택 보유율",
       "url": "https://n.news.naver.com/mnews/article/421/0009079539"
@@ -78,10 +82,6 @@
     {
       "title": "종부세 '초부자' 타깃…12억 기준 상향, 초고가 1주택 중과 '가닥'",
       "url": "https://n.news.naver.com/mnews/article/421/0009079454"
-    },
-    {
-      "title": "이주비 규제완화...결국 '40%·6억원'은 바뀌지 않는다",
-      "url": "https://n.news.naver.com/mnews/article/014/0005552918"
     }
   ]
 }
