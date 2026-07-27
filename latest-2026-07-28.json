@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-07-28 07:39:15",
+  "updated_at_kst": "2026-07-28 07:43:28",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 7월 28일 화요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "“집주인이 실거주한다더니 다른 세입자를 들였다”",
+      "url": "https://n.news.naver.com/mnews/article/015/0005314492"
+    },
     {
       "title": "\"월급 500만원 벌어도 허리휜다…매달 230만원 대출 상환\"",
       "url": "https://n.news.naver.com/mnews/article/374/0000524029"
@@ -78,10 +82,6 @@
     {
       "title": "지방도심은 '용도변경' 쉽게…지역 맞춤형 건축 규제완화 추진",
       "url": "https://n.news.naver.com/mnews/article/421/0009082135"
-    },
-    {
-      "title": "'초고가 주택' 기준은?…공시가 40억이면 '상위 0.1%'",
-      "url": "https://n.news.naver.com/mnews/article/003/0014091701"
     }
   ]
 }
