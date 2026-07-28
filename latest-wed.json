@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-07-29 08:33:31",
+  "updated_at_kst": "2026-07-29 08:43:01",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 7월 29일 수요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "대우건설, 강남원효성빌라 재건축 시공사 선정 취소…법적 대응 예고",
+      "url": "https://n.news.naver.com/mnews/article/003/0014094430"
+    },
+    {
+      "title": "주택전시관이 문화공간으로…LH, 수도권·세종서 방학 행사",
+      "url": "https://n.news.naver.com/mnews/article/003/0014094417"
+    },
     {
       "title": "서울시, 잠실 마이스 실시협약… 컨벤션·돔구장·5성급 호텔 등 경제 효과 ‘595조’",
       "url": "https://n.news.naver.com/mnews/article/366/0001182651"
@@ -74,14 +82,6 @@
     {
       "title": "16년간 집값 5억 그대로?...정부 통계는 대전 아파트값 55% 상승",
       "url": "https://n.news.naver.com/mnews/article/014/0005554269"
-    },
-    {
-      "title": "[팀장칼럼] 세금으로 못 잡은 집값, 세 번째 도전",
-      "url": "https://n.news.naver.com/mnews/article/421/0009084578"
-    },
-    {
-      "title": "“50억 집 보유세 5000만원?”…강남 ‘똘똘한 한 채’ 세금 폭탄 예고",
-      "url": "https://n.news.naver.com/mnews/article/009/0005713571"
     }
   ]
 }
