@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-07-29 07:40:19",
+  "updated_at_kst": "2026-07-29 07:49:10",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 7월 29일 수요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "서울 외국인 집주인, 1년새 1058명 늘었다…어느 동네 많이 샀나 봤더니",
+      "url": "https://n.news.naver.com/mnews/article/009/0005713582"
+    },
+    {
+      "title": "국민 10명 중 4명 토지 보유…“경기도 땅 34%가 외지인 소유”",
+      "url": "https://n.news.naver.com/mnews/article/666/0000117012"
+    },
     {
       "title": "반포자이 보유세 1810만 원 ‘역대 최대’… 초고가 주택 세 부담 ‘직격탄’ 맞나",
       "url": "https://n.news.naver.com/mnews/article/022/0004146727"
@@ -74,14 +82,6 @@
     {
       "title": "전쟁으로 공사비 급등…가덕도 컨소, 국토부에 “공사비 인상 요청”",
       "url": "https://n.news.naver.com/mnews/article/011/0004646241"
-    },
-    {
-      "title": "[기자수첩]내 집 들어가 살라면서요",
-      "url": "https://n.news.naver.com/mnews/article/648/0000049285"
-    },
-    {
-      "title": "강남 집주인 '세금 폭탄' 초읽기…보유세 역대 최고 찍었다",
-      "url": "https://n.news.naver.com/mnews/article/374/0000524243"
     }
   ]
 }
