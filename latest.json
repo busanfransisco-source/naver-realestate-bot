@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-07-28 20:27:23",
+  "updated_at_kst": "2026-07-28 20:53:19",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 7월 28일 화요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "국민은 대출을 묻고, 정부는 세금을 답했다[정준호의 부동산과 사회경제]",
+      "url": "https://n.news.naver.com/mnews/article/032/0003460929"
+    },
     {
       "title": "가덕도 신공항, 공사비 급등에 '경고등'…지역 건설사, 현실화 요구",
       "url": "https://n.news.naver.com/mnews/article/008/0005392284"
@@ -78,10 +82,6 @@
     {
       "title": "대우건설, 3387억 강남 원효성빌라 시공권 취소…법적 대응 검토",
       "url": "https://n.news.naver.com/mnews/article/008/0005392255"
-    },
-    {
-      "title": "[로터리] 주택 공급의 ‘보이지 않는 힘’",
-      "url": "https://n.news.naver.com/mnews/article/011/0004646132"
     }
   ]
 }
