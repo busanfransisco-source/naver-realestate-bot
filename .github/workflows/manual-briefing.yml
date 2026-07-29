@@ -62,6 +62,9 @@ jobs:
       - name: Fetch finance news
         run: python finance_news_fetch.py || echo "finance news failed"
 
+      - name: Fetch AI news
+        run: python ai_news_fetch.py || echo "AI news failed"
+
       - name: Fetch market info
         run: python market_fetch.py || echo "market failed"
 
@@ -80,6 +83,7 @@ jobs:
           git add shortnews.txt shortnews-*.txt shortnews-debug.log || true
           git add world.txt world-*.txt || true
           git add finance.txt finance-*.txt || true
+          git add ai.txt ai-*.txt || true
           git add subs.txt subs-*.txt trend.txt trend-*.txt rone-cache.json || true
           git add fuelfx.txt fuelfx-*.txt metalcoin.txt metalcoin-*.txt books.txt books-*.txt fx-cache.json || true
           git add weather.txt weather-*.txt fortune.txt fortune-*.txt realestate.txt realestate-*.txt latest.json latest-*.json index.html hub.html briefing.html last-refresh.txt
