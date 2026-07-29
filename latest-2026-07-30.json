@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-07-30 08:38:05",
+  "updated_at_kst": "2026-07-30 08:45:42",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 7월 30일 목요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "경남기업, 노동청·LH와 폭염 대응 합동점검…온열질환 예방",
+      "url": "https://n.news.naver.com/mnews/article/018/0006339684"
+    },
     {
       "title": "용산구, 재건축·재개발 '갈등관리조정관' 위촉",
       "url": "https://n.news.naver.com/mnews/article/001/0016223080"
@@ -78,10 +82,6 @@
     {
       "title": "초고가 1주택, 세 부담 높아진다…시가 46억원 넘으면 종부세 2배",
       "url": "https://n.news.naver.com/mnews/article/421/0009086997"
-    },
-    {
-      "title": "구윤철 “세제 개편, 집값 잡는 게 아니라 거래 정상화 목적”",
-      "url": "https://n.news.naver.com/mnews/article/021/0002807906"
     }
   ]
 }
