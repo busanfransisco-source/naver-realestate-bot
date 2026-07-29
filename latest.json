@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-07-29 20:36:10",
+  "updated_at_kst": "2026-07-29 20:53:17",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 7월 29일 수요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "동영상뉴스재생시간00:43",
+      "url": "https://n.news.naver.com/mnews/article/422/0000890336"
+    },
+    {
+      "title": "자율주행 청소부터 착용형 무쇠팔까지…공사장 로봇도우미",
+      "url": "https://n.news.naver.com/mnews/article/658/0000150945"
+    },
     {
       "title": "“우리 동네엔 이런 집 없나요?”…‘10년 월세 0원’ 공짜 주택, 어딘가 보니",
       "url": "https://n.news.naver.com/mnews/article/009/0005714079"
@@ -74,14 +82,6 @@
     {
       "title": "李 대통령 아파트 근저당에…금융당국 수장들 “사인간 거래, 규제 대상 아냐”",
       "url": "https://n.news.naver.com/mnews/article/009/0005714058"
-    },
-    {
-      "title": "초고가 보유세 압박에 \"집 팔겠다\"… 강남3구 매물 속속 등장",
-      "url": "https://n.news.naver.com/mnews/article/014/0005554811"
-    },
-    {
-      "title": "반포자이 84㎡ 보유세 1810만원… 40% 이상 급증",
-      "url": "https://n.news.naver.com/mnews/article/014/0005554810"
     }
   ]
 }
