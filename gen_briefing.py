@@ -32,6 +32,7 @@ SECTIONS = [
     ("shortnews", "⚡ 오늘의 퀵뉴스", "shortnews"),
     ("world", "🌏 세계 뉴스", "world"),
     ("finance", "🏦 금융 뉴스", "finance"),
+    ("ai", "🤖 AI 뉴스", "ai"),
     ("subs", "🏗️ 청약 소식", "subs"),
     ("trend", "📈 부동산 주간 시세동향", "trend"),
     ("fuelfx", "⛽ 기름값·환율", "fuelfx"),
