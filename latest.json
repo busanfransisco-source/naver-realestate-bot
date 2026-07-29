@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-07-30 01:50:56",
+  "updated_at_kst": "2026-07-30 03:16:05",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 7월 30일 목요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "서울 집값 부담에 인천·경기로…서울 거주자 매입 비중 4년만에 최고",
+      "url": "https://n.news.naver.com/mnews/article/003/0014096831"
+    },
     {
       "title": "초고가 주택, 장특공 한도 신설 땐 세금 4배로",
       "url": "https://n.news.naver.com/mnews/article/023/0003990343"
@@ -78,10 +82,6 @@
     {
       "title": "\"공짜주택 나온다\" 10년 월세 0원…대상·지역 어디?",
       "url": "https://n.news.naver.com/mnews/article/018/0006339473"
-    },
-    {
-      "title": "초기 자금 3천만원에 내집 마련, 힐스테이트 회룡역파크뷰 계약조건 변경",
-      "url": "https://n.news.naver.com/mnews/article/079/0004173602"
     }
   ]
 }
