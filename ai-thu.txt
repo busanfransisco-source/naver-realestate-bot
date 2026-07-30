@@ -1,5 +1,11 @@
 🤖 26년 7월 30일 목요일 AI 뉴스
 
+삼성전자 2분기 영업익 89조원 '역대 최다'... 99.7%가 반도체
+https://www.aitimes.com/news/articleView.html?idxno=213325
+
+국내 유일 오픈 데이터센터 전문 포럼 'OCP 코리아 테크 데이' 8월21일 코엑스에서 개최
+https://www.aitimes.com/news/articleView.html?idxno=213319
+
 [게시판] 한국딥러닝, 서연이화에 문서 AI 솔루션 공급 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=213318
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213309
 
 "학습 데이터 오염 막아라"...AI 기업들, 오프라인 '인쇄 서적' 대량 확보 총력전
 https://www.aitimes.com/news/articleView.html?idxno=213308
-
-MCP 핵심 구조 전면 개편..."AI 에이전트 대규모 프로덕션 시대 진입"
-https://www.aitimes.com/news/articleView.html?idxno=213307
-
-오픈AI, 음성 전사 AI 'GPT-트랜스크라이브' 2종 출시…실시간·비동기 맞춤 지원
-https://www.aitimes.com/news/articleView.html?idxno=213305
