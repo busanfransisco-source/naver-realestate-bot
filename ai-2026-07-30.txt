@@ -1,10 +1,22 @@
 🤖 26년 7월 30일 목요일 AI 뉴스
 
+한컴, AI 사업 상승세로 상반기 986억 '역대 최대' 매출 달성
+https://www.aitimes.com/news/articleView.html?idxno=213367
+
+구글, 개인용 AI 에이전트 '제미나이 스파크' 국내 정식 출시
+https://www.aitimes.com/news/articleView.html?idxno=213365
+
+구글, 노벨상 AI '알파폴드' 개발팀 해체...'제미나이' 중심 체제로 전환
+https://www.aitimes.com/news/articleView.html?idxno=213364
+
 중국, 'AI 악용' 사이버 괴롭힘에 강력 대처…플랫폼 책임 강화·고강도 제재
 https://www.aitimes.com/news/articleView.html?idxno=213363
 
 PwC, AI '환각 보고서' 파문...존재하지 않는 논문·가짜 출처 수두룩
 https://www.aitimes.com/news/articleView.html?idxno=213362
+
+스페이스XAI, 차세대 음성 모델 '그록 보이스 싱크 패스트 2.0' 출시
+https://www.aitimes.com/news/articleView.html?idxno=213360
 
 '엔비디아 후원' 리플렉션 AI, 로드맵 공개에도 "기대 이하"
 https://www.aitimes.com/news/articleView.html?idxno=213359
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213355
 
 팀스파르타, AX 자회사에 카카오·배민 출신 손현태 CTO 영입
 https://www.aitimes.com/news/articleView.html?idxno=213354
-
-AI 크리에이터 개발사 언엑스, 카카오벤처스 시드 투자 유치
-https://www.aitimes.com/news/articleView.html?idxno=213351
-
-"AI가 주식 투자 코치해준다"...라이너, 투자 리서치 AI 에이전트 출시
-https://www.aitimes.com/news/articleView.html?idxno=213345
-
-오픈AI·문샷, 글로벌 앰배서더 확보 나서...'생태계 확장' 경쟁
-https://www.aitimes.com/news/articleView.html?idxno=213344
-
-삼성SDS, 2분기 매출 3.7조 달성...AI 및 클라우드 실적 견인
-https://www.aitimes.com/news/articleView.html?idxno=213343
