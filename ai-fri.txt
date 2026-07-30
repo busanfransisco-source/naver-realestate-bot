@@ -1,5 +1,11 @@
 🤖 26년 7월 31일 금요일 AI 뉴스
 
+'모두의 AI' 공모 마감 일주일 연장…8월18일까지
+https://www.aitimes.com/news/articleView.html?idxno=213374
+
+래블업, GPU 운영 플랫폼으로 최단 기간 코스닥 상장예심 통과
+https://www.aitimes.com/news/articleView.html?idxno=213372
+
 로브로스, 풍차 돌리기·백텀블링하는 휴머노이드 시연 영상 공개
 https://www.aitimes.com/news/articleView.html?idxno=213369
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213362
 
 스페이스XAI, 차세대 음성 모델 '그록 보이스 싱크 패스트 2.0' 출시
 https://www.aitimes.com/news/articleView.html?idxno=213360
-
-'엔비디아 후원' 리플렉션 AI, 로드맵 공개에도 "기대 이하"
-https://www.aitimes.com/news/articleView.html?idxno=213359
-
-과기부, '능동형 에이전틱 AI' 개발에 180억원 투입
-https://www.aitimes.com/news/articleView.html?idxno=213357
