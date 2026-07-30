@@ -1,7 +1,13 @@
 🤖 26년 7월 30일 목요일 AI 뉴스
 
+로브로스, 풍차 돌리기·백텀블링하는 휴머노이드 시연 영상 공개
+https://www.aitimes.com/news/articleView.html?idxno=213369
+
 한컴, AI 사업 상승세로 상반기 986억 '역대 최대' 매출 달성
 https://www.aitimes.com/news/articleView.html?idxno=213367
+
+[게시판] S2W, 에이전틱 AI 대비 보안 취약점 진단 사업 확대 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=213366
 
 구글, 개인용 AI 에이전트 '제미나이 스파크' 국내 정식 출시
 https://www.aitimes.com/news/articleView.html?idxno=213365
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213359
 
 과기부, '능동형 에이전틱 AI' 개발에 180억원 투입
 https://www.aitimes.com/news/articleView.html?idxno=213357
-
-챗GPT·로블록스, EU 최고 수준 규제 받는다...이르면 8월 '특별 관리 대상' 지정
-https://www.aitimes.com/news/articleView.html?idxno=213355
-
-팀스파르타, AX 자회사에 카카오·배민 출신 손현태 CTO 영입
-https://www.aitimes.com/news/articleView.html?idxno=213354
