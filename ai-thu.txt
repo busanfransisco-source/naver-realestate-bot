@@ -1,31 +1,31 @@
 🤖 26년 7월 30일 목요일 AI 뉴스
 
-삼성전자 2분기 영업익 89조원 '역대 최다'... 99.7%가 반도체
-https://www.aitimes.com/news/articleView.html?idxno=213325
+오픈AI·문샷, 글로벌 앰배서더 확보 나서...'생태계 확장' 경쟁
+https://www.aitimes.com/news/articleView.html?idxno=213344
 
-국내 유일 오픈 데이터센터 전문 포럼 'OCP 코리아 테크 데이' 8월21일 코엑스에서 개최
-https://www.aitimes.com/news/articleView.html?idxno=213319
+삼성SDS, 2분기 매출 3.7조 달성...AI 및 클라우드 실적 견인
+https://www.aitimes.com/news/articleView.html?idxno=213343
 
-[게시판] 한국딥러닝, 서연이화에 문서 AI 솔루션 공급 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=213318
+중국, 미국 휴머노이드 수입 제한에 '보복' 경고...기술 갈등 격화
+https://www.aitimes.com/news/articleView.html?idxno=213341
 
-오케스트로 "'AI 인프라 풀스택 소프트웨어'로 기업 AX 지원"
-https://www.aitimes.com/news/articleView.html?idxno=213316
+미 의회, 애플에 경고..."중국산 메모리 칩 구매 중단하라"
+https://www.aitimes.com/news/articleView.html?idxno=213339
 
-크래프톤, 21B 음성 AI 모델 공개… "30B 이하 한국어 성능 1위"
-https://www.aitimes.com/news/articleView.html?idxno=213315
+호주, 재생에너지 비중 42.1%…도매 전력가격 47% 하락
+https://www.aitimes.com/news/articleView.html?idxno=213338
 
-[게시판] 한컴위드, NH농협손해보험에 AI 안면인증 솔루션 도입 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=213313
+저커버그 "AI 규제·중국 모델 금지 반대…미국 경쟁력만 떨어뜨려"
+https://www.aitimes.com/news/articleView.html?idxno=213334
 
-키미 K3, 페이블 5와 게임 개발 맞대결…"비용 낮추고 성능은 필적"
-https://www.aitimes.com/news/articleView.html?idxno=213312
+알트먼, 미 의회·백악관 연쇄 방문... '통제 벗어난 AI 에이전트' 규제 논의
+https://www.aitimes.com/news/articleView.html?idxno=213331
 
-"대체 불가 토큰 수출국 목표"...민·관  주도 'AIDC 얼라이언스' 공식 출범
-https://www.aitimes.com/news/articleView.html?idxno=213310
+호주, 재생에너지 발전량 따라 지역에 분담금…업계, 법제화 제안
+https://www.aitimes.com/news/articleView.html?idxno=213330
 
-오픈AI, '챗GPT' 유명 작가 문체 모방 요청 차단… 저작권 논란 대응 강화
-https://www.aitimes.com/news/articleView.html?idxno=213309
+NC AI, 씨메스로보틱스와 제조·물류용 로보틱스 솔루션 개발
+https://www.aitimes.com/news/articleView.html?idxno=213329
 
-"학습 데이터 오염 막아라"...AI 기업들, 오프라인 '인쇄 서적' 대량 확보 총력전
-https://www.aitimes.com/news/articleView.html?idxno=213308
+카카오, AI 안전연구소 등 외부 전문가와 'AI 윤리 자문단' 발족
+https://www.aitimes.com/news/articleView.html?idxno=213328
