@@ -1,31 +1,31 @@
 🤖 26년 7월 31일 금요일 AI 뉴스
 
-IBM, '신뢰 가능한 양자 계산' 첫 입증…"양자 우위 새 기준 제시"
-https://www.aitimes.com/news/articleView.html?idxno=213397
+미 법원 "증거 부족"...트럼프 행정부의 앤트로픽 제재 '무효화' 가능성
+https://www.aitimes.com/news/articleView.html?idxno=213420
 
-AI 투자도 '실적 증명' 시대…MS가 바꾼 시장의 평가 기준
-https://www.aitimes.com/news/articleView.html?idxno=213396
+애플, 차세대 'AI 시리' 유료화 가능성 시사…"AI 연산 비용 부담"
+https://www.aitimes.com/news/articleView.html?idxno=213419
 
-아마존, AWS 37% 급성장…'AI 투자 회의론' 잠재우고 주가 9% 급등
-https://www.aitimes.com/news/articleView.html?idxno=213391
+딥시크, 내몽골에 1GW AI 데이터센터 구축 추진...'중국 최대 규모급'
+https://www.aitimes.com/news/articleView.html?idxno=213416
 
-SKT, 피지컬 AI 스타트업 8개사와 로보틱스 생태계 협력 강화
-https://www.aitimes.com/news/articleView.html?idxno=213388
+미국, 외국산 로봇청소기 수입 규제 대상 포함…중국 업체 '비상'
+https://www.aitimes.com/news/articleView.html?idxno=213414
 
-애플, 역대급 실적에도 주가 급락..."공급망·메모리 병목 심각"
-https://www.aitimes.com/news/articleView.html?idxno=213386
+구글, 맥OS용 '제미나이'에 음성 AI 도입…작업 중 말로 AI 직접 제어
+https://www.aitimes.com/news/articleView.html?idxno=213412
 
-미 델라웨어, 4MW 공유형 태양광 가동…저소득층 참여 의무화
-https://www.aitimes.com/news/articleView.html?idxno=213383
+"헛것 보고 듣는 AI 막는다"...KAIST, 멀티모달 환각 줄이는 기술 개발
+https://www.aitimes.com/news/articleView.html?idxno=213409
 
-EU, ‘AI 기가팩토리’ 7곳 확정…총 49조원 규모로 투자 확대
-https://www.aitimes.com/news/articleView.html?idxno=213382
+"해고보다 무서운 임금 동결"... AI가 가져온 진짜 위협은 '소득 감소'
+https://www.aitimes.com/news/articleView.html?idxno=213406
 
-오픈AI, GPT-5.6 라인업 가격 최대 80% 인하…효율성 경쟁 가속
-https://www.aitimes.com/news/articleView.html?idxno=213381
+TSMC, 인텔 ‘EMIB’ 맞서 차세대 AI 칩 패키징 개발 착수
+https://www.aitimes.com/news/articleView.html?idxno=213405
 
-게임 구독료 모아 태양광 계약…게이머가 110MW 발전소 지원
-https://www.aitimes.com/news/articleView.html?idxno=213380
+구글, 앤트로픽에 초대형 금융 보증..."21조 데이터센터 세운다"
+https://www.aitimes.com/news/articleView.html?idxno=213404
 
-"국내 최대 기록 경신"...LG, 7500억 매개변수 'K-엑사원 2.0' 공개
-https://www.aitimes.com/news/articleView.html?idxno=213379
+딥엑스, KT·세솔과 국산 NPU 기반 '온디바이스 AIoT 사업' 협력
+https://www.aitimes.com/news/articleView.html?idxno=213399
