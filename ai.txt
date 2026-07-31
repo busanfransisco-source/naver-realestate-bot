@@ -1,5 +1,8 @@
 🤖 26년 7월 31일 금요일 AI 뉴스
 
+"국내 최대 기록 경신"...LG, 7500억 매개변수 'K-엑사원 2.0' 공개
+https://www.aitimes.com/news/articleView.html?idxno=213379
+
 '모두의 AI' 공모 마감 일주일 연장…8월18일까지
 https://www.aitimes.com/news/articleView.html?idxno=213374
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213364
 
 중국, 'AI 악용' 사이버 괴롭힘에 강력 대처…플랫폼 책임 강화·고강도 제재
 https://www.aitimes.com/news/articleView.html?idxno=213363
-
-PwC, AI '환각 보고서' 파문...존재하지 않는 논문·가짜 출처 수두룩
-https://www.aitimes.com/news/articleView.html?idxno=213362
