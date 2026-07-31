@@ -18,6 +18,9 @@ https://www.aitimes.com/news/articleView.html?idxno=213412
 "헛것 보고 듣는 AI 막는다"...KAIST, 멀티모달 환각 줄이는 기술 개발
 https://www.aitimes.com/news/articleView.html?idxno=213409
 
+"악성 문서 읽고 파일 유출"...MS 코파일럿서 보안 허점 발견
+https://www.aitimes.com/news/articleView.html?idxno=213408
+
 "해고보다 무서운 임금 동결"... AI가 가져온 진짜 위협은 '소득 감소'
 https://www.aitimes.com/news/articleView.html?idxno=213406
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213405
 
 구글, 앤트로픽에 초대형 금융 보증..."21조 데이터센터 세운다"
 https://www.aitimes.com/news/articleView.html?idxno=213404
-
-딥엑스, KT·세솔과 국산 NPU 기반 '온디바이스 AIoT 사업' 협력
-https://www.aitimes.com/news/articleView.html?idxno=213399
