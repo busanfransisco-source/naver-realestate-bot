@@ -1,5 +1,8 @@
 🤖 26년 8월 1일 토요일 AI 뉴스
 
+오픈AI, 차세대 '아스트라' 비공개 시연…"에이전트 패러다임 전환"
+https://www.aitimes.com/news/articleView.html?idxno=213427
+
 미 법원 "증거 부족"...트럼프 행정부의 앤트로픽 제재 '무효화' 가능성
 https://www.aitimes.com/news/articleView.html?idxno=213420
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213406
 
 TSMC, 인텔 ‘EMIB’ 맞서 차세대 AI 칩 패키징 개발 착수
 https://www.aitimes.com/news/articleView.html?idxno=213405
-
-구글, 앤트로픽에 초대형 금융 보증..."21조 데이터센터 세운다"
-https://www.aitimes.com/news/articleView.html?idxno=213404
