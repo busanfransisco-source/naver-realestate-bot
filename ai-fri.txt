@@ -1,31 +1,31 @@
 🤖 26년 7월 31일 금요일 AI 뉴스
 
+IBM, '신뢰 가능한 양자 계산' 첫 입증…"양자 우위 새 기준 제시"
+https://www.aitimes.com/news/articleView.html?idxno=213397
+
+AI 투자도 '실적 증명' 시대…MS가 바꾼 시장의 평가 기준
+https://www.aitimes.com/news/articleView.html?idxno=213396
+
+아마존, AWS 37% 급성장…'AI 투자 회의론' 잠재우고 주가 9% 급등
+https://www.aitimes.com/news/articleView.html?idxno=213391
+
+SKT, 피지컬 AI 스타트업 8개사와 로보틱스 생태계 협력 강화
+https://www.aitimes.com/news/articleView.html?idxno=213388
+
+애플, 역대급 실적에도 주가 급락..."공급망·메모리 병목 심각"
+https://www.aitimes.com/news/articleView.html?idxno=213386
+
+미 델라웨어, 4MW 공유형 태양광 가동…저소득층 참여 의무화
+https://www.aitimes.com/news/articleView.html?idxno=213383
+
+EU, ‘AI 기가팩토리’ 7곳 확정…총 49조원 규모로 투자 확대
+https://www.aitimes.com/news/articleView.html?idxno=213382
+
+오픈AI, GPT-5.6 라인업 가격 최대 80% 인하…효율성 경쟁 가속
+https://www.aitimes.com/news/articleView.html?idxno=213381
+
+게임 구독료 모아 태양광 계약…게이머가 110MW 발전소 지원
+https://www.aitimes.com/news/articleView.html?idxno=213380
+
 "국내 최대 기록 경신"...LG, 7500억 매개변수 'K-엑사원 2.0' 공개
 https://www.aitimes.com/news/articleView.html?idxno=213379
-
-'모두의 AI' 공모 마감 일주일 연장…8월18일까지
-https://www.aitimes.com/news/articleView.html?idxno=213374
-
-래블업, GPU 운영 플랫폼으로 최단 기간 코스닥 상장예심 통과
-https://www.aitimes.com/news/articleView.html?idxno=213372
-
-로브로스, 풍차 돌리기·백텀블링하는 휴머노이드 시연 영상 공개
-https://www.aitimes.com/news/articleView.html?idxno=213369
-
-챗GPT의 아버지… 인류는 이미 ‘AI 특이점’에 진입했다
-https://www.aitimes.com/news/articleView.html?idxno=213368
-
-한컴, AI 사업 상승세로 상반기 986억 '역대 최대' 매출 달성
-https://www.aitimes.com/news/articleView.html?idxno=213367
-
-[게시판] S2W, 에이전틱 AI 대비 보안 취약점 진단 사업 확대 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=213366
-
-구글, 개인용 AI 에이전트 '제미나이 스파크' 국내 정식 출시
-https://www.aitimes.com/news/articleView.html?idxno=213365
-
-구글, 노벨상 AI '알파폴드' 개발팀 해체...'제미나이' 중심 체제로 전환
-https://www.aitimes.com/news/articleView.html?idxno=213364
-
-중국, 'AI 악용' 사이버 괴롭힘에 강력 대처…플랫폼 책임 강화·고강도 제재
-https://www.aitimes.com/news/articleView.html?idxno=213363
