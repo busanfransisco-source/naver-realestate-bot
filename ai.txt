@@ -1,5 +1,8 @@
 🤖 26년 8월 1일 토요일 AI 뉴스
 
+앤트로픽 "클로드, 격리 테스트 중 인터넷 접속해 실제 기업 3곳 해킹"
+https://www.aitimes.com/news/articleView.html?idxno=213428
+
 오픈AI, 차세대 '아스트라' 비공개 시연…"에이전트 패러다임 전환"
 https://www.aitimes.com/news/articleView.html?idxno=213427
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213408
 
 "해고보다 무서운 임금 동결"... AI가 가져온 진짜 위협은 '소득 감소'
 https://www.aitimes.com/news/articleView.html?idxno=213406
-
-TSMC, 인텔 ‘EMIB’ 맞서 차세대 AI 칩 패키징 개발 착수
-https://www.aitimes.com/news/articleView.html?idxno=213405
