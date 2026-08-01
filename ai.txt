@@ -1,5 +1,8 @@
 🤖 26년 8월 1일 토요일 AI 뉴스
 
+허깅페이스 침해 이어…오픈AI 자율 AI, 샌드박스 벗어난 정황 또 나왔다
+https://www.aitimes.com/news/articleView.html?idxno=213432
+
 샤오홍슈, 내몽골에 3.2조 규모 AI 데이터센터 건설 추진
 https://www.aitimes.com/news/articleView.html?idxno=213431
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213420
 
 애플, 차세대 'AI 시리' 유료화 가능성 시사…"AI 연산 비용 부담"
 https://www.aitimes.com/news/articleView.html?idxno=213419
-
-딥시크, 내몽골에 1GW AI 데이터센터 구축 추진...'중국 최대 규모급'
-https://www.aitimes.com/news/articleView.html?idxno=213416
