@@ -104,6 +104,12 @@ def build_html():
     font-size: 17px;
     margin: 0;
   }}
+  .update-time {{
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    margin: -12px 0 16px;
+  }}
   .copy-btn {{
     font-size: 15px;
     font-weight: 600;
@@ -135,6 +141,7 @@ def build_html():
 </head>
 <body>
   <h1>📅 {date_line}</h1>
+  <p class="update-time">🕐 마지막 업데이트: {now.month}월 {now.day}일 {now.strftime('%H:%M')}</p>
   {sections_html}
 
 <script>
