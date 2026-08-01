@@ -1,5 +1,17 @@
 🤖 26년 8월 1일 토요일 AI 뉴스
 
+[AI 이슈트렌드] 반도체 '역대급 실적'에도 요동친 코스피...빅테크 협력속 재난·정치 이슈 부각
+https://www.aitimes.com/news/articleView.html?idxno=213437
+
+싱킹 머신즈, '잉클링-스몰' 공개…4분의 1 크기로 동급 최고 성능 확보
+https://www.aitimes.com/news/articleView.html?idxno=213436
+
+단일 30초·최대 3분 확장...바이트댄스, '시댄스 2.5'로 장편 AI 영상 시대 연다
+https://www.aitimes.com/news/articleView.html?idxno=213435
+
+독일 법원 "수노, 음원 저작권 침해"…글로벌 판례 기준 될까
+https://www.aitimes.com/news/articleView.html?idxno=213434
+
 허깅페이스 침해 이어…오픈AI 자율 AI, 샌드박스 벗어난 정황 또 나왔다
 https://www.aitimes.com/news/articleView.html?idxno=213432
 
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213428
 
 오픈AI, 차세대 '아스트라' 비공개 시연…"에이전트 패러다임 전환"
 https://www.aitimes.com/news/articleView.html?idxno=213427
-
-[내면 지도 그리기] 27 Inner Mapping: 나를 찾는 지도
-https://www.aitimes.com/news/articleView.html?idxno=213423
-
-[AI카툰] Bob, Senior IT guy - 밥, 선제적 리더십
-https://www.aitimes.com/news/articleView.html?idxno=213422
-
-미 법원 "증거 부족"...트럼프 행정부의 앤트로픽 제재 '무효화' 가능성
-https://www.aitimes.com/news/articleView.html?idxno=213420
-
-애플, 차세대 'AI 시리' 유료화 가능성 시사…"AI 연산 비용 부담"
-https://www.aitimes.com/news/articleView.html?idxno=213419
