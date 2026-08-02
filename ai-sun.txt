@@ -1,5 +1,8 @@
 🤖 26년 8월 2일 일요일 AI 뉴스
 
+EU, 8월부터 AI 챗봇·딥페이크 표기 의무화…'AI 라벨링' 규제 본격화
+https://www.aitimes.com/news/articleView.html?idxno=213450
+
 월가를 흔든 20대 'AI 천재'의 몰락… 3조달러 대폭락 사태의 내막
 https://www.aitimes.com/news/articleView.html?idxno=213449
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213442
 
 "오픈AI·앤트로픽 모델로 학습"…중국, '증류'로 군사용 AI 개발
 https://www.aitimes.com/news/articleView.html?idxno=213441
-
-테슬라, 지정학 리스크에 중국 사업 분리 추진설… 머스크 "터무니 없는 가짜 뉴스"
-https://www.aitimes.com/news/articleView.html?idxno=213440
