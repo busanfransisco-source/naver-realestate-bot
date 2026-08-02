@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-08-03 00:46:38",
+  "updated_at_kst": "2026-08-03 03:13:03",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 3일 월요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "[단독] 서울·경기 외국인 주택 매수 변화… “캐나다·미국인 늘고 중국인 줄고”",
+      "url": "https://n.news.naver.com/mnews/article/005/0001864530"
+    },
     {
       "title": "30억 이상 아파트 거래… 송파, 서초 제치고 2위",
       "url": "https://n.news.naver.com/mnews/article/023/0003990988"
@@ -78,10 +82,6 @@
     {
       "title": "‘﻿더샵트리센트’ 등 ﻿4개 단지서 총 3034가구 분양[분양캘린더]",
       "url": "https://n.news.naver.com/mnews/article/011/0004647756"
-    },
-    {
-      "title": "“건설·에너지 결합 사업 확대”…주우정의 승부수",
-      "url": "https://n.news.naver.com/mnews/article/011/0004647755"
     }
   ]
 }
