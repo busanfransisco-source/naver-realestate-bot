@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-08-02 16:25:01",
+  "updated_at_kst": "2026-08-02 16:40:01",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 2일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "\"서울 아파트는 트로피\"…서울 '상위 5%' 아파트, 1Q 가격 상승률 세계 1위",
+      "url": "https://n.news.naver.com/mnews/article/008/0005394465"
+    },
     {
       "title": "꽁꽁 언 매매, 불붙은 전월세… 세제개편안, 기름 붓나",
       "url": "https://n.news.naver.com/mnews/article/029/0003040226"
@@ -78,10 +82,6 @@
     {
       "title": "“중랑구 국평 15억 돌파, 호가는 이미 16.5억”…성북·노원까지 불붙은 중저가 아파트",
       "url": "https://n.news.naver.com/mnews/article/009/0005715446"
-    },
-    {
-      "title": "정비구역부터 통합심의까지…반포 후발 재건축 '속도'",
-      "url": "https://n.news.naver.com/mnews/article/421/0009092527"
     }
   ]
 }
