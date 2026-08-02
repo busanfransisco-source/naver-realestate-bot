@@ -1,14 +1,18 @@
 {
-  "updated_at_kst": "2026-08-02 20:05:46",
+  "updated_at_kst": "2026-08-02 20:53:14",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 2일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "홈쇼핑에서 집도 판다…LG전자의 ‘스마트코티지’ 라이브쇼",
+      "url": "https://n.news.naver.com/mnews/article/032/0003461852"
+    },
     {
       "title": "부산 미분양 아파트 3달째 8000가구 넘어… 악성도 3292가구",
       "url": "https://n.news.naver.com/mnews/article/014/0005556143"
     },
     {
-      "title": "건설사 올해만 2530곳 줄폐업… 공사비 인상에 업황악화 ‘설상가상’",
+      "title": "건설사 올해만 2530곳 줄폐업… 공사비 인상에 업황악화 '설상가상'",
       "url": "https://n.news.naver.com/mnews/article/014/0005556137"
     },
     {
@@ -78,10 +82,6 @@
     {
       "title": "SRT 품는 KTX…만성 적자·조직 통합이 과제",
       "url": "https://n.news.naver.com/mnews/article/015/0005316429"
-    },
-    {
-      "title": "'재개발 공사비 특약' 갖춰도…분담금 증액은 상시 리스크",
-      "url": "https://n.news.naver.com/mnews/article/015/0005316422"
     }
   ]
 }
