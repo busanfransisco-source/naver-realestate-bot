@@ -3,6 +3,9 @@
 아마존, 오픈AI에 50조 추가 투자 완료...지분 5% 확보
 https://www.aitimes.com/news/articleView.html?idxno=213448
 
+구글, 크롬에 '제미나이 스파크' 통합...웹 브라우징 자동화 지원
+https://www.aitimes.com/news/articleView.html?idxno=213447
+
 세계 첫 '10대 SNS 금지법' 효과 미미… 호주 청소년 80% 여전히 이용 중
 https://www.aitimes.com/news/articleView.html?idxno=213446
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213440
 
 “저렴한 AI가 더 많은 수요 만든다”...오픈AI, 가격 인하 후 사용자 10억 발표
 https://www.aitimes.com/news/articleView.html?idxno=213439
-
-문샷, 알리바바서 엔비디아 GPU 2만개 공급받아 '키미 K3' 개발
-https://www.aitimes.com/news/articleView.html?idxno=213438
