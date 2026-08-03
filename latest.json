@@ -1,8 +1,52 @@
 {
-  "updated_at_kst": "2026-08-04 07:47:40",
+  "updated_at_kst": "2026-08-04 08:50:16",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 4일 화요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "국힘 \"李대통령, 세금은 핵폭탄이라더니…결국 국민에게 투하\"",
+      "url": "https://n.news.naver.com/mnews/article/421/0009095312"
+    },
+    {
+      "title": "조국 \"세제개편안 기대 못 미쳐…조세 형평성 정상화 뒤로 미뤄\"",
+      "url": "https://n.news.naver.com/mnews/article/003/0014106232"
+    },
+    {
+      "title": "삼삼엠투·SH·마을과 사람, 서울 청년 주거 안정 지원 사업 협약",
+      "url": "https://n.news.naver.com/mnews/article/366/0001184118"
+    },
+    {
+      "title": "증권가 \"부동산 세제개편안 예상 부합…시장 영향 제한적\"",
+      "url": "https://n.news.naver.com/mnews/article/001/0016231875"
+    },
+    {
+      "title": "이은형 건정연 연구위원, 수원시 건설기술심의위원 연임",
+      "url": "https://n.news.naver.com/mnews/article/018/0006343808"
+    },
+    {
+      "title": "HSAD AI 단편영화 '이븐', 미국·프랑스 영화제 최우수상",
+      "url": "https://n.news.naver.com/mnews/article/001/0016231865"
+    },
+    {
+      "title": "서울 부동산 시장 거래절벽…1년 새 18.7% 감소",
+      "url": "https://n.news.naver.com/mnews/article/018/0006343793"
+    },
+    {
+      "title": "“평수 안 봐요”…집값·대출 밀린 2030, 초소형 아파트 매입 올인",
+      "url": "https://n.news.naver.com/mnews/article/009/0005716186"
+    },
+    {
+      "title": "2분기 상업 업무용 빌딩 거래금액 9조7550억… 전 분기比 18.1%↑",
+      "url": "https://n.news.naver.com/mnews/article/366/0001184117"
+    },
+    {
+      "title": "조국 \"세제개편안 기대 못 미쳐…대규모 고품질 공공주택 공급 함께 가야\"",
+      "url": "https://n.news.naver.com/mnews/article/421/0009095257"
+    },
+    {
+      "title": "\"지방 발령에 거주 못하는데 종부세 폭탄\"…\"전세난 더 심해질텐데\"",
+      "url": "https://n.news.naver.com/mnews/article/417/0001154206"
+    },
     {
       "title": "\"매달 160만원 내고 산다\"...지금도 어려운데 '한숨', 서울 아파트 월세 54.8% '역대 최고'",
       "url": "https://n.news.naver.com/mnews/article/014/0005556767"
@@ -38,50 +82,6 @@
     {
       "title": "고가일수록·안 살수록 종부세 더 뛴다…반포자이 615만→1743만원[Pick코노미]",
       "url": "https://n.news.naver.com/mnews/article/011/0004648230"
-    },
-    {
-      "title": "반포자이 84㎡ 보유세 1809만원→2763만원…비거주시 3318만원",
-      "url": "https://n.news.naver.com/mnews/article/014/0005556758"
-    },
-    {
-      "title": "50억대 집 양도세 최대 4배…장특공제 ‘10억 상한’ 직격탄 [Pick코노미]",
-      "url": "https://n.news.naver.com/mnews/article/011/0004648229"
-    },
-    {
-      "title": "2년 살고 10년 보유해 20억 차익…양도세 얼마?",
-      "url": "https://n.news.naver.com/mnews/article/374/0000525389"
-    },
-    {
-      "title": "[2026 세법개정안] \"서울 아파트 임대사업자, 집 팔아라\"…양도세 혜택 폐지로 압박",
-      "url": "https://n.news.naver.com/mnews/article/119/0003117819"
-    },
-    {
-      "title": "귀국날 7시간30분 ‘마라톤 회의’…이 대통령 “공급 절벽 극복에 속도”",
-      "url": "https://n.news.naver.com/mnews/article/032/0003462140"
-    },
-    {
-      "title": "\"내년에 팔아라?\"…집주인들 계산기 두드리는 이유 [시장톡]",
-      "url": "https://n.news.naver.com/mnews/article/015/0005316985"
-    },
-    {
-      "title": "[부동산세 대수술]강남 어르신 지방 가면 양도세 '반값'",
-      "url": "https://n.news.naver.com/mnews/article/648/0000049481"
-    },
-    {
-      "title": "절세 매물 출회 시점은…연말·내년 5월·내년 말 '3차례 분수령'",
-      "url": "https://n.news.naver.com/mnews/article/003/0014106117"
-    },
-    {
-      "title": "월세세액공제한도 200만원 는다…공제액 최대 54만원↑",
-      "url": "https://n.news.naver.com/mnews/article/648/0000049480"
-    },
-    {
-      "title": "결국 또 세입자에 불똥?...\"세 부담, 전세로 전가\" 물량 더 줄어들 위험도",
-      "url": "https://n.news.naver.com/mnews/article/008/0005395133"
-    },
-    {
-      "title": "[오늘 부동산] 실거주 1주택자 보호하지만…비거주 땐 종부세 ‘폭탄’",
-      "url": "https://n.news.naver.com/mnews/article/119/0003117808"
     }
   ]
 }
