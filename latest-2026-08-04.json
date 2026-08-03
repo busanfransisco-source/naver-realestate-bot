@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-08-04 02:04:51",
+  "updated_at_kst": "2026-08-04 03:25:28",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 4일 화요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "계산 분주한 강남 노인… “결국 우리에게 집 팔라는 것”",
+      "url": "https://n.news.naver.com/mnews/article/005/0001864777"
+    },
+    {
+      "title": "양도세 기준, 보유서 실거주로… 초고가·비거주자 부담 급증",
+      "url": "https://n.news.naver.com/mnews/article/005/0001864775"
+    },
     {
       "title": "고양창릉 사전청약자들 청와대 앞 집회…“S4블록도 구제 대상 포함해야”",
       "url": "https://n.news.naver.com/mnews/article/022/0004148170"
@@ -74,14 +82,6 @@
     {
       "title": "잠실리센츠 실거주는 213만원…비거주 땐 747만원 ‘3배 이상’",
       "url": "https://n.news.naver.com/mnews/article/032/0003462129"
-    },
-    {
-      "title": "구윤철 \"그린벨트 일부 풀고 군 시설까지…공급대책 마련 중\"",
-      "url": "https://n.news.naver.com/mnews/article/001/0016231705"
-    },
-    {
-      "title": "\"강남 집 오래 보유만 하면 손해\"…세금, 거주 중심으로 개편",
-      "url": "https://n.news.naver.com/mnews/article/015/0005316953"
     }
   ]
 }
