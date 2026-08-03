@@ -1,7 +1,22 @@
 🤖 26년 8월 3일 월요일 AI 뉴스
 
-EU, 8월부터 AI 챗봇·딥페이크 표기 의무화…'AI 라벨링' 규제 본격화
-https://www.aitimes.com/news/articleView.html?idxno=213450
+비드래프트, 구글의 추론 최적화 경연 '패스트 젬마 챌린지' 세계 1위 올라
+https://www.aitimes.com/news/articleView.html?idxno=213466
+
+"읽어도 무슨 뜻인지 몰라요"...SKT, AI로 문해력 교육 나선다
+https://www.aitimes.com/news/articleView.html?idxno=213461
+
+셀렉트스타, AI 신뢰성 기업 최초 코스닥 기술성 평가 통과
+https://www.aitimes.com/news/articleView.html?idxno=213457
+
+양현상 노바엑스 대표, 한국인공지능기술산업협회 이사 위촉
+https://www.aitimes.com/news/articleView.html?idxno=213456
+
+독일, 신규 소형 태양광 고정가격 지원 종료 추진…2027년 시장판매 전환
+https://www.aitimes.com/news/articleView.html?idxno=213455
+
+이탈리아, 남부 전력가격 88시간 ‘0유로’…태양광·풍력 급증 이유
+https://www.aitimes.com/news/articleView.html?idxno=213454
 
 월가를 흔든 20대 'AI 천재'의 몰락… 3조달러 대폭락 사태의 내막
 https://www.aitimes.com/news/articleView.html?idxno=213449
@@ -9,23 +24,8 @@ https://www.aitimes.com/news/articleView.html?idxno=213449
 아마존, 오픈AI에 50조 추가 투자 완료...지분 5% 확보
 https://www.aitimes.com/news/articleView.html?idxno=213448
 
-구글, 크롬에 '제미나이 스파크' 통합...웹 브라우징 자동화 지원
-https://www.aitimes.com/news/articleView.html?idxno=213447
-
 세계 첫 '10대 SNS 금지법' 효과 미미… 호주 청소년 80% 여전히 이용 중
 https://www.aitimes.com/news/articleView.html?idxno=213446
 
-미네소타, 미국 최초 'AI 누드 이미지 금지법' 효력 유지...xAI 가처분 기각
-https://www.aitimes.com/news/articleView.html?idxno=213445
-
 '그록 이매진' 대규모 업그레이드...1080p 영상·음성 일관성 지원
 https://www.aitimes.com/news/articleView.html?idxno=213444
-
-오픈AI 차세대 모델 '아스트라', 수학·컴퓨터 과학 10대 난제 해결
-https://www.aitimes.com/news/articleView.html?idxno=213443
-
-알리바바, 음성 인식 모델 '큐원-오디오-3.0-ASR-플래시' 출시..."전문 용어 정확도 향상"
-https://www.aitimes.com/news/articleView.html?idxno=213442
-
-"오픈AI·앤트로픽 모델로 학습"…중국, '증류'로 군사용 AI 개발
-https://www.aitimes.com/news/articleView.html?idxno=213441
