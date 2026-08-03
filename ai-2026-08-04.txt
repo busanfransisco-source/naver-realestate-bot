@@ -9,6 +9,9 @@ https://www.aitimes.com/news/articleView.html?idxno=213494
 알리바바, 2.4조 매개변수 '큐원 3.8-맥스' 공개..."페이블 5급 성능"
 https://www.aitimes.com/news/articleView.html?idxno=213493
 
+구글이 로봇을 제어하는 방법… ‘제미나이 로보틱스2’ 공개
+https://www.aitimes.com/news/articleView.html?idxno=213492
+
 구글 클라우드, 오라클 기업용 앱에 '제미나이' 지원한다
 https://www.aitimes.com/news/articleView.html?idxno=213491
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213486
 
 스페이스X 로켓 잔해, 음속 7배로 5일 달 추락...NASA·다누리호 합동 관측
 https://www.aitimes.com/news/articleView.html?idxno=213482
-
-퀄컴 AI 로봇, 시연 중 쓰러져..."기계 결함 아닌 안전 제어 작동"
-https://www.aitimes.com/news/articleView.html?idxno=213481
