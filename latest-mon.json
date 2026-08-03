@@ -1,10 +1,42 @@
 {
-  "updated_at_kst": "2026-08-03 19:55:34",
+  "updated_at_kst": "2026-08-03 20:53:22",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 3일 월요일 부동산 주요뉴스",
   "articles": [
     {
-      "title": "전근·취학으로 집 떠나도…장특공제 거주기간 최대 3년 인정",
+      "title": "[그래픽] 종합부동산세 개편 적용 예시",
+      "url": "https://n.news.naver.com/mnews/article/001/0016231691"
+    },
+    {
+      "title": "[2026 세법개정안] 고령층 집 팔고 지방 가면 세금 감면…강남권 매물 나올까",
+      "url": "https://n.news.naver.com/mnews/article/119/0003117786"
+    },
+    {
+      "title": "[세제 개편안] 반포 국평 10년 거주 40억차익 양도세, 2.4억→3년뒤 4배인 9.4억",
+      "url": "https://n.news.naver.com/mnews/article/366/0001184084"
+    },
+    {
+      "title": "‘결혼 불이익’ 없앤다…‘주말부부’도 전세대출 각각 소득공제",
+      "url": "https://n.news.naver.com/mnews/article/020/0003738432"
+    },
+    {
+      "title": "“내년까진 팔아라” 매도 데드라인, 서울 집값 떨어질까 [부동산360]",
+      "url": "https://n.news.naver.com/mnews/article/016/0002678967"
+    },
+    {
+      "title": "동영상뉴스재생시간16:35",
+      "url": "https://n.news.naver.com/mnews/article/422/0000891974"
+    },
+    {
+      "title": "[부동산 세제 대전환<상>] 1주택 시가 20억 집까지 종부세 제외…李정부, '핀셋 조정'",
+      "url": "https://n.news.naver.com/mnews/article/629/0000521413"
+    },
+    {
+      "title": "[세제 개편] 비수도권 기업 부담 낮추고 인구감소지 공제율 높인다",
+      "url": "https://n.news.naver.com/mnews/article/088/0001021965"
+    },
+    {
+      "title": "전근·진학·질병으로 집 떠난 경우, 최대 3년 ‘실거주’ 인정",
       "url": "https://n.news.naver.com/mnews/article/020/0003738427"
     },
     {
@@ -24,7 +56,7 @@
       "url": "https://n.news.naver.com/mnews/article/009/0005716131"
     },
     {
-      "title": "[2026 세제개편]반포자이, 내년 공시가 절반만 올라도 보유세 1600만원…현행대비 1.2배↑",
+      "title": "반포자이, 내년 공시가 절반만 올라도 보유세 1600만원…현행대비 1.2배↑[2026 세제개편]",
       "url": "https://n.news.naver.com/mnews/article/277/0005798294"
     },
     {
@@ -36,7 +68,7 @@
       "url": "https://n.news.naver.com/mnews/article/021/0002808868"
     },
     {
-      "title": "내년에 수도권 집 팔고 떠나는 고령층, 양도세 절반 깎아준다",
+      "title": "고령층 내년에 수도권 집 팔고 떠나면, 양도세 절반 깎아준다",
       "url": "https://n.news.naver.com/mnews/article/020/0003738424"
     },
     {
@@ -50,38 +82,6 @@
     {
       "title": "\"고가 주택 세금 인상 폭 예상보다 커…매물 출회 압력\"",
       "url": "https://n.news.naver.com/mnews/article/003/0014105896"
-    },
-    {
-      "title": "종부세 올리며 “팔 집은 빨리 팔아라”…양도세 중과 퇴로 열어준 정부",
-      "url": "https://n.news.naver.com/mnews/article/021/0002808866"
-    },
-    {
-      "title": "‘똘똘한 한 채’ 잡겠다는 정부…“덜 똘똘한 한 채 자극할 것” [2026 세제개편안]",
-      "url": "https://n.news.naver.com/mnews/article/025/0003542040"
-    },
-    {
-      "title": "양도세 장특공 ‘실거주’ 전면 개편… 초고가·비거주 세금 최대 4배 인상 [2026 세제]",
-      "url": "https://n.news.naver.com/mnews/article/029/0003040465"
-    },
-    {
-      "title": "수도권 고령층, 집 팔고 지방 가면 양도세 깎아준다",
-      "url": "https://n.news.naver.com/mnews/article/005/0001864700"
-    },
-    {
-      "title": "신입사원들 만난 김보현 대우건설 사장 \"회사의 핵심 동력\"",
-      "url": "https://n.news.naver.com/mnews/article/014/0005556690"
-    },
-    {
-      "title": "[부동산세 개편] 반포 84㎡ 1주택 양도세 내년 2.4억→2029년 9.4억(종합)",
-      "url": "https://n.news.naver.com/mnews/article/001/0016231652"
-    },
-    {
-      "title": "'국평 1주택자 보유세' 아크로 1167만원 늘어, 마래푸 5만원 감소",
-      "url": "https://n.news.naver.com/mnews/article/417/0001154189"
-    },
-    {
-      "title": "국민 누구나 쾌적하게 물 쓰도록… 취약계층 낡은 화장실 고치고 수도요금 지원",
-      "url": "https://n.news.naver.com/mnews/article/014/0005556686"
     }
   ]
 }
