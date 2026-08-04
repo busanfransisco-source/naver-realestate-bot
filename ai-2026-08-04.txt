@@ -1,5 +1,11 @@
 🤖 26년 8월 4일 화요일 AI 뉴스
 
+쿤텍, '알약' 개발 주역 김준섭 부사장 영입...AI 보안 제품군 총괄
+https://www.aitimes.com/news/articleView.html?idxno=213533
+
+신세계아이앤씨, KT와 뉴타닉스 기반 클라우드 사업 협력
+https://www.aitimes.com/news/articleView.html?idxno=213532
+
 애딧앤아크, AI 인스타 광고 효율화 솔루션으로 시드 투자 유치
 https://www.aitimes.com/news/articleView.html?idxno=213531
 
@@ -15,17 +21,11 @@ https://www.aitimes.com/news/articleView.html?idxno=213526
 턴 디텍터 없애고 추론 분리... 오픈AI가 밝힌 'GPT-라이브' 초저지연 비밀
 https://www.aitimes.com/news/articleView.html?idxno=213525
 
+"로켓 핑크색으로 칠해주나요?"...스페이스X, 투자자 게시판 개설했다 '밈·암호화폐'에 점령
+https://www.aitimes.com/news/articleView.html?idxno=213524
+
+"가성비 넘어 최첨단 성능까지"...중국 AI 공세에 미국 개발사 '데드 존' 몰렸다
+https://www.aitimes.com/news/articleView.html?idxno=213523
+
 독일 애자일 로봇, 올해 매출 2배 성장 전망… "2~3년 내 흑자 전환"
 https://www.aitimes.com/news/articleView.html?idxno=213521
-
-"AI 음성 말투·감정 자유자재로"...카카오, 옴니 AI '카나나-오' 업데이트
-https://www.aitimes.com/news/articleView.html?idxno=213520
-
-CXMT, 베이징에 두 번째 D램 공장 검토...월 60만장 생산체제 가속
-https://www.aitimes.com/news/articleView.html?idxno=213519
-
-"AI 정부사업·모델·GPU 한 곳에"...과기정통부, 원스톱 포털 AX360° 개설
-https://www.aitimes.com/news/articleView.html?idxno=213518
-
-파리 생제르맹, 구글과 AI 파트너십...'제미나이' 공식 어시스턴트 도입
-https://www.aitimes.com/news/articleView.html?idxno=213517
