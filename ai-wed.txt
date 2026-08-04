@@ -1,5 +1,8 @@
 🤖 26년 8월 5일 수요일 AI 뉴스
 
+KT, 연세의료원과 의료 데이터 고도화 협력...“의료 AI 혁신 나선다”
+https://www.aitimes.com/news/articleView.html?idxno=213535
+
 쿤텍, '알약' 개발 주역 김준섭 부사장 영입...AI 보안 제품군 총괄
 https://www.aitimes.com/news/articleView.html?idxno=213533
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213524
 
 "가성비 넘어 최첨단 성능까지"...중국 AI 공세에 미국 개발사 '데드 존' 몰렸다
 https://www.aitimes.com/news/articleView.html?idxno=213523
-
-독일 애자일 로봇, 올해 매출 2배 성장 전망… "2~3년 내 흑자 전환"
-https://www.aitimes.com/news/articleView.html?idxno=213521
