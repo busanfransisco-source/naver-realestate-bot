@@ -1,13 +1,19 @@
 🤖 26년 8월 4일 화요일 AI 뉴스
 
+애딧앤아크, AI 인스타 광고 효율화 솔루션으로 시드 투자 유치
+https://www.aitimes.com/news/articleView.html?idxno=213531
+
+오픈AI, 컴투스와 손잡고 세계 최초 'AI 게임 개발 해커톤' 연다
+https://www.aitimes.com/news/articleView.html?idxno=213529
+
 KT, 연세의료원과 의료 AI 데이터 고도화 나선다
 https://www.aitimes.com/news/articleView.html?idxno=213528
 
 팀네이버, 남미 AI 데이터센터 사업 정조준...브라질·칠레서 협력 논의
 https://www.aitimes.com/news/articleView.html?idxno=213526
 
-"로켓 핑크색으로 칠해주나요?"...스페이스X, 투자자 게시판 개설했다 '밈·암호화폐'에 점령
-https://www.aitimes.com/news/articleView.html?idxno=213524
+턴 디텍터 없애고 추론 분리... 오픈AI가 밝힌 'GPT-라이브' 초저지연 비밀
+https://www.aitimes.com/news/articleView.html?idxno=213525
 
 독일 애자일 로봇, 올해 매출 2배 성장 전망… "2~3년 내 흑자 전환"
 https://www.aitimes.com/news/articleView.html?idxno=213521
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213518
 
 파리 생제르맹, 구글과 AI 파트너십...'제미나이' 공식 어시스턴트 도입
 https://www.aitimes.com/news/articleView.html?idxno=213517
-
-“퇴사했는데 문서 동기화 계속돼”...오픈AI 소송으로 드러난 애플의 허점
-https://www.aitimes.com/news/articleView.html?idxno=213515
-
-독파모 2차 평가 개막...SKT·LG·업스테이지·모티프 ‘4파전’
-https://www.aitimes.com/news/articleView.html?idxno=213512
