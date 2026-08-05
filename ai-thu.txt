@@ -1,5 +1,8 @@
 🤖 26년 8월 6일 목요일 AI 뉴스
 
+데이터 마이닝 최고 학술대회 9∼13일 제주 개최…구글·알리바바 기조강연
+https://www.aitimes.com/news/articleView.html?idxno=213582
+
 엔젤로보틱스, 보행보조 웨어러블 로봇 베트남 시장 진출
 https://www.aitimes.com/news/articleView.html?idxno=213581
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213569
 
 화웨이 최고 과학자 "엔비디아도 칩 제조 물리적 한계 봉착할 것"
 https://www.aitimes.com/news/articleView.html?idxno=213568
-
-"유럽에 한국 반도체 깔린다"...퓨리오사, 스웨덴 데이터센터 사업 참여
-https://www.aitimes.com/news/articleView.html?idxno=213566
