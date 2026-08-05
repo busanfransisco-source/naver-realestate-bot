@@ -1,5 +1,23 @@
 🤖 26년 8월 5일 수요일 AI 뉴스
 
+YC, 사내 에이전트 하네스 'QM' 공개…"개인 비서 넘어 조직 협업으로"
+https://www.aitimes.com/news/articleView.html?idxno=213575
+
+"성능은 미국 추격했지만 안전장치는 무방비"…'GLM-5.2' AI 안전성 경고
+https://www.aitimes.com/news/articleView.html?idxno=213574
+
+퍼플렉시티, 아마존과 AI 쇼핑 도구 항소심서 승리…'에이전트 차단 취소'
+https://www.aitimes.com/news/articleView.html?idxno=213571
+
+법무법인 태평양, 국내 로펌 최초 '챗GPT 엔터프라이즈' 전사 도입
+https://www.aitimes.com/news/articleView.html?idxno=213569
+
+"유럽에 한국 반도체 깔린다"...퓨리오사AI, 스웨덴 AI 데이터센터 사업 참여
+https://www.aitimes.com/news/articleView.html?idxno=213566
+
+구글, 앤트로픽 TPU 공급 위해 사상 최대 285조 규모 ‘금융 연합’ 구축
+https://www.aitimes.com/news/articleView.html?idxno=213565
+
 텍사스, 전력망 붕괴 우려에 데이터센터 1800곳 승인 중단
 https://www.aitimes.com/news/articleView.html?idxno=213564
 
@@ -11,21 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213562
 
 세계은행 "AI, 개도국에 100년 치 발전 당길 '생명줄'…무리한 투자 피해야"
 https://www.aitimes.com/news/articleView.html?idxno=213561
-
-삼성전자, HBM5 성능 8배 개선한 'zHBM' 공개..."옆 대신 위로 쌓았다"
-https://www.aitimes.com/news/articleView.html?idxno=213559
-
-오픈AI, 인플루언서 초청 '럭셔리 행사' 개최…환경 논란에 역풍
-https://www.aitimes.com/news/articleView.html?idxno=213558
-
-앤트로픽, 신생 클라우드 스타트업 볼타와 14조 규모 컴퓨팅 계약
-https://www.aitimes.com/news/articleView.html?idxno=213557
-
-중국, 25년 만에 반도체 IP 보호 개편…미 제재 맞서 칩 설계 '자산화'
-https://www.aitimes.com/news/articleView.html?idxno=213554
-
-"AI가 가짜 신분으로 사람까지 속여"...영국 AISI, 에이전트 기만 보고
-https://www.aitimes.com/news/articleView.html?idxno=213552
-
-스페이스X, AI 컴퓨팅 계약 힘입어 분기 매출 2배 급증...주가는 8% 하락
-https://www.aitimes.com/news/articleView.html?idxno=213550
