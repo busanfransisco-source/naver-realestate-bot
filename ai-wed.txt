@@ -1,6 +1,6 @@
 🤖 26년 8월 5일 수요일 AI 뉴스
 
-코히어, 한국 법인 설립 발표…"데이터 통제권 지키는 소버린 AI로 비용도 줄인다"
+코히어, 한국 법인 설립…"소버린 AI로 비용까지 줄인다"
 https://www.aitimes.com/news/articleView.html?idxno=213578
 
 YC, 사내 에이전트 하네스 'QM' 공개…"개인 비서 넘어 조직 협업으로"
@@ -18,7 +18,10 @@ https://www.aitimes.com/news/articleView.html?idxno=213571
 법무법인 태평양, 국내 로펌 최초 '챗GPT 엔터프라이즈' 전사 도입
 https://www.aitimes.com/news/articleView.html?idxno=213569
 
-"유럽에 한국 반도체 깔린다"...퓨리오사AI, 스웨덴 AI 데이터센터 사업 참여
+화웨이 최고 과학자 "엔비디아도 칩 제조 물리적 한계 봉착할 것"
+https://www.aitimes.com/news/articleView.html?idxno=213568
+
+"유럽에 한국 반도체 깔린다"...퓨리오사, 스웨덴 데이터센터 사업 참여
 https://www.aitimes.com/news/articleView.html?idxno=213566
 
 구글, 앤트로픽 TPU 공급 위해 사상 최대 285조 규모 ‘금융 연합’ 구축
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213565
 
 텍사스, 전력망 붕괴 우려에 데이터센터 1800곳 승인 중단
 https://www.aitimes.com/news/articleView.html?idxno=213564
-
-HP·에이수스·에이서, 중국 CXMT 칩 도입…글로벌 메모리 난에 '공급망 다변화'
-https://www.aitimes.com/news/articleView.html?idxno=213563
