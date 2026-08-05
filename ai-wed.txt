@@ -1,31 +1,31 @@
 🤖 26년 8월 5일 수요일 AI 뉴스
 
-정부, 공장지붕 태양광 의무화 추진…주택 잉여전력 현금으로 정산
-https://www.aitimes.com/news/articleView.html?idxno=213539
+텍사스, 전력망 붕괴 우려에 데이터센터 1800곳 승인 중단
+https://www.aitimes.com/news/articleView.html?idxno=213564
 
-미국, 폴리실리콘 가격하한·관세 검토…태양광 원가 변수
-https://www.aitimes.com/news/articleView.html?idxno=213536
+"HBM 다음 주자 될 것"...SK하이닉스, 샌디스크와 HBF 첫 표준 규격 공개
+https://www.aitimes.com/news/articleView.html?idxno=213562
 
-KT, 연세의료원과 의료 데이터 고도화 협력...“의료 AI 혁신 나선다”
-https://www.aitimes.com/news/articleView.html?idxno=213535
+세계은행 "AI, 개도국에 100년 치 발전 당길 '생명줄'…무리한 투자 피해야"
+https://www.aitimes.com/news/articleView.html?idxno=213561
 
-쿤텍, '알약' 개발 주역 김준섭 부사장 영입...AI 보안 제품군 총괄
-https://www.aitimes.com/news/articleView.html?idxno=213533
+삼성전자, HBM5 성능 8배 개선한 'zHBM' 공개..."옆 대신 위로 쌓았다"
+https://www.aitimes.com/news/articleView.html?idxno=213559
 
-신세계아이앤씨, KT와 뉴타닉스 기반 클라우드 사업 협력
-https://www.aitimes.com/news/articleView.html?idxno=213532
+오픈AI, 인플루언서 초청 '럭셔리 행사' 개최…환경 논란에 역풍
+https://www.aitimes.com/news/articleView.html?idxno=213558
 
-애딧앤아크, AI 인스타 광고 효율화 솔루션으로 시드 투자 유치
-https://www.aitimes.com/news/articleView.html?idxno=213531
+앤트로픽, 신생 클라우드 스타트업 볼타와 14조 규모 컴퓨팅 계약
+https://www.aitimes.com/news/articleView.html?idxno=213557
 
-대규모 행사에서 ‘꽈당’ 쓰러진 휴머노이드… ‘안전’때문에?
-https://www.aitimes.com/news/articleView.html?idxno=213530
+중국, 25년 만에 반도체 IP 보호 개편…미 제재 맞서 칩 설계 '자산화'
+https://www.aitimes.com/news/articleView.html?idxno=213554
 
-오픈AI, 컴투스와 손잡고 세계 최초 'AI 게임 개발 해커톤' 연다
-https://www.aitimes.com/news/articleView.html?idxno=213529
+"AI가 가짜 신분으로 사람까지 속여"...영국 AISI, 에이전트 기만 보고
+https://www.aitimes.com/news/articleView.html?idxno=213552
 
-KT, 연세의료원과 의료 AI 데이터 고도화 나선다
-https://www.aitimes.com/news/articleView.html?idxno=213528
+스페이스X, AI 컴퓨팅 계약 힘입어 분기 매출 2배 급증...주가는 8% 하락
+https://www.aitimes.com/news/articleView.html?idxno=213550
 
-팀네이버, 남미 AI 데이터센터 사업 정조준...브라질·칠레서 협력 논의
-https://www.aitimes.com/news/articleView.html?idxno=213526
+오픈AI, 미국 근로자 고용 차별 혐의로 미 법무부와 45억 합의
+https://www.aitimes.com/news/articleView.html?idxno=213549
