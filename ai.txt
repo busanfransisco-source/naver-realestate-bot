@@ -1,5 +1,11 @@
 🤖 26년 8월 5일 수요일 AI 뉴스
 
+정부, 공장지붕 태양광 의무화 추진…주택 잉여전력 현금으로 정산
+https://www.aitimes.com/news/articleView.html?idxno=213539
+
+미국, 폴리실리콘 가격하한·관세 검토…태양광 원가 변수
+https://www.aitimes.com/news/articleView.html?idxno=213536
+
 KT, 연세의료원과 의료 데이터 고도화 협력...“의료 AI 혁신 나선다”
 https://www.aitimes.com/news/articleView.html?idxno=213535
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213528
 
 팀네이버, 남미 AI 데이터센터 사업 정조준...브라질·칠레서 협력 논의
 https://www.aitimes.com/news/articleView.html?idxno=213526
-
-턴 디텍터 없애고 추론 분리... 오픈AI가 밝힌 'GPT-라이브' 초저지연 비밀
-https://www.aitimes.com/news/articleView.html?idxno=213525
-
-"로켓 핑크색으로 칠해주나요?"...스페이스X, 투자자 게시판 개설했다 '밈·암호화폐'에 점령
-https://www.aitimes.com/news/articleView.html?idxno=213524
