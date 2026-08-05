@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-08-06 08:31:22",
+  "updated_at_kst": "2026-08-06 08:37:07",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 6일 목요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "은평·중랑·강북 부동산 손바뀜 잦았다…강남구 ‘하위권’",
+      "url": "https://n.news.naver.com/mnews/article/018/0006345552"
+    },
     {
       "title": "동국대, '부동산·자산관리 최고경영자과정(AMP)' 제47기 원우 모집",
       "url": "https://n.news.naver.com/mnews/article/015/0005317896"
@@ -78,10 +82,6 @@
     {
       "title": "반도체가 갈랐다…김포 6채 팔아야 동탄 1채 산다?",
       "url": "https://n.news.naver.com/mnews/article/374/0000525879"
-    },
-    {
-      "title": "국내 첫 美 SMR 설계 따낸 DL이앤씨…760조 시장 선점 나섰다",
-      "url": "https://n.news.naver.com/mnews/article/421/0009099653"
     }
   ]
 }
