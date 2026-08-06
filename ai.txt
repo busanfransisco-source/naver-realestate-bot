@@ -1,10 +1,16 @@
-🤖 26년 8월 6일 목요일 AI 뉴스
+🤖 26년 8월 7일 금요일 AI 뉴스
+
+니어스랩, 코스닥 출사표..."국내 1호 피지컬 AI 드론으로 방산 시장 공략"
+https://www.aitimes.com/news/articleView.html?idxno=213635
 
 오픈AI, 애플의 영업비밀 침해 소송에 “근거 없다”며 기각 신청
 https://www.aitimes.com/news/articleView.html?idxno=213634
 
 딥시크, 초저가 정책 접나…AI 서비스 가격 '대폭' 인상 예고
 https://www.aitimes.com/news/articleView.html?idxno=213632
+
+사이버 보안 평가했더니…가짜 신분으로 사람 속인 AI 에이전트?
+https://www.aitimes.com/news/articleView.html?idxno=213631
 
 옵트에이아이, 온디바이스 특화 자체 경량 AI 모델 '옵트기어' 공개
 https://www.aitimes.com/news/articleView.html?idxno=213630
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213622
 
 카카오엔터프라이즈, 이재한 신임 대표 선임
 https://www.aitimes.com/news/articleView.html?idxno=213621
-
-미스트랄, 멀티모달 안전 모델 '실드스트랄' 오픈 공개...프롬프트로 맞춤형 가드레일 지원
-https://www.aitimes.com/news/articleView.html?idxno=213620
-
-"AI로 신종 스팸도 철통방어"...KT, AI 스팸차단 서비스 전 고객 확대
-https://www.aitimes.com/news/articleView.html?idxno=213619
