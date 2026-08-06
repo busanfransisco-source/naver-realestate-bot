@@ -1,7 +1,16 @@
 🤖 26년 8월 6일 목요일 AI 뉴스
 
+오픈AI, 애플의 영업비밀 침해 소송에 “근거 없다”며 기각 신청
+https://www.aitimes.com/news/articleView.html?idxno=213634
+
+딥시크, 초저가 정책 접나…AI 서비스 가격 '대폭' 인상 예고
+https://www.aitimes.com/news/articleView.html?idxno=213632
+
 박윤영 KT 대표, 목동 데이터센터 현장 점검..."AI 인프라 경쟁력" 당부
 https://www.aitimes.com/news/articleView.html?idxno=213625
+
+오픈AI, 허깅페이스 해킹 세부 내용 공개..."자체 시스템 먼저 해킹·정보 공유까지"
+https://www.aitimes.com/news/articleView.html?idxno=213624
 
 카카오, 과기정통부 'AI 에이전트 마켓플레이스 사업' 선정
 https://www.aitimes.com/news/articleView.html?idxno=213623
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213619
 
 아마존 죽스, 라스베이거스서 '운전대 없는' 로보택시 첫 유료 운행 개시
 https://www.aitimes.com/news/articleView.html?idxno=213618
-
-엔비디아,자율주행용 VLA 모델 '알파마요 2 슈퍼' 공개...로보택시 상용화 겨냥
-https://www.aitimes.com/news/articleView.html?idxno=213616
-
-바이트댄스, 전이중 AI '시드리얼타임' 출시..."실시간 멀티모달 모델"
-https://www.aitimes.com/news/articleView.html?idxno=213615
-
-"직원 7000명이 직접 써보고 고쳐"… 메타의 AI 코딩 성능 향상 비결
-https://www.aitimes.com/news/articleView.html?idxno=213614
