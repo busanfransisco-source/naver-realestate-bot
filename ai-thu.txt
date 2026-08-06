@@ -1,31 +1,31 @@
 🤖 26년 8월 6일 목요일 AI 뉴스
 
+카카오, 과기정통부 'AI 에이전트 마켓플레이스 사업' 선정
+https://www.aitimes.com/news/articleView.html?idxno=213623
+
+케이디파인켐, ‘OCP 코리아 테크 데이’ 참가…OCP 마켓플레이스 등재 냉각수 선보여
+https://www.aitimes.com/news/articleView.html?idxno=213622
+
+카카오엔터프라이즈, 이재한 신임 대표 선임
+https://www.aitimes.com/news/articleView.html?idxno=213621
+
+"AI로 신종 스팸도 철통방어"...KT, AI 스팸차단 서비스 전 고객 확대
+https://www.aitimes.com/news/articleView.html?idxno=213619
+
+아마존 죽스, 라스베이거스서 '운전대 없는' 로보택시 첫 유료 운행 개시
+https://www.aitimes.com/news/articleView.html?idxno=213618
+
+엔비디아,자율주행용 VLA 모델 '알파마요 2 슈퍼' 공개...로보택시 상용화 겨냥
+https://www.aitimes.com/news/articleView.html?idxno=213616
+
+바이트댄스, 전이중 AI '시드리얼타임' 출시..."실시간 멀티모달 모델"
+https://www.aitimes.com/news/articleView.html?idxno=213615
+
 "직원 7000명이 직접 써보고 고쳐"… 메타의 AI 코딩 성능 향상 비결
 https://www.aitimes.com/news/articleView.html?idxno=213614
 
-머스크 "엔비디아 칩만 사용" 선언에 휘청...AMD, 리사 수 발언에 반등
-https://www.aitimes.com/news/articleView.html?idxno=213610
+중국산 공유기 20여종서 '백도어' 발견..."전 세계 10만대 네트워크 침투 위험"
+https://www.aitimes.com/news/articleView.html?idxno=213613
 
-구글, 코딩 강화 위해 스타트업 메카나이즈 2조 인수 논의
-https://www.aitimes.com/news/articleView.html?idxno=213606
-
-메타도 사이버 보안 테스트 중 무단 외부 접속..."격리망 구성 오류 탓"
-https://www.aitimes.com/news/articleView.html?idxno=213602
-
-앤트로픽, '클로드' 전용 AI 칩 자체 개발 공식화…실리콘 팀 구축 착수
-https://www.aitimes.com/news/articleView.html?idxno=213600
-
-구글 떠난 제프 딘, 과학 연구 자동화 스타트업 설립..."RSI 구축 목표"
-https://www.aitimes.com/news/articleView.html?idxno=213599
-
-중국, 추가 태양광 증설 막히나…18.33GW 건설 중단
-https://www.aitimes.com/news/articleView.html?idxno=213597
-
-호주, 소형 태양광 지원 상한 1MW로 확대…공장·농장 설치비 낮춘다
-https://www.aitimes.com/news/articleView.html?idxno=213595
-
-구글 AI 리더십 재편…허사비스 수석과학자로·딥마인드는 상용화 집중
-https://www.aitimes.com/news/articleView.html?idxno=213594
-
-국내 최대 규모 400MW 태양광단지 착공…RE100 전력 연간 529GWh 공급
-https://www.aitimes.com/news/articleView.html?idxno=213591
+카카오, 카톡서 쿠팡이츠 주문·결제까지…'에이전틱 AI' 생태계 확장
+https://www.aitimes.com/news/articleView.html?idxno=213612
