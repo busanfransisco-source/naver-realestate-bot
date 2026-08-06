@@ -1,5 +1,11 @@
 🤖 26년 8월 6일 목요일 AI 뉴스
 
+호주, 소형 태양광 지원 상한 1MW로 확대…공장·농장 설치비 낮춘다
+https://www.aitimes.com/news/articleView.html?idxno=213595
+
+국내 최대 규모 400MW 태양광단지 착공…RE100 전력 연간 529GWh 공급
+https://www.aitimes.com/news/articleView.html?idxno=213591
+
 데이터 마이닝 최고 학술대회 9∼13일 제주 개최…구글·알리바바 기조강연
 https://www.aitimes.com/news/articleView.html?idxno=213582
 
@@ -12,6 +18,9 @@ https://www.aitimes.com/news/articleView.html?idxno=213580
 코히어, 한국 법인 설립…"소버린 AI로 비용까지 줄인다"
 https://www.aitimes.com/news/articleView.html?idxno=213578
 
+AI시대 ‘승자’는?… 전기 혁명 당시 에디슨에 비유해보니
+https://www.aitimes.com/news/articleView.html?idxno=213576
+
 YC, 사내 에이전트 하네스 'QM' 공개…"개인 비서 넘어 조직 협업으로"
 https://www.aitimes.com/news/articleView.html?idxno=213575
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213574
 
 커서, 블랙웰 서버 전용 MoE 커널 'MoK' 공개…학습 처리량 41% 향상
 https://www.aitimes.com/news/articleView.html?idxno=213572
-
-퍼플렉시티, 아마존과 AI 쇼핑 도구 항소심서 승리…'에이전트 차단 취소'
-https://www.aitimes.com/news/articleView.html?idxno=213571
-
-법무법인 태평양, 국내 로펌 최초 '챗GPT 엔터프라이즈' 전사 도입
-https://www.aitimes.com/news/articleView.html?idxno=213569
-
-화웨이 최고 과학자 "엔비디아도 칩 제조 물리적 한계 봉착할 것"
-https://www.aitimes.com/news/articleView.html?idxno=213568
