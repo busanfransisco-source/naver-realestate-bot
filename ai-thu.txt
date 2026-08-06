@@ -1,5 +1,8 @@
 🤖 26년 8월 6일 목요일 AI 뉴스
 
+박윤영 KT 대표, 목동 데이터센터 현장 점검..."AI 인프라 경쟁력" 당부
+https://www.aitimes.com/news/articleView.html?idxno=213625
+
 카카오, 과기정통부 'AI 에이전트 마켓플레이스 사업' 선정
 https://www.aitimes.com/news/articleView.html?idxno=213623
 
@@ -8,6 +11,9 @@ https://www.aitimes.com/news/articleView.html?idxno=213622
 
 카카오엔터프라이즈, 이재한 신임 대표 선임
 https://www.aitimes.com/news/articleView.html?idxno=213621
+
+미스트랄, 멀티모달 안전 모델 '실드스트랄' 오픈 공개...프롬프트로 맞춤형 가드레일 지원
+https://www.aitimes.com/news/articleView.html?idxno=213620
 
 "AI로 신종 스팸도 철통방어"...KT, AI 스팸차단 서비스 전 고객 확대
 https://www.aitimes.com/news/articleView.html?idxno=213619
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213615
 
 "직원 7000명이 직접 써보고 고쳐"… 메타의 AI 코딩 성능 향상 비결
 https://www.aitimes.com/news/articleView.html?idxno=213614
-
-중국산 공유기 20여종서 '백도어' 발견..."전 세계 10만대 네트워크 침투 위험"
-https://www.aitimes.com/news/articleView.html?idxno=213613
-
-카카오, 카톡서 쿠팡이츠 주문·결제까지…'에이전틱 AI' 생태계 확장
-https://www.aitimes.com/news/articleView.html?idxno=213612
