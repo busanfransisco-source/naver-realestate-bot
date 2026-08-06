@@ -1,31 +1,31 @@
 🤖 26년 8월 6일 목요일 AI 뉴스
 
+구글 떠난 제프 딘, 과학 연구 자동화 스타트업 설립..."RSI 구축 목표"
+https://www.aitimes.com/news/articleView.html?idxno=213599
+
+중국, 추가 태양광 증설 막히나…18.33GW 건설 중단
+https://www.aitimes.com/news/articleView.html?idxno=213597
+
 호주, 소형 태양광 지원 상한 1MW로 확대…공장·농장 설치비 낮춘다
 https://www.aitimes.com/news/articleView.html?idxno=213595
+
+구글 AI 리더십 재편…허사비스 수석과학자로·딥마인드는 상용화 집중
+https://www.aitimes.com/news/articleView.html?idxno=213594
 
 국내 최대 규모 400MW 태양광단지 착공…RE100 전력 연간 529GWh 공급
 https://www.aitimes.com/news/articleView.html?idxno=213591
 
+메타, 코딩 에이전트 '뮤즈 코드' 공개...백그라운드 비동기로 차별화
+https://www.aitimes.com/news/articleView.html?idxno=213590
+
+세무 AI 스타트업 솔로몬랩스, 스트라이프 출신 이창헌 리드 영입
+https://www.aitimes.com/news/articleView.html?idxno=213585
+
+노타, '키미 K3' 경량화 모델 2종 공개..."GPU 최대 50% 절감"
+https://www.aitimes.com/news/articleView.html?idxno=213584
+
+카카오, 2분기 매출 2조·영업익 2770억..."역대 분기 최대 실적"
+https://www.aitimes.com/news/articleView.html?idxno=213583
+
 데이터 마이닝 최고 학술대회 9∼13일 제주 개최…구글·알리바바 기조강연
 https://www.aitimes.com/news/articleView.html?idxno=213582
-
-엔젤로보틱스, 보행보조 웨어러블 로봇 베트남 시장 진출
-https://www.aitimes.com/news/articleView.html?idxno=213581
-
-[게시판] 빅밸류, 515만 페이지 분량 'AI GEO 데이터' 전면 개방 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=213580
-
-코히어, 한국 법인 설립…"소버린 AI로 비용까지 줄인다"
-https://www.aitimes.com/news/articleView.html?idxno=213578
-
-AI시대 ‘승자’는?… 전기 혁명 당시 에디슨에 비유해보니
-https://www.aitimes.com/news/articleView.html?idxno=213576
-
-YC, 사내 에이전트 하네스 'QM' 공개…"개인 비서 넘어 조직 협업으로"
-https://www.aitimes.com/news/articleView.html?idxno=213575
-
-"성능은 미국 추격했지만 안전장치는 무방비"…'GLM-5.2' AI 안전성 경고
-https://www.aitimes.com/news/articleView.html?idxno=213574
-
-커서, 블랙웰 서버 전용 MoE 커널 'MoK' 공개…학습 처리량 41% 향상
-https://www.aitimes.com/news/articleView.html?idxno=213572
