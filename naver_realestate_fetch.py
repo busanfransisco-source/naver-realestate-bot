@@ -3,7 +3,7 @@
 네이버뉴스 경제 > 부동산 섹션 -> latest.json 으로 저장 (GitHub Actions용)
 ------------------------------------------------------------------------
 1. 네이버뉴스 부동산 섹션 페이지(HTML)를 직접 읽어옴
-2. 기사 제목 + 링크를 최대 20개까지 뽑음
+2. 기사 제목 + 링크를 최대 10개까지 뽑음
 3. latest.json 파일로 저장 (커밋/푸시는 워크플로우 쪽에서 처리)
 """
 
@@ -16,7 +16,7 @@ import requests
 from bs4 import BeautifulSoup
 
 SECTION_URL = "https://news.naver.com/breakingnews/section/101/260"  # 경제 > 부동산
-MAX_ARTICLES = 20
+MAX_ARTICLES = 10
 OUTPUT_FILE = "latest.json"
 
 HEADERS = {
@@ -31,7 +31,7 @@ WEEKDAY_KR = ["월요일", "화요일", "수요일", "목요일", "금요일", "
 WEEKDAY_EN = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 
 
-def fetch_real_estate_headlines(url, max_articles=20):
+def fetch_real_estate_headlines(url, max_articles=10):
     resp = requests.get(url, headers=HEADERS, timeout=10)
     resp.raise_for_status()
     resp.encoding = "utf-8"
