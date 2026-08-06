@@ -6,6 +6,9 @@ https://www.aitimes.com/news/articleView.html?idxno=213634
 딥시크, 초저가 정책 접나…AI 서비스 가격 '대폭' 인상 예고
 https://www.aitimes.com/news/articleView.html?idxno=213632
 
+옵트에이아이, 온디바이스 특화 자체 경량 AI 모델 '옵트기어' 공개
+https://www.aitimes.com/news/articleView.html?idxno=213630
+
 박윤영 KT 대표, 목동 데이터센터 현장 점검..."AI 인프라 경쟁력" 당부
 https://www.aitimes.com/news/articleView.html?idxno=213625
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213620
 
 "AI로 신종 스팸도 철통방어"...KT, AI 스팸차단 서비스 전 고객 확대
 https://www.aitimes.com/news/articleView.html?idxno=213619
-
-아마존 죽스, 라스베이거스서 '운전대 없는' 로보택시 첫 유료 운행 개시
-https://www.aitimes.com/news/articleView.html?idxno=213618
