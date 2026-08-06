@@ -1,5 +1,20 @@
 🤖 26년 8월 6일 목요일 AI 뉴스
 
+"직원 7000명이 직접 써보고 고쳐"… 메타의 AI 코딩 성능 향상 비결
+https://www.aitimes.com/news/articleView.html?idxno=213614
+
+머스크 "엔비디아 칩만 사용" 선언에 휘청...AMD, 리사 수 발언에 반등
+https://www.aitimes.com/news/articleView.html?idxno=213610
+
+구글, 코딩 강화 위해 스타트업 메카나이즈 2조 인수 논의
+https://www.aitimes.com/news/articleView.html?idxno=213606
+
+메타도 사이버 보안 테스트 중 무단 외부 접속..."격리망 구성 오류 탓"
+https://www.aitimes.com/news/articleView.html?idxno=213602
+
+앤트로픽, '클로드' 전용 AI 칩 자체 개발 공식화…실리콘 팀 구축 착수
+https://www.aitimes.com/news/articleView.html?idxno=213600
+
 구글 떠난 제프 딘, 과학 연구 자동화 스타트업 설립..."RSI 구축 목표"
 https://www.aitimes.com/news/articleView.html?idxno=213599
 
@@ -14,18 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213594
 
 국내 최대 규모 400MW 태양광단지 착공…RE100 전력 연간 529GWh 공급
 https://www.aitimes.com/news/articleView.html?idxno=213591
-
-메타, 코딩 에이전트 '뮤즈 코드' 공개...백그라운드 비동기로 차별화
-https://www.aitimes.com/news/articleView.html?idxno=213590
-
-세무 AI 스타트업 솔로몬랩스, 스트라이프 출신 이창헌 리드 영입
-https://www.aitimes.com/news/articleView.html?idxno=213585
-
-노타, '키미 K3' 경량화 모델 2종 공개..."GPU 최대 50% 절감"
-https://www.aitimes.com/news/articleView.html?idxno=213584
-
-카카오, 2분기 매출 2조·영업익 2770억..."역대 분기 최대 실적"
-https://www.aitimes.com/news/articleView.html?idxno=213583
-
-데이터 마이닝 최고 학술대회 9∼13일 제주 개최…구글·알리바바 기조강연
-https://www.aitimes.com/news/articleView.html?idxno=213582
