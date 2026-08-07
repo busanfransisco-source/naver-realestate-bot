@@ -1,31 +1,31 @@
 🤖 26년 8월 7일 금요일 AI 뉴스
 
-니어스랩, 코스닥 출사표..."국내 1호 피지컬 AI 드론으로 방산 시장 공략"
-https://www.aitimes.com/news/articleView.html?idxno=213635
+모빌린트, USB형 AI 가속기 'MLD-R1' 출시...온디바이스 시장 공략
+https://www.aitimes.com/news/articleView.html?idxno=213661
 
-오픈AI, 애플의 영업비밀 침해 소송에 “근거 없다”며 기각 신청
-https://www.aitimes.com/news/articleView.html?idxno=213634
+베슬AI, 블랙웰 'B200' 1000장 확보...연내 1만장 목표로 'AI 팩토리' 구축 가속
+https://www.aitimes.com/news/articleView.html?idxno=213659
 
-딥시크, 초저가 정책 접나…AI 서비스 가격 '대폭' 인상 예고
-https://www.aitimes.com/news/articleView.html?idxno=213632
+클라이온, KT·KT 클라우드 출신 김주성 신임 대표 선임
+https://www.aitimes.com/news/articleView.html?idxno=213658
 
-사이버 보안 평가했더니…가짜 신분으로 사람 속인 AI 에이전트?
-https://www.aitimes.com/news/articleView.html?idxno=213631
+소프트뱅크, 오픈AI 담보 14조 대출 확보…'인텔 효과'에 실적 호조
+https://www.aitimes.com/news/articleView.html?idxno=213657
 
-옵트에이아이, 온디바이스 특화 자체 경량 AI 모델 '옵트기어' 공개
-https://www.aitimes.com/news/articleView.html?idxno=213630
+바이오넥서스, AI 신약개발 플랫폼으로 시드 투자 유치
+https://www.aitimes.com/news/articleView.html?idxno=213656
 
-박윤영 KT 대표, 목동 데이터센터 현장 점검..."AI 인프라 경쟁력" 당부
-https://www.aitimes.com/news/articleView.html?idxno=213625
+스페이스X·테슬라, 텍사스에 24조 규모 반도체 '테라팹' 건설 본격화
+https://www.aitimes.com/news/articleView.html?idxno=213655
 
-오픈AI, 허깅페이스 해킹 세부 내용 공개..."자체 시스템 먼저 해킹·정보 공유까지"
-https://www.aitimes.com/news/articleView.html?idxno=213624
+KAIST, 데이터 변화 속도에 맞춰 반응하는 'AI 반도체' 개발
+https://www.aitimes.com/news/articleView.html?idxno=213654
 
-카카오, 과기정통부 'AI 에이전트 마켓플레이스 사업' 선정
-https://www.aitimes.com/news/articleView.html?idxno=213623
+딥시크, 11조 규모 2차 투자 유치 재개...몸값 105조로 상승
+https://www.aitimes.com/news/articleView.html?idxno=213651
 
-케이디파인켐, ‘OCP 코리아 테크 데이’ 참가…OCP 마켓플레이스 등재 냉각수 선보여
-https://www.aitimes.com/news/articleView.html?idxno=213622
+리얼월드, 국내 3사와 엔비디아 '아이작' 벤치마크 고도화 나선다
+https://www.aitimes.com/news/articleView.html?idxno=213649
 
-카카오엔터프라이즈, 이재한 신임 대표 선임
-https://www.aitimes.com/news/articleView.html?idxno=213621
+오픈AI 'AI 스피커'는 한손에 들어오는 도넛 모양...가격은 40만원대 전망
+https://www.aitimes.com/news/articleView.html?idxno=213647
