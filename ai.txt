@@ -1,5 +1,8 @@
 🤖 26년 8월 8일 토요일 AI 뉴스
 
+오픈AI, '아스트라' 개발 일시 중단…"치명적 사이버공격 가능성"
+https://www.aitimes.com/news/articleView.html?idxno=213697
+
 이스트시큐리티, 퓨리오사AI와 'K-AI 보안 인프라' 만든다
 https://www.aitimes.com/news/articleView.html?idxno=213692
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213678
 
 구글, 최대 35조원 채권 추가 발행…AI 인프라 투자 재원 확보
 https://www.aitimes.com/news/articleView.html?idxno=213677
-
-구글, 허리케인 예측 AI '웨더넥스트' 공개..."골든타임 하루 더 벌었다"
-https://www.aitimes.com/news/articleView.html?idxno=213676
