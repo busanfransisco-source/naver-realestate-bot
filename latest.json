@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-08-08 07:09:40",
+  "updated_at_kst": "2026-08-08 07:59:46",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 8일 토요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "입지 같아도 가격은 달랐다…아파트 가치 높이는 ‘특화설계’",
+      "url": "https://n.news.naver.com/mnews/article/119/0003119627"
+    },
+    {
+      "title": "김포 구도심 10곳 정비예정구역 지정…축구장 52개 면적",
+      "url": "https://n.news.naver.com/mnews/article/001/0016239910"
+    },
     {
       "title": "오세훈 “공급 위기 책임 떠넘기나”…민주당 ‘말로만 공급’ 비판에 정면 반박",
       "url": "https://n.news.naver.com/mnews/article/011/0004649759"
@@ -34,14 +42,6 @@
     {
       "title": "호가 낮춘 매물 속속 등장…출구전략 찾는 강남 집주인들[세제 개편, 그 이후①]",
       "url": "https://n.news.naver.com/mnews/article/003/0014115263"
-    },
-    {
-      "title": "수도권 매매·전세 동반 상승 지속…\"세제개편, 편법 양산 우려\"",
-      "url": "https://n.news.naver.com/mnews/article/277/0005800428"
-    },
-    {
-      "title": "\"10억대 몸테크 몰린다\"…중저가 재건축 단지 고가낙찰 행렬[부동산AtoZ]",
-      "url": "https://n.news.naver.com/mnews/article/277/0005800427"
     }
   ]
 }
