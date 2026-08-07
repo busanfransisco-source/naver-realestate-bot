@@ -1,5 +1,14 @@
 🤖 26년 8월 7일 금요일 AI 뉴스
 
+이스트시큐리티, 퓨리오사AI와 'K-AI 보안 인프라' 만든다
+https://www.aitimes.com/news/articleView.html?idxno=213692
+
+핀테크 핑거, 피지컬 AI 기업 '미켈로로보틱스' 인수
+https://www.aitimes.com/news/articleView.html?idxno=213688
+
+[게시판] "챗GPT서 포토샵·일러스트 쓴다"...어도비 플러그인 출시 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=213687
+
 네이버, AI 브리핑 도입 이후 블로그 창작자 수익 2배 늘어
 https://www.aitimes.com/news/articleView.html?idxno=213684
 
@@ -9,6 +18,9 @@ https://www.aitimes.com/news/articleView.html?idxno=213681
 MS, 인도 최대 데이터센터 허브 개설…29조 AI 투자 속도
 https://www.aitimes.com/news/articleView.html?idxno=213680
 
+중국, 미국 팔로알토 보안 심사 착수...미·중 기술 전쟁 확대
+https://www.aitimes.com/news/articleView.html?idxno=213679
+
 구글, 최대 35조원 채권 추가 발행…AI 인프라 투자 재원 확보
 https://www.aitimes.com/news/articleView.html?idxno=213677
 
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213676
 
 바이트댄스, '미소스'에 맞설 10조 매개변수 모델 개발 추진
 https://www.aitimes.com/news/articleView.html?idxno=213675
-
-수노, AI 음원 '워터마크' 도입..."딥페이크·불법 유통 막는다"
-https://www.aitimes.com/news/articleView.html?idxno=213670
-
-네이버, 2분기 매출 3.4조로 역대 최대..."AI 팩토리 내년 매출 실현"
-https://www.aitimes.com/news/articleView.html?idxno=213669
-
-문샷 AI '키미 K3', 보안 테스트 중 샌드박스 탈출…"오픈소스 첫 사례"
-https://www.aitimes.com/news/articleView.html?idxno=213667
-
-"음식 주문부터 예약까지"...구글 지도, AI 에이전트로 대폭 진화
-https://www.aitimes.com/news/articleView.html?idxno=213663
