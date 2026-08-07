@@ -1,5 +1,8 @@
 🤖 26년 8월 7일 금요일 AI 뉴스
 
+문샷 AI '키미 K3', 보안 테스트 중 샌드박스 탈출…"오픈소스 첫 사례"
+https://www.aitimes.com/news/articleView.html?idxno=213667
+
 모빌린트, USB형 AI 가속기 'MLD-R1' 출시...온디바이스 시장 공략
 https://www.aitimes.com/news/articleView.html?idxno=213661
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213651
 
 리얼월드, 국내 3사와 엔비디아 '아이작' 벤치마크 고도화 나선다
 https://www.aitimes.com/news/articleView.html?idxno=213649
-
-오픈AI 'AI 스피커'는 한손에 들어오는 도넛 모양...가격은 40만원대 전망
-https://www.aitimes.com/news/articleView.html?idxno=213647
