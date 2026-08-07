@@ -1,31 +1,31 @@
 🤖 26년 8월 7일 금요일 AI 뉴스
 
+네이버, AI 브리핑 도입 이후 블로그 창작자 수익 2배 늘어
+https://www.aitimes.com/news/articleView.html?idxno=213684
+
+과기정통부, K-문샷 프로젝트 'AI 과학자 PD' 다시 뽑는다
+https://www.aitimes.com/news/articleView.html?idxno=213681
+
+MS, 인도 최대 데이터센터 허브 개설…29조 AI 투자 속도
+https://www.aitimes.com/news/articleView.html?idxno=213680
+
+구글, 최대 35조원 채권 추가 발행…AI 인프라 투자 재원 확보
+https://www.aitimes.com/news/articleView.html?idxno=213677
+
+구글, 허리케인 예측 AI '웨더넥스트' 공개..."골든타임 하루 더 벌었다"
+https://www.aitimes.com/news/articleView.html?idxno=213676
+
+바이트댄스, '미소스'에 맞설 10조 매개변수 모델 개발 추진
+https://www.aitimes.com/news/articleView.html?idxno=213675
+
+수노, AI 음원 '워터마크' 도입..."딥페이크·불법 유통 막는다"
+https://www.aitimes.com/news/articleView.html?idxno=213670
+
+네이버, 2분기 매출 3.4조로 역대 최대..."AI 팩토리 내년 매출 실현"
+https://www.aitimes.com/news/articleView.html?idxno=213669
+
 문샷 AI '키미 K3', 보안 테스트 중 샌드박스 탈출…"오픈소스 첫 사례"
 https://www.aitimes.com/news/articleView.html?idxno=213667
 
-모빌린트, USB형 AI 가속기 'MLD-R1' 출시...온디바이스 시장 공략
-https://www.aitimes.com/news/articleView.html?idxno=213661
-
-베슬AI, 블랙웰 'B200' 1000장 확보...연내 1만장 목표로 'AI 팩토리' 구축 가속
-https://www.aitimes.com/news/articleView.html?idxno=213659
-
-클라이온, KT·KT 클라우드 출신 김주성 신임 대표 선임
-https://www.aitimes.com/news/articleView.html?idxno=213658
-
-소프트뱅크, 오픈AI 담보 14조 대출 확보…'인텔 효과'에 실적 호조
-https://www.aitimes.com/news/articleView.html?idxno=213657
-
-바이오넥서스, AI 신약개발 플랫폼으로 시드 투자 유치
-https://www.aitimes.com/news/articleView.html?idxno=213656
-
-스페이스X·테슬라, 텍사스에 24조 규모 반도체 '테라팹' 건설 본격화
-https://www.aitimes.com/news/articleView.html?idxno=213655
-
-KAIST, 데이터 변화 속도에 맞춰 반응하는 'AI 반도체' 개발
-https://www.aitimes.com/news/articleView.html?idxno=213654
-
-딥시크, 11조 규모 2차 투자 유치 재개...몸값 105조로 상승
-https://www.aitimes.com/news/articleView.html?idxno=213651
-
-리얼월드, 국내 3사와 엔비디아 '아이작' 벤치마크 고도화 나선다
-https://www.aitimes.com/news/articleView.html?idxno=213649
+"음식 주문부터 예약까지"...구글 지도, AI 에이전트로 대폭 진화
+https://www.aitimes.com/news/articleView.html?idxno=213663
