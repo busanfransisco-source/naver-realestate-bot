@@ -1,5 +1,11 @@
 🤖 26년 8월 8일 토요일 AI 뉴스
 
+'사스포칼립스' 공포 지나자…SaaS 업계, AI 대응 여부로 희비 엇갈렸다
+https://www.aitimes.com/news/articleView.html?idxno=213710
+
+트럼프, 의회의 AI 규제 움직임에 "산업 폐업" 강력 반발…여야 '우회적 방관' 초당적 비판
+https://www.aitimes.com/news/articleView.html?idxno=213709
+
 [AI 이슈 트렌드] 갤럭시 Z8 흥행 속 차가원 사기·하이닉스 HBF·스페이스X 달 충돌 눈길
 https://www.aitimes.com/news/articleView.html?idxno=213708
 
@@ -8,6 +14,9 @@ https://www.aitimes.com/news/articleView.html?idxno=213707
 
 미 FCC “중국산 로봇·인버터 제한, 미국 생산 확대와 안보 위한 조치”
 https://www.aitimes.com/news/articleView.html?idxno=213706
+
+‘에이전트 플러그인 1.0’ 공개...스킬·MCP 묶어 에이전트 호환성 높여
+https://www.aitimes.com/news/articleView.html?idxno=213705
 
 SK하이닉스, 중국 충칭 자산 매각 검토...국내 팹에 54조 투자
 https://www.aitimes.com/news/articleView.html?idxno=213704
@@ -18,14 +27,5 @@ https://www.aitimes.com/news/articleView.html?idxno=213703
 ‘클로드’에 백업 맡겼더니 홈 디렉토리 전체 삭제..."미안, 오타였다"
 https://www.aitimes.com/news/articleView.html?idxno=213702
 
-미국 상무부, 중국 AI 기업의 해외 엔비디아 칩 원격 접근 실태 조사 착수
+미 상무부, 중국 AI 기업의 해외 엔비디아 칩 원격 접근 실태 조사 착수
 https://www.aitimes.com/news/articleView.html?idxno=213701
-
-허깅페이스 CEO "중국, 오픈 AI 모델로 올해 미국 첨단 모델 추월할 수도"
-https://www.aitimes.com/news/articleView.html?idxno=213700
-
-앤트로픽, 안전 분류기 고도화…'페이블 5' 오탐 답변 거부 85% 줄였다
-https://www.aitimes.com/news/articleView.html?idxno=213699
-
-알리바바, ‘큐원3.8-맥스’ 유료화 추진…대형 상용 기업 '수익 공유' 검토
-https://www.aitimes.com/news/articleView.html?idxno=213698
