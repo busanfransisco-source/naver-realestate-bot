@@ -1,5 +1,8 @@
 🤖 26년 8월 8일 토요일 AI 뉴스
 
+알리바바, ‘큐원3.8-맥스’ 유료화 추진…대형 상용 기업 '수익 공유' 검토
+https://www.aitimes.com/news/articleView.html?idxno=213698
+
 오픈AI, '아스트라' 개발 일시 중단…"치명적 사이버공격 가능성"
 https://www.aitimes.com/news/articleView.html?idxno=213697
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213679
 
 엔비디아의 자율주행 AI 모델… ‘알파마요 2 슈퍼’
 https://www.aitimes.com/news/articleView.html?idxno=213678
-
-구글, 최대 35조원 채권 추가 발행…AI 인프라 투자 재원 확보
-https://www.aitimes.com/news/articleView.html?idxno=213677
