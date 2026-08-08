@@ -1,31 +1,31 @@
 🤖 26년 8월 8일 토요일 AI 뉴스
 
+SK하이닉스, 중국 충칭 자산 매각 검토...국내 팹에 54조 투자
+https://www.aitimes.com/news/articleView.html?idxno=213704
+
+오픈AI, 허깅페이스 자율 해킹 전말 공개…"에이전트끼리 비밀 소통"
+https://www.aitimes.com/news/articleView.html?idxno=213703
+
+‘클로드’에 백업 맡겼더니 홈 디렉토리 전체 삭제..."미안, 오타였다"
+https://www.aitimes.com/news/articleView.html?idxno=213702
+
+미국 상무부, 중국 AI 기업의 해외 엔비디아 칩 원격 접근 실태 조사 착수
+https://www.aitimes.com/news/articleView.html?idxno=213701
+
+허깅페이스 CEO "중국, 오픈 AI 모델로 올해 미국 첨단 모델 추월할 수도"
+https://www.aitimes.com/news/articleView.html?idxno=213700
+
+앤트로픽, 안전 분류기 고도화…'페이블 5' 오탐 답변 거부 85% 줄였다
+https://www.aitimes.com/news/articleView.html?idxno=213699
+
 알리바바, ‘큐원3.8-맥스’ 유료화 추진…대형 상용 기업 '수익 공유' 검토
 https://www.aitimes.com/news/articleView.html?idxno=213698
 
 오픈AI, '아스트라' 개발 일시 중단…"치명적 사이버공격 가능성"
 https://www.aitimes.com/news/articleView.html?idxno=213697
 
-이스트시큐리티, 퓨리오사AI와 'K-AI 보안 인프라' 만든다
-https://www.aitimes.com/news/articleView.html?idxno=213692
+[내면 지도 그리기] 28 Inner Mapping: 나를 찾는 지도
+https://www.aitimes.com/news/articleView.html?idxno=213694
 
-핀테크 핑거, 피지컬 AI 기업 '미켈로로보틱스' 인수
-https://www.aitimes.com/news/articleView.html?idxno=213688
-
-[게시판] "챗GPT서 포토샵·일러스트 쓴다"...어도비 플러그인 출시 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=213687
-
-네이버, AI 브리핑 도입 이후 블로그 창작자 수익 2배 늘어
-https://www.aitimes.com/news/articleView.html?idxno=213684
-
-과기정통부, K-문샷 프로젝트 'AI 과학자 PD' 다시 뽑는다
-https://www.aitimes.com/news/articleView.html?idxno=213681
-
-MS, 인도 최대 데이터센터 허브 개설…29조 AI 투자 속도
-https://www.aitimes.com/news/articleView.html?idxno=213680
-
-중국, 미국 팔로알토 보안 심사 착수...미·중 기술 전쟁 확대
-https://www.aitimes.com/news/articleView.html?idxno=213679
-
-엔비디아의 자율주행 AI 모델… ‘알파마요 2 슈퍼’
-https://www.aitimes.com/news/articleView.html?idxno=213678
+[AI카툰] Bob, Senior IT guy - 밥, 로봇청소기의 주인 또는 하인
+https://www.aitimes.com/news/articleView.html?idxno=213693
