@@ -1,5 +1,17 @@
 🤖 26년 8월 9일 일요일 AI 뉴스
 
+'커서' 이름 사라지나...스페이스X 인수 후 '그록'으로 브랜드 개편 예정
+https://www.aitimes.com/news/articleView.html?idxno=213718
+
+오픈AI, 프레젠테이션 스타트업 '넥스트슬라이드' 인수…챗GPT 시각적 업무 기능 강화
+https://www.aitimes.com/news/articleView.html?idxno=213715
+
+허사비스, 사임 의사 밝혔으나 구글 만류로 승진…사실상 퇴임 수순
+https://www.aitimes.com/news/articleView.html?idxno=213712
+
+엔비디아, 전력 공급사 랜시엄에 최대 4조 투자...AI 전력 확보 총력
+https://www.aitimes.com/news/articleView.html?idxno=213711
+
 '사스포칼립스' 공포 지나자…SaaS 업계, AI 대응 여부로 희비 엇갈렸다
 https://www.aitimes.com/news/articleView.html?idxno=213710
 
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213706
 
 ‘에이전트 플러그인 1.0’ 공개...스킬·MCP 묶어 에이전트 호환성 높여
 https://www.aitimes.com/news/articleView.html?idxno=213705
-
-SK하이닉스, 중국 충칭 자산 매각 검토...국내 팹에 54조 투자
-https://www.aitimes.com/news/articleView.html?idxno=213704
-
-오픈AI, 허깅페이스 자율 해킹 전말 공개…"에이전트끼리 비밀 소통"
-https://www.aitimes.com/news/articleView.html?idxno=213703
-
-‘클로드’에 백업 맡겼더니 홈 디렉토리 전체 삭제..."미안, 오타였다"
-https://www.aitimes.com/news/articleView.html?idxno=213702
-
-미 상무부, 중국 AI 기업의 해외 엔비디아 칩 원격 접근 실태 조사 착수
-https://www.aitimes.com/news/articleView.html?idxno=213701
