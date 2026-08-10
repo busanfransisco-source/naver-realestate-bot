@@ -1,7 +1,13 @@
 🤖 26년 8월 10일 월요일 AI 뉴스
 
+‘공룡쟁투’ 화석, AI 영화로 재탄생…“8000만년 전 자연사, 3D 데이터로 복원”
+https://www.aitimes.com/news/articleView.html?idxno=213769
+
 [게시판] 클리카, AI 경량화로 '글로벌 국방 AI 챌린지' 선정 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=213767
+
+'동시 소통' AI 에이전트 등장…단일 '클로드 오퍼스 4.8' 성적 뛰어넘었다
+https://www.aitimes.com/news/articleView.html?idxno=213766
 
 [게시판] 나우로보틱스, 과기부 ‘피지컬 AI’ 실증사업 선정 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=213765
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213756
 
 "AI 안 썼다" 해명에도...28억 범죄 소설 계약 결국 철회
 https://www.aitimes.com/news/articleView.html?idxno=213755
-
-"'K-엑사원 2.0' 체험 14일까지"...국내 최대 규모 모델 무료로 써본다
-https://www.aitimes.com/news/articleView.html?idxno=213754
-
-미 국방부, 이란전에 미사일 고갈… 방산 업계에 "생산 가속" 지시
-https://www.aitimes.com/news/articleView.html?idxno=213751
