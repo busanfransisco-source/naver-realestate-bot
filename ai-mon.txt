@@ -1,31 +1,31 @@
 🤖 26년 8월 10일 월요일 AI 뉴스
 
-뷰노, 홍성군 농어촌 의료봉사에 AI X-레이 판독 솔루션 제공
-https://www.aitimes.com/news/articleView.html?idxno=213742
+[게시판] 클리카, AI 경량화로 '글로벌 국방 AI 챌린지' 선정 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=213767
 
-“이제는 바이브 해킹이 온다”...아카마이, 기업 AI 사용 리스크 보고서 발표
-https://www.aitimes.com/news/articleView.html?idxno=213740
+[게시판] 나우로보틱스, 과기부 ‘피지컬 AI’ 실증사업 선정 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=213765
 
-힉스필드, AI 장편 영화 '헬 그라인드' 제작 데이터 전체 개방
-https://www.aitimes.com/news/articleView.html?idxno=213739
+엔비디아, 전이중 음성 AI에 도구 호출 이식... '네모트론랩스 보이스챗 11B' 오픈 공개
+https://www.aitimes.com/news/articleView.html?idxno=213764
 
-와이즈넛, AI 에이전트로 조달청 디지털서비스몰 판매 1위
-https://www.aitimes.com/news/articleView.html?idxno=213738
+[기고] 한국딥러닝 "에이전틱 AI, 오답보다 위험한 ‘잘못된 실행’"
+https://www.aitimes.com/news/articleView.html?idxno=213761
 
-네이버-국가평생교육진흥원, 시니어 맞춤형 ‘AI 교과서’ 제작 나서
-https://www.aitimes.com/news/articleView.html?idxno=213737
+리퀴드 AI, 라즈베리 파이서 구동되는 소형 에이전트 모델 'LFM2.5-2.6B' 공개
+https://www.aitimes.com/news/articleView.html?idxno=213760
 
-KT, NH농협은행 차세대 AICC 구축 완료
-https://www.aitimes.com/news/articleView.html?idxno=213736
+국내 화이트 해커 팀, '데프콘'에서 5년 연속 상위권 기록
+https://www.aitimes.com/news/articleView.html?idxno=213757
 
-오픈AI·앤트로픽·메타 흔든 이레귤러..."AI 자율 해킹 아닌 설정 오류"
-https://www.aitimes.com/news/articleView.html?idxno=213734
+클라우드플레어, 에이전트 전용 브라우저 ‘카이트서프’ 공개...“자원·비용 획기적 절감”
+https://www.aitimes.com/news/articleView.html?idxno=213756
 
-중국, '10분 만에 정맥 이식' BCI 개발… 머스크 뉴럴링크에 도전장
-https://www.aitimes.com/news/articleView.html?idxno=213733
+"AI 안 썼다" 해명에도...28억 범죄 소설 계약 결국 철회
+https://www.aitimes.com/news/articleView.html?idxno=213755
 
-메타 "AI로 아낀 시간, 휴가 대신 제품 개발에 써야"…업계 논쟁 유발
-https://www.aitimes.com/news/articleView.html?idxno=213729
+"'K-엑사원 2.0' 체험 14일까지"...국내 최대 규모 모델 무료로 써본다
+https://www.aitimes.com/news/articleView.html?idxno=213754
 
-애플, CXMT 메모리 도입에 기술적 난항...맞춤형 제작 불가능·공급 부족
-https://www.aitimes.com/news/articleView.html?idxno=213727
+미 국방부, 이란전에 미사일 고갈… 방산 업계에 "생산 가속" 지시
+https://www.aitimes.com/news/articleView.html?idxno=213751
