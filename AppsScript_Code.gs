@@ -538,7 +538,7 @@ function buildBriefingHtml_(now, sections) {
 
   var blocks = order.map(function (pair) {
     var key = pair[0], label = pair[1];
-    var content = sections[key] || "(데이터 없음)";
+    var content = (sections[key] || "(데이터 없음)").replace(/\n+$/, "");
     var escaped = escapeHtml_(content);
     return '\n<section class="card">\n<div class="card-head">\n<h2>' + label + '</h2>\n' +
       '<button class="copy-btn" onclick="copySection(\'' + key + '\', this)">복사</button>\n</div>\n' +
@@ -656,16 +656,46 @@ function runBackupNow() {
   Logger.log("백업 파이프라인 완료. 에러: " + (errors.length ? errors.join(" | ") : "없음"));
 }
 
+/**
+ * 06:30 안전망: 오늘 06:00(KST) 이후에 주 파이프라인이 갱신하지 못했으면
+ * 백업을 강제 실행한다. 03:55처럼 이른 갱신은 여기서 "완료"로 보지 않는다.
+ */
+function isMorningRefreshComplete_(now) {
+  try {
+    var text = ghGetTextFile_("last-refresh.txt");
+    if (!text) return false;
+    var refreshedKST = new Date(new Date(text.trim()).getTime() + 9 * 60 * 60 * 1000);
+    return refreshedKST.getUTCFullYear() === now.getUTCFullYear() &&
+      refreshedKST.getUTCMonth() === now.getUTCMonth() &&
+      refreshedKST.getUTCDate() === now.getUTCDate() &&
+      refreshedKST.getUTCHours() >= 6;
+  } catch (e) { return false; }
+}
+
+function runMorningBackupSafetyNet() {
+  var now = nowKST_();
+  if (isMorningRefreshComplete_(now)) {
+    Logger.log("오늘 06시 이후 주 파이프라인 갱신 확인 - 아침 백업 건너뜀");
+    return;
+  }
+  Logger.log("오늘 06시 이후 갱신 없음 - 아침 백업 안전망 실행");
+  runBackupNow();
+}
+
 function setupTriggers() {
   ScriptApp.getProjectTriggers().forEach(function (t) {
-    if (t.getHandlerFunction() === "runBackupIfNeeded") ScriptApp.deleteTrigger(t);
+    var handler = t.getHandlerFunction();
+    if (handler === "runBackupIfNeeded" || handler === "runMorningBackupSafetyNet") {
+      ScriptApp.deleteTrigger(t);
+    }
   });
   [7, 12, 15, 21].forEach(function (hourKST) {
     ScriptApp.newTrigger("runBackupIfNeeded")
-      .timeBased()
-      .everyDays(1)
-      .atHour(hourKST)
-      .create();
+      .timeBased().everyDays(1).atHour(hourKST).create();
   });
-  Logger.log("트리거 4개 설정 완료 (매일 07/12/15/21시, 프로젝트 타임존 기준)");
+  ScriptApp.newTrigger("runBackupIfNeeded")
+    .timeBased().everyDays(1).atHour(6).nearMinute(0).create();
+  ScriptApp.newTrigger("runMorningBackupSafetyNet")
+    .timeBased().everyDays(1).atHour(6).nearMinute(30).create();
+  Logger.log("트리거 6개 설정 완료: 06:00 점검, 06:30 아침 안전망, 07/12/15/21시 일반 점검");
 }
