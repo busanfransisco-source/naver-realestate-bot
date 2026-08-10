@@ -82,7 +82,7 @@ function fetchNaverSectionArticles_(url, maxArticles) {
   }
   var articles = [];
   var seen = {};
-  var re1 = /<a[^>]+class="[^"]*(?:sa_text_title|sa_thumb_link|cluster_text_headline)[^"]*"[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g;
+  var re1 = /<a\b(?=[^>]*\bclass="[^"]*(?:sa_text_title|cluster_text_headline)[^"]*")(?=[^>]*\bhref="([^"]*)")[^>]*>([\s\S]*?)<\/a>/g;
   var m;
   while ((m = re1.exec(html)) !== null && articles.length < maxArticles) {
     var href = m[1];
