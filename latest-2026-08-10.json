@@ -1,8 +1,20 @@
 {
-  "updated_at_kst": "2026-08-10 19:48:56",
+  "updated_at_kst": "2026-08-10 20:53:15",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 10일 월요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "동영상뉴스",
+      "url": "https://n.news.naver.com/mnews/article/422/0000894356"
+    },
+    {
+      "title": "GS건설, LS일렉트릭과 AI 데이터센터 사업 협력 강화",
+      "url": "https://n.news.naver.com/mnews/article/032/0003463396"
+    },
+    {
+      "title": "'도시재창조' 돌입하는 대전…둔산·송촌·중리·법동지구 12.8만가구 짓는다",
+      "url": "https://n.news.naver.com/mnews/article/015/0005319357"
+    },
     {
       "title": "“제2의 강남은 없다”… ‘GTX’보다 먼저 봐야 할 핵심 기준 [잘살아보세]",
       "url": "https://n.news.naver.com/mnews/article/022/0004149900"
@@ -30,18 +42,6 @@
     {
       "title": "동영상뉴스재생시간01:12",
       "url": "https://n.news.naver.com/mnews/article/422/0000894321"
-    },
-    {
-      "title": "압구정·은마 호가 ‘최대 7억’ 하락…강남 2차 급매장 열리나",
-      "url": "https://n.news.naver.com/mnews/article/011/0004650342"
-    },
-    {
-      "title": "‘非아파트 2주택 제외’ 9억까지 넓힌다[주택 공급 '발등의 불']",
-      "url": "https://n.news.naver.com/mnews/article/014/0005559641"
-    },
-    {
-      "title": "“우리집 재건축 될까요?”…아파트 ‘세대’ 따라 운명 갈린다 [부동산 손자병법]",
-      "url": "https://n.news.naver.com/mnews/article/009/0005719182"
     }
   ]
 }
