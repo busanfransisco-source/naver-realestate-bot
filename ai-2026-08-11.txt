@@ -27,5 +27,5 @@ https://www.aitimes.com/news/articleView.html?idxno=213761
 리퀴드 AI, 라즈베리 파이서 구동되는 소형 에이전트 모델 'LFM2.5-2.6B' 공개
 https://www.aitimes.com/news/articleView.html?idxno=213760
 
-국내 화이트 해커 팀, '데프콘'에서 5년 연속 상위권 기록
-https://www.aitimes.com/news/articleView.html?idxno=213757
+“실험장비·로봇·AI 갖춘 24시 자율실험실 구축”...과기부, K-문샷 AI 연구 가속
+https://www.aitimes.com/news/articleView.html?idxno=213759
