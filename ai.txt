@@ -9,6 +9,9 @@ https://www.aitimes.com/news/articleView.html?idxno=213794
 삼성SDS·엘리스그룹, '국가 AI 연구용 GPU 컴퓨팅 서비스' 책임진다
 https://www.aitimes.com/news/articleView.html?idxno=213792
 
+엔비디아, 월가 손잡고 700조 AI 펀드 결성…"GPU를 금융자산으로"
+https://www.aitimes.com/news/articleView.html?idxno=213791
+
 스틸컷, 매쉬업벤처스서 시드 투자 유치..."AI로 딥페이크 원천 차단"
 https://www.aitimes.com/news/articleView.html?idxno=213790
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213785
 
 메타, 노트북서 구동되는 300억 매개변수 오픈 모델 '뮤즈 글리머' 출시
 https://www.aitimes.com/news/articleView.html?idxno=213784
-
-엔닷라이트, 피지컬AI 학습 ‘3D 데이터’ 생성 기술로 150억 투자 유치
-https://www.aitimes.com/news/articleView.html?idxno=213783
