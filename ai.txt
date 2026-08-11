@@ -1,5 +1,17 @@
 🤖 26년 8월 11일 화요일 AI 뉴스
 
+앤트로픽, '클로드' 생성 콘텐츠에 눈에 안 보이는 ‘투명 워터마크’ 도입
+https://www.aitimes.com/news/articleView.html?idxno=213821
+
+가트너 "올해 AI 추론 지출 33조원 돌파 전망...최적화 투자도 증가"
+https://www.aitimes.com/news/articleView.html?idxno=213820
+
+[게시판] 모빌린트, 인텔리빅스와 한국도로공사 AI CCTV 사업 참여 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=213819
+
+기업 AI 비용 올해 '최저치'로 하락...글로벌 가격 경쟁에 중국 오픈소스까지
+https://www.aitimes.com/news/articleView.html?idxno=213818
+
 "AI 에이전트 위협 본격화"…미국 주요 보안주 일제히 급등
 https://www.aitimes.com/news/articleView.html?idxno=213817
 
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213813
 
 캘리포니아, 미국 최초 'AI 사이버 방어 프로그램' 도입...핵심 기반 시설 보호 강화
 https://www.aitimes.com/news/articleView.html?idxno=213812
-
-미 법원, 메타·빅테크 상대 'SNS 중독' 수천건 집단소송 허용
-https://www.aitimes.com/news/articleView.html?idxno=213810
-
-모티프, 독파모 모델 ‘모티프 3’ 기술보고서 공개…챗봇 무료 체험도 가능
-https://www.aitimes.com/news/articleView.html?idxno=213808
-
-중국 본토 첫 휴머노이드 로봇 상장...유니트리, 상하이 IPO 청약 경쟁률 8200대 1
-https://www.aitimes.com/news/articleView.html?idxno=213807
-
-인텔, AI 컴퓨팅 수요 폭발에 21조 유상증자…상장 이래 최대 규모
-https://www.aitimes.com/news/articleView.html?idxno=213806
