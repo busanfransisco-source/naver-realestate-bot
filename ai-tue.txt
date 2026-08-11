@@ -1,31 +1,31 @@
 🤖 26년 8월 11일 화요일 AI 뉴스
 
-정부, 5조원 규모 반도체 신규 펀드 조성…메가 클러스터 구축에 속도낸다
-https://www.aitimes.com/news/articleView.html?idxno=213773
+독파모 4개 정예팀 모델, 에포크AI ‘주목할 만한 모델’ 등재
+https://www.aitimes.com/news/articleView.html?idxno=213801
 
-우주항공청, 17개사와 'K-우주 데이터센터' 구축 방안 논의
-https://www.aitimes.com/news/articleView.html?idxno=213770
+SKT, 독자 모델 'A.X K2'로 수학올림피아드 금메달·'AIME' 글로벌 1위
+https://www.aitimes.com/news/articleView.html?idxno=213794
 
-‘공룡쟁투’ 화석, AI 영화로 재탄생…“8000만년 전 자연사, 3D 데이터로 복원”
-https://www.aitimes.com/news/articleView.html?idxno=213769
+삼성SDS·엘리스그룹, '국가 AI 연구용 GPU 컴퓨팅 서비스' 책임진다
+https://www.aitimes.com/news/articleView.html?idxno=213792
 
-[게시판] 클리카, AI 경량화로 '글로벌 국방 AI 챌린지' 선정 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=213767
+스틸컷, 매쉬업벤처스서 시드 투자 유치..."AI로 딥페이크 원천 차단"
+https://www.aitimes.com/news/articleView.html?idxno=213790
 
-'동시 소통' AI 에이전트 등장…단일 '클로드 오퍼스 4.8' 성적 뛰어넘었다
-https://www.aitimes.com/news/articleView.html?idxno=213766
+이스트시큐리티, K-엑사원 결합한 '알약 에이전틱 EDR' 출시
+https://www.aitimes.com/news/articleView.html?idxno=213789
 
-[게시판] 나우로보틱스, 과기부 ‘피지컬 AI’ 실증사업 선정 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=213765
+벙커키즈, AI 캐릭터 채팅 서비스 ‘위프’로 150억 투자 유치
+https://www.aitimes.com/news/articleView.html?idxno=213787
 
-엔비디아, 전이중 음성 AI에 도구 호출 이식... '네모트론랩스 보이스챗 11B' 오픈 공개
-https://www.aitimes.com/news/articleView.html?idxno=213764
+오픈AI, ‘GPT-5.6-사이버’ 공개...보안 프로그램 ‘데이브레이크’ 확장
+https://www.aitimes.com/news/articleView.html?idxno=213786
 
-[기고] 한국딥러닝 "에이전틱 AI, 오답보다 위험한 ‘잘못된 실행’"
-https://www.aitimes.com/news/articleView.html?idxno=213761
+저커버그, 오픈소스 복귀 선언하며 폐쇄형 정조준..."증류도 허용해야"
+https://www.aitimes.com/news/articleView.html?idxno=213785
 
-리퀴드 AI, 라즈베리 파이서 구동되는 소형 에이전트 모델 'LFM2.5-2.6B' 공개
-https://www.aitimes.com/news/articleView.html?idxno=213760
+메타, 노트북서 구동되는 300억 매개변수 오픈 모델 '뮤즈 글리머' 출시
+https://www.aitimes.com/news/articleView.html?idxno=213784
 
-“실험장비·로봇·AI 갖춘 24시 자율실험실 구축”...과기부, K-문샷 AI 연구 가속
-https://www.aitimes.com/news/articleView.html?idxno=213759
+엔닷라이트, 피지컬AI 학습 ‘3D 데이터’ 생성 기술로 150억 투자 유치
+https://www.aitimes.com/news/articleView.html?idxno=213783
