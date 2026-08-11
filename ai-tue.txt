@@ -1,31 +1,31 @@
 🤖 26년 8월 11일 화요일 AI 뉴스
 
-독파모 4개 정예팀 모델, 에포크AI ‘주목할 만한 모델’ 등재
-https://www.aitimes.com/news/articleView.html?idxno=213801
+"AI 에이전트 위협 본격화"…미국 주요 보안주 일제히 급등
+https://www.aitimes.com/news/articleView.html?idxno=213817
 
-SKT, 독자 모델 'A.X K2'로 수학올림피아드 금메달·'AIME' 글로벌 1위
-https://www.aitimes.com/news/articleView.html?idxno=213794
+"AI가 석유·가스 생산 대폭 확대...친환경 배출 감축 효과 상쇄한다"
+https://www.aitimes.com/news/articleView.html?idxno=213816
 
-삼성SDS·엘리스그룹, '국가 AI 연구용 GPU 컴퓨팅 서비스' 책임진다
-https://www.aitimes.com/news/articleView.html?idxno=213792
+네이버벤처스, 앤트로픽에 간접 투자…‘클로드’ 활용 확대하나
+https://www.aitimes.com/news/articleView.html?idxno=213815
 
-엔비디아, 월가 손잡고 700조 AI 펀드 결성…"GPU를 금융자산으로"
-https://www.aitimes.com/news/articleView.html?idxno=213791
+[게시판] 신세계아이앤씨, CU 편의점에 AI 결제관리 솔루션 탑재 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=213814
 
-스틸컷, 매쉬업벤처스서 시드 투자 유치..."AI로 딥페이크 원천 차단"
-https://www.aitimes.com/news/articleView.html?idxno=213790
+오픈AI, '전력 거래 책임자' 채용…AI 데이터센터 에너지 리스크 직접 관리
+https://www.aitimes.com/news/articleView.html?idxno=213813
 
-이스트시큐리티, K-엑사원 결합한 '알약 에이전틱 EDR' 출시
-https://www.aitimes.com/news/articleView.html?idxno=213789
+캘리포니아, 미국 최초 'AI 사이버 방어 프로그램' 도입...핵심 기반 시설 보호 강화
+https://www.aitimes.com/news/articleView.html?idxno=213812
 
-벙커키즈, AI 캐릭터 채팅 서비스 ‘위프’로 150억 투자 유치
-https://www.aitimes.com/news/articleView.html?idxno=213787
+미 법원, 메타·빅테크 상대 'SNS 중독' 수천건 집단소송 허용
+https://www.aitimes.com/news/articleView.html?idxno=213810
 
-오픈AI, ‘GPT-5.6-사이버’ 공개...보안 프로그램 ‘데이브레이크’ 확장
-https://www.aitimes.com/news/articleView.html?idxno=213786
+모티프, 독파모 모델 ‘모티프 3’ 기술보고서 공개…챗봇 무료 체험도 가능
+https://www.aitimes.com/news/articleView.html?idxno=213808
 
-저커버그, 오픈소스 복귀 선언하며 폐쇄형 정조준..."증류도 허용해야"
-https://www.aitimes.com/news/articleView.html?idxno=213785
+중국 본토 첫 휴머노이드 로봇 상장...유니트리, 상하이 IPO 청약 경쟁률 8200대 1
+https://www.aitimes.com/news/articleView.html?idxno=213807
 
-메타, 노트북서 구동되는 300억 매개변수 오픈 모델 '뮤즈 글리머' 출시
-https://www.aitimes.com/news/articleView.html?idxno=213784
+인텔, AI 컴퓨팅 수요 폭발에 21조 유상증자…상장 이래 최대 규모
+https://www.aitimes.com/news/articleView.html?idxno=213806
