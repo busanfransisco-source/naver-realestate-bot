@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-08-11 23:53:16",
+  "updated_at_kst": "2026-08-12 00:43:26",
   "source": "https://news.naver.com/breakingnews/section/101/260",
-  "headline": "26년 8월 11일 화요일 부동산 주요뉴스",
+  "headline": "26년 8월 12일 수요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "정부 \"그린벨트 풀어서라도 공급\" vs 서울시 \"녹지는 지켜야\"",
+      "url": "https://n.news.naver.com/mnews/article/629/0000523676"
+    },
     {
       "title": "[로터리]죽느냐 사느냐... AI가 문제로다",
       "url": "https://n.news.naver.com/mnews/article/011/0004650802"
@@ -38,10 +42,6 @@
     {
       "title": "동영상뉴스재생시간02:48",
       "url": "https://n.news.naver.com/mnews/article/422/0000894751"
-    },
-    {
-      "title": "박지원 \"李 정부 부동산 정책 잘하고 있어…결정은 신중히\"",
-      "url": "https://n.news.naver.com/mnews/article/003/0014121423"
     }
   ]
 }
