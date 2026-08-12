@@ -1,31 +1,31 @@
 🤖 26년 8월 12일 수요일 AI 뉴스
 
+"구직자 절반 자소서와 실제 역량 달라"...무하유, AI 채용 분석 결과 발표
+https://www.aitimes.com/news/articleView.html?idxno=213871
+
+[게시판] 피씨엔, ‘모두의 AI 실험실’ 온라인 플랫폼 운영 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=213870
+
+AI 슬립테크 스타트업 비브레스트, AI 중심 경영진 전면 개편
+https://www.aitimes.com/news/articleView.html?idxno=213869
+
+웹케시, B2B 바이브 코딩 플랫폼 'AXPort' 출시..."기업 보안 정책 반영"
+https://www.aitimes.com/news/articleView.html?idxno=213868
+
+[게시판] 한컴, 프랑스 소방 로봇에 ‘에이전틱 OS’ 탑재 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=213867
+
+구글, '제미나이' 인기에 국내 네이버 사용자 수 넘어..."AI 확장 결실"
+https://www.aitimes.com/news/articleView.html?idxno=213866
+
+영국·웨일스 법원, 메타 스마트 안경 반입·착용 전면 금지..."몰래 촬영 우려"
+https://www.aitimes.com/news/articleView.html?idxno=213865
+
+LG CNS, 동아쏘시오그룹에 'AI 신약개발 플랫폼' 구축
+https://www.aitimes.com/news/articleView.html?idxno=213864
+
 스포티파이, ‘AI 페르소나’ 라벨 도입…알고리즘 추천서 제외
 https://www.aitimes.com/news/articleView.html?idxno=213863
 
 과기부, AI 신약개발 혁신연구거점 출범…"AI 실험 자동화 구조 마련"
 https://www.aitimes.com/news/articleView.html?idxno=213862
-
-앤트로픽, IPO 앞두고 투자자 신뢰 구축 총력전...시장 우려 정면 돌파
-https://www.aitimes.com/news/articleView.html?idxno=213860
-
-유럽 독자 인프라 확장 나선 미스트랄, AI 플랫폼 사업자로 도약
-https://www.aitimes.com/news/articleView.html?idxno=213858
-
-앤트로픽, 비트코인 채굴 업체 라이엇과 13조 규모 20년 컴퓨팅 계약
-https://www.aitimes.com/news/articleView.html?idxno=213857
-
-라이드플럭스, AI 자율주행 기술로 특허 100건 돌파
-https://www.aitimes.com/news/articleView.html?idxno=213855
-
-KAIST, 18일 글로벌 컨퍼런스서 'AI 외로움 측정 지표’ 제시
-https://www.aitimes.com/news/articleView.html?idxno=213853
-
-MS, 'MAI-이미지-2.6' 공개...아레나 '텍스트-이미지' 분야 2위 등극
-https://www.aitimes.com/news/articleView.html?idxno=213852
-
-바운드포, AI 토큰 지출 관리 서비스 '파레토' 출시
-https://www.aitimes.com/news/articleView.html?idxno=213850
-
-KT, 금융권 중심 AI 도입 확대…"'AX 플랫폼 컴퍼니' 전략 이어갈 것"
-https://www.aitimes.com/news/articleView.html?idxno=213843
