@@ -3,6 +3,9 @@
 [8월11일] AI 출시 전 가상 인간 100만명이 먼저 써본다…‘MatrAIx’ 등장
 https://www.aitimes.com/news/articleView.html?idxno=213824
 
+엑세스랩, 퓨리오사AI·퀄컴·모빌린트 탑재 저전력 AI 인프라 솔루션 선보인다
+https://www.aitimes.com/news/articleView.html?idxno=213823
+
 앤트로픽, '클로드' 생성 콘텐츠에 눈에 안 보이는 ‘투명 워터마크’ 도입
 https://www.aitimes.com/news/articleView.html?idxno=213821
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213815
 
 [게시판] 신세계아이앤씨, CU 편의점에 AI 결제관리 솔루션 탑재 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=213814
-
-오픈AI, '전력 거래 책임자' 채용…AI 데이터센터 에너지 리스크 직접 관리
-https://www.aitimes.com/news/articleView.html?idxno=213813
