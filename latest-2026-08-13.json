@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-08-13 08:08:45",
+  "updated_at_kst": "2026-08-13 08:26:10",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 13일 목요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "'실거주 할게요, 나가주세요' 전세입자 발동동…세제개편안 잇단 우려",
+      "url": "https://n.news.naver.com/mnews/article/243/0000101569"
+    },
+    {
+      "title": "“저소득층 여성청소년 120명 지원”…아이에스동서, ‘핑크박스’ 위생용품 지원사업 펼쳐",
+      "url": "https://n.news.naver.com/mnews/article/009/0005720355"
+    },
     {
       "title": "강남구, 재건축 설계자 선정 절차 보완…\"사업 지연 최소화\"",
       "url": "https://n.news.naver.com/mnews/article/001/0016248343"
@@ -34,14 +42,6 @@
     {
       "title": "[밀려나는 세입자③] 하다하다 ‘버스하우스’까지?…대책 없는 전세난에 세입자 ‘혼란’",
       "url": "https://n.news.naver.com/mnews/article/119/0003121236"
-    },
-    {
-      "title": "“주택 대신 AI로”…건설사, 100조 데이터센터 시장 ‘정조준’",
-      "url": "https://n.news.naver.com/mnews/article/119/0003121229"
-    },
-    {
-      "title": "대통령 지적한 '코레일 앱', 통합 새 버전 들여다보니…",
-      "url": "https://n.news.naver.com/mnews/article/648/0000049783"
     }
   ]
 }
