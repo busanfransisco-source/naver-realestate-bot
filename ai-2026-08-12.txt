@@ -1,5 +1,14 @@
 🤖 26년 8월 12일 수요일 AI 뉴스
 
+KT, 금융권 중심 AI 도입 확대…"'AX 플랫폼 컴퍼니' 전략 이어갈 것"
+https://www.aitimes.com/news/articleView.html?idxno=213843
+
+발표 임박한 독파모 2차 평가..."평가 방식·비교 기준 보완 필요"
+https://www.aitimes.com/news/articleView.html?idxno=213840
+
+KAIST, AI로 온라인 여론 조작 계정 2만4000개 추적... "한국 비난으로 갈등 증폭"
+https://www.aitimes.com/news/articleView.html?idxno=213839
+
 S2W “빅데이터 분석으로 아프리카 사이버범죄 분석…AI 공격 절반 이상”
 https://www.aitimes.com/news/articleView.html?idxno=213837
 
@@ -9,6 +18,9 @@ https://www.aitimes.com/news/articleView.html?idxno=213835
 플래티어, ‘대화로 상품 검색하는 AI 검색 채널’ 패션 커머스 플랫폼에 탑재
 https://www.aitimes.com/news/articleView.html?idxno=213833
 
+오픈AI '사업 핵심' 라이트캡 사임...IPO 앞두고 고위급 이탈 잇따라
+https://www.aitimes.com/news/articleView.html?idxno=213832
+
 제미나이 앱, 월간 사용자 10억명 돌파..."구글 역사상 역대 최단 기록"
 https://www.aitimes.com/news/articleView.html?idxno=213830
 
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213829
 
 2050년 세계 전력 61% 태양광 전망…60개 연구 분석 결과
 https://www.aitimes.com/news/articleView.html?idxno=213827
-
-EU, 폭염·가뭄에도 전력수급 안정…태양광이 낮 전력가격 방어
-https://www.aitimes.com/news/articleView.html?idxno=213826
-
-정부, 기업 재생에너지 PPA 망이용료 지원 확대…중소·중견 최대 7년
-https://www.aitimes.com/news/articleView.html?idxno=213825
-
-[8월11일] AI 출시 전 가상 인간 100만명이 먼저 써본다…‘MatrAIx’ 등장
-https://www.aitimes.com/news/articleView.html?idxno=213824
-
-엑세스랩, 퓨리오사AI·퀄컴·모빌린트 탑재 저전력 AI 인프라 솔루션 선보인다
-https://www.aitimes.com/news/articleView.html?idxno=213823
