@@ -58,6 +58,9 @@ def fetch_real_estate_headlines(url, max_articles=10):
         if not title:
             continue
 
+        if "동영상" in title:
+            continue
+
         if href.startswith("/"):
             href = "https://news.naver.com" + href
 
