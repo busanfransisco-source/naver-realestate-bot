@@ -33,3 +33,14 @@ GitHub Actions(깃허브의 자동 실행 기능)가 매일 스스로 데이터�
 - **cron-job.org 계정**: busanfransisco 이메일로 가입됨. 무료 요금제로 정해진 시각에 원하는 URL을 자동 호출할 수 있다(정시 알람 서비스). 다른 자동화에서도 "매일/매주 정확한 시각에 어떤 API를 호출해야 한다"는 상황이면 재사용 가능.
 - **GitHub Fine-grained Personal Access Token 발급 방법**: github.com/settings/tokens?type=beta → Generate new token → Resource owner와 대상 저장소(예: naver-realestate-bot) 지정 → Repository permissions에서 "Actions: Read and write" 선택 → 생성. 토큰 값은 생성 직후 딱 한 번만 보여지므로 그 자리에서 바로 복사해서 안전한 곳(예: 비밀번호 관리자)에 저장해야 한다.
 - **핵심 재사용 패턴 — "외부 알람이 GitHub API를 정시에 호출"**: GitHub 자체 예약(schedule)은 계정에 따라 몇 시간씩 늦게 실행될 수 있다. 정확한 시각 실행이 필요하면, cron-job.org 같은 외부 알람 서비스가 GitHub REST API의 workflow_dispatch 엔드포인트(POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches)를 직접 호출하도록 설정한다. 헤더에 Authorization: Bearer <PAT>, Accept: application/vnd.github+json, Content-Type: application/json을 넣고 본문에 {"ref":"main"}을 넣으면 된다. 이 방식은 다른 어떤 GitHub 저장소/자동화에도 그대로 적용 가능.
+
+## 국토부 실거래가 파이프라인 (2026-08-12 추가)
+
+신고가 단지 탐지를 위한 기초 데이터 수집. 부동산원 주간 지수(trend.txt)와는 별개로, 국토교통부 아파트매매 **개별 실거래** 데이터를 모은다.
+
+- **범위**: 서울 25개구 + 6대 광역시 + 세종 (`molit_regions.py`), 최근 3년치.
+- **API**: data.go.kr "국토교통부_아파트 매매 실거래자료"(RTMSDataSvcAptTradeDev). `MOLIT_KEY` secret 필요 (RONE_KEY와 별개, GitHub Actions secrets에 등록해야 함).
+- **저장 구조**: `data/trades/{법정동코드}/{계약월}.json`(raw, git 커밋됨) → `trades.db`(SQLite, 매 실행마다 raw로부터 재구성, git에는 안 올림 — `.gitignore`).
+- **진행 상황 체크포인트**: `molit_backfill_state.json` — 트래픽 한도(하루 기본 1,000회) 때문에 과거분은 하루에 다 못 받고 여러 날에 걸쳐 나눠 받는다. 이 파일이 어디까지 받았는지 기록해서 다음 실행에서 이어받는다.
+- **실행**: `.github/workflows/molit-trade.yml`, 매일 06:10 KST 1회만 실행(다른 브리핑 워크플로우의 다중 백업 cron과는 분리 — 안 그러면 API 호출이 하루에 여러 번 중복돼서 한도를 낭비함).
+- **신고가 판별 로직은 아직 없음.** 이 파이프라인은 데이터 수집까지만 담당하고, "역대 최고가 갱신 여부 판단 → 커뮤니티 게시" 단계는 별도로 설계 예정.
