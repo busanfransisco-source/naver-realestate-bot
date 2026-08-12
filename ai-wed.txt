@@ -1,31 +1,31 @@
 🤖 26년 8월 12일 수요일 AI 뉴스
 
+S2W “빅데이터 분석으로 아프리카 사이버범죄 분석…AI 공격 절반 이상”
+https://www.aitimes.com/news/articleView.html?idxno=213837
+
+에이아이웍스, 캄보디아 크메르어 민원용 챗봇 구축…“‘책임 있는 AI’ 사례”
+https://www.aitimes.com/news/articleView.html?idxno=213835
+
+플래티어, ‘대화로 상품 검색하는 AI 검색 채널’ 패션 커머스 플랫폼에 탑재
+https://www.aitimes.com/news/articleView.html?idxno=213833
+
+제미나이 앱, 월간 사용자 10억명 돌파..."구글 역사상 역대 최단 기록"
+https://www.aitimes.com/news/articleView.html?idxno=213830
+
+엔비디아, '1조 매개변수' 모델 개발 박차...“GPU 수요·생태계 확장 노려”
+https://www.aitimes.com/news/articleView.html?idxno=213829
+
+2050년 세계 전력 61% 태양광 전망…60개 연구 분석 결과
+https://www.aitimes.com/news/articleView.html?idxno=213827
+
+EU, 폭염·가뭄에도 전력수급 안정…태양광이 낮 전력가격 방어
+https://www.aitimes.com/news/articleView.html?idxno=213826
+
+정부, 기업 재생에너지 PPA 망이용료 지원 확대…중소·중견 최대 7년
+https://www.aitimes.com/news/articleView.html?idxno=213825
+
 [8월11일] AI 출시 전 가상 인간 100만명이 먼저 써본다…‘MatrAIx’ 등장
 https://www.aitimes.com/news/articleView.html?idxno=213824
 
 엑세스랩, 퓨리오사AI·퀄컴·모빌린트 탑재 저전력 AI 인프라 솔루션 선보인다
 https://www.aitimes.com/news/articleView.html?idxno=213823
-
-앤트로픽, '클로드' 생성 콘텐츠에 눈에 안 보이는 ‘투명 워터마크’ 도입
-https://www.aitimes.com/news/articleView.html?idxno=213821
-
-가트너 "올해 AI 추론 지출 33조원 돌파 전망...최적화 투자도 증가"
-https://www.aitimes.com/news/articleView.html?idxno=213820
-
-[게시판] 모빌린트, 인텔리빅스와 한국도로공사 AI CCTV 사업 참여 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=213819
-
-기업 AI 비용 올해 '최저치'로 하락...글로벌 가격 경쟁에 중국 오픈소스까지
-https://www.aitimes.com/news/articleView.html?idxno=213818
-
-"AI 에이전트 위협 본격화"…미국 주요 보안주 일제히 급등
-https://www.aitimes.com/news/articleView.html?idxno=213817
-
-"AI가 석유·가스 생산 대폭 확대...친환경 배출 감축 효과 상쇄한다"
-https://www.aitimes.com/news/articleView.html?idxno=213816
-
-네이버벤처스, 앤트로픽에 간접 투자…‘클로드’ 활용 확대하나
-https://www.aitimes.com/news/articleView.html?idxno=213815
-
-[게시판] 신세계아이앤씨, CU 편의점에 AI 결제관리 솔루션 탑재 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=213814
