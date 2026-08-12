@@ -1,31 +1,31 @@
 🤖 26년 8월 12일 수요일 AI 뉴스
 
+스포티파이, ‘AI 페르소나’ 라벨 도입…알고리즘 추천서 제외
+https://www.aitimes.com/news/articleView.html?idxno=213863
+
+과기부, AI 신약개발 혁신연구거점 출범…"AI 실험 자동화 구조 마련"
+https://www.aitimes.com/news/articleView.html?idxno=213862
+
+앤트로픽, IPO 앞두고 투자자 신뢰 구축 총력전...시장 우려 정면 돌파
+https://www.aitimes.com/news/articleView.html?idxno=213860
+
+앤트로픽, 비트코인 채굴 업체 라이엇과 13조 규모 20년 컴퓨팅 계약
+https://www.aitimes.com/news/articleView.html?idxno=213857
+
+라이드플럭스, AI 자율주행 기술로 특허 100건 돌파
+https://www.aitimes.com/news/articleView.html?idxno=213855
+
+KAIST, 18일 글로벌 컨퍼런스서 'AI 외로움 측정 지표’ 제시
+https://www.aitimes.com/news/articleView.html?idxno=213853
+
+MS, 'MAI-이미지-2.6' 공개...아레나 '텍스트-이미지' 분야 2위 등극
+https://www.aitimes.com/news/articleView.html?idxno=213852
+
+바운드포, AI 토큰 지출 관리 서비스 '파레토' 출시
+https://www.aitimes.com/news/articleView.html?idxno=213850
+
 KT, 금융권 중심 AI 도입 확대…"'AX 플랫폼 컴퍼니' 전략 이어갈 것"
 https://www.aitimes.com/news/articleView.html?idxno=213843
 
-발표 임박한 독파모 2차 평가..."평가 방식·비교 기준 보완 필요"
-https://www.aitimes.com/news/articleView.html?idxno=213840
-
-KAIST, AI로 온라인 여론 조작 계정 2만4000개 추적... "한국 비난으로 갈등 증폭"
-https://www.aitimes.com/news/articleView.html?idxno=213839
-
-S2W “빅데이터 분석으로 아프리카 사이버범죄 분석…AI 공격 절반 이상”
-https://www.aitimes.com/news/articleView.html?idxno=213837
-
-에이아이웍스, 캄보디아 크메르어 민원용 챗봇 구축…“‘책임 있는 AI’ 사례”
-https://www.aitimes.com/news/articleView.html?idxno=213835
-
-플래티어, ‘대화로 상품 검색하는 AI 검색 채널’ 패션 커머스 플랫폼에 탑재
-https://www.aitimes.com/news/articleView.html?idxno=213833
-
-오픈AI '사업 핵심' 라이트캡 사임...IPO 앞두고 고위급 이탈 잇따라
-https://www.aitimes.com/news/articleView.html?idxno=213832
-
-제미나이 앱, 월간 사용자 10억명 돌파..."구글 역사상 역대 최단 기록"
-https://www.aitimes.com/news/articleView.html?idxno=213830
-
-엔비디아, '1조 매개변수' 모델 개발 박차...“GPU 수요·생태계 확장 노려”
-https://www.aitimes.com/news/articleView.html?idxno=213829
-
-2050년 세계 전력 61% 태양광 전망…60개 연구 분석 결과
-https://www.aitimes.com/news/articleView.html?idxno=213827
+오픈AI, 리눅스 전용 챗GPT 데스크톱 앱 출시... 주요 OS 라인업 완성
+https://www.aitimes.com/news/articleView.html?idxno=213841
