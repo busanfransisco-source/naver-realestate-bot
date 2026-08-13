@@ -41,12 +41,12 @@ SECTIONS = [
     ("world", "🌏 세계 뉴스", "world"),
     ("finance", "🏦 금융 뉴스", "finance"),
     ("ai", "🤖 AI 뉴스", "ai"),
-    ("analysis1", "📰 부동산 정책 분석 1", "analysis1"),
-    ("analysis2", "📰 부동산 정책 분석 2", "analysis2"),
-    ("analysis3", "📰 부동산 정책 분석 3", "analysis3"),
-    ("analysis4", "📰 부동산 정책 분석 4", "analysis4"),
-    ("analysis5", "📰 부동산 정책 분석 5", "analysis5"),
-    ("analysis6", "📰 부동산 정책 분석 6", "analysis6"),
+    ("analysis1", "📰 비밀노트 정책 분석", "analysis1"),
+    ("analysis2", "📰 부알남 정책분석", "analysis2"),
+    ("analysis3", "📰 대한민국 정책분석", "analysis3"),
+    ("analysis4", "📰 여러분의 부동산 정책분석", "analysis4"),
+    ("analysis5", "📰 월부길 정책분석", "analysis5"),
+    ("analysis6", "📰 부부투 정책분석", "analysis6"),
 ]
 
 
