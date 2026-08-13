@@ -1,5 +1,17 @@
 🤖 26년 8월 13일 목요일 AI 뉴스
 
+마에스트로포렌식, ‘AI 스마트 안경·생성 AI 범죄’ 수사 도구 공개
+https://www.aitimes.com/news/articleView.html?idxno=213923
+
+브릴스, 로봇 플랫폼으로 코스닥 도전 "레고처럼 조립하는 모듈화가 핵심"
+https://www.aitimes.com/news/articleView.html?idxno=213922
+
+[게시판] 딥핑소스, 국내 자동차 전시장 대상 AI 영상분석 솔루션 적용 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=213921
+
+오픈AI, ‘AI 에이전트 지식 노동’ 전 직군으로 확대…“법무 분야 활용도 대폭 확대”
+https://www.aitimes.com/news/articleView.html?idxno=213920
+
 유럽 서점가 덮친 ‘5000권 주문 미스터리’...“AI 학습용 책 수집 의혹 확산”
 https://www.aitimes.com/news/articleView.html?idxno=213918
 
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213914
 
 구글, '픽셀 11' 공개…'제미나이 인텔리전스'로 애플과 승부
 https://www.aitimes.com/news/articleView.html?idxno=213913
-
-[게시판] 에어빌리티, AI 드론으로 우주청 ‘스케일업 팁스’ 선정 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=213912
-
-아크릴, 'OCP 코리아 테크 데이' 기조강연서 '주권형 AX' 청사진 제시
-https://www.aitimes.com/news/articleView.html?idxno=213910
-
-OCP 재단이 주최하는 '2026 OCP 코리아 테크 데이', 21일 코엑스서 개최
-https://www.aitimes.com/news/articleView.html?idxno=213908
-
-BHSN, 계약 AI 플랫폼 한컴오피스 탑재..."한컴 문서에서 계약서 검토까지"
-https://www.aitimes.com/news/articleView.html?idxno=213907
