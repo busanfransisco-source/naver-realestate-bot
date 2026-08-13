@@ -1,5 +1,11 @@
 🤖 26년 8월 13일 목요일 AI 뉴스
 
+정부, 효율 35% 탠덤 태양전지 상용화 추진
+https://www.aitimes.com/news/articleView.html?idxno=213879
+
+세계 전력 10% 태양광 시대…배터리가 저녁 전력시장 넓힌다
+https://www.aitimes.com/news/articleView.html?idxno=213878
+
 "구직자 절반 자소서와 실제 역량 달라"...무하유, AI 채용 분석 결과 발표
 https://www.aitimes.com/news/articleView.html?idxno=213871
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213865
 
 LG CNS, 동아쏘시오그룹에 'AI 신약개발 플랫폼' 구축
 https://www.aitimes.com/news/articleView.html?idxno=213864
-
-스포티파이, ‘AI 페르소나’ 라벨 도입…알고리즘 추천서 제외
-https://www.aitimes.com/news/articleView.html?idxno=213863
-
-과기부, AI 신약개발 혁신연구거점 출범…"AI 실험 자동화 구조 마련"
-https://www.aitimes.com/news/articleView.html?idxno=213862
