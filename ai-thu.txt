@@ -1,31 +1,31 @@
 🤖 26년 8월 13일 목요일 AI 뉴스
 
-모티프, 독파모 후발주자 한계 넘었다…AAII 점수 국내 1위 기록
-https://www.aitimes.com/news/articleView.html?idxno=213896
+케빈 웨일 전 오픈AI 부사장, AI 과학 스타트업 창립…몸값 1조 목표
+https://www.aitimes.com/news/articleView.html?idxno=213917
 
-YMTC, 글로벌 낸드 출하량 첫 3위 진입...미국 규제 속 '저가 SSD'로 승부
-https://www.aitimes.com/news/articleView.html?idxno=213893
+독일 시민단체, 메타 스마트 안경 판매업체 형사 고발..."일반 안경과 구분 불가"
+https://www.aitimes.com/news/articleView.html?idxno=213915
 
-"알트먼이 사망했다?"...구글 검색 오류 해프닝, 원인은 '위키피디아 훼손'
-https://www.aitimes.com/news/articleView.html?idxno=213892
+'큐원' 만든 린쥔양, AI 에이전트 스타트업 출범…대규모 투자 유치 성공
+https://www.aitimes.com/news/articleView.html?idxno=213914
 
-업스테이지 ‘솔라 프로 4’, AAII·아레나 지표로 에이전트 성능 입증
-https://www.aitimes.com/news/articleView.html?idxno=213888
+구글, '픽셀 11' 공개…'제미나이 인텔리전스'로 애플과 승부
+https://www.aitimes.com/news/articleView.html?idxno=213913
 
-삼성SDS, 중앙부처 9곳에 AI 협업 솔루션 '브리티웍스' 공급
-https://www.aitimes.com/news/articleView.html?idxno=213887
+[게시판] 에어빌리티, AI 드론으로 우주청 ‘스케일업 팁스’ 선정 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=213912
 
-그래파이, AI 데이터 인프라로 170억 시리즈 A 투자 유치
-https://www.aitimes.com/news/articleView.html?idxno=213886
+아크릴, 'OCP 코리아 테크 데이' 기조강연서 '주권형 AX' 청사진 제시
+https://www.aitimes.com/news/articleView.html?idxno=213910
 
-그록 4.6, '세계 3위' 등극…프론티어 모델 경쟁 본격 합류
-https://www.aitimes.com/news/articleView.html?idxno=213882
+OCP 재단이 주최하는 '2026 OCP 코리아 테크 데이', 21일 코엑스서 개최
+https://www.aitimes.com/news/articleView.html?idxno=213908
 
-오픈AI·엔비디아, 국내 첫 공동 밋업 개최...‘AI 에이전트’ 생태계 확장 모색
-https://www.aitimes.com/news/articleView.html?idxno=213881
+BHSN, 계약 AI 플랫폼 한컴오피스 탑재..."한컴 문서에서 계약서 검토까지"
+https://www.aitimes.com/news/articleView.html?idxno=213907
 
-정부, 효율 35% 탠덤 태양전지 상용화 추진
-https://www.aitimes.com/news/articleView.html?idxno=213879
+네이버, '파력 발전' AI데이터센터 개발 판탈라사에 투자
+https://www.aitimes.com/news/articleView.html?idxno=213905
 
-세계 전력 10% 태양광 시대…배터리가 저녁 전력시장 넓힌다
-https://www.aitimes.com/news/articleView.html?idxno=213878
+마스오토, 'AME 2026'서 AI 자율주행 트럭 실물 최초 공개
+https://www.aitimes.com/news/articleView.html?idxno=213904
