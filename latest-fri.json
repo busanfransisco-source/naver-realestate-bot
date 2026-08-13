@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-08-14 07:09:58",
+  "updated_at_kst": "2026-08-14 07:19:54",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 14일 금요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "\"이 위치에 이 정도 땅\" 靑 경제수석, 용산어린이정원 활용 가능성 언급",
+      "url": "https://n.news.naver.com/mnews/article/469/0000947984"
+    },
     {
       "title": "20년 장기임대 나온다…전세보증금 안심신탁도 도입",
       "url": "https://n.news.naver.com/mnews/article/011/0004651695"
@@ -38,10 +42,6 @@
     {
       "title": "‘다주택자 취급’ 논란 부부 공동명의…지역·거주 여부·집값 따라 유불리 달라[Pick코노미]",
       "url": "https://n.news.naver.com/mnews/article/011/0004651681"
-    },
-    {
-      "title": "이제 '로또 줍줍' 사라지나…정부 '파격' 카드에 청약족 '술렁' [돈앤톡]",
-      "url": "https://n.news.naver.com/mnews/article/015/0005320795"
     }
   ]
 }
