@@ -1,5 +1,11 @@
 🤖 26년 8월 13일 목요일 AI 뉴스
 
+모티프, 독파모 후발주자 한계 넘었다…AAII 점수 국내 1위 기록
+https://www.aitimes.com/news/articleView.html?idxno=213896
+
+YMTC, 글로벌 낸드 출하량 첫 3위 진입...미국 규제 속 '저가 SSD'로 승부
+https://www.aitimes.com/news/articleView.html?idxno=213893
+
 "알트먼이 사망했다?"...구글 검색 오류 해프닝, 원인은 '위키피디아 훼손'
 https://www.aitimes.com/news/articleView.html?idxno=213892
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213879
 
 세계 전력 10% 태양광 시대…배터리가 저녁 전력시장 넓힌다
 https://www.aitimes.com/news/articleView.html?idxno=213878
-
-테슬라, 텍사스에 14조 규모 태양광 제조공장 검토…2029년 가동 목표
-https://www.aitimes.com/news/articleView.html?idxno=213877
-
-"구직자 절반 자소서와 실제 역량 달라"...무하유, AI 채용 분석 결과 발표
-https://www.aitimes.com/news/articleView.html?idxno=213871
