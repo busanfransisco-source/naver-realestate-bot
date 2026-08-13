@@ -51,6 +51,9 @@ jobs:
       - name: Fetch realestate news
         run: python naver_realestate_fetch.py
 
+      - name: Fetch realestate policy analysis candidates
+        run: python naver_realestate_analysis_fetch.py || echo "analysis candidates failed"
+
       - name: Fetch daum short news
         run: python daum_news_fetch.py > shortnews-debug.log 2>&1 || true; tail -20 shortnews-debug.log
 
@@ -85,6 +88,7 @@ jobs:
           git add subs.txt subs-*.txt trend.txt trend-*.txt rone-cache.json || true
           git add fuelfx.txt fuelfx-*.txt metalcoin.txt metalcoin-*.txt books.txt books-*.txt fx-cache.json || true
           git add weather.txt weather-*.txt fortune.txt fortune-*.txt realestate.txt realestate-*.txt latest.json latest-*.json index.html hub.html briefing.html last-refresh.txt
+          git add realestate-analysis-candidates.json || true
           git commit -m "Manual briefing refresh" --allow-empty
           git pull --rebase origin main
           git push
