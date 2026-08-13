@@ -3,6 +3,9 @@
 케빈 웨일 전 오픈AI 부사장, AI 과학 스타트업 창립…몸값 1조 목표
 https://www.aitimes.com/news/articleView.html?idxno=213917
 
+실무 분석 에이전트 벤치마크 ‘AA-애널리스트에이전트’ 공개…'클로드 오퍼스 5' 1위
+https://www.aitimes.com/news/articleView.html?idxno=213916
+
 독일 시민단체, 메타 스마트 안경 판매업체 형사 고발..."일반 안경과 구분 불가"
 https://www.aitimes.com/news/articleView.html?idxno=213915
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213907
 
 네이버, '파력 발전' AI데이터센터 개발 판탈라사에 투자
 https://www.aitimes.com/news/articleView.html?idxno=213905
-
-마스오토, 'AME 2026'서 AI 자율주행 트럭 실물 최초 공개
-https://www.aitimes.com/news/articleView.html?idxno=213904
