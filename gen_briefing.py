@@ -23,6 +23,8 @@ def read_text(path):
         with open(path, "r", encoding="utf-8") as f:
             return f.read().strip()
     except FileNotFoundError:
+        if path.startswith("analysis"):
+            return "(오늘의 분석이 아직 준비되지 않았습니다)"
         return f"(파일을 찾을 수 없습니다: {path})"
 
 
@@ -39,6 +41,12 @@ SECTIONS = [
     ("world", "🌏 세계 뉴스", "world"),
     ("finance", "🏦 금융 뉴스", "finance"),
     ("ai", "🤖 AI 뉴스", "ai"),
+    ("analysis1", "📰 부동산 정책 분석 1", "analysis1"),
+    ("analysis2", "📰 부동산 정책 분석 2", "analysis2"),
+    ("analysis3", "📰 부동산 정책 분석 3", "analysis3"),
+    ("analysis4", "📰 부동산 정책 분석 4", "analysis4"),
+    ("analysis5", "📰 부동산 정책 분석 5", "analysis5"),
+    ("analysis6", "📰 부동산 정책 분석 6", "analysis6"),
 ]
 
 
