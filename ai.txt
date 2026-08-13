@@ -1,5 +1,8 @@
 🤖 26년 8월 14일 금요일 AI 뉴스
 
+구글, 가성비 모델 '제미나이 3.7 플래시' 공개… API 50% 파격 할인
+https://www.aitimes.com/news/articleView.html?idxno=213924
+
 마에스트로포렌식, ‘AI 스마트 안경·생성 AI 범죄’ 수사 도구 공개
 https://www.aitimes.com/news/articleView.html?idxno=213923
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213915
 
 '큐원' 만든 린쥔양, AI 에이전트 스타트업 출범…대규모 투자 유치 성공
 https://www.aitimes.com/news/articleView.html?idxno=213914
-
-구글, '픽셀 11' 공개…'제미나이 인텔리전스'로 애플과 승부
-https://www.aitimes.com/news/articleView.html?idxno=213913
