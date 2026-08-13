@@ -1,5 +1,8 @@
 🤖 26년 8월 13일 목요일 AI 뉴스
 
+유럽 서점가 덮친 ‘5000권 주문 미스터리’...“AI 학습용 책 수집 의혹 확산”
+https://www.aitimes.com/news/articleView.html?idxno=213918
+
 케빈 웨일 전 오픈AI 부사장, AI 과학 스타트업 창립…몸값 1조 목표
 https://www.aitimes.com/news/articleView.html?idxno=213917
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213908
 
 BHSN, 계약 AI 플랫폼 한컴오피스 탑재..."한컴 문서에서 계약서 검토까지"
 https://www.aitimes.com/news/articleView.html?idxno=213907
-
-네이버, '파력 발전' AI데이터센터 개발 판탈라사에 투자
-https://www.aitimes.com/news/articleView.html?idxno=213905
