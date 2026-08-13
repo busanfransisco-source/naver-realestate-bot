@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-08-14 05:02:04",
+  "updated_at_kst": "2026-08-14 05:29:39",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 14일 금요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "\"닥치고 공급\"…23만가구 속도전, 집값 잡을까 자극할까",
+      "url": "https://n.news.naver.com/mnews/article/008/0005400021"
+    },
+    {
+      "title": "68→37개월로 줄인다는데…법안 줄줄이 대기 '공급 속도전' 변수",
+      "url": "https://n.news.naver.com/mnews/article/421/0009113419"
+    },
     {
       "title": "그린벨트 풀고 빨라야 10년…당장 1~2년뒤 고비 온다",
       "url": "https://n.news.naver.com/mnews/article/025/0003544369"
@@ -34,14 +42,6 @@
     {
       "title": "‘소형 빌라-오피스텔 주택 수 제외’ 2028년까지 연장",
       "url": "https://n.news.naver.com/mnews/article/020/0003740844"
-    },
-    {
-      "title": "재개발-재건축 이주비 대출한도 30% 확대",
-      "url": "https://n.news.naver.com/mnews/article/020/0003740843"
-    },
-    {
-      "title": "남양주 2만1700채 ‘신도시급’… 연내 서울 2만채 후보지 추가",
-      "url": "https://n.news.naver.com/mnews/article/020/0003740842"
     }
   ]
 }
