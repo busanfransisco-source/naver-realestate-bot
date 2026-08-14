@@ -1,5 +1,11 @@
 🤖 26년 8월 15일 토요일 AI 뉴스
 
+[게시판] 원티드랩, AI 교육 성장 힘입어 17억 흑자전환 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=213980
+
+이스트소프트, 상반기 매출 607억..."AI 중심 역대 최대"
+https://www.aitimes.com/news/articleView.html?idxno=213979
+
 [게시판] 레티널, 중기부 팁스로 초경량 AI 글래스 광학 모듈 개발 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=213978
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213969
 
 퍼셉트, 'UX스튜디오 서울'로 '레드닷 디자인 어워드 2026' 최고상 수상
 https://www.aitimes.com/news/articleView.html?idxno=213968
-
-애플, 알리바바 손잡고 '중국 전용' 자체 AI 모델 개발...독자 생태계 구축 나서
-https://www.aitimes.com/news/articleView.html?idxno=213966
-
-스파크랩 "5억 AI 크레딧 제공 창업 지원 프로그램에 1500여명 몰려"
-https://www.aitimes.com/news/articleView.html?idxno=213965
