@@ -1,5 +1,11 @@
 🤖 26년 8월 15일 토요일 AI 뉴스
 
+"AI·로봇으로 미래 국방 혁신"...산업부-육군-현대차, 첨단기술 활용 MOU
+https://www.aitimes.com/news/articleView.html?idxno=213984
+
+GS칼텍스, OCP 코리아 테크 데이서 차세대 데이터센터용 액체냉각기술 선보인다
+https://www.aitimes.com/news/articleView.html?idxno=213983
+
 [게시판] 원티드랩, AI 교육 성장 힘입어 17억 흑자전환 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=213980
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213972
 
 MS, 개인·기업용 코파일럿 통합…‘슈퍼 앱’으로 재탄생
 https://www.aitimes.com/news/articleView.html?idxno=213970
-
-[기고] 임정근 BHSN 대표 "중소 기업에 필요한 법률 AI의 조건"
-https://www.aitimes.com/news/articleView.html?idxno=213969
-
-퍼셉트, 'UX스튜디오 서울'로 '레드닷 디자인 어워드 2026' 최고상 수상
-https://www.aitimes.com/news/articleView.html?idxno=213968
