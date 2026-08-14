@@ -11,6 +11,7 @@ weather-{요일}.txt / fortune-{요일}.txt / realestate-{요일}.txt 를 읽어
 
 import html
 import json
+import re
 from datetime import datetime, timezone, timedelta
 
 KST = timezone(timedelta(hours=9))
@@ -26,6 +27,18 @@ def read_text(path):
         if path.startswith("analysis"):
             return "(오늘의 분석이 아직 준비되지 않았습니다)"
         return f"(파일을 찾을 수 없습니다: {path})"
+
+
+def is_fresh_analysis(content, today):
+    """analysis 파일 안에 적힌 날짜가 오늘 날짜와 일치하는지 확인 (방마다 날짜 형식이 달라 여러 패턴을 시도)"""
+    first_lines = "\n".join(content.split("\n")[:2])
+    m = re.search(r"(\d{4})[-.](\d{1,2})[-.](\d{1,2})", first_lines)
+    if not m:
+        m = re.search(r"(\d{4})년\s*(\d{1,2})월\s*(\d{1,2})일", first_lines)
+    if not m:
+        return False
+    y, mo, d = int(m.group(1)), int(m.group(2)), int(m.group(3))
+    return (y, mo, d) == (today.year, today.month, today.day)
 
 
 SECTIONS = [
@@ -60,6 +73,8 @@ def build_html():
     section_blocks = []
     for key, label, fname_prefix in SECTIONS:
         content = read_text(f"{fname_prefix}-{weekday_en}.txt")
+        if key.startswith("analysis") and not is_fresh_analysis(content, now):
+            content = "(오늘의 분석이 아직 준비되지 않았습니다)"
         content_json = json.dumps(content, ensure_ascii=False)
         content_escaped = html.escape(content)
         section_blocks.append(f"""
