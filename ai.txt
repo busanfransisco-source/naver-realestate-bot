@@ -1,31 +1,31 @@
 🤖 26년 8월 14일 금요일 AI 뉴스
 
-구글, 가성비 모델 '제미나이 3.7 플래시' 공개… API 50% 파격 할인
-https://www.aitimes.com/news/articleView.html?idxno=213924
+미 정부, '사이버 허가장' 발급…민간 기업에 해외 범죄조직 공격 허용
+https://www.aitimes.com/news/articleView.html?idxno=213952
 
-마에스트로포렌식, ‘AI 스마트 안경·생성 AI 범죄’ 수사 도구 공개
-https://www.aitimes.com/news/articleView.html?idxno=213923
+소크라 AI, 토플 학습 서비스로 인도·파키스탄·일본 진출
+https://www.aitimes.com/news/articleView.html?idxno=213951
 
-브릴스, 로봇 플랫폼으로 코스닥 도전 "레고처럼 조립하는 모듈화가 핵심"
-https://www.aitimes.com/news/articleView.html?idxno=213922
+씨이랩, ‘AI 인프라’ 매출 187% 증가…“'GPU 전문 인력 확대' 전략 통했다”
+https://www.aitimes.com/news/articleView.html?idxno=213950
 
-[게시판] 딥핑소스, 국내 자동차 전시장 대상 AI 영상분석 솔루션 적용 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=213921
+앤트로픽, 데카르트 AI 8조 규모 인수 추진…'클로드' 인프라 강화
+https://www.aitimes.com/news/articleView.html?idxno=213949
 
-오픈AI, ‘AI 에이전트 지식 노동’ 전 직군으로 확대…“법무 분야 활용도 대폭 확대”
-https://www.aitimes.com/news/articleView.html?idxno=213920
+데이원컴퍼니 “AX 사업 본격화…기업 현장 직접 투입 ‘FDE’ 전략”
+https://www.aitimes.com/news/articleView.html?idxno=213948
 
-유럽 서점가 덮친 ‘5000권 주문 미스터리’...“AI 학습용 책 수집 의혹 확산”
-https://www.aitimes.com/news/articleView.html?idxno=213918
+한컴, 상반기 AI 매출 135억 달성...에이전틱 OS 베타 3분기 공개
+https://www.aitimes.com/news/articleView.html?idxno=213945
 
-케빈 웨일 전 오픈AI 부사장, AI 과학 스타트업 창립…몸값 1조 목표
-https://www.aitimes.com/news/articleView.html?idxno=213917
+딥엑스, 국산 NPU 'DX-M1' 양산 1년 만에 184억 수주
+https://www.aitimes.com/news/articleView.html?idxno=213943
 
-실무 분석 에이전트 벤치마크 ‘AA-애널리스트에이전트’ 공개…'클로드 오퍼스 5' 1위
-https://www.aitimes.com/news/articleView.html?idxno=213916
+오픈AI, 코덱스 활성 사용자 1500만명 돌파...3주 만에 500만 추가
+https://www.aitimes.com/news/articleView.html?idxno=213942
 
-독일 시민단체, 메타 스마트 안경 판매업체 형사 고발..."일반 안경과 구분 불가"
-https://www.aitimes.com/news/articleView.html?idxno=213915
+"나도 K-팝 스타"...이스트에이드, AI 스타일링 '미브'에 K팝 상품 출시
+https://www.aitimes.com/news/articleView.html?idxno=213941
 
-'큐원' 만든 린쥔양, AI 에이전트 스타트업 출범…대규모 투자 유치 성공
-https://www.aitimes.com/news/articleView.html?idxno=213914
+딥시크, V4 모델 API 가격 최대 1100% 인상...혼잡 시간대 2배 부과
+https://www.aitimes.com/news/articleView.html?idxno=213940
