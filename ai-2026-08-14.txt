@@ -1,31 +1,31 @@
 🤖 26년 8월 14일 금요일 AI 뉴스
 
-미 정부, '사이버 허가장' 발급…민간 기업에 해외 범죄조직 공격 허용
-https://www.aitimes.com/news/articleView.html?idxno=213952
+[게시판] 레티널, 중기부 팁스로 초경량 AI 글래스 광학 모듈 개발 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=213978
 
-소크라 AI, 토플 학습 서비스로 인도·파키스탄·일본 진출
-https://www.aitimes.com/news/articleView.html?idxno=213951
+“홀로그램 기술로 여성 독립운동가 재조명”...과기부, 15일부터 상설 전시관 개소
+https://www.aitimes.com/news/articleView.html?idxno=213975
 
-씨이랩, ‘AI 인프라’ 매출 187% 증가…“'GPU 전문 인력 확대' 전략 통했다”
-https://www.aitimes.com/news/articleView.html?idxno=213950
+지푸 AI 'GLM-5.3' 출시...'키미 K3' 코딩 성능 따라붙어
+https://www.aitimes.com/news/articleView.html?idxno=213974
 
-앤트로픽, 데카르트 AI 8조 규모 인수 추진…'클로드' 인프라 강화
-https://www.aitimes.com/news/articleView.html?idxno=213949
+애플, 차세대 시리 성능 강화 위해 언론사와 콘텐츠 라이선스 협상
+https://www.aitimes.com/news/articleView.html?idxno=213973
 
-데이원컴퍼니 “AX 사업 본격화…기업 현장 직접 투입 ‘FDE’ 전략”
-https://www.aitimes.com/news/articleView.html?idxno=213948
+솔트룩스, AI 기술 ‘로보틱스’로 확장…“데이터 수집 서비스로 8억 이상 매출 확보”
+https://www.aitimes.com/news/articleView.html?idxno=213972
 
-한컴, 상반기 AI 매출 135억 달성...에이전틱 OS 베타 3분기 공개
-https://www.aitimes.com/news/articleView.html?idxno=213945
+MS, 개인·기업용 코파일럿 통합…‘슈퍼 앱’으로 재탄생
+https://www.aitimes.com/news/articleView.html?idxno=213970
 
-딥엑스, 국산 NPU 'DX-M1' 양산 1년 만에 184억 수주
-https://www.aitimes.com/news/articleView.html?idxno=213943
+[기고] 임정근 BHSN 대표 "중소 기업에 필요한 법률 AI의 조건"
+https://www.aitimes.com/news/articleView.html?idxno=213969
 
-오픈AI, 코덱스 활성 사용자 1500만명 돌파...3주 만에 500만 추가
-https://www.aitimes.com/news/articleView.html?idxno=213942
+퍼셉트, 'UX스튜디오 서울'로 '레드닷 디자인 어워드 2026' 최고상 수상
+https://www.aitimes.com/news/articleView.html?idxno=213968
 
-"나도 K-팝 스타"...이스트에이드, AI 스타일링 '미브'에 K팝 상품 출시
-https://www.aitimes.com/news/articleView.html?idxno=213941
+애플, 알리바바 손잡고 '중국 전용' 자체 AI 모델 개발...독자 생태계 구축 나서
+https://www.aitimes.com/news/articleView.html?idxno=213966
 
-딥시크, V4 모델 API 가격 최대 1100% 인상...혼잡 시간대 2배 부과
-https://www.aitimes.com/news/articleView.html?idxno=213940
+스파크랩 "5억 AI 크레딧 제공 창업 지원 프로그램에 1500여명 몰려"
+https://www.aitimes.com/news/articleView.html?idxno=213965
