@@ -1,10 +1,19 @@
 🤖 26년 8월 15일 토요일 AI 뉴스
 
+앤트로픽, IPO 앞두고 첫 흑자 달성…2분기 매출 16.3조 돌파
+https://www.aitimes.com/news/articleView.html?idxno=213990
+
 "AI·로봇으로 미래 국방 혁신"...산업부-육군-현대차, 첨단기술 활용 MOU
 https://www.aitimes.com/news/articleView.html?idxno=213984
 
 GS칼텍스, OCP 코리아 테크 데이서 차세대 데이터센터용 액체냉각기술 선보인다
 https://www.aitimes.com/news/articleView.html?idxno=213983
+
+[내면 지도 그리기] 29 Inner Mapping: 나를 찾는 지도
+https://www.aitimes.com/news/articleView.html?idxno=213982
+
+[AI카툰] Bob, Senior IT guy - 밥, 거절을 모르는 남자
+https://www.aitimes.com/news/articleView.html?idxno=213981
 
 [게시판] 원티드랩, AI 교육 성장 힘입어 17억 흑자전환 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=213980
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213975
 
 지푸 AI 'GLM-5.3' 출시...'키미 K3' 코딩 성능 따라붙어
 https://www.aitimes.com/news/articleView.html?idxno=213974
-
-애플, 차세대 시리 성능 강화 위해 언론사와 콘텐츠 라이선스 협상
-https://www.aitimes.com/news/articleView.html?idxno=213973
-
-솔트룩스, AI 기술 ‘로보틱스’로 확장…“데이터 수집 서비스로 8억 이상 매출 확보”
-https://www.aitimes.com/news/articleView.html?idxno=213972
-
-MS, 개인·기업용 코파일럿 통합…‘슈퍼 앱’으로 재탄생
-https://www.aitimes.com/news/articleView.html?idxno=213970
