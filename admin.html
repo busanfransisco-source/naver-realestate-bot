@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>관리자 승인</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  background: #f4f4f5;
+  color: #1a1a1a;
+}
+h1 { font-size: 18px; text-align: center; margin: 8px 0 20px; }
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.email { font-size: 14px; word-break: break-all; }
+.badge {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-left: 6px;
+}
+.badge.approved { background: #dcfce7; color: #16a34a; }
+.badge.pending { background: #fef3c7; color: #d97706; }
+.badge.admin { background: #dbeafe; color: #2563eb; }
+.btns { display: flex; gap: 6px; flex-shrink: 0; }
+button {
+  font-size: 13px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.approve-btn { background: #3b82f6; color: #fff; }
+.revoke-btn { background: #f3f4f6; color: #666; }
+.delete-btn { background: #fee2e2; color: #dc2626; }
+#msg { text-align: center; color: #999; font-size: 14px; margin-top: 20px; }
+#gate { position:fixed; inset:0; background:#f4f4f5; z-index:9999; display:flex; align-items:center; justify-content:center; padding:20px; }
+#gate .box { background:#fff; border-radius:14px; padding:24px; max-width:340px; width:100%; text-align:center; }
+</style>
+</head>
+<body>
+<div id="gate">
+  <div class="box">
+    <p id="gate-msg">확인 중...</p>
+  </div>
+</div>
+<div id="app" style="display:none;">
+  <h1>🔑 회원 승인 관리</h1>
+  <div id="list"></div>
+  <p id="msg"></p>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+<script>
+var firebaseConfig = {
+  apiKey: "AIzaSyBL3jjmzmNrYjqSc5jzt1F0kcaLLS55bEY",
+  authDomain: "naver-realestate-briefing.firebaseapp.com",
+  projectId: "naver-realestate-briefing",
+  storageBucket: "naver-realestate-briefing.firebasestorage.app",
+  messagingSenderId: "515367104622",
+  appId: "1:515367104622:web:c746a72e7fa0090663767f"
+};
+firebase.initializeApp(firebaseConfig);
+var auth = firebase.auth();
+var db = firebase.firestore();
+
+function renderList(snapshot) {
+  var listEl = document.getElementById('list');
+  listEl.innerHTML = '';
+  if (snapshot.empty) {
+    listEl.innerHTML = '<p style="text-align:center;color:#999;">가입한 회원이 없습니다.</p>';
+    return;
+  }
+  var docs = [];
+  snapshot.forEach(function(doc) { docs.push({ id: doc.id, data: doc.data() }); });
+  docs.sort(function(a, b) {
+    if (a.data.approved === b.data.approved) return 0;
+    return a.data.approved ? 1 : -1;
+  });
+  docs.forEach(function(item) {
+    var uid = item.id;
+    var data = item.data;
+    var card = document.createElement('div');
+    card.className = 'card';
+
+    var left = document.createElement('div');
+    var emailEl = document.createElement('div');
+    emailEl.className = 'email';
+    emailEl.textContent = data.email || uid;
+    left.appendChild(emailEl);
+
+    var badges = document.createElement('div');
+    var statusBadge = document.createElement('span');
+    statusBadge.className = 'badge ' + (data.approved ? 'approved' : 'pending');
+    statusBadge.textContent = data.approved ? '승인됨' : '대기중';
+    badges.appendChild(statusBadge);
+    if (data.isAdmin) {
+      var adminBadge = document.createElement('span');
+      adminBadge.className = 'badge admin';
+      adminBadge.textContent = '관리자';
+      badges.appendChild(adminBadge);
+    }
+    left.appendChild(badges);
+    card.appendChild(left);
+
+    var btns = document.createElement('div');
+    btns.className = 'btns';
+
+    if (!data.isAdmin) {
+      if (!data.approved) {
+        var approveBtn = document.createElement('button');
+        approveBtn.className = 'approve-btn';
+        approveBtn.textContent = '승인';
+        approveBtn.onclick = function() {
+          db.collection('users').doc(uid).update({ approved: true });
+        };
+        btns.appendChild(approveBtn);
+      } else {
+        var revokeBtn = document.createElement('button');
+        revokeBtn.className = 'revoke-btn';
+        revokeBtn.textContent = '승인 취소';
+        revokeBtn.onclick = function() {
+          db.collection('users').doc(uid).update({ approved: false });
+        };
+        btns.appendChild(revokeBtn);
+      }
+      var deleteBtn = document.createElement('button');
+      deleteBtn.className = 'delete-btn';
+      deleteBtn.textContent = '삭제';
+      deleteBtn.onclick = function() {
+        if (confirm(data.email + ' 회원 정보를 삭제할까요? (로그인 계정 자체는 남아있지만 목록에서 사라집니다)')) {
+          db.collection('users').doc(uid).delete();
+        }
+      };
+      btns.appendChild(deleteBtn);
+    }
+
+    card.appendChild(btns);
+    listEl.appendChild(card);
+  });
+}
+
+auth.onAuthStateChanged(function(user) {
+  if (!user) {
+    document.getElementById('gate-msg').textContent = '관리자만 접근 가능합니다. briefing.html에서 먼저 로그인해주세요.';
+    return;
+  }
+  db.collection('users').doc(user.uid).get().then(function(doc) {
+    if (doc.exists && doc.data().isAdmin === true) {
+      document.getElementById('gate').style.display = 'none';
+      document.getElementById('app').style.display = 'block';
+      db.collection('users').onSnapshot(renderList);
+    } else {
+      document.getElementById('gate-msg').textContent = '관리자 권한이 없습니다.';
+    }
+  });
+});
+</script>
+</body>
+</html>
