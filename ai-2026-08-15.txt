@@ -1,5 +1,8 @@
 🤖 26년 8월 15일 토요일 AI 뉴스
 
+앤트로픽 '워터마크' 도입에 사용자 반발…'클로드' 구독 취소 확산
+https://www.aitimes.com/news/articleView.html?idxno=213998
+
 알리바바, '큐원3.8-맥스' 가중치 공개…상업적 이용엔 라이선스 필요
 https://www.aitimes.com/news/articleView.html?idxno=213997
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213990
 
 구글, AI 생성물 '보이는 워터마크' 제거 허용...비가시성 ‘신스ID’는 유지
 https://www.aitimes.com/news/articleView.html?idxno=213989
-
-프랑스 헌법위, '15세 미만 SNS 금지법' 위헌 결정... 마크롱 개혁 '제동'
-https://www.aitimes.com/news/articleView.html?idxno=213988
