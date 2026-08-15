@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-08-15 16:37:00",
+  "updated_at_kst": "2026-08-15 17:08:31",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 15일 토요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "“생애최초 혜택 유지된다고?”…청년 비아파트 지원 대책에 ‘눈길’",
+      "url": "https://n.news.naver.com/mnews/article/009/0005721494"
+    },
     {
       "title": "용산구 “용산공원 주택공급 검토 강력 반대”",
       "url": "https://n.news.naver.com/mnews/article/366/0001186523"
@@ -38,10 +42,6 @@
     {
       "title": "\"입주민 건강까지 챙긴다\"…9월 분양 챔피언스시티, 의료서비스 연계",
       "url": "https://n.news.naver.com/mnews/article/003/0014129559"
-    },
-    {
-      "title": "“다주택자 절세길 다 막힌다”…집 팔 거면 2028년 전에 팔아라",
-      "url": "https://n.news.naver.com/mnews/article/138/0002237956"
     }
   ]
 }
