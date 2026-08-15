@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-08-16 05:43:20",
+  "updated_at_kst": "2026-08-16 06:00:39",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 16일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "7.3만호+α 신규택지 이르면 내달 발표…서울 그린벨트 포함될까",
+      "url": "https://n.news.naver.com/mnews/article/001/0016253462"
+    },
     {
       "title": "대출한도 뛰고 기부채납 줄고…재건축·재개발, 사업성·속도 ‘두 토끼’ 잡나",
       "url": "https://n.news.naver.com/mnews/article/029/0003042529"
@@ -38,10 +42,6 @@
     {
       "title": "“닥치고 공급” 정부 방침에…서울시 이어 용산구도 “아니올시다”",
       "url": "https://n.news.naver.com/mnews/article/009/0005721513"
-    },
-    {
-      "title": "\"용산에도 닥치고 짓자\" 정부 방침에… 서울시 이어 용산구도 '반기'",
-      "url": "https://n.news.naver.com/mnews/article/469/0000948231"
     }
   ]
 }
