@@ -1,5 +1,11 @@
 🤖 26년 8월 16일 일요일 AI 뉴스
 
+앤트로픽, 2028년 매출 2000억달러 제시…'2조달러 IPO' 몸값 기준 됐다
+https://www.aitimes.com/news/articleView.html?idxno=214003
+
+엔비디아, 오픈AI 오하이오 데이터센터 보증 지원 '절반 축소'
+https://www.aitimes.com/news/articleView.html?idxno=214000
+
 앤트로픽 '워터마크' 도입에 사용자 반발…'클로드' 구독 취소 확산
 https://www.aitimes.com/news/articleView.html?idxno=213998
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213992
 
 미스트랄 AI, 문서 레이아웃 보존 능력 높인 'OCR 4.1' 공개
 https://www.aitimes.com/news/articleView.html?idxno=213991
-
-앤트로픽, IPO 앞두고 첫 흑자 달성…2분기 매출 16.3조 돌파
-https://www.aitimes.com/news/articleView.html?idxno=213990
-
-구글, AI 생성물 '보이는 워터마크' 제거 허용...비가시성 ‘신스ID’는 유지
-https://www.aitimes.com/news/articleView.html?idxno=213989
