@@ -6,13 +6,19 @@ https://www.aitimes.com/news/articleView.html?idxno=214013
 KAIST, 저전력으로 두뇌 구조 모사하는 ‘뉴로모틱 뉴런’ 구현
 https://www.aitimes.com/news/articleView.html?idxno=214012
 
+GLM-5.3, '커서' 보안 취약점 찾아냈다...AI 보안 역량 입증
+https://www.aitimes.com/news/articleView.html?idxno=214011
+
 테슬라, ‘공중 부양’ 로드스터 이달 시연 예정…스페이스X 기술 결합
 https://www.aitimes.com/news/articleView.html?idxno=214010
 
 베일 벗은 '비공식 조언자'…아모데이 아내 카미 클라크는 누구인가
 https://www.aitimes.com/news/articleView.html?idxno=214008
 
-"1조달러 IPO 앞두고 흔들리는 리더십"… 오픈AI, 인원 이탈·안전성 후퇴 지적
+허깅페이스 점령한 중국 AI...'큐원' 다운로드 20억건·파생 모델 15만개
+https://www.aitimes.com/news/articleView.html?idxno=214007
+
+"IPO 앞두고 흔들리는 리더십"… 오픈AI, 인원 이탈·안전성 후퇴 지적
 https://www.aitimes.com/news/articleView.html?idxno=214006
 
 미국, 동맹국에 'AI 진영 선택' 통보... "중국과 양다리 안 된다"
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214004
 
 앤트로픽, 2028년 매출 2000억달러 제시…'2조달러 IPO' 기준 됐다
 https://www.aitimes.com/news/articleView.html?idxno=214003
-
-오픈AI, 살해 계획 담긴 챗GPT 대화 경찰에 신고...AI 대화 감시·사생활 논란
-https://www.aitimes.com/news/articleView.html?idxno=214002
-
-엔비디아, SB 에너지에 4조 투자 논의...오픈AI 10GW 데이터센터 구축 총력
-https://www.aitimes.com/news/articleView.html?idxno=214001
