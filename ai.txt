@@ -1,6 +1,15 @@
 🤖 26년 8월 16일 일요일 AI 뉴스
 
-앤트로픽, 2028년 매출 2000억달러 제시…'2조달러 IPO' 몸값 기준 됐다
+테슬라, ‘공중 부양’ 로드스터 이달 시연 예정…스페이스X 기술 결합
+https://www.aitimes.com/news/articleView.html?idxno=214010
+
+베일 벗은 '비공식 조언자'…아모데이 아내 카미 클라크는 누구인가
+https://www.aitimes.com/news/articleView.html?idxno=214008
+
+"1조달러 IPO 앞두고 흔들리는 리더십"… 오픈AI, 인원 이탈·안전성 후퇴 지적
+https://www.aitimes.com/news/articleView.html?idxno=214006
+
+앤트로픽, 2028년 매출 2000억달러 제시…'2조달러 IPO' 기준 됐다
 https://www.aitimes.com/news/articleView.html?idxno=214003
 
 엔비디아, 오픈AI 오하이오 데이터센터 보증 지원 '절반 축소'
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=213995
 
 오픈AI 기업용 매출, '챗GPT' 넘어섰다…“강력한 매출로 악재 돌파”
 https://www.aitimes.com/news/articleView.html?idxno=213994
-
-슬랙·메일·녹음까지 싹쓸이...AI 데이터 고갈에 '사내 기록' 몸값 폭등
-https://www.aitimes.com/news/articleView.html?idxno=213993
-
-트럼프, 중국산 드론에 최대 100% '관세 폭탄'…한국 등 동맹국엔 15%
-https://www.aitimes.com/news/articleView.html?idxno=213992
-
-미스트랄 AI, 문서 레이아웃 보존 능력 높인 'OCR 4.1' 공개
-https://www.aitimes.com/news/articleView.html?idxno=213991
