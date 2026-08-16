@@ -1,5 +1,11 @@
 🤖 26년 8월 16일 일요일 AI 뉴스
 
+서울 AI 허브, 22일 '피지컬 AI' 해커톤 개최…“코드 개발부터 하드웨어 연결까지”
+https://www.aitimes.com/news/articleView.html?idxno=214013
+
+KAIST, 저전력으로 두뇌 구조 모사하는 ‘뉴로모틱 뉴런’ 구현
+https://www.aitimes.com/news/articleView.html?idxno=214012
+
 테슬라, ‘공중 부양’ 로드스터 이달 시연 예정…스페이스X 기술 결합
 https://www.aitimes.com/news/articleView.html?idxno=214010
 
@@ -9,23 +15,17 @@ https://www.aitimes.com/news/articleView.html?idxno=214008
 "1조달러 IPO 앞두고 흔들리는 리더십"… 오픈AI, 인원 이탈·안전성 후퇴 지적
 https://www.aitimes.com/news/articleView.html?idxno=214006
 
+미국, 동맹국에 'AI 진영 선택' 통보... "중국과 양다리 안 된다"
+https://www.aitimes.com/news/articleView.html?idxno=214005
+
+미 상무장관, 애플에 직격탄..."중국산 메모리 칩 사지 마라"
+https://www.aitimes.com/news/articleView.html?idxno=214004
+
 앤트로픽, 2028년 매출 2000억달러 제시…'2조달러 IPO' 기준 됐다
 https://www.aitimes.com/news/articleView.html?idxno=214003
 
+오픈AI, 살해 계획 담긴 챗GPT 대화 경찰에 신고...AI 대화 감시·사생활 논란
+https://www.aitimes.com/news/articleView.html?idxno=214002
+
 엔비디아, SB 에너지에 4조 투자 논의...오픈AI 10GW 데이터센터 구축 총력
 https://www.aitimes.com/news/articleView.html?idxno=214001
-
-엔비디아, 오픈AI 오하이오 데이터센터 보증 지원 '절반 축소'
-https://www.aitimes.com/news/articleView.html?idxno=214000
-
-앤트로픽 '워터마크' 도입에 사용자 반발…'클로드' 구독 취소 확산
-https://www.aitimes.com/news/articleView.html?idxno=213998
-
-알리바바, '큐원3.8-맥스' 가중치 공개…상업적 이용엔 라이선스 필요
-https://www.aitimes.com/news/articleView.html?idxno=213997
-
-스페이스X, 85조 규모 커서 인수 최종 마무리…그록 생태계 통합 가속
-https://www.aitimes.com/news/articleView.html?idxno=213996
-
-[AI 이슈트렌드] 황정민 스토킹 공판 논란 속 8·13 부동산 대책·민주당 경선 주목
-https://www.aitimes.com/news/articleView.html?idxno=213995
