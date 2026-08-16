@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-08-17 07:13:26",
+  "updated_at_kst": "2026-08-17 07:44:23",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 17일 월요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "“수억원 낮춰도 안 사요”…세제 개편 후 잠든 고가주택",
+      "url": "https://n.news.naver.com/mnews/article/029/0003042584"
+    },
+    {
+      "title": "성수·목동 정비 대어 줄줄이 단독입찰···사라진 수주전",
+      "url": "https://n.news.naver.com/mnews/article/029/0003042581"
+    },
     {
       "title": "'종묘 앞 재개발' 본격화하나…세운4구역 내 유적 보존방안 심의",
       "url": "https://n.news.naver.com/mnews/article/001/0016254142"
@@ -34,14 +42,6 @@
     {
       "title": "국내 리츠시장 규모 120조원 돌파…10년간 100조원대 성장",
       "url": "https://n.news.naver.com/mnews/article/001/0016254116"
-    },
-    {
-      "title": "\"계란은 수입하면 되지만 집은 못해\"...정부, 21개월 초단기 착공 승부수",
-      "url": "https://n.news.naver.com/mnews/article/008/0005400788"
-    },
-    {
-      "title": "‘세금 더 내라면서요’ 빌라 드라이브, 임대업자들 시큰둥",
-      "url": "https://n.news.naver.com/mnews/article/005/0001867231"
     }
   ]
 }
