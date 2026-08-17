@@ -1,8 +1,24 @@
 {
-  "updated_at_kst": "2026-08-18 04:46:45",
+  "updated_at_kst": "2026-08-18 05:14:40",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 18일 화요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "[단독]강남3구 공동주택 재산세 2조 육박…서울 전체의 절반",
+      "url": "https://n.news.naver.com/mnews/article/421/0009117822"
+    },
+    {
+      "title": "“전세 씨 말랐다”…서울 아파트 10가구 중 4가구는 월세",
+      "url": "https://n.news.naver.com/mnews/article/011/0004652446"
+    },
+    {
+      "title": "【뉴스AS】 “청년은 빌라에만 살라는 거냐” “주거사다리 기회 될 수 있어”",
+      "url": "https://n.news.naver.com/mnews/article/028/0002818925"
+    },
+    {
+      "title": "\"1억에 산 집이 50억\"...30년 보유한 70대, 소득 한푼 없는데 종부세 수천만원 [세금전쟁 ②]",
+      "url": "https://n.news.naver.com/mnews/article/014/0005562573"
+    },
     {
       "title": "[단독]“수도권 매입임대 14만채 착공” 정작 기존 물량 ‘빈집’ 5년새 최대",
       "url": "https://n.news.naver.com/mnews/article/020/0003741439"
@@ -26,22 +42,6 @@
     {
       "title": "“공원 안에 주택 건설 이해 안돼… 세계 대도시 정책 방향에 역행”",
       "url": "https://n.news.naver.com/mnews/article/023/0003993470"
-    },
-    {
-      "title": "수도권 아파트 경매 시장 낙찰가율, 7개월 만에 최고",
-      "url": "https://n.news.naver.com/mnews/article/023/0003993441"
-    },
-    {
-      "title": "기장 관광단지에 들어서… 양·한방 진료 가능",
-      "url": "https://n.news.naver.com/mnews/article/023/0003993440"
-    },
-    {
-      "title": "[부동산 100자 정보] 반도체클러스터 동일하이빌 1단지 분양 외",
-      "url": "https://n.news.naver.com/mnews/article/023/0003993439"
-    },
-    {
-      "title": "7년 새 3.5만 가구 줄어든 서울 아파트 전세… 월세는 5만 가구 이상 늘어",
-      "url": "https://n.news.naver.com/mnews/article/023/0003993421"
     }
   ]
 }
