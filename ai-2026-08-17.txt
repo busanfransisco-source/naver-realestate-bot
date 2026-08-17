@@ -15,6 +15,9 @@ https://www.aitimes.com/news/articleView.html?idxno=214021
 "하네스 따라 성과 10% 차"…'딥시크-V4 플래시' 테스트 결과 공개
 https://www.aitimes.com/news/articleView.html?idxno=214019
 
+독일 모의전서 입증된 우크라이나 드론의 위력…미군 기갑부대, 전술 재검토 착수
+https://www.aitimes.com/news/articleView.html?idxno=214017
+
 스트라이프, 오픈라우터 10조에 인수...석달 만에 몸값 5배 폭등
 https://www.aitimes.com/news/articleView.html?idxno=214015
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214013
 
 KAIST, 저전력으로 두뇌 구조 모사하는 ‘뉴로모틱 뉴런’ 구현
 https://www.aitimes.com/news/articleView.html?idxno=214012
-
-GLM-5.3, '커서' 보안 취약점 찾아냈다...AI 보안 역량 입증
-https://www.aitimes.com/news/articleView.html?idxno=214011
