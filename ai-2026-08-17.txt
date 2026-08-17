@@ -1,5 +1,8 @@
 🤖 26년 8월 17일 월요일 AI 뉴스
 
+B2C AI 검색 노하우 B2B로 확장… 라이너, 전담 조직 'AX 디비전' 출범
+https://www.aitimes.com/news/articleView.html?idxno=214025
+
 "원하는 AI 벤치마크 직접 만든다"…아티피셜 애널리시스, '옵티마' 출시
 https://www.aitimes.com/news/articleView.html?idxno=214024
 
@@ -12,20 +15,17 @@ https://www.aitimes.com/news/articleView.html?idxno=214022
 '바이브 코딩' 러버블, 19조 가치로 텐센트 등서 5700억 투자 유치
 https://www.aitimes.com/news/articleView.html?idxno=214021
 
+샌프란시스코 매장 운영하는 AI, '근태 불량' 인간 직원 해고 결정
+https://www.aitimes.com/news/articleView.html?idxno=214020
+
 "하네스 따라 성과 10% 차"…'딥시크-V4 플래시' 테스트 결과 공개
 https://www.aitimes.com/news/articleView.html?idxno=214019
 
 독일 모의전서 입증된 우크라이나 드론의 위력…미군 기갑부대, 전술 재검토 착수
 https://www.aitimes.com/news/articleView.html?idxno=214017
 
+오픈AI, 코덱스 대대적 개편 예고… 로딩 속도 94%·메모리 사용량 88% 감축
+https://www.aitimes.com/news/articleView.html?idxno=214016
+
 스트라이프, 오픈라우터 10조에 인수...석달 만에 몸값 5배 폭등
 https://www.aitimes.com/news/articleView.html?idxno=214015
-
-KT-서울대병원, 의료 AX 플랫폼 구축 협력
-https://www.aitimes.com/news/articleView.html?idxno=214014
-
-서울 AI 허브, 22일 '피지컬 AI' 해커톤 개최…“코드 개발부터 하드웨어 연결까지”
-https://www.aitimes.com/news/articleView.html?idxno=214013
-
-KAIST, 저전력으로 두뇌 구조 모사하는 ‘뉴로모틱 뉴런’ 구현
-https://www.aitimes.com/news/articleView.html?idxno=214012
