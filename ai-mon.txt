@@ -1,5 +1,14 @@
 🤖 26년 8월 17일 월요일 AI 뉴스
 
+아모데이 “AI 공포는 내가 부추긴 것 아니야…근본적인 신뢰 부족”
+https://www.aitimes.com/news/articleView.html?idxno=214023
+
+"하네스 따라 성과 10% 차"…'딥시크-V4 플래시' 테스트 결과 공개
+https://www.aitimes.com/news/articleView.html?idxno=214019
+
+KT-서울대병원, 의료 AX 플랫폼 구축 협력
+https://www.aitimes.com/news/articleView.html?idxno=214014
+
 서울 AI 허브, 22일 '피지컬 AI' 해커톤 개최…“코드 개발부터 하드웨어 연결까지”
 https://www.aitimes.com/news/articleView.html?idxno=214013
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214007
 
 "IPO 앞두고 흔들리는 리더십"… 오픈AI, 인원 이탈·안전성 후퇴 지적
 https://www.aitimes.com/news/articleView.html?idxno=214006
-
-미국, 동맹국에 'AI 진영 선택' 통보... "중국과 양다리 안 된다"
-https://www.aitimes.com/news/articleView.html?idxno=214005
-
-미 상무장관, 애플에 직격탄..."중국산 메모리 칩 사지 마라"
-https://www.aitimes.com/news/articleView.html?idxno=214004
-
-앤트로픽, 2028년 매출 2000억달러 제시…'2조달러 IPO' 기준 됐다
-https://www.aitimes.com/news/articleView.html?idxno=214003
