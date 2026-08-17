@@ -1,5 +1,14 @@
 🤖 26년 8월 17일 월요일 AI 뉴스
 
+"375억 보상금 거절" vs "제발 사달라"…데이터센터가 갈라놓은 미 농촌
+https://www.aitimes.com/news/articleView.html?idxno=214029
+
+공시로 드러난 거대 자본의 결실…엔비디아·알파벳, 스페이스X 투자로 대박
+https://www.aitimes.com/news/articleView.html?idxno=214028
+
+업스테이지 “다음 AI 요약에 ‘솔라’ 전면 적용...실사용 확대”
+https://www.aitimes.com/news/articleView.html?idxno=214026
+
 B2C AI 검색 노하우 B2B로 확장… 라이너, 전담 조직 'AX 디비전' 출범
 https://www.aitimes.com/news/articleView.html?idxno=214025
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214020
 
 "하네스 따라 성과 10% 차"…'딥시크-V4 플래시' 테스트 결과 공개
 https://www.aitimes.com/news/articleView.html?idxno=214019
-
-독일 모의전서 입증된 우크라이나 드론의 위력…미군 기갑부대, 전술 재검토 착수
-https://www.aitimes.com/news/articleView.html?idxno=214017
-
-오픈AI, 코덱스 대대적 개편 예고… 로딩 속도 94%·메모리 사용량 88% 감축
-https://www.aitimes.com/news/articleView.html?idxno=214016
-
-스트라이프, 오픈라우터 10조에 인수...석달 만에 몸값 5배 폭등
-https://www.aitimes.com/news/articleView.html?idxno=214015
