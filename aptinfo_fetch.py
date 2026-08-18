@@ -162,6 +162,7 @@ def main():
             status = " ◀ 접수중" if r["start"] <= today <= r["end"] else ""
             announce = f" | 발표 {r['announce'].month}/{r['announce'].day}" if r["announce"] else ""
             lines.append(f"[{r['region']}·{r['kind']}] {r['name']} | 접수 {r['start'].month}/{r['start'].day}~{r['end'].month}/{r['end'].day}{announce}{status}")
+            lines.append("")
     elif subs is None:
         lines.append("(청약 정보를 가져오지 못했습니다)")
     else:
