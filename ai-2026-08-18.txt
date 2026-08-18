@@ -1,5 +1,17 @@
 🤖 26년 8월 18일 화요일 AI 뉴스
 
+클라우드네트웍스, Kong과 파트너십 체결...AI 트래픽 통합 관리 AI 게이트웨이 국내 공급
+https://www.aitimes.com/news/articleView.html?idxno=214051
+
+모티프 “독파모로 이뤄낸 AI 모델 성능 향상, 사업화로 연결할 것”
+https://www.aitimes.com/news/articleView.html?idxno=214048
+
+비드래프트, AI 신약발견 프로젝트 공개…3일 만에 2000건 이상 후보물질 제출
+https://www.aitimes.com/news/articleView.html?idxno=214044
+
+업스테이지·SKT·LG 독파모 3차 평가 진출...모티프 탈락
+https://www.aitimes.com/news/articleView.html?idxno=214041
+
 "375억 보상금 거절" vs "제발 사달라"…데이터센터가 갈라놓은 미 농촌
 https://www.aitimes.com/news/articleView.html?idxno=214029
 
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214024
 
 아모데이 “AI 공포는 내가 부추긴 것 아니야…근본적인 신뢰 부족”
 https://www.aitimes.com/news/articleView.html?idxno=214023
-
-손짓·음성 알아듣는 로봇청소기…미국 매틱, '매틱 큐'로 중국과 차별화
-https://www.aitimes.com/news/articleView.html?idxno=214022
-
-'바이브 코딩' 러버블, 19조 가치로 텐센트 등서 5700억 투자 유치
-https://www.aitimes.com/news/articleView.html?idxno=214021
-
-샌프란시스코 매장 운영하는 AI, '근태 불량' 인간 직원 해고 결정
-https://www.aitimes.com/news/articleView.html?idxno=214020
-
-"하네스 따라 성과 10% 차"…'딥시크-V4 플래시' 테스트 결과 공개
-https://www.aitimes.com/news/articleView.html?idxno=214019
