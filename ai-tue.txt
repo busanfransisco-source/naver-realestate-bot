@@ -1,10 +1,16 @@
 🤖 26년 8월 18일 화요일 AI 뉴스
 
+맥주 한 잔에 코딩 토큰 '무제한'…베이징에 들어선 'AGI 바'
+https://www.aitimes.com/news/articleView.html?idxno=214084
+
 [게시판] KT·농협경제지주·한국MS, 유통 AX 협력으로 농산물 거래 활성화 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=214082
 
-과기부, 국민 대상 'AI 서비스 경진대회' 개최..."AI 아이디어, 직접 구현한다"
+과기부, 국민 대상 'AI 서비스 경진대회' 개최..."AI 아이디어, 직접 구현"
 https://www.aitimes.com/news/articleView.html?idxno=214081
+
+앤트로픽, AI 정렬 위험 등급 상향 조정…미공개 '모델 2' 성능도 공개
+https://www.aitimes.com/news/articleView.html?idxno=214079
 
 명인이노, 'OCP 코리아 테크 데이'서 서버·데이터센터 솔루션 전시
 https://www.aitimes.com/news/articleView.html?idxno=214078
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214074
 
 소프트뱅크, '건설 로봇' 그라비스에 2800억 투자...피지컬 AI 박차
 https://www.aitimes.com/news/articleView.html?idxno=214073
-
-알리바바, 2조대 게임 사업 매각 추진…‘AI 중심’ 대대적 사업 재편
-https://www.aitimes.com/news/articleView.html?idxno=214072
-
-그로크, 4900억 추가 유치…AI 칩 개발사서 '네오클라우드'로 체질 개선
-https://www.aitimes.com/news/articleView.html?idxno=214071
