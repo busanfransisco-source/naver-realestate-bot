@@ -1,5 +1,26 @@
 🤖 26년 8월 18일 화요일 AI 뉴스
 
+'AI 음성' 위스퍼, 2.8조 가치로 투자 유치..."횡설수설도 완벽한 문장으로"
+https://www.aitimes.com/news/articleView.html?idxno=214070
+
+'공간 지능' 딥파인, 100억 규모 시리즈 B 투자 유치
+https://www.aitimes.com/news/articleView.html?idxno=214069
+
+이파피루스, 'AI 서밋'서 문서 AI 풀라인업 공개
+https://www.aitimes.com/news/articleView.html?idxno=214067
+
+KDCEA, ‘OCP 코리아 테크 데이’ 참가…“액침냉각 R&D 성과 공유”
+https://www.aitimes.com/news/articleView.html?idxno=214065
+
+힉스필드, 기업 가치 7.6조 달성…미국 영상 AI 대표로 급성장
+https://www.aitimes.com/news/articleView.html?idxno=214063
+
+코난, 상반기 역대 최대 80억 매출 달성..."AX 수주 확대 영향"
+https://www.aitimes.com/news/articleView.html?idxno=214062
+
+운전대·페달 없는 테슬라 ‘사이버캡’, 이달 말 오스틴서 시범 운행
+https://www.aitimes.com/news/articleView.html?idxno=214060
+
 베슬AI, 'OCP 테크 데이'서 300MW급 AI 팩토리 청사진 제시한다
 https://www.aitimes.com/news/articleView.html?idxno=214056
 
@@ -8,24 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214054
 
 클라우드네트웍스, Kong과 파트너십 체결...AI 트래픽 통합 관리 AI 게이트웨이 국내 공급
 https://www.aitimes.com/news/articleView.html?idxno=214051
-
-젠슨 황 "오픈AI 데이터센터 보증, '순환 금융' 아니다...임대료 직접 지불"
-https://www.aitimes.com/news/articleView.html?idxno=214050
-
-카카오 “경량 모델 ‘카나나-2’, 안전성 평가서 글로벌 최고 수준”
-https://www.aitimes.com/news/articleView.html?idxno=214049
-
-모티프 “독파모로 이뤄낸 AI 모델 성능 향상, 사업화로 연결할 것”
-https://www.aitimes.com/news/articleView.html?idxno=214048
-
-브록먼 오픈AI 사장 “잇따른 임원 퇴사, 이례적 아니다”
-https://www.aitimes.com/news/articleView.html?idxno=214045
-
-비드래프트, AI 신약발견 프로젝트 공개…3일 만에 2000건 이상 후보물질 제출
-https://www.aitimes.com/news/articleView.html?idxno=214044
-
-바이트댄스, 할리우드와 AI 저작권·딥페이크 차단 합의
-https://www.aitimes.com/news/articleView.html?idxno=214042
-
-업스테이지·SKT·LG 독파모 3차 평가 진출...모티프 탈락
-https://www.aitimes.com/news/articleView.html?idxno=214041
