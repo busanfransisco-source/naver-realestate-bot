@@ -1,31 +1,31 @@
 🤖 26년 8월 18일 화요일 AI 뉴스
 
-'AI 음성' 위스퍼, 2.8조 가치로 투자 유치..."횡설수설도 완벽한 문장으로"
-https://www.aitimes.com/news/articleView.html?idxno=214070
+[게시판] KT·농협경제지주·한국MS, 유통 AX 협력으로 농산물 거래 활성화 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=214082
 
-'공간 지능' 딥파인, 100억 규모 시리즈 B 투자 유치
-https://www.aitimes.com/news/articleView.html?idxno=214069
+과기부, 국민 대상 'AI 서비스 경진대회' 개최..."AI 아이디어, 직접 구현한다"
+https://www.aitimes.com/news/articleView.html?idxno=214081
 
-이파피루스, 'AI 서밋'서 문서 AI 풀라인업 공개
-https://www.aitimes.com/news/articleView.html?idxno=214067
+명인이노, 'OCP 코리아 테크 데이'서 서버·데이터센터 솔루션 전시
+https://www.aitimes.com/news/articleView.html?idxno=214078
 
-KDCEA, ‘OCP 코리아 테크 데이’ 참가…“액침냉각 R&D 성과 공유”
-https://www.aitimes.com/news/articleView.html?idxno=214065
+메가존클라우드, AWS와 기업용 AI 에이전트 3종 개발
+https://www.aitimes.com/news/articleView.html?idxno=214077
 
-힉스필드, 기업 가치 7.6조 달성…미국 영상 AI 대표로 급성장
-https://www.aitimes.com/news/articleView.html?idxno=214063
+솔트룩스, 30명 대상 ‘온톨로지’ 역량 교육 진행...임원진 직접 참여
+https://www.aitimes.com/news/articleView.html?idxno=214076
 
-코난, 상반기 역대 최대 80억 매출 달성..."AX 수주 확대 영향"
-https://www.aitimes.com/news/articleView.html?idxno=214062
+[게시판] 베스핀글로벌, 오픈AI 셀렉트 파트너 선정 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=214075
 
-운전대·페달 없는 테슬라 ‘사이버캡’, 이달 말 오스틴서 시범 운행
-https://www.aitimes.com/news/articleView.html?idxno=214060
+와이즈넛, AI 에이전트 매출 539% 증가…공공·기업 AX 시장 집중 공략
+https://www.aitimes.com/news/articleView.html?idxno=214074
 
-베슬AI, 'OCP 테크 데이'서 300MW급 AI 팩토리 청사진 제시한다
-https://www.aitimes.com/news/articleView.html?idxno=214056
+소프트뱅크, '건설 로봇' 그라비스에 2800억 투자...피지컬 AI 박차
+https://www.aitimes.com/news/articleView.html?idxno=214073
 
-오픈AI, 전세계 14개 AI 정책 연구 지원...국내 연세대 선정
-https://www.aitimes.com/news/articleView.html?idxno=214054
+알리바바, 2조대 게임 사업 매각 추진…‘AI 중심’ 대대적 사업 재편
+https://www.aitimes.com/news/articleView.html?idxno=214072
 
-클라우드네트웍스, Kong과 파트너십 체결...AI 트래픽 통합 관리 AI 게이트웨이 국내 공급
-https://www.aitimes.com/news/articleView.html?idxno=214051
+그로크, 4900억 추가 유치…AI 칩 개발사서 '네오클라우드'로 체질 개선
+https://www.aitimes.com/news/articleView.html?idxno=214071
