@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-08-19 04:19:37",
+  "updated_at_kst": "2026-08-19 04:45:15",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 19일 수요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "태릉CC-과천경마장 그린벨트 규제 예외… 주택 공급 속도전",
+      "url": "https://n.news.naver.com/mnews/article/020/0003741720"
+    },
+    {
+      "title": "국제업무지구·캠프킴·공원까지 공급 '격전지'된 용산... 김·오 회동서 담판?",
+      "url": "https://n.news.naver.com/mnews/article/469/0000948743"
+    },
     {
       "title": "\"미친 전셋값, 차라리 집 사버리자\"...2030 '생애 첫 집' 매수 늘었다",
       "url": "https://n.news.naver.com/mnews/article/008/0005401591"
@@ -34,14 +42,6 @@
     {
       "title": "주택 신속공급 방안 간담회 발언하는 김윤덕 장관",
       "url": "https://n.news.naver.com/mnews/article/421/0009119939"
-    },
-    {
-      "title": "발언하는 김윤덕 장관",
-      "url": "https://n.news.naver.com/mnews/article/421/0009119938"
-    },
-    {
-      "title": "주택 신속공급 방안 산업계 간담회",
-      "url": "https://n.news.naver.com/mnews/article/421/0009119937"
     }
   ]
 }
