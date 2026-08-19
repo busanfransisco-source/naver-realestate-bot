@@ -1,31 +1,31 @@
 🤖 26년 8월 19일 수요일 AI 뉴스
 
+크리어스, 스토리 공모전 대상작 AI 영화로 제작…부산국제영화제 출품 추진
+https://www.aitimes.com/news/articleView.html?idxno=214125
+
+허드슨에이아이, SBS 대표작 '펜트하우스' 에 AI 더빙 도입
+https://www.aitimes.com/news/articleView.html?idxno=214121
+
+카카오모빌리티, ‘교통약자 보호구역’ 자율차 운행..."안전제어 알고리즘 적용"
+https://www.aitimes.com/news/articleView.html?idxno=214119
+
+iHW, 520억 규모 시리즈A 투자 유치…'초저전력 AI 반도체' 상용화 가속
+https://www.aitimes.com/news/articleView.html?idxno=214115
+
+펜실베이니아, AI 데이터센터 규제 대열 합류...주지사 행정명령 서명
+https://www.aitimes.com/news/articleView.html?idxno=214113
+
+KT, 국산 반도체-AI 모델-API 플랫폼 일체형 '소버린AI 어플라이언스' 출시
+https://www.aitimes.com/news/articleView.html?idxno=214108
+
+KT 컨소시엄, '모두의 AI' 출사표…서비스부터 반도체까지 전방위 결합
+https://www.aitimes.com/news/articleView.html?idxno=214107
+
+"누구나 쉽게 vs 생활 밀착 연합"...SKT·카카오, '모두의 AI' 전략 공개
+https://www.aitimes.com/news/articleView.html?idxno=214106
+
 삼성전자, 전남 광주에 플랙트그룹 HVAC 신규 생산라인 구축
 https://www.aitimes.com/news/articleView.html?idxno=214105
 
-뉴플로이, 개인 PC에서 구동하는 '온디바이스 AI OCR 솔루션' 출시
-https://www.aitimes.com/news/articleView.html?idxno=214098
-
-애플, '카메라 탑재' 에어팟 영상 유출...올 가을 출시 유력
-https://www.aitimes.com/news/articleView.html?idxno=214097
-
-엠아이큐브솔루션, 팔도 라면 공장에 AI 자율제조 플랫폼 공급
-https://www.aitimes.com/news/articleView.html?idxno=214096
-
-오픈AI, 사이버 보안 위험으로 차세대 모델 '아스트라' 개발 2주 중단
-https://www.aitimes.com/news/articleView.html?idxno=214095
-
-오픈AI, 청소년 전용 ‘챗GPT 포 틴즈’ 글로벌 출시...안전장치·학습 기능 강화
-https://www.aitimes.com/news/articleView.html?idxno=214094
-
-스노우플레이크, AI 모델 라우팅 기능 출시..."프론티어·오픈 모델 최적화"
-https://www.aitimes.com/news/articleView.html?idxno=214093
-
-독일, 태양광 입찰 경쟁 지속…모집보다 1GW 더 몰려
-https://www.aitimes.com/news/articleView.html?idxno=214091
-
-우크라이나, 전쟁 피해 전력망 재건에 100MW 태양광 구축
-https://www.aitimes.com/news/articleView.html?idxno=214087
-
-'모두의 AI' 프로젝트 공모에 6개 컨소시엄 출사표...이달 말 결정
-https://www.aitimes.com/news/articleView.html?idxno=214086
+앤트로픽, IPO 앞두고 '차등의결권' 추진...창립자 경영권 보호 강화
+https://www.aitimes.com/news/articleView.html?idxno=214104
