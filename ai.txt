@@ -6,6 +6,12 @@ https://www.aitimes.com/news/articleView.html?idxno=214098
 엠아이큐브솔루션, 팔도 라면 공장에 AI 자율제조 플랫폼 공급
 https://www.aitimes.com/news/articleView.html?idxno=214096
 
+오픈AI, 사이버 보안 위험으로 차세대 모델 '아스트라' 개발 2주 중단
+https://www.aitimes.com/news/articleView.html?idxno=214095
+
+오픈AI, 청소년 전용 ‘챗GPT 포 틴즈’ 글로벌 출시...안전장치·학습 기능 강화
+https://www.aitimes.com/news/articleView.html?idxno=214094
+
 스노우플레이크, AI 모델 라우팅 기능 출시..."프론티어·오픈 모델 최적화"
 https://www.aitimes.com/news/articleView.html?idxno=214093
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214084
 
 [게시판] KT·농협경제지주·한국MS, 유통 AX 협력으로 농산물 거래 활성화 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=214082
-
-과기부, 국민 대상 'AI 서비스 경진대회' 개최..."AI 아이디어, 직접 구현"
-https://www.aitimes.com/news/articleView.html?idxno=214081
-
-앤트로픽, AI 정렬 위험 등급 상향 조정…미공개 '모델 2' 성능도 공개
-https://www.aitimes.com/news/articleView.html?idxno=214079
