@@ -1,5 +1,17 @@
 🤖 26년 8월 19일 수요일 AI 뉴스
 
+클레온, 표정·눈빛·몸동작 구현하는 ‘휴먼 AI 인터페이스'개발…”디지털 사이니지 적용”
+https://www.aitimes.com/news/articleView.html?idxno=214129
+
+[게시판] 로브로스, 반도체·자동차 공장에 휴머노이드 9대 공급 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=214128
+
+HP코리아·업스테이지, 'AISE 2026'서 의료 AX 사례 선보여
+https://www.aitimes.com/news/articleView.html?idxno=214127
+
+DJI, 미국 제재 소송서 반전...항소법원 "중국 군수업체 지정 재검증하라"
+https://www.aitimes.com/news/articleView.html?idxno=214126
+
 크리어스, 스토리 공모전 대상작 AI 영화로 제작…부산국제영화제 출품 추진
 https://www.aitimes.com/news/articleView.html?idxno=214125
 
@@ -15,17 +27,5 @@ https://www.aitimes.com/news/articleView.html?idxno=214115
 펜실베이니아, AI 데이터센터 규제 대열 합류...주지사 행정명령 서명
 https://www.aitimes.com/news/articleView.html?idxno=214113
 
-KT, 국산 반도체-AI 모델-API 플랫폼 일체형 '소버린AI 어플라이언스' 출시
-https://www.aitimes.com/news/articleView.html?idxno=214108
-
-KT 컨소시엄, '모두의 AI' 출사표…서비스부터 반도체까지 전방위 결합
-https://www.aitimes.com/news/articleView.html?idxno=214107
-
-"누구나 쉽게 vs 생활 밀착 연합"...SKT·카카오, '모두의 AI' 전략 공개
-https://www.aitimes.com/news/articleView.html?idxno=214106
-
-삼성전자, 전남 광주에 플랙트그룹 HVAC 신규 생산라인 구축
-https://www.aitimes.com/news/articleView.html?idxno=214105
-
-앤트로픽, IPO 앞두고 '차등의결권' 추진...창립자 경영권 보호 강화
-https://www.aitimes.com/news/articleView.html?idxno=214104
+바이두, 실적 악화 악재 속 ‘어니’ 카드로 AI 반격 선언
+https://www.aitimes.com/news/articleView.html?idxno=214110
