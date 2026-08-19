@@ -1,5 +1,14 @@
 🤖 26년 8월 19일 수요일 AI 뉴스
 
+서울시, '강남 심야 자율주행 택시' 19대로 대폭 늘린다
+https://www.aitimes.com/news/articleView.html?idxno=214133
+
+[기고] 클로드 워터마크가 정확해도 저자 판정은 틀릴 수 있다
+https://www.aitimes.com/news/articleView.html?idxno=214132
+
+[게시판] 잇다·서울시, AI·멘토링으로 ‘청년 취업 지원’ 확대 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=214131
+
 클레온, 표정·눈빛·몸동작 구현하는 ‘휴먼 AI 인터페이스'개발…”디지털 사이니지 적용”
 https://www.aitimes.com/news/articleView.html?idxno=214129
 
@@ -15,17 +24,8 @@ https://www.aitimes.com/news/articleView.html?idxno=214126
 크리어스, 스토리 공모전 대상작 AI 영화로 제작…부산국제영화제 출품 추진
 https://www.aitimes.com/news/articleView.html?idxno=214125
 
-허드슨에이아이, SBS 대표작 '펜트하우스' 에 AI 더빙 도입
-https://www.aitimes.com/news/articleView.html?idxno=214121
+"기술 개발은 미국, 상업화는 중국"...유니트리, 미국 연구 기반으로 로봇견 시장 장악
+https://www.aitimes.com/news/articleView.html?idxno=214124
 
-카카오모빌리티, ‘교통약자 보호구역’ 자율차 운행..."안전제어 알고리즘 적용"
-https://www.aitimes.com/news/articleView.html?idxno=214119
-
-iHW, 520억 규모 시리즈A 투자 유치…'초저전력 AI 반도체' 상용화 가속
-https://www.aitimes.com/news/articleView.html?idxno=214115
-
-펜실베이니아, AI 데이터센터 규제 대열 합류...주지사 행정명령 서명
-https://www.aitimes.com/news/articleView.html?idxno=214113
-
-바이두, 실적 악화 악재 속 ‘어니’ 카드로 AI 반격 선언
-https://www.aitimes.com/news/articleView.html?idxno=214110
+‘AI 미참여’의 역설…AI 수혜주는 반등하는데 애플만 10% 하락
+https://www.aitimes.com/news/articleView.html?idxno=214123
