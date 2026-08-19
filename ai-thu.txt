@@ -1,31 +1,31 @@
 🤖 26년 8월 20일 목요일 AI 뉴스
 
-테슬라, ‘공중 부양’ 로드스터 이달 시연 예정…스페이스X 기술 결합
-https://www.aitimes.com/news/articleView.html?idxno=214010
+서울시, '강남 심야 자율주행 택시' 19대로 대폭 늘린다
+https://www.aitimes.com/news/articleView.html?idxno=214133
 
-오픈AI, "8달러 내면 사용량 리셋"...챗GPT 플러스 유료 재설정 기습 테스트
-https://www.aitimes.com/news/articleView.html?idxno=213889
+[기고] 클로드 워터마크가 정확해도 저자 판정은 틀릴 수 있다
+https://www.aitimes.com/news/articleView.html?idxno=214132
 
-오픈AI·앤트로픽 암호화 '사고 과정' 통째 유출...API 설계 허점 파문
-https://www.aitimes.com/news/articleView.html?idxno=213894
+[게시판] 잇다·서울시, AI·멘토링으로 ‘청년 취업 지원’ 확대 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=214131
 
-오픈AI, 코덱스 대대적 개편 예고… 속도 94%·메모리 88% 감축
-https://www.aitimes.com/news/articleView.html?idxno=214016
+클레온, 표정·눈빛·몸동작 구현하는 ‘휴먼 AI 인터페이스'개발…”디지털 사이니지 적용”
+https://www.aitimes.com/news/articleView.html?idxno=214129
 
-한화솔루션, 태양전지 핵심 특허 유럽서 취소…진보성 결여
-https://www.aitimes.com/news/articleView.html?idxno=213933
+[게시판] 로브로스, 반도체·자동차 공장에 휴머노이드 9대 공급 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=214128
 
-앤트로픽 '워터마크' 도입에 사용자 반발…'클로드' 구독 취소 확산
-https://www.aitimes.com/news/articleView.html?idxno=213998
+HP코리아·업스테이지, 'AISE 2026'서 의료 AX 사례 선보여
+https://www.aitimes.com/news/articleView.html?idxno=214127
 
-구글, 가성비 모델 '제미나이 3.7 플래시' 공개… API 50% 파격 할인
-https://www.aitimes.com/news/articleView.html?idxno=213924
+DJI, 미국 제재 소송서 반전...항소법원 "중국 군수업체 지정 재검증하라"
+https://www.aitimes.com/news/articleView.html?idxno=214126
 
-그록 4.6, '세계 3위' 등극…프론티어 모델 경쟁 본격 합류
-https://www.aitimes.com/news/articleView.html?idxno=213882
+크리어스, 스토리 공모전 대상작 AI 영화로 제작…부산국제영화제 출품 추진
+https://www.aitimes.com/news/articleView.html?idxno=214125
 
-샌프란시스코 매장 운영하는 AI, '근태 불량' 인간 직원 해고 결정
-https://www.aitimes.com/news/articleView.html?idxno=214020
+"기술 개발은 미국, 상업화는 중국"...유니트리, 미국 연구 기반으로 로봇견 시장 장악
+https://www.aitimes.com/news/articleView.html?idxno=214124
 
-지푸 AI 'GLM-5.3' 출시...'키미 K3' 코딩 성능 따라붙어
-https://www.aitimes.com/news/articleView.html?idxno=213974
+‘AI 미참여’의 역설…AI 수혜주는 반등하는데 애플만 10% 하락
+https://www.aitimes.com/news/articleView.html?idxno=214123
