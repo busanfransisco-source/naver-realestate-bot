@@ -1,7 +1,13 @@
 🤖 26년 8월 19일 수요일 AI 뉴스
 
+삼성전자, 전남 광주에 플랙트그룹 HVAC 신규 생산라인 구축
+https://www.aitimes.com/news/articleView.html?idxno=214105
+
 뉴플로이, 개인 PC에서 구동하는 '온디바이스 AI OCR 솔루션' 출시
 https://www.aitimes.com/news/articleView.html?idxno=214098
+
+애플, '카메라 탑재' 에어팟 영상 유출...올 가을 출시 유력
+https://www.aitimes.com/news/articleView.html?idxno=214097
 
 엠아이큐브솔루션, 팔도 라면 공장에 AI 자율제조 플랫폼 공급
 https://www.aitimes.com/news/articleView.html?idxno=214096
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214087
 
 '모두의 AI' 프로젝트 공모에 6개 컨소시엄 출사표...이달 말 결정
 https://www.aitimes.com/news/articleView.html?idxno=214086
-
-맥주 한 잔에 코딩 토큰 '무제한'…베이징에 들어선 'AGI 바'
-https://www.aitimes.com/news/articleView.html?idxno=214084
-
-[게시판] KT·농협경제지주·한국MS, 유통 AX 협력으로 농산물 거래 활성화 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=214082
