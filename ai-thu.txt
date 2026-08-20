@@ -1,5 +1,17 @@
 🤖 26년 8월 20일 목요일 AI 뉴스
 
+"제미나이 앱에 7777만 입력하면"...구글, BTS와 함께하는 인터랙티브 기능 공개
+https://www.aitimes.com/news/articleView.html?idxno=214160
+
+‘모두의 AI’ 응모한 제논 "AI 에이전트 포털, 대국민 서비스로 확장"
+https://www.aitimes.com/news/articleView.html?idxno=214156
+
+데이원컴퍼니, AX 사업 본격화…인재 100명 공채 나선다
+https://www.aitimes.com/news/articleView.html?idxno=214152
+
+스트라이프, 오픈라우터 10조에 인수…AI 결제 인프라 확장
+https://www.aitimes.com/news/articleView.html?idxno=214151
+
 KTNF, 'OCP 테크 데이'서 차세대 데이터센터 서버 라인업 공개
 https://www.aitimes.com/news/articleView.html?idxno=214147
 
@@ -9,7 +21,7 @@ https://www.aitimes.com/news/articleView.html?idxno=214146
 AWS, 피지컬 AI 육성 프로그램 실시...리얼월드 등 국내 15개사 참여
 https://www.aitimes.com/news/articleView.html?idxno=214143
 
-이스트소프트, 대국민 AI '알비서'로 모두의 AI 도전한다
+이스트소프트, 대국민 AI '알비서'로 '모두의 AI' 도전한다
 https://www.aitimes.com/news/articleView.html?idxno=214141
 
 삼성전자 파운드리 단가 최대 15% 인상..."내년 흑자 전환 기대"
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214139
 
 유니트리, 상하이 상장 첫날 460% 폭등…시총 70조 달해
 https://www.aitimes.com/news/articleView.html?idxno=214138
-
-오픈AI, '기업용 데이터 보안'으로 승부...프롬프트·응답 저장 안 해
-https://www.aitimes.com/news/articleView.html?idxno=214137
-
-라틴아메리카·카리브해, 5월 생산 전력 64%가 재생에너지
-https://www.aitimes.com/news/articleView.html?idxno=214136
-
-경기도, 영농형 태양광 지원 조례 추진…농업인 비용·실증사업 지원 근거 마련
-https://www.aitimes.com/news/articleView.html?idxno=214135
-
-독일 연구진, 영농형 태양광 그늘에도 작물 적응
-https://www.aitimes.com/news/articleView.html?idxno=214134
