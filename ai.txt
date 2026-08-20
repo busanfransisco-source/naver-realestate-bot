@@ -1,31 +1,31 @@
 🤖 26년 8월 20일 목요일 AI 뉴스
 
-서울시, '강남 심야 자율주행 택시' 19대로 대폭 늘린다
-https://www.aitimes.com/news/articleView.html?idxno=214133
+KTNF, 'OCP 테크 데이'서 차세대 데이터센터 서버 라인업 공개
+https://www.aitimes.com/news/articleView.html?idxno=214147
 
-[기고] 클로드 워터마크가 정확해도 저자 판정은 틀릴 수 있다
-https://www.aitimes.com/news/articleView.html?idxno=214132
+스페이스X, 코딩 스타트업 인수 타진...코그니션 “사실 아니다” 반박
+https://www.aitimes.com/news/articleView.html?idxno=214146
 
-[게시판] 잇다·서울시, AI·멘토링으로 ‘청년 취업 지원’ 확대 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=214131
+AWS, 피지컬 AI 육성 프로그램 실시...리얼월드 등 국내 15개사 참여
+https://www.aitimes.com/news/articleView.html?idxno=214143
 
-클레온, 표정·눈빛·몸동작 구현하는 ‘휴먼 AI 인터페이스'개발…”디지털 사이니지 적용”
-https://www.aitimes.com/news/articleView.html?idxno=214129
+이스트소프트, 대국민 AI '알비서'로 모두의 AI 도전한다
+https://www.aitimes.com/news/articleView.html?idxno=214141
 
-[게시판] 로브로스, 반도체·자동차 공장에 휴머노이드 9대 공급 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=214128
+삼성전자 파운드리 단가 최대 15% 인상..."내년 흑자 전환 기대"
+https://www.aitimes.com/news/articleView.html?idxno=214139
 
-HP코리아·업스테이지, 'AISE 2026'서 의료 AX 사례 선보여
-https://www.aitimes.com/news/articleView.html?idxno=214127
+유니트리, 상하이 상장 첫날 460% 폭등…시총 70조 달해
+https://www.aitimes.com/news/articleView.html?idxno=214138
 
-DJI, 미국 제재 소송서 반전...항소법원 "중국 군수업체 지정 재검증하라"
-https://www.aitimes.com/news/articleView.html?idxno=214126
+오픈AI, '기업용 데이터 보안'으로 승부...프롬프트·응답 저장 안 해
+https://www.aitimes.com/news/articleView.html?idxno=214137
 
-크리어스, 스토리 공모전 대상작 AI 영화로 제작…부산국제영화제 출품 추진
-https://www.aitimes.com/news/articleView.html?idxno=214125
+라틴아메리카·카리브해, 5월 생산 전력 64%가 재생에너지
+https://www.aitimes.com/news/articleView.html?idxno=214136
 
-"기술 개발은 미국, 상업화는 중국"...유니트리, 미국 연구 기반으로 로봇견 시장 장악
-https://www.aitimes.com/news/articleView.html?idxno=214124
+경기도, 영농형 태양광 지원 조례 추진…농업인 비용·실증사업 지원 근거 마련
+https://www.aitimes.com/news/articleView.html?idxno=214135
 
-‘AI 미참여’의 역설…AI 수혜주는 반등하는데 애플만 10% 하락
-https://www.aitimes.com/news/articleView.html?idxno=214123
+독일 연구진, 영농형 태양광 그늘에도 작물 적응
+https://www.aitimes.com/news/articleView.html?idxno=214134
