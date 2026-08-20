@@ -1,31 +1,31 @@
 🤖 26년 8월 20일 목요일 AI 뉴스
 
+독파모 결과 추가 공개에도 '세부 내역 미흡' 논란
+https://www.aitimes.com/news/articleView.html?idxno=214172
+
+인트릭스, AI 검색 ‘미인용 원인’ 추적 시스템 '인트릭스-CT' 개발
+https://www.aitimes.com/news/articleView.html?idxno=214170
+
+메타, 맥OS 전용 AI 데스크톱 앱 정식 출시...‘슈퍼 앱’ 시장 추격전
+https://www.aitimes.com/news/articleView.html?idxno=214169
+
+스토리카, '크리에이터 마케팅 자동화' AI 에이전틱 플랫폼 론칭
+https://www.aitimes.com/news/articleView.html?idxno=214168
+
+LGU+, AI 통합 건물 관리 솔루션 'AI빌딩넷 by 익시' 출시
+https://www.aitimes.com/news/articleView.html?idxno=214167
+
+KT, 'K-PATH' AI 스타트업 16개사 선정..."미래 AX 사업 발굴"
+https://www.aitimes.com/news/articleView.html?idxno=214165
+
+중국, 엔비디아 'H200' 소량 수입 승인...바이트댄스·텐센트 1만대씩 수령
+https://www.aitimes.com/news/articleView.html?idxno=214164
+
+라이너, 리벨리온과 MOU…"국산 반도체-AI 에이전트 결합"
+https://www.aitimes.com/news/articleView.html?idxno=214162
+
 "제미나이 앱에 7777만 입력하면"...구글, BTS와 함께하는 인터랙티브 기능 공개
 https://www.aitimes.com/news/articleView.html?idxno=214160
 
 ‘모두의 AI’ 응모한 제논 "AI 에이전트 포털, 대국민 서비스로 확장"
 https://www.aitimes.com/news/articleView.html?idxno=214156
-
-데이원컴퍼니, AX 사업 본격화…인재 100명 공채 나선다
-https://www.aitimes.com/news/articleView.html?idxno=214152
-
-스트라이프, 오픈라우터 10조에 인수…AI 결제 인프라 확장
-https://www.aitimes.com/news/articleView.html?idxno=214151
-
-KTNF, 'OCP 테크 데이'서 차세대 데이터센터 서버 라인업 공개
-https://www.aitimes.com/news/articleView.html?idxno=214147
-
-스페이스X, 코딩 스타트업 인수 타진...코그니션 “사실 아니다” 반박
-https://www.aitimes.com/news/articleView.html?idxno=214146
-
-AWS, 피지컬 AI 육성 프로그램 실시...리얼월드 등 국내 15개사 참여
-https://www.aitimes.com/news/articleView.html?idxno=214143
-
-이스트소프트, 대국민 AI '알비서'로 '모두의 AI' 도전한다
-https://www.aitimes.com/news/articleView.html?idxno=214141
-
-삼성전자 파운드리 단가 최대 15% 인상..."내년 흑자 전환 기대"
-https://www.aitimes.com/news/articleView.html?idxno=214139
-
-유니트리, 상하이 상장 첫날 460% 폭등…시총 70조 달해
-https://www.aitimes.com/news/articleView.html?idxno=214138
