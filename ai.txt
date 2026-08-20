@@ -1,5 +1,11 @@
 🤖 26년 8월 20일 목요일 AI 뉴스
 
+구글, AI 기반 학습 도구 대거 공개…대학생 1년 무료 이벤트까지
+https://www.aitimes.com/news/articleView.html?idxno=214182
+
+[게시판] 한국레노버, 오늘의집 북촌서 ‘레노버 AI 팝업스토어’ 운영 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=214181
+
 ETRI, 'OCP 코리아 테크 데이'서 국산 AI 반도체 경쟁력 높일 시스템SW 3종 공개
 https://www.aitimes.com/news/articleView.html?idxno=214180
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214173
 
 독파모 결과 추가 공개에도 '세부 내역 미흡' 논란
 https://www.aitimes.com/news/articleView.html?idxno=214172
-
-인트릭스, AI 검색 ‘미인용 원인’ 추적 시스템 '인트릭스-CT' 개발
-https://www.aitimes.com/news/articleView.html?idxno=214170
-
-메타, 맥OS 전용 AI 데스크톱 앱 정식 출시...‘슈퍼 앱’ 시장 추격전
-https://www.aitimes.com/news/articleView.html?idxno=214169
