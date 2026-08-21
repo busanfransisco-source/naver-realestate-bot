@@ -1,31 +1,31 @@
 🤖 26년 8월 21일 금요일 AI 뉴스
 
+알리바바, AI·클라우드 성장에도 대규모 투자로 순이익 75% 급감
+https://www.aitimes.com/news/articleView.html?idxno=214215
+
+구글, 승무원 노조 반발로 스피릿 항공 데이터 매입 제동
+https://www.aitimes.com/news/articleView.html?idxno=214212
+
+"AI로 사회문제 해결한다"…과기부, 2026 AI·디지털 챌린지 공모
+https://www.aitimes.com/news/articleView.html?idxno=214211
+
+마이크론, 14조 투자해 미국 첫 AI 메모리 전문 연구소 설립
+https://www.aitimes.com/news/articleView.html?idxno=214209
+
+"시연 한 번으로 기술 습득"…제너럴리스트, 로봇 모델 'GEN-1.5' 공개
+https://www.aitimes.com/news/articleView.html?idxno=214204
+
+메타, '뮤즈 비디오' 테스트 착수…오디오 동시 생성 10초 영상 선보여
+https://www.aitimes.com/news/articleView.html?idxno=214203
+
 어니언소프트웨어, OCP서 차세대 데이터센터 운영 솔루션·개발 기술 소개
 https://www.aitimes.com/news/articleView.html?idxno=214202
+
+엔비디아, 코딩 스타트업 풀사이드와 8조 규모 라이선스·인재 채용 계약
+https://www.aitimes.com/news/articleView.html?idxno=214200
 
 카카오, 두 개로 나뉜다…“카카오AI·카카오X로 인적분할해 AI 혁신 가속”
 https://www.aitimes.com/news/articleView.html?idxno=214198
 
 바이브컴퍼니 “온톨로지 RAG로 기업 문서·정보 등록 자동화”
 https://www.aitimes.com/news/articleView.html?idxno=214196
-
-"AI로 만나는 아기상어"...셀렉트스타, '다투모'로 대화 안전성 검증
-https://www.aitimes.com/news/articleView.html?idxno=214194
-
-앤트로픽, 사내 AI 교육 노하우 담은 '클로드 아카데미' 공개
-https://www.aitimes.com/news/articleView.html?idxno=214192
-
-앤트로픽도 기업 데이터 보존 정책 개편... "고객 인프라에 직접 보관"
-https://www.aitimes.com/news/articleView.html?idxno=214191
-
-중국 다초, 폴리실리콘 원가 이하 판매…2분기 1125억 순손실
-https://www.aitimes.com/news/articleView.html?idxno=214187
-
-호주, 도매전력가격 하락…태양광·풍력 비중 37%, 배터리 6.1GW
-https://www.aitimes.com/news/articleView.html?idxno=214184
-
-[기고] 길 잃은 독파모 평가 기준, 고쳐야 할 세 가지
-https://www.aitimes.com/news/articleView.html?idxno=214183
-
-구글, AI 기반 학습 도구 대거 공개…대학생 1년 무료 이벤트까지
-https://www.aitimes.com/news/articleView.html?idxno=214182
