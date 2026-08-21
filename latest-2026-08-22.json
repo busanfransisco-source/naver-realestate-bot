@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-08-22 05:44:34",
+  "updated_at_kst": "2026-08-22 06:00:41",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 22일 토요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "서울 집 누가 제일 많이 샀나…30·40대, 여기 몰렸다",
+      "url": "https://n.news.naver.com/mnews/article/374/0000528793"
+    },
+    {
+      "title": "전세금 2억 맡기면 집주인 통장에 '月 73만원' 따박따박",
+      "url": "https://n.news.naver.com/mnews/article/374/0000528790"
+    },
     {
       "title": "“광화문·강남 출퇴근 편하다”… 매수세 몰리는 광명·성북 아파트값 ‘불장’",
       "url": "https://n.news.naver.com/mnews/article/022/0004152697"
@@ -34,14 +42,6 @@
     {
       "title": "\"한강뷰 양보 못해\"…17년 만에 다시 '회장님 소송전'",
       "url": "https://n.news.naver.com/mnews/article/008/0005403198"
-    },
-    {
-      "title": "\"서울 국평 13억대면 솔깃하죠\"…쌍용 더플래티넘 서대문, 견본주택 가보니",
-      "url": "https://n.news.naver.com/mnews/article/008/0005403196"
-    },
-    {
-      "title": "사람 떠나자 버스 끊겼다…전국 법정리(里) 45%가 '소멸 위기'",
-      "url": "https://n.news.naver.com/mnews/article/003/0014141437"
     }
   ]
 }
