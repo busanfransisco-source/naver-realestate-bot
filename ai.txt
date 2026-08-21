@@ -1,5 +1,8 @@
 🤖 26년 8월 22일 토요일 AI 뉴스
 
+삼성전자, 사상 최대 110조 규모 주주환원 단행
+https://www.aitimes.com/news/articleView.html?idxno=214236
+
 포티투마루, 화성시 '민원 행정 AI 플랫폼' 구축한다
 https://www.aitimes.com/news/articleView.html?idxno=214231
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214218
 
 웨이모, 로보택시용 맞춤형 자체 칩 개발...외부 의존 낮추고 주행 판단 강화
 https://www.aitimes.com/news/articleView.html?idxno=214217
-
-영국 영화관서 메타 '스마트 안경' 착용 제한...“사생활·영화 불법 촬영 우려”
-https://www.aitimes.com/news/articleView.html?idxno=214216
