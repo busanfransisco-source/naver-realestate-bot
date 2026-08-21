@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-08-22 07:04:57",
+  "updated_at_kst": "2026-08-22 07:17:47",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 22일 토요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "[현장in] \"내 집이 폭탄?\"…1년 반 만에 무너진 아파트 테라스",
+      "url": "https://n.news.naver.com/mnews/article/001/0016264625"
+    },
+    {
+      "title": "[부동산사용설명서] 30억 집 사면 '전수검증'…자금출처 어디까지 보나",
+      "url": "https://n.news.naver.com/mnews/article/421/0009126799"
+    },
     {
       "title": "“나홀로보다 대단지가 낫다”…집값 끌어올리는 ‘브랜드 타운’",
       "url": "https://n.news.naver.com/mnews/article/119/0003124124"
@@ -34,14 +42,6 @@
     {
       "title": "'고시원에 책상 빼고 욕조를?' 2030 뿔났다...국토부 '결국'",
       "url": "https://n.news.naver.com/mnews/article/374/0000528794"
-    },
-    {
-      "title": "서울 경매도 중저가에 몰렸다…용두동 아파트 낙찰가율 132%",
-      "url": "https://n.news.naver.com/mnews/article/008/0005403213"
-    },
-    {
-      "title": "새 빌딩 쏟아지는데 임대료도 올라…상업용 부동산의 ‘이상한 여름’[0과 1로 보는 부동산세상]",
-      "url": "https://n.news.naver.com/mnews/article/018/0006355997"
     }
   ]
 }
