@@ -3,29 +3,29 @@
 어니언소프트웨어, OCP서 차세대 데이터센터 운영 솔루션·개발 기술 소개
 https://www.aitimes.com/news/articleView.html?idxno=214202
 
+카카오, 두 개로 나뉜다…“카카오AI·카카오X로 인적분할해 AI 혁신 가속”
+https://www.aitimes.com/news/articleView.html?idxno=214198
+
+바이브컴퍼니 “온톨로지 RAG로 기업 문서·정보 등록 자동화”
+https://www.aitimes.com/news/articleView.html?idxno=214196
+
+"AI로 만나는 아기상어"...셀렉트스타, '다투모'로 대화 안전성 검증
+https://www.aitimes.com/news/articleView.html?idxno=214194
+
+앤트로픽, 사내 AI 교육 노하우 담은 '클로드 아카데미' 공개
+https://www.aitimes.com/news/articleView.html?idxno=214192
+
+앤트로픽도 기업 데이터 보존 정책 개편... "고객 인프라에 직접 보관"
+https://www.aitimes.com/news/articleView.html?idxno=214191
+
 중국 다초, 폴리실리콘 원가 이하 판매…2분기 1125억 순손실
 https://www.aitimes.com/news/articleView.html?idxno=214187
 
 호주, 도매전력가격 하락…태양광·풍력 비중 37%, 배터리 6.1GW
 https://www.aitimes.com/news/articleView.html?idxno=214184
 
+[기고] 길 잃은 독파모 평가 기준, 고쳐야 할 세 가지
+https://www.aitimes.com/news/articleView.html?idxno=214183
+
 구글, AI 기반 학습 도구 대거 공개…대학생 1년 무료 이벤트까지
 https://www.aitimes.com/news/articleView.html?idxno=214182
-
-[게시판] 한국레노버, 오늘의집 북촌서 ‘레노버 AI 팝업스토어’ 운영 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=214181
-
-ETRI, 'OCP 코리아 테크 데이'서 국산 AI 반도체 경쟁력 높일 시스템SW 3종 공개
-https://www.aitimes.com/news/articleView.html?idxno=214180
-
-래블업, 'OCP 코리아 테크 데이'서 AI 에이전트 보안·이기종 가속기 테스트베드 발표
-https://www.aitimes.com/news/articleView.html?idxno=214179
-
-전 메타 임원 “저커버그, 매출 위해 아동 안전 뒷전”...메타 상대 초대형 소송 본격화
-https://www.aitimes.com/news/articleView.html?idxno=214178
-
-KAIST, 산소 ‘전용 통로’로 AI 반도체 성능 높이고 전력 낮춘다
-https://www.aitimes.com/news/articleView.html?idxno=214177
-
-"AI 에이전트 허점 먼저 파악한다"...파브릭스, 자율형 레드팀 도구 ‘닉스’ 공개
-https://www.aitimes.com/news/articleView.html?idxno=214176
