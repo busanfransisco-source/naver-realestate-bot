@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-08-22 04:17:56",
+  "updated_at_kst": "2026-08-22 04:43:26",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 22일 토요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "\"한강뷰 양보 못해\"…17년 만에 다시 '회장님 소송전'",
+      "url": "https://n.news.naver.com/mnews/article/008/0005403198"
+    },
     {
       "title": "\"서울 국평 13억대면 솔깃하죠\"…쌍용 더플래티넘 서대문, 견본주택 가보니",
       "url": "https://n.news.naver.com/mnews/article/008/0005403196"
@@ -38,10 +42,6 @@
     {
       "title": "“좁은 고시원에 욕조가 웬말” 청년층 반발에 국토부 개정안 재검토 [부동산360]",
       "url": "https://n.news.naver.com/mnews/article/016/0002686913"
-    },
-    {
-      "title": "“고시원에 욕조가 웬 말”…국토부, 여론 뭇매에 규정 재검토",
-      "url": "https://n.news.naver.com/mnews/article/119/0003124109"
     }
   ]
 }
