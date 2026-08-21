@@ -1,5 +1,11 @@
 🤖 26년 8월 21일 금요일 AI 뉴스
 
+포티투마루, 화성시 '민원 행정 AI 플랫폼' 구축한다
+https://www.aitimes.com/news/articleView.html?idxno=214231
+
+[게시판] KAIST, 9월 1일 ‘증강현실연구센터 10주년 심포지엄’ 개최 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=214229
+
 아이에이클라우드, OCP서 모듈형 AI 데이터센터 '네오큐브' 공개
 https://www.aitimes.com/news/articleView.html?idxno=214228
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214217
 
 영국 영화관서 메타 '스마트 안경' 착용 제한...“사생활·영화 불법 촬영 우려”
 https://www.aitimes.com/news/articleView.html?idxno=214216
-
-알리바바, AI·클라우드 성장에도 대규모 투자로 순이익 75% 급감
-https://www.aitimes.com/news/articleView.html?idxno=214215
-
-중국 맞춤형 AI 칩 재진출설에...엔비디아 "중국 전용 LPU 로드맵 없어"
-https://www.aitimes.com/news/articleView.html?idxno=214214
