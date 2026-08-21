@@ -1,31 +1,31 @@
 🤖 26년 8월 21일 금요일 AI 뉴스
 
+아이에이클라우드, OCP서 모듈형 AI 데이터센터 '네오큐브' 공개
+https://www.aitimes.com/news/articleView.html?idxno=214228
+
+휴먼 랩스, 피지컬 AI 전용 '인간 데이터' 플랫폼 구축...로봇 스킬 학습 가속
+https://www.aitimes.com/news/articleView.html?idxno=214226
+
+구글, '젬마' 누적 다운로드 10억회 돌파…'어썸 젬마' 저장소 공개
+https://www.aitimes.com/news/articleView.html?idxno=214224
+
+메타, MS '애저' 최대 고객사로 부상...빅테크 ‘AI 순환 의존’ 심화
+https://www.aitimes.com/news/articleView.html?idxno=214222
+
+오픈AI, 맥용 챗GPT에 '애플 메시지' 플러그인 탑재..."아이메시지 읽고 답장까지"
+https://www.aitimes.com/news/articleView.html?idxno=214219
+
+메타, 미국서 '바이브 코딩' 게임 앱 '포켓' 출시
+https://www.aitimes.com/news/articleView.html?idxno=214218
+
 웨이모, 로보택시용 맞춤형 자체 칩 개발...외부 의존 낮추고 주행 판단 강화
 https://www.aitimes.com/news/articleView.html?idxno=214217
 
 영국 영화관서 메타 '스마트 안경' 착용 제한...“사생활·영화 불법 촬영 우려”
 https://www.aitimes.com/news/articleView.html?idxno=214216
 
-메타, 미국서 '바이브 코딩' 게임 앱 '포켓' 출시
-https://www.aitimes.com/news/articleView.html?idxno=214218
-
-"AI로 사회문제 해결한다"…과기부, 2026 AI·디지털 챌린지 공모
-https://www.aitimes.com/news/articleView.html?idxno=214211
-
 알리바바, AI·클라우드 성장에도 대규모 투자로 순이익 75% 급감
 https://www.aitimes.com/news/articleView.html?idxno=214215
 
-구글, 승무원 노조 반발로 스피릿 항공 데이터 매입 제동
-https://www.aitimes.com/news/articleView.html?idxno=214212
-
-마이크론, 14조 투자해 미국 첫 AI 메모리 전문 연구소 설립
-https://www.aitimes.com/news/articleView.html?idxno=214209
-
-"시연 한 번으로 기술 습득"…제너럴리스트, 로봇 모델 'GEN-1.5' 공개
-https://www.aitimes.com/news/articleView.html?idxno=214204
-
-메타, '뮤즈 비디오' 테스트 착수…오디오 동시 생성 10초 영상 선보여
-https://www.aitimes.com/news/articleView.html?idxno=214203
-
-엔비디아, 코딩 스타트업 풀사이드와 8조 규모 라이선스·인재 채용 계약
-https://www.aitimes.com/news/articleView.html?idxno=214200
+중국 맞춤형 AI 칩 재진출설에...엔비디아 "중국 전용 LPU 로드맵 없어"
+https://www.aitimes.com/news/articleView.html?idxno=214214
