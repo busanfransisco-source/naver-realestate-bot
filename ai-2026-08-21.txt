@@ -1,13 +1,22 @@
 🤖 26년 8월 21일 금요일 AI 뉴스
 
+웨이모, 로보택시용 맞춤형 자체 칩 개발...외부 의존 낮추고 주행 판단 강화
+https://www.aitimes.com/news/articleView.html?idxno=214217
+
+영국 영화관서 메타 '스마트 안경' 착용 제한...“사생활·영화 불법 촬영 우려”
+https://www.aitimes.com/news/articleView.html?idxno=214216
+
+메타, 미국서 '바이브 코딩' 게임 앱 '포켓' 출시
+https://www.aitimes.com/news/articleView.html?idxno=214218
+
+"AI로 사회문제 해결한다"…과기부, 2026 AI·디지털 챌린지 공모
+https://www.aitimes.com/news/articleView.html?idxno=214211
+
 알리바바, AI·클라우드 성장에도 대규모 투자로 순이익 75% 급감
 https://www.aitimes.com/news/articleView.html?idxno=214215
 
 구글, 승무원 노조 반발로 스피릿 항공 데이터 매입 제동
 https://www.aitimes.com/news/articleView.html?idxno=214212
-
-"AI로 사회문제 해결한다"…과기부, 2026 AI·디지털 챌린지 공모
-https://www.aitimes.com/news/articleView.html?idxno=214211
 
 마이크론, 14조 투자해 미국 첫 AI 메모리 전문 연구소 설립
 https://www.aitimes.com/news/articleView.html?idxno=214209
@@ -18,14 +27,5 @@ https://www.aitimes.com/news/articleView.html?idxno=214204
 메타, '뮤즈 비디오' 테스트 착수…오디오 동시 생성 10초 영상 선보여
 https://www.aitimes.com/news/articleView.html?idxno=214203
 
-어니언소프트웨어, OCP서 차세대 데이터센터 운영 솔루션·개발 기술 소개
-https://www.aitimes.com/news/articleView.html?idxno=214202
-
 엔비디아, 코딩 스타트업 풀사이드와 8조 규모 라이선스·인재 채용 계약
 https://www.aitimes.com/news/articleView.html?idxno=214200
-
-카카오, 두 개로 나뉜다…“카카오AI·카카오X로 인적분할해 AI 혁신 가속”
-https://www.aitimes.com/news/articleView.html?idxno=214198
-
-바이브컴퍼니 “온톨로지 RAG로 기업 문서·정보 등록 자동화”
-https://www.aitimes.com/news/articleView.html?idxno=214196
