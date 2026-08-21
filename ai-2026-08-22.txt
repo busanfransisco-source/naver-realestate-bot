@@ -1,5 +1,8 @@
 🤖 26년 8월 22일 토요일 AI 뉴스
 
+정부, ‘미래대응기금’ 신설…초과세수로 AI·첨단기술 집중 투자
+https://www.aitimes.com/news/articleView.html?idxno=214237
+
 삼성전자, 사상 최대 110조 규모 주주환원 단행
 https://www.aitimes.com/news/articleView.html?idxno=214236
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214219
 
 메타, 미국서 '바이브 코딩' 게임 앱 '포켓' 출시
 https://www.aitimes.com/news/articleView.html?idxno=214218
-
-웨이모, 로보택시용 맞춤형 자체 칩 개발...외부 의존 낮추고 주행 판단 강화
-https://www.aitimes.com/news/articleView.html?idxno=214217
