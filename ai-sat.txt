@@ -1,31 +1,31 @@
 🤖 26년 8월 22일 토요일 AI 뉴스
 
+엔비디아, 데이터센터 개발사 클로버리프 지분 투자… "전력·부지부터 잡는다"
+https://www.aitimes.com/news/articleView.html?idxno=214244
+
+'비전 프로' 대신 AI·스마트 안경에 올인…애플, 200명 구조조정
+https://www.aitimes.com/news/articleView.html?idxno=214243
+
+앤트로픽, '미소스 5' 적용 범위 확대…해킹 악용 차단하고 사이버 방어 지원
+https://www.aitimes.com/news/articleView.html?idxno=214242
+
+엔비디아, 국내 NPU 스타트업 리벨리온과 인수 협상 중
+https://www.aitimes.com/news/articleView.html?idxno=214241
+
+오픈AI, 'GPT-5.6 솔'까지 가격 일시 인하...코덱스 사용자 2천만 돌파
+https://www.aitimes.com/news/articleView.html?idxno=214240
+
+테슬라, '도어 핸들 결함·운전자 모니터링' 문제로 중국서 300만대 리콜
+https://www.aitimes.com/news/articleView.html?idxno=214239
+
+딥시크, 멀티모달 에이전트 'V4-플래시-비전' 공개...'오퍼스 4.8'에 도전
+https://www.aitimes.com/news/articleView.html?idxno=214238
+
 정부, ‘미래대응기금’ 신설…초과세수로 AI·첨단기술 집중 투자
 https://www.aitimes.com/news/articleView.html?idxno=214237
 
 삼성전자, 사상 최대 110조 규모 주주환원 단행
 https://www.aitimes.com/news/articleView.html?idxno=214236
 
-포티투마루, 화성시 '민원 행정 AI 플랫폼' 구축한다
-https://www.aitimes.com/news/articleView.html?idxno=214231
-
-[게시판] KAIST, 9월 1일 ‘증강현실연구센터 10주년 심포지엄’ 개최 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=214229
-
-아이에이클라우드, OCP서 모듈형 AI 데이터센터 '네오큐브' 공개
-https://www.aitimes.com/news/articleView.html?idxno=214228
-
-휴먼 랩스, 피지컬 AI 전용 '인간 데이터' 플랫폼 구축...로봇 스킬 학습 가속
-https://www.aitimes.com/news/articleView.html?idxno=214226
-
-구글, '젬마' 누적 다운로드 10억회 돌파…'어썸 젬마' 저장소 공개
-https://www.aitimes.com/news/articleView.html?idxno=214224
-
-메타, MS '애저' 최대 고객사로 부상...빅테크 ‘AI 순환 의존’ 심화
-https://www.aitimes.com/news/articleView.html?idxno=214222
-
-오픈AI, 맥용 챗GPT에 '애플 메시지' 플러그인 탑재..."아이메시지 읽고 답장까지"
-https://www.aitimes.com/news/articleView.html?idxno=214219
-
-메타, 미국서 '바이브 코딩' 게임 앱 '포켓' 출시
-https://www.aitimes.com/news/articleView.html?idxno=214218
+[내면 지도 그리기] 30 Inner Mapping: 나를 찾는 지도
+https://www.aitimes.com/news/articleView.html?idxno=214233
