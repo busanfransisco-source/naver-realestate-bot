@@ -3,6 +3,9 @@
 앤트로픽, 구글 TPU 주역 영입…자체 AI 칩 개발 가속
 https://www.aitimes.com/news/articleView.html?idxno=214247
 
+플로리다, 챗GPT ‘공공 위해 요소’ 지정 요구...알트먼·오픈AI 전방위 압박
+https://www.aitimes.com/news/articleView.html?idxno=214246
+
 카운터포인트 "올해 스마트폰 출하량 14%↓...삼성, 유일한 출하량 증가 전망"
 https://www.aitimes.com/news/articleView.html?idxno=214245
 
@@ -12,7 +15,7 @@ https://www.aitimes.com/news/articleView.html?idxno=214244
 '비전 프로' 대신 AI·스마트 안경에 올인…애플, 200명 구조조정
 https://www.aitimes.com/news/articleView.html?idxno=214243
 
-앤트로픽, '미소스 5' 적용 범위 확대…해킹 악용 차단하고 사이버 방어 지원
+앤트로픽, '미소스 5' 적용 범위 확대…악용 차단하고 사이버 방어 지원
 https://www.aitimes.com/news/articleView.html?idxno=214242
 
 엔비디아, 국내 NPU 스타트업 리벨리온과 인수 협상 중
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214239
 
 딥시크, 멀티모달 에이전트 'V4-플래시-비전' 공개...'오퍼스 4.8'에 도전
 https://www.aitimes.com/news/articleView.html?idxno=214238
-
-정부, ‘미래대응기금’ 신설…초과세수로 AI·첨단기술 집중 투자
-https://www.aitimes.com/news/articleView.html?idxno=214237
