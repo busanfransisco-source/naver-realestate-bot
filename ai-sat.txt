@@ -1,5 +1,11 @@
 🤖 26년 8월 22일 토요일 AI 뉴스
 
+앤트로픽, 구글 TPU 주역 영입…자체 AI 칩 개발 가속
+https://www.aitimes.com/news/articleView.html?idxno=214247
+
+카운터포인트 "올해 스마트폰 출하량 14%↓...삼성, 유일한 출하량 증가 전망"
+https://www.aitimes.com/news/articleView.html?idxno=214245
+
 엔비디아, 데이터센터 개발사 클로버리프 지분 투자… "전력·부지부터 잡는다"
 https://www.aitimes.com/news/articleView.html?idxno=214244
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214238
 
 정부, ‘미래대응기금’ 신설…초과세수로 AI·첨단기술 집중 투자
 https://www.aitimes.com/news/articleView.html?idxno=214237
-
-삼성전자, 사상 최대 110조 규모 주주환원 단행
-https://www.aitimes.com/news/articleView.html?idxno=214236
-
-[내면 지도 그리기] 30 Inner Mapping: 나를 찾는 지도
-https://www.aitimes.com/news/articleView.html?idxno=214233
