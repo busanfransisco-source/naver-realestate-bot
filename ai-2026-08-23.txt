@@ -1,5 +1,8 @@
 🤖 26년 8월 23일 일요일 AI 뉴스
 
+[AI 이슈트렌드] 집중호우 피해·민주당 전당대회 주목…증권가는 '대형 주주환원' 화제
+https://www.aitimes.com/news/articleView.html?idxno=214251
+
 익명 'Ox 알파' 등장…코딩 성능·100조 토큰 무상 제공에 '발칵'
 https://www.aitimes.com/news/articleView.html?idxno=214249
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214241
 
 오픈AI, 'GPT-5.6 솔'까지 가격 일시 인하...코덱스 사용자 2천만 돌파
 https://www.aitimes.com/news/articleView.html?idxno=214240
-
-테슬라, '도어 핸들 결함·운전자 모니터링' 문제로 중국서 300만대 리콜
-https://www.aitimes.com/news/articleView.html?idxno=214239
