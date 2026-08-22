@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-08-23 06:09:34",
+  "updated_at_kst": "2026-08-23 06:43:53",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 23일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "'닥치고 속도전'인데…4년만에 꺼낸 비주택 리모델링 '0'",
+      "url": "https://n.news.naver.com/mnews/article/001/0016265049"
+    },
     {
       "title": "\"방 빼달라\"는 집주인들…실거주 전환에 전세난 '이중 압박'",
       "url": "https://n.news.naver.com/mnews/article/421/0009127198"
@@ -38,10 +42,6 @@
     {
       "title": "코레일·도로공사 이어 철도공단도 교수…교통 산하기관 '교수 전성시대'",
       "url": "https://n.news.naver.com/mnews/article/008/0005403295"
-    },
-    {
-      "title": "[분양캘린더] 서울 서대문·경기 부천 등 전국 5430가구 분양",
-      "url": "https://n.news.naver.com/mnews/article/008/0005403294"
     }
   ]
 }
