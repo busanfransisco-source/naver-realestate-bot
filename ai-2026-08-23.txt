@@ -1,5 +1,11 @@
 🤖 26년 8월 23일 일요일 AI 뉴스
 
+메타, '뮤즈 스파크 1.2' 오픈라우터에 현존 최저가로 할인
+https://www.aitimes.com/news/articleView.html?idxno=214263
+
+KT-서울시, 초등학생 대상 'AI 미래 캠프' 진행...”윤리 소양 갖춘 인재 육성”
+https://www.aitimes.com/news/articleView.html?idxno=214262
+
 앤트로픽서 유행하는 클로드 코드 ‘/eli5’ 스킬... "복잡한 코드를 그림으로 설명"
 https://www.aitimes.com/news/articleView.html?idxno=214260
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214254
 
 메모리 폭등에 엔비디아 서버 최대 15% 인상...빅테크 부담 가중
 https://www.aitimes.com/news/articleView.html?idxno=214253
-
-LGU+·유튜브 '유쓰 AI 쇼츠 페스티벌'에 작품 5009개 접수
-https://www.aitimes.com/news/articleView.html?idxno=214252
-
-[AI 이슈트렌드] 집중호우 피해·민주당 전당대회 주목…증권가는 '대형 주주환원' 화제
-https://www.aitimes.com/news/articleView.html?idxno=214251
