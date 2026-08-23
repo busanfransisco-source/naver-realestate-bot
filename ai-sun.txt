@@ -1,12 +1,15 @@
 🤖 26년 8월 23일 일요일 AI 뉴스
 
+샤오미 '미모-V3-프로' 유출 스크린샷 논란…"코딩·에이전트 최상위권"
+https://www.aitimes.com/news/articleView.html?idxno=214264
+
 메타, '뮤즈 스파크 1.2' 오픈라우터에 현존 최저가로 할인
 https://www.aitimes.com/news/articleView.html?idxno=214263
 
 KT-서울시, 초등학생 대상 'AI 미래 캠프' 진행...”윤리 소양 갖춘 인재 육성”
 https://www.aitimes.com/news/articleView.html?idxno=214262
 
-앤트로픽서 유행하는 클로드 코드 ‘/eli5’ 스킬... "복잡한 코드를 그림으로 설명"
+앤트로픽서 유행하는 클로드 코드 ‘/eli5’ 스킬..."코드를 그림으로 설명"
 https://www.aitimes.com/news/articleView.html?idxno=214260
 
 구글, '안티그래비티' 원격 제어 출시..."이동 중에도 AI 개발 계속"
@@ -18,7 +21,7 @@ https://www.aitimes.com/news/articleView.html?idxno=214258
 "AI 모델 해킹 사고 때문?"…오픈AI, 캘리포니아 AI 규제법 지지로 급선회
 https://www.aitimes.com/news/articleView.html?idxno=214257
 
-"LLM보다 하네스가 핵심"…엔비디아 AVO, 장기 자율 AI 에이전트 가능성 입증
+"LLM보다 하네스가 핵심"…엔비디아 AVO, 장기 에이전트 가능성 입증
 https://www.aitimes.com/news/articleView.html?idxno=214256
 
 "중소형 모델로 빅테크 압도"...인히어런트, '연구 감각' 갖춘 AI 과학자 선보여
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214255
 
 앤트로픽, IPO서 138조 조달 목표…역대 최대 상장 기록 경신 전망
 https://www.aitimes.com/news/articleView.html?idxno=214254
-
-메모리 폭등에 엔비디아 서버 최대 15% 인상...빅테크 부담 가중
-https://www.aitimes.com/news/articleView.html?idxno=214253
