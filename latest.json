@@ -1,14 +1,22 @@
 {
-  "updated_at_kst": "2026-08-24 06:44:03",
+  "updated_at_kst": "2026-08-24 07:01:15",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 24일 월요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "첨단3지구 마지막 민간분양…사흘 만에 1만8000명 몰렸다",
+      "url": "https://n.news.naver.com/mnews/article/011/0004654390"
+    },
+    {
+      "title": "[리얼]서울 평균 아파트값 16억 돌파…중위값은?",
+      "url": "https://n.news.naver.com/mnews/article/021/0002813216"
+    },
     {
       "title": "너무 복잡한 '재초환'…래미안트리니원, 얼마 낼까",
       "url": "https://n.news.naver.com/mnews/article/648/0000050065"
     },
     {
-      "title": "\"당장 2억 갚으라니\"…수없이 바뀌는 규제에 실수요자 '눈물' [시장톡]",
+      "title": "\"다음달까지 2억 갚으세요\"…은행 전화 한 통에 '날벼락' [시장톡]",
       "url": "https://n.news.naver.com/mnews/article/015/0005323787"
     },
     {
@@ -34,14 +42,6 @@
     {
       "title": "주택난 때마다 소환된 용산공원… 40년 가까운 논쟁 끝날까",
       "url": "https://n.news.naver.com/mnews/article/366/0001187825"
-    },
-    {
-      "title": "\"돈 더 줄게, 보증금도 깎을게\"…그래도 외면하는 건설사들",
-      "url": "https://n.news.naver.com/mnews/article/031/0001051717"
-    },
-    {
-      "title": "8·13 대책에도 집값 불안하자…'단기 공급' 가능한 자투리땅 총동원령",
-      "url": "https://n.news.naver.com/mnews/article/003/0014142886"
     }
   ]
 }
