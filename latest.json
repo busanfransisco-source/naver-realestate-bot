@@ -1,8 +1,20 @@
 {
-  "updated_at_kst": "2026-08-24 04:13:08",
+  "updated_at_kst": "2026-08-24 04:41:23",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 24일 월요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "‘용산공원 평행선’ 오세훈-김윤덕 이번주 다시 회동",
+      "url": "https://n.news.naver.com/mnews/article/020/0003742785"
+    },
+    {
+      "title": "“고가 법인주택 42%는 사주 일가 황제 사택”",
+      "url": "https://n.news.naver.com/mnews/article/020/0003742775"
+    },
+    {
+      "title": "시공 10년 내공 쌓은 GS건설… AI 데이터센터 영토 넓힌다",
+      "url": "https://n.news.naver.com/mnews/article/469/0000949603"
+    },
     {
       "title": "키맞추는 강북아파트, 중위값 10억 찍었다",
       "url": "https://n.news.naver.com/mnews/article/008/0005403510"
@@ -30,18 +42,6 @@
     {
       "title": "최고 49층 1859가구… 7호선 초역세권",
       "url": "https://n.news.naver.com/mnews/article/023/0003994454"
-    },
-    {
-      "title": "고시원에 책상 빼고 욕조 넣자던 국토부 “재검토”",
-      "url": "https://n.news.naver.com/mnews/article/023/0003994453"
-    },
-    {
-      "title": "서울 거주자의 경기 아파트 매수 5년만에 최대… 서울 아파트 평균값 첫 16억 넘어",
-      "url": "https://n.news.naver.com/mnews/article/020/0003742739"
-    },
-    {
-      "title": "'비거주 1주택자 실거주' 요건 완화되나…당정, 종부세 공제액 축소 재검토",
-      "url": "https://n.news.naver.com/mnews/article/138/0002238674"
     }
   ]
 }
