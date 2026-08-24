@@ -1,5 +1,8 @@
 🤖 26년 8월 24일 월요일 AI 뉴스
 
+엔비디아, 퍼플렉시티에 수십억달러 투자 논의…기업 가치 41조 평가
+https://www.aitimes.com/news/articleView.html?idxno=214316
+
 [게시판] 스카이인텔리전스, JTBC 피지컬AI 다큐멘터리에 소개 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=214315
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214306
 
 파두, ‘OCP 코리아 테크 데이’서 AI 데이터센터 특화 비전 공개
 https://www.aitimes.com/news/articleView.html?idxno=214305
-
-메타, 스마트 안경에 해킹 불가 ‘물리적 킬 스위치’ 도입...사생활 침해 논란 잡는다
-https://www.aitimes.com/news/articleView.html?idxno=214304
