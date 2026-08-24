@@ -1,5 +1,17 @@
 🤖 26년 8월 24일 월요일 AI 뉴스
 
+유발 하라리 "AI 인권 부여·인간 사칭 막아야…종말 아닌 신뢰의 위기"
+https://www.aitimes.com/news/articleView.html?idxno=214282
+
+오픈AI 서밋에 모인 수학자들…"AI 진화, 수학자 입지 흔든다"
+https://www.aitimes.com/news/articleView.html?idxno=214281
+
+허깅페이스, 18조 매각 추진...빅테크 인수전 펼쳐지나
+https://www.aitimes.com/news/articleView.html?idxno=214277
+
+엔비디아, 중국 '오픈 모델' 독주 막는다...자체 모델 개발로 전면전
+https://www.aitimes.com/news/articleView.html?idxno=214276
+
 중국 장쑤성, 태양광 100GW 돌파…석탄 제치고 최대 전원
 https://www.aitimes.com/news/articleView.html?idxno=214274
 
@@ -9,7 +21,7 @@ https://www.aitimes.com/news/articleView.html?idxno=214271
 뉴질랜드, 태양광 1년 새 52% 증가…3년 내 930MW 가동 예정
 https://www.aitimes.com/news/articleView.html?idxno=214270
 
-프리윌린, 피어슨과 협력으로 콘텐츠 강화…“국내 100개 대학이 선택한 에듀테크”
+프리윌린, 피어슨과 협력으로 콘텐츠 강화…“100개 대학이 선택한 에듀테크”
 https://www.aitimes.com/news/articleView.html?idxno=214269
 
 한국딥러닝 “문서 에이전트, 인식률 넘어 ‘오답 찾는 능력’이 더 중요해”
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214266
 
 샤오미 '미모-V3-프로' 유출 스크린샷 논란…"코딩·에이전트 최상위권"
 https://www.aitimes.com/news/articleView.html?idxno=214264
-
-메타, '뮤즈 스파크 1.2' 오픈라우터에 현존 최저가로 할인
-https://www.aitimes.com/news/articleView.html?idxno=214263
-
-KT-서울시, 초등학생 대상 'AI 미래 캠프' 진행...”윤리 소양 갖춘 인재 육성”
-https://www.aitimes.com/news/articleView.html?idxno=214262
-
-앤트로픽서 유행하는 클로드 코드 ‘/eli5’ 스킬..."코드를 그림으로 설명"
-https://www.aitimes.com/news/articleView.html?idxno=214260
-
-구글, '안티그래비티' 원격 제어 출시..."이동 중에도 AI 개발 계속"
-https://www.aitimes.com/news/articleView.html?idxno=214259
