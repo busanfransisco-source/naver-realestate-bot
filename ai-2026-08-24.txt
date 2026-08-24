@@ -1,31 +1,31 @@
 🤖 26년 8월 24일 월요일 AI 뉴스
 
+[게시판] 스카이인텔리전스, JTBC 피지컬AI 다큐멘터리에 소개 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=214315
+
+플러스제로, AI GEO 솔루션 '보이스 인텔리전스' 공개
+https://www.aitimes.com/news/articleView.html?idxno=214313
+
+과기부 “AI와 과학기술 결합해 공학 분야 한계 돌파할 것”
+https://www.aitimes.com/news/articleView.html?idxno=214312
+
 KT, ‘AX 컴퍼니’ 전환 속도…플랫폼·인프라·업무방식 3대 전략 발표
 https://www.aitimes.com/news/articleView.html?idxno=214311
 
 오픈AI, 개발자 행사 '데브데이 익스체인지' 10월22일 서울서 연다
 https://www.aitimes.com/news/articleView.html?idxno=214310
 
+후지필름, AI 반도체 소재 생산 확대...'필름·사무기기 넘어 체질 개선'
+https://www.aitimes.com/news/articleView.html?idxno=214309
+
 디포그, 'OCP 코리아 테크 데이 '서 랙·파워·냉각 아우르는 AIDC 인프라 공개
 https://www.aitimes.com/news/articleView.html?idxno=214307
+
+테슬라·우버·웨이모, 라스베이거스서 로보택시 8000대 운행 허가 획득
+https://www.aitimes.com/news/articleView.html?idxno=214306
 
 파두, ‘OCP 코리아 테크 데이’서 AI 데이터센터 특화 비전 공개
 https://www.aitimes.com/news/articleView.html?idxno=214305
 
-포지큐브 DVLM, ‘OCR벤치 v2’ 국내 1위·글로벌 2위
-https://www.aitimes.com/news/articleView.html?idxno=214303
-
-"누끼 제거는 옛말"…오픈AI, API로 '배경 없는 투명 이미지' 직접 생성
-https://www.aitimes.com/news/articleView.html?idxno=214301
-
-코난테크놀로지, 실사례 중심 ‘AI 서밋’ 9월9일 개최…”도구 넘어 ‘일하는’ AI”
-https://www.aitimes.com/news/articleView.html?idxno=214300
-
-그렙, 미국 웨스트클리프대학에 AI 시험감독·역량평가 솔루션 제공
-https://www.aitimes.com/news/articleView.html?idxno=214298
-
-AI 시대 부활 선언한 '인터넷 원조' 야후..."30년 축적 데이터로 차별화"
-https://www.aitimes.com/news/articleView.html?idxno=214296
-
-SKT, 서울대와 ‘10년 협력’ 이어가…AI 강좌로 인재 양성 지원
-https://www.aitimes.com/news/articleView.html?idxno=214293
+메타, 스마트 안경에 해킹 불가 ‘물리적 킬 스위치’ 도입...사생활 침해 논란 잡는다
+https://www.aitimes.com/news/articleView.html?idxno=214304
