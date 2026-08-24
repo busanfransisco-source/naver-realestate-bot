@@ -1,5 +1,17 @@
 🤖 26년 8월 24일 월요일 AI 뉴스
 
+중국 장쑤성, 태양광 100GW 돌파…석탄 제치고 최대 전원
+https://www.aitimes.com/news/articleView.html?idxno=214274
+
+오스트리아, 소형 태양광 보조금 줄이고 배터리 지원 확대
+https://www.aitimes.com/news/articleView.html?idxno=214271
+
+뉴질랜드, 태양광 1년 새 52% 증가…3년 내 930MW 가동 예정
+https://www.aitimes.com/news/articleView.html?idxno=214270
+
+프리윌린, 피어슨과 협력으로 콘텐츠 강화…“국내 100개 대학이 선택한 에듀테크”
+https://www.aitimes.com/news/articleView.html?idxno=214269
+
 한국딥러닝 “문서 에이전트, 인식률 넘어 ‘오답 찾는 능력’이 더 중요해”
 https://www.aitimes.com/news/articleView.html?idxno=214266
 
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214260
 
 구글, '안티그래비티' 원격 제어 출시..."이동 중에도 AI 개발 계속"
 https://www.aitimes.com/news/articleView.html?idxno=214259
-
-리퀴드 AI ‘디스파크’, 메모리 병목 뚫었다…소형 모델이 미리 쓰고 대형 모델이 검증
-https://www.aitimes.com/news/articleView.html?idxno=214258
-
-"AI 모델 해킹 사고 때문?"…오픈AI, 캘리포니아 AI 규제법 지지로 급선회
-https://www.aitimes.com/news/articleView.html?idxno=214257
-
-"LLM보다 하네스가 핵심"…엔비디아 AVO, 장기 에이전트 가능성 입증
-https://www.aitimes.com/news/articleView.html?idxno=214256
-
-"중소형 모델로 빅테크 압도"...인히어런트, '연구 감각' 갖춘 AI 과학자 선보여
-https://www.aitimes.com/news/articleView.html?idxno=214255
