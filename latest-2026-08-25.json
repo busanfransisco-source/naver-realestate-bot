@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-08-25 05:53:24",
+  "updated_at_kst": "2026-08-25 06:00:39",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 25일 화요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "철도 기관사 시험, 다자녀·차상위계층 수수료 50% 감면",
+      "url": "https://n.news.naver.com/mnews/article/014/0005565804"
+    },
+    {
+      "title": "\"팔아도 세금, 안 팔아도 세금\"…'얼마'에서 '어떻게'로 넘어간 부동산 세금 딜레마",
+      "url": "https://n.news.naver.com/mnews/article/014/0005565803"
+    },
     {
       "title": "전기료 5년 새 74% 뛴 코레일…아껴도 못 피하는 '최대전력 요금'",
       "url": "https://n.news.naver.com/mnews/article/421/0009130165"
@@ -34,14 +42,6 @@
     {
       "title": "재건축부터 용산 개발까지…주택공급 핵심법안 26일 국회로",
       "url": "https://n.news.naver.com/mnews/article/421/0009130144"
-    },
-    {
-      "title": "집은 쏟아지고 전세는 말랐다…8·3 세제안 3주 만에 보완론",
-      "url": "https://n.news.naver.com/mnews/article/003/0014145290"
-    },
-    {
-      "title": "유보화 성동구청장 \"삼표부지 더 늦어선 안 돼…해법 내야\"",
-      "url": "https://n.news.naver.com/mnews/article/421/0009130137"
     }
   ]
 }
