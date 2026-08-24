@@ -1,5 +1,17 @@
 🤖 26년 8월 24일 월요일 AI 뉴스
 
+롯데이노베이트, 강릉에서 제주·경주·순천까지 자율주행 셔틀 누적 10만km 주행
+https://www.aitimes.com/news/articleView.html?idxno=214292
+
+삼성SDS, 서울대 대규모 네트워크 인프라 강화…“AI 네이티브 캠퍼스 본격화”
+https://www.aitimes.com/news/articleView.html?idxno=214290
+
+"10년 내 암 정복" 빅테크 호언장담에 과학계 "근거 없는 과장" 일침
+https://www.aitimes.com/news/articleView.html?idxno=214286
+
+중국 휴머노이드 로봇 매출은 '착시'…정부 훈련 센터가 부풀린 '가짜 수요'
+https://www.aitimes.com/news/articleView.html?idxno=214285
+
 유발 하라리 "AI 인권 부여·인간 사칭 막아야…종말 아닌 신뢰의 위기"
 https://www.aitimes.com/news/articleView.html?idxno=214282
 
@@ -15,17 +27,5 @@ https://www.aitimes.com/news/articleView.html?idxno=214276
 중국 장쑤성, 태양광 100GW 돌파…석탄 제치고 최대 전원
 https://www.aitimes.com/news/articleView.html?idxno=214274
 
-오스트리아, 소형 태양광 보조금 줄이고 배터리 지원 확대
-https://www.aitimes.com/news/articleView.html?idxno=214271
-
-뉴질랜드, 태양광 1년 새 52% 증가…3년 내 930MW 가동 예정
-https://www.aitimes.com/news/articleView.html?idxno=214270
-
-프리윌린, 피어슨과 협력으로 콘텐츠 강화…“100개 대학이 선택한 에듀테크”
-https://www.aitimes.com/news/articleView.html?idxno=214269
-
-한국딥러닝 “문서 에이전트, 인식률 넘어 ‘오답 찾는 능력’이 더 중요해”
-https://www.aitimes.com/news/articleView.html?idxno=214266
-
-샤오미 '미모-V3-프로' 유출 스크린샷 논란…"코딩·에이전트 최상위권"
-https://www.aitimes.com/news/articleView.html?idxno=214264
+테슬라, 태양광 지붕 '솔라 루프' 사실상 중단
+https://www.aitimes.com/news/articleView.html?idxno=214273
