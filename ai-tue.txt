@@ -1,7 +1,25 @@
 🤖 26년 8월 25일 화요일 AI 뉴스
 
+중국 초저예산 애니, '옥스 알파' 밈 타고 글로벌 테크 이슈로 급부상
+https://www.aitimes.com/news/articleView.html?idxno=214340
+
+한국전자통신연구원, ‘AAIF’ 가입…국내 '에이전틱 AI 글로벌 표준 선점' 지원
+https://www.aitimes.com/news/articleView.html?idxno=214338
+
+엔백스, AI 교육 운영 플랫폼 ‘뮤즈’ 공식 출시
+https://www.aitimes.com/news/articleView.html?idxno=214334
+
+‘글로벌 1400만 사용자’ 라이너, 500억 시리즈C 투자 유치
+https://www.aitimes.com/news/articleView.html?idxno=214333
+
+대만 검찰, B300 서버 중국 빼돌린 엔비디아 매니저에 징역 5년 구형
+https://www.aitimes.com/news/articleView.html?idxno=214332
+
 엑스와이지, 휴머노이드 ‘듀스’ 3지 로봇핸드 공개
 https://www.aitimes.com/news/articleView.html?idxno=214331
+
+아마존, 메모리 부족에 킨들·에코 가격 최대 60% 기습 인상
+https://www.aitimes.com/news/articleView.html?idxno=214330
 
 한컴, 에이전틱 OS로 남양유업 AX 돕는다
 https://www.aitimes.com/news/articleView.html?idxno=214328
@@ -11,21 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214326
 
 이스트소프트, 비개발자 위한 AI 마크다운 앱 '마크닷' 출시
 https://www.aitimes.com/news/articleView.html?idxno=214323
-
-위버스브레인, 음성 AI로 SKT와 AI 에이전트 개발 협력
-https://www.aitimes.com/news/articleView.html?idxno=214321
-
-앤트로픽, 슬랙용 에이전트 '클로드 태그' 강화..."대화 흐름 읽고 눈치껏 개입"
-https://www.aitimes.com/news/articleView.html?idxno=214320
-
-메타, AI 에이전트 '해치' 출시 임박...10월엔 새 모델 '워터멜론' 공개
-https://www.aitimes.com/news/articleView.html?idxno=214319
-
-노타, EMNLP 논문 2편 채택...“MoE 양자화 난제 풀었다”
-https://www.aitimes.com/news/articleView.html?idxno=214318
-
-중국, 태양광 웨이퍼 가격 최대 40% 급등…미국 관세 앞두고 주문 몰려
-https://www.aitimes.com/news/articleView.html?idxno=214317
-
-엔비디아, 퍼플렉시티에 수십억달러 투자 논의…기업 가치 41조 평가
-https://www.aitimes.com/news/articleView.html?idxno=214316
