@@ -1,7 +1,13 @@
 🤖 26년 8월 25일 화요일 AI 뉴스
 
+[게시판] 래블업, 증권신고서 제출…코스닥 상장 본격화 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=214358
+
 솔트룩스 '구버', 1분 만에 나만의 AI 에이전트 만든다…'AI 버디' 출시
 https://www.aitimes.com/news/articleView.html?idxno=214356
+
+구글, 제미나이 3.5 프로 건너뛰고 차세대 ‘제미나이 4’ 출시 준비하나
+https://www.aitimes.com/news/articleView.html?idxno=214355
 
 [게시판] 케어링, APEC 정책 포럼서 'AI 돌봄 서비스' 청사진 제시 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=214354
@@ -9,23 +15,17 @@ https://www.aitimes.com/news/articleView.html?idxno=214354
 KT, 대졸 신입 채용서 'AX 활용 역량' 집중 평가…140명 규모
 https://www.aitimes.com/news/articleView.html?idxno=214353
 
-래블업, GPU 분할 기술로 코스닥 상장 공모절차 착수
-https://www.aitimes.com/news/articleView.html?idxno=214352
-
 링크드인 ‘AI 엉터리 콘텐츠’ 신고 버튼 통했다…조회수 40% 감소
 https://www.aitimes.com/news/articleView.html?idxno=214351
 
 스페이스X·엔비디아, 우주용 ‘베라 루빈’ 개발…2027년 궤도 투입
 https://www.aitimes.com/news/articleView.html?idxno=214350
 
+애플, 차세대 '맥 미니' 발표 임박...9월 아이폰 행사 전 공개 가능성
+https://www.aitimes.com/news/articleView.html?idxno=214349
+
 트럼프, 스페이스X 상장 직후 7000만원 투자..백악관 "독립 관리" 해명
 https://www.aitimes.com/news/articleView.html?idxno=214348
 
-우크라이나·러시아 드론 자율 공격 피해에 서로 '맞불 주장'
-https://www.aitimes.com/news/articleView.html?idxno=214345
-
-샤오펑 로봇 자회사 도고틱스, 1.2조 유치…중국 휴머노이드 역대 최대 규모
-https://www.aitimes.com/news/articleView.html?idxno=214341
-
-중국 초저예산 애니, '옥스 알파' 밈 타고 글로벌 테크 이슈로 급부상
-https://www.aitimes.com/news/articleView.html?idxno=214340
+바이트댄스, '두바오' 중심 AI 도구 결집...기업용 슈퍼 앱 시장 공략
+https://www.aitimes.com/news/articleView.html?idxno=214346
