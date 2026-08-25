@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-08-26 07:16:59",
+  "updated_at_kst": "2026-08-26 07:52:36",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 26일 수요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "각종 규제에 정비사업도 ‘옴짝달싹’, 도심 내 주택공급도 ‘지지부진’",
+      "url": "https://n.news.naver.com/mnews/article/119/0003125376"
+    },
+    {
+      "title": "국내서 두번째로 높은 타워 불발…송도 랜드마크 높이 하향",
+      "url": "https://n.news.naver.com/mnews/article/001/0016270655"
+    },
     {
       "title": "김경대 용산구청장 “주택공급, 용산공원 아닌 정비사업 통해야”",
       "url": "https://n.news.naver.com/mnews/article/018/0006358005"
@@ -34,14 +42,6 @@
     {
       "title": "“떠난 버스 쫓지 마라”…이미 오른 서울 재건축, 지금 볼 곳 따로 있다 [잘살아보세]",
       "url": "https://n.news.naver.com/mnews/article/022/0004153736"
-    },
-    {
-      "title": "[인사이드 스토리]빚 내주는 은행이 담보 값 매긴다고요?",
-      "url": "https://n.news.naver.com/mnews/article/648/0000050149"
-    },
-    {
-      "title": "[오늘 부동산] 김윤덕·오세훈 2차 회동…용산공원 주택공급 접점 찾나",
-      "url": "https://n.news.naver.com/mnews/article/119/0003125355"
     }
   ]
 }
