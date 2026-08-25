@@ -1,31 +1,31 @@
 🤖 26년 8월 25일 화요일 AI 뉴스
 
+엑스와이지, 휴머노이드 ‘듀스’ 3지 로봇핸드 공개
+https://www.aitimes.com/news/articleView.html?idxno=214331
+
+한컴, 에이전틱 OS로 남양유업 AX 돕는다
+https://www.aitimes.com/news/articleView.html?idxno=214328
+
 비욘드코딩, 미국 지니어스 올림피아드서 대상·은상…로보틱스 경쟁력 확인
 https://www.aitimes.com/news/articleView.html?idxno=214326
 
+이스트소프트, 비개발자 위한 AI 마크다운 앱 '마크닷' 출시
+https://www.aitimes.com/news/articleView.html?idxno=214323
+
+위버스브레인, 음성 AI로 SKT와 AI 에이전트 개발 협력
+https://www.aitimes.com/news/articleView.html?idxno=214321
+
+앤트로픽, 슬랙용 에이전트 '클로드 태그' 강화..."대화 흐름 읽고 눈치껏 개입"
+https://www.aitimes.com/news/articleView.html?idxno=214320
+
+메타, AI 에이전트 '해치' 출시 임박...10월엔 새 모델 '워터멜론' 공개
+https://www.aitimes.com/news/articleView.html?idxno=214319
+
+노타, EMNLP 논문 2편 채택...“MoE 양자화 난제 풀었다”
+https://www.aitimes.com/news/articleView.html?idxno=214318
+
+중국, 태양광 웨이퍼 가격 최대 40% 급등…미국 관세 앞두고 주문 몰려
+https://www.aitimes.com/news/articleView.html?idxno=214317
+
 엔비디아, 퍼플렉시티에 수십억달러 투자 논의…기업 가치 41조 평가
 https://www.aitimes.com/news/articleView.html?idxno=214316
-
-[게시판] 스카이인텔리전스, JTBC 피지컬AI 다큐멘터리에 소개 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=214315
-
-플러스제로, AI GEO 솔루션 '보이스 인텔리전스' 공개
-https://www.aitimes.com/news/articleView.html?idxno=214313
-
-과기부 “AI와 과학기술 결합해 공학 분야 한계 돌파할 것”
-https://www.aitimes.com/news/articleView.html?idxno=214312
-
-KT, ‘AX 컴퍼니’ 전환 속도…플랫폼·인프라·업무방식 3대 전략 발표
-https://www.aitimes.com/news/articleView.html?idxno=214311
-
-오픈AI, 개발자 행사 '데브데이 익스체인지' 10월22일 서울서 연다
-https://www.aitimes.com/news/articleView.html?idxno=214310
-
-후지필름, AI 반도체 소재 생산 확대...'필름·사무기기 넘어 체질 개선'
-https://www.aitimes.com/news/articleView.html?idxno=214309
-
-디포그, 'OCP 코리아 테크 데이 '서 랙·파워·냉각 아우르는 AIDC 인프라 공개
-https://www.aitimes.com/news/articleView.html?idxno=214307
-
-테슬라·우버·웨이모, 라스베이거스서 로보택시 8000대 운행 허가 획득
-https://www.aitimes.com/news/articleView.html?idxno=214306
