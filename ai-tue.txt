@@ -1,5 +1,8 @@
 🤖 26년 8월 25일 화요일 AI 뉴스
 
+비욘드코딩, 미국 지니어스 올림피아드서 대상·은상…로보틱스 경쟁력 확인
+https://www.aitimes.com/news/articleView.html?idxno=214326
+
 엔비디아, 퍼플렉시티에 수십억달러 투자 논의…기업 가치 41조 평가
 https://www.aitimes.com/news/articleView.html?idxno=214316
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214307
 
 테슬라·우버·웨이모, 라스베이거스서 로보택시 8000대 운행 허가 획득
 https://www.aitimes.com/news/articleView.html?idxno=214306
-
-파두, ‘OCP 코리아 테크 데이’서 AI 데이터센터 특화 비전 공개
-https://www.aitimes.com/news/articleView.html?idxno=214305
