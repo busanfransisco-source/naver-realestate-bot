@@ -1,31 +1,31 @@
 🤖 26년 8월 26일 수요일 AI 뉴스
 
-[게시판] 래블업, 증권신고서 제출…코스닥 상장 본격화 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=214358
+비드래프트, ‘인과 누설’ 실증 논문서 AX-RAY로…보안 파운데이션 모델 검증 기술로 확장
+https://www.aitimes.com/news/articleView.html?idxno=214380
 
-솔트룩스 '구버', 1분 만에 나만의 AI 에이전트 만든다…'AI 버디' 출시
-https://www.aitimes.com/news/articleView.html?idxno=214356
+오픈AI 데이터센터 총괄 사임...IPO 앞두고 경영진 연쇄 이탈
+https://www.aitimes.com/news/articleView.html?idxno=214378
 
-구글, 제미나이 3.5 프로 건너뛰고 차세대 ‘제미나이 4’ 출시 준비하나
-https://www.aitimes.com/news/articleView.html?idxno=214355
+진학사 캐치, AI 활용 강의부터 평가까지 지원하는 ‘AX 직무 역량검사’ 출시
+https://www.aitimes.com/news/articleView.html?idxno=214372
 
-[게시판] 케어링, APEC 정책 포럼서 'AI 돌봄 서비스' 청사진 제시 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=214354
+애플, M6 맥 미니·M5 맥 스튜디오 공개… 두 달 만에 또 가격 인상
+https://www.aitimes.com/news/articleView.html?idxno=214371
 
-KT, 대졸 신입 채용서 'AX 활용 역량' 집중 평가…140명 규모
-https://www.aitimes.com/news/articleView.html?idxno=214353
+데이터킹, 메타버스 에너지교육 솔루션 ‘헥사스쿨 에너지 아일랜드’ 공개
+https://www.aitimes.com/news/articleView.html?idxno=214370
 
-링크드인 ‘AI 엉터리 콘텐츠’ 신고 버튼 통했다…조회수 40% 감소
-https://www.aitimes.com/news/articleView.html?idxno=214351
+크라우드웍스, 피지컬 AI 데이터로  정부 ‘M.AX 전문 기업‘ 선정
+https://www.aitimes.com/news/articleView.html?idxno=214369
 
-스페이스X·엔비디아, 우주용 ‘베라 루빈’ 개발…2027년 궤도 투입
-https://www.aitimes.com/news/articleView.html?idxno=214350
+뤼튼, 1000억 시리즈 C 투자 유치...기업 가치 1조 돌파
+https://www.aitimes.com/news/articleView.html?idxno=214368
 
-애플, 차세대 '맥 미니' 발표 임박...9월 아이폰 행사 전 공개 가능성
-https://www.aitimes.com/news/articleView.html?idxno=214349
+"태양광을 창문처럼 쓴다"…독일, 반투명 모듈 제조공정 개발
+https://www.aitimes.com/news/articleView.html?idxno=214364
 
-트럼프, 스페이스X 상장 직후 7000만원 투자..백악관 "독립 관리" 해명
-https://www.aitimes.com/news/articleView.html?idxno=214348
+"전기요금 줄자 사용량 늘었다"…주택 태양광 ‘리바운드 효과’
+https://www.aitimes.com/news/articleView.html?idxno=214360
 
-바이트댄스, '두바오' 중심 AI 도구 결집...기업용 슈퍼 앱 시장 공략
-https://www.aitimes.com/news/articleView.html?idxno=214346
+중국, 해발 4000m에 '공중 풍력발전소' 띄웠다…"발전 시험 성공"
+https://www.aitimes.com/news/articleView.html?idxno=214359
