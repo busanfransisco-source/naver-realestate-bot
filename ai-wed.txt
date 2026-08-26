@@ -1,9 +1,15 @@
 🤖 26년 8월 26일 수요일 AI 뉴스
 
+[게시판] 루닛, 의료 특화 AI 모델 활용 해커톤 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=214423
+
+버즈니, 기업 코딩 플랫폼 ‘세이코드’ 출시…"회사 자산 구축·비용 절감"
+https://www.aitimes.com/news/articleView.html?idxno=214422
+
 과기부 '사이버 보안 AI' 공모 접수 완료…SKT·네이버클라우드 맞대결
 https://www.aitimes.com/news/articleView.html?idxno=214419
 
-현대차, 완성차 넘어 ‘피지컬 AI’ 전환… 2029년 새만금 데이터센터 가동
+현대차, 완성차 넘어 ‘피지컬 AI’ 전환… 2029년 새만금 DC 가동
 https://www.aitimes.com/news/articleView.html?idxno=214417
 
 "FSD 켜고 숙면"… 테슬라 운전자들 '위험천만한 낮잠' 논란
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214404
 
 알트먼, '7개 한정' 스위스 명품 시계 주문...실리콘밸리의 새로운 '유행'
 https://www.aitimes.com/news/articleView.html?idxno=214403
-
-웨이모, 뮌헨서 자율주행차 테스트 시작...2027년 EU 첫 로보택시 상용화 목표
-https://www.aitimes.com/news/articleView.html?idxno=214400
-
-마윈, 1000억 자사주 매입…‘AI 올인’ 알리바바 지원사격
-https://www.aitimes.com/news/articleView.html?idxno=214396
