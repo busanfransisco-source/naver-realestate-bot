@@ -3,8 +3,17 @@
 비드래프트, ‘인과 누설’ 실증 논문서 AX-RAY로…보안 파운데이션 모델 검증 기술로 확장
 https://www.aitimes.com/news/articleView.html?idxno=214380
 
+오픈AI, 첫 자체 추론 칩 '할라피뇨' 성능 공개..."블랙웰보다  3.6배 빨라"
+https://www.aitimes.com/news/articleView.html?idxno=214379
+
 오픈AI 데이터센터 총괄 사임...IPO 앞두고 경영진 연쇄 이탈
 https://www.aitimes.com/news/articleView.html?idxno=214378
+
+구글, 법률 특화 '제미나이 엔터프라이즈 포 리걸' 공개
+https://www.aitimes.com/news/articleView.html?idxno=214374
+
+앤트로픽, IPO 앞두고 잠재 시장 규모로 '4경원' 제시
+https://www.aitimes.com/news/articleView.html?idxno=214373
 
 진학사 캐치, AI 활용 강의부터 평가까지 지원하는 ‘AX 직무 역량검사’ 출시
 https://www.aitimes.com/news/articleView.html?idxno=214372
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214369
 
 뤼튼, 1000억 시리즈 C 투자 유치...기업 가치 1조 돌파
 https://www.aitimes.com/news/articleView.html?idxno=214368
-
-"태양광을 창문처럼 쓴다"…독일, 반투명 모듈 제조공정 개발
-https://www.aitimes.com/news/articleView.html?idxno=214364
-
-"전기요금 줄자 사용량 늘었다"…주택 태양광 ‘리바운드 효과’
-https://www.aitimes.com/news/articleView.html?idxno=214360
-
-중국, 해발 4000m에 '공중 풍력발전소' 띄웠다…"발전 시험 성공"
-https://www.aitimes.com/news/articleView.html?idxno=214359
