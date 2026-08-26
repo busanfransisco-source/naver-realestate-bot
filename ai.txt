@@ -1,31 +1,31 @@
 🤖 26년 8월 27일 목요일 AI 뉴스
 
-구글, 제미나이 3.5 프로 건너뛰고 차세대 ‘제미나이 4’ 출시 준비하나
-https://www.aitimes.com/news/articleView.html?idxno=214355
+[게시판] SK AX, SAP와 'AI 엔터프라이즈' 협력 강화 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=214425
 
-익명 'Ox 알파' 등장…코딩 성능·100조 토큰 무상 제공에 '발칵'
-https://www.aitimes.com/news/articleView.html?idxno=214249
+[게시판] 루닛, 의료 특화 AI 모델 활용 해커톤 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=214423
 
-앤트로픽서 유행하는 클로드 코드 ‘/eli5’ 스킬..."코드를 그림으로 설명"
-https://www.aitimes.com/news/articleView.html?idxno=214260
+버즈니, 기업 코딩 플랫폼 ‘세이코드’ 출시…"회사 자산 구축·비용 절감"
+https://www.aitimes.com/news/articleView.html?idxno=214422
 
-엔비디아, 국내 NPU 스타트업 리벨리온과 인수 협상 중
-https://www.aitimes.com/news/articleView.html?idxno=214241
+과기부 '사이버 보안 AI' 공모 접수 완료…SKT·네이버클라우드 맞대결
+https://www.aitimes.com/news/articleView.html?idxno=214419
 
-구글, '젬마' 누적 다운로드 10억회 돌파…'어썸 젬마' 저장소 공개
-https://www.aitimes.com/news/articleView.html?idxno=214224
+현대차, 완성차 넘어 ‘피지컬 AI’ 전환… 2029년 새만금 DC 가동
+https://www.aitimes.com/news/articleView.html?idxno=214417
 
-맥북에서 돌리는 '무삭제 큐원 3.8' 등장...엔비디아 GPU·클라우드 없이 구동
-https://www.aitimes.com/news/articleView.html?idxno=214299
+"FSD 켜고 숙면"… 테슬라 운전자들 '위험천만한 낮잠' 논란
+https://www.aitimes.com/news/articleView.html?idxno=214415
 
-구글, '안티그래비티' 원격 제어 출시..."이동 중에도 AI 개발 계속"
-https://www.aitimes.com/news/articleView.html?idxno=214259
+골드만삭스 “중국 첨단 반도체 공급, 장비 병목에도 2035년까지 급증”
+https://www.aitimes.com/news/articleView.html?idxno=214414
 
-오픈AI, 'GPT-5.6 솔'까지 가격 일시 인하...코덱스 사용자 2천만 돌파
-https://www.aitimes.com/news/articleView.html?idxno=214240
+스페이스X, 루이지애나에 140조 규모 스타십 로켓 발사 시설 건설 예정
+https://www.aitimes.com/news/articleView.html?idxno=214410
 
-메타, 미국서 '바이브 코딩' 게임 앱 '포켓' 출시
-https://www.aitimes.com/news/articleView.html?idxno=214218
+앤트로픽·구글 지원하는 AI 보안 스타트업, 삼성 등서 1900억 투자 유치
+https://www.aitimes.com/news/articleView.html?idxno=214406
 
-머스크 "그록, 앤트로픽에 뒤처져"...커서에 코딩 격차 극복 당부
-https://www.aitimes.com/news/articleView.html?idxno=214324
+'스테이블 디퓨전' 제작사, 1000억 투자 유치…이미지 넘어 음악·게임으로 영역 확장
+https://www.aitimes.com/news/articleView.html?idxno=214404
