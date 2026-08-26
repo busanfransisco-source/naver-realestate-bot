@@ -1,31 +1,31 @@
 🤖 26년 8월 26일 수요일 AI 뉴스
 
+앤트로픽·구글 지원하는 AI 보안 스타트업, 삼성 등서 1900억 투자 유치
+https://www.aitimes.com/news/articleView.html?idxno=214406
+
+알트먼, '7개 한정' 스위스 명품 시계 주문...실리콘밸리의 새로운 '유행'
+https://www.aitimes.com/news/articleView.html?idxno=214403
+
+웨이모, 뮌헨서 자율주행차 테스트 시작...2027년 EU 첫 로보택시 상용화 목표
+https://www.aitimes.com/news/articleView.html?idxno=214400
+
+마윈, 1000억 자사주 매입…‘AI 올인’ 알리바바 지원사격
+https://www.aitimes.com/news/articleView.html?idxno=214396
+
+과기부, AI 서비스 설계･개발 담당 ‘혁신추진단’ 신설…민간전문가 공개 모집
+https://www.aitimes.com/news/articleView.html?idxno=214394
+
+마키나락스, 삼성디스플레이 베트남 공장에 'AI 설비 제어 솔루션' 적용
+https://www.aitimes.com/news/articleView.html?idxno=214389
+
+과기부, ‘BCI 얼라이언스’ 출범...“2035년 BCI 상용화 추진”
+https://www.aitimes.com/news/articleView.html?idxno=214388
+
+LG CNS, 삼송 데이터센터에 '액체냉각' 인프라 도입
+https://www.aitimes.com/news/articleView.html?idxno=214384
+
 비드래프트, ‘인과 누설’ 실증 논문서 AX-RAY로…보안 파운데이션 모델 검증 기술로 확장
 https://www.aitimes.com/news/articleView.html?idxno=214380
 
 오픈AI, 첫 자체 추론 칩 '할라피뇨' 성능 공개..."블랙웰보다  3.6배 빨라"
 https://www.aitimes.com/news/articleView.html?idxno=214379
-
-오픈AI 데이터센터 총괄 사임...IPO 앞두고 경영진 연쇄 이탈
-https://www.aitimes.com/news/articleView.html?idxno=214378
-
-구글, 법률 특화 '제미나이 엔터프라이즈 포 리걸' 공개
-https://www.aitimes.com/news/articleView.html?idxno=214374
-
-앤트로픽, IPO 앞두고 잠재 시장 규모로 '4경원' 제시
-https://www.aitimes.com/news/articleView.html?idxno=214373
-
-진학사 캐치, AI 활용 강의부터 평가까지 지원하는 ‘AX 직무 역량검사’ 출시
-https://www.aitimes.com/news/articleView.html?idxno=214372
-
-애플, M6 맥 미니·M5 맥 스튜디오 공개… 두 달 만에 또 가격 인상
-https://www.aitimes.com/news/articleView.html?idxno=214371
-
-데이터킹, 메타버스 에너지교육 솔루션 ‘헥사스쿨 에너지 아일랜드’ 공개
-https://www.aitimes.com/news/articleView.html?idxno=214370
-
-크라우드웍스, 피지컬 AI 데이터로  정부 ‘M.AX 전문 기업‘ 선정
-https://www.aitimes.com/news/articleView.html?idxno=214369
-
-뤼튼, 1000억 시리즈 C 투자 유치...기업 가치 1조 돌파
-https://www.aitimes.com/news/articleView.html?idxno=214368
