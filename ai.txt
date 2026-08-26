@@ -1,7 +1,25 @@
 🤖 26년 8월 26일 수요일 AI 뉴스
 
+과기부 '사이버 보안 AI' 공모 접수 완료…SKT·네이버클라우드 맞대결
+https://www.aitimes.com/news/articleView.html?idxno=214419
+
+현대차, 완성차 넘어 ‘피지컬 AI’ 전환… 2029년 새만금 데이터센터 가동
+https://www.aitimes.com/news/articleView.html?idxno=214417
+
+"FSD 켜고 숙면"… 테슬라 운전자들 '위험천만한 낮잠' 논란
+https://www.aitimes.com/news/articleView.html?idxno=214415
+
+골드만삭스 “중국 첨단 반도체 공급, 장비 병목에도 2035년까지 급증”
+https://www.aitimes.com/news/articleView.html?idxno=214414
+
+스페이스X, 루이지애나에 140조 규모 스타십 로켓 발사 시설 건설 예정
+https://www.aitimes.com/news/articleView.html?idxno=214410
+
 앤트로픽·구글 지원하는 AI 보안 스타트업, 삼성 등서 1900억 투자 유치
 https://www.aitimes.com/news/articleView.html?idxno=214406
+
+'스테이블 디퓨전' 제작사, 1000억 투자 유치…이미지 넘어 음악·게임으로 영역 확장
+https://www.aitimes.com/news/articleView.html?idxno=214404
 
 알트먼, '7개 한정' 스위스 명품 시계 주문...실리콘밸리의 새로운 '유행'
 https://www.aitimes.com/news/articleView.html?idxno=214403
@@ -11,21 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214400
 
 마윈, 1000억 자사주 매입…‘AI 올인’ 알리바바 지원사격
 https://www.aitimes.com/news/articleView.html?idxno=214396
-
-과기부, AI 서비스 설계･개발 담당 ‘혁신추진단’ 신설…민간전문가 공개 모집
-https://www.aitimes.com/news/articleView.html?idxno=214394
-
-마키나락스, 삼성디스플레이 베트남 공장에 'AI 설비 제어 솔루션' 적용
-https://www.aitimes.com/news/articleView.html?idxno=214389
-
-과기부, ‘BCI 얼라이언스’ 출범...“2035년 BCI 상용화 추진”
-https://www.aitimes.com/news/articleView.html?idxno=214388
-
-LG CNS, 삼송 데이터센터에 '액체냉각' 인프라 도입
-https://www.aitimes.com/news/articleView.html?idxno=214384
-
-비드래프트, ‘인과 누설’ 실증 논문서 AX-RAY로…보안 파운데이션 모델 검증 기술로 확장
-https://www.aitimes.com/news/articleView.html?idxno=214380
-
-오픈AI, 첫 자체 추론 칩 '할라피뇨' 성능 공개..."블랙웰보다  3.6배 빨라"
-https://www.aitimes.com/news/articleView.html?idxno=214379
