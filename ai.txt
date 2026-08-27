@@ -1,7 +1,25 @@
 🤖 26년 8월 27일 목요일 AI 뉴스
 
+삼성전자, 신형 SSD 2종 공개..."데이터 전송속도·용량 2배 확대"
+https://www.aitimes.com/news/articleView.html?idxno=214453
+
+팀스파르타, 기업 구성원 역량 진단 서비스 ‘AXPI’ 공개
+https://www.aitimes.com/news/articleView.html?idxno=214452
+
+애플, 9월9일 신제품 발표 행사 개최...존 터너스 신임 CEO 체제 데뷔
+https://www.aitimes.com/news/articleView.html?idxno=214451
+
+‘클로드 페이블 5.1’ 암묵적 출시?...사용자 대상 순차 적용 정황 포착
+https://www.aitimes.com/news/articleView.html?idxno=214441
+
 모티프, 독파모 2차 평가 이의제기… “심사 기준 납득 어려워”
 https://www.aitimes.com/news/articleView.html?idxno=214437
+
+스페인, 데이터센터 규제 강화…전력 80% 재생에너지로 조달
+https://www.aitimes.com/news/articleView.html?idxno=214433
+
+정부, 지역별 산업용 전기요금 첫 설계…비수도권 최대 10% 인하 추진
+https://www.aitimes.com/news/articleView.html?idxno=214432
 
 [게시판] SK AX, SAP와 'AI 엔터프라이즈' 협력 강화 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=214425
@@ -11,21 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214423
 
 버즈니, 기업 코딩 플랫폼 ‘세이코드’ 출시…"회사 자산 구축·비용 절감"
 https://www.aitimes.com/news/articleView.html?idxno=214422
-
-과기부 '사이버 보안 AI' 공모 접수 완료…SKT·네이버클라우드 맞대결
-https://www.aitimes.com/news/articleView.html?idxno=214419
-
-현대차, 완성차 넘어 ‘피지컬 AI’ 전환… 2029년 새만금 DC 가동
-https://www.aitimes.com/news/articleView.html?idxno=214417
-
-"FSD 켜고 숙면"… 테슬라 운전자들 '위험천만한 낮잠' 논란
-https://www.aitimes.com/news/articleView.html?idxno=214415
-
-골드만삭스 “중국 첨단 반도체 공급, 장비 병목에도 2035년까지 급증”
-https://www.aitimes.com/news/articleView.html?idxno=214414
-
-스페이스X, 루이지애나에 140조 규모 스타십 로켓 발사 시설 건설 예정
-https://www.aitimes.com/news/articleView.html?idxno=214410
-
-앤트로픽·구글 지원하는 AI 보안 스타트업, 삼성 등서 1900억 투자 유치
-https://www.aitimes.com/news/articleView.html?idxno=214406
