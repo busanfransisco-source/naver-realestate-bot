@@ -1,5 +1,8 @@
 🤖 26년 8월 27일 목요일 AI 뉴스
 
+모티프, 독파모 2차 평가 이의제기… “심사 기준 납득 어려워”
+https://www.aitimes.com/news/articleView.html?idxno=214437
+
 [게시판] SK AX, SAP와 'AI 엔터프라이즈' 협력 강화 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=214425
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214410
 
 앤트로픽·구글 지원하는 AI 보안 스타트업, 삼성 등서 1900억 투자 유치
 https://www.aitimes.com/news/articleView.html?idxno=214406
-
-'스테이블 디퓨전' 제작사, 1000억 투자 유치…이미지 넘어 음악·게임으로 영역 확장
-https://www.aitimes.com/news/articleView.html?idxno=214404
