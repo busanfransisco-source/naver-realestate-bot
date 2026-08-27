@@ -1,5 +1,17 @@
 🤖 26년 8월 27일 목요일 AI 뉴스
 
+[게시판] KAIST, 글로벌 기업과 ‘자율실험실’ 구축 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=214504
+
+엔비디아, '오픈소스' 허깅페이스 18조에 인수...AI 생태계 수직통합
+https://www.aitimes.com/news/articleView.html?idxno=214502
+
+SKT, AIDC 전문 기업 'SK호라이즌' 설립...SK하이퍼와 차별점은
+https://www.aitimes.com/news/articleView.html?idxno=214501
+
+과기부, 독파모 프로젝트서 확보한 AI 학습용 데이터 29종 개방
+https://www.aitimes.com/news/articleView.html?idxno=214500
+
 클레온, 반응형 AI휴먼 기술로 SBS예능 '기이안 연애' 참여
 https://www.aitimes.com/news/articleView.html?idxno=214498
 
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214493
 
 미니맥스, 상반기 매출 4배 뛰어도 적자 폭 확대...인프라 투자 부담 급증
 https://www.aitimes.com/news/articleView.html?idxno=214491
-
-"모델 개발과 거리 멀어진다"...구글 AI 책임팀 본사 편입에 내부 우려 확산
-https://www.aitimes.com/news/articleView.html?idxno=214488
-
-한국딥러닝, 40여종 문서 대응 '딥에이전트 for 보험' 출시
-https://www.aitimes.com/news/articleView.html?idxno=214487
-
-탐지부터 조치까지 자동화...SKT 컨소시엄, 정부 보안 AI 사업 출사표
-https://www.aitimes.com/news/articleView.html?idxno=214486
-
-"아이디·비번 노출 없다"…챗GPT 워크, 웹사이트 직접 로그인 기능 탑재
-https://www.aitimes.com/news/articleView.html?idxno=214479
