@@ -1,5 +1,8 @@
 🤖 26년 8월 28일 금요일 AI 뉴스
 
+과기부, 독파모 평가 성적표 전체 공개..."전문가·사용자 평가서 희비 갈려"
+https://www.aitimes.com/news/articleView.html?idxno=214511
+
 [게시판] KAIST, 글로벌 기업과 ‘자율실험실’ 구축 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=214504
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214494
 
 HPC 이노베이션 허브, 고성능 컴퓨팅 전주기 지원 서비스 선보여
 https://www.aitimes.com/news/articleView.html?idxno=214493
-
-미니맥스, 상반기 매출 4배 뛰어도 적자 폭 확대...인프라 투자 부담 급증
-https://www.aitimes.com/news/articleView.html?idxno=214491
