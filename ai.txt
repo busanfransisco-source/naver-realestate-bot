@@ -1,31 +1,31 @@
 🤖 26년 8월 27일 목요일 AI 뉴스
 
-KT, 협력 기업 12개사와 태국 '테크소스 글로벌 서밋' 참가
-https://www.aitimes.com/news/articleView.html?idxno=214462
+클레온, 반응형 AI휴먼 기술로 SBS예능 '기이안 연애' 참여
+https://www.aitimes.com/news/articleView.html?idxno=214498
 
-네이버클라우드-LG CNS “풀스택 기술로 국가 사이버 보안 모델 개발”
-https://www.aitimes.com/news/articleView.html?idxno=214459
+정부, 2030년까지 '휴머노이드 기술 국산화'에 2.7조 투입
+https://www.aitimes.com/news/articleView.html?idxno=214497
 
-엔비디아, 마진 압박 우려 씻어낸 역대급 실적..."장기 전망도 압도적"
-https://www.aitimes.com/news/articleView.html?idxno=214455
+오픈AI "에이전트 1200개 집단 행동 확인"…허깅페이스 해킹 전말 공개
+https://www.aitimes.com/news/articleView.html?idxno=214495
 
-삼성전자, 신형 SSD 2종 공개..."데이터 전송속도·용량 2배 확대"
-https://www.aitimes.com/news/articleView.html?idxno=214453
+"영상 한 번 보면 바로 따라한다"...스킬드 AI, 로봇 파운데이션 모델 'S1' 공개
+https://www.aitimes.com/news/articleView.html?idxno=214494
 
-팀스파르타, 기업 구성원 역량 진단 서비스 ‘AXPI’ 공개
-https://www.aitimes.com/news/articleView.html?idxno=214452
+HPC 이노베이션 허브, 고성능 컴퓨팅 전주기 지원 서비스 선보여
+https://www.aitimes.com/news/articleView.html?idxno=214493
 
-애플, 9월9일 신제품 발표 행사 개최...존 터너스 신임 CEO 체제 데뷔
-https://www.aitimes.com/news/articleView.html?idxno=214451
+미니맥스, 상반기 매출 4배 뛰어도 적자 폭 확대...인프라 투자 부담 급증
+https://www.aitimes.com/news/articleView.html?idxno=214491
 
-‘클로드 페이블 5.1’ 스텔스 출시?...사용자 대상 순차 적용 정황 포착
-https://www.aitimes.com/news/articleView.html?idxno=214441
+"모델 개발과 거리 멀어진다"...구글 AI 책임팀 본사 편입에 내부 우려 확산
+https://www.aitimes.com/news/articleView.html?idxno=214488
 
-‘옥스 알파’ 정체는 GLM-5.3-플래시...“오퍼스급 성능에 비용은 10%”
-https://www.aitimes.com/news/articleView.html?idxno=214438
+한국딥러닝, 40여종 문서 대응 '딥에이전트 for 보험' 출시
+https://www.aitimes.com/news/articleView.html?idxno=214487
 
-모티프, 독파모 2차 평가 이의제기… “심사 기준 납득 어려워”
-https://www.aitimes.com/news/articleView.html?idxno=214437
+탐지부터 조치까지 자동화...SKT 컨소시엄, 정부 보안 AI 사업 출사표
+https://www.aitimes.com/news/articleView.html?idxno=214486
 
-스페인, 데이터센터 규제 강화…전력 80% 재생에너지로 조달
-https://www.aitimes.com/news/articleView.html?idxno=214433
+"아이디·비번 노출 없다"…챗GPT 워크, 웹사이트 직접 로그인 기능 탑재
+https://www.aitimes.com/news/articleView.html?idxno=214479
