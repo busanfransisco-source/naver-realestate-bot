@@ -1,31 +1,31 @@
 🤖 26년 8월 28일 금요일 AI 뉴스
 
-오케스트로 "AI로 법인카드 결산 자동화 업무 70% 빨라져”
-https://www.aitimes.com/news/articleView.html?idxno=214550
+[게시판] 서치독, 중기부 팁스(TIPS) 선정 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=214583
 
-'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류
-https://www.aitimes.com/news/articleView.html?idxno=214547
+[게시판] 액션파워, 한컴오피스에 AI 음성인식 '다글로' 입점 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=214582
 
-머스크·알트먼·젠슨 황 집결...미국, G20서 AI '자율 규제' 카드 꺼낸다
-https://www.aitimes.com/news/articleView.html?idxno=214545
+구글, 세계 최초 AI 이중맹검 평가 시범 운영…'벤치마크 오염' 방지 나선다
+https://www.aitimes.com/news/articleView.html?idxno=214579
 
-“미국 청소년만 보호하나”...메타 대규모 합의에 한국·유럽 등 세계적 확대 요구
-https://www.aitimes.com/news/articleView.html?idxno=214544
+딥노이드, “의료 판독 자동화 라인업 확대...AI 의료 에이전트 본격화”
+https://www.aitimes.com/news/articleView.html?idxno=214578
 
-아이지에이웍스 “기업 데이터-소비자 행동 예측 결합해 ‘AI 인텔리전스 마케팅’ 개척”
-https://www.aitimes.com/news/articleView.html?idxno=214543
+코히어, 대규모 엔터프라이즈 문서 분석 AI ‘파스’ 공개...“성능·비용 다 잡았다”
+https://www.aitimes.com/news/articleView.html?idxno=214577
 
-엔비디아, 직원 주도 정치자금 모금기구 설립...정치권 영향력 확대
-https://www.aitimes.com/news/articleView.html?idxno=214541
+"AI 양자화 정확하고 안전하게"...옵트에이아이, EMNLP 논문 2편 채택
+https://www.aitimes.com/news/articleView.html?idxno=214572
 
-비아임, AI 생산성 생태계 구축…국내 시장 공략 본격화
-https://www.aitimes.com/news/articleView.html?idxno=214540
+SKT는 '행동형 비서', 카카오는 '카톡', KT는 '다음'…'모두의 AI' 3사 전략은
+https://www.aitimes.com/news/articleView.html?idxno=214567
 
-SK하이닉스, 인디애나 공장 착공...2029년 양산·키옥시아 협력 확대 모색
-https://www.aitimes.com/news/articleView.html?idxno=214537
+구글, AI 모드에 여행 기능 확대…실시간 항공권 추적·호텔 예약 등 기능 추가
+https://www.aitimes.com/news/articleView.html?idxno=214566
 
-오픈AI·앤트로픽 등 116개 기업 "AI 사이버 위협 폭발 직전…범사회적 집단 방어 시급"
-https://www.aitimes.com/news/articleView.html?idxno=214529
+타임 'AI 100인' 발표…산업 확산 속 윤리·사회적 갈등 부각
+https://www.aitimes.com/news/articleView.html?idxno=214565
 
-SKT·카카오·KT, 모두의 AI 사업자 선정…“연내 전 국민 서비스 개시”
-https://www.aitimes.com/news/articleView.html?idxno=214527
+AWS, 전 세계 대학생 AI 역량 강화 위해 7000억 투입한다
+https://www.aitimes.com/news/articleView.html?idxno=214564
