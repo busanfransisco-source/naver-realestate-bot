@@ -1,5 +1,8 @@
 🤖 26년 8월 28일 금요일 AI 뉴스
 
+SKT·카카오·KT, 모두의 AI 사업자 선정…“연내 전 국민 서비스 개시”
+https://www.aitimes.com/news/articleView.html?idxno=214527
+
 독파모 평가 성적 전체 공개..."전문가·사용자 평가서 희비 갈려"
 https://www.aitimes.com/news/articleView.html?idxno=214511
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214495
 
 "영상 한 번 보면 바로 따라한다"...스킬드 AI, 로봇 파운데이션 모델 'S1' 공개
 https://www.aitimes.com/news/articleView.html?idxno=214494
-
-HPC 이노베이션 허브, 고성능 컴퓨팅 전주기 지원 서비스 선보여
-https://www.aitimes.com/news/articleView.html?idxno=214493
