@@ -1,12 +1,15 @@
 🤖 26년 8월 28일 금요일 AI 뉴스
 
+에임인텔리전스, AI 퍼플티밍으로 '엔비디아 인셉션 챌린지' 결승 진출
+https://www.aitimes.com/news/articleView.html?idxno=214584
+
 [게시판] 서치독, 중기부 팁스(TIPS) 선정 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=214583
 
 [게시판] 액션파워, 한컴오피스에 AI 음성인식 '다글로' 입점 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=214582
 
-구글, 세계 최초 AI 이중맹검 평가 시범 운영…'벤치마크 오염' 방지 나선다
+구글, 세계 첫 AI 이중맹검 평가 시범 운영…'벤치마크 오염' 방지 나서
 https://www.aitimes.com/news/articleView.html?idxno=214579
 
 딥노이드, “의료 판독 자동화 라인업 확대...AI 의료 에이전트 본격화”
@@ -15,17 +18,14 @@ https://www.aitimes.com/news/articleView.html?idxno=214578
 코히어, 대규모 엔터프라이즈 문서 분석 AI ‘파스’ 공개...“성능·비용 다 잡았다”
 https://www.aitimes.com/news/articleView.html?idxno=214577
 
+구글, ‘제미나이 옴니 1.1 플래시’ 공개…영상 생성·편집 제어 기능 대폭 강화
+https://www.aitimes.com/news/articleView.html?idxno=214576
+
 "AI 양자화 정확하고 안전하게"...옵트에이아이, EMNLP 논문 2편 채택
 https://www.aitimes.com/news/articleView.html?idxno=214572
 
-SKT는 '행동형 비서', 카카오는 '카톡', KT는 '다음'…'모두의 AI' 3사 전략은
+"일회성 대화도 저장 가능"...오픈AI, 챗GPT 임시 채팅 기능 강화
+https://www.aitimes.com/news/articleView.html?idxno=214569
+
+SKT는 '행동형 비서', 카카오는 '카톡', KT는 '다음'…'모두의 AI' 전략은
 https://www.aitimes.com/news/articleView.html?idxno=214567
-
-구글, AI 모드에 여행 기능 확대…실시간 항공권 추적·호텔 예약 등 기능 추가
-https://www.aitimes.com/news/articleView.html?idxno=214566
-
-타임 'AI 100인' 발표…산업 확산 속 윤리·사회적 갈등 부각
-https://www.aitimes.com/news/articleView.html?idxno=214565
-
-AWS, 전 세계 대학생 AI 역량 강화 위해 7000억 투입한다
-https://www.aitimes.com/news/articleView.html?idxno=214564
