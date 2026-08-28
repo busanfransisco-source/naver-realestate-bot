@@ -1,10 +1,19 @@
 🤖 26년 8월 28일 금요일 AI 뉴스
 
+비아임, AI 생산성 생태계 구축…국내 시장 공략 본격화
+https://www.aitimes.com/news/articleView.html?idxno=214540
+
+SK하이닉스, 인디애나 공장 착공...2029년 양산·키옥시아 협력 확대 모색
+https://www.aitimes.com/news/articleView.html?idxno=214537
+
 SKT·카카오·KT, 모두의 AI 사업자 선정…“연내 전 국민 서비스 개시”
 https://www.aitimes.com/news/articleView.html?idxno=214527
 
 독파모 평가 성적 전체 공개..."전문가·사용자 평가서 희비 갈려"
 https://www.aitimes.com/news/articleView.html?idxno=214511
+
+네이버, 유럽 컴퓨터비전 학회 논문 23편 채택…”3D 공간 재구성 기술 고도화”
+https://www.aitimes.com/news/articleView.html?idxno=214510
 
 [게시판] KAIST, 글로벌 기업과 ‘자율실험실’ 구축 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=214504
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214500
 
 클레온, 반응형 AI휴먼 기술로 SBS예능 '기이안 연애' 참여
 https://www.aitimes.com/news/articleView.html?idxno=214498
-
-정부, 2030년까지 '휴머노이드 기술 국산화'에 2.7조 투입
-https://www.aitimes.com/news/articleView.html?idxno=214497
-
-오픈AI "에이전트 1200개 집단 행동 확인"…허깅페이스 해킹 전말 공개
-https://www.aitimes.com/news/articleView.html?idxno=214495
-
-"영상 한 번 보면 바로 따라한다"...스킬드 AI, 로봇 파운데이션 모델 'S1' 공개
-https://www.aitimes.com/news/articleView.html?idxno=214494
