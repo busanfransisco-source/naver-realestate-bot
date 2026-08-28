@@ -1,7 +1,22 @@
 🤖 26년 8월 28일 금요일 AI 뉴스
 
+오케스트로 "AI로 법인카드 결산 자동화 업무 70% 빨라져”
+https://www.aitimes.com/news/articleView.html?idxno=214550
+
+'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류
+https://www.aitimes.com/news/articleView.html?idxno=214547
+
+머스크·알트먼·젠슨 황 집결...미국, G20서 AI '자율 규제' 카드 꺼낸다
+https://www.aitimes.com/news/articleView.html?idxno=214545
+
+“미국 청소년만 보호하나”...메타 대규모 합의에 한국·유럽 등 세계적 확대 요구
+https://www.aitimes.com/news/articleView.html?idxno=214544
+
 아이지에이웍스 “기업 데이터-소비자 행동 예측 결합해 ‘AI 인텔리전스 마케팅’ 개척”
 https://www.aitimes.com/news/articleView.html?idxno=214543
+
+엔비디아, 직원 주도 정치자금 모금기구 설립...정치권 영향력 확대
+https://www.aitimes.com/news/articleView.html?idxno=214541
 
 비아임, AI 생산성 생태계 구축…국내 시장 공략 본격화
 https://www.aitimes.com/news/articleView.html?idxno=214540
@@ -14,18 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214529
 
 SKT·카카오·KT, 모두의 AI 사업자 선정…“연내 전 국민 서비스 개시”
 https://www.aitimes.com/news/articleView.html?idxno=214527
-
-독파모 평가 성적 전체 공개..."전문가·사용자 평가서 희비 갈려"
-https://www.aitimes.com/news/articleView.html?idxno=214511
-
-네이버, 유럽 컴퓨터비전 학회 논문 23편 채택…”3D 공간 재구성 기술 고도화”
-https://www.aitimes.com/news/articleView.html?idxno=214510
-
-[게시판] KAIST, 글로벌 기업과 ‘자율실험실’ 구축 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=214504
-
-엔비디아, '오픈소스' 허깅페이스 18조에 인수...AI 생태계 수직통합
-https://www.aitimes.com/news/articleView.html?idxno=214502
-
-SKT, AIDC 전문 기업 'SK호라이즌' 설립...SK하이퍼와 차별점은
-https://www.aitimes.com/news/articleView.html?idxno=214501
