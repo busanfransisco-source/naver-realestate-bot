@@ -1,5 +1,14 @@
 🤖 26년 8월 29일 토요일 AI 뉴스
 
+허깅페이스, 55만원짜리 오픈소스 로봇 '마이크로덕' 공개
+https://www.aitimes.com/news/articleView.html?idxno=214607
+
+실리콘밸리 매료시킨 ‘인스팅트’ 3.5조 가치 인정..."진짜 AI 비서"
+https://www.aitimes.com/news/articleView.html?idxno=214605
+
+앤트로픽, 엔스케일 계약 이어 칩 스타트업 협상…컴퓨팅 용량 확보 '총력전'
+https://www.aitimes.com/news/articleView.html?idxno=214604
+
 미국, 중국의 AI 칩 '우회 원격 접속' 차단 추진…수출 통제 허점 막는다
 https://www.aitimes.com/news/articleView.html?idxno=214602
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214597
 
 텐센트, 차세대 모델 'Hy4 프리뷰' 오픈 출시로 기업용 시장 정조준
 https://www.aitimes.com/news/articleView.html?idxno=214596
-
-클로드 테스트 중 700GB 홈 디렉터리 삭제..."안전 분류기가 사고 키워"
-https://www.aitimes.com/news/articleView.html?idxno=214594
-
-메타, 8B 모델로 ‘클로드 오퍼스 4.5’ 성능 구현한 ‘에보하네스-RL’ 공개
-https://www.aitimes.com/news/articleView.html?idxno=214593
-
-[내면 지도 그리기] 31 Inner Mapping: 나를 찾는 지도
-https://www.aitimes.com/news/articleView.html?idxno=214592
