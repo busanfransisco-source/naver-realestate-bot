@@ -3,7 +3,7 @@
 앤트로픽 "AI가 인간 대신 정렬 작업 수행…안전성 크게 높였다"
 https://www.aitimes.com/news/articleView.html?idxno=214608
 
-허깅페이스, 55만원짜리 오픈소스 로봇 '마이크로덕' 공개
+허깅페이스, 55만원짜리 오픈소스 로봇 &apos;마이크로덕&apos; 공개
 https://www.aitimes.com/news/articleView.html?idxno=214607
 
 [AI 이슈트렌드] 엔비디아 호재 안 통한 삼전·하이닉스…박위 사고·제주 실종 파장
@@ -12,20 +12,20 @@ https://www.aitimes.com/news/articleView.html?idxno=214606
 실리콘밸리 매료시킨 ‘인스팅트’ 3.5조 가치 인정..."진짜 AI 비서"
 https://www.aitimes.com/news/articleView.html?idxno=214605
 
-앤트로픽, 엔스케일 계약 이어 칩 스타트업 협상…컴퓨팅 용량 확보 '총력전'
+앤트로픽, 엔스케일 계약 이어 칩 스타트업 협상…컴퓨팅 용량 확보 &apos;총력전&apos;
 https://www.aitimes.com/news/articleView.html?idxno=214604
 
-미국, 중국의 AI 칩 '우회 원격 접속' 차단 추진…수출 통제 허점 막는다
+미국, 중국의 AI 칩 &apos;우회 원격 접속&apos; 차단 추진…수출 통제 허점 막는다
 https://www.aitimes.com/news/articleView.html?idxno=214602
 
-a16z, AI 하드웨어 공급망 병목 해결 위해 1.5조 규모 '머신 에이지' 펀드 출범
+a16z, AI 하드웨어 공급망 병목 해결 위해 1.5조 규모 &apos;머신 에이지&apos; 펀드 출범
 https://www.aitimes.com/news/articleView.html?idxno=214601
 
-구글, 구매한 전자책과 '제미나이 노트북' 연결…‘전문가 인텔리전스’ 공개
+구글, 구매한 전자책과 &apos;제미나이 노트북&apos; 연결…‘전문가 인텔리전스’ 공개
 https://www.aitimes.com/news/articleView.html?idxno=214600
 
-구글, '제미나이 라이브'에 에이전트 탑재…음성으로 일정·이메일 제어
+구글, &apos;제미나이 라이브&apos;에 에이전트 탑재…음성으로 일정·이메일 제어
 https://www.aitimes.com/news/articleView.html?idxno=214599
 
-320B '옥스 알파'를 PC서 구동…'GLM-5.3-플래시' 용량 81% 줄여
+320B &apos;옥스 알파&apos;를 PC서 구동…&apos;GLM-5.3-플래시&apos; 용량 81% 줄여
 https://www.aitimes.com/news/articleView.html?idxno=214598
