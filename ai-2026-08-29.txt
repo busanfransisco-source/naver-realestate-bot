@@ -12,19 +12,19 @@ https://www.aitimes.com/news/articleView.html?idxno=214600
 구글, '제미나이 라이브'에 에이전트 탑재…음성으로 일정·이메일 제어
 https://www.aitimes.com/news/articleView.html?idxno=214599
 
-320B '옥스 알파'를 PC에서 구동…언슬롯, 'GLM-5.3-플래시' 용량 81% 줄여
+320B '옥스 알파'를 PC서 구동…'GLM-5.3-플래시' 용량 81% 줄여
 https://www.aitimes.com/news/articleView.html?idxno=214598
 
-큐원3.8-플래시-넥스트, 하루 만에 '무검열판' 등장..."성능 유지하고 거부율 0%대로"
+큐원3.8-플래시-넥스트, 하루 만에 '무검열판' 등장..."성능 유지·거부율 0%"
 https://www.aitimes.com/news/articleView.html?idxno=214597
 
 텐센트, 차세대 모델 'Hy4 프리뷰' 오픈 출시로 기업용 시장 정조준
 https://www.aitimes.com/news/articleView.html?idxno=214596
 
-클로드, 테스트 중 700GB 홈 디렉터리 삭제..."안전 분류기가 사고 키웠다"
+클로드 테스트 중 700GB 홈 디렉터리 삭제..."안전 분류기가 사고 키워"
 https://www.aitimes.com/news/articleView.html?idxno=214594
 
-메타, 80억 소형 AI로 ‘클로드 오퍼스 4.5’급 성능 구현…‘에보하네스-RL’ 공개
+메타, 8B 모델로 ‘클로드 오퍼스 4.5’ 성능 구현한 ‘에보하네스-RL’ 공개
 https://www.aitimes.com/news/articleView.html?idxno=214593
 
 [내면 지도 그리기] 31 Inner Mapping: 나를 찾는 지도
