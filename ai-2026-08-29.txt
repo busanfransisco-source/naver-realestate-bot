@@ -1,9 +1,27 @@
 🤖 26년 8월 29일 토요일 AI 뉴스
 
+미국, 중국의 AI 칩 '우회 원격 접속' 차단 추진…수출 통제 허점 막는다
+https://www.aitimes.com/news/articleView.html?idxno=214602
+
+a16z, AI 하드웨어 공급망 병목 해결 위해 1.5조 규모 '머신 에이지' 펀드 출범
+https://www.aitimes.com/news/articleView.html?idxno=214601
+
+구글, 구매한 전자책과 '제미나이 노트북' 연결…‘전문가 인텔리전스’ 공개
+https://www.aitimes.com/news/articleView.html?idxno=214600
+
+구글, '제미나이 라이브'에 에이전트 탑재…음성으로 일정·이메일 제어
+https://www.aitimes.com/news/articleView.html?idxno=214599
+
+320B '옥스 알파'를 PC에서 구동…언슬롯, 'GLM-5.3-플래시' 용량 81% 줄여
+https://www.aitimes.com/news/articleView.html?idxno=214598
+
+큐원3.8-플래시-넥스트, 하루 만에 '무검열판' 등장..."성능 유지하고 거부율 0%대로"
+https://www.aitimes.com/news/articleView.html?idxno=214597
+
 텐센트, 차세대 모델 'Hy4 프리뷰' 오픈 출시로 기업용 시장 정조준
 https://www.aitimes.com/news/articleView.html?idxno=214596
 
-"안전 분류기가 오히려 사고 키웠다"...클로드, 테스트 중 700GB 홈 디렉터리 삭제
+클로드, 테스트 중 700GB 홈 디렉터리 삭제..."안전 분류기가 사고 키웠다"
 https://www.aitimes.com/news/articleView.html?idxno=214594
 
 메타, 80억 소형 AI로 ‘클로드 오퍼스 4.5’급 성능 구현…‘에보하네스-RL’ 공개
@@ -11,21 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214593
 
 [내면 지도 그리기] 31 Inner Mapping: 나를 찾는 지도
 https://www.aitimes.com/news/articleView.html?idxno=214592
-
-[AI카툰] Bob, Senior IT guy - 캡틴밥, 외계인과의 퍼스트 컨택
-https://www.aitimes.com/news/articleView.html?idxno=214586
-
-에임인텔리전스, AI 퍼플티밍으로 '엔비디아 인셉션 챌린지' 결승 진출
-https://www.aitimes.com/news/articleView.html?idxno=214584
-
-[게시판] 서치독, 중기부 팁스(TIPS) 선정 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=214583
-
-[게시판] 액션파워, 한컴오피스에 AI 음성인식 '다글로' 입점 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=214582
-
-구글, 세계 첫 AI 이중맹검 평가 시범 운영…'벤치마크 오염' 방지 나서
-https://www.aitimes.com/news/articleView.html?idxno=214579
-
-딥노이드, “의료 판독 자동화 라인업 확대...AI 의료 에이전트 본격화”
-https://www.aitimes.com/news/articleView.html?idxno=214578
