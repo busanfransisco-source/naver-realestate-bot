@@ -1,7 +1,13 @@
 🤖 26년 8월 29일 토요일 AI 뉴스
 
+앤트로픽 "AI가 인간 대신 정렬 작업 수행…안전성 크게 높였다"
+https://www.aitimes.com/news/articleView.html?idxno=214608
+
 허깅페이스, 55만원짜리 오픈소스 로봇 '마이크로덕' 공개
 https://www.aitimes.com/news/articleView.html?idxno=214607
+
+[AI 이슈트렌드] 엔비디아 호재 안 통한 삼전·하이닉스…박위 사고·제주 실종 파장
+https://www.aitimes.com/news/articleView.html?idxno=214606
 
 실리콘밸리 매료시킨 ‘인스팅트’ 3.5조 가치 인정..."진짜 AI 비서"
 https://www.aitimes.com/news/articleView.html?idxno=214605
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214599
 
 320B '옥스 알파'를 PC서 구동…'GLM-5.3-플래시' 용량 81% 줄여
 https://www.aitimes.com/news/articleView.html?idxno=214598
-
-큐원3.8-플래시-넥스트, 하루 만에 '무검열판' 등장..."성능 유지·거부율 0%"
-https://www.aitimes.com/news/articleView.html?idxno=214597
-
-텐센트, 차세대 모델 'Hy4 프리뷰' 오픈 출시로 기업용 시장 정조준
-https://www.aitimes.com/news/articleView.html?idxno=214596
