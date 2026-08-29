@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-08-30 07:41:30",
+  "updated_at_kst": "2026-08-30 07:51:45",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 30일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "\"너무 비싸서 포기\"…전셋값 뛰자 버팀목 대출도 '뚝'",
+      "url": "https://n.news.naver.com/mnews/article/215/0001264120"
+    },
     {
       "title": "서울 노원에 부는 재건축 바람…하계미성, 2021년 전고점 회복 [부동산360]",
       "url": "https://n.news.naver.com/mnews/article/016/0002690110"
@@ -38,10 +42,6 @@
     {
       "title": "'30조 대어' 목동 재건축 경쟁 실종…3개 단지 연속 수의계약 수순",
       "url": "https://n.news.naver.com/mnews/article/421/0009139551"
-    },
-    {
-      "title": "서울 전월세는 불안한데… 민간임대 기금 증가액 85%는 서울 밖",
-      "url": "https://n.news.naver.com/mnews/article/366/0001189102"
     }
   ]
 }
