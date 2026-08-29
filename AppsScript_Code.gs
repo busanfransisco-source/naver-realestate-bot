@@ -57,6 +57,11 @@ function fetchText_(url, options) {
   return resp.getContentText("UTF-8");
 }
 
+// 수집 실패 문구가 브리핑이나 카카오톡으로 나가는 것을 막는다.
+function hasFetchFailure_(content) {
+  return !content || /가져오기 실패|가져오지 못했습니다|파일을 찾을 수 없습니다/.test(content);
+}
+
 function htmlUnescape_(s) {
   if (!s) return s;
   return s
@@ -214,6 +219,7 @@ function fetchWeather_(now) {
     return { prefix: "weather", content: lines.join("\n"), ok: false };
   }
 
+  var validCount = 0;
   for (var i = 0; i < CITIES.length; i++) {
     var name = CITIES[i][0];
     var d = data[i];
@@ -224,11 +230,12 @@ function fetchWeather_(now) {
       var tmax = Math.round(d.daily.temperature_2m_max[0]);
       var tmin = Math.round(d.daily.temperature_2m_min[0]);
       lines.push("✫" + name + "(" + amE + ")➠(" + pmE + ")  " + tmin + "℃ ~ " + tmax + "℃");
+      validCount++;
     } catch (e2) {
       lines.push("✫" + name + "(?)➠(?)  가져오기 실패");
     }
   }
-  return { prefix: "weather", content: lines.join("\n") + "\n", ok: true };
+  return { prefix: "weather", content: lines.join("\n") + "\n", ok: validCount === CITIES.length };
 }
 
 function fetchFortune_(now) {
@@ -393,9 +400,11 @@ function fetchMarket_(now) {
     ADA: "에이다", TRX: "트론", LINK: "체인링크", AVAX: "아발란체", XLM: "스텔라루멘", SUI: "수이",
     HYPE: "하이퍼리퀴드", DOT: "폴카닷", LTC: "라이트코인", SHIB: "시바이누", TON: "톤코인", BCH: "비트코인캐시", HBAR: "헤데라" };
   var STABLES = { USDT: 1, USDC: 1, DAI: 1, FDUSD: 1, TUSD: 1, USDE: 1, BUSD: 1, PYUSD: 1, USDS: 1 };
+  var coinRows = [];
   try {
     var coinUrl = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=krw&order=market_cap_desc&per_page=20&page=1&price_change_percentage=24h";
     var coinsJson = JSON.parse(fetchText_(coinUrl));
+    if (!Array.isArray(coinsJson)) throw new Error("CoinGecko 응답 형식 오류");
     var count = 0;
     for (var ci = 0; ci < coinsJson.length && count < 10; ci++) {
       var c = coinsJson[ci];
@@ -408,12 +417,17 @@ function fetchMarket_(now) {
       var priceS = price >= 100 ? Math.round(price).toLocaleString() + "원" : price.toFixed(2) + "원";
       var pct = c.price_change_percentage_24h;
       var pctS = (pct !== null && pct !== undefined) ? " (" + (pct >= 0 ? "+" : "") + pct.toFixed(2) + "%)" : "";
-      l2.push((COIN_KR[sym] || sym) + " " + priceS + pctS);
+      coinRows.push((COIN_KR[sym] || sym) + " " + priceS + pctS);
       count++;
     }
-    if (count === 0) l2.push("(코인 시세를 가져오지 못했습니다)");
-  } catch (e) {
-    l2.push("(코인 시세를 가져오지 못했습니다)");
+  } catch (e) {}
+  if (coinRows.length === 10) {
+    props.setProperty("COIN_ROWS_CACHE_V1", JSON.stringify(coinRows));
+    l2 = l2.concat(coinRows);
+  } else {
+    var cachedCoins = [];
+    try { cachedCoins = JSON.parse(props.getProperty("COIN_ROWS_CACHE_V1") || "[]"); } catch (e) {}
+    if (Array.isArray(cachedCoins) && cachedCoins.length === 10) l2 = l2.concat(cachedCoins);
   }
   var metalcoin = l2.join("\n").trim() + "\n";
 
@@ -437,9 +451,9 @@ function fetchMarket_(now) {
   var books = l3.join("\n").trim() + "\n";
 
   return {
-    fuelfx: { prefix: "fuelfx", content: fuelfx, ok: true },
-    metalcoin: { prefix: "metalcoin", content: metalcoin, ok: true },
-    books: { prefix: "books", content: books, ok: true }
+    fuelfx: { prefix: "fuelfx", content: fuelfx, ok: !hasFetchFailure_(fuelfx) },
+    metalcoin: { prefix: "metalcoin", content: metalcoin, ok: metalRows.length > 0 && coinRows.length === 10 },
+    books: { prefix: "books", content: books, ok: !hasFetchFailure_(books) }
   };
 }
 
@@ -605,13 +619,29 @@ function runBackupNow() {
   var results = {};
   var errors = [];
 
+  // 실패한 새 데이터는 절대 저장하거나 발행하지 않는다. 이전 정상 파일만 사용한다.
+  function keepValidOrExisting(prefix, content, ok) {
+    if (ok !== false && !hasFetchFailure_(content)) {
+      results[prefix] = content;
+      return;
+    }
+    var existing = ghGetTextFile_(prefix + "-" + weekday_en + ".txt");
+    if (existing && !hasFetchFailure_(existing)) {
+      results[prefix] = existing;
+      errors.push(prefix + ": 새 수집 실패 - 직전 정상값 유지");
+      return;
+    }
+    errors.push(prefix + ": 새 수집 실패 - 발행 제외");
+  }
+
   function safeRun(name, fn) {
     try {
       var r = fn();
-      if (r && r.prefix) results[r.prefix] = r.content;
+      keepValidOrExisting((r && r.prefix) || name, r && r.content, r && r.ok);
       return r;
     } catch (e) {
       errors.push(name + ": " + e);
+      keepValidOrExisting(name, "", false);
       return null;
     }
   }
@@ -626,11 +656,14 @@ function runBackupNow() {
 
   try {
     var market = fetchMarket_(now);
-    results.fuelfx = market.fuelfx.content;
-    results.metalcoin = market.metalcoin.content;
-    results.books = market.books.content;
+    keepValidOrExisting("fuelfx", market.fuelfx.content, market.fuelfx.ok);
+    keepValidOrExisting("metalcoin", market.metalcoin.content, market.metalcoin.ok);
+    keepValidOrExisting("books", market.books.content, market.books.ok);
   } catch (e) {
     errors.push("market: " + e);
+    keepValidOrExisting("fuelfx", "", false);
+    keepValidOrExisting("metalcoin", "", false);
+    keepValidOrExisting("books", "", false);
   }
 
   ["subs", "trend"].forEach(function (key) {

@@ -12,6 +12,7 @@ weather-{요일}.txt / fortune-{요일}.txt / realestate-{요일}.txt 를 읽어
 import html
 import json
 import re
+from pathlib import Path
 from datetime import datetime, timezone, timedelta
 
 KST = timezone(timedelta(hours=9))
@@ -27,6 +28,29 @@ def read_text(path):
         if path.startswith("analysis"):
             return "(오늘의 분석이 아직 준비되지 않았습니다)"
         return f"(파일을 찾을 수 없습니다: {path})"
+
+
+FAILURE_PATTERN = re.compile(r"가져오기 실패|가져오지 못했습니다|파일을 찾을 수 없습니다")
+
+
+def has_fetch_failure(content):
+    return bool(FAILURE_PATTERN.search(content or ""))
+
+
+def read_section_text(prefix, weekday):
+    """실패 문구를 발행하지 않고, 직전 정상 파일이 있으면 그대로 유지한다."""
+    current = read_text(f"{prefix}-{weekday}.txt")
+    if not has_fetch_failure(current):
+        return current
+
+    for path in sorted(Path(".").glob(f"{prefix}-20??-??-??.txt"), reverse=True):
+        candidate = read_text(str(path))
+        if not has_fetch_failure(candidate):
+            print(f"{prefix}: 수집 실패 파일 대신 직전 정상 파일 사용 ({path.name})")
+            return candidate
+
+    print(f"{prefix}: 정상 대체 파일이 없어 이번 발행에서 비움")
+    return ""
 
 
 def is_fresh_analysis(content, today):
@@ -194,7 +218,7 @@ def build_html():
 
     section_blocks = []
     for key, label, fname_prefix in SECTIONS:
-        content = read_text(f"{fname_prefix}-{weekday_en}.txt")
+        content = read_section_text(fname_prefix, weekday_en)
         if key.startswith("analysis") and not is_fresh_analysis(content, now):
             content = "(오늘의 분석이 아직 준비되지 않았습니다)"
         content_json = json.dumps(content, ensure_ascii=False)
