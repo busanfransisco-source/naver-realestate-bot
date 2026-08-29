@@ -3,6 +3,9 @@
 텐센트, 차세대 모델 'Hy4 프리뷰' 오픈 출시로 기업용 시장 정조준
 https://www.aitimes.com/news/articleView.html?idxno=214596
 
+[내면 지도 그리기] 31 Inner Mapping: 나를 찾는 지도
+https://www.aitimes.com/news/articleView.html?idxno=214592
+
 [AI카툰] Bob, Senior IT guy - 캡틴밥, 외계인과의 퍼스트 컨택
 https://www.aitimes.com/news/articleView.html?idxno=214586
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214577
 
 구글, ‘제미나이 옴니 1.1 플래시’ 공개…영상 생성·편집 제어 기능 대폭 강화
 https://www.aitimes.com/news/articleView.html?idxno=214576
-
-"AI 양자화 정확하고 안전하게"...옵트에이아이, EMNLP 논문 2편 채택
-https://www.aitimes.com/news/articleView.html?idxno=214572
