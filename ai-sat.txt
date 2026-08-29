@@ -3,6 +3,12 @@
 텐센트, 차세대 모델 'Hy4 프리뷰' 오픈 출시로 기업용 시장 정조준
 https://www.aitimes.com/news/articleView.html?idxno=214596
 
+"안전 분류기가 오히려 사고 키웠다"...클로드, 테스트 중 700GB 홈 디렉터리 삭제
+https://www.aitimes.com/news/articleView.html?idxno=214594
+
+메타, 80억 소형 AI로 ‘클로드 오퍼스 4.5’급 성능 구현…‘에보하네스-RL’ 공개
+https://www.aitimes.com/news/articleView.html?idxno=214593
+
 [내면 지도 그리기] 31 Inner Mapping: 나를 찾는 지도
 https://www.aitimes.com/news/articleView.html?idxno=214592
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214579
 
 딥노이드, “의료 판독 자동화 라인업 확대...AI 의료 에이전트 본격화”
 https://www.aitimes.com/news/articleView.html?idxno=214578
-
-코히어, 대규모 엔터프라이즈 문서 분석 AI ‘파스’ 공개...“성능·비용 다 잡았다”
-https://www.aitimes.com/news/articleView.html?idxno=214577
-
-구글, ‘제미나이 옴니 1.1 플래시’ 공개…영상 생성·편집 제어 기능 대폭 강화
-https://www.aitimes.com/news/articleView.html?idxno=214576
