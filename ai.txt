@@ -1,5 +1,14 @@
 🤖 26년 8월 30일 일요일 AI 뉴스
 
+구글, 'AI 개요' 자동 확장 개편…검색 결과서 파란색 링크 축소
+https://www.aitimes.com/news/articleView.html?idxno=214620
+
+'클로드 코드' 주간 한도 25% 인상…실제 17% 감소에 개발자 '발끈'
+https://www.aitimes.com/news/articleView.html?idxno=214616
+
+오픈AI, '코덱스' 용량 한계 보완 조치 단행…"사용 효율 최대 50% 개선"
+https://www.aitimes.com/news/articleView.html?idxno=214613
+
 오픈AI '아스트라' 성능 포착...웹 개발부터 3D 그래픽까지 원샷 구현
 https://www.aitimes.com/news/articleView.html?idxno=214611
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214606
 
 실리콘밸리 매료시킨 ‘인스팅트’ 3.5조 가치 인정..."진짜 AI 비서"
 https://www.aitimes.com/news/articleView.html?idxno=214605
-
-앤트로픽, 엔스케일 계약 이어 칩 스타트업 협상…컴퓨팅 용량 확보 '총력전'
-https://www.aitimes.com/news/articleView.html?idxno=214604
-
-미국, 중국의 AI 칩 '우회 원격 접속' 차단 추진…수출 통제 허점 막는다
-https://www.aitimes.com/news/articleView.html?idxno=214602
-
-a16z, AI 하드웨어 공급망 병목 해결 위해 1.5조 규모 '머신 에이지' 펀드 출범
-https://www.aitimes.com/news/articleView.html?idxno=214601
