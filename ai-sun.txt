@@ -1,5 +1,8 @@
 🤖 26년 8월 30일 일요일 AI 뉴스
 
+"AI가 AI 칩을 만든다"...'핫칩스 2026'서 확인된 반도체 설계의 대변혁
+https://www.aitimes.com/news/articleView.html?idxno=214627
+
 웨이모, 테슬라 향해 직격탄… “2억마일 뛰어보니 카메라만으론 한계”
 https://www.aitimes.com/news/articleView.html?idxno=214626
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214612
 
 오픈AI '아스트라' 성능 포착...웹 개발부터 3D 그래픽까지 원샷 구현
 https://www.aitimes.com/news/articleView.html?idxno=214611
-
-오픈AI, 스페이스X 인수 '커서'에 모델 제공 중단...머스크와 갈등 격화
-https://www.aitimes.com/news/articleView.html?idxno=214610
