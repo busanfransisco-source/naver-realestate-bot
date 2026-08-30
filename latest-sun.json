@@ -1,8 +1,20 @@
 {
-  "updated_at_kst": "2026-08-30 09:29:34",
+  "updated_at_kst": "2026-08-30 09:48:00",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 30일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "삼성물산, 마포한강삼성아파트 리모델링 수주",
+      "url": "https://n.news.naver.com/mnews/article/629/0000528698"
+    },
+    {
+      "title": "롯데건설·현대건설, 1.4조 안양 충훈부 공공재개발 수주",
+      "url": "https://n.news.naver.com/mnews/article/629/0000528695"
+    },
+    {
+      "title": "'그림의 떡' 된 버팀목 전세대출…신혼부부 이용량 반토막",
+      "url": "https://n.news.naver.com/mnews/article/243/0000102347"
+    },
     {
       "title": "서울 중하위권 아파트 상승세 지속… 노도강·은평·금천전고점 회복 못해",
       "url": "https://n.news.naver.com/mnews/article/654/0000197624"
@@ -30,18 +42,6 @@
     {
       "title": "웃으며 대화하더니…돌아서 곧바로 '2차전'",
       "url": "https://n.news.naver.com/mnews/article/648/0000050285"
-    },
-    {
-      "title": "삼성물산, 마포한강삼성 리모델링 수주…2810억 규모",
-      "url": "https://n.news.naver.com/mnews/article/018/0006360270"
-    },
-    {
-      "title": "새임차인에 월세 3배올려 계약무산…대법 \"권리금 회수방해 따져야\"",
-      "url": "https://n.news.naver.com/mnews/article/001/0016278402"
-    },
-    {
-      "title": "부동산PF에 48조 푼다…\"연체율 오른 금융사 참여 관건\"",
-      "url": "https://n.news.naver.com/mnews/article/417/0001156784"
     }
   ]
 }
