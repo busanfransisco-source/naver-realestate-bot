@@ -6,8 +6,14 @@ https://www.aitimes.com/news/articleView.html?idxno=214620
 '클로드 코드' 주간 한도 25% 인상…실제 17% 감소에 개발자 '발끈'
 https://www.aitimes.com/news/articleView.html?idxno=214616
 
+소니·워너, 앤트로픽에 저작권 소송..."클로드 훈련용 음악 무단 취득"
+https://www.aitimes.com/news/articleView.html?idxno=214614
+
 오픈AI, '코덱스' 용량 한계 보완 조치 단행…"사용 효율 최대 50% 개선"
 https://www.aitimes.com/news/articleView.html?idxno=214613
+
+CXMT, 미 국방부 상대 소송 제기..."중국 군수업체 지정은 자의적"
+https://www.aitimes.com/news/articleView.html?idxno=214612
 
 오픈AI '아스트라' 성능 포착...웹 개발부터 3D 그래픽까지 원샷 구현
 https://www.aitimes.com/news/articleView.html?idxno=214611
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214608
 
 허깅페이스, 55만원짜리 오픈소스 로봇 '마이크로덕' 공개
 https://www.aitimes.com/news/articleView.html?idxno=214607
-
-[AI 이슈트렌드] 엔비디아 호재 안 통한 삼전·하이닉스…박위 사고·제주 실종 파장
-https://www.aitimes.com/news/articleView.html?idxno=214606
-
-실리콘밸리 매료시킨 ‘인스팅트’ 3.5조 가치 인정..."진짜 AI 비서"
-https://www.aitimes.com/news/articleView.html?idxno=214605
