@@ -544,10 +544,13 @@ function buildBriefingHtml_(now, sections) {
   var buildDate = dateStamp_(now);
 
   var order = [
-    ["fortune", "🔮 오늘의 운세"], ["weather", "☀️ 날씨"], ["shortnews", "⚡ 오늘의 퀵뉴스"],
-    ["subs", "🏗️ 청약 소식"], ["trend", "📈 부동산 주간 시세동향"], ["fuelfx", "⛽ 기름값·환율"],
-    ["metalcoin", "🥇 금·은·코인"], ["books", "📚 주간 베스트셀러"], ["realestate", "🏠 부동산 뉴스"],
-    ["world", "🌏 세계 뉴스"], ["finance", "🏦 금융 뉴스"], ["ai", "🤖 AI 뉴스"]
+    ["fortune", "1. 🔮 오늘의 운세"], ["weather", "2. ☀️ 날씨"], ["shortnews", "3. ⚡ 오늘의 퀵뉴스"],
+    ["subs", "4. 🏗️ 청약 소식"], ["trend", "5. 📈 부동산 주간 시세동향"], ["fuelfx", "6. ⛽ 기름값·환율"],
+    ["metalcoin", "7. 🥇 금·은·코인"], ["books", "8. 📚 주간 베스트셀러"], ["realestate", "9. 🏠 부동산 뉴스"],
+    ["world", "10. 🌏 세계 뉴스"], ["finance", "11. 🏦 금융 뉴스"], ["ai", "12. 🤖 AI 뉴스"],
+    ["analysis3", "13. 📰 대한민국 정책분석"], ["analysis4", "14. 📰 여러분의 부동산 정책분석"],
+    ["analysis5", "15. 📰 월부길 정책분석"], ["analysis2", "16. 📰 부알남 정책분석"],
+    ["analysis6", "17. 📰 부부투 정책분석"], ["analysis1", "18. 📰 비밀노트 정책 분석"]
   ];
 
   var blocks = order.map(function (pair) {
@@ -671,13 +674,19 @@ function runBackupNow() {
     if (existing) results[key] = existing;
   });
 
+  // 백업 경로가 페이지를 다시 만들어도 정책분석 6개 박스와 순번을 유지한다.
+  ["analysis3", "analysis4", "analysis5", "analysis2", "analysis6", "analysis1"].forEach(function (key) {
+    var existing = ghGetTextFile_(key + "-" + weekday_en + ".txt");
+    if (existing) results[key] = existing;
+  });
+
   var html = buildBriefingHtml_(now, results);
 
   ghPutFile_("briefing.html", html, "Backup pipeline refresh (Apps Script) " + today);
   ghPutFile_("last-refresh-backup.txt", now.toISOString(), "Backup pipeline timestamp " + today);
 
   Object.keys(results).forEach(function (key) {
-    if (["subs", "trend"].indexOf(key) !== -1) return;
+    if (["subs", "trend", "analysis3", "analysis4", "analysis5", "analysis2", "analysis6", "analysis1"].indexOf(key) !== -1) return;
     try {
       ghPutFile_(key + ".txt", results[key], "Backup pipeline data: " + key);
       ghPutFile_(key + "-" + weekday_en + ".txt", results[key], "Backup pipeline data: " + key);

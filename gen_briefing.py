@@ -217,7 +217,7 @@ def build_html():
     build_date = now.strftime("%Y-%m-%d")
 
     section_blocks = []
-    for key, label, fname_prefix in SECTIONS:
+    for number, (key, label, fname_prefix) in enumerate(SECTIONS, start=1):
         content = read_section_text(fname_prefix, weekday_en)
         if key.startswith("analysis") and not is_fresh_analysis(content, now):
             content = "(오늘의 분석이 아직 준비되지 않았습니다)"
@@ -226,7 +226,7 @@ def build_html():
         section_blocks.append(f"""
 <section class="card">
   <div class="card-head">
-    <h2>{label}</h2>
+    <h2>{number}. {label}</h2>
     <button class="copy-btn" onclick="copySection('{key}', this)">복사</button>
   </div>
   <textarea id="ta-{key}" class="preview" readonly>{content_escaped}</textarea>
