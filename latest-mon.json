@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-08-31 20:53:15",
+  "updated_at_kst": "2026-08-31 23:53:14",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 8월 31일 월요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "포스코이앤씨, 리모델링 층간소음 저감기술 개발",
+      "url": "https://n.news.naver.com/mnews/article/014/0005568954"
+    },
+    {
+      "title": "여당 “민간 용적률 120~130% 상향 검토”",
+      "url": "https://n.news.naver.com/mnews/article/032/0003467624"
+    },
     {
       "title": "\"향후 2년간 서울 공동주택 입주물량 약 5만 가구\"",
       "url": "https://n.news.naver.com/mnews/article/422/0000901353"
@@ -34,14 +42,6 @@
     {
       "title": "“국평이 대형보다 더 비싸다”…삼전 사내대출에 ‘가격역전’",
       "url": "https://n.news.naver.com/mnews/article/018/0006361158"
-    },
-    {
-      "title": "코레일 사장 \"고속철 통합 운행, 예측 불가 상황 신속대응 위해 만전\"",
-      "url": "https://n.news.naver.com/mnews/article/003/0014159677"
-    },
-    {
-      "title": "매물 17% 늘어난 성북구, 수요도 늘어… 값은 되레 오름세 [서울 아파트 매물 증가]",
-      "url": "https://n.news.naver.com/mnews/article/014/0005568926"
     }
   ]
 }
