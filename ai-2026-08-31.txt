@@ -1,31 +1,31 @@
 🤖 26년 8월 31일 월요일 AI 뉴스
 
+아스테로모프 AI 모델, 국제물리올림피아드서 금메달 성적 기록
+https://www.aitimes.com/news/articleView.html?idxno=214639
+
+이스트소프트, 대국민 AI '알비서' 하반기 선보인다
+https://www.aitimes.com/news/articleView.html?idxno=214638
+
+원티드랩, 최대 상금 1000만원 ‘AI 챔피언십’ 개최
+https://www.aitimes.com/news/articleView.html?idxno=214636
+
+채널코퍼레이션, 업스테이지·프렌들리AI와 'AI 실무 토론회' 연다
+https://www.aitimes.com/news/articleView.html?idxno=214635
+
+KT, 우리은행 ‘AI 챗봇·상담봇’ 구축..."에이전트로 막힘 없는 금융 상담"
+https://www.aitimes.com/news/articleView.html?idxno=214634
+
+AI 데이터센터, 폐열로 '냉각'…연산용 전력 최대 97MW 더 쓴다
+https://www.aitimes.com/news/articleView.html?idxno=214631
+
+세계 태양광·ESS 동시 투자 상반기 37.5조…1년 새 3배로
+https://www.aitimes.com/news/articleView.html?idxno=214630
+
+중남미 에너지 저장장치, 2035년 34GW 전망…10년 새 13배 성장
+https://www.aitimes.com/news/articleView.html?idxno=214629
+
 "AI가 AI 칩을 만든다"...'핫칩스 2026'서 확인된 반도체 설계의 대변혁
 https://www.aitimes.com/news/articleView.html?idxno=214627
 
 웨이모, 테슬라 향해 직격탄… “2억마일 뛰어보니 카메라만으론 한계”
 https://www.aitimes.com/news/articleView.html?idxno=214626
-
-하정우 전 수석, AI전략위 복귀...‘구글 출신’ 이해민 AI수석 합류
-https://www.aitimes.com/news/articleView.html?idxno=214624
-
-KAIST, AI로 몰카 찾는 LED장치 개발…‘1만원’ 스마트폰 케이스에 부착
-https://www.aitimes.com/news/articleView.html?idxno=214622
-
-구글, 'AI 개요' 자동 확장 개편…검색 결과서 파란색 링크 축소
-https://www.aitimes.com/news/articleView.html?idxno=214620
-
-'클로드 코드' 주간 한도 25% 인상…실제 17% 감소에 개발자 '발끈'
-https://www.aitimes.com/news/articleView.html?idxno=214616
-
-소니·워너, 앤트로픽에 저작권 소송..."클로드 훈련용 음악 무단 취득"
-https://www.aitimes.com/news/articleView.html?idxno=214614
-
-오픈AI, '코덱스' 용량 한계 보완 조치 단행…"사용 효율 최대 50% 개선"
-https://www.aitimes.com/news/articleView.html?idxno=214613
-
-CXMT, 미 국방부 상대 소송 제기..."중국 군수업체 지정은 자의적"
-https://www.aitimes.com/news/articleView.html?idxno=214612
-
-오픈AI '아스트라' 성능 포착...웹 개발부터 3D 그래픽까지 원샷 구현
-https://www.aitimes.com/news/articleView.html?idxno=214611
