@@ -1,5 +1,26 @@
 🤖 26년 8월 31일 월요일 AI 뉴스
 
+[게시판] 엑스와이지, 푸르지오 아파트에  '바리스타 로봇' 공급 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=214666
+
+[게시판] 라온메디, 25억 ‘국가전략 AI 의료과제’ 선정 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=214664
+
+구글, 멀티 에이전트 '팀워크' 공개…"가벼운 플래시 모델로 난제 해결"
+https://www.aitimes.com/news/articleView.html?idxno=214663
+
+숭실대, 클로드 기반 보안 AI '무네메' 개발…글로벌 벤치마크 91% 달성
+https://www.aitimes.com/news/articleView.html?idxno=214661
+
+NC AI, 업스테이지·퓨리오사AI와 사우디서 'K-AI 기술력' 알린다
+https://www.aitimes.com/news/articleView.html?idxno=214660
+
+"코덱스로 게임 개발 공식 바꾼다"...오픈AI, '게임 빌더스 서울' 열어
+https://www.aitimes.com/news/articleView.html?idxno=214658
+
+구글, 벤치마크에 '하네스' 씌웠더니…"에이전트 숨겨진 실력 끌어낸다"
+https://www.aitimes.com/news/articleView.html?idxno=214657
+
 "이론 넘어 실전"…구글 딥마인드 '코사이언티스트', 실제 연구 성과 냈다
 https://www.aitimes.com/news/articleView.html?idxno=214655
 
@@ -8,24 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214654
 
 사이냅소프트, 로앤컴퍼니에 ‘문서뷰어’ 공급…법률 문서 바로 열람
 https://www.aitimes.com/news/articleView.html?idxno=214653
-
-'초기 스마트폰 강자' 블랙베리의 부활...자동차 이어 로봇 AI 노린다
-https://www.aitimes.com/news/articleView.html?idxno=214651
-
-앤트로픽, 과학자용 '클로드 팀 플랜' 출시...1만명에 무료 제공
-https://www.aitimes.com/news/articleView.html?idxno=214650
-
-메타, 청소년 소송 합의 후 틱톡·유튜브 향해 '동참' 압박...신문 광고까지 동원
-https://www.aitimes.com/news/articleView.html?idxno=214647
-
-빅테크, 스타트업 지분 평가이익으로 220조 횡재…월가 "착시 현상" 경고
-https://www.aitimes.com/news/articleView.html?idxno=214646
-
-'맥', 애플 최고 인기 제품으로 떠올라..."오픈AI·앤트로픽도 사들였다"
-https://www.aitimes.com/news/articleView.html?idxno=214645
-
-스페이스X, 가스 터빈 부품 직접 생산…데이터센터 전력난 정면 돌파
-https://www.aitimes.com/news/articleView.html?idxno=214644
-
-SKT, AI 안경으로 찍은 사진 정리해주는 '에이닷 로그' 출시
-https://www.aitimes.com/news/articleView.html?idxno=214640
