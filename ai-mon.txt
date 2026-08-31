@@ -1,5 +1,17 @@
 🤖 26년 8월 31일 월요일 AI 뉴스
 
+"이론 넘어 실전"…구글 딥마인드 '코사이언티스트', 실제 연구 성과 냈다
+https://www.aitimes.com/news/articleView.html?idxno=214655
+
+솔트룩스, ‘모두의 AI’ KT 컨소시엄 참여…공공 에이전트 구축 담당
+https://www.aitimes.com/news/articleView.html?idxno=214654
+
+사이냅소프트, 로앤컴퍼니에 ‘문서뷰어’ 공급…법률 문서 바로 열람
+https://www.aitimes.com/news/articleView.html?idxno=214653
+
+'초기 스마트폰 강자' 블랙베리의 부활...자동차 이어 로봇 AI 노린다
+https://www.aitimes.com/news/articleView.html?idxno=214651
+
 앤트로픽, 과학자용 '클로드 팀 플랜' 출시...1만명에 무료 제공
 https://www.aitimes.com/news/articleView.html?idxno=214650
 
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214644
 
 SKT, AI 안경으로 찍은 사진 정리해주는 '에이닷 로그' 출시
 https://www.aitimes.com/news/articleView.html?idxno=214640
-
-아스테로모프 AI 모델, 국제물리올림피아드서 금메달 성적 기록
-https://www.aitimes.com/news/articleView.html?idxno=214639
-
-이스트소프트, 대국민 AI '알비서' 하반기 선보인다
-https://www.aitimes.com/news/articleView.html?idxno=214638
-
-원티드랩, 최대 상금 1000만원 ‘AI 챔피언십’ 개최
-https://www.aitimes.com/news/articleView.html?idxno=214636
-
-채널코퍼레이션, 업스테이지·프렌들리AI와 'AI 실무 토론회' 연다
-https://www.aitimes.com/news/articleView.html?idxno=214635
