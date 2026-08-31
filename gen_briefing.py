@@ -43,7 +43,22 @@ def read_section_text(prefix, weekday):
     if not has_fetch_failure(current):
         return current
 
-    for path in sorted(Path(".").glob(f"{prefix}-20??-??-??.txt"), reverse=True):
+    # 당일 수집이 실패했더라도 기존 정상 prefix.txt나 직전 요일 자료를 재사용한다.
+    # 같은 실행에서 current/prefix가 모두 실패 문구로 바뀐 과거 파일도 건너뛴다.
+    weekday_index = WEEKDAY_EN.index(weekday) if weekday in WEEKDAY_EN else 0
+    previous_weekdays = [
+        WEEKDAY_EN[(weekday_index - offset) % len(WEEKDAY_EN)]
+        for offset in range(1, len(WEEKDAY_EN))
+    ]
+    fallback_paths = [Path(f"{prefix}.txt")]
+    fallback_paths.extend(Path(f"{prefix}-{day}.txt") for day in previous_weekdays)
+    fallback_paths.extend(sorted(Path(".").glob(f"{prefix}-20??-??-??.txt"), reverse=True))
+
+    seen = set()
+    for path in fallback_paths:
+        if path in seen:
+            continue
+        seen.add(path)
         candidate = read_text(str(path))
         if not has_fetch_failure(candidate):
             print(f"{prefix}: 수집 실패 파일 대신 직전 정상 파일 사용 ({path.name})")

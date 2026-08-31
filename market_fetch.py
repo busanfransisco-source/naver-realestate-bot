@@ -121,6 +121,8 @@ def bestsellers():
             titles.append(t)
         if len(titles) >= 10:
             break
+    if len(titles) < 10:
+        raise RuntimeError(f"알라딘 베스트셀러가 {len(titles)}권만 확인되었습니다.")
     return titles
 
 
@@ -216,19 +218,25 @@ def main():
     metalcoin = "\n".join(lines).strip() + "\n"
 
     # ---------- 카드 3: 주간 베스트셀러 ----------
-    lines = [f"{date_head} 주간 베스트셀러", "", "📚 알라딘 주간 베스트셀러 TOP 10", ""]
+    books_content = None
     try:
         books = bestsellers()
+        lines = [f"{date_head} 주간 베스트셀러", "", "📚 알라딘 주간 베스트셀러 TOP 10", ""]
         for i, t in enumerate(books, 1):
             lines.append(f"{i}. {t}")
-    except Exception:
-        lines.append("(베스트셀러를 가져오지 못했습니다)")
-    books_content = "\n".join(lines).strip() + "\n"
+        books_content = "\n".join(lines).strip() + "\n"
+    except Exception as e:
+        # 일시적인 외부 사이트 실패가 기존 정상 자료를 지우면 안 된다.
+        print(f"베스트셀러 수집 실패: {e} — 기존 정상 파일을 보존합니다.")
 
-    for prefix, content in (("fuelfx", fuelfx), ("metalcoin", metalcoin), ("books", books_content)):
+    for prefix, content in (("fuelfx", fuelfx), ("metalcoin", metalcoin)):
         for fname in (f"{prefix}.txt", f"{prefix}-{weekday_en}.txt"):
             with open(fname, "w", encoding="utf-8") as f:
                 f.write(content)
+    if books_content is not None:
+        for fname in ("books.txt", f"books-{weekday_en}.txt"):
+            with open(fname, "w", encoding="utf-8") as f:
+                f.write(books_content)
     print("market_fetch 완료")
 
 
