@@ -1,5 +1,23 @@
 🤖 26년 8월 31일 월요일 AI 뉴스
 
+앤트로픽, 과학자용 '클로드 팀 플랜' 출시...1만명에 무료 제공
+https://www.aitimes.com/news/articleView.html?idxno=214650
+
+메타, 청소년 소송 합의 후 틱톡·유튜브 향해 '동참' 압박...신문 광고까지 동원
+https://www.aitimes.com/news/articleView.html?idxno=214647
+
+빅테크, 스타트업 지분 평가이익으로 220조 횡재…월가 "착시 현상" 경고
+https://www.aitimes.com/news/articleView.html?idxno=214646
+
+'맥', 애플 최고 인기 제품으로 떠올라..."오픈AI·앤트로픽도 사들였다"
+https://www.aitimes.com/news/articleView.html?idxno=214645
+
+스페이스X, 가스 터빈 부품 직접 생산…데이터센터 전력난 정면 돌파
+https://www.aitimes.com/news/articleView.html?idxno=214644
+
+SKT, AI 안경으로 찍은 사진 정리해주는 '에이닷 로그' 출시
+https://www.aitimes.com/news/articleView.html?idxno=214640
+
 아스테로모프 AI 모델, 국제물리올림피아드서 금메달 성적 기록
 https://www.aitimes.com/news/articleView.html?idxno=214639
 
@@ -11,21 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214636
 
 채널코퍼레이션, 업스테이지·프렌들리AI와 'AI 실무 토론회' 연다
 https://www.aitimes.com/news/articleView.html?idxno=214635
-
-KT, 우리은행 ‘AI 챗봇·상담봇’ 구축..."에이전트로 막힘 없는 금융 상담"
-https://www.aitimes.com/news/articleView.html?idxno=214634
-
-AI 데이터센터, 폐열로 '냉각'…연산용 전력 최대 97MW 더 쓴다
-https://www.aitimes.com/news/articleView.html?idxno=214631
-
-세계 태양광·ESS 동시 투자 상반기 37.5조…1년 새 3배로
-https://www.aitimes.com/news/articleView.html?idxno=214630
-
-중남미 에너지 저장장치, 2035년 34GW 전망…10년 새 13배 성장
-https://www.aitimes.com/news/articleView.html?idxno=214629
-
-"AI가 AI 칩을 만든다"...'핫칩스 2026'서 확인된 반도체 설계의 대변혁
-https://www.aitimes.com/news/articleView.html?idxno=214627
-
-웨이모, 테슬라 향해 직격탄… “2억마일 뛰어보니 카메라만으론 한계”
-https://www.aitimes.com/news/articleView.html?idxno=214626
