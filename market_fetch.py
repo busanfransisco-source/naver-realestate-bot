@@ -6,6 +6,7 @@
 import json
 import re
 from datetime import datetime, timedelta, timezone
+from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
@@ -126,6 +127,23 @@ def bestsellers():
     return titles
 
 
+def previous_valid_bestsellers(weekday):
+    """알라딘이 일시적으로 막혀도 직전 정상 TOP 10을 유지한다."""
+    days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
+    start = days.index(weekday)
+    candidates = [Path("books.txt")]
+    candidates.extend(Path(f"books-{days[(start - offset) % 7]}.txt") for offset in range(1, 7))
+    for path in candidates:
+        try:
+            text = path.read_text(encoding="utf-8")
+        except FileNotFoundError:
+            continue
+        titles = re.findall(r"^\d+\.\s+(.+)$", text, flags=re.MULTILINE)
+        if len(titles) >= 10:
+            return titles[:10]
+    return []
+
+
 def sign_fmt(v, decimals=2, suffix=""):
     return f"{'▲' if v > 0 else ('▼' if v < 0 else '-')}{abs(v):,.{decimals}f}{suffix}"
 
@@ -226,8 +244,16 @@ def main():
             lines.append(f"{i}. {t}")
         books_content = "\n".join(lines).strip() + "\n"
     except Exception as e:
-        # 일시적인 외부 사이트 실패가 기존 정상 자료를 지우면 안 된다.
-        print(f"베스트셀러 수집 실패: {e} — 기존 정상 파일을 보존합니다.")
+        # 일시적인 외부 사이트 실패가 기존 정상 자료를 지우거나 빈칸으로 만들면 안 된다.
+        books = previous_valid_bestsellers(weekday_en)
+        if books:
+            lines = [f"{date_head} 주간 베스트셀러", "", "📚 알라딘 주간 베스트셀러 TOP 10", ""]
+            for i, t in enumerate(books, 1):
+                lines.append(f"{i}. {t}")
+            books_content = "\n".join(lines).strip() + "\n"
+            print(f"베스트셀러 수집 실패: {e} — 직전 정상 TOP 10을 유지합니다.")
+        else:
+            print(f"베스트셀러 수집 실패: {e} — 정상 대체 목록이 없어 기존 파일을 보존합니다.")
 
     for prefix, content in (("fuelfx", fuelfx), ("metalcoin", metalcoin)):
         for fname in (f"{prefix}.txt", f"{prefix}-{weekday_en}.txt"):
