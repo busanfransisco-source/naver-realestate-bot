@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-09-02 06:51:08",
+  "updated_at_kst": "2026-09-02 07:10:26",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 2일 수요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "3개월만에 9.1억 하락… 강남 아파트 급매 속출, 거래는 ‘꽁꽁’",
+      "url": "https://n.news.naver.com/mnews/article/005/0001870398"
+    },
+    {
+      "title": "[팀장칼럼] 강남을 겨냥한 세금, 청구서는 강북 세입자에게",
+      "url": "https://n.news.naver.com/mnews/article/421/0009145279"
+    },
     {
       "title": "기본주택 5년 허송세월… 홍지선號 국토부, 150만채 청사진 ‘첩첩산중’",
       "url": "https://n.news.naver.com/mnews/article/029/0003045654"
@@ -34,14 +42,6 @@
     {
       "title": "IPARK현대산업개발, 재무 건전성 강화… 2분기 영업이익 1000억 돌파",
       "url": "https://n.news.naver.com/mnews/article/366/0001189791"
-    },
-    {
-      "title": "34억 신고가 찍은 일원동 5층 아파트… 재건축 줄줄이 속도",
-      "url": "https://n.news.naver.com/mnews/article/366/0001189789"
-    },
-    {
-      "title": "규제 동탄도, 비규제 병점도… 59·84㎡ 집값 상승률 1위",
-      "url": "https://n.news.naver.com/mnews/article/366/0001189788"
     }
   ]
 }
