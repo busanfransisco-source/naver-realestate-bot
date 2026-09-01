@@ -1,5 +1,8 @@
 🤖 26년 9월 1일 화요일 AI 뉴스
 
+인티그리트, 차세대 퍼스널 AI 위한 ‘스텔라 덱’ 플랫폼 글로벌 공개
+https://www.aitimes.com/news/articleView.html?idxno=214673
+
 SK하이닉스, AI 붐 대응 위해 일본 메모리 합작공장 설립 검토
 https://www.aitimes.com/news/articleView.html?idxno=214667
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214657
 
 "이론 넘어 실전"…구글 '코사이언티스트', 실제 연구 성과 냈다
 https://www.aitimes.com/news/articleView.html?idxno=214655
-
-솔트룩스, ‘모두의 AI’ KT 컨소시엄 참여…공공 에이전트 구축 담당
-https://www.aitimes.com/news/articleView.html?idxno=214654
