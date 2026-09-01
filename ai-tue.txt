@@ -1,31 +1,31 @@
 🤖 26년 9월 1일 화요일 AI 뉴스
 
-[9월1일] 진화하는 AI 버블 논란…“인터넷보다 소셜미디어에 가깝다”
-https://www.aitimes.com/news/articleView.html?idxno=214682
+비드래프트, “AI 문명은 창발인가 암송인가”…라이브 실험세계 ‘ai-월드’ 공개
+https://www.aitimes.com/news/articleView.html?idxno=214701
 
-MS·오픈AI 동시 장애 발생...클라우드 인프라 연관성에 주목
-https://www.aitimes.com/news/articleView.html?idxno=214676
+LGU+, 어라이즈 AI와 '신뢰 가능한 AI 에이전트' 체계 구축한다
+https://www.aitimes.com/news/articleView.html?idxno=214696
 
-스웨덴, 폐태양광 패널 2060년 연 최대 15만톤…재활용 체계 구축 나서
-https://www.aitimes.com/news/articleView.html?idxno=214675
+AI 업계의 반격...AI 옹호 단체 통해 '데이터센터 홍보' 나서
+https://www.aitimes.com/news/articleView.html?idxno=214695
 
-인티그리트, 차세대 퍼스널 AI 위한 ‘스텔라 덱’ 플랫폼 글로벌 공개
-https://www.aitimes.com/news/articleView.html?idxno=214673
+제논, AI 엔지니어 중심 전 직군 대규모 채용
+https://www.aitimes.com/news/articleView.html?idxno=214691
 
-인도 옥상태양광 상반기 6.6GW…전년 대비 131% 급증
-https://www.aitimes.com/news/articleView.html?idxno=214672
+트위니, 144억 규모 프리IPO 투자 유치…코스닥 상장·해외 진출 가속
+https://www.aitimes.com/news/articleView.html?idxno=214689
 
-태양광 O&M 시장 348GW로 확대…상위 15개사 점유율 57%
-https://www.aitimes.com/news/articleView.html?idxno=214669
+슈퍼브에이아이, ‘지하주차장 전기차 화재 조기 감지 AI’ 개발…“오경보율 80% 감소”
+https://www.aitimes.com/news/articleView.html?idxno=214687
 
-AI 네이티브 기업 실행전략 세미나 9일 개최...동원·다이닝브랜즈·크몽 등 사례 발표
-https://www.aitimes.com/news/articleView.html?idxno=214668
+팀 쿡의 마지막 인사…애플, 리더십 교체 따른 임원진 개편 진행
+https://www.aitimes.com/news/articleView.html?idxno=214686
 
-SK하이닉스, AI 붐 대응 위해 일본 메모리 합작공장 설립 검토
-https://www.aitimes.com/news/articleView.html?idxno=214667
+엔비디아, '칩 설계' 미디어텍에 4.7조 투자...GPU 독점 넘어 '생태계 표준' 노린다
+https://www.aitimes.com/news/articleView.html?idxno=214681
 
-[게시판] 엑스와이지, 푸르지오 아파트에  '바리스타 로봇' 공급 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=214666
+"서울숲 순찰부터 일본 배달까지"...뉴빌리티, '뉴비' 적용 영역 확대
+https://www.aitimes.com/news/articleView.html?idxno=214680
 
-[게시판] 라온메디, 25억 ‘국가전략 AI 의료과제’ 선정 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=214664
+중국 CXMT, 'HBM3E' 소량 생산 성공...양산·수율 확보는 과제
+https://www.aitimes.com/news/articleView.html?idxno=214679
