@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-09-01 09:42:25",
+  "updated_at_kst": "2026-09-01 09:48:54",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 1일 화요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "주식·채권 팔아 마련한 8조원…절반 넘게 15억 이상 집 샀다",
+      "url": "https://n.news.naver.com/mnews/article/421/0009143126"
+    },
+    {
+      "title": "용산공원 주택공급 반대 청원 5만명 돌파…국회 심사대 오르나",
+      "url": "https://n.news.naver.com/mnews/article/014/0005569099"
+    },
     {
       "title": "대우건설, 덴마크 설계사와 목동8 재건축 외관 디자인 맞손",
       "url": "https://n.news.naver.com/mnews/article/421/0009143066"
@@ -34,14 +42,6 @@
     {
       "title": "미래운용 '맵스리얼티', 일본 도쿄 임대주택 4개 매입",
       "url": "https://n.news.naver.com/mnews/article/001/0016281604"
-    },
-    {
-      "title": "LH, 주거급여 조사에 통합돌봄 접목…광진구서 첫 시범사업",
-      "url": "https://n.news.naver.com/mnews/article/003/0014160296"
-    },
-    {
-      "title": "삼표그룹, 특수 콘크리트 전문가 양성…격려금도 지원",
-      "url": "https://n.news.naver.com/mnews/article/003/0014160295"
     }
   ]
 }
