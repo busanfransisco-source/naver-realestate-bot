@@ -1,7 +1,25 @@
 🤖 26년 9월 1일 화요일 AI 뉴스
 
+[9월1일] 진화하는 AI 버블 논란…“인터넷보다 소셜미디어에 가깝다”
+https://www.aitimes.com/news/articleView.html?idxno=214682
+
+MS·오픈AI 동시 장애 발생...클라우드 인프라 연관성에 주목
+https://www.aitimes.com/news/articleView.html?idxno=214676
+
+스웨덴, 폐태양광 패널 2060년 연 최대 15만톤…재활용 체계 구축 나서
+https://www.aitimes.com/news/articleView.html?idxno=214675
+
 인티그리트, 차세대 퍼스널 AI 위한 ‘스텔라 덱’ 플랫폼 글로벌 공개
 https://www.aitimes.com/news/articleView.html?idxno=214673
+
+인도 옥상태양광 상반기 6.6GW…전년 대비 131% 급증
+https://www.aitimes.com/news/articleView.html?idxno=214672
+
+태양광 O&M 시장 348GW로 확대…상위 15개사 점유율 57%
+https://www.aitimes.com/news/articleView.html?idxno=214669
+
+AI 네이티브 기업 실행전략 세미나 9일 개최...동원·다이닝브랜즈·크몽 등 사례 발표
+https://www.aitimes.com/news/articleView.html?idxno=214668
 
 SK하이닉스, AI 붐 대응 위해 일본 메모리 합작공장 설립 검토
 https://www.aitimes.com/news/articleView.html?idxno=214667
@@ -11,21 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214666
 
 [게시판] 라온메디, 25억 ‘국가전략 AI 의료과제’ 선정 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=214664
-
-구글, 멀티 에이전트 '팀워크' 공개…"플래시 모델로 난제 해결"
-https://www.aitimes.com/news/articleView.html?idxno=214663
-
-숭실대, 클로드 기반 보안 AI '무네메' 개발…글로벌 벤치마크 91% 달성
-https://www.aitimes.com/news/articleView.html?idxno=214661
-
-NC AI, 업스테이지·퓨리오사AI와 사우디서 'K-AI 기술력' 알린다
-https://www.aitimes.com/news/articleView.html?idxno=214660
-
-"코덱스로 게임 개발 공식 바꾼다"...오픈AI, '게임 빌더스 서울' 열어
-https://www.aitimes.com/news/articleView.html?idxno=214658
-
-구글, 벤치마크에 '하네스' 씌웠더니…"숨겨진 AI 실력 끌어낸다"
-https://www.aitimes.com/news/articleView.html?idxno=214657
-
-"이론 넘어 실전"…구글 '코사이언티스트', 실제 연구 성과 냈다
-https://www.aitimes.com/news/articleView.html?idxno=214655
