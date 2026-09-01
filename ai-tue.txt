@@ -1,31 +1,31 @@
 🤖 26년 9월 1일 화요일 AI 뉴스
 
-비드래프트, “AI 문명은 창발인가 암송인가”…라이브 실험세계 ‘ai-월드’ 공개
-https://www.aitimes.com/news/articleView.html?idxno=214701
+[게시판] 인텔리빅스, 신세계면세점에 'AI 안전관제 솔루션' 공급 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=214718
 
-LGU+, 어라이즈 AI와 '신뢰 가능한 AI 에이전트' 체계 구축한다
-https://www.aitimes.com/news/articleView.html?idxno=214696
+[게시판] 유니유니, 움직임 분석 AI로 기술신용평가 T3등급 획득 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=214717
 
-AI 업계의 반격...AI 옹호 단체 통해 '데이터센터 홍보' 나서
-https://www.aitimes.com/news/articleView.html?idxno=214695
+로봇청소기로 아내 불륜 몰래 녹화한 남편...이혼 소송 승소하고도 징역형
+https://www.aitimes.com/news/articleView.html?idxno=214715
 
-제논, AI 엔지니어 중심 전 직군 대규모 채용
-https://www.aitimes.com/news/articleView.html?idxno=214691
+"독파모 넘어 프론티어 AI로"…정부, GPU 1만장 확보에 3.8조원 배정
+https://www.aitimes.com/news/articleView.html?idxno=214714
 
-트위니, 144억 규모 프리IPO 투자 유치…코스닥 상장·해외 진출 가속
-https://www.aitimes.com/news/articleView.html?idxno=214689
+인스타그램, AI 인플루언서 단속 강화...“AI 정체 숨기면 추천 노출 제한”
+https://www.aitimes.com/news/articleView.html?idxno=214712
 
-슈퍼브에이아이, ‘지하주차장 전기차 화재 조기 감지 AI’ 개발…“오경보율 80% 감소”
-https://www.aitimes.com/news/articleView.html?idxno=214687
+중국, 정상회담 앞두고 앤트로픽 직접 겨냥..."미국 AI 기업 백도어 먼저 검증하라"
+https://www.aitimes.com/news/articleView.html?idxno=214711
 
-팀 쿡의 마지막 인사…애플, 리더십 교체 따른 임원진 개편 진행
-https://www.aitimes.com/news/articleView.html?idxno=214686
+화웨이, 메모리 폭등·R&D로 순이익 36% 급감...매출은 9.5% 늘어
+https://www.aitimes.com/news/articleView.html?idxno=214710
 
-엔비디아, '칩 설계' 미디어텍에 4.7조 투자...GPU 독점 넘어 '생태계 표준' 노린다
-https://www.aitimes.com/news/articleView.html?idxno=214681
+에어빌리티, AI 대드론 체계로 65억 시리즈A 투자 유치
+https://www.aitimes.com/news/articleView.html?idxno=214709
 
-"서울숲 순찰부터 일본 배달까지"...뉴빌리티, '뉴비' 적용 영역 확대
-https://www.aitimes.com/news/articleView.html?idxno=214680
+지푸, 상반기 매출 5배 상승에도 '어닝 쇼크'…격화되는 가격 전쟁에 발목
+https://www.aitimes.com/news/articleView.html?idxno=214708
 
-중국 CXMT, 'HBM3E' 소량 생산 성공...양산·수율 확보는 과제
-https://www.aitimes.com/news/articleView.html?idxno=214679
+메가존클라우드, IPO 앞두고 네오위즈파트너스 투자 유치
+https://www.aitimes.com/news/articleView.html?idxno=214706
