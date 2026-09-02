@@ -1,5 +1,14 @@
 🤖 26년 9월 2일 수요일 AI 뉴스
 
+NC AI, AI 오디오 생성 플랫폼 '바르코 사운드' 정식 출시
+https://www.aitimes.com/news/articleView.html?idxno=214734
+
+인텔리시아, AI 가상 소비자 솔루션으로 34억 프리 A 투자 유치
+https://www.aitimes.com/news/articleView.html?idxno=214732
+
+'기업 가치 1조' 뤼튼, IPO 주관사 선정 착수..."내년 이후 상장 목표"
+https://www.aitimes.com/news/articleView.html?idxno=214729
+
 앤트로픽, 최고 성능 '페이블 5.1' 출시...캐시 읽기 75% 파격 할인
 https://www.aitimes.com/news/articleView.html?idxno=214725
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214717
 
 로봇청소기로 아내 불륜 몰래 녹화한 남편...이혼 소송 승소하고도 징역형
 https://www.aitimes.com/news/articleView.html?idxno=214715
-
-"독파모 넘어 프론티어 AI로"…정부, GPU 1만장 확보에 3.85조 배정
-https://www.aitimes.com/news/articleView.html?idxno=214714
-
-인스타그램, AI 인플루언서 단속 강화...“AI 정체 숨기면 추천 노출 제한”
-https://www.aitimes.com/news/articleView.html?idxno=214712
-
-중국, 정상회담 앞두고 앤트로픽 직접 겨냥..."미국 AI 기업 백도어 먼저 검증하라"
-https://www.aitimes.com/news/articleView.html?idxno=214711
