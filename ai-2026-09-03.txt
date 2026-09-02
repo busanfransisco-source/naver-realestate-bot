@@ -1,5 +1,8 @@
 🤖 26년 9월 3일 목요일 AI 뉴스
 
+메타, '뮤즈 스파크 1.3' 출시...오픈AI 제치고 세계 3위 성능
+https://www.aitimes.com/news/articleView.html?idxno=214774
+
 [게시판] KT, 통신·AX·정밀측위로 어린이 통학차 안전 협력 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=214771
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214761
 
 액션캠 넘어 AI 인프라로... 고프로, 광학 기업 합병으로 40% 폭등
 https://www.aitimes.com/news/articleView.html?idxno=214760
-
-파수 AI, 가상화 방식 ‘DRM 소스코드 보안’ 솔루션 출시
-https://www.aitimes.com/news/articleView.html?idxno=214759
