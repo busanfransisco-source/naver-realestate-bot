@@ -1,31 +1,31 @@
 🤖 26년 9월 2일 수요일 AI 뉴스
 
+원익로보틱스, 5지 로봇핸드 ‘알레그로 핸드 V6 F’ 출시…접촉 데이터 수집 강화
+https://www.aitimes.com/news/articleView.html?idxno=214758
+
+뉴엔AI “주류 산업 특화 AI로 ‘산토리 맥주’ 소비 트렌드 읽는다”
+https://www.aitimes.com/news/articleView.html?idxno=214755
+
+한국딥러닝, 문서 운영 '딥옵스' 출시…“업무 변화 맞춰 AI 직접 수정”
+https://www.aitimes.com/news/articleView.html?idxno=214751
+
+에릭슨코리아 "AI-RAN·ISAC로 6G 네트워크 전환 앞당길 것"
+https://www.aitimes.com/news/articleView.html?idxno=214748
+
+미국, G20 회의서 AI 규제 신설 반대...머스크 "EU식 규제가 혁신 저하"
+https://www.aitimes.com/news/articleView.html?idxno=214744
+
+앤트로픽, 기업 데이터 직접 관리 'EFS' 공개... 30일 보존 방침 철회
+https://www.aitimes.com/news/articleView.html?idxno=214743
+
+오픈AI, 애플 소송에 정면 반박..."허술한 퇴직자 관리가 자초한 문제"
+https://www.aitimes.com/news/articleView.html?idxno=214742
+
 GIST, 페로브스카이트 태양전지 상용화 협의체 출범…437억 사업 연계
 https://www.aitimes.com/news/articleView.html?idxno=214740
 
+앤트로픽, 엔비디아 등에 업고 48조 규모 AI 컴퓨팅 확보
+https://www.aitimes.com/news/articleView.html?idxno=214739
+
 존 터너스 애플 신임 CEO 출사표… "경이로운 차세대 혁신 보여줄 것"
 https://www.aitimes.com/news/articleView.html?idxno=214738
-
-NC AI, AI 오디오 생성 플랫폼 '바르코 사운드' 정식 출시
-https://www.aitimes.com/news/articleView.html?idxno=214734
-
-인텔리시아, AI 가상 소비자 솔루션으로 34억 프리 A 투자 유치
-https://www.aitimes.com/news/articleView.html?idxno=214732
-
-중국, 리튬이온 배터리 11년 만에 소비세 부과…9월부터 2%
-https://www.aitimes.com/news/articleView.html?idxno=214731
-
-'기업 가치 1조' 뤼튼, IPO 주관사 선정 착수..."내년 이후 상장 목표"
-https://www.aitimes.com/news/articleView.html?idxno=214729
-
-사우디, 세계 최대 독립형 ESS 결합 태양광 전력망 본격 가동
-https://www.aitimes.com/news/articleView.html?idxno=214727
-
-구글, 페르보와 396MW 지열발전 계약…데이터센터 전력 확보하나
-https://www.aitimes.com/news/articleView.html?idxno=214726
-
-앤트로픽, 최고 성능 '페이블 5.1' 출시...캐시 읽기 75% 파격 할인
-https://www.aitimes.com/news/articleView.html?idxno=214725
-
-곡성 옛 입면장터, 주민과 지역 이야기를 담은 문화공간 조성
-https://www.aitimes.com/news/articleView.html?idxno=214724
