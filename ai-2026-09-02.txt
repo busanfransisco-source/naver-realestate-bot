@@ -1,31 +1,31 @@
 🤖 26년 9월 2일 수요일 AI 뉴스
 
+[게시판] KT, 통신·AX·정밀측위로 어린이 통학차 안전 협력 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=214771
+
+다이슨, 68만원 AI 비전 칫솔 ‘카메라젯’ 출시…고가·사생활 우려 넘을까
+https://www.aitimes.com/news/articleView.html?idxno=214769
+
+아이벡스, 컴퓨터 비전 국제 학회 논문 채택…“메모리 용량 문제 해결”
+https://www.aitimes.com/news/articleView.html?idxno=214765
+
+KT, ‘안전 AX 솔루션’ 선보인다…“재난 대응부터 보이스피싱 예방까지”
+https://www.aitimes.com/news/articleView.html?idxno=214764
+
+카카오, ‘리센느’와 일상 속 AI 경험 알린다
+https://www.aitimes.com/news/articleView.html?idxno=214762
+
+AI 토큰 가격 사상 최저치…중국산 모델 인기·가격 경쟁 심화 여파
+https://www.aitimes.com/news/articleView.html?idxno=214761
+
+파수 AI, 가상화 방식 ‘DRM 소스코드 보안’ 솔루션 출시
+https://www.aitimes.com/news/articleView.html?idxno=214759
+
 원익로보틱스, 5지 로봇핸드 ‘알레그로 핸드 V6 F’ 출시…접촉 데이터 수집 강화
 https://www.aitimes.com/news/articleView.html?idxno=214758
 
+웨이모·죽스, 로보택시 미국 서비스 동시 확대...테슬라 ‘사이버캡’ 출시에 맞불
+https://www.aitimes.com/news/articleView.html?idxno=214757
+
 뉴엔AI “주류 산업 특화 AI로 ‘산토리 맥주’ 소비 트렌드 읽는다”
 https://www.aitimes.com/news/articleView.html?idxno=214755
-
-한국딥러닝, 문서 운영 '딥옵스' 출시…“업무 변화 맞춰 AI 직접 수정”
-https://www.aitimes.com/news/articleView.html?idxno=214751
-
-에릭슨코리아 "AI-RAN·ISAC로 6G 네트워크 전환 앞당길 것"
-https://www.aitimes.com/news/articleView.html?idxno=214748
-
-미국, G20 회의서 AI 규제 신설 반대...머스크 "EU식 규제가 혁신 저하"
-https://www.aitimes.com/news/articleView.html?idxno=214744
-
-앤트로픽, 기업 데이터 직접 관리 'EFS' 공개... 30일 보존 방침 철회
-https://www.aitimes.com/news/articleView.html?idxno=214743
-
-오픈AI, 애플 소송에 정면 반박..."허술한 퇴직자 관리가 자초한 문제"
-https://www.aitimes.com/news/articleView.html?idxno=214742
-
-GIST, 페로브스카이트 태양전지 상용화 협의체 출범…437억 사업 연계
-https://www.aitimes.com/news/articleView.html?idxno=214740
-
-앤트로픽, 엔비디아 등에 업고 48조 규모 AI 컴퓨팅 확보
-https://www.aitimes.com/news/articleView.html?idxno=214739
-
-존 터너스 애플 신임 CEO 출사표… "경이로운 차세대 혁신 보여줄 것"
-https://www.aitimes.com/news/articleView.html?idxno=214738
