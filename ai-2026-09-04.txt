@@ -6,6 +6,9 @@ https://www.aitimes.com/news/articleView.html?idxno=214821
 [게시판] 라온피플, 702억 규모 ‘피지컬 AI 국책사업’ 선정 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=214820
 
+“제미나이로 일상을 편리하게”...안드로이드 5가지 기능 업데이트
+https://www.aitimes.com/news/articleView.html?idxno=214816
+
 마키나락스 "프론티어 모델도 못 푼 현장 문제, AI OS·FDE로 해결"
 https://www.aitimes.com/news/articleView.html?idxno=214815
 
@@ -18,14 +21,11 @@ https://www.aitimes.com/news/articleView.html?idxno=214813
 메타, 스마트 안경 '몰카' 논란에 SW 업데이트·여론전 전면 대응
 https://www.aitimes.com/news/articleView.html?idxno=214809
 
+크라우드웍스, 데이터 구축 노하우로 'AI 에이전트 안전성' 검증 나선다
+https://www.aitimes.com/news/articleView.html?idxno=214808
+
 '기억 저장 순서' 바꿔 성능 향상...고속 어텐션 프레임워크 '팰컨' 등장
 https://www.aitimes.com/news/articleView.html?idxno=214807
 
-텔레픽스 “우주 궤도 실증 성공…위성 온보드AI가 스스로 촬영 위치 찾아”
-https://www.aitimes.com/news/articleView.html?idxno=214804
-
-"AI 가상 소비자가 대세"...바이브컴퍼니, AI 트윈 컨슈머 플랫폼 선보여
-https://www.aitimes.com/news/articleView.html?idxno=214802
-
-"WASD 누르면 영상 생성"... 텐센트, 인터랙티브 월드모델 'H3-월드' 발표
-https://www.aitimes.com/news/articleView.html?idxno=214800
+이파피루스, AI 데이터 전처리 솔루션 누적 다운로드 10억건 돌파
+https://www.aitimes.com/news/articleView.html?idxno=214806
