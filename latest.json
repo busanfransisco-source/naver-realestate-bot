@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-09-04 08:23:33",
+  "updated_at_kst": "2026-09-04 08:35:15",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 4일 금요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "대우건설, ‘두정역 푸르지오 그랑피크’ 분양… 15일 1순위 접수",
+      "url": "https://n.news.naver.com/mnews/article/366/0001190312"
+    },
     {
       "title": "울산 샤힌 에틸렌시설 건설현장서 노동자 1명 추락사",
       "url": "https://n.news.naver.com/mnews/article/003/0014168622"
@@ -38,10 +42,6 @@
     {
       "title": "‘두산위브 더센트럴 도화’ 완판…부천 후속단지 훈풍 이을까",
       "url": "https://n.news.naver.com/mnews/article/011/0004658504"
-    },
-    {
-      "title": "전기차가 대세라길래, BMW iX3 타봤습니다 [운전석리포트]",
-      "url": "https://n.news.naver.com/mnews/article/005/0001870909"
     }
   ]
 }
