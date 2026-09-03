@@ -1,31 +1,31 @@
 🤖 26년 9월 3일 목요일 AI 뉴스
 
+뉴욕시 공립학교 초·중생 AI 사용 1년 전면 중단… "기술보다 인간적 교류 우선"
+https://www.aitimes.com/news/articleView.html?idxno=214814
+
+메타, 스마트 안경 '몰카' 논란에 SW 업데이트·여론전 전면 대응
+https://www.aitimes.com/news/articleView.html?idxno=214809
+
+크라우드웍스, 데이터 구축 노하우로 'AI 에이전트 안전성' 검증 나선다
+https://www.aitimes.com/news/articleView.html?idxno=214808
+
+이파피루스, AI 데이터 전처리 솔루션 누적 다운로드 10억건 돌파
+https://www.aitimes.com/news/articleView.html?idxno=214806
+
+텔레픽스 “우주 궤도 실증 성공…위성 온보드AI가 스스로 촬영 위치 찾아”
+https://www.aitimes.com/news/articleView.html?idxno=214804
+
+WSJ "구글, '제미나이 3.5 프로' 폐기...차세대 모델 집중"
+https://www.aitimes.com/news/articleView.html?idxno=214803
+
+"AI 가상 소비자가 대세"...바이브컴퍼니, AI 트윈 컨슈머 플랫폼 선보여
+https://www.aitimes.com/news/articleView.html?idxno=214802
+
+베스핀글로벌 US, 교통 인프라 기업 '니올로지'와 AX 파트너십 체결
+https://www.aitimes.com/news/articleView.html?idxno=214801
+
 룰루랩 “AI 피부데이터 하나의 인프라로 연결, 개인화 진료 지원한다”
 https://www.aitimes.com/news/articleView.html?idxno=214798
 
 래블업, ‘파이토치 재단’ 실버 멤버 합류…“오픈소스 AI 생태계 기여”
 https://www.aitimes.com/news/articleView.html?idxno=214796
-
-MS, 사업 부문 2개로 재편…‘애저’ 분기 매출 첫 공개
-https://www.aitimes.com/news/articleView.html?idxno=214795
-
-삼성SDS, 미국 'RX ART' 개최…“‘산업 현장 로봇’ 활용 사례 공개”
-https://www.aitimes.com/news/articleView.html?idxno=214794
-
-구글 광고 거래소 매각 면했다...미 법원, '기업 분할' 대신 '행태 개선' 선택
-https://www.aitimes.com/news/articleView.html?idxno=214793
-
-오픈AI ‘아스트라’ 이번 주 출시설…API에 ‘GPT-6’ 흔적 포착
-https://www.aitimes.com/news/articleView.html?idxno=214790
-
-오픈AI, ‘텀블러 리지 총기 난사’ 30건 추가 소송…방조·공모 혐의 적용
-https://www.aitimes.com/news/articleView.html?idxno=214788
-
-네이버클라우드, 정부 '사이버 보안 AI 모델' 개발 사업자로 최종 발탁
-https://www.aitimes.com/news/articleView.html?idxno=214787
-
-베슬AI, SK바이오팜에 GPU 128장 공급...신약 개발 지원 나선다
-https://www.aitimes.com/news/articleView.html?idxno=214786
-
-"3주 만에 반격"...구글, 코딩 성능 강화한 '제미나이 3.8 플래시' 공개
-https://www.aitimes.com/news/articleView.html?idxno=214781
