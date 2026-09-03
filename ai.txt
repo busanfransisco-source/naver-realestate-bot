@@ -1,5 +1,17 @@
 🤖 26년 9월 3일 목요일 AI 뉴스
 
+"3주 만에 반격"...구글, 코딩 성능 강화한 '제미나이 3.8 플래시' 공개
+https://www.aitimes.com/news/articleView.html?idxno=214781
+
+UAE, 청정에너지 발전 비중 35%로 상향…태양광·배터리 확대
+https://www.aitimes.com/news/articleView.html?idxno=214778
+
+사우스오스트레일리아주, 옥상태양광으로 한낮 전력수요 사실상 전부 충당
+https://www.aitimes.com/news/articleView.html?idxno=214777
+
+'태양광 미니그리드'로 전력망 밖 농촌 밝힌다…서아프리카 4개국 주목
+https://www.aitimes.com/news/articleView.html?idxno=214776
+
 메타, '뮤즈 스파크 1.3' 출시...오픈AI 제치고 세계 3위 성능
 https://www.aitimes.com/news/articleView.html?idxno=214774
 
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214765
 
 KT, ‘안전 AX 솔루션’ 선보인다…“재난 대응부터 보이스피싱 예방까지”
 https://www.aitimes.com/news/articleView.html?idxno=214764
-
-허깅페이스 소형 로봇 ‘마이크로덕’ 초반 흥행…중국 록칩 NPU 탑재
-https://www.aitimes.com/news/articleView.html?idxno=214763
-
-카카오, ‘리센느’와 일상 속 AI 경험 알린다
-https://www.aitimes.com/news/articleView.html?idxno=214762
-
-AI 토큰 가격 사상 최저치…중국산 모델 인기·가격 경쟁 심화 여파
-https://www.aitimes.com/news/articleView.html?idxno=214761
-
-액션캠 넘어 AI 인프라로... 고프로, 광학 기업 합병으로 40% 폭등
-https://www.aitimes.com/news/articleView.html?idxno=214760
