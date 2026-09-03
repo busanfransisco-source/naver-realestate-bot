@@ -1,31 +1,31 @@
 🤖 26년 9월 3일 목요일 AI 뉴스
 
+룰루랩 “AI 피부데이터 하나의 인프라로 연결, 개인화 진료 지원한다”
+https://www.aitimes.com/news/articleView.html?idxno=214798
+
+래블업, ‘파이토치 재단’ 실버 멤버 합류…“오픈소스 AI 생태계 기여”
+https://www.aitimes.com/news/articleView.html?idxno=214796
+
+MS, 사업 부문 2개로 재편…‘애저’ 분기 매출 첫 공개
+https://www.aitimes.com/news/articleView.html?idxno=214795
+
+삼성SDS, 미국 'RX ART' 개최…“‘산업 현장 로봇’ 활용 사례 공개”
+https://www.aitimes.com/news/articleView.html?idxno=214794
+
+구글 광고 거래소 매각 면했다...미 법원, '기업 분할' 대신 '행태 개선' 선택
+https://www.aitimes.com/news/articleView.html?idxno=214793
+
+오픈AI ‘아스트라’ 이번 주 출시설…API에 ‘GPT-6’ 흔적 포착
+https://www.aitimes.com/news/articleView.html?idxno=214790
+
+오픈AI, ‘텀블러 리지 총기 난사’ 30건 추가 소송…방조·공모 혐의 적용
+https://www.aitimes.com/news/articleView.html?idxno=214788
+
+네이버클라우드, 정부 '사이버 보안 AI 모델' 개발 사업자로 최종 발탁
+https://www.aitimes.com/news/articleView.html?idxno=214787
+
+베슬AI, SK바이오팜에 GPU 128장 공급...신약 개발 지원 나선다
+https://www.aitimes.com/news/articleView.html?idxno=214786
+
 "3주 만에 반격"...구글, 코딩 성능 강화한 '제미나이 3.8 플래시' 공개
 https://www.aitimes.com/news/articleView.html?idxno=214781
-
-UAE, 청정에너지 발전 비중 35%로 상향…태양광·배터리 확대
-https://www.aitimes.com/news/articleView.html?idxno=214778
-
-사우스오스트레일리아주, 옥상태양광으로 한낮 전력수요 사실상 전부 충당
-https://www.aitimes.com/news/articleView.html?idxno=214777
-
-'태양광 미니그리드'로 전력망 밖 농촌 밝힌다…서아프리카 4개국 주목
-https://www.aitimes.com/news/articleView.html?idxno=214776
-
-메타, '뮤즈 스파크 1.3' 출시...오픈AI 제치고 세계 3위 성능
-https://www.aitimes.com/news/articleView.html?idxno=214774
-
-[게시판] KT, 통신·AX·정밀측위로 어린이 통학차 안전 협력 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=214771
-
-다이슨, 68만원 AI 비전 칫솔 ‘카메라젯’ 출시…고가·사생활 우려 넘을까
-https://www.aitimes.com/news/articleView.html?idxno=214769
-
-구글 “LLM 환각 원인은 지식 부족 아닌 '기억 인출' 실패”
-https://www.aitimes.com/news/articleView.html?idxno=214766
-
-아이벡스, 컴퓨터 비전 국제 학회 논문 채택…“메모리 용량 문제 해결”
-https://www.aitimes.com/news/articleView.html?idxno=214765
-
-KT, ‘안전 AX 솔루션’ 선보인다…“재난 대응부터 보이스피싱 예방까지”
-https://www.aitimes.com/news/articleView.html?idxno=214764
