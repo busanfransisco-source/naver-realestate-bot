@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-09-05 07:16:36",
+  "updated_at_kst": "2026-09-05 07:35:43",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 5일 토요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "자동차 넘어 항공·주차까지…TS '종합 교통안전기관'으로 확대",
+      "url": "https://n.news.naver.com/mnews/article/421/0009152431"
+    },
+    {
+      "title": "\"철거권 줄게\"…가짜서류로 5억 가로챈 일당 2심도 징역형 집유",
+      "url": "https://n.news.naver.com/mnews/article/001/0016291401"
+    },
     {
       "title": "\"공동명의가 무조건 절세?\"…집 살 때 따져볼 득실[부동산사용설명서]",
       "url": "https://n.news.naver.com/mnews/article/421/0009152403"
@@ -34,14 +42,6 @@
     {
       "title": "신촌은 비고 명동·성수는 찼다…서울 상권 ‘공실 양극화’[집슐랭]",
       "url": "https://n.news.naver.com/mnews/article/011/0004658788"
-    },
-    {
-      "title": "[부동산캘린더] 내주 서울 성북 브라운스톤월곡센트럴 등 2천852가구 분양",
-      "url": "https://n.news.naver.com/mnews/article/001/0016291359"
-    },
-    {
-      "title": "모아타운 속도 못 내자… 서울시, ‘재개발급’ 관리체계 만든다",
-      "url": "https://n.news.naver.com/mnews/article/366/0001190519"
     }
   ]
 }
