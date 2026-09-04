@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-09-04 23:53:13",
+  "updated_at_kst": "2026-09-05 02:50:32",
   "source": "https://news.naver.com/breakingnews/section/101/260",
-  "headline": "26년 9월 4일 금요일 부동산 주요뉴스",
+  "headline": "26년 9월 5일 토요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "2차 공공기관 지방이전, 지방 부동산 가치 달라질까[손바닥부동산]",
+      "url": "https://n.news.naver.com/mnews/article/018/0006364011"
+    },
+    {
+      "title": "韓총리 \"정책 성패, 주택공급 확보에 달려…민관 원팀으로\"",
+      "url": "https://n.news.naver.com/mnews/article/421/0009152319"
+    },
     {
       "title": "한 총리 \"빠른 주택공급 힘 모아달라\" 주택건설업계 \"인허가 단축\"(종합)",
       "url": "https://n.news.naver.com/mnews/article/003/0014170687"
@@ -34,14 +42,6 @@
     {
       "title": "홍지선 국토장관 후보 10억 아파트…‘영끌’은 글쎄, 타이밍은 절묘",
       "url": "https://n.news.naver.com/mnews/article/028/0002821717"
-    },
-    {
-      "title": "홍지선 국토부 장관 후보자, '장모 찬스'로 5억 영끌 아파트 매수",
-      "url": "https://n.news.naver.com/mnews/article/119/0003129299"
-    },
-    {
-      "title": "주택건설 업계 만난 한 총리 \"주택 공급 빠르게 하는 데 힘 모아달라\"",
-      "url": "https://n.news.naver.com/mnews/article/003/0014170520"
     }
   ]
 }
