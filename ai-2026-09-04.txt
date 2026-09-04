@@ -1,31 +1,31 @@
 🤖 26년 9월 4일 금요일 AI 뉴스
 
+[게시판] 워크데이, 2분기 AI 신규 연간계약 급증 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=214873
+
+이해진 네이버 의장, 브룩필드 회장과 회동… ‘1GW급 AI 팩토리 사업’ 후속 논의
+https://www.aitimes.com/news/articleView.html?idxno=214871
+
+과기부, '모두의 AI' 간담회 개최…2500억 예산으로 국민 체감 AI 서비스 추진
+https://www.aitimes.com/news/articleView.html?idxno=214869
+
+사우디 휴메인, 미니맥스 협력으로 아랍어 모델 ‘휴메인-m3’ 공개
+https://www.aitimes.com/news/articleView.html?idxno=214868
+
+구글, 매시간 날씨 예보 AI '웨더넥스트 3' 공개...청정에너지·전력망 정밀도 높여
+https://www.aitimes.com/news/articleView.html?idxno=214867
+
+구글, 워크스페이스에 ‘제미나이 오디오’ 탑재...음성으로 문서·메일·메모 처리
+https://www.aitimes.com/news/articleView.html?idxno=214866
+
+아크릴, 국내 의료기관과 ‘AI 암 진단·치료·예후 의료체계’ 구축 나서
+https://www.aitimes.com/news/articleView.html?idxno=214865
+
 문샷 AI, 홍콩 증시 IPO 비공개 신청…중국 AI 기업 자금 조달 가속화
 https://www.aitimes.com/news/articleView.html?idxno=214864
 
-엔비디아, 차세대 AI PC 칩 'RTX 스파크' 10월 출시...개인용 AI 라우터 '페어' 공개
-https://www.aitimes.com/news/articleView.html?idxno=214850
+UAE, 세계 최대 규모 완전 오픈소스 AI 'K2 호라이즌' 공개
+https://www.aitimes.com/news/articleView.html?idxno=214861
 
-“데이터 공유하면 95% 할인”…메타, ‘기여자 요금제’ 전면 확대
-https://www.aitimes.com/news/articleView.html?idxno=214842
-
-엑스와이지, 5000평 '갤럭시 로봇파크'에 바리스타 로봇 투입한다
-https://www.aitimes.com/news/articleView.html?idxno=214839
-
-앤트로픽 "중국 AI, 다크웹서 도난 카드로 클로드 무단 증류" 폭로
-https://www.aitimes.com/news/articleView.html?idxno=214838
-
-"엔비디아·구글도 온다"...혁신 기술 집결한 'LG 스파크 2026' 7일 개막
-https://www.aitimes.com/news/articleView.html?idxno=214835
-
-챗GPT·클로드·그록 등 동시 장애...클라우드 인프라 연관성 주목
-https://www.aitimes.com/news/articleView.html?idxno=214832
-
-엔비디아, 허깅페이스 17.5조 인수 발표...오픈소스 생태계 주도권 확보
-https://www.aitimes.com/news/articleView.html?idxno=214830
-
-인텔리빅스, 산업안전 AI 솔루션으로 코스닥 상장예심 통과
-https://www.aitimes.com/news/articleView.html?idxno=214828
-
-중국 태양광 설비 1.286TW, 석탄발전 첫 추월…전체 31.5% 차지
-https://www.aitimes.com/news/articleView.html?idxno=214825
+MS, 'MAI-트랜스크라이브-2' 공개...속도·정확도·가격 다 잡은 음성 인식 모델
+https://www.aitimes.com/news/articleView.html?idxno=214858
