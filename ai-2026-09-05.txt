@@ -6,7 +6,7 @@ https://www.aitimes.com/news/articleView.html?idxno=214873
 이해진 네이버 의장, 브룩필드 회장과 회동… ‘1GW급 AI 팩토리 사업’ 후속 논의
 https://www.aitimes.com/news/articleView.html?idxno=214871
 
-과기부, '모두의 AI' 간담회 개최…2500억 예산으로 국민 체감 AI 서비스 추진
+과기부, '모두의 AI' 간담회 개최…"국민 체감 AI 서비스 추진"
 https://www.aitimes.com/news/articleView.html?idxno=214869
 
 사우디 휴메인, 미니맥스 협력으로 아랍어 모델 ‘휴메인-m3’ 공개
@@ -15,7 +15,7 @@ https://www.aitimes.com/news/articleView.html?idxno=214868
 구글, 매시간 날씨 예보 AI '웨더넥스트 3' 공개...청정에너지·전력망 정밀도 높여
 https://www.aitimes.com/news/articleView.html?idxno=214867
 
-구글, 워크스페이스에 ‘제미나이 오디오’ 탑재...음성으로 문서·메일·메모 처리
+구글, 워크스페이스에 ‘제미나이 오디오’ 탑재...말로 문서·메일·메모 처리
 https://www.aitimes.com/news/articleView.html?idxno=214866
 
 아크릴, 국내 의료기관과 ‘AI 암 진단·치료·예후 의료체계’ 구축 나서
@@ -27,5 +27,5 @@ https://www.aitimes.com/news/articleView.html?idxno=214864
 UAE, 세계 최대 규모 완전 오픈소스 AI 'K2 호라이즌' 공개
 https://www.aitimes.com/news/articleView.html?idxno=214861
 
-MS, 'MAI-트랜스크라이브-2' 공개...속도·정확도·가격 다 잡은 음성 인식 모델
+MS, 음성 모델 'MAI-트랜스크라이브-2' 공개...속도·정확도·가격 다 잡아
 https://www.aitimes.com/news/articleView.html?idxno=214858
