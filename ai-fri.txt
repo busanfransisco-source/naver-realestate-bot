@@ -1,31 +1,31 @@
 🤖 26년 9월 4일 금요일 AI 뉴스
 
+문샷 AI, 홍콩 증시 IPO 비공개 신청…중국 AI 기업 자금 조달 가속화
+https://www.aitimes.com/news/articleView.html?idxno=214864
+
+엔비디아, 차세대 AI PC 칩 'RTX 스파크' 10월 출시...개인용 AI 라우터 '페어' 공개
+https://www.aitimes.com/news/articleView.html?idxno=214850
+
+“데이터 공유하면 95% 할인”…메타, ‘기여자 요금제’ 전면 확대
+https://www.aitimes.com/news/articleView.html?idxno=214842
+
+엑스와이지, 5000평 '갤럭시 로봇파크'에 바리스타 로봇 투입한다
+https://www.aitimes.com/news/articleView.html?idxno=214839
+
+앤트로픽 "중국 AI, 다크웹서 도난 카드로 클로드 무단 증류" 폭로
+https://www.aitimes.com/news/articleView.html?idxno=214838
+
+"엔비디아·구글도 온다"...혁신 기술 집결한 'LG 스파크 2026' 7일 개막
+https://www.aitimes.com/news/articleView.html?idxno=214835
+
+챗GPT·클로드·그록 등 동시 장애...클라우드 인프라 연관성 주목
+https://www.aitimes.com/news/articleView.html?idxno=214832
+
+엔비디아, 허깅페이스 17.5조 인수 발표...오픈소스 생태계 주도권 확보
+https://www.aitimes.com/news/articleView.html?idxno=214830
+
 인텔리빅스, 산업안전 AI 솔루션으로 코스닥 상장예심 통과
 https://www.aitimes.com/news/articleView.html?idxno=214828
 
 중국 태양광 설비 1.286TW, 석탄발전 첫 추월…전체 31.5% 차지
 https://www.aitimes.com/news/articleView.html?idxno=214825
-
-AI 드론으로 태양광 결함 찾는다…점검시간 147분에서 54분
-https://www.aitimes.com/news/articleView.html?idxno=214824
-
-오픈AI, 압도적 성능 'GPT-6 아스트라' 공개…"AGI 시대 진입" 선언
-https://www.aitimes.com/news/articleView.html?idxno=214821
-
-[게시판] 라온피플, 702억 규모 ‘피지컬 AI 국책사업’ 선정 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=214820
-
-“제미나이로 일상을 편리하게”...안드로이드 5가지 기능 업데이트
-https://www.aitimes.com/news/articleView.html?idxno=214816
-
-마키나락스 "프론티어 모델도 못 푼 현장 문제, AI OS·FDE로 해결"
-https://www.aitimes.com/news/articleView.html?idxno=214815
-
-뉴욕시 공립학교 초·중생 AI 사용 1년 전면 중단… "기술보다 인간적 교류 우선"
-https://www.aitimes.com/news/articleView.html?idxno=214814
-
-인월드 AI, 맥락·감정 읽는 음성 모델 '실시간 TTS-2' 공개...아티피셜 애널리시스 1위 등극
-https://www.aitimes.com/news/articleView.html?idxno=214813
-
-메타, 스마트 안경 '몰카' 논란에 SW 업데이트·여론전 전면 대응
-https://www.aitimes.com/news/articleView.html?idxno=214809
