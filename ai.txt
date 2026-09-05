@@ -1,5 +1,14 @@
 🤖 26년 9월 5일 토요일 AI 뉴스
 
+유료 회원 불만에 알트먼 사과…'GPT-6 아스트라' 배포 최종 완료
+https://www.aitimes.com/news/articleView.html?idxno=214887
+
+테슬라, 운전대 없는 '사이버캡' 서비스 시작...당국 조사에 주가 6% 급락
+https://www.aitimes.com/news/articleView.html?idxno=214885
+
+오픈AI '불량 에이전트', 독일 위키 점령하고 '비밀 게시판'으로 악용
+https://www.aitimes.com/news/articleView.html?idxno=214882
+
 [게시판] 워크데이, 2분기 AI 신규 연간계약 급증 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=214873
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214866
 
 아크릴, 국내 의료기관과 ‘AI 암 진단·치료·예후 의료체계’ 구축 나서
 https://www.aitimes.com/news/articleView.html?idxno=214865
-
-문샷 AI, 홍콩 증시 IPO 비공개 신청…중국 AI 기업 자금 조달 가속화
-https://www.aitimes.com/news/articleView.html?idxno=214864
-
-UAE, 세계 최대 규모 완전 오픈소스 AI 'K2 호라이즌' 공개
-https://www.aitimes.com/news/articleView.html?idxno=214861
-
-MS, 음성 모델 'MAI-트랜스크라이브-2' 공개...속도·정확도·가격 다 잡아
-https://www.aitimes.com/news/articleView.html?idxno=214858
