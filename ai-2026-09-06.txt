@@ -1,5 +1,8 @@
 🤖 26년 9월 6일 일요일 AI 뉴스
 
+GPT-6 아스트라, AI 최초 수능 '완전 만점'...탐구 4과목까지 석권
+https://www.aitimes.com/news/articleView.html?idxno=214896
+
 “AI는 돈 벌고 사람은 취업난, 사실일까”…’AI 현황 보고서’ 저자의 진단
 https://www.aitimes.com/news/articleView.html?idxno=214893
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214886
 
 테슬라, 운전대 없는 '사이버캡' 서비스 시작...당국 조사에 주가 6% 급락
 https://www.aitimes.com/news/articleView.html?idxno=214885
-
-엔비디아, 무라티의 TML에 3.3조 투자 논의…"오픈소스 생태계 결속"
-https://www.aitimes.com/news/articleView.html?idxno=214883
