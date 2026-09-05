@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-09-05 20:53:14",
+  "updated_at_kst": "2026-09-05 22:50:33",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 5일 토요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "\"임대인 속내까지 증명하라니\"…전세사기 피해자 4명 중 1명 탈락",
+      "url": "https://n.news.naver.com/mnews/article/656/0000185988"
+    },
+    {
+      "title": "\"8년 만에 17억 뛰었다\"…'로또' 맞은 동네 어디길래",
+      "url": "https://n.news.naver.com/mnews/article/015/0005329031"
+    },
     {
       "title": "15억 넘으면 대출 2억 '뚝'…눈에 보이지 않는 경계선 생겨",
       "url": "https://n.news.naver.com/mnews/article/015/0005329027"
@@ -34,14 +42,6 @@
     {
       "title": "나이 들면 역세권보다 ‘이것’...중산층 고령자가 살고싶은 집은 [부동산360]",
       "url": "https://n.news.naver.com/mnews/article/016/0002693189"
-    },
-    {
-      "title": "홍지선 국토장관 후보자 \"구로 아파트, 시세차익 목적 매입 아냐\"",
-      "url": "https://n.news.naver.com/mnews/article/003/0014171098"
-    },
-    {
-      "title": "홍지선, ‘영끌 주택구입’ 지적에 “시세차익 목적 아냐”",
-      "url": "https://n.news.naver.com/mnews/article/021/0002816508"
     }
   ]
 }
