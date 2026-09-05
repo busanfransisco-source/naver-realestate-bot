@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-09-06 08:04:33",
+  "updated_at_kst": "2026-09-06 08:24:04",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 6일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "“집값 상승 안꺾이면 2030년 서울 22개구서 종부세 낸다…사실상 서울시민세”",
+      "url": "https://n.news.naver.com/mnews/article/016/0002693268"
+    },
+    {
+      "title": "전남광주 상무지구 도심융합특구, 반도체 배후단지로 조성",
+      "url": "https://n.news.naver.com/mnews/article/001/0016292119"
+    },
     {
       "title": "대구 아파트 매매 2개월 연속 증가…월 2000건대 유지",
       "url": "https://n.news.naver.com/mnews/article/421/0009152993"
@@ -34,14 +42,6 @@
     {
       "title": "코스피 불장에 주택도시기금도 '쏠쏠'…올 상반기 1.2조 수익",
       "url": "https://n.news.naver.com/mnews/article/001/0016292051"
-    },
-    {
-      "title": "“월급 모아 집 산다? 그말 믿는 사람 있나요?”…‘부모 찬스’ 절반이 30대",
-      "url": "https://n.news.naver.com/mnews/article/009/0005730873"
-    },
-    {
-      "title": "\"3억 더 얹어 재계약\"…서울 전세 세입자 88% 보증금 올려줬다",
-      "url": "https://n.news.naver.com/mnews/article/421/0009152946"
     }
   ]
 }
