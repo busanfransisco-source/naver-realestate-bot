@@ -1,5 +1,14 @@
 🤖 26년 9월 5일 토요일 AI 뉴스
 
+“AI는 돈 벌고 사람은 취업난, 사실일까”…’AI 현황 보고서’ 저자의 진단
+https://www.aitimes.com/news/articleView.html?idxno=214893
+
+샌더스 미 의원, '인공 초지능 금지법' 발의...위반 시 '기업 사형선고'
+https://www.aitimes.com/news/articleView.html?idxno=214892
+
+"생산성 혁명인가, 디스토피아의 시작인가"…'아스트라' 출시 반응 폭발
+https://www.aitimes.com/news/articleView.html?idxno=214891
+
 앤트로픽, 다음 주 증권신고서 제출 전망…10월 초 상장 타임라인 구체화
 https://www.aitimes.com/news/articleView.html?idxno=214890
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214885
 
 엔비디아, 무라티의 TML에 3.3조 투자 논의…"오픈소스 생태계 결속"
 https://www.aitimes.com/news/articleView.html?idxno=214883
-
-오픈AI '불량 에이전트', 독일 위키 점령하고 '비밀 게시판'으로 악용
-https://www.aitimes.com/news/articleView.html?idxno=214882
-
-구글, 제미나이 스파크에 '포토' 연동...사진 검색·편집·일정 등록까지 자동화
-https://www.aitimes.com/news/articleView.html?idxno=214881
-
-[AI카툰] Bob, Senior IT guy - "밥, 직업이 뭐예요?"
-https://www.aitimes.com/news/articleView.html?idxno=214880
