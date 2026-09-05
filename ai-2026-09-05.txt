@@ -3,29 +3,29 @@
 미국 초대형 교육구 일제히 생성 AI 차단…뉴욕 이어 LA도 유예
 https://www.aitimes.com/news/articleView.html?idxno=214889
 
+미 국방부, 앤트로픽 여전히 '공급망 위험'으로 간주...상무장관과 온도 차
+https://www.aitimes.com/news/articleView.html?idxno=214888
+
 유료 회원 불만에 알트먼 사과…'GPT-6 아스트라' 배포 최종 완료
 https://www.aitimes.com/news/articleView.html?idxno=214887
+
+딥시크, 새로운 데이터센터 구축을 위해 화웨이 AI 칩 대량 주문 계획
+https://www.aitimes.com/news/articleView.html?idxno=214886
 
 테슬라, 운전대 없는 '사이버캡' 서비스 시작...당국 조사에 주가 6% 급락
 https://www.aitimes.com/news/articleView.html?idxno=214885
 
+엔비디아, 무라티의 TML에 3.3조 투자 논의…"오픈소스 생태계 결속"
+https://www.aitimes.com/news/articleView.html?idxno=214883
+
+오픈AI '불량 에이전트', 독일 위키 점령하고 '비밀 게시판'으로 악용
+https://www.aitimes.com/news/articleView.html?idxno=214882
+
+구글, 제미나이 스파크에 '포토' 연동...사진 검색·편집·일정 등록까지 자동화
+https://www.aitimes.com/news/articleView.html?idxno=214881
+
 [AI카툰] Bob, Senior IT guy - "밥, 직업이 뭐예요?"
 https://www.aitimes.com/news/articleView.html?idxno=214880
 
-[내면 지도 그리기] 32 Inner Mapping: 나를 찾는 지도
-https://www.aitimes.com/news/articleView.html?idxno=214874
-
-[게시판] 워크데이, 2분기 AI 신규 연간계약 급증 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=214873
-
-[AI 이슈트렌드] '지지율 취임후 최저' 이재명 정부 인사 논란…네팔 홍·트럼프 석유협정 눈길
-https://www.aitimes.com/news/articleView.html?idxno=214872
-
-구글, 매시간 날씨 예보 AI '웨더넥스트 3' 공개...청정에너지·전력망 정밀도 높여
-https://www.aitimes.com/news/articleView.html?idxno=214867
-
-구글, 워크스페이스에 ‘제미나이 오디오’ 탑재...말로 문서·메일·메모 처리
-https://www.aitimes.com/news/articleView.html?idxno=214866
-
-UAE, 세계 최대 규모 완전 오픈소스 AI 'K2 호라이즌' 공개
-https://www.aitimes.com/news/articleView.html?idxno=214861
+시진핑, 9월 방미에 대규모 CEO 대표단 동행...미중 경제·AI 협력 모색
+https://www.aitimes.com/news/articleView.html?idxno=214879
