@@ -1,8 +1,20 @@
 {
-  "updated_at_kst": "2026-09-07 07:29:36",
+  "updated_at_kst": "2026-09-07 07:56:57",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 7일 월요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "옆집도 파산, 나도 파산...\"대출규제 풀어달라\" 벼량 끝 지식산업센터",
+      "url": "https://n.news.naver.com/mnews/article/014/0005571737"
+    },
+    {
+      "title": "GS건설, '사전 제작 모듈러' 데이터센터 개발…공급 속도↑",
+      "url": "https://n.news.naver.com/mnews/article/277/0005812514"
+    },
+    {
+      "title": "기저귀 찬 건물주?…미성년 3233명 ‘임대소득’ 올렸다",
+      "url": "https://n.news.naver.com/mnews/article/029/0003046447"
+    },
     {
       "title": "분양가상한제도 못 막았다…공공분양도 국평 7억 시대",
       "url": "https://n.news.naver.com/mnews/article/119/0003129638"
@@ -30,18 +42,6 @@
     {
       "title": "서울 정비사업 '경쟁입찰' 사라졌다…2조 대어도 유찰",
       "url": "https://n.news.naver.com/mnews/article/031/0001055819"
-    },
-    {
-      "title": "“기저귀 떼기도 전 월세 꼬박꼬박”...미취학 아동 179명, 부동산 임대소득 올렸다",
-      "url": "https://n.news.naver.com/mnews/article/009/0005731171"
-    },
-    {
-      "title": "아직 기저귀도 못 뗐는데…월세로 돈 버는 '꼬마 건물주'",
-      "url": "https://n.news.naver.com/mnews/article/015/0005329311"
-    },
-    {
-      "title": "강남 대신 중저가 뛴다…서울 집값 상승축 ‘외곽’으로",
-      "url": "https://n.news.naver.com/mnews/article/119/0003129624"
     }
   ]
 }
