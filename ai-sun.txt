@@ -1,5 +1,8 @@
 🤖 26년 9월 6일 일요일 AI 뉴스
 
+LGU+, PMDC 얼라이언스 출범…AI 데이터센터 건축기간 줄인다
+https://www.aitimes.com/news/articleView.html?idxno=214909
+
 머스크, 미네소타 ‘AI 딥페이크 누드 금지법’ 저지 실패
 https://www.aitimes.com/news/articleView.html?idxno=214908
 
@@ -12,20 +15,17 @@ https://www.aitimes.com/news/articleView.html?idxno=214906
 엔비디아·크라우드스트라이크, '공격·방어 동시 수행' 사이버 보안 AI '세이프마인드' 공개
 https://www.aitimes.com/news/articleView.html?idxno=214905
 
+MS, AI 개발자 전용 윈도우 11 ‘프로젝트 제니스’ 공개… "30B 모델 로컬 실행"
+https://www.aitimes.com/news/articleView.html?idxno=214904
+
 "메모리 400% 폭등에 '아이폰 18 프로' 20% 올려 178만원 육박할 것"
 https://www.aitimes.com/news/articleView.html?idxno=214903
+
+구글, 음악 생성 모델 ‘리리아 3.5’ 제미나이·API에 적용...대중화 본격화
+https://www.aitimes.com/news/articleView.html?idxno=214901
 
 오픈AI, 에이전트 '위키 사건' 인정..."AI 정렬 실패 공개 기준 만들 것"
 https://www.aitimes.com/news/articleView.html?idxno=214900
 
 오픈AI, '코드 아레나'서 앤트로픽 처음 제쳐…'아스트라' 웹개발 1위 기염
 https://www.aitimes.com/news/articleView.html?idxno=214899
-
-앤트로픽, '클로드 맥스' 주간 사용량 초기화…'아스트라' 돌풍에 맞불
-https://www.aitimes.com/news/articleView.html?idxno=214898
-
-GPT-6 아스트라, AI 최초 수능 '완전 만점'...탐구 4과목까지 석권
-https://www.aitimes.com/news/articleView.html?idxno=214896
-
-일레븐랩스, 한국 시장 공략 본격화…"초저지연 음성 AI로 AICC 혁신"
-https://www.aitimes.com/news/articleView.html?idxno=214895
