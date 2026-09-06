@@ -1,5 +1,8 @@
 🤖 26년 9월 6일 일요일 AI 뉴스
 
+앤트로픽, '클로드 맥스' 주간 사용량 초기화…'아스트라' 돌풍에 맞불
+https://www.aitimes.com/news/articleView.html?idxno=214898
+
 GPT-6 아스트라, AI 최초 수능 '완전 만점'...탐구 4과목까지 석권
 https://www.aitimes.com/news/articleView.html?idxno=214896
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214887
 
 딥시크, 새로운 데이터센터 구축을 위해 화웨이 AI 칩 대량 주문 계획
 https://www.aitimes.com/news/articleView.html?idxno=214886
-
-테슬라, 운전대 없는 '사이버캡' 서비스 시작...당국 조사에 주가 6% 급락
-https://www.aitimes.com/news/articleView.html?idxno=214885
