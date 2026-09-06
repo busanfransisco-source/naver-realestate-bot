@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-09-06 08:24:04",
+  "updated_at_kst": "2026-09-06 09:04:24",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 6일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "국토장관 후보의 아파트, 1년 4억 올랐다는데…",
+      "url": "https://n.news.naver.com/mnews/article/648/0000050506"
+    },
     {
       "title": "“집값 상승 안꺾이면 2030년 서울 22개구서 종부세 낸다…사실상 서울시민세”",
       "url": "https://n.news.naver.com/mnews/article/016/0002693268"
@@ -38,10 +42,6 @@
     {
       "title": "\"현장은 완전히 다르다\"…강남은 조용, 9억 이하 서울 아파트 '불장'",
       "url": "https://n.news.naver.com/mnews/article/003/0014171587"
-    },
-    {
-      "title": "코스피 불장에 주택도시기금도 '쏠쏠'…올 상반기 1.2조 수익",
-      "url": "https://n.news.naver.com/mnews/article/001/0016292051"
     }
   ]
 }
