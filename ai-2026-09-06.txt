@@ -1,31 +1,31 @@
 🤖 26년 9월 6일 일요일 AI 뉴스
 
+'알트먼 축출 사태' 다룬 영화 '아티피셜', 10월 뉴욕 영화제서 최초 공개
+https://www.aitimes.com/news/articleView.html?idxno=214907
+
+알트먼 "AI 혜택 홍보 미흡했다" 자성… 대중 설득 나선 빅테크
+https://www.aitimes.com/news/articleView.html?idxno=214906
+
+엔비디아·크라우드스트라이크, '공격·방어 동시 수행' 사이버 보안 AI '세이프마인드' 공개
+https://www.aitimes.com/news/articleView.html?idxno=214905
+
+"메모리 400% 폭등에 '아이폰 18 프로' 20% 올려 178만원 육박할 것"
+https://www.aitimes.com/news/articleView.html?idxno=214903
+
+오픈AI, 에이전트 '위키 사건' 인정..."AI 정렬 실패 공개 기준 만들 것"
+https://www.aitimes.com/news/articleView.html?idxno=214900
+
+오픈AI, '코드 아레나'서 앤트로픽 처음 제쳐…'아스트라' 웹개발 1위 기염
+https://www.aitimes.com/news/articleView.html?idxno=214899
+
 앤트로픽, '클로드 맥스' 주간 사용량 초기화…'아스트라' 돌풍에 맞불
 https://www.aitimes.com/news/articleView.html?idxno=214898
 
 GPT-6 아스트라, AI 최초 수능 '완전 만점'...탐구 4과목까지 석권
 https://www.aitimes.com/news/articleView.html?idxno=214896
 
+일레븐랩스, 한국 시장 공략 본격화…"초저지연 음성 AI로 AICC 혁신"
+https://www.aitimes.com/news/articleView.html?idxno=214895
+
 “AI는 돈 벌고 사람은 취업난, 사실일까”…’AI 현황 보고서’ 저자의 진단
 https://www.aitimes.com/news/articleView.html?idxno=214893
-
-샌더스 미 의원, '인공 초지능 금지법' 발의...위반 시 '기업 사형선고'
-https://www.aitimes.com/news/articleView.html?idxno=214892
-
-"생산성 혁명인가, 디스토피아의 시작인가"…'아스트라' 출시 반응 폭발
-https://www.aitimes.com/news/articleView.html?idxno=214891
-
-앤트로픽, 다음 주 증권신고서 제출 전망…10월 초 상장 타임라인 구체화
-https://www.aitimes.com/news/articleView.html?idxno=214890
-
-미국 초대형 교육구 일제히 생성 AI 차단…뉴욕 이어 LA도 유예
-https://www.aitimes.com/news/articleView.html?idxno=214889
-
-미 국방부, 앤트로픽 여전히 '공급망 위험'으로 간주...상무장관과 온도 차
-https://www.aitimes.com/news/articleView.html?idxno=214888
-
-유료 회원 불만에 알트먼 사과…'GPT-6 아스트라' 배포 최종 완료
-https://www.aitimes.com/news/articleView.html?idxno=214887
-
-딥시크, 새로운 데이터센터 구축을 위해 화웨이 AI 칩 대량 주문 계획
-https://www.aitimes.com/news/articleView.html?idxno=214886
