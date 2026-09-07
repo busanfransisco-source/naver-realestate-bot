@@ -1,7 +1,16 @@
 🤖 26년 9월 7일 월요일 AI 뉴스
 
+"인류 멸망 이미 시작됐다"...'AI 종말'의 진짜 위협은 인간성 양도
+https://www.aitimes.com/news/articleView.html?idxno=214931
+
+메가존클라우드, 업스테이지 '솔라'로 한미약품 품질관리 AI 에이전트 구축
+https://www.aitimes.com/news/articleView.html?idxno=214930
+
 카카오, 10월 ‘이프카카오 26’ 컨퍼런스 개최…“모든 연결에 지능을”
 https://www.aitimes.com/news/articleView.html?idxno=214929
+
+이스트시큐리티, 네이버클라우드와 '보안 특화 AI 모델' 개발 나선다
+https://www.aitimes.com/news/articleView.html?idxno=214927
 
 NIA, ‘AI 3대 강국’ 도약 위한 조직개편 단행
 https://www.aitimes.com/news/articleView.html?idxno=214926
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214909
 
 머스크, 미네소타 ‘AI 딥페이크 누드 금지법’ 저지 실패
 https://www.aitimes.com/news/articleView.html?idxno=214908
-
-'알트먼 축출 사태' 다룬 영화 '아티피셜', 10월 뉴욕 영화제서 최초 공개
-https://www.aitimes.com/news/articleView.html?idxno=214907
-
-알트먼 "AI 혜택 홍보 미흡했다" 자성… 대중 설득 나선 빅테크
-https://www.aitimes.com/news/articleView.html?idxno=214906
-
-엔비디아·크라우드스트라이크, '공격·방어 동시 수행' 사이버 보안 AI '세이프마인드' 공개
-https://www.aitimes.com/news/articleView.html?idxno=214905
