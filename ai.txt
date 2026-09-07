@@ -1,5 +1,8 @@
 🤖 26년 9월 7일 월요일 AI 뉴스
 
+화웨이 ‘타우 법칙’ 칩 과열 우려 일축...“트랜지스터 밀도 55% 높이고 전력 낮췄다”
+https://www.aitimes.com/news/articleView.html?idxno=214960
+
 [게시판] 씽크포비엘, 스위스 CERTX와 ‘AI 신뢰성’ 사업 협력 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=214959
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214948
 
 스페이스XAI, 영상 연속성·품질 높인 ‘그록 이매진 비디오 1.5’ 공개
 https://www.aitimes.com/news/articleView.html?idxno=214947
-
-화웨이의 '20년 불법성' 재판대 오른다…미 법원, 조직범죄 재판 개시
-https://www.aitimes.com/news/articleView.html?idxno=214946
