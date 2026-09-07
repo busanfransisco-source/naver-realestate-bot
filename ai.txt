@@ -1,5 +1,8 @@
 🤖 26년 9월 8일 화요일 AI 뉴스
 
+에임인텔리전스 "AGI급 '아스트라'도 보안 공백 여전...다음은 로봇·자율주행"
+https://www.aitimes.com/news/articleView.html?idxno=214964
+
 '제미나이' 말 믿고 산에 올랐다가 고립...등산객 일행, 다음날 구조
 https://www.aitimes.com/news/articleView.html?idxno=214962
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214954
 
 삼성생명-클레온, 공동개발 ‘AI 롤플레이’ 공개…"고객 응대·상담 훈련용”
 https://www.aitimes.com/news/articleView.html?idxno=214953
-
-"끝없이 펼쳐지는 가상세계"...런웨이, 실시간 조작 가능한 'GWM 월드 2' 선보여
-https://www.aitimes.com/news/articleView.html?idxno=214952
