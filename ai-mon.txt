@@ -1,5 +1,20 @@
 🤖 26년 9월 7일 월요일 AI 뉴스
 
+카카오, 10월 ‘이프카카오 26’ 컨퍼런스 개최…“모든 연결에 지능을”
+https://www.aitimes.com/news/articleView.html?idxno=214929
+
+NIA, ‘AI 3대 강국’ 도약 위한 조직개편 단행
+https://www.aitimes.com/news/articleView.html?idxno=214926
+
+엑스와이지, 로봇 '빨래 개기' 속도 2배 빨라졌다...성공률 96% 달성
+https://www.aitimes.com/news/articleView.html?idxno=214923
+
+오픈AI 'GPT-6 아스트라', 사람 개입 없이 3D 게임 '포털' 공략 성공
+https://www.aitimes.com/news/articleView.html?idxno=214922
+
+라이드플럭스,타타대우와 '레벨2+ 자율주행 트럭' 양산 추진한다
+https://www.aitimes.com/news/articleView.html?idxno=214920
+
 LGU+, PMDC 얼라이언스 출범…AI 데이터센터 건축기간 줄인다
 https://www.aitimes.com/news/articleView.html?idxno=214909
 
@@ -14,18 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214906
 
 엔비디아·크라우드스트라이크, '공격·방어 동시 수행' 사이버 보안 AI '세이프마인드' 공개
 https://www.aitimes.com/news/articleView.html?idxno=214905
-
-MS, AI 개발자 전용 윈도우 11 ‘프로젝트 제니스’ 공개… "30B 모델 로컬 실행"
-https://www.aitimes.com/news/articleView.html?idxno=214904
-
-"메모리 400% 폭등에 '아이폰 18 프로' 20% 올려 178만원 육박할 것"
-https://www.aitimes.com/news/articleView.html?idxno=214903
-
-구글, 음악 생성 모델 ‘리리아 3.5’ 제미나이·API에 적용...대중화 본격화
-https://www.aitimes.com/news/articleView.html?idxno=214901
-
-오픈AI, 에이전트 '위키 사건' 인정..."AI 정렬 실패 공개 기준 만들 것"
-https://www.aitimes.com/news/articleView.html?idxno=214900
-
-오픈AI, '코드 아레나'서 앤트로픽 제쳐…'아스트라' 웹개발 1위 기염
-https://www.aitimes.com/news/articleView.html?idxno=214899
