@@ -1,31 +1,31 @@
 🤖 26년 9월 7일 월요일 AI 뉴스
 
-"인류 멸망 이미 시작됐다"...'AI 종말'의 진짜 위협은 인간성 양도
-https://www.aitimes.com/news/articleView.html?idxno=214931
+[게시판] 씽크포비엘, 스위스 CERTX와 ‘AI 신뢰성’ 사업 협력 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=214959
 
-메가존클라우드, 업스테이지 '솔라'로 한미약품 품질관리 AI 에이전트 구축
-https://www.aitimes.com/news/articleView.html?idxno=214930
+독일 BASF 자회사, 애플 상대 ‘페이스 ID’ 특허 소송…“피부 감지 기술 무단 사용”
+https://www.aitimes.com/news/articleView.html?idxno=214957
 
-카카오, 10월 ‘이프카카오 26’ 컨퍼런스 개최…“모든 연결에 지능을”
-https://www.aitimes.com/news/articleView.html?idxno=214929
+과기정통부-중기부, 중소 제조 현장 ‘피지컬 AI 도입·확산’ 공동 지원
+https://www.aitimes.com/news/articleView.html?idxno=214956
 
-이스트시큐리티, 네이버클라우드와 '보안 특화 AI 모델' 개발 나선다
-https://www.aitimes.com/news/articleView.html?idxno=214927
+로봇·EV 산업 '성지'로 떠오른 중국...서방 전문가·투자자 기술 견학 성황
+https://www.aitimes.com/news/articleView.html?idxno=214955
 
-NIA, ‘AI 3대 강국’ 도약 위한 조직개편 단행
-https://www.aitimes.com/news/articleView.html?idxno=214926
+플래티어, 현대리바트몰에 AI 검색 엔진 '젠서' 도입…대화로 가구 검색한다
+https://www.aitimes.com/news/articleView.html?idxno=214954
 
-엑스와이지, 로봇 '빨래 개기' 속도 2배 빨라졌다...성공률 96% 달성
-https://www.aitimes.com/news/articleView.html?idxno=214923
+삼성생명-클레온, 공동개발 ‘AI 롤플레이’ 공개…"고객 응대·상담 훈련용”
+https://www.aitimes.com/news/articleView.html?idxno=214953
 
-오픈AI 'GPT-6 아스트라', 사람 개입 없이 3D 게임 '포털' 공략 성공
-https://www.aitimes.com/news/articleView.html?idxno=214922
+"AI 검색 답변 그대로 분석"... 애니모프, GEO 분석 도구 '쿼링에이아이' 공개
+https://www.aitimes.com/news/articleView.html?idxno=214951
 
-라이드플럭스,타타대우와 '레벨2+ 자율주행 트럭' 양산 추진한다
-https://www.aitimes.com/news/articleView.html?idxno=214920
+AI·XR 콘텐츠 체험의 기회...17일 동대문서 '엔터테크 서울' 개최
+https://www.aitimes.com/news/articleView.html?idxno=214948
 
-LGU+, PMDC 얼라이언스 출범…AI 데이터센터 건축기간 줄인다
-https://www.aitimes.com/news/articleView.html?idxno=214909
+스페이스XAI, 영상 연속성·품질 높인 ‘그록 이매진 비디오 1.5’ 공개
+https://www.aitimes.com/news/articleView.html?idxno=214947
 
-머스크, 미네소타 ‘AI 딥페이크 누드 금지법’ 저지 실패
-https://www.aitimes.com/news/articleView.html?idxno=214908
+화웨이의 '20년 불법성' 재판대 오른다…미 법원, 조직범죄 재판 개시
+https://www.aitimes.com/news/articleView.html?idxno=214946
