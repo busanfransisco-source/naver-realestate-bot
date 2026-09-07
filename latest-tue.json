@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-09-08 07:15:55",
+  "updated_at_kst": "2026-09-08 07:22:21",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 8일 화요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "\"1억에 들어온 잠실, 지금 30억\"…장기 거주자들이 꼽은 자산 형성법",
+      "url": "https://n.news.naver.com/mnews/article/018/0006365289"
+    },
     {
       "title": "영끌족 한계왔나…주담대 연체 3년반 만에 2.2배",
       "url": "https://n.news.naver.com/mnews/article/005/0001871569"
@@ -38,10 +42,6 @@
     {
       "title": "[재개발·재건축 부스터]④공사비 증액? 같이 따져요",
       "url": "https://n.news.naver.com/mnews/article/648/0000050555"
-    },
-    {
-      "title": "\"세입자 내보내야 하나요?\"…집주인들 밤잠 설치는 이유 [시장톡]",
-      "url": "https://n.news.naver.com/mnews/article/015/0005329799"
     }
   ]
 }
