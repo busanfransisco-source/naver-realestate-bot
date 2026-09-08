@@ -1,31 +1,31 @@
 🤖 26년 9월 8일 화요일 AI 뉴스
 
+구글 딥마인드 실권 잡은 카부크추오글루 “목표는 오직 프론티어 복귀”
+https://www.aitimes.com/news/articleView.html?idxno=214995
+
+뤼튼 캐릭터챗 '크랙', 내년부터 청소년 '하루 3시간·월 10만원' 제한
+https://www.aitimes.com/news/articleView.html?idxno=214990
+
+뉴엔AI-W컨셉 "AI로 패션 트렌드 포착해 마케팅 활용"
+https://www.aitimes.com/news/articleView.html?idxno=214988
+
+KT, 로봇 데이터 관리 ‘통합 엣지AI 플랫폼’ 구현 나서
+https://www.aitimes.com/news/articleView.html?idxno=214986
+
+"로봇이 단열재 시공도 척척"...빅웨이브, 주택 현장에 휴머노이드 투입
+https://www.aitimes.com/news/articleView.html?idxno=214980
+
 위존, 한국산업기술기획평가원 ‘M.AX 전문기업 – AI솔루션기업’ 선정
 https://www.aitimes.com/news/articleView.html?idxno=214979
 
 한컴, 퓨리오사AI '레니게이드' 탑재한 AX 제품 개발한다
 https://www.aitimes.com/news/articleView.html?idxno=214977
 
+오픈AI, 29일 데브데이서 인프라 구축 없는 '관리형 에이전트' 공개 유력
+https://www.aitimes.com/news/articleView.html?idxno=214976
+
 "AI가 알아서 다크웹 뒤진다"...S2W, 범죄수사 특화 에이전트 'DRI' 출시
 https://www.aitimes.com/news/articleView.html?idxno=214975
 
-노타, LG전자·모빌린트와 K-반도체 탑재한 휴머노이드 최적화 맡는다
-https://www.aitimes.com/news/articleView.html?idxno=214972
-
-정부, 20kW 이상 태양광도 관리대상…실시간 모니터링·제어 의무화
-https://www.aitimes.com/news/articleView.html?idxno=214971
-
-구글, 태양광·배터리 결합 프로젝트로 데이터센터 전력 공급
-https://www.aitimes.com/news/articleView.html?idxno=214968
-
-유럽, 폐태양광서 62.9GW분 실리콘 회수 가능…문제는 제조기반
-https://www.aitimes.com/news/articleView.html?idxno=214967
-
-삼성SDS, '다차원 AI 풀스택' 공개…AI 보안·피지컬 AI로 영역 확장
-https://www.aitimes.com/news/articleView.html?idxno=214966
-
-에임인텔리전스 "AGI급 '아스트라'도 보안 공백 여전...다음은 로봇·자율주행"
-https://www.aitimes.com/news/articleView.html?idxno=214964
-
-'제미나이' 말 믿고 산에 올랐다가 고립...등산객 일행, 다음날 구조
-https://www.aitimes.com/news/articleView.html?idxno=214962
+젠슨 황 "AGI 시대 도래했다"...오픈AI '아스트라'에 축하 메시지
+https://www.aitimes.com/news/articleView.html?idxno=214974
