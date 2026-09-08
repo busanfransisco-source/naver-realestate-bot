@@ -1,5 +1,8 @@
 🤖 26년 9월 8일 화요일 AI 뉴스
 
+삼성SDS, '다차원 AI 풀스택' 공개…AI 보안·피지컬 AI로 영역 확장
+https://www.aitimes.com/news/articleView.html?idxno=214966
+
 에임인텔리전스 "AGI급 '아스트라'도 보안 공백 여전...다음은 로봇·자율주행"
 https://www.aitimes.com/news/articleView.html?idxno=214964
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214955
 
 플래티어, 현대리바트몰에 AI 검색 엔진 '젠서' 도입…대화로 가구 검색한다
 https://www.aitimes.com/news/articleView.html?idxno=214954
-
-삼성생명-클레온, 공동개발 ‘AI 롤플레이’ 공개…"고객 응대·상담 훈련용”
-https://www.aitimes.com/news/articleView.html?idxno=214953
