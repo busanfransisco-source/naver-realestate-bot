@@ -1,5 +1,8 @@
 🤖 26년 9월 9일 수요일 AI 뉴스
 
+삼성전자, 미스트랄 AI와 맞손...‘반도체 특화 AI’ 개발 나선다
+https://www.aitimes.com/news/articleView.html?idxno=215015
+
 [게시판] 카카오, '카나나 인 카카오톡' 가입자에게 이모티콘 선물 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=215011
 
@@ -21,11 +24,8 @@ https://www.aitimes.com/news/articleView.html?idxno=215006
 화웨이·샤오미, 애플 이벤트 직전 폴더블 신제품 공개…중국 프리미엄 시장 맞불
 https://www.aitimes.com/news/articleView.html?idxno=215004
 
-48단계 캡차 게임 최초 완파… GPT-6 아스트라, '컴퓨터 유즈' 성능 입증
+48단계 캡차 최초 완파…GPT-6 아스트라, '컴퓨터 유즈' 성능 입증
 https://www.aitimes.com/news/articleView.html?idxno=215003
 
 삼성SDS, '로봇 오케스트레이션'으로 생산라인 1000곳 RX 추진
 https://www.aitimes.com/news/articleView.html?idxno=215002
-
-'알파고' 데이비드 실버의 이네퍼블, 딥마인드 출신 등 6인 영입
-https://www.aitimes.com/news/articleView.html?idxno=215001
