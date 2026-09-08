@@ -1,5 +1,26 @@
 🤖 26년 9월 8일 화요일 AI 뉴스
 
+위존, 한국산업기술기획평가원 ‘M.AX 전문기업 – AI솔루션기업’ 선정
+https://www.aitimes.com/news/articleView.html?idxno=214979
+
+한컴, 퓨리오사AI '레니게이드' 탑재한 AX 제품 개발한다
+https://www.aitimes.com/news/articleView.html?idxno=214977
+
+"AI가 알아서 다크웹 뒤진다"...S2W, 범죄수사 특화 에이전트 'DRI' 출시
+https://www.aitimes.com/news/articleView.html?idxno=214975
+
+노타, LG전자·모빌린트와 K-반도체 탑재한 휴머노이드 최적화 맡는다
+https://www.aitimes.com/news/articleView.html?idxno=214972
+
+정부, 20kW 이상 태양광도 관리대상…실시간 모니터링·제어 의무화
+https://www.aitimes.com/news/articleView.html?idxno=214971
+
+구글, 태양광·배터리 결합 프로젝트로 데이터센터 전력 공급
+https://www.aitimes.com/news/articleView.html?idxno=214968
+
+유럽, 폐태양광서 62.9GW분 실리콘 회수 가능…문제는 제조기반
+https://www.aitimes.com/news/articleView.html?idxno=214967
+
 삼성SDS, '다차원 AI 풀스택' 공개…AI 보안·피지컬 AI로 영역 확장
 https://www.aitimes.com/news/articleView.html?idxno=214966
 
@@ -8,24 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=214964
 
 '제미나이' 말 믿고 산에 올랐다가 고립...등산객 일행, 다음날 구조
 https://www.aitimes.com/news/articleView.html?idxno=214962
-
-챗GPT,'개인 문체' 학습 기능 테스트..."AI가 쓴 티 벗어난다"
-https://www.aitimes.com/news/articleView.html?idxno=214961
-
-화웨이 ‘타우 법칙’ 칩 과열 우려 일축...“트랜지스터 밀도 55% 높이고 전력 낮췄다”
-https://www.aitimes.com/news/articleView.html?idxno=214960
-
-[게시판] 씽크포비엘, 스위스 CERTX와 ‘AI 신뢰성’ 사업 협력 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=214959
-
-독일 BASF 자회사, 애플 상대 ‘페이스 ID’ 특허 소송…“피부 감지 기술 무단 사용”
-https://www.aitimes.com/news/articleView.html?idxno=214957
-
-과기정통부-중기부, 중소 제조 현장 ‘피지컬 AI 도입·확산’ 공동 지원
-https://www.aitimes.com/news/articleView.html?idxno=214956
-
-로봇·EV 산업 '성지'로 떠오른 중국...서방 전문가·투자자 기술 견학 성황
-https://www.aitimes.com/news/articleView.html?idxno=214955
-
-플래티어, 현대리바트몰에 AI 검색 엔진 '젠서' 도입…대화로 가구 검색한다
-https://www.aitimes.com/news/articleView.html?idxno=214954
