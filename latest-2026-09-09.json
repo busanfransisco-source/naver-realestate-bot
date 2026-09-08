@@ -1,8 +1,20 @@
 {
-  "updated_at_kst": "2026-09-09 07:45:03",
+  "updated_at_kst": "2026-09-09 08:02:30",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 9일 수요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "[속보]제조업 26개월, 건설업 28개월째 취업자 감소",
+      "url": "https://n.news.naver.com/mnews/article/003/0014178246"
+    },
+    {
+      "title": "[판 바뀌는 해외건설①]美 40억달러 투자 요청…해외 프로젝트 직접 발굴하는 K건설",
+      "url": "https://n.news.naver.com/mnews/article/277/0005813697"
+    },
+    {
+      "title": "장기·기업형 임대 세제 지원 검토에…與 이언주 \"부당한 차별\"",
+      "url": "https://n.news.naver.com/mnews/article/015/0005330287"
+    },
     {
       "title": "“10년 뒤 강남보다 뜬다고?”…도시학자가 픽한 ‘이 지역’",
       "url": "https://n.news.naver.com/mnews/article/018/0006365936"
@@ -30,18 +42,6 @@
     {
       "title": "“이번엔 진짜 오를까”…기관 이전 발표에 세종 집값 향방은?",
       "url": "https://n.news.naver.com/mnews/article/119/0003130516"
-    },
-    {
-      "title": "집값 이대로면 2030년 서울 22개구 ‘종부세권’…강북·금천·도봉만 제외",
-      "url": "https://n.news.naver.com/mnews/article/021/0002817331"
-    },
-    {
-      "title": "일반 상품보다 금리 2% 비싸…청년 월세 보증 ‘유명무실’",
-      "url": "https://n.news.naver.com/mnews/article/009/0005732375"
-    },
-    {
-      "title": "[르포]\"은마 전세? 아직 있어요\"…'대전족' 내후년엔 어디로",
-      "url": "https://n.news.naver.com/mnews/article/648/0000050596"
     }
   ]
 }
