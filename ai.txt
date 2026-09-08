@@ -1,31 +1,31 @@
 🤖 26년 9월 8일 화요일 AI 뉴스
 
+미스트랄, 삼성 주도로 4.4조 투자 유치…"소버린 AI 구축 가속"
+https://www.aitimes.com/news/articleView.html?idxno=215009
+
+말레이시아, 미국 경고 무릅쓰고 화웨이 AI 칩 도입 추진
+https://www.aitimes.com/news/articleView.html?idxno=215006
+
+48단계 캡차 게임 최초 완파… GPT-6 아스트라, '컴퓨터 유즈' 성능 입증
+https://www.aitimes.com/news/articleView.html?idxno=215003
+
+삼성SDS, 삼성 생산라인 1000곳 RX 추진…“핵심은 로봇 오케스트레이션”
+https://www.aitimes.com/news/articleView.html?idxno=215002
+
+아르헨티나 파타고니아, 빅테크 데이터센터 요충지로 급부상
+https://www.aitimes.com/news/articleView.html?idxno=215000
+
+EU "형식적 보고는 안 된다"...오픈AI, '독일 웹사이트 장악' 사고 보고서 제출
+https://www.aitimes.com/news/articleView.html?idxno=214999
+
 구글 딥마인드 실권 잡은 카부크추오글루 “목표는 오직 프론티어 복귀”
 https://www.aitimes.com/news/articleView.html?idxno=214995
 
+피씨엔, 강남 ‘PCN AI센터’ 개소…기술개발·사업 확대 강화
+https://www.aitimes.com/news/articleView.html?idxno=214993
+
+유럽 반도체 기밀 중국 유출 파문...벨기에, 이중국적 연구원 체포
+https://www.aitimes.com/news/articleView.html?idxno=214992
+
 뤼튼 캐릭터챗 '크랙', 내년부터 청소년 '하루 3시간·월 10만원' 제한
 https://www.aitimes.com/news/articleView.html?idxno=214990
-
-뉴엔AI-W컨셉 "AI로 패션 트렌드 포착해 마케팅 활용"
-https://www.aitimes.com/news/articleView.html?idxno=214988
-
-KT, 로봇 데이터 관리 ‘통합 엣지AI 플랫폼’ 구현 나서
-https://www.aitimes.com/news/articleView.html?idxno=214986
-
-"로봇이 단열재 시공도 척척"...빅웨이브, 주택 현장에 휴머노이드 투입
-https://www.aitimes.com/news/articleView.html?idxno=214980
-
-위존, 한국산업기술기획평가원 ‘M.AX 전문기업 – AI솔루션기업’ 선정
-https://www.aitimes.com/news/articleView.html?idxno=214979
-
-한컴, 퓨리오사AI '레니게이드' 탑재한 AX 제품 개발한다
-https://www.aitimes.com/news/articleView.html?idxno=214977
-
-오픈AI, 29일 데브데이서 인프라 구축 없는 '관리형 에이전트' 공개 유력
-https://www.aitimes.com/news/articleView.html?idxno=214976
-
-"AI가 알아서 다크웹 뒤진다"...S2W, 범죄수사 특화 에이전트 'DRI' 출시
-https://www.aitimes.com/news/articleView.html?idxno=214975
-
-젠슨 황 "AGI 시대 도래했다"...오픈AI '아스트라'에 축하 메시지
-https://www.aitimes.com/news/articleView.html?idxno=214974
