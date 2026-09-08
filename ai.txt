@@ -1,5 +1,8 @@
 🤖 26년 9월 8일 화요일 AI 뉴스
 
+[게시판] 카카오, '카나나 인 카카오톡' 가입자에게 이모티콘 선물 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=215011
+
 [부음] 유상모(한국 델 테크놀로지스 사장)씨 모친상
 https://www.aitimes.com/news/articleView.html?idxno=215010
 
@@ -15,17 +18,14 @@ https://www.aitimes.com/news/articleView.html?idxno=215007
 말레이시아, 미국 경고 무릅쓰고 화웨이 AI 칩 도입 추진
 https://www.aitimes.com/news/articleView.html?idxno=215006
 
-화웨이·샤오미, 애플 이벤트 직전 폴더블 신제품 전격 공개…중국 프리미엄 시장 맞불
+화웨이·샤오미, 애플 이벤트 직전 폴더블 신제품 공개…중국 프리미엄 시장 맞불
 https://www.aitimes.com/news/articleView.html?idxno=215004
 
 48단계 캡차 게임 최초 완파… GPT-6 아스트라, '컴퓨터 유즈' 성능 입증
 https://www.aitimes.com/news/articleView.html?idxno=215003
 
-삼성SDS, 삼성 생산라인 1000곳 RX 추진…“핵심은 로봇 오케스트레이션”
+삼성SDS, '로봇 오케스트레이션'으로 생산라인 1000곳 RX 추진
 https://www.aitimes.com/news/articleView.html?idxno=215002
 
 '알파고' 데이비드 실버의 이네퍼블, 딥마인드 출신 등 6인 영입
 https://www.aitimes.com/news/articleView.html?idxno=215001
-
-아르헨티나 파타고니아, 빅테크 데이터센터 요충지로 급부상
-https://www.aitimes.com/news/articleView.html?idxno=215000
