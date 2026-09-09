@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-09-09 23:53:15",
+  "updated_at_kst": "2026-09-10 00:05:05",
   "source": "https://news.naver.com/breakingnews/section/101/260",
-  "headline": "26년 9월 9일 수요일 부동산 주요뉴스",
+  "headline": "26년 9월 10일 목요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "대구 전세 오픈런 뒤엔 다주택자 규제",
+      "url": "https://n.news.naver.com/mnews/article/025/0003550302"
+    },
+    {
+      "title": "‘대통령 픽’ 이광수도 돌아섰다 “부동산 폭등 우려, 정부 굉장히 안이”",
+      "url": "https://n.news.naver.com/mnews/article/025/0003550298"
+    },
     {
       "title": "가계대출 증가폭 줄었지만…주담대 한 달 새 4조 증가",
       "url": "https://n.news.naver.com/mnews/article/032/0003469512"
@@ -34,14 +42,6 @@
     {
       "title": "오염토 ‘반출 정화’ 허용…공공주택 사업 6개월 빨라진다",
       "url": "https://n.news.naver.com/mnews/article/020/0003746943"
-    },
-    {
-      "title": "법정단체 된 중개사협회…\"사라질 직업 아냐\" AI·프롭테크 대응이 과제",
-      "url": "https://n.news.naver.com/mnews/article/003/0014180639"
-    },
-    {
-      "title": "‘목동 신축’ 통했다…목동윤슬자이 최고 32대 1",
-      "url": "https://n.news.naver.com/mnews/article/011/0004660280"
     }
   ]
 }
