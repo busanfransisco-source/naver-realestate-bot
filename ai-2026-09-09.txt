@@ -1,31 +1,31 @@
 🤖 26년 9월 9일 수요일 AI 뉴스
 
+앤트로픽, '맥스 플랜' 허위 광고 혐의로 집단 소송 당해..."사용량 속였다"
+https://www.aitimes.com/news/articleView.html?idxno=215049
+
+주요 개발사, 애플의 '시리 AI' 도입에 미온적…생태계 확장 난항
+https://www.aitimes.com/news/articleView.html?idxno=215046
+
+"전화 안 받아도 감염"...AI가 개발한 '클릭 제로' 모바일 해킹 도구 등장
+https://www.aitimes.com/news/articleView.html?idxno=215039
+
+카카오, AI 영상 생성 연산 비용 대폭 줄이는 적응형 토큰화 기술 'KATok' 공개
+https://www.aitimes.com/news/articleView.html?idxno=215036
+
+래블업, 기술 컨퍼런스 ‘lab | up > /conf/6’ 개최…“AI산업 시대의 엔드투엔드”
+https://www.aitimes.com/news/articleView.html?idxno=215035
+
+팀네이버, 프랑스와 AI 팩토리·산업·콘텐츠 협업 비전 제시
+https://www.aitimes.com/news/articleView.html?idxno=215034
+
+PFCT, 토스와 대안신용평가 모델 고도화 협력
+https://www.aitimes.com/news/articleView.html?idxno=215031
+
+오픈AI, '스케치' 탑재한 '챗GPT 이미지 2.5' 공개…아레나 1위 석권
+https://www.aitimes.com/news/articleView.html?idxno=215030
+
+AWS, 국내 우주·위성 스타트업 대상 엑셀러레이터 프로그램 실시
+https://www.aitimes.com/news/articleView.html?idxno=215029
+
 한국MS, 산업별 AX 사례 공유하는 '인더스트리 서밋' 개최
 https://www.aitimes.com/news/articleView.html?idxno=215026
-
-오픈AI, 수학계 난제 해결 발표...NYU·앤트로픽과 '표절' 공방
-https://www.aitimes.com/news/articleView.html?idxno=215021
-
-제주, '에너지제로 마을' 실증…태양광·ESS·전기차 AI 통합 관리
-https://www.aitimes.com/news/articleView.html?idxno=215018
-
-태양광발전소 풀숲까지 AI가 본다…위성으로 화재위험 예측
-https://www.aitimes.com/news/articleView.html?idxno=215017
-
-EU 상반기 태양광 33.8GW 신규 설치…전년보다 1.9% 증가
-https://www.aitimes.com/news/articleView.html?idxno=215016
-
-삼성전자, 미스트랄 AI와 맞손...‘반도체 특화 AI’ 개발 나선다
-https://www.aitimes.com/news/articleView.html?idxno=215015
-
-[게시판] 카카오, '카나나 인 카카오톡' 가입자에게 이모티콘 선물 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=215011
-
-[부음] 유상모(한국 델 테크놀로지스 사장)씨 모친상
-https://www.aitimes.com/news/articleView.html?idxno=215010
-
-미스트랄, 삼성 주도로 4.4조 투자 유치…"소버린 AI 구축 가속"
-https://www.aitimes.com/news/articleView.html?idxno=215009
-
-트럼프, AI 합성 이미지 무더기 게시...금융·외교 분야 논란 확대
-https://www.aitimes.com/news/articleView.html?idxno=215008
