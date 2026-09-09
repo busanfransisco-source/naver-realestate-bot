@@ -1,5 +1,20 @@
 🤖 26년 9월 9일 수요일 AI 뉴스
 
+한국MS, 산업별 AX 사례 공유하는 '인더스트리 서밋' 개최
+https://www.aitimes.com/news/articleView.html?idxno=215026
+
+오픈AI, 수학계 난제 해결 발표...NYU·앤트로픽과 '표절' 공방
+https://www.aitimes.com/news/articleView.html?idxno=215021
+
+제주, '에너지제로 마을' 실증…태양광·ESS·전기차 AI 통합 관리
+https://www.aitimes.com/news/articleView.html?idxno=215018
+
+태양광발전소 풀숲까지 AI가 본다…위성으로 화재위험 예측
+https://www.aitimes.com/news/articleView.html?idxno=215017
+
+EU 상반기 태양광 33.8GW 신규 설치…전년보다 1.9% 증가
+https://www.aitimes.com/news/articleView.html?idxno=215016
+
 삼성전자, 미스트랄 AI와 맞손...‘반도체 특화 AI’ 개발 나선다
 https://www.aitimes.com/news/articleView.html?idxno=215015
 
@@ -14,18 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215009
 
 트럼프, AI 합성 이미지 무더기 게시...금융·외교 분야 논란 확대
 https://www.aitimes.com/news/articleView.html?idxno=215008
-
-삼성전자·ASML, 차세대 반도체 마스크 12인치로 확대…생산성·원가 개선
-https://www.aitimes.com/news/articleView.html?idxno=215007
-
-말레이시아, 미국 경고 무릅쓰고 화웨이 AI 칩 도입 추진
-https://www.aitimes.com/news/articleView.html?idxno=215006
-
-화웨이·샤오미, 애플 이벤트 직전 폴더블 신제품 공개…중국 프리미엄 시장 맞불
-https://www.aitimes.com/news/articleView.html?idxno=215004
-
-48단계 캡차 최초 완파…GPT-6 아스트라, '컴퓨터 유즈' 성능 입증
-https://www.aitimes.com/news/articleView.html?idxno=215003
-
-삼성SDS, '로봇 오케스트레이션'으로 생산라인 1000곳 RX 추진
-https://www.aitimes.com/news/articleView.html?idxno=215002
