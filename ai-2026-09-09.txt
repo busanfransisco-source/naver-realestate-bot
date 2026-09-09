@@ -1,31 +1,31 @@
 🤖 26년 9월 9일 수요일 AI 뉴스
 
+전 세계 농가 생성 AI 도입 급증…불황 속 17%가 필수 도구로 채택
+https://www.aitimes.com/news/articleView.html?idxno=215063
+
+인텔, 10월 CPU 가격 10% 추가 인상...수익성 방어 정조준
+https://www.aitimes.com/news/articleView.html?idxno=215060
+
+과기부, 국가 슈퍼컴퓨터 6호기 산학연 사용자 모집
+https://www.aitimes.com/news/articleView.html?idxno=215059
+
+"AI 무한 경쟁이 인류 위협"…앤트로픽 핵심 연구원 사직
+https://www.aitimes.com/news/articleView.html?idxno=215058
+
+KT, ‘지니 TV 셋톱박스 A2’ 출시…“AI로 원하는 콘텐츠 찾는다”
+https://www.aitimes.com/news/articleView.html?idxno=215055
+
+KAIST, 파리 사클레대학교와 첨단 기술 연구협력 강화
+https://www.aitimes.com/news/articleView.html?idxno=215054
+
+KAIST 교원창업기업 파네시아, 메타와 ‘차세대 AI 데이터센터 구조’ 제시
+https://www.aitimes.com/news/articleView.html?idxno=215052
+
+"데이터센터 특구 지정·전력 인허가는"...과기부, AIDC특별법 하위법령 논의 착수
+https://www.aitimes.com/news/articleView.html?idxno=215050
+
 앤트로픽, '맥스 플랜' 허위 광고 혐의로 집단 소송 당해..."사용량 속였다"
 https://www.aitimes.com/news/articleView.html?idxno=215049
 
-주요 개발사, 애플의 '시리 AI' 도입에 미온적…생태계 확장 난항
-https://www.aitimes.com/news/articleView.html?idxno=215046
-
-"전화 안 받아도 감염"...AI가 개발한 '클릭 제로' 모바일 해킹 도구 등장
-https://www.aitimes.com/news/articleView.html?idxno=215039
-
-카카오, AI 영상 생성 연산 비용 대폭 줄이는 적응형 토큰화 기술 'KATok' 공개
-https://www.aitimes.com/news/articleView.html?idxno=215036
-
-래블업, 기술 컨퍼런스 ‘lab | up > /conf/6’ 개최…“AI산업 시대의 엔드투엔드”
-https://www.aitimes.com/news/articleView.html?idxno=215035
-
-팀네이버, 프랑스와 AI 팩토리·산업·콘텐츠 협업 비전 제시
-https://www.aitimes.com/news/articleView.html?idxno=215034
-
-PFCT, 토스와 대안신용평가 모델 고도화 협력
-https://www.aitimes.com/news/articleView.html?idxno=215031
-
-오픈AI, '스케치' 탑재한 '챗GPT 이미지 2.5' 공개…아레나 1위 석권
-https://www.aitimes.com/news/articleView.html?idxno=215030
-
-AWS, 국내 우주·위성 스타트업 대상 엑셀러레이터 프로그램 실시
-https://www.aitimes.com/news/articleView.html?idxno=215029
-
-한국MS, 산업별 AX 사례 공유하는 '인더스트리 서밋' 개최
-https://www.aitimes.com/news/articleView.html?idxno=215026
+"GPU·모델 많다고 강국 아니다"...포티투마루, '포스트 소버린 AI' 제언
+https://www.aitimes.com/news/articleView.html?idxno=215048
