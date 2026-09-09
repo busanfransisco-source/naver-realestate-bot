@@ -1,7 +1,13 @@
 🤖 26년 9월 9일 수요일 AI 뉴스
 
+미국, 딥시크·문샷 등 중국 AI 기업 6곳 비난..."미국 기술 악의적 복제"
+https://www.aitimes.com/news/articleView.html?idxno=215064
+
 전 세계 농가 생성 AI 도입 급증…불황 속 17%가 필수 도구로 채택
 https://www.aitimes.com/news/articleView.html?idxno=215063
+
+엔비디아, GPU 커널까지 러스트로 개발하는 ‘CUDA 러스트’ 공개...안전한 AI 인프라 구축
+https://www.aitimes.com/news/articleView.html?idxno=215062
 
 인텔, 10월 CPU 가격 10% 추가 인상...수익성 방어 정조준
 https://www.aitimes.com/news/articleView.html?idxno=215060
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215052
 
 "데이터센터 특구 지정·전력 인허가는"...과기부, AIDC특별법 하위법령 논의 착수
 https://www.aitimes.com/news/articleView.html?idxno=215050
-
-앤트로픽, '맥스 플랜' 허위 광고 혐의로 집단 소송 당해..."사용량 속였다"
-https://www.aitimes.com/news/articleView.html?idxno=215049
-
-"GPU·모델 많다고 강국 아니다"...포티투마루, '포스트 소버린 AI' 제언
-https://www.aitimes.com/news/articleView.html?idxno=215048
