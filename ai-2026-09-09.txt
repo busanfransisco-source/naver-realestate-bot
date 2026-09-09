@@ -1,5 +1,14 @@
 🤖 26년 9월 9일 수요일 AI 뉴스
 
+코난테크 "AI ROI 체감 못하는 이유는...워크플로우·KPI 뜯어 고쳐야"
+https://www.aitimes.com/news/articleView.html?idxno=215067
+
+[게시판] 파인더스AI, 뚜쥬루 빵돌 가마점에 ‘비전AI 셀프계산대’ 설치 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=215066
+
+오픈AI, ‘아스트라’ 사이버 모델 준비…“강력한 성능은 곧 강력한 보안”
+https://www.aitimes.com/news/articleView.html?idxno=215065
+
 미국, 딥시크·문샷 등 중국 AI 기업 6곳 비난..."미국 기술 악의적 복제"
 https://www.aitimes.com/news/articleView.html?idxno=215064
 
@@ -18,14 +27,5 @@ https://www.aitimes.com/news/articleView.html?idxno=215059
 "AI 무한 경쟁이 인류 위협"…앤트로픽 핵심 연구원 사직
 https://www.aitimes.com/news/articleView.html?idxno=215058
 
-KT, ‘지니 TV 셋톱박스 A2’ 출시…“AI로 원하는 콘텐츠 찾는다”
-https://www.aitimes.com/news/articleView.html?idxno=215055
-
-KAIST, 파리 사클레대학교와 첨단 기술 연구협력 강화
-https://www.aitimes.com/news/articleView.html?idxno=215054
-
-KAIST 교원창업기업 파네시아, 메타와 ‘차세대 AI 데이터센터 구조’ 제시
-https://www.aitimes.com/news/articleView.html?idxno=215052
-
-"데이터센터 특구 지정·전력 인허가는"...과기부, AIDC특별법 하위법령 논의 착수
-https://www.aitimes.com/news/articleView.html?idxno=215050
+인셉션, 초당 1107토큰 생성하는 ‘머큐리 2.5’ 공개..."지능·비용 다 잡았다"
+https://www.aitimes.com/news/articleView.html?idxno=215057
