@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-09-09 21:17:20",
+  "updated_at_kst": "2026-09-09 23:53:15",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 9일 수요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "가계대출 증가폭 줄었지만…주담대 한 달 새 4조 증가",
+      "url": "https://n.news.naver.com/mnews/article/032/0003469512"
+    },
     {
       "title": "공인중개사협회, 법정단체 원년 선언…전문성·소비자 보호 강화",
       "url": "https://n.news.naver.com/mnews/article/016/0002695102"
@@ -38,10 +42,6 @@
     {
       "title": "‘목동 신축’ 통했다…목동윤슬자이 최고 32대 1",
       "url": "https://n.news.naver.com/mnews/article/011/0004660280"
-    },
-    {
-      "title": "[게시판] 공인중개사협회 '법정단체 출범·창립 40주년 기념식'",
-      "url": "https://n.news.naver.com/mnews/article/001/0016300978"
     }
   ]
 }

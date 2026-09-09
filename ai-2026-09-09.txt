@@ -18,6 +18,9 @@ https://www.aitimes.com/news/articleView.html?idxno=215063
 엔비디아, GPU 커널까지 러스트로 개발하는 ‘CUDA 러스트’ 공개...안전한 AI 인프라 구축
 https://www.aitimes.com/news/articleView.html?idxno=215062
 
+과기부, 프랑스와 AI·양자기술 협력 강화
+https://www.aitimes.com/news/articleView.html?idxno=215061
+
 인텔, 10월 CPU 가격 10% 추가 인상...수익성 방어 정조준
 https://www.aitimes.com/news/articleView.html?idxno=215060
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215059
 
 "AI 무한 경쟁이 인류 위협"…앤트로픽 핵심 연구원 사직
 https://www.aitimes.com/news/articleView.html?idxno=215058
-
-인셉션, 초당 1107토큰 생성하는 ‘머큐리 2.5’ 공개..."지능·비용 다 잡았다"
-https://www.aitimes.com/news/articleView.html?idxno=215057
