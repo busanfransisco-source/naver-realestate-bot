@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-09-11 08:18:05",
+  "updated_at_kst": "2026-09-11 08:26:10",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 11일 금요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "[부산소식] 부산사인엑스포 16일 개막…간판 변천사 기획전",
+      "url": "https://n.news.naver.com/mnews/article/001/0016303860"
+    },
+    {
+      "title": "BTS 진·소지섭·한효주와 이웃 됐다…변우석 ‘130억’ 한남더힐 입성",
+      "url": "https://n.news.naver.com/mnews/article/468/0001265579"
+    },
     {
       "title": "'자율주행車 추돌 방지 기술'…인천대교, '최우수' 민자고속도로 선정",
       "url": "https://n.news.naver.com/mnews/article/008/0005412339"
@@ -34,14 +42,6 @@
     {
       "title": "\"집값 잡을 생각 없구나\"...李정부 지지하던 한문도도 한탄",
       "url": "https://n.news.naver.com/mnews/article/014/0005574281"
-    },
-    {
-      "title": "텅 빈 지식산업센터를 원룸으로?…정부 대책에도 과제 ‘산적’",
-      "url": "https://n.news.naver.com/mnews/article/119/0003131503"
-    },
-    {
-      "title": "755억원 들여 땅도 사놨는데…JYP 신사옥 '좌초 위기' 빠진 이유",
-      "url": "https://n.news.naver.com/mnews/article/215/0001265598"
     }
   ]
 }
