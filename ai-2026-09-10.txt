@@ -1,31 +1,31 @@
 🤖 26년 9월 10일 목요일 AI 뉴스
 
-아프리카, 태양광 패널 생산 올해 3.5GW 전망…94%는 중국산
-https://www.aitimes.com/news/articleView.html?idxno=215072
+오픈AI, 챗GPT 음성에 '아스트라' 연결…모델·추론 수준 직접 선택
+https://www.aitimes.com/news/articleView.html?idxno=215098
 
-유토파이 스튜디오, 장편 콘텐츠 AI 제작 고도화… 2027년 영화·시리즈 5편 선봬
-https://www.aitimes.com/news/articleView.html?idxno=215071
+AI 연구진 "초지능, 10년 내 인류 전멸 확률 10% 이상" 잇단 경고
+https://www.aitimes.com/news/articleView.html?idxno=215095
 
-AI로 태양광 말뚝 인발지지력 예측…평균 오차 7.63%
-https://www.aitimes.com/news/articleView.html?idxno=215070
+칼리버스, AI∙3D로 구현한 롯데자이언츠 가상 스타일링샵 오픈
+https://www.aitimes.com/news/articleView.html?idxno=215094
 
-코난테크 "AI ROI 체감 못하는 이유는...워크플로우·KPI 뜯어 고쳐야"
-https://www.aitimes.com/news/articleView.html?idxno=215067
+텔레픽스, 구글 딥마인드 액셀러레이터 ‘지구를 위한 AI’ 국내 유일 선정
+https://www.aitimes.com/news/articleView.html?idxno=215092
 
-[게시판] 파인더스AI, 뚜쥬루 빵돌 가마점에 ‘비전AI 셀프계산대’ 설치 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=215066
+S2W, 오픈AI ‘데이브레이크’ 참여…국내 AI·보안 전문 기업 최초
+https://www.aitimes.com/news/articleView.html?idxno=215091
 
-오픈AI, ‘아스트라’ 사이버 모델 준비…“강력한 성능은 곧 강력한 보안”
-https://www.aitimes.com/news/articleView.html?idxno=215065
+오픈AI, ‘아스트라’ 수요 폭증에 유료 신규 가입 일시 중단 검토
+https://www.aitimes.com/news/articleView.html?idxno=215089
 
-미국, 딥시크·문샷 등 중국 AI 기업 6곳 비난..."미국 기술 악의적 복제"
-https://www.aitimes.com/news/articleView.html?idxno=215064
+크라우드웍스, 경남 창원에 '피지컬 AI 허브' 1호 거점 구축
+https://www.aitimes.com/news/articleView.html?idxno=215084
 
-전 세계 농가 생성 AI 도입 급증…불황 속 17%가 필수 도구로 채택
-https://www.aitimes.com/news/articleView.html?idxno=215063
+스마트워치가 대화까지 기억한다…애플, '오디오 AI'로 웨어러블 승부수
+https://www.aitimes.com/news/articleView.html?idxno=215082
 
-엔비디아, GPU 커널까지 러스트로 개발하는 ‘CUDA 러스트’ 공개...안전한 AI 인프라 구축
-https://www.aitimes.com/news/articleView.html?idxno=215062
+애플, 첫 폴더블 스마트폰 '아이폰 듀오' 공개...329만원부터 시작
+https://www.aitimes.com/news/articleView.html?idxno=215081
 
-과기부, 프랑스와 AI·양자기술 협력 강화
-https://www.aitimes.com/news/articleView.html?idxno=215061
+AWS, AI 개발 도구 '키로' 무상 지원 확대...국내 대학 3곳 포함
+https://www.aitimes.com/news/articleView.html?idxno=215080
