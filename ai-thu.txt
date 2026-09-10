@@ -1,5 +1,14 @@
 🤖 26년 9월 10일 목요일 AI 뉴스
 
+KAIST, 행동 넘어 ‘뇌파’로 사람 의도 파악하는 AI 기술 개발
+https://www.aitimes.com/news/articleView.html?idxno=215115
+
+[게시판] 에너자이, 브로드컴과 온디바이스 AI 기술 공유 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=215111
+
+중국, 휴머노이드 로봇 IPO 규제 강화..."거품 빼고 기술력 입증하라"
+https://www.aitimes.com/news/articleView.html?idxno=215110
+
 '데빈' 개발사 코그니션, 몸값 64조 달성...4개월 만에 85% 급등
 https://www.aitimes.com/news/articleView.html?idxno=215109
 
@@ -9,23 +18,14 @@ https://www.aitimes.com/news/articleView.html?idxno=215107
 수노, 워너뮤직·BMG 손잡고 정식 라이선스 'v6' AI 음악 모델 출시
 https://www.aitimes.com/news/articleView.html?idxno=215106
 
+앤트로픽, 네 번째 AI 무단 침입 공개...시스템 누락에 4억건 재조사
+https://www.aitimes.com/news/articleView.html?idxno=215105
+
+오픈AI '불량 에이전트', 외부 사이트 10여곳서 비밀 통신 흔적 추가 포착
+https://www.aitimes.com/news/articleView.html?idxno=215104
+
 구글, 20조 투입해 핀란드에 데이터센터 신설…원전 전력 50% 22년간 확보
 https://www.aitimes.com/news/articleView.html?idxno=215102
 
 딥시크, 연내 IPO 추진…씨틱증권 주관사 선정해 스타마켓 상장 준비
 https://www.aitimes.com/news/articleView.html?idxno=215101
-
-오픈AI, 챗GPT 음성에 '아스트라' 연결…모델·추론 수준 직접 선택
-https://www.aitimes.com/news/articleView.html?idxno=215098
-
-AI 연구진 "초지능, 10년 내 인류 전멸 확률 10% 이상" 잇단 경고
-https://www.aitimes.com/news/articleView.html?idxno=215095
-
-칼리버스, AI∙3D로 구현한 롯데자이언츠 가상 스타일링샵 오픈
-https://www.aitimes.com/news/articleView.html?idxno=215094
-
-텔레픽스, 구글 딥마인드 액셀러레이터 ‘지구를 위한 AI’ 국내 유일 선정
-https://www.aitimes.com/news/articleView.html?idxno=215092
-
-S2W, 오픈AI 사이버보안 프로젝트 ‘데이브레이크’ 참여
-https://www.aitimes.com/news/articleView.html?idxno=215091
