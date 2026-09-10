@@ -1,5 +1,20 @@
 🤖 26년 9월 10일 목요일 AI 뉴스
 
+'데빈' 개발사 코그니션, 몸값 64조 달성...4개월 만에 85% 급등
+https://www.aitimes.com/news/articleView.html?idxno=215109
+
+메가프로젝트 재생에너지 공급 의무화에 찬성 63% 넘어
+https://www.aitimes.com/news/articleView.html?idxno=215107
+
+수노, 워너뮤직·BMG 손잡고 정식 라이선스 'v6' AI 음악 모델 출시
+https://www.aitimes.com/news/articleView.html?idxno=215106
+
+구글, 20조 투입해 핀란드에 데이터센터 신설…원전 전력 50% 22년간 확보
+https://www.aitimes.com/news/articleView.html?idxno=215102
+
+딥시크, 연내 IPO 추진…씨틱증권 주관사 선정해 스타마켓 상장 준비
+https://www.aitimes.com/news/articleView.html?idxno=215101
+
 오픈AI, 챗GPT 음성에 '아스트라' 연결…모델·추론 수준 직접 선택
 https://www.aitimes.com/news/articleView.html?idxno=215098
 
@@ -12,20 +27,5 @@ https://www.aitimes.com/news/articleView.html?idxno=215094
 텔레픽스, 구글 딥마인드 액셀러레이터 ‘지구를 위한 AI’ 국내 유일 선정
 https://www.aitimes.com/news/articleView.html?idxno=215092
 
-S2W, 오픈AI ‘데이브레이크’ 참여…국내 AI·보안 전문 기업 최초
+S2W, 오픈AI 사이버보안 프로젝트 ‘데이브레이크’ 참여
 https://www.aitimes.com/news/articleView.html?idxno=215091
-
-오픈AI, ‘아스트라’ 수요 폭증에 유료 신규 가입 일시 중단 검토
-https://www.aitimes.com/news/articleView.html?idxno=215089
-
-크라우드웍스, 경남 창원에 '피지컬 AI 허브' 1호 거점 구축
-https://www.aitimes.com/news/articleView.html?idxno=215084
-
-스마트워치가 대화까지 기억한다…애플, '오디오 AI'로 웨어러블 승부수
-https://www.aitimes.com/news/articleView.html?idxno=215082
-
-애플, 첫 폴더블 스마트폰 '아이폰 듀오' 공개...329만원부터 시작
-https://www.aitimes.com/news/articleView.html?idxno=215081
-
-AWS, AI 개발 도구 '키로' 무상 지원 확대...국내 대학 3곳 포함
-https://www.aitimes.com/news/articleView.html?idxno=215080
