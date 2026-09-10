@@ -1,5 +1,8 @@
 🤖 26년 9월 10일 목요일 AI 뉴스
 
+[게시판] 9.81파크 제주, 월간 매출 '24억'으로 최고치 경신 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=215117
+
 KAIST, 행동 넘어 ‘뇌파’로 사람 의도 파악하는 AI 기술 개발
 https://www.aitimes.com/news/articleView.html?idxno=215115
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215104
 
 구글, 20조 투입해 핀란드에 데이터센터 신설…원전 전력 50% 22년간 확보
 https://www.aitimes.com/news/articleView.html?idxno=215102
-
-딥시크, 연내 IPO 추진…씨틱증권 주관사 선정해 스타마켓 상장 준비
-https://www.aitimes.com/news/articleView.html?idxno=215101
