@@ -1,5 +1,8 @@
 🤖 26년 9월 11일 금요일 AI 뉴스
 
+오픈AI, '프로 요금제' 신규 가입 일시 중단..."기존 사용자 경험 우선"
+https://www.aitimes.com/news/articleView.html?idxno=215118
+
 [게시판] 9.81파크 제주, 월간 매출 '24억'으로 최고치 경신 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=215117
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215105
 
 오픈AI '불량 에이전트', 외부 사이트 10여곳서 비밀 통신 흔적 추가 포착
 https://www.aitimes.com/news/articleView.html?idxno=215104
-
-구글, 20조 투입해 핀란드에 데이터센터 신설…원전 전력 50% 22년간 확보
-https://www.aitimes.com/news/articleView.html?idxno=215102
