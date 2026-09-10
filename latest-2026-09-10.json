@@ -1,8 +1,20 @@
 {
-  "updated_at_kst": "2026-09-10 21:11:18",
+  "updated_at_kst": "2026-09-10 23:53:20",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 10일 목요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "강남 집값 떨어지면 뭐하나…서민 주거 노·도·강은 ‘활활’",
+      "url": "https://n.news.naver.com/mnews/article/021/0002817927"
+    },
+    {
+      "title": "“아, 집값 잡을 생각 없구나” 부동산 정책 지지하던 한문도의 한탄",
+      "url": "https://n.news.naver.com/mnews/article/021/0002817925"
+    },
+    {
+      "title": "경기도 LH 임대주택 1만2천호 ‘빈집’…전국 3채 중 1채",
+      "url": "https://n.news.naver.com/mnews/article/666/0000122919"
+    },
     {
       "title": "‘못 쓰는 자투리땅’에 조정금 부과…2743만원 체납에 10배 면적 땅 통째 압류한 구청",
       "url": "https://n.news.naver.com/mnews/article/032/0003469740"
@@ -30,18 +42,6 @@
     {
       "title": "거실~주방 9m·조망형 침실…광주 아파트 판 바꾼다",
       "url": "https://n.news.naver.com/mnews/article/015/0005331071"
-    },
-    {
-      "title": "8월 수도권 분양가 ㎡당 1500만원 돌파",
-      "url": "https://n.news.naver.com/mnews/article/015/0005331069"
-    },
-    {
-      "title": "강남3구 얼어붙고, 경기 남부는 '상승곡선'",
-      "url": "https://n.news.naver.com/mnews/article/015/0005331068"
-    },
-    {
-      "title": "전국 아파트 입주율 59.5%로 '뚝'",
-      "url": "https://n.news.naver.com/mnews/article/015/0005331067"
     }
   ]
 }
