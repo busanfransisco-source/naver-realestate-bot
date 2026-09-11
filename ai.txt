@@ -1,10 +1,22 @@
 🤖 26년 9월 11일 금요일 AI 뉴스
 
+"차량 개조 없이 자율주행 가능"...바이다, 스마트카 국책과제 선정
+https://www.aitimes.com/news/articleView.html?idxno=215135
+
+트웰브랩스, 영상 검색 DB 연결 없이 즉시 사용…말로 “페널티킥 장면 찾아줘”
+https://www.aitimes.com/news/articleView.html?idxno=215132
+
+'카카오툴즈’에 다이소몰·신한카드 등 추가 연동..."에이전트 생태계 확대"
+https://www.aitimes.com/news/articleView.html?idxno=215125
+
 오픈AI, '프로 요금제' 신규 가입 일시 중단..."기존 사용자 경험 우선"
 https://www.aitimes.com/news/articleView.html?idxno=215118
 
 [게시판] 9.81파크 제주, 월간 매출 '24억'으로 최고치 경신 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=215117
+
+기후부, 태양광 산업경쟁력 강화위 출범…공급망 재건 논의
+https://www.aitimes.com/news/articleView.html?idxno=215116
 
 KAIST, 행동 넘어 ‘뇌파’로 사람 의도 파악하는 AI 기술 개발
 https://www.aitimes.com/news/articleView.html?idxno=215115
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215110
 
 '데빈' 개발사 코그니션, 몸값 64조 달성...4개월 만에 85% 급등
 https://www.aitimes.com/news/articleView.html?idxno=215109
-
-메가프로젝트 재생에너지 공급 의무화에 찬성 63% 넘어
-https://www.aitimes.com/news/articleView.html?idxno=215107
-
-수노, 워너뮤직·BMG 손잡고 정식 라이선스 'v6' AI 음악 모델 출시
-https://www.aitimes.com/news/articleView.html?idxno=215106
-
-앤트로픽, 네 번째 AI 무단 침입 공개...시스템 누락에 4억건 재조사
-https://www.aitimes.com/news/articleView.html?idxno=215105
-
-오픈AI '불량 에이전트', 외부 사이트 10여곳서 비밀 통신 흔적 추가 포착
-https://www.aitimes.com/news/articleView.html?idxno=215104
