@@ -1,31 +1,31 @@
 🤖 26년 9월 12일 토요일 AI 뉴스
 
-[게시판] 사이냅소프트, ‘지자체 정보화전략 IT 전시’ 참가 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=215177
+GPT-6 아스트라, AI 최초 수능 '완전 만점'...탐구 4과목까지 석권
+https://www.aitimes.com/news/articleView.html?idxno=214896
 
-알트먼 "첨단 AI 개발 속도 조절 검토…타 회사 동참 제안"
-https://www.aitimes.com/news/articleView.html?idxno=215176
+앤트로픽, '클로드 맥스' 주간 사용량 초기화…'아스트라' 돌풍에 맞불
+https://www.aitimes.com/news/articleView.html?idxno=214898
 
-퓨리오사AI, 싱가포르 법인 설립...APAC 시장 공략 나선다
-https://www.aitimes.com/news/articleView.html?idxno=215174
+오픈AI, ‘아스트라’ 수요 폭증에 유료 신규 가입 일시 중단 검토
+https://www.aitimes.com/news/articleView.html?idxno=215089
 
-스페이스X, 데이터센터 구축 방식 바꾼다…‘속도’보다 안정성에 무게
-https://www.aitimes.com/news/articleView.html?idxno=215169
+MS, AI 개발자 전용 윈도우 11 ‘프로젝트 제니스’ 공개… "30B 모델 로컬 실행"
+https://www.aitimes.com/news/articleView.html?idxno=214904
 
-네이버랩스, 언제 어디서나 감상할 수 있는 ‘간송미술관 VR투어’ 선보여
-https://www.aitimes.com/news/articleView.html?idxno=215167
+깃허브, AI 코딩 라우팅 시스템 ‘하이드라퓨전’ 공개...“비용 줄이고 품질 유지”
+https://www.aitimes.com/news/articleView.html?idxno=214945
 
-앤트로픽의 2030 경제 경고 "AI 성장의 결실, 노동 아닌 자본으로 몰릴 것"
-https://www.aitimes.com/news/articleView.html?idxno=215164
+웹 브라우저 벗어난 구글 '제미나이', 윈도우용 데스크톱 앱 출시
+https://www.aitimes.com/news/articleView.html?idxno=215128
 
-미국 정치권, AI 규제 법안 발의 박차..."AI 개발자도 인류 멸종 믿어"
-https://www.aitimes.com/news/articleView.html?idxno=215156
+앤트로픽, '맥스 플랜' 허위 광고 혐의로 집단 소송 당해..."사용량 속였다"
+https://www.aitimes.com/news/articleView.html?idxno=215049
 
-캘리포니아, 16세 미만 소셜미디어 중독 기능·AI 챗봇 규제법 서명
-https://www.aitimes.com/news/articleView.html?idxno=215153
+"전화 안 받아도 감염"...AI가 개발한 '클릭 제로' 모바일 해킹 도구 등장
+https://www.aitimes.com/news/articleView.html?idxno=215039
 
-젠슨 황, 내년 70% 성장 자신감…"우리는 칩이 아니라 생태계를 판다"
-https://www.aitimes.com/news/articleView.html?idxno=215149
+오픈AI, '코드 아레나'서 앤트로픽 제쳐…'아스트라' 웹개발 1위 기염
+https://www.aitimes.com/news/articleView.html?idxno=214899
 
-앤트로픽, 4개월 협상 끝 EU에 '미소스 5' 접근 권한 제공
-https://www.aitimes.com/news/articleView.html?idxno=215148
+오픈AI 'GPT-6 아스트라', 사람 개입 없이 3D 게임 '포털' 공략 성공
+https://www.aitimes.com/news/articleView.html?idxno=214922
