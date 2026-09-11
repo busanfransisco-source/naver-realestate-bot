@@ -1,31 +1,31 @@
 🤖 26년 9월 11일 금요일 AI 뉴스
 
+젠슨 황, 내년 70% 성장 자신감…"우리는 칩이 아니라 생태계를 판다"
+https://www.aitimes.com/news/articleView.html?idxno=215149
+
+문샷, 홍콩 이어 상하이 스타마켓 이중 상장 타진...자금 조달 확대 박차
+https://www.aitimes.com/news/articleView.html?idxno=215147
+
+오픈AI, 월가 겨냥한 '금융 특화 챗GPT' 공개..."기업 분석부터 보고서 생성까지"
+https://www.aitimes.com/news/articleView.html?idxno=215141
+
+"스마트워치 없이도 수면 측정"...비브레스트, '트랜슬립 AI' 앱 출시
+https://www.aitimes.com/news/articleView.html?idxno=215140
+
+이스트소프트, K몬스터그룹과 AI 아바타 '페르소에이아이' 글로벌 사업 확대
+https://www.aitimes.com/news/articleView.html?idxno=215139
+
+앤트로픽, 중국 기업 '무단 증류' 폭로…"프록시 타고 클로드 우회 복제"
+https://www.aitimes.com/news/articleView.html?idxno=215138
+
 "차량 개조 없이 자율주행 가능"...바이다, 스마트카 국책과제 선정
 https://www.aitimes.com/news/articleView.html?idxno=215135
 
+[기고] 한국딥러닝 “AI 행정혁신, 변화에 대응하려면 ‘VLM옵스’가 필요하다”
+https://www.aitimes.com/news/articleView.html?idxno=215134
+
+"2조원 보상도 마다"…스타 AI 연구원 앤드류 툴록, 앤트로픽 합류
+https://www.aitimes.com/news/articleView.html?idxno=215133
+
 트웰브랩스, 영상 검색 DB 연결 없이 즉시 사용…말로 “페널티킥 장면 찾아줘”
 https://www.aitimes.com/news/articleView.html?idxno=215132
-
-'카카오툴즈’에 다이소몰·신한카드 등 추가 연동..."에이전트 생태계 확대"
-https://www.aitimes.com/news/articleView.html?idxno=215125
-
-오픈AI, '프로 요금제' 신규 가입 일시 중단..."기존 사용자 경험 우선"
-https://www.aitimes.com/news/articleView.html?idxno=215118
-
-[게시판] 9.81파크 제주, 월간 매출 '24억'으로 최고치 경신 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=215117
-
-기후부, 태양광 산업경쟁력 강화위 출범…공급망 재건 논의
-https://www.aitimes.com/news/articleView.html?idxno=215116
-
-KAIST, 행동 넘어 ‘뇌파’로 사람 의도 파악하는 AI 기술 개발
-https://www.aitimes.com/news/articleView.html?idxno=215115
-
-[게시판] 에너자이, 브로드컴과 온디바이스 AI 기술 공유 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=215111
-
-중국, 휴머노이드 로봇 IPO 규제 강화..."거품 빼고 기술력 입증하라"
-https://www.aitimes.com/news/articleView.html?idxno=215110
-
-'데빈' 개발사 코그니션, 몸값 64조 달성...4개월 만에 85% 급등
-https://www.aitimes.com/news/articleView.html?idxno=215109
