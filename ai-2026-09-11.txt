@@ -1,5 +1,14 @@
 🤖 26년 9월 11일 금요일 AI 뉴스
 
+[게시판] 사이냅소프트, ‘지자체 정보화전략 IT 전시’ 참가 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=215177
+
+알트먼 "첨단 AI 개발 속도 조절 검토…타 회사 동참 제안"
+https://www.aitimes.com/news/articleView.html?idxno=215176
+
+퓨리오사AI, 싱가포르 법인 설립...APAC 시장 공략 나선다
+https://www.aitimes.com/news/articleView.html?idxno=215174
+
 스페이스X, 데이터센터 구축 방식 바꾼다…‘속도’보다 안정성에 무게
 https://www.aitimes.com/news/articleView.html?idxno=215169
 
@@ -9,6 +18,9 @@ https://www.aitimes.com/news/articleView.html?idxno=215167
 앤트로픽의 2030 경제 경고 "AI 성장의 결실, 노동 아닌 자본으로 몰릴 것"
 https://www.aitimes.com/news/articleView.html?idxno=215164
 
+미국 정치권, AI 규제 법안 발의 박차..."AI 개발자도 인류 멸종 믿어"
+https://www.aitimes.com/news/articleView.html?idxno=215156
+
 캘리포니아, 16세 미만 소셜미디어 중독 기능·AI 챗봇 규제법 서명
 https://www.aitimes.com/news/articleView.html?idxno=215153
 
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215149
 
 앤트로픽, 4개월 협상 끝 EU에 '미소스 5' 접근 권한 제공
 https://www.aitimes.com/news/articleView.html?idxno=215148
-
-문샷, 홍콩 이어 상하이 스타마켓 이중 상장 타진...자금 조달 확대 박차
-https://www.aitimes.com/news/articleView.html?idxno=215147
-
-엑스와이지, 사람과 상호작용하는 '휴머노이드 행동 지능' 기술 선보여
-https://www.aitimes.com/news/articleView.html?idxno=215142
-
-오픈AI, 월가 겨냥한 '금융 특화 챗GPT' 공개..."기업 분석부터 보고서 생성까지"
-https://www.aitimes.com/news/articleView.html?idxno=215141
-
-"스마트워치 없이도 수면 측정"...비브레스트, '트랜슬립 AI' 앱 출시
-https://www.aitimes.com/news/articleView.html?idxno=215140
