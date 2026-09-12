@@ -8,6 +8,23 @@ import gen_briefing
 
 
 class DailyRotationTests(unittest.TestCase):
+    def test_all_library_bodies_meet_length_rule(self):
+        library = json.loads(rotation.LIBRARY_PATH.read_text(encoding='utf-8'))
+        for topic in library['topics']:
+            for entry in topic['entries']:
+                with self.subTest(topic=topic['key'], title=entry[0]):
+                    self.assertGreaterEqual(rotation.validate_entry(entry), 300)
+                    self.assertLessEqual(rotation.validate_entry(entry), 700)
+
+    def test_length_boundaries_exclude_title(self):
+        for length in (299, 300, 700, 701):
+            entry = ['title' * 100, 'a', 'b', 'c' * (length - 6)]
+            if 300 <= length <= 700:
+                self.assertEqual(rotation.validate_entry(entry), length)
+            else:
+                with self.assertRaises(ValueError):
+                    rotation.validate_entry(entry)
+
     def test_fixed_slots_and_five_distinct_topics_every_day(self):
         start = date(2026, 9, 12)
         for offset in range(55):
