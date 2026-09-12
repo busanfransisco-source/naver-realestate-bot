@@ -1,5 +1,14 @@
 🤖 26년 9월 12일 토요일 AI 뉴스
 
+머스크, 자신 다룬 다큐에 법적 대응 경고..."허위·악의적 공작"
+https://www.aitimes.com/news/articleView.html?idxno=215194
+
+오픈AI, 캘텍 AI 수학 해커톤 후원 철회…수학계 '슬롭 수학' 비판 여파
+https://www.aitimes.com/news/articleView.html?idxno=215193
+
+[AI 이슈트렌드] 파주 냉동창고 살인·'야차룰' 학폭 논란...대기업 오너가도 관심
+https://www.aitimes.com/news/articleView.html?idxno=215192
+
 [내면 지도 그리기] 33 Inner Mapping: 나를 찾는 지도
 https://www.aitimes.com/news/articleView.html?idxno=215191
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215186
 
 트럼프, AI 종말론 위험 일축…"중국 우위가 최우선"
 https://www.aitimes.com/news/articleView.html?idxno=215185
-
-애플 폴더블폰 시장 진입 공격에 삼성 ‘팀 쿡’ 카드로 맞불
-https://www.aitimes.com/news/articleView.html?idxno=215183
-
-AI가 하네스를 만들 수 있을까...바이트댄스, 평가 프레임워크 '하네스데브' 공개
-https://www.aitimes.com/news/articleView.html?idxno=215182
-
-오픈AI, '에이전트 API' 공개 베타 출시..."에이전트 구축 쉬워진다"
-https://www.aitimes.com/news/articleView.html?idxno=215181
