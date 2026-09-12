@@ -1,7 +1,22 @@
 🤖 26년 9월 12일 토요일 AI 뉴스
 
+챗GPT로 교내 총격 계획한 아르헨티나 10대, FBI 경보 후 경찰 급습
+https://www.aitimes.com/news/articleView.html?idxno=215187
+
+트럼프, AI 종말론 위험 일축…"중국 우위가 최우선"
+https://www.aitimes.com/news/articleView.html?idxno=215185
+
+애플 폴더블폰 시장 진입 공격에 삼성 ‘팀 쿡’ 카드로 맞불
+https://www.aitimes.com/news/articleView.html?idxno=215183
+
+오픈AI, '에이전트 API' 공개 베타 출시..."에이전트 구축 쉬워진다"
+https://www.aitimes.com/news/articleView.html?idxno=215181
+
 "미사일부터 스파이 활동까지"…앤트로픽 '클로드', 군사 악용에 비상
 https://www.aitimes.com/news/articleView.html?idxno=215180
+
+[AI카툰] Bob, Senior IT guy - 밥, Exoskeleton 파워 슈트 장착!
+https://www.aitimes.com/news/articleView.html?idxno=215178
 
 [게시판] 사이냅소프트, ‘지자체 정보화전략 IT 전시’ 참가 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=215177
@@ -9,23 +24,8 @@ https://www.aitimes.com/news/articleView.html?idxno=215177
 알트먼 "첨단 AI 개발 속도 조절 검토…타 회사 동참 제안"
 https://www.aitimes.com/news/articleView.html?idxno=215176
 
+‘경주 헤리티지 AI시네마’ 개최…“AI로 복원한 10편의 문화유산 영상”
+https://www.aitimes.com/news/articleView.html?idxno=215175
+
 퓨리오사AI, 싱가포르 법인 설립...APAC 시장 공략 나선다
 https://www.aitimes.com/news/articleView.html?idxno=215174
-
-스페이스X, 데이터센터 구축 방식 바꾼다…‘속도’보다 안정성에 무게
-https://www.aitimes.com/news/articleView.html?idxno=215169
-
-네이버랩스, 언제 어디서나 감상할 수 있는 ‘간송미술관 VR투어’ 선보여
-https://www.aitimes.com/news/articleView.html?idxno=215167
-
-앤트로픽의 경고 "AI 성장 결실, 노동 아닌 자본으로 몰릴 것"
-https://www.aitimes.com/news/articleView.html?idxno=215164
-
-[게시판] 포티투마루, AX 확산 분과로 수요·공급 기업 매칭 주도 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=215162
-
-미국 정치권, AI 규제 법안 발의 박차..."AI 개발자도 인류 멸종 믿어"
-https://www.aitimes.com/news/articleView.html?idxno=215156
-
-캘리포니아, 16세 미만 소셜미디어 중독 기능·AI 챗봇 규제법 서명
-https://www.aitimes.com/news/articleView.html?idxno=215153
