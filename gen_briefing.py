@@ -14,6 +14,7 @@ import json
 import re
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
+from daily_rotation import build_rotating_sections
 
 KST = timezone(timedelta(hours=9))
 WEEKDAY_EN = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
@@ -232,14 +233,18 @@ def build_html():
     build_date = now.strftime("%Y-%m-%d")
 
     section_blocks = []
-    for number, (key, label, fname_prefix) in enumerate(SECTIONS, start=1):
+    rendered_sections = []
+    for key, label, fname_prefix in SECTIONS:
         content = read_section_text(fname_prefix, weekday_en)
         if key.startswith("analysis") and not is_fresh_analysis(content, now):
             content = "(오늘의 분석이 아직 준비되지 않았습니다)"
+        rendered_sections.append((key, label, content))
+    rendered_sections.extend(build_rotating_sections(now.date()))
+    for number, (key, label, content) in enumerate(rendered_sections, start=1):
         content_json = json.dumps(content, ensure_ascii=False)
         content_escaped = html.escape(content)
         section_blocks.append(f"""
-<section class="card">
+<section class="card" data-slot="{number}">
   <div class="card-head">
     <h2>{number}. {label}</h2>
     <button class="copy-btn" onclick="copySection('{key}', this)">복사</button>
