@@ -557,12 +557,12 @@ function buildBriefingHtml_(now, sections) {
   var library = JSON.parse(ghGetTextFile_("daily-content-library.json"));
   var day = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
   var elapsed = Math.max(0, Math.floor((day - Date.parse(library.start_date + "T00:00:00Z")) / 86400000));
-  for (var slot = 0; slot < 5; slot++) {
-    var topic = library.topics[((slot - elapsed) % 5 + 5) % 5];
+  for (var slot = 0; slot < 6; slot++) {
+    var topic = library.topics[((slot - elapsed) % 6 + 6) % 6];
     var entry = topic.entries[elapsed % topic.entries.length];
     var key = "daily" + (19 + slot);
     sections[key] = [topic.label, now.getUTCFullYear() + "년 " + (now.getUTCMonth() + 1) + "월 " + now.getUTCDate() + "일"].concat(entry).join("\n\n");
-    order.push([key, (19 + slot) + ". " + topic.label]);
+    order.push([key, (19 + slot) + ". 부동산 컨텐츠 " + (slot + 1)]);
   }
 
   var blocks = order.map(function (pair) {
@@ -698,7 +698,7 @@ function runBackupNow() {
   ghPutFile_("last-refresh-backup.txt", now.toISOString(), "Backup pipeline timestamp " + today);
 
   Object.keys(results).forEach(function (key) {
-    if (/^daily(19|20|21|22|23)$/.test(key)) return;
+    if (/^daily(19|20|21|22|23|24)$/.test(key)) return;
     if (["subs", "trend", "analysis3", "analysis4", "analysis5", "analysis2", "analysis6", "analysis1"].indexOf(key) !== -1) return;
     try {
       ghPutFile_(key + ".txt", results[key], "Backup pipeline data: " + key);

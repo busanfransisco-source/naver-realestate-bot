@@ -19,15 +19,15 @@ def validate_entry(entry):
 def build_rotating_sections(today):
     library = json.loads(LIBRARY_PATH.read_text(encoding='utf-8'))
     topics = library['topics']
-    if len(topics) != 5:
-        raise ValueError('Exactly five topics are required')
+    if len(topics) != 6:
+        raise ValueError('Exactly six topics are required')
     elapsed = max(0, (today - date.fromisoformat(library['start_date'])).days)
     result = []
-    for slot in range(5):
-        topic = topics[(slot - elapsed) % 5]
+    for slot in range(6):
+        topic = topics[(slot - elapsed) % 6]
         entry = topic['entries'][elapsed % len(topic['entries'])]
         validate_entry(entry)
         stamp = f'{today.year}년 {today.month}월 {today.day}일'
         content = '\n\n'.join([topic['label'], stamp, *entry])
-        result.append((f'daily{19 + slot}', topic['label'], content))
+        result.append((f'daily{19 + slot}', f'부동산 컨텐츠 {slot + 1}', content))
     return result
