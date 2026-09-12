@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-09-13 07:23:40",
+  "updated_at_kst": "2026-09-13 07:42:05",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 13일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "노란봉투법·추투에 레미콘 파업까지…노동부 건설현장 노사관리 도마",
+      "url": "https://n.news.naver.com/mnews/article/421/0009166522"
+    },
+    {
+      "title": "\"반나절 안내하고 허탕\"…임장비 도입론에 국토부 \"현행법상 불가\"",
+      "url": "https://n.news.naver.com/mnews/article/421/0009166520"
+    },
     {
       "title": "LH 매입임대 '골라 담기' 청약 막는다…결과 전 같은 유형 재신청 금지",
       "url": "https://n.news.naver.com/mnews/article/421/0009166499"
@@ -34,14 +42,6 @@
     {
       "title": "거래 86% 급감에도 신고가…'토허제' 동탄·기흥·구리, 삼성 대출 변수",
       "url": "https://n.news.naver.com/mnews/article/421/0009166482"
-    },
-    {
-      "title": "서울 아파트값 86주째 상승… 文정부 최장 기록 넘었다",
-      "url": "https://n.news.naver.com/mnews/article/366/0001191961"
-    },
-    {
-      "title": "전세 씨 마르자 '생존 매수'…외곽도 20억 돌파[전세난이 바꾼 서울③]",
-      "url": "https://n.news.naver.com/mnews/article/003/0014186170"
     }
   ]
 }
