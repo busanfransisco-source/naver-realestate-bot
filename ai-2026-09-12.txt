@@ -9,6 +9,9 @@ https://www.aitimes.com/news/articleView.html?idxno=215190
 오픈AI의 피지 시모, IPO 앞둔 엔스케일 이사회 합류
 https://www.aitimes.com/news/articleView.html?idxno=215189
 
+구글, AI 도구 학습 '툴그래드' 공개..."답부터 만들고 질문 붙여 성공률 99.8%"
+https://www.aitimes.com/news/articleView.html?idxno=215188
+
 챗GPT로 교내 총격 계획한 아르헨티나 10대, FBI 경보 후 경찰 급습
 https://www.aitimes.com/news/articleView.html?idxno=215187
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215182
 
 오픈AI, '에이전트 API' 공개 베타 출시..."에이전트 구축 쉬워진다"
 https://www.aitimes.com/news/articleView.html?idxno=215181
-
-"미사일부터 스파이 활동까지"…앤트로픽 '클로드', 군사 악용에 비상
-https://www.aitimes.com/news/articleView.html?idxno=215180
