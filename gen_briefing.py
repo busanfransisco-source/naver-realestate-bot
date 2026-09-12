@@ -69,16 +69,41 @@ def read_section_text(prefix, weekday):
     return ""
 
 
-def is_fresh_analysis(content, today):
+def analysis_date(content):
     """analysis 파일 안에 적힌 날짜가 오늘 날짜와 일치하는지 확인 (방마다 날짜 형식이 달라 여러 패턴을 시도)"""
-    first_lines = "\n".join(content.split("\n")[:2])
+    first_lines = "\n".join(line.strip() for line in content.splitlines() if line.strip()).split("\n")[:2]
+    first_lines = "\n".join(first_lines)
     m = re.search(r"(\d{4})[-.](\d{1,2})[-.](\d{1,2})", first_lines)
     if not m:
         m = re.search(r"(\d{4})년\s*(\d{1,2})월\s*(\d{1,2})일", first_lines)
     if not m:
-        return False
+        return None
     y, mo, d = int(m.group(1)), int(m.group(2)), int(m.group(3))
-    return (y, mo, d) == (today.year, today.month, today.day)
+    try:
+        return datetime(y, mo, d).date()
+    except ValueError:
+        return None
+
+
+def is_fresh_analysis(content, today):
+    return analysis_date(content) == today.date() if isinstance(today, datetime) else analysis_date(content) == today
+
+
+def read_policy_text(prefix, today):
+    """Keep the latest dated analysis visible without presenting it as today's work."""
+    day = today.date() if isinstance(today, datetime) else today
+    valid = []
+    for path in sorted(Path('.').glob(f'{prefix}-*.txt')):
+        text = read_text(str(path))
+        written = analysis_date(text)
+        if written and written <= day and len(text) >= 250 and 'https://' in text and not has_fetch_failure(text):
+            valid.append((written, text))
+    if not valid:
+        return '(오늘의 분석이 아직 준비되지 않았습니다)'
+    written, text = max(valid, key=lambda item: item[0])
+    if written == day:
+        return text
+    return f'[최근 분석 · 원문 작성일 {written.isoformat()}]\n\n{text}'
 
 
 SECTIONS = [
@@ -236,8 +261,8 @@ def build_html():
     rendered_sections = []
     for key, label, fname_prefix in SECTIONS:
         content = read_section_text(fname_prefix, weekday_en)
-        if key.startswith("analysis") and not is_fresh_analysis(content, now):
-            content = "(오늘의 분석이 아직 준비되지 않았습니다)"
+        if key.startswith("analysis"):
+            content = read_policy_text(fname_prefix, now)
         rendered_sections.append((key, label, content))
     rendered_sections.extend(build_rotating_sections(now.date()))
     for number, (key, label, content) in enumerate(rendered_sections, start=1):
