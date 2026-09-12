@@ -548,7 +548,7 @@ function buildBriefingHtml_(now, sections) {
     ["subs", "4. 🏗️ 청약 소식"], ["trend", "5. 📈 부동산 주간 시세동향"], ["fuelfx", "6. ⛽ 기름값·환율"],
     ["metalcoin", "7. 🥇 금·은·코인"], ["books", "8. 📚 주간 베스트셀러"], ["realestate", "9. 🏠 부동산 뉴스"],
     ["world", "10. 🌏 세계 뉴스"], ["finance", "11. 🏦 금융 뉴스"], ["ai", "12. 🤖 AI 뉴스"],
-    ["analysis3", "13. 📰 대한민국 정책분석"], ["analysis4", "14. 📰 여러분의 부동산 정책분석"],
+    ["analysis3", "13. 📰 엘리트 정책분석"], ["analysis4", "14. 📰 여러분의 부동산 정책분석"],
     ["analysis5", "15. 📰 월부길 정책분석"], ["analysis2", "16. 📰 부알남 정책분석"],
     ["analysis6", "17. 📰 부부투 정책분석"], ["analysis1", "18. 📰 비밀노트 정책 분석"]
   ];

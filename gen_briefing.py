@@ -94,7 +94,7 @@ SECTIONS = [
     ("world", "🌏 세계 뉴스", "world"),
     ("finance", "🏦 금융 뉴스", "finance"),
     ("ai", "🤖 AI 뉴스", "ai"),
-    ("analysis3", "📰 대한민국 정책분석", "analysis3"),
+    ("analysis3", "📰 엘리트 정책분석", "analysis3"),
     ("analysis4", "📰 여러분의 부동산 정책분석", "analysis4"),
     ("analysis5", "📰 월부길 정책분석", "analysis5"),
     ("analysis2", "📰 부알남 정책분석", "analysis2"),
