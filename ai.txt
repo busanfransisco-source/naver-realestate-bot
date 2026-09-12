@@ -1,7 +1,19 @@
 🤖 26년 9월 12일 토요일 AI 뉴스
 
+[내면 지도 그리기] 33 Inner Mapping: 나를 찾는 지도
+https://www.aitimes.com/news/articleView.html?idxno=215191
+
+세일즈포스, '에이전트 난립' 잡는다...통합 관리 '트러스트 엔터프라이즈 AI 하네스' 공개
+https://www.aitimes.com/news/articleView.html?idxno=215190
+
+오픈AI의 피지 시모, IPO 앞둔 엔스케일 이사회 합류
+https://www.aitimes.com/news/articleView.html?idxno=215189
+
 챗GPT로 교내 총격 계획한 아르헨티나 10대, FBI 경보 후 경찰 급습
 https://www.aitimes.com/news/articleView.html?idxno=215187
+
+사카나, 에이전트 오케스트레이션 ‘푸구’ 새 버전 출시…비용·성능 동시 잡았다
+https://www.aitimes.com/news/articleView.html?idxno=215186
 
 트럼프, AI 종말론 위험 일축…"중국 우위가 최우선"
 https://www.aitimes.com/news/articleView.html?idxno=215185
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215181
 
 "미사일부터 스파이 활동까지"…앤트로픽 '클로드', 군사 악용에 비상
 https://www.aitimes.com/news/articleView.html?idxno=215180
-
-[AI카툰] Bob, Senior IT guy - 밥, Exoskeleton 파워 슈트 장착!
-https://www.aitimes.com/news/articleView.html?idxno=215178
-
-[게시판] 사이냅소프트, ‘지자체 정보화전략 IT 전시’ 참가 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=215177
-
-알트먼 "첨단 AI 개발 속도 조절 검토…타 회사 동참 제안"
-https://www.aitimes.com/news/articleView.html?idxno=215176
-
-‘경주 헤리티지 AI시네마’ 개최…“AI로 복원한 10편의 문화유산 영상”
-https://www.aitimes.com/news/articleView.html?idxno=215175
