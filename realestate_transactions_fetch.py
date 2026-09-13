@@ -387,8 +387,7 @@ def build_digest(today, records):
     lines = [
         f"{today.month}/{today.day}({WEEKDAY_KR_SHORT[today.weekday()]}) 신규 등록 실거래가",
         "",
-        f"전체 {len(records)}건 (아파트 {len(records)})",
-        f"🔥 신고가 {len(record_highs)}건",
+        f"전국 {len(records):,}건 (🔥{len(record_highs):,})",
     ]
     if not records:
         lines.extend(["", "전날 저장본과 비교해 새로 추가된 거래가 없습니다."])
@@ -400,12 +399,11 @@ def build_digest(today, records):
     ranked_regions = sorted(
         by_region.items(),
         key=lambda item: (-len(item[1]), item[0]),
-    )[:5]
-    lines.extend(["", "[지역별 신규 등록]"])
+    )
+    lines.extend(["", "[지역별 실거래가]"])
     for region, region_rows in ranked_regions:
         highs = sum(1 for row in region_rows if row.get("is_record"))
-        suffix = f" (🔥{highs})" if highs else ""
-        lines.append(f"{region} {len(region_rows)}건{suffix}")
+        lines.append(f"{region} {len(region_rows):,}건 (🔥{highs:,})")
 
     if record_highs:
         lines.extend(["", "[주요 신고가]"])

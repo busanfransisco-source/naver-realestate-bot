@@ -45,12 +45,23 @@ class TransactionDigestTests(unittest.TestCase):
         row = self.sample(is_record=True)
         text = build_digest(date(2026, 9, 13), [row])
         self.assertTrue(text.startswith("9/13(일) 신규 등록 실거래가\n\n"))
-        self.assertIn("\n\n[지역별 신규 등록]\n", text)
-        self.assertIn("🔥 신고가 1건", text)
+        self.assertIn("전국 1건 (🔥1)", text)
+        self.assertIn("\n\n[지역별 실거래가]\n", text)
+        self.assertIn("서울 1건 (🔥1)", text)
         self.assertIn("\n\n[주요 신고가]\n", text)
         self.assertNotIn("수집 이후", text)
         self.assertNotIn("http", text)
         self.assertNotIn("오늘의 아파트", text)
+
+    def test_all_regions_are_listed_and_fire_marker_is_fixed(self):
+        rows = [
+            self.sample(region_name=f"지역{i} 시군구", is_record=(i == 0), building_name=f"단지{i}")
+            for i in range(6)
+        ]
+        text = build_digest(date(2026, 9, 13), rows)
+        self.assertEqual(text.count("건 (🔥"), 7)
+        for i in range(6):
+            self.assertIn(f"지역{i} 1건 (🔥{1 if i == 0 else 0})", text)
 
     def test_government_csv_excludes_cancelled_deals(self):
         source = "\n".join(
