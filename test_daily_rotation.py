@@ -1,4 +1,5 @@
 import json
+import re
 import unittest
 from datetime import date, timedelta, datetime, timezone
 from unittest.mock import patch
@@ -8,6 +9,13 @@ import gen_briefing
 
 
 class DailyRotationTests(unittest.TestCase):
+    def test_every_sentence_has_a_blank_line(self):
+        library = json.loads(rotation.LIBRARY_PATH.read_text(encoding='utf-8'))
+        for topic in library['topics']:
+            for entry in topic['entries']:
+                for paragraph in entry[1:]:
+                    self.assertIsNone(re.search(r'[.!?][”’]?[ \t]+', paragraph), entry[0])
+
     def test_all_library_bodies_meet_length_rule(self):
         library = json.loads(rotation.LIBRARY_PATH.read_text(encoding='utf-8'))
         for topic in library['topics']:
