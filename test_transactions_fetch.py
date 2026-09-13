@@ -46,7 +46,9 @@ class TransactionDigestTests(unittest.TestCase):
         text = build_digest(date(2026, 9, 13), [row])
         self.assertTrue(text.startswith("9/13(일) 신규 등록 실거래가\n\n"))
         self.assertIn("\n\n[지역별 신규 등록]\n", text)
-        self.assertIn("\n\n[수집 이후 주요 신고가]\n", text)
+        self.assertIn("🔥 신고가 1건", text)
+        self.assertIn("\n\n[주요 신고가]\n", text)
+        self.assertNotIn("수집 이후", text)
         self.assertNotIn("http", text)
         self.assertNotIn("오늘의 아파트", text)
 

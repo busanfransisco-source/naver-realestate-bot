@@ -388,7 +388,7 @@ def build_digest(today, records):
         f"{today.month}/{today.day}({WEEKDAY_KR_SHORT[today.weekday()]}) 신규 등록 실거래가",
         "",
         f"전체 {len(records)}건 (아파트 {len(records)})",
-        f"🔥 수집 이후 신고가 {len(record_highs)}건",
+        f"🔥 신고가 {len(record_highs)}건",
     ]
     if not records:
         lines.extend(["", "전날 저장본과 비교해 새로 추가된 거래가 없습니다."])
@@ -408,7 +408,7 @@ def build_digest(today, records):
         lines.append(f"{region} {len(region_rows)}건{suffix}")
 
     if record_highs:
-        lines.extend(["", "[수집 이후 주요 신고가]"])
+        lines.extend(["", "[주요 신고가]"])
         for row in sorted(record_highs, key=lambda x: int(x.get("deal_amount") or 0), reverse=True)[:3]:
             lines.append(format_transaction(row))
 
