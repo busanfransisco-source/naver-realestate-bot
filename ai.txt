@@ -1,31 +1,31 @@
 🤖 26년 9월 13일 일요일 AI 뉴스
 
+구글, 코딩 강화 위해 스타트업 메카나이즈 인재 흡수…2조원대 계약 마무리
+https://www.aitimes.com/news/articleView.html?idxno=215205
+
+KAIST, 미래기술 연구거점 ‘LOTTE x KAIST R&D 센터’ 준공
+https://www.aitimes.com/news/articleView.html?idxno=215203
+
+"지침 줄이고 완료 기준 명확히"...오픈AI가 밝힌 '아스트라' 활용법
+https://www.aitimes.com/news/articleView.html?idxno=215202
+
+AI 데이터센터에 발목 잡힌 오라클…매출 폭증에도 재무 부담 가중
+https://www.aitimes.com/news/articleView.html?idxno=215201
+
+테슬라, 10월 1일 2세대 로드스터 공개...‘비행’ 기능 베일 벗을까
+https://www.aitimes.com/news/articleView.html?idxno=215200
+
 오픈AI '불량 에이전트' 루비젬스까지 해킹 시도…"데이터 수집일 뿐"
 https://www.aitimes.com/news/articleView.html?idxno=215199
 
 알트먼 "2026년 상장은 시기상조…안전성 확보가 최우선 과제"
 https://www.aitimes.com/news/articleView.html?idxno=215198
 
+제프 딘의 AI 스타트업 디스커버리 루프, 67조 몸값 노린다
+https://www.aitimes.com/news/articleView.html?idxno=215197
+
+엔비디아, 앤트로픽 초대형 IPO에 '13조 앵커 투자' 논의
+https://www.aitimes.com/news/articleView.html?idxno=215196
+
 아모데이 "첨단 모델 개발 속도 줄이자"...알트먼·머스크도 "동의"
 https://www.aitimes.com/news/articleView.html?idxno=215195
-
-머스크, 자신 다룬 다큐에 법적 대응 경고..."허위·악의적 공작"
-https://www.aitimes.com/news/articleView.html?idxno=215194
-
-오픈AI, 캘텍 AI 수학 해커톤 후원 철회…수학계 '슬롭 수학' 비판 여파
-https://www.aitimes.com/news/articleView.html?idxno=215193
-
-[AI 이슈트렌드] 파주 냉동창고 살인·'야차룰' 학폭 논란...대기업 오너가도 관심
-https://www.aitimes.com/news/articleView.html?idxno=215192
-
-[내면 지도 그리기] 33 Inner Mapping: 나를 찾는 지도
-https://www.aitimes.com/news/articleView.html?idxno=215191
-
-세일즈포스, '에이전트 난립' 잡는다...통합 관리 '트러스트 엔터프라이즈 AI 하네스' 공개
-https://www.aitimes.com/news/articleView.html?idxno=215190
-
-오픈AI의 피지 시모, IPO 앞둔 엔스케일 이사회 합류
-https://www.aitimes.com/news/articleView.html?idxno=215189
-
-구글, AI 도구 학습 '툴그래드' 공개..."답부터 만들고 질문 붙여 성공률 99.8%"
-https://www.aitimes.com/news/articleView.html?idxno=215188
