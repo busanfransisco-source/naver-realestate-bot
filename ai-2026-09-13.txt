@@ -1,7 +1,10 @@
 🤖 26년 9월 13일 일요일 AI 뉴스
 
-구글, 코딩 강화 위해 스타트업 메카나이즈 인재 흡수…2조원대 계약 마무리
+구글, 코딩 강화 위해 스타트업 메카나이즈 인재 흡수…2조원대 계약
 https://www.aitimes.com/news/articleView.html?idxno=215205
+
+스페이스X, 미공개 고객과 월 1.5조 규모 컴퓨팅 계약 체결
+https://www.aitimes.com/news/articleView.html?idxno=215204
 
 KAIST, 미래기술 연구거점 ‘LOTTE x KAIST R&D 센터’ 준공
 https://www.aitimes.com/news/articleView.html?idxno=215203
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215197
 
 엔비디아, 앤트로픽 초대형 IPO에 '13조 앵커 투자' 논의
 https://www.aitimes.com/news/articleView.html?idxno=215196
-
-아모데이 "첨단 모델 개발 속도 줄이자"...알트먼·머스크도 "동의"
-https://www.aitimes.com/news/articleView.html?idxno=215195
