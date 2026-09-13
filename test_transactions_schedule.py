@@ -8,6 +8,7 @@ class TransactionScheduleTests(unittest.TestCase):
         self.assertIn('- cron: "10,30,50 20-23 * * *"', workflow)
         self.assertIn("timeout-minutes: 18", workflow)
         self.assertIn("group: nationwide-transactions", workflow)
+        self.assertIn("--source csv", workflow)
         self.assertIn("--skip-if-collected-today", workflow)
 
     def test_general_briefing_no_longer_collects_transactions(self):

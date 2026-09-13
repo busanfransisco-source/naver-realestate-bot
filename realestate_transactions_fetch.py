@@ -29,6 +29,7 @@ KST = timezone(timedelta(hours=9))
 WEEKDAY_EN = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 WEEKDAY_KR_SHORT = ["월", "화", "수", "목", "금", "토", "일"]
 STATE_PATH = Path("transactions-state.json")
+STATE_VERSION = 5
 DOWNLOAD_PAGE = "https://rt.molit.go.kr/pt/xls/xls.do?mobileAt="
 DOWNLOAD_URL = "https://rt.molit.go.kr/pt/xls/ptXlsCSVDown.do"
 API_URL = "https://apis.data.go.kr/1613000/RTMSDataSvcAptTrade/getRTMSDataSvcAptTrade"
@@ -483,7 +484,7 @@ def already_collected_today(today):
         return False
     expected_title = f"{today.month}/{today.day}({WEEKDAY_KR_SHORT[today.weekday()]})"
     return (
-        state.get("version") == 4
+        state.get("version") == STATE_VERSION
         and state.get("last_output_date") == today.isoformat()
         and content.startswith(expected_title)
     )
@@ -496,6 +497,17 @@ def main(argv=None):
         action="store_true",
         help="오늘 정상 산출물이 있으면 API 호출 없이 종료합니다.",
     )
+    parser.add_argument(
+        "--source",
+        choices=("auto", "csv", "api"),
+        default="auto",
+        help="전국 일괄 CSV 또는 지역별 공공데이터 API를 선택합니다.",
+    )
+    parser.add_argument(
+        "--baseline-only",
+        action="store_true",
+        help="현재 자료를 비교 기준으로만 저장하고 본문은 바꾸지 않습니다.",
+    )
     args = parser.parse_args(argv)
     now = datetime.now(KST)
     today = now.date()
@@ -503,25 +515,31 @@ def main(argv=None):
         print(f"{today.isoformat()} 실거래가 수집이 이미 완료되어 건너뜁니다")
         return
     service_key = os.environ.get("MOLIT_API_KEY", "").strip()
-    if service_key:
+    if args.source == "csv" or (args.source == "auto" and not service_key):
+        rows = fetch_nationwide_transactions(today)
+        source_name = "국토교통부 실거래가 공개시스템 전국 CSV"
+    elif service_key:
         rows = fetch_nationwide_api(today, service_key)
         source_name = "국토교통부 공공데이터 API"
     else:
-        rows = fetch_nationwide_transactions(today)
-        source_name = "국토교통부 실거래가 공개시스템 전국 CSV"
+        raise RuntimeError("API 수집에는 MOLIT_API_KEY가 필요합니다")
     current = tokenized_rows(rows)
 
     if STATE_PATH.exists():
         state = json.loads(STATE_PATH.read_text(encoding="utf-8"))
     else:
         state = {}
-    if state.get("version") != 4:
+    if state.get("version") != STATE_VERSION:
         state = {}
     previous_tokens = set(state.get("seen_tokens", []))
     history_max = state.get("history_max", {})
     bootstrap_preserve_date = state.get("bootstrap_preserve_date")
 
-    if previous_tokens:
+    if args.baseline_only:
+        today_records = []
+        bootstrap_preserve_date = None
+        print(f"전국 비교 기준만 새로 저장합니다: {len(current):,}건")
+    elif previous_tokens:
         newly_seen = [current[token] for token in current.keys() - previous_tokens]
         classified = classify_records(newly_seen, history_max)
         if bootstrap_preserve_date == today.isoformat():
@@ -555,7 +573,7 @@ def main(argv=None):
         bootstrap_preserve_date = today.isoformat()
 
     state = {
-        "version": 4,
+        "version": STATE_VERSION,
         "source": source_name,
         "collected_at": now.isoformat(timespec="seconds"),
         "contract_date_range": [

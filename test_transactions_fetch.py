@@ -111,7 +111,7 @@ class TransactionDigestTests(unittest.TestCase):
             try:
                 target = date(2026, 9, 14)
                 Path("transactions-state.json").write_text(
-                    json.dumps({"version": 4, "last_output_date": "2026-09-14"}),
+                    json.dumps({"version": 5, "last_output_date": "2026-09-14"}),
                     encoding="utf-8",
                 )
                 Path("transactions.txt").write_text(
