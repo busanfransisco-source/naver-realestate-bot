@@ -1,13 +1,7 @@
 name: Nationwide Transaction Refresh
 
 on:
-  workflow_dispatch:
-    inputs:
-      baseline_only:
-        description: "현재 전국 자료를 비교 기준으로만 다시 저장"
-        required: false
-        default: false
-        type: boolean
+  workflow_dispatch: {}
   schedule:
     # 05:10~08:50 KST, 20분 간격. 당일 첫 성공 뒤에는 수집기가 자동으로 건너뛴다.
     - cron: "10,30,50 20-23 * * *"
@@ -36,13 +30,9 @@ jobs:
           python-version: "3.11"
 
       - name: Collect nationwide apartment transactions
-        shell: bash
-        run: |
-          if [ "${{ inputs.baseline_only }}" = "true" ]; then
-            python realestate_transactions_fetch.py --source csv --baseline-only
-          else
-            python realestate_transactions_fetch.py --source csv --skip-if-collected-today
-          fi
+        run: python realestate_transactions_fetch.py --skip-if-collected-today
+        env:
+          MOLIT_API_KEY: ${{ secrets.MOLIT_API_KEY }}
 
       - name: Commit collected transaction files
         id: commit

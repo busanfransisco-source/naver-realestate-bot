@@ -29,12 +29,13 @@ KST = timezone(timedelta(hours=9))
 WEEKDAY_EN = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 WEEKDAY_KR_SHORT = ["월", "화", "수", "목", "금", "토", "일"]
 STATE_PATH = Path("transactions-state.json")
-STATE_VERSION = 5
 DOWNLOAD_PAGE = "https://rt.molit.go.kr/pt/xls/xls.do?mobileAt="
 DOWNLOAD_URL = "https://rt.molit.go.kr/pt/xls/ptXlsCSVDown.do"
 API_URL = "https://apis.data.go.kr/1613000/RTMSDataSvcAptTrade/getRTMSDataSvcAptTrade"
 REGION_CODES_PATH = Path("transactions-region-codes.json")
 API_MIN_INTERVAL_SECONDS = 0.55
+API_REQUEST_TIMEOUT_SECONDS = 15
+API_MAX_ATTEMPTS = 3
 ONE_EOK_PER_PYEONG = 10_000  # 만원/평: 평당 1억원
 _API_RATE_LOCK = threading.Lock()
 _API_LAST_REQUEST_AT = 0.0
@@ -186,7 +187,7 @@ def api_request(service_key, region_code, year_month, page_no):
         headers={"User-Agent": "Mozilla/5.0 naver-realestate-bot/1.0"},
     )
     last_error = None
-    for attempt in range(4):
+    for attempt in range(API_MAX_ATTEMPTS):
         try:
             # 공공데이터 서버의 초당 호출 제한을 넘지 않도록 요청 시작을 간격화한다.
             with _API_RATE_LOCK:
@@ -194,12 +195,14 @@ def api_request(service_key, region_code, year_month, page_no):
                 if wait > 0:
                     time.sleep(wait)
                 _API_LAST_REQUEST_AT = time.monotonic()
-            with urllib.request.urlopen(request, timeout=40) as response:
+            with urllib.request.urlopen(request, timeout=API_REQUEST_TIMEOUT_SECONDS) as response:
                 return response.read()
         except Exception as exc:
             last_error = exc
+            if attempt == API_MAX_ATTEMPTS - 1:
+                break
             if getattr(exc, "code", None) == 429:
-                time.sleep(10 * (attempt + 1))
+                time.sleep(5 * (attempt + 1))
             else:
                 time.sleep(2 ** attempt)
     raise RuntimeError(f"{region_code}/{year_month}/{page_no}: {last_error}")
@@ -255,7 +258,12 @@ def fetch_api_region_month(service_key, region_code, region_name, year_month):
 def fetch_nationwide_api(today, service_key, workers=4):
     regions = json.loads(REGION_CODES_PATH.read_text(encoding="utf-8"))
     jobs = [(code, name, month) for code, name in regions.items() for month in api_months(today)]
-    rows = []
+    # 전국 작업 수백 개를 만들기 전에 한 지역으로 API 상태부터 확인한다.
+    # 장애 중이면 약 1분 안에 종료해 다음 20분 예약이 다시 시도할 수 있게 한다.
+    preflight = jobs.pop(0)
+    code, name, month = preflight
+    rows = fetch_api_region_month(service_key, code, name, month)
+    print(f"공공데이터 API 사전 확인 완료: {code}/{month}")
     errors = []
     with ThreadPoolExecutor(max_workers=workers) as executor:
         futures = {
@@ -268,6 +276,11 @@ def fetch_nationwide_api(today, service_key, workers=4):
                 rows.extend(future.result())
             except Exception as exc:
                 errors.append(f"{code}/{month}: {exc}")
+                # 한 지역이라도 끝내 실패하면 전국 합계가 불완전해진다.
+                # 남은 대기 작업을 취소하고 다음 예약에서 전체를 다시 시도한다.
+                for pending in futures:
+                    pending.cancel()
+                break
     if errors:
         preview = "; ".join(errors[:3])
         raise RuntimeError(f"전국 API 일부 지역 실패 {len(errors)}/{len(jobs)}: {preview}")
@@ -484,7 +497,7 @@ def already_collected_today(today):
         return False
     expected_title = f"{today.month}/{today.day}({WEEKDAY_KR_SHORT[today.weekday()]})"
     return (
-        state.get("version") == STATE_VERSION
+        state.get("version") == 4
         and state.get("last_output_date") == today.isoformat()
         and content.startswith(expected_title)
     )
@@ -497,17 +510,6 @@ def main(argv=None):
         action="store_true",
         help="오늘 정상 산출물이 있으면 API 호출 없이 종료합니다.",
     )
-    parser.add_argument(
-        "--source",
-        choices=("auto", "csv", "api"),
-        default="auto",
-        help="전국 일괄 CSV 또는 지역별 공공데이터 API를 선택합니다.",
-    )
-    parser.add_argument(
-        "--baseline-only",
-        action="store_true",
-        help="현재 자료를 비교 기준으로만 저장하고 본문은 바꾸지 않습니다.",
-    )
     args = parser.parse_args(argv)
     now = datetime.now(KST)
     today = now.date()
@@ -515,31 +517,25 @@ def main(argv=None):
         print(f"{today.isoformat()} 실거래가 수집이 이미 완료되어 건너뜁니다")
         return
     service_key = os.environ.get("MOLIT_API_KEY", "").strip()
-    if args.source == "csv" or (args.source == "auto" and not service_key):
-        rows = fetch_nationwide_transactions(today)
-        source_name = "국토교통부 실거래가 공개시스템 전국 CSV"
-    elif service_key:
+    if service_key:
         rows = fetch_nationwide_api(today, service_key)
         source_name = "국토교통부 공공데이터 API"
     else:
-        raise RuntimeError("API 수집에는 MOLIT_API_KEY가 필요합니다")
+        rows = fetch_nationwide_transactions(today)
+        source_name = "국토교통부 실거래가 공개시스템 전국 CSV"
     current = tokenized_rows(rows)
 
     if STATE_PATH.exists():
         state = json.loads(STATE_PATH.read_text(encoding="utf-8"))
     else:
         state = {}
-    if state.get("version") != STATE_VERSION:
+    if state.get("version") != 4:
         state = {}
     previous_tokens = set(state.get("seen_tokens", []))
     history_max = state.get("history_max", {})
     bootstrap_preserve_date = state.get("bootstrap_preserve_date")
 
-    if args.baseline_only:
-        today_records = []
-        bootstrap_preserve_date = None
-        print(f"전국 비교 기준만 새로 저장합니다: {len(current):,}건")
-    elif previous_tokens:
+    if previous_tokens:
         newly_seen = [current[token] for token in current.keys() - previous_tokens]
         classified = classify_records(newly_seen, history_max)
         if bootstrap_preserve_date == today.isoformat():
@@ -573,7 +569,7 @@ def main(argv=None):
         bootstrap_preserve_date = today.isoformat()
 
     state = {
-        "version": STATE_VERSION,
+        "version": 4,
         "source": source_name,
         "collected_at": now.isoformat(timespec="seconds"),
         "contract_date_range": [

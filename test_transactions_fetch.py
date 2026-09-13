@@ -4,6 +4,7 @@ from pathlib import Path
 import json
 import os
 import tempfile
+from unittest import mock
 
 from realestate_transactions_fetch import (
     build_digest,
@@ -13,6 +14,7 @@ from realestate_transactions_fetch import (
     format_per_pyeong,
     parse_government_csv,
     tokenized_rows,
+    fetch_nationwide_api,
 )
 
 
@@ -111,7 +113,7 @@ class TransactionDigestTests(unittest.TestCase):
             try:
                 target = date(2026, 9, 14)
                 Path("transactions-state.json").write_text(
-                    json.dumps({"version": 5, "last_output_date": "2026-09-14"}),
+                    json.dumps({"version": 4, "last_output_date": "2026-09-14"}),
                     encoding="utf-8",
                 )
                 Path("transactions.txt").write_text(
@@ -121,6 +123,22 @@ class TransactionDigestTests(unittest.TestCase):
                 self.assertTrue(already_collected_today(target))
             finally:
                 os.chdir(previous)
+
+    def test_api_preflight_failure_stops_before_bulk_jobs(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            codes = Path(tmp) / "codes.json"
+            codes.write_text(
+                json.dumps({"11110": "서울특별시 종로구", "11140": "서울특별시 중구"}),
+                encoding="utf-8",
+            )
+            with mock.patch("realestate_transactions_fetch.REGION_CODES_PATH", codes), \
+                 mock.patch(
+                     "realestate_transactions_fetch.fetch_api_region_month",
+                     side_effect=RuntimeError("API unavailable"),
+                 ) as fetch:
+                with self.assertRaisesRegex(RuntimeError, "API unavailable"):
+                    fetch_nationwide_api(date(2026, 9, 14), "key")
+                fetch.assert_called_once()
 
 
 if __name__ == "__main__":
