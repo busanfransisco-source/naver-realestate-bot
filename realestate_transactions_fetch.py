@@ -12,9 +12,14 @@ import hashlib
 import http.cookiejar
 import io
 import json
+import os
+import threading
+import time
 import urllib.parse
 import urllib.request
+import xml.etree.ElementTree as ET
 from collections import Counter, defaultdict
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
@@ -25,6 +30,11 @@ WEEKDAY_KR_SHORT = ["월", "화", "수", "목", "금", "토", "일"]
 STATE_PATH = Path("transactions-state.json")
 DOWNLOAD_PAGE = "https://rt.molit.go.kr/pt/xls/xls.do?mobileAt="
 DOWNLOAD_URL = "https://rt.molit.go.kr/pt/xls/ptXlsCSVDown.do"
+API_URL = "https://apis.data.go.kr/1613000/RTMSDataSvcAptTrade/getRTMSDataSvcAptTrade"
+REGION_CODES_PATH = Path("transactions-region-codes.json")
+API_MIN_INTERVAL_SECONDS = 0.55
+_API_RATE_LOCK = threading.Lock()
+_API_LAST_REQUEST_AT = 0.0
 
 PROVINCE_SHORT = {
     "서울특별시": "서울",
@@ -103,13 +113,21 @@ def parse_government_csv(payload):
             price_per_pyeong = round(amount / (area / 3.3058)) if area else 0
         except ValueError:
             continue
+        full_region = (raw.get("시군구") or "").strip()
+        parts = full_region.split()
+        if len(parts) >= 3 and parts[1].endswith("시") and parts[2].endswith("구"):
+            region_name = " ".join(parts[:3])
+        elif len(parts) >= 2:
+            region_name = " ".join(parts[:2])
+        else:
+            region_name = full_region
         rows.append(
             {
-                "region_name": (raw.get("시군구") or "").strip(),
+                "region_name": region_name,
                 "year": deal_ym[:4],
                 "month": str(int(deal_ym[4:])),
                 "day": str(int((raw.get("계약일") or "0").strip() or 0)),
-                "dong": (raw.get("동") or "").strip(),
+                "dong": parts[-1] if len(parts) >= 2 else "",
                 "jibun": (raw.get("번지") or "").strip(),
                 "building_name": (raw.get("단지명") or "").strip(),
                 "area": area,
@@ -142,6 +160,117 @@ def fetch_nationwide_transactions(today):
     with opener.open(request, timeout=180) as response:
         payload = response.read()
     return parse_government_csv(payload)
+
+
+def api_months(today):
+    first = today.replace(day=1)
+    return [(first - timedelta(days=1)).strftime("%Y%m"), today.strftime("%Y%m")]
+
+
+def api_request(service_key, region_code, year_month, page_no):
+    global _API_LAST_REQUEST_AT
+    params = urllib.parse.urlencode(
+        {
+            "serviceKey": service_key,
+            "LAWD_CD": region_code,
+            "DEAL_YMD": year_month,
+            "pageNo": page_no,
+            "numOfRows": 1000,
+        }
+    )
+    request = urllib.request.Request(
+        f"{API_URL}?{params}",
+        headers={"User-Agent": "Mozilla/5.0 naver-realestate-bot/1.0"},
+    )
+    last_error = None
+    for attempt in range(4):
+        try:
+            # 공공데이터 서버의 초당 호출 제한을 넘지 않도록 요청 시작을 간격화한다.
+            with _API_RATE_LOCK:
+                wait = API_MIN_INTERVAL_SECONDS - (time.monotonic() - _API_LAST_REQUEST_AT)
+                if wait > 0:
+                    time.sleep(wait)
+                _API_LAST_REQUEST_AT = time.monotonic()
+            with urllib.request.urlopen(request, timeout=40) as response:
+                return response.read()
+        except Exception as exc:
+            last_error = exc
+            if getattr(exc, "code", None) == 429:
+                time.sleep(10 * (attempt + 1))
+            else:
+                time.sleep(2 ** attempt)
+    raise RuntimeError(f"{region_code}/{year_month}/{page_no}: {last_error}")
+
+
+def parse_api_item(item, region_name):
+    get = lambda tag: (item.findtext(tag) or "").strip()
+    if get("cdealDay"):
+        return None
+    try:
+        area = float(get("excluUseAr") or 0)
+        amount = int(get("dealAmount").replace(",", ""))
+    except ValueError:
+        return None
+    if not get("aptNm") or not amount:
+        return None
+    return {
+        "region_name": region_name,
+        "year": get("dealYear"),
+        "month": str(int(get("dealMonth") or 0)),
+        "day": str(int(get("dealDay") or 0)),
+        "dong": get("umdNm"),
+        "jibun": get("jibun"),
+        "building_name": get("aptNm"),
+        "area": area,
+        "floor": get("floor"),
+        "deal_amount": amount,
+        "price_per_pyeong": round(amount / (area / 3.3058)) if area else 0,
+        "build_year": get("buildYear"),
+        "deal_type": get("dealingGbn"),
+    }
+
+
+def fetch_api_region_month(service_key, region_code, region_name, year_month):
+    rows = []
+    page_no = 1
+    while True:
+        root = ET.fromstring(api_request(service_key, region_code, year_month, page_no))
+        result_code = root.findtext(".//resultCode")
+        if result_code not in (None, "00", "000"):
+            message = root.findtext(".//resultMsg")
+            raise RuntimeError(f"API 오류 {result_code}: {message}")
+        for item in root.findall(".//item"):
+            parsed = parse_api_item(item, region_name)
+            if parsed:
+                rows.append(parsed)
+        total_count = int(root.findtext(".//totalCount", default="0"))
+        if page_no * 1000 >= total_count:
+            return rows
+        page_no += 1
+
+
+def fetch_nationwide_api(today, service_key, workers=4):
+    regions = json.loads(REGION_CODES_PATH.read_text(encoding="utf-8"))
+    jobs = [(code, name, month) for code, name in regions.items() for month in api_months(today)]
+    rows = []
+    errors = []
+    with ThreadPoolExecutor(max_workers=workers) as executor:
+        futures = {
+            executor.submit(fetch_api_region_month, service_key, code, name, month): (code, month)
+            for code, name, month in jobs
+        }
+        for future in as_completed(futures):
+            code, month = futures[future]
+            try:
+                rows.extend(future.result())
+            except Exception as exc:
+                errors.append(f"{code}/{month}: {exc}")
+    if errors:
+        preview = "; ".join(errors[:3])
+        raise RuntimeError(f"전국 API 일부 지역 실패 {len(errors)}/{len(jobs)}: {preview}")
+    if not rows:
+        raise RuntimeError("국토부 전국 API에 정상 거래가 없습니다")
+    return rows
 
 
 def base_signature(row):
@@ -307,14 +436,20 @@ def write_outputs(today, content):
 def main():
     now = datetime.now(KST)
     today = now.date()
-    rows = fetch_nationwide_transactions(today)
+    service_key = os.environ.get("MOLIT_API_KEY", "").strip()
+    if service_key:
+        rows = fetch_nationwide_api(today, service_key)
+        source_name = "국토교통부 공공데이터 API"
+    else:
+        rows = fetch_nationwide_transactions(today)
+        source_name = "국토교통부 실거래가 공개시스템 전국 CSV"
     current = tokenized_rows(rows)
 
     if STATE_PATH.exists():
         state = json.loads(STATE_PATH.read_text(encoding="utf-8"))
     else:
         state = {}
-    if state.get("version") != 3:
+    if state.get("version") != 4:
         state = {}
     previous_tokens = set(state.get("seen_tokens", []))
     history_max = state.get("history_max", {})
@@ -354,8 +489,8 @@ def main():
         bootstrap_preserve_date = today.isoformat()
 
     state = {
-        "version": 3,
-        "source": "국토교통부 실거래가 공개시스템 전국 CSV",
+        "version": 4,
+        "source": source_name,
         "collected_at": now.isoformat(timespec="seconds"),
         "contract_date_range": [
             (today - timedelta(days=30)).isoformat(),

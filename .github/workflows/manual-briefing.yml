@@ -76,6 +76,8 @@ jobs:
 
       - name: Fetch nationwide apartment transactions
         run: python realestate_transactions_fetch.py || echo "transactions failed; keeping last good data"
+        env:
+          MOLIT_API_KEY: ${{ secrets.MOLIT_API_KEY }}
 
       - name: Regenerate pages and commit everything
         run: |
