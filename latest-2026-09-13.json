@@ -1,8 +1,20 @@
 {
-  "updated_at_kst": "2026-09-13 09:05:47",
+  "updated_at_kst": "2026-09-13 09:27:28",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 13일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "코레일 이번엔 화물열차 탈선...\"장시간 운행 장애 불가피\"",
+      "url": "https://n.news.naver.com/mnews/article/008/0005412859"
+    },
+    {
+      "title": "'고공행진' 서울 아파트값…역대 최장 상승 '눈앞'",
+      "url": "https://n.news.naver.com/mnews/article/215/0001265771"
+    },
+    {
+      "title": "삼성물산, 여의도 목화아파트 재건축 수주…5122억 규모",
+      "url": "https://n.news.naver.com/mnews/article/018/0006368317"
+    },
     {
       "title": "17년 보유해도 안 살았다면…30억 1주택 종부세 내년 1204만원",
       "url": "https://n.news.naver.com/mnews/article/014/0005574775"
@@ -30,18 +42,6 @@
     {
       "title": "방치됐던 시흥 배곧 노른자 땅에 45층 주상복합 들어선다",
       "url": "https://n.news.naver.com/mnews/article/666/0000123094"
-    },
-    {
-      "title": "“공시가 30억 이상 비거주1주택 종부세 429만 원↑”",
-      "url": "https://n.news.naver.com/mnews/article/021/0002818294"
-    },
-    {
-      "title": "30조 재건축 사업성 ‘가늠자’…‘평당 1억’ 목동 윤슬자이에 쏠린 눈",
-      "url": "https://n.news.naver.com/mnews/article/029/0003047583"
-    },
-    {
-      "title": "[人터뷰+] “용산공원 주택공급은 로또... 반값 아파트는 비현실적인 얘기”",
-      "url": "https://n.news.naver.com/mnews/article/011/0004661184"
     }
   ]
 }

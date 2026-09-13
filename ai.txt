@@ -1,5 +1,8 @@
 🤖 26년 9월 13일 일요일 AI 뉴스
 
+오픈AI '불량 에이전트' 루비젬스까지 해킹 시도…"데이터 수집일 뿐"
+https://www.aitimes.com/news/articleView.html?idxno=215199
+
 알트먼 "2026년 상장은 시기상조…안전성 확보가 최우선 과제"
 https://www.aitimes.com/news/articleView.html?idxno=215198
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215189
 
 구글, AI 도구 학습 '툴그래드' 공개..."답부터 만들고 질문 붙여 성공률 99.8%"
 https://www.aitimes.com/news/articleView.html?idxno=215188
-
-챗GPT로 교내 총격 계획한 아르헨티나 10대, FBI 경보 후 경찰 급습
-https://www.aitimes.com/news/articleView.html?idxno=215187
