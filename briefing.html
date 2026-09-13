@@ -6,100 +6,27 @@
 <title>오늘의 브리핑</title>
 <style>
 * { box-sizing: border-box; }
-body {
-  margin: 0;
-  padding: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-  background: #f4f4f5;
-  color: #1a1a1a;
-}
-h1 {
-  font-size: 18px;
-  margin: 4px 0 16px;
-  text-align: center;
-  color: #444;
-}
-.card {
-  background: #fff;
-  border-radius: 14px;
-  padding: 14px;
-  margin-bottom: 14px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-}
-.card-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 8px;
-}
-.card-head h2 {
-  font-size: 17px;
-  margin: 0;
-}
-.update-time {
-  text-align: center;
-  font-size: 12px;
-  color: #999;
-  margin: -12px 0 16px;
-}
-.copy-btn {
-  font-size: 15px;
-  font-weight: 600;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 10px;
-  background: #3b82f6;
-  color: #fff;
-  cursor: pointer;
-  min-width: 76px;
-}
-.copy-btn.copied {
-  background: #22c55e;
-}
-.preview {
-  width: 100%;
-  height: 130px;
-  resize: vertical;
-  font-size: 13px;
-  line-height: 1.5;
-  color: #555;
-  border: 1px solid #e5e5e5;
-  border-radius: 8px;
-  padding: 8px;
-  background: #fafafa;
-  white-space: pre-wrap;
-}
+body { margin:0;padding:16px;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;background:#f4f4f5;color:#1a1a1a; }
+h1{font-size:18px;margin:4px 0 16px;text-align:center;color:#444;}
+.update-time{text-align:center;font-size:12px;color:#999;margin:-12px 0 16px;}
+.card{background:#fff;border-radius:14px;padding:14px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,0.08);}
+.card-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
+.card-head h2{font-size:17px;margin:0;}
+.copy-btn{font-size:15px;font-weight:600;padding:10px 20px;border:none;border-radius:10px;background:#3b82f6;color:#fff;cursor:pointer;min-width:76px;}
+.copy-btn.copied{background:#22c55e;}
+.preview{width:100%;height:130px;resize:vertical;font-size:13px;line-height:1.5;color:#555;border:1px solid #e5e5e5;border-radius:8px;padding:8px;background:#fafafa;white-space:pre-wrap;}
 </style>
 </head>
 <body>
-<div id="auth-gate" style="position:fixed;inset:0;background:#f4f4f5;z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;">
-  <div style="background:#fff;border-radius:14px;padding:24px;max-width:340px;width:100%;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
-    <h2 style="margin:0 0 16px;font-size:18px;text-align:center;">🏠 오늘의 브리핑</h2>
-    <div id="gate-loading" style="text-align:center;color:#999;font-size:14px;">확인 중...</div>
-    <div id="gate-login" style="display:none;">
-      <input id="gate-email" type="email" placeholder="이메일" style="width:100%;padding:10px;margin-bottom:8px;border:1px solid #e5e5e5;border-radius:8px;font-size:14px;box-sizing:border-box;">
-      <input id="gate-password" type="password" placeholder="비밀번호" style="width:100%;padding:10px;margin-bottom:12px;border:1px solid #e5e5e5;border-radius:8px;font-size:14px;box-sizing:border-box;">
-      <div id="gate-error" style="color:#e11d48;font-size:12px;margin-bottom:8px;display:none;"></div>
-      <button id="gate-login-btn" style="width:100%;padding:10px;border:none;border-radius:8px;background:#3b82f6;color:#fff;font-size:14px;font-weight:600;margin-bottom:8px;">로그인</button>
-      <button id="gate-signup-btn" style="width:100%;padding:10px;border:1px solid #3b82f6;border-radius:8px;background:#fff;color:#3b82f6;font-size:14px;font-weight:600;">회원가입 신청</button>
-    </div>
-    <div id="gate-pending" style="display:none;text-align:center;">
-      <p style="font-size:14px;color:#555;line-height:1.6;">⏳ 승인 대기중입니다.<br>관리자 승인 후 이용하실 수 있어요.</p>
-      <button id="gate-logout-btn" style="margin-top:8px;padding:8px 16px;border:1px solid #ccc;border-radius:8px;background:#fff;color:#555;font-size:13px;">로그아웃</button>
-    </div>
-  </div>
-</div>
-
-<div id="main-content" style="display:none;">
 <h1>📅 2026년 9월 14일 월요일</h1>
-<p class="update-time">🕐 마지막 업데이트: 9월 14일 07:12</p>
+<p class="update-time">🕐 마지막 업데이트(백업 파이프라인): 9월 14일 07:17</p>
 
-<section class="card" data-slot="1">
-  <div class="card-head">
-    <h2>1. 🔮 오늘의 운세</h2>
-    <button class="copy-btn" onclick="copySection('fortune', this)">복사</button>
-  </div>
-  <textarea id="ta-fortune" class="preview" readonly>오늘의 운세, 9월 14일
+<section class="card">
+<div class="card-head">
+<h2>1. 🔮 오늘의 운세</h2>
+<button class="copy-btn" onclick="copySection('fortune', this)">복사</button>
+</div>
+<textarea id="ta-fortune" class="preview" readonly>오늘의 운세, 9월 14일
 
 〈쥐띠〉
 96, 84년생 헛것에 유혹되어 파도에 휩쓸리듯이 끌려갈 수 있으니 조심해야겠다. 72년생 당장은 자신이 한 수고를 배반하는 결과가 나오더라도 실망하지 마라. 60년생 곧 좋은 소식이 올 것이다. 의리를 지키다가는 손해를 보게 된다. 48, 36년생 객관적으로 보는 시각이 필요하다.
@@ -160,15 +87,15 @@ h1 {
 95, 83년생 자기 자신이 얼마나 괜찮은 사람인지 느끼게 해주는 사람이 있어서 행복할 것이다. 71년생 응원해주는 사람이 가까이에 있다는 것이 큰 힘이 되어준다. 59년생 전전긍긍하던 일이 해결되어서 한시름 놓게 되겠다. 47, 35년생 궁금해오던 것을 다 알게 될 것이다.
 
 운세지수 93%. 금전 95 건강 95 애정 95</textarea>
-  <script>window.__content_fortune = "오늘의 운세, 9월 14일\n\n〈쥐띠〉\n96, 84년생 헛것에 유혹되어 파도에 휩쓸리듯이 끌려갈 수 있으니 조심해야겠다. 72년생 당장은 자신이 한 수고를 배반하는 결과가 나오더라도 실망하지 마라. 60년생 곧 좋은 소식이 올 것이다. 의리를 지키다가는 손해를 보게 된다. 48, 36년생 객관적으로 보는 시각이 필요하다.\n\n운세지수 38%. 금전 35 건강 40 애정 35\n\n〈소띠〉\n97, 85년생 전혀 생각해 본 적이 없고 꿈꿔 본 적도 없는 일이 생긴다. 73년생 하고자 하는 일에 조금의 진전이 없어도 낙담하지 마라. 희망의 내일이 있다. 61년생 어느 한 사람도 홀대하지 않고 고루 마음을 써야 한다. 49, 37년생 오늘 하루만이라도 상대가 원하는 대로 해주어라.\n\n운세지수 53%. 금전 55 건강 50 애정 55\n\n〈범띠〉\n98, 86년생 이루고자 하는 목표에 한 걸음 더 가까이 가게 되니 기쁘겠다. 74년생 침착하게 대응하면 관리하고 통제하는 능력이 돋보일 수 있을 것이다. 62년생 단 한 사람이라도 내 편이 있다는 것을 알게 확실히 응원해줘라. 50, 38년생 자신에게 좋은 대로 받아들이는 것이 정신건강에 좋다.\n\n운세지수 89%. 금전 85 건강 85 애정 90\n\n〈토끼띠〉\n99, 87년생 더 이상 외면하지 말고 현실을 마주해야 한다. 75년생 아침부터 순조롭지 못한 출발을 할 수 있어도 그 기분에서 빨리 벗어나라. 63년생 혼자서 아무리 속을 태우고 짜증을 내봐도 소용없다는 것을 알아야 한다. 51, 39년생 자식의 부부싸움 때문에 괜히 눈치가 보인다.\n\n운세지수 52%. 금전 55 건강 50 애정 55\n\n〈용띠〉\n00, 88년생 경쟁사회에서 남보다 조금 더 앞서가기 위해서 특별히 더 애를 써야 하는 날이다. 76년생 내 인생의 마지막일 것 같은 사람을 만나서 설렌다. 64, 52년생 자신의 장점이 이득을 가져다준다. 40년생 이럴까 저럴까 망설이지 마라. 지나친 망설임은 기회를 놓치게 한다.\n\n운세지수 68%. 금전 60 건강 60 애정 55\n\n〈뱀띠〉\n01, 89년생 항상 옆에 두고 보살펴주고 싶은 사람이 생긴다. 77년생 한 템포 늦추는 것이 좋다. 여유를 즐길 수 있을 것이다. 65, 53년생 원칙도 중요하지만 살다 보면 많은 예외도 있을 수 있다는 것을 기억하라. 41년생 만약의 경우를 대비해 보완책을 마련해 놓아야 하는 날이다.\n\n운세지수 64%. 금전 65 건강 60 애정 65\n\n〈말띠〉\n02, 90년생 보고 싶으면 언제든지 볼 수 있다고 생각하지 마라. 78, 66년생 서로 간의 의견이 자꾸 엇갈리니 합의를 보기가 힘들겠다. 54년생 알아서 잘할 것이라 생각하고 가만히 있지 마라. 무조건 믿고 있다가는 실망할 수 있다. 42년생 이제는 깨끗하게 미련을 버려야 한다.\n\n운세지수 39%. 금전 35 건강 40 애정 40\n\n〈양띠〉\n03, 91년생 아무도 모르는 보물단지를 몰래 숨겨놓고 나만 보는 느낌이 들겠다. 79년생 자신이 관계된 일에서 눈부시게 활약할 수 있을 것이다. 67, 55년생 공적으로나 사적으로나 능률이 오르니 일 처리를 하기에 적합하다. 43년생 원하는 일을 이루겠다는 욕구가 강해진다.\n\n운세지수 94%. 금전 95 건강 90 애정 95\n\n〈원숭이띠〉\n04, 92년생 속마음과는 상관없이 입에서 나오는 말은 전혀 다른 말을 하게 된다. 80, 68년생 때로는 너무 이성적으로 행동하는 모습이 더 멀게 느껴질 수 있다. 56년생 솔직해도 너무 솔직한 것이 상대에게 큰 상처가 된다. 44년생 스스로 분하고 슬프다는 감정에 빠질 수 있다.\n\n운세지수 38%. 금전 40 건강 35 애정 35\n\n〈닭띠〉\n05, 93년생 과연 잘할 수 있을까 하고 의심하지 마라. 81년생 예전처럼 살고 싶다는 마음이 간절하면서도 예전처럼 돌아갈 자신이 없다. 69, 57년생 말을 하기 전에 듣는 사람이 기분 나쁠 수 있다는 것을 한 번 생각하라. 45, 33년생 이 힘든 시기를 어떻게 넘길 것일까 고민해보라.\n\n운세지수 34%. 금전 30 건강 30 애정 35\n\n〈개띠〉\n06, 94년생 자신에게 유리하게 일이 풀릴 수 있는 때이니 용기를 가지고 도전해보라. 82년생 오랜만에 일에서 벗어나 문화생활을 즐길 수 있게 된다. 70, 58년생 도처에 스승이 있다. 뜻밖의 사람에게 인생에 대해 한수 배우게 된다. 46, 34년생 고민 끝에 결국 결론을 내리게 된다.\n\n운세지수 91%. 금전 95 건강 90 애정 95\n\n〈돼지띠〉\n95, 83년생 자기 자신이 얼마나 괜찮은 사람인지 느끼게 해주는 사람이 있어서 행복할 것이다. 71년생 응원해주는 사람이 가까이에 있다는 것이 큰 힘이 되어준다. 59년생 전전긍긍하던 일이 해결되어서 한시름 놓게 되겠다. 47, 35년생 궁금해오던 것을 다 알게 될 것이다.\n\n운세지수 93%. 금전 95 건강 95 애정 95";</script>
+<script>window.__content_fortune = "오늘의 운세, 9월 14일\n\n〈쥐띠〉\n96, 84년생 헛것에 유혹되어 파도에 휩쓸리듯이 끌려갈 수 있으니 조심해야겠다. 72년생 당장은 자신이 한 수고를 배반하는 결과가 나오더라도 실망하지 마라. 60년생 곧 좋은 소식이 올 것이다. 의리를 지키다가는 손해를 보게 된다. 48, 36년생 객관적으로 보는 시각이 필요하다.\n\n운세지수 38%. 금전 35 건강 40 애정 35\n\n〈소띠〉\n97, 85년생 전혀 생각해 본 적이 없고 꿈꿔 본 적도 없는 일이 생긴다. 73년생 하고자 하는 일에 조금의 진전이 없어도 낙담하지 마라. 희망의 내일이 있다. 61년생 어느 한 사람도 홀대하지 않고 고루 마음을 써야 한다. 49, 37년생 오늘 하루만이라도 상대가 원하는 대로 해주어라.\n\n운세지수 53%. 금전 55 건강 50 애정 55\n\n〈범띠〉\n98, 86년생 이루고자 하는 목표에 한 걸음 더 가까이 가게 되니 기쁘겠다. 74년생 침착하게 대응하면 관리하고 통제하는 능력이 돋보일 수 있을 것이다. 62년생 단 한 사람이라도 내 편이 있다는 것을 알게 확실히 응원해줘라. 50, 38년생 자신에게 좋은 대로 받아들이는 것이 정신건강에 좋다.\n\n운세지수 89%. 금전 85 건강 85 애정 90\n\n〈토끼띠〉\n99, 87년생 더 이상 외면하지 말고 현실을 마주해야 한다. 75년생 아침부터 순조롭지 못한 출발을 할 수 있어도 그 기분에서 빨리 벗어나라. 63년생 혼자서 아무리 속을 태우고 짜증을 내봐도 소용없다는 것을 알아야 한다. 51, 39년생 자식의 부부싸움 때문에 괜히 눈치가 보인다.\n\n운세지수 52%. 금전 55 건강 50 애정 55\n\n〈용띠〉\n00, 88년생 경쟁사회에서 남보다 조금 더 앞서가기 위해서 특별히 더 애를 써야 하는 날이다. 76년생 내 인생의 마지막일 것 같은 사람을 만나서 설렌다. 64, 52년생 자신의 장점이 이득을 가져다준다. 40년생 이럴까 저럴까 망설이지 마라. 지나친 망설임은 기회를 놓치게 한다.\n\n운세지수 68%. 금전 60 건강 60 애정 55\n\n〈뱀띠〉\n01, 89년생 항상 옆에 두고 보살펴주고 싶은 사람이 생긴다. 77년생 한 템포 늦추는 것이 좋다. 여유를 즐길 수 있을 것이다. 65, 53년생 원칙도 중요하지만 살다 보면 많은 예외도 있을 수 있다는 것을 기억하라. 41년생 만약의 경우를 대비해 보완책을 마련해 놓아야 하는 날이다.\n\n운세지수 64%. 금전 65 건강 60 애정 65\n\n〈말띠〉\n02, 90년생 보고 싶으면 언제든지 볼 수 있다고 생각하지 마라. 78, 66년생 서로 간의 의견이 자꾸 엇갈리니 합의를 보기가 힘들겠다. 54년생 알아서 잘할 것이라 생각하고 가만히 있지 마라. 무조건 믿고 있다가는 실망할 수 있다. 42년생 이제는 깨끗하게 미련을 버려야 한다.\n\n운세지수 39%. 금전 35 건강 40 애정 40\n\n〈양띠〉\n03, 91년생 아무도 모르는 보물단지를 몰래 숨겨놓고 나만 보는 느낌이 들겠다. 79년생 자신이 관계된 일에서 눈부시게 활약할 수 있을 것이다. 67, 55년생 공적으로나 사적으로나 능률이 오르니 일 처리를 하기에 적합하다. 43년생 원하는 일을 이루겠다는 욕구가 강해진다.\n\n운세지수 94%. 금전 95 건강 90 애정 95\n\n〈원숭이띠〉\n04, 92년생 속마음과는 상관없이 입에서 나오는 말은 전혀 다른 말을 하게 된다. 80, 68년생 때로는 너무 이성적으로 행동하는 모습이 더 멀게 느껴질 수 있다. 56년생 솔직해도 너무 솔직한 것이 상대에게 큰 상처가 된다. 44년생 스스로 분하고 슬프다는 감정에 빠질 수 있다.\n\n운세지수 38%. 금전 40 건강 35 애정 35\n\n〈닭띠〉\n05, 93년생 과연 잘할 수 있을까 하고 의심하지 마라. 81년생 예전처럼 살고 싶다는 마음이 간절하면서도 예전처럼 돌아갈 자신이 없다. 69, 57년생 말을 하기 전에 듣는 사람이 기분 나쁠 수 있다는 것을 한 번 생각하라. 45, 33년생 이 힘든 시기를 어떻게 넘길 것일까 고민해보라.\n\n운세지수 34%. 금전 30 건강 30 애정 35\n\n〈개띠〉\n06, 94년생 자신에게 유리하게 일이 풀릴 수 있는 때이니 용기를 가지고 도전해보라. 82년생 오랜만에 일에서 벗어나 문화생활을 즐길 수 있게 된다. 70, 58년생 도처에 스승이 있다. 뜻밖의 사람에게 인생에 대해 한수 배우게 된다. 46, 34년생 고민 끝에 결국 결론을 내리게 된다.\n\n운세지수 91%. 금전 95 건강 90 애정 95\n\n〈돼지띠〉\n95, 83년생 자기 자신이 얼마나 괜찮은 사람인지 느끼게 해주는 사람이 있어서 행복할 것이다. 71년생 응원해주는 사람이 가까이에 있다는 것이 큰 힘이 되어준다. 59년생 전전긍긍하던 일이 해결되어서 한시름 놓게 되겠다. 47, 35년생 궁금해오던 것을 다 알게 될 것이다.\n\n운세지수 93%. 금전 95 건강 95 애정 95";</script>
 </section>
 
-<section class="card" data-slot="2">
-  <div class="card-head">
-    <h2>2. ☀️ 날씨</h2>
-    <button class="copy-btn" onclick="copySection('weather', this)">복사</button>
-  </div>
-  <textarea id="ta-weather" class="preview" readonly>2026년 9월 14일 월요일
+<section class="card">
+<div class="card-head">
+<h2>2. ☀️ 날씨</h2>
+<button class="copy-btn" onclick="copySection('weather', this)">복사</button>
+</div>
+<textarea id="ta-weather" class="preview" readonly>2026년 9월 14일 월요일
 
 ❒ 지역별 날씨전망 ❒
 
@@ -187,54 +114,54 @@ h1 {
 ✫울산(🌤️)➠(⛅)  20℃ ~ 28℃
 ✫창원(☀️)➠(🌤️)  18℃ ~ 27℃
 ✫제주(☀️)➠(🌤️)  21℃ ~ 25℃</textarea>
-  <script>window.__content_weather = "2026년 9월 14일 월요일\n\n❒ 지역별 날씨전망 ❒\n\n✫서울(🌤️)➠(☀️)  18℃ ~ 26℃\n✫인천(🌤️)➠(☀️)  18℃ ~ 25℃\n✫수원(⛅)➠(☀️)  15℃ ~ 25℃\n✫춘천(⛅)➠(🌤️)  16℃ ~ 26℃\n✫강릉(🌤️)➠(🌤️)  19℃ ~ 24℃\n✫청주(🌤️)➠(🌤️)  18℃ ~ 25℃\n✫대전(🌤️)➠(🌤️)  16℃ ~ 25℃\n✫세종(🌤️)➠(⛅)  17℃ ~ 25℃\n✫전주(☀️)➠(🌤️)  17℃ ~ 26℃\n✫광주(☀️)➠(☀️)  18℃ ~ 27℃\n✫대구(☀️)➠(☀️)  19℃ ~ 28℃\n✫부산(🌤️)➠(⛅)  21℃ ~ 28℃\n✫울산(🌤️)➠(⛅)  20℃ ~ 28℃\n✫창원(☀️)➠(🌤️)  18℃ ~ 27℃\n✫제주(☀️)➠(🌤️)  21℃ ~ 25℃";</script>
+<script>window.__content_weather = "2026년 9월 14일 월요일\n\n❒ 지역별 날씨전망 ❒\n\n✫서울(🌤️)➠(☀️)  18℃ ~ 26℃\n✫인천(🌤️)➠(☀️)  18℃ ~ 25℃\n✫수원(⛅)➠(☀️)  15℃ ~ 25℃\n✫춘천(⛅)➠(🌤️)  16℃ ~ 26℃\n✫강릉(🌤️)➠(🌤️)  19℃ ~ 24℃\n✫청주(🌤️)➠(🌤️)  18℃ ~ 25℃\n✫대전(🌤️)➠(🌤️)  16℃ ~ 25℃\n✫세종(🌤️)➠(⛅)  17℃ ~ 25℃\n✫전주(☀️)➠(🌤️)  17℃ ~ 26℃\n✫광주(☀️)➠(☀️)  18℃ ~ 27℃\n✫대구(☀️)➠(☀️)  19℃ ~ 28℃\n✫부산(🌤️)➠(⛅)  21℃ ~ 28℃\n✫울산(🌤️)➠(⛅)  20℃ ~ 28℃\n✫창원(☀️)➠(🌤️)  18℃ ~ 27℃\n✫제주(☀️)➠(🌤️)  21℃ ~ 25℃";</script>
 </section>
 
-<section class="card" data-slot="3">
-  <div class="card-head">
-    <h2>3. ⚡ 오늘의 퀵뉴스</h2>
-    <button class="copy-btn" onclick="copySection('shortnews', this)">복사</button>
-  </div>
-  <textarea id="ta-shortnews" class="preview" readonly>26년 9월 14일 월요일 오늘의 퀵뉴스⚡
+<section class="card">
+<div class="card-head">
+<h2>3. ⚡ 오늘의 퀵뉴스</h2>
+<button class="copy-btn" onclick="copySection('shortnews', this)">복사</button>
+</div>
+<textarea id="ta-shortnews" class="preview" readonly>26년 9월 14일 월요일 오늘의 퀵뉴스⚡
 
-🏛️ (정치) 국힘 절반은 아직도 ‘윤석열에 우호적’[이재명 시대, 사람 지도] 국민의힘 의원의 절반 가까이가 여전히 윤석열 전 대통령에게 우호적인 것으로 분석됐다. 이재명 대통령을 향한 더불어민주당 의원들의 태도는 지난 8·17 전당대회 과정에서 겉으로 드러난 ‘친명·반명’ 논란과 달리 차이가 크지 않았다. 경향신문이 지식콘텐츠 스타트업인 언더스코어와 함께 2024년 6월부터 지난 7월 초까지 언론에 보도된 발언을 중심으로 국민의힘 경향신문 20분 전
+🏛️ (정치) '수사는 검사가 잘 한다' 못 버린 민주당 [이충재 기자] ▲ 대검찰청 대검찰청ⓒ 이정민10월부터 검사의 직접 수사권이 폐지되지만 정부와 여당에서 혼선이 잇따르면서 조속히 명확한 입장을 정리해야 한다는 지적이 제기됩니다. 최근의 파견검사 수사권 폐지 법안 철회 사태와 초대 중수청장 검찰 출신 지명 등이 대표적인 사례입니다. 이런 혼란은 앞으로도 조작기소특검법 처리 등 특검 추진 때마다 반복될 가능성 오마이뉴스 5분 전
 
-🏛️ (정치) [청와대 24시] 용혜인 낙마, 靑 인사 검증 시스템에도 상처 세계일보 22분 전
+🏛️ (정치) “회사 몰래 대리운전 ‘투잡’…해고해도 정당한가요?” 신동아 15분 전
 
-🏛️ (정치) 서영교 법사위원장 “기술유출 막는 산업스파이법, 꼭 처리할 것” 세계일보 22분 전
+🏛️ (정치) 용혜인 다음은 김승원…여야, 청문회 앞두고 전면전 아이뉴스24 15분 전
 
-💰 (경제) 45조 미래대응기금, AI보다 현금지원에 1.6조 더 쏟았다 (세종=뉴스1) 임용우 이강 기자 = 미래 대응을 명분으로 신설한 45조 원 규모 미래대응기금에 아동기본수당과 청년미래적금, 농어촌 기본소득 등 현금성·직접지원 사업 예산만 7조 원 넘게 편성된 것으로 나타났다. 전체 기금의 15% 이상을 복지·소득지원 성격의 사업에 투입하는 셈이다. 잠재성장률 반등의 핵심으로 꼽히는 인공지능(AI) 경쟁력 강화 분야보 뉴스1 22분 전
+💰 (경제) 누구는 되고 누구는 안 되고…대출 문턱 '제각각' [누더기 대출①] 늘어나는 가계부채를 억제하기 위한 대출 규제가 '누더기'가 됐다. 금융당국은 지난해 6·27대책, 10·15대책에 이어 올해 4·1대책까지 지속적으로 대출 문턱을 높여왔다. 하지만 일률적인 규제로 실수요자의 주거 불안과 고금리에 따른 차주들의 자금난이 심화하자 뒤늦은 보완책으로 8·13대책을 내놨다. 문제가 불거질 때마다 금융 정책에 예외를 덧붙인 탓에 시 데일리안 8분 전
 
-💰 (경제) [단독] 전기 남아도 재생E 계속 짓는 제주…전력값은 이미 &#x27;마이너스&#x27; 뉴스1 22분 전
+💰 (경제) 메모리 경쟁, HBM 단수에서 AI 가속기 효율화로 진화 주간동아 14분 전
 
-💰 (경제) 강남→한강벨트→외곽 상승세 확산… 실수요 중심 ‘키 맞추기’ 세계일보 24분 전
+💰 (경제) ‘군살 뺀 알짜’냐 ‘규모 잃은 마트’냐…홈플러스 M&amp;A의 딜레마 데일리안 16분 전
 
-💰 (경제) 유가 100달러·美 금리 5% 턱밑…美 FOMC 앞두고 한은 셈법 복잡 뉴스1 26분 전
+💰 (경제) ‘청년 분노’ 경제 불평등 심화 핵심 요인은 소득 아닌 서울 부동산 브릿지경제 16분 전
 
-💰 (경제) 내 데이터 학습한 AI가 내 자리 뺏는다?…“현행법에 한계 있다” 주간경향 26분 전
+💰 (경제) 45조 미래대응기금, AI보다 현금지원에 1.6조 더 쏟았다 뉴스1 1시간 전
 
-👥 (사회) ‘최후의 노동’이 되기 전에…“AI 도입시 노사 공동대응” 국내 첫 합의 “AI 도입이요? 좋죠. 건강이나 안전 문제 해소에 좋은 영향을 줄 수 있는 거잖아요. 그런데 지금 회사가 어디 그런 이유인가요? 인원을 더 줄여서 싸게 로봇을 이용하겠다는 거잖아요.” 현대자동차 하청업체에서 일하는 김미옥 금속노조 현대글로비스울산지회장은 제조업 분야 AI 도입 열풍에 대해 이같이 말했다. 김 지회장은 실제로 동료들이 실직 위기에 처했다 주간경향 26분 전
+👥 (사회) 컴플라이언스 인센티브, 준법 노력이 보상받는 구조를 만들려면 [바른 컴플라이언스 리포트] 지난 3월 미국 법무부(DOJ)는 ‘기업범죄 법 집행 및 자진신고 정책(Corporate Enforcement and Voluntary Self-Disclosure Policy, 이하 ‘CEP’)’을 발표했다. 독점금지법 위반을 제외한 DOJ의 기업 형사사건에서 자진신고·협조·시정에 따른 인센티브를 구체화한 것이다. 기업에서 컴플라이언스는 비용으로 인식되기 매일경제 14분 전
 
-👥 (사회) &quot;남북관계 특수성 고려를&quot;…탈북민 재북가족 송금 무죄 이끈 변호사들 뉴스1 26분 전
+👥 (사회) “보완수사권 폐지 후 가장 우려되는 것은 가해자의 보복 범죄” 주간동아 15분 전
 
-👥 (사회) 공수처장 &quot;중수청 4급까지 수사해야…기소 전 검증시스템 검토&quot; 뉴스1 26분 전
+👥 (사회) [소년중앙] 누구보다 완벽한 친구와의 우정, 포기할 수 있나요 중앙일보 15분 전
 
-👥 (사회) 공수처장 &quot;지난 2년 시험의 연속…무능 반복 않게 법 개정해야&quot; 뉴스1 27분 전
+👥 (사회) 끝나도 진통 불가피…"갈등 제도권서 풀어야"[봉쇄 100일③] 뉴시스 15분 전
 
-👥 (사회) [소년중앙] 양자역학 개척자 아인슈타인도 고개 저었다, 양자역학이란 뭘까 중앙일보 27분 전
+👥 (사회) 서울 원정진료 줄일까…지역 국립대병원 승부수 [D:로그인] 데일리안 16분 전
 
-🌏 (국제) 英 찰스 국왕, AI 위험 논란 속 기업 대표들 회의 소집 [서울=뉴시스] 구자룡 기자 = 영국 찰스 3세 국왕은 인공지능(AI) 기술의 급속하고 무분별한 발전이 세계적인 재앙으로 이어질 수 있다는 우려가 커지는 가운데 스코틀랜드에서 주요 AI 기업의 대표들과 회담을 가질 예정이다. 버킹엄궁 발표에 따르면 찰스 국왕은 엔비디아, 구글, 딥마인드, 오픈AI, 앤트로픽 등 기업 대표들과 정부 관계자들을 초청해 A 뉴시스 5분 전
+🌏 (국제) 동영상 [스타트 브리핑] 물 새고 긴급 대피까지..."아시안게임 역대 최악의 숙소" * 아래 텍스트는 실제 방송 내용과 차이가 있을 수 있으니 보다 정확한 내용은 방송으로 확인하시기 바랍니다. 인용 시 [YTN 뉴스START] 명시해주시기 바랍니다. 9월 14일 월요일, 스타트 브리핑 시작합니다. 먼저 볼 중앙일보 기사는 아이치-나고야 아시안게임 숙소의 실태를 다뤘습니다. 물 새는 화장실에 공용 샤워실, 긴급 대피소동까지 말이 많이 YTN 1분 전
 
-🌏 (국제) 日정부 발간 세계유산책자, 군함도·사도 조선인강제동원 &#x27;삭제&#x27; 연합뉴스 16분 전</textarea>
-  <script>window.__content_shortnews = "26년 9월 14일 월요일 오늘의 퀵뉴스⚡\n\n🏛️ (정치) 국힘 절반은 아직도 ‘윤석열에 우호적’[이재명 시대, 사람 지도] 국민의힘 의원의 절반 가까이가 여전히 윤석열 전 대통령에게 우호적인 것으로 분석됐다. 이재명 대통령을 향한 더불어민주당 의원들의 태도는 지난 8·17 전당대회 과정에서 겉으로 드러난 ‘친명·반명’ 논란과 달리 차이가 크지 않았다. 경향신문이 지식콘텐츠 스타트업인 언더스코어와 함께 2024년 6월부터 지난 7월 초까지 언론에 보도된 발언을 중심으로 국민의힘 경향신문 20분 전\n\n🏛️ (정치) [청와대 24시] 용혜인 낙마, 靑 인사 검증 시스템에도 상처 세계일보 22분 전\n\n🏛️ (정치) 서영교 법사위원장 “기술유출 막는 산업스파이법, 꼭 처리할 것” 세계일보 22분 전\n\n💰 (경제) 45조 미래대응기금, AI보다 현금지원에 1.6조 더 쏟았다 (세종=뉴스1) 임용우 이강 기자 = 미래 대응을 명분으로 신설한 45조 원 규모 미래대응기금에 아동기본수당과 청년미래적금, 농어촌 기본소득 등 현금성·직접지원 사업 예산만 7조 원 넘게 편성된 것으로 나타났다. 전체 기금의 15% 이상을 복지·소득지원 성격의 사업에 투입하는 셈이다. 잠재성장률 반등의 핵심으로 꼽히는 인공지능(AI) 경쟁력 강화 분야보 뉴스1 22분 전\n\n💰 (경제) [단독] 전기 남아도 재생E 계속 짓는 제주…전력값은 이미 '마이너스' 뉴스1 22분 전\n\n💰 (경제) 강남→한강벨트→외곽 상승세 확산… 실수요 중심 ‘키 맞추기’ 세계일보 24분 전\n\n💰 (경제) 유가 100달러·美 금리 5% 턱밑…美 FOMC 앞두고 한은 셈법 복잡 뉴스1 26분 전\n\n💰 (경제) 내 데이터 학습한 AI가 내 자리 뺏는다?…“현행법에 한계 있다” 주간경향 26분 전\n\n👥 (사회) ‘최후의 노동’이 되기 전에…“AI 도입시 노사 공동대응” 국내 첫 합의 “AI 도입이요? 좋죠. 건강이나 안전 문제 해소에 좋은 영향을 줄 수 있는 거잖아요. 그런데 지금 회사가 어디 그런 이유인가요? 인원을 더 줄여서 싸게 로봇을 이용하겠다는 거잖아요.” 현대자동차 하청업체에서 일하는 김미옥 금속노조 현대글로비스울산지회장은 제조업 분야 AI 도입 열풍에 대해 이같이 말했다. 김 지회장은 실제로 동료들이 실직 위기에 처했다 주간경향 26분 전\n\n👥 (사회) \"남북관계 특수성 고려를\"…탈북민 재북가족 송금 무죄 이끈 변호사들 뉴스1 26분 전\n\n👥 (사회) 공수처장 \"중수청 4급까지 수사해야…기소 전 검증시스템 검토\" 뉴스1 26분 전\n\n👥 (사회) 공수처장 \"지난 2년 시험의 연속…무능 반복 않게 법 개정해야\" 뉴스1 27분 전\n\n👥 (사회) [소년중앙] 양자역학 개척자 아인슈타인도 고개 저었다, 양자역학이란 뭘까 중앙일보 27분 전\n\n🌏 (국제) 英 찰스 국왕, AI 위험 논란 속 기업 대표들 회의 소집 [서울=뉴시스] 구자룡 기자 = 영국 찰스 3세 국왕은 인공지능(AI) 기술의 급속하고 무분별한 발전이 세계적인 재앙으로 이어질 수 있다는 우려가 커지는 가운데 스코틀랜드에서 주요 AI 기업의 대표들과 회담을 가질 예정이다. 버킹엄궁 발표에 따르면 찰스 국왕은 엔비디아, 구글, 딥마인드, 오픈AI, 앤트로픽 등 기업 대표들과 정부 관계자들을 초청해 A 뉴시스 5분 전\n\n🌏 (국제) 日정부 발간 세계유산책자, 군함도·사도 조선인강제동원 '삭제' 연합뉴스 16분 전";</script>
+🌏 (국제) 동영상 트럼프 "이란전, 중간선거 전후 끝날 것"...이란·걸프국 회의 연기 YTN 10분 전</textarea>
+<script>window.__content_shortnews = "26년 9월 14일 월요일 오늘의 퀵뉴스⚡\n\n🏛️ (정치) '수사는 검사가 잘 한다' 못 버린 민주당 [이충재 기자] ▲ 대검찰청 대검찰청ⓒ 이정민10월부터 검사의 직접 수사권이 폐지되지만 정부와 여당에서 혼선이 잇따르면서 조속히 명확한 입장을 정리해야 한다는 지적이 제기됩니다. 최근의 파견검사 수사권 폐지 법안 철회 사태와 초대 중수청장 검찰 출신 지명 등이 대표적인 사례입니다. 이런 혼란은 앞으로도 조작기소특검법 처리 등 특검 추진 때마다 반복될 가능성 오마이뉴스 5분 전\n\n🏛️ (정치) “회사 몰래 대리운전 ‘투잡’…해고해도 정당한가요?” 신동아 15분 전\n\n🏛️ (정치) 용혜인 다음은 김승원…여야, 청문회 앞두고 전면전 아이뉴스24 15분 전\n\n💰 (경제) 누구는 되고 누구는 안 되고…대출 문턱 '제각각' [누더기 대출①] 늘어나는 가계부채를 억제하기 위한 대출 규제가 '누더기'가 됐다. 금융당국은 지난해 6·27대책, 10·15대책에 이어 올해 4·1대책까지 지속적으로 대출 문턱을 높여왔다. 하지만 일률적인 규제로 실수요자의 주거 불안과 고금리에 따른 차주들의 자금난이 심화하자 뒤늦은 보완책으로 8·13대책을 내놨다. 문제가 불거질 때마다 금융 정책에 예외를 덧붙인 탓에 시 데일리안 8분 전\n\n💰 (경제) 메모리 경쟁, HBM 단수에서 AI 가속기 효율화로 진화 주간동아 14분 전\n\n💰 (경제) ‘군살 뺀 알짜’냐 ‘규모 잃은 마트’냐…홈플러스 M&A의 딜레마 데일리안 16분 전\n\n💰 (경제) ‘청년 분노’ 경제 불평등 심화 핵심 요인은 소득 아닌 서울 부동산 브릿지경제 16분 전\n\n💰 (경제) 45조 미래대응기금, AI보다 현금지원에 1.6조 더 쏟았다 뉴스1 1시간 전\n\n👥 (사회) 컴플라이언스 인센티브, 준법 노력이 보상받는 구조를 만들려면 [바른 컴플라이언스 리포트] 지난 3월 미국 법무부(DOJ)는 ‘기업범죄 법 집행 및 자진신고 정책(Corporate Enforcement and Voluntary Self-Disclosure Policy, 이하 ‘CEP’)’을 발표했다. 독점금지법 위반을 제외한 DOJ의 기업 형사사건에서 자진신고·협조·시정에 따른 인센티브를 구체화한 것이다. 기업에서 컴플라이언스는 비용으로 인식되기 매일경제 14분 전\n\n👥 (사회) “보완수사권 폐지 후 가장 우려되는 것은 가해자의 보복 범죄” 주간동아 15분 전\n\n👥 (사회) [소년중앙] 누구보다 완벽한 친구와의 우정, 포기할 수 있나요 중앙일보 15분 전\n\n👥 (사회) 끝나도 진통 불가피…\"갈등 제도권서 풀어야\"[봉쇄 100일③] 뉴시스 15분 전\n\n👥 (사회) 서울 원정진료 줄일까…지역 국립대병원 승부수 [D:로그인] 데일리안 16분 전\n\n🌏 (국제) 동영상 [스타트 브리핑] 물 새고 긴급 대피까지...\"아시안게임 역대 최악의 숙소\" * 아래 텍스트는 실제 방송 내용과 차이가 있을 수 있으니 보다 정확한 내용은 방송으로 확인하시기 바랍니다. 인용 시 [YTN 뉴스START] 명시해주시기 바랍니다. 9월 14일 월요일, 스타트 브리핑 시작합니다. 먼저 볼 중앙일보 기사는 아이치-나고야 아시안게임 숙소의 실태를 다뤘습니다. 물 새는 화장실에 공용 샤워실, 긴급 대피소동까지 말이 많이 YTN 1분 전\n\n🌏 (국제) 동영상 트럼프 \"이란전, 중간선거 전후 끝날 것\"...이란·걸프국 회의 연기 YTN 10분 전";</script>
 </section>
 
-<section class="card" data-slot="4">
-  <div class="card-head">
-    <h2>4. 🏗️ 청약 소식</h2>
-    <button class="copy-btn" onclick="copySection('subs', this)">복사</button>
-  </div>
-  <textarea id="ta-subs" class="preview" readonly>26년 9월 14일 월요일 청약 소식
+<section class="card">
+<div class="card-head">
+<h2>4. 🏗️ 청약 소식</h2>
+<button class="copy-btn" onclick="copySection('subs', this)">복사</button>
+</div>
+<textarea id="ta-subs" class="preview" readonly>26년 9월 14일 월요일 청약 소식
 
 🏗️ 청약 접수 단지 (전국, 2주 이내)
 
@@ -273,15 +200,15 @@ h1 {
 [경기·민간] 오남역 서희스타힐스 여의재 3단지 (조합원 취소분) | 접수 9/21~9/23 | 발표 10/6
 
 [울산·민간] 문수로 비스타 더파크 | 접수 9/21~9/23 | 발표 10/1</textarea>
-  <script>window.__content_subs = "26년 9월 14일 월요일 청약 소식\n\n🏗️ 청약 접수 단지 (전국, 2주 이내)\n\n[경기·공공] 의정부우정 A2블록 공공분양주택(본청약) | 접수 9/7~9/17 | 발표 10/8 ◀ 접수중\n\n[경기·민간] 더샵 여주역더퍼스트 | 접수 9/14~9/16 | 발표 9/22 ◀ 접수중\n\n[경기·공공] 양주회천지구 A-26블록 공공분양주택 | 접수 9/14~9/17 | 발표 10/7 ◀ 접수중\n\n[광주·민간] 올 뉴 챔피언스시티 1차 | 접수 9/14~9/16 | 발표 9/22 ◀ 접수중\n\n[울산·민간] 남울산 노르웨이숲(조합원 취소분)(2회차) | 접수 9/14~9/16 | 발표 9/22 ◀ 접수중\n\n[울산·민간] 그랑라크 에일린의 뜰 | 접수 9/14~9/16 | 발표 9/22 ◀ 접수중\n\n[충남·민간] 천안 아이파크 시티 4단지 | 접수 9/14~9/16 | 발표 9/23 ◀ 접수중\n\n[충남·민간] 두정역 푸르지오 그랑피크 | 접수 9/14~9/16 | 발표 9/22 ◀ 접수중\n\n[충남·민간] 천안 아이파크 시티 3단지 | 접수 9/14~9/16 | 발표 9/22 ◀ 접수중\n\n[경기·민간] 시흥 은계 에피트(조합원 취소분) | 접수 9/15~9/17 | 발표 9/23\n\n[인천·공공] 인천계양지구 A6블록 공공분양주택(본청약) | 접수 9/17~10/2 | 발표 10/21\n\n[경기·민간] 화서역 호수공원 아너스빌 | 접수 9/21~9/23 | 발표 10/1\n\n[경기·공공] 힐스테이트 고덕엘리스트 A65BL 공공분양주택 | 접수 9/21~9/23 | 발표 10/2\n\n[경기·공공] 힐스테이트 고덕엘리스트 A12BL 공공분양주택 | 접수 9/21~9/23 | 발표 10/1\n\n[경기·민간] 더샵 분당하이스트 | 접수 9/21~9/28 | 발표 10/2\n\n[경기·민간] 중동역 다채로움 더원 | 접수 9/21~9/23 | 발표 10/8\n\n[경기·민간] 오남역 서희스타힐스 여의재 3단지 (조합원 취소분) | 접수 9/21~9/23 | 발표 10/6\n\n[울산·민간] 문수로 비스타 더파크 | 접수 9/21~9/23 | 발표 10/1";</script>
+<script>window.__content_subs = "26년 9월 14일 월요일 청약 소식\n\n🏗️ 청약 접수 단지 (전국, 2주 이내)\n\n[경기·공공] 의정부우정 A2블록 공공분양주택(본청약) | 접수 9/7~9/17 | 발표 10/8 ◀ 접수중\n\n[경기·민간] 더샵 여주역더퍼스트 | 접수 9/14~9/16 | 발표 9/22 ◀ 접수중\n\n[경기·공공] 양주회천지구 A-26블록 공공분양주택 | 접수 9/14~9/17 | 발표 10/7 ◀ 접수중\n\n[광주·민간] 올 뉴 챔피언스시티 1차 | 접수 9/14~9/16 | 발표 9/22 ◀ 접수중\n\n[울산·민간] 남울산 노르웨이숲(조합원 취소분)(2회차) | 접수 9/14~9/16 | 발표 9/22 ◀ 접수중\n\n[울산·민간] 그랑라크 에일린의 뜰 | 접수 9/14~9/16 | 발표 9/22 ◀ 접수중\n\n[충남·민간] 천안 아이파크 시티 4단지 | 접수 9/14~9/16 | 발표 9/23 ◀ 접수중\n\n[충남·민간] 두정역 푸르지오 그랑피크 | 접수 9/14~9/16 | 발표 9/22 ◀ 접수중\n\n[충남·민간] 천안 아이파크 시티 3단지 | 접수 9/14~9/16 | 발표 9/22 ◀ 접수중\n\n[경기·민간] 시흥 은계 에피트(조합원 취소분) | 접수 9/15~9/17 | 발표 9/23\n\n[인천·공공] 인천계양지구 A6블록 공공분양주택(본청약) | 접수 9/17~10/2 | 발표 10/21\n\n[경기·민간] 화서역 호수공원 아너스빌 | 접수 9/21~9/23 | 발표 10/1\n\n[경기·공공] 힐스테이트 고덕엘리스트 A65BL 공공분양주택 | 접수 9/21~9/23 | 발표 10/2\n\n[경기·공공] 힐스테이트 고덕엘리스트 A12BL 공공분양주택 | 접수 9/21~9/23 | 발표 10/1\n\n[경기·민간] 더샵 분당하이스트 | 접수 9/21~9/28 | 발표 10/2\n\n[경기·민간] 중동역 다채로움 더원 | 접수 9/21~9/23 | 발표 10/8\n\n[경기·민간] 오남역 서희스타힐스 여의재 3단지 (조합원 취소분) | 접수 9/21~9/23 | 발표 10/6\n\n[울산·민간] 문수로 비스타 더파크 | 접수 9/21~9/23 | 발표 10/1";</script>
 </section>
 
-<section class="card" data-slot="5">
-  <div class="card-head">
-    <h2>5. 📈 부동산 주간 시세동향</h2>
-    <button class="copy-btn" onclick="copySection('trend', this)">복사</button>
-  </div>
-  <textarea id="ta-trend" class="preview" readonly>26년 9월 14일 월요일 부동산 주간 시세동향
+<section class="card">
+<div class="card-head">
+<h2>5. 📈 부동산 주간 시세동향</h2>
+<button class="copy-btn" onclick="copySection('trend', this)">복사</button>
+</div>
+<textarea id="ta-trend" class="preview" readonly>26년 9월 14일 월요일 부동산 주간 시세동향
 
 📈 주간 아파트 매매가격 변동률 (9/7 기준)
 
@@ -302,42 +229,24 @@ h1 {
 경북 +0.00% | 경남 +0.05% | 제주 -0.04%
 
 * 한국부동산원 주간 아파트가격 동향 (전주 대비)</textarea>
-  <script>window.__content_trend = "26년 9월 14일 월요일 부동산 주간 시세동향\n\n📈 주간 아파트 매매가격 변동률 (9/7 기준)\n\n전국 +0.08% | 수도권 +0.16% | 지방 +0.01%\n서울 +0.20% | 경기 +0.17% | 인천 +0.03%\n부산 -0.02% | 대구 +0.00% | 대전 +0.04%\n울산 +0.04% | 세종 -0.02% | 강원 +0.03%\n충북 +0.06% | 충남 -0.05% | 전북 +0.05%\n경북 -0.03% | 경남 +0.02% | 제주 -0.06%\n\n🔑 주간 아파트 전세가격 변동률\n\n전국 +0.10% | 수도권 +0.16% | 지방 +0.04%\n서울 +0.19% | 경기 +0.14% | 인천 +0.17%\n부산 +0.05% | 대구 +0.04% | 대전 +0.03%\n울산 +0.07% | 세종 +0.12% | 강원 -0.01%\n충북 +0.05% | 충남 +0.05% | 전북 +0.04%\n경북 +0.00% | 경남 +0.05% | 제주 -0.04%\n\n* 한국부동산원 주간 아파트가격 동향 (전주 대비)";</script>
+<script>window.__content_trend = "26년 9월 14일 월요일 부동산 주간 시세동향\n\n📈 주간 아파트 매매가격 변동률 (9/7 기준)\n\n전국 +0.08% | 수도권 +0.16% | 지방 +0.01%\n서울 +0.20% | 경기 +0.17% | 인천 +0.03%\n부산 -0.02% | 대구 +0.00% | 대전 +0.04%\n울산 +0.04% | 세종 -0.02% | 강원 +0.03%\n충북 +0.06% | 충남 -0.05% | 전북 +0.05%\n경북 -0.03% | 경남 +0.02% | 제주 -0.06%\n\n🔑 주간 아파트 전세가격 변동률\n\n전국 +0.10% | 수도권 +0.16% | 지방 +0.04%\n서울 +0.19% | 경기 +0.14% | 인천 +0.17%\n부산 +0.05% | 대구 +0.04% | 대전 +0.03%\n울산 +0.07% | 세종 +0.12% | 강원 -0.01%\n충북 +0.05% | 충남 +0.05% | 전북 +0.04%\n경북 +0.00% | 경남 +0.05% | 제주 -0.04%\n\n* 한국부동산원 주간 아파트가격 동향 (전주 대비)";</script>
 </section>
 
-<section class="card" data-slot="6">
-  <div class="card-head">
-    <h2>6. ⛽ 기름값·환율</h2>
-    <button class="copy-btn" onclick="copySection('fuelfx', this)">복사</button>
-  </div>
-  <textarea id="ta-fuelfx" class="preview" readonly>26년 9월 9일 수요일 기름값·환율
-
-⛽ 전국 평균 기름값 (오피넷 기준, 전일 대비)
-
-휘발유 1,858.93원/L (▼0.25)
-경유 1,843.79원/L (-0.00)
-
-💱 주요국 환율 (매매기준율, 전일 대비)
-
-미국 달러 : 1,337.70원 (+0.05%)
-일본 엔(100) : 872.75원 (+0.09%)
-유럽 유로 : 1,557.75원 (+0.01%)
-중국 위안 : 199.52원 (+0.05%)
-영국 파운드 : 1,813.85원 (+0.04%)
-호주 달러 : 966.76원 (+0.11%)
-캐나다 달러 : 969.31원 (-0.17%)
-스위스 프랑 : 1,655.57원 (-0.07%)
-홍콩 달러 : 170.59원 (+0.06%)
-베트남 동(100) : 5.17원 (+0.00%)</textarea>
-  <script>window.__content_fuelfx = "26년 9월 9일 수요일 기름값·환율\n\n⛽ 전국 평균 기름값 (오피넷 기준, 전일 대비)\n\n휘발유 1,858.93원/L (▼0.25)\n경유 1,843.79원/L (-0.00)\n\n💱 주요국 환율 (매매기준율, 전일 대비)\n\n미국 달러 : 1,337.70원 (+0.05%)\n일본 엔(100) : 872.75원 (+0.09%)\n유럽 유로 : 1,557.75원 (+0.01%)\n중국 위안 : 199.52원 (+0.05%)\n영국 파운드 : 1,813.85원 (+0.04%)\n호주 달러 : 966.76원 (+0.11%)\n캐나다 달러 : 969.31원 (-0.17%)\n스위스 프랑 : 1,655.57원 (-0.07%)\n홍콩 달러 : 170.59원 (+0.06%)\n베트남 동(100) : 5.17원 (+0.00%)";</script>
+<section class="card">
+<div class="card-head">
+<h2>6. ⛽ 기름값·환율</h2>
+<button class="copy-btn" onclick="copySection('fuelfx', this)">복사</button>
+</div>
+<textarea id="ta-fuelfx" class="preview" readonly>(데이터 없음)</textarea>
+<script>window.__content_fuelfx = "(데이터 없음)";</script>
 </section>
 
-<section class="card" data-slot="7">
-  <div class="card-head">
-    <h2>7. 🥇 금·은·코인</h2>
-    <button class="copy-btn" onclick="copySection('metalcoin', this)">복사</button>
-  </div>
-  <textarea id="ta-metalcoin" class="preview" readonly>26년 9월 14일 월요일 금·은·코인
+<section class="card">
+<div class="card-head">
+<h2>7. 🥇 금·은·코인</h2>
+<button class="copy-btn" onclick="copySection('metalcoin', this)">복사</button>
+</div>
+<textarea id="ta-metalcoin" class="preview" readonly>26년 9월 14일 월요일 금·은·코인
 
 🥇 금·은 시세 (전일 대비)
 
@@ -355,37 +264,55 @@ ZEC 1,488,090원 (-2.46%)
 하이퍼리퀴드 105,128원 (-2.96%)
 도지코인 113원 (-0.62%)
 RAIN 20.61원 (+1.11%)</textarea>
-  <script>window.__content_metalcoin = "26년 9월 14일 월요일 금·은·코인\n\n🥇 금·은 시세 (전일 대비)\n\n국제 은 65.19달러/온스\n\n🪙 코인 시가총액 상위 10 (24시간 등락)\n\n비트코인 103,638,768원 (+0.05%)\n이더리움 3,358,992원 (-0.89%)\n비앤비 967,035원 (-1.36%)\n리플 1,816원 (-1.04%)\n솔라나 135,367원 (-1.13%)\n트론 457원 (+0.31%)\nZEC 1,488,090원 (-2.46%)\n하이퍼리퀴드 105,128원 (-2.96%)\n도지코인 113원 (-0.62%)\nRAIN 20.61원 (+1.11%)";</script>
+<script>window.__content_metalcoin = "26년 9월 14일 월요일 금·은·코인\n\n🥇 금·은 시세 (전일 대비)\n\n국제 은 65.19달러/온스\n\n🪙 코인 시가총액 상위 10 (24시간 등락)\n\n비트코인 103,638,768원 (+0.05%)\n이더리움 3,358,992원 (-0.89%)\n비앤비 967,035원 (-1.36%)\n리플 1,816원 (-1.04%)\n솔라나 135,367원 (-1.13%)\n트론 457원 (+0.31%)\nZEC 1,488,090원 (-2.46%)\n하이퍼리퀴드 105,128원 (-2.96%)\n도지코인 113원 (-0.62%)\nRAIN 20.61원 (+1.11%)";</script>
 </section>
 
-<section class="card" data-slot="8">
-  <div class="card-head">
-    <h2>8. 📚 주간 베스트셀러</h2>
-    <button class="copy-btn" onclick="copySection('books', this)">복사</button>
-  </div>
-  <textarea id="ta-books" class="preview" readonly>26년 9월 14일 월요일 주간 베스트셀러
+<section class="card">
+<div class="card-head">
+<h2>8. 📚 주간 베스트셀러</h2>
+<button class="copy-btn" onclick="copySection('books', this)">복사</button>
+</div>
+<textarea id="ta-books" class="preview" readonly>26년 9월 14일 월요일 주간 베스트셀러
 
 📚 알라딘 주간 베스트셀러 TOP 10
 
 1. 한국사 이상현상 연구원
 2. 세네카, 오늘을 빼앗기고 있는 당신에게
-3. 수족관
-4. 흔한남매 23
+3. 흔한남매 23
+4. 수족관
 5. 싯다르타
 6. 그랬다고 적었다
 7. 눈 내리는 삼일포
-8. 안녕, 피터팬
-9. 수원에서의 나날
-10. 백야 (먼슬리 클래식)</textarea>
-  <script>window.__content_books = "26년 9월 14일 월요일 주간 베스트셀러\n\n📚 알라딘 주간 베스트셀러 TOP 10\n\n1. 한국사 이상현상 연구원\n2. 세네카, 오늘을 빼앗기고 있는 당신에게\n3. 수족관\n4. 흔한남매 23\n5. 싯다르타\n6. 그랬다고 적었다\n7. 눈 내리는 삼일포\n8. 안녕, 피터팬\n9. 수원에서의 나날\n10. 백야 (먼슬리 클래식)";</script>
+8. 수원에서의 나날
+9. 멜로우TV 팀나빠 추리 탐정단 1
+10. 칵테일을 마시는 철학자들</textarea>
+<script>window.__content_books = "26년 9월 14일 월요일 주간 베스트셀러\n\n📚 알라딘 주간 베스트셀러 TOP 10\n\n1. 한국사 이상현상 연구원\n2. 세네카, 오늘을 빼앗기고 있는 당신에게\n3. 흔한남매 23\n4. 수족관\n5. 싯다르타\n6. 그랬다고 적었다\n7. 눈 내리는 삼일포\n8. 수원에서의 나날\n9. 멜로우TV 팀나빠 추리 탐정단 1\n10. 칵테일을 마시는 철학자들";</script>
 </section>
 
-<section class="card" data-slot="9">
-  <div class="card-head">
-    <h2>9. 🏠 부동산 뉴스</h2>
-    <button class="copy-btn" onclick="copySection('realestate', this)">복사</button>
-  </div>
-  <textarea id="ta-realestate" class="preview" readonly>26년 9월 14일 월요일 부동산 주요뉴스
+<section class="card">
+<div class="card-head">
+<h2>9. 🏠 부동산 뉴스</h2>
+<button class="copy-btn" onclick="copySection('realestate', this)">복사</button>
+</div>
+<textarea id="ta-realestate" class="preview" readonly>26년 9월 14일 월요일 부동산 주요뉴스
+
+"평균 16억 돌파했지만"…서울 아파트 거래 54% '9억이하'
+https://n.news.naver.com/mnews/article/031/0001057912
+
+재건축 인허가 칼자루 바뀐다…구청장 무응답 땐 '자동인가'
+https://n.news.naver.com/mnews/article/014/0005575068
+
+[D-피플라운지] “다 지켰더니 혜택 없애고 집 팔라고”…아파트 등록임대, 정부에 ‘뒤통수’
+https://n.news.naver.com/mnews/article/119/0003132163
+
+'적자' LH·코레일, 쪼개고 합쳐도 재무 부담 커진다고?
+https://n.news.naver.com/mnews/article/648/0000050723
+
+도쿄 규제 강화…'민박 프리미엄', 자산가치로 착각하지 말아야 [더 머니이스트-김용남의 부동산 자산관리]
+https://n.news.naver.com/mnews/article/015/0005331855
+
+월세 80만원→160만원…'그래도 재계약할게요 ㅜㅜ' [시장톡]
+https://n.news.naver.com/mnews/article/015/0005331854
 
 부동산 거래 ‘뚝’…서울 토허 신청 4개월 연속 감소
 https://n.news.naver.com/mnews/article/020/0003747856
@@ -397,112 +324,94 @@ https://n.news.naver.com/mnews/article/119/0003132158
 https://n.news.naver.com/mnews/article/011/0004661395
 
 지난달 서울 토허 신청 3012건 감소세 계속…강북 중심 가격↑
-https://n.news.naver.com/mnews/article/018/0006368744
-
-경기도선 “선교통·후입주”… 홍지선 국토장관 후보자, 공급 속도전 해법 내놓나
-https://n.news.naver.com/mnews/article/366/0001192093
-
-강신철 부자 ‘철거민 특공 막차’… 보상공고 이틀 뒤 분양서 임대로
-https://n.news.naver.com/mnews/article/366/0001192086
-
-[단독] 美대사관 용산 이전 재시동… 예정지 건물 철거 절차 착수
-https://n.news.naver.com/mnews/article/366/0001192082
-
-국토부,‘제6회 디지털 지적의 날’ 개최
-https://n.news.naver.com/mnews/article/016/0002696562
-
-8월 서울 아파트 토허 신청 3012건…전역 지정 후 월간 최저 [부동산360]
-https://n.news.naver.com/mnews/article/016/0002696559
-
-AI로 여는 디지털 지적재조사...국토부, 디지털 지적의 날 개최
-https://n.news.naver.com/mnews/article/014/0005575052</textarea>
-  <script>window.__content_realestate = "26년 9월 14일 월요일 부동산 주요뉴스\n\n부동산 거래 ‘뚝’…서울 토허 신청 4개월 연속 감소\nhttps://n.news.naver.com/mnews/article/020/0003747856\n\n[오늘 부동산] 서울 집값 83주째 상승…文정부 ‘85주 최장 기록’ 턱밑\nhttps://n.news.naver.com/mnews/article/119/0003132158\n\n용산공원 이어 염창공원도 삐걱…서울 공급계획 곳곳서 ‘제동’[코주부]\nhttps://n.news.naver.com/mnews/article/011/0004661395\n\n지난달 서울 토허 신청 3012건 감소세 계속…강북 중심 가격↑\nhttps://n.news.naver.com/mnews/article/018/0006368744\n\n경기도선 “선교통·후입주”… 홍지선 국토장관 후보자, 공급 속도전 해법 내놓나\nhttps://n.news.naver.com/mnews/article/366/0001192093\n\n강신철 부자 ‘철거민 특공 막차’… 보상공고 이틀 뒤 분양서 임대로\nhttps://n.news.naver.com/mnews/article/366/0001192086\n\n[단독] 美대사관 용산 이전 재시동… 예정지 건물 철거 절차 착수\nhttps://n.news.naver.com/mnews/article/366/0001192082\n\n국토부,‘제6회 디지털 지적의 날’ 개최\nhttps://n.news.naver.com/mnews/article/016/0002696562\n\n8월 서울 아파트 토허 신청 3012건…전역 지정 후 월간 최저 [부동산360]\nhttps://n.news.naver.com/mnews/article/016/0002696559\n\nAI로 여는 디지털 지적재조사...국토부, 디지털 지적의 날 개최\nhttps://n.news.naver.com/mnews/article/014/0005575052";</script>
+https://n.news.naver.com/mnews/article/018/0006368744</textarea>
+<script>window.__content_realestate = "26년 9월 14일 월요일 부동산 주요뉴스\n\n\"평균 16억 돌파했지만\"…서울 아파트 거래 54% '9억이하'\nhttps://n.news.naver.com/mnews/article/031/0001057912\n\n재건축 인허가 칼자루 바뀐다…구청장 무응답 땐 '자동인가'\nhttps://n.news.naver.com/mnews/article/014/0005575068\n\n[D-피플라운지] “다 지켰더니 혜택 없애고 집 팔라고”…아파트 등록임대, 정부에 ‘뒤통수’\nhttps://n.news.naver.com/mnews/article/119/0003132163\n\n'적자' LH·코레일, 쪼개고 합쳐도 재무 부담 커진다고?\nhttps://n.news.naver.com/mnews/article/648/0000050723\n\n도쿄 규제 강화…'민박 프리미엄', 자산가치로 착각하지 말아야 [더 머니이스트-김용남의 부동산 자산관리]\nhttps://n.news.naver.com/mnews/article/015/0005331855\n\n월세 80만원→160만원…'그래도 재계약할게요 ㅜㅜ' [시장톡]\nhttps://n.news.naver.com/mnews/article/015/0005331854\n\n부동산 거래 ‘뚝’…서울 토허 신청 4개월 연속 감소\nhttps://n.news.naver.com/mnews/article/020/0003747856\n\n[오늘 부동산] 서울 집값 83주째 상승…文정부 ‘85주 최장 기록’ 턱밑\nhttps://n.news.naver.com/mnews/article/119/0003132158\n\n용산공원 이어 염창공원도 삐걱…서울 공급계획 곳곳서 ‘제동’[코주부]\nhttps://n.news.naver.com/mnews/article/011/0004661395\n\n지난달 서울 토허 신청 3012건 감소세 계속…강북 중심 가격↑\nhttps://n.news.naver.com/mnews/article/018/0006368744";</script>
 </section>
 
-<section class="card" data-slot="10">
-  <div class="card-head">
-    <h2>10. 🌏 세계 뉴스</h2>
-    <button class="copy-btn" onclick="copySection('world', this)">복사</button>
-  </div>
-  <textarea id="ta-world" class="preview" readonly>🌏 26년 9월 14일 월요일 세계 뉴스
+<section class="card">
+<div class="card-head">
+<h2>10. 🌏 세계 뉴스</h2>
+<button class="copy-btn" onclick="copySection('world', this)">복사</button>
+</div>
+<textarea id="ta-world" class="preview" readonly>🌏 26년 9월 14일 월요일 세계 뉴스
 
-&quot;통제 불능 위험 막자&quot;… AI 라이벌 3사, 개발 속도 조절 한목소리
-https://n.news.naver.com/mnews/article/421/0009166672
+美 AI '속도조절론' 떴는데…시진핑, 브릭스에 AI협력 제안
+https://n.news.naver.com/mnews/article/374/0000532627
 
-시진핑·푸틴 모였다…브릭스 정상회의 인도서 개막
-https://n.news.naver.com/mnews/article/277/0005815421
+올트먼, "오픈AI 올해 공개 안 해…할 일 많아"…앤트로픽은 변동없어
+https://n.news.naver.com/mnews/article/003/0014187060
 
-트럼프에 질린 캐나다, 비밀회담서 &#x27;EU 준회원국&#x27; 제안…유럽도 &quot;개방적&quot;
-https://n.news.naver.com/mnews/article/002/0002456371
+러, 폴란드 부근 우크라이나 철도 시설 공습
+https://n.news.naver.com/mnews/article/052/0002406550
 
-호르무즈 이어 홍해도 막히나… 새로운 화약고 부상한 바브엘만데브 해협
-https://n.news.naver.com/mnews/article/014/0005574990
+트럼프 “이란전, 아마 중간선거 직후 끝나 유가 급락할 것”
+https://n.news.naver.com/mnews/article/023/0003998097
 
-인도네시아 여객선 사고…243명 중 140명 실종
-https://n.news.naver.com/mnews/article/277/0005815557
+오만 외무장관 "이란·걸프국 호르무즈 회의 연기"
+https://n.news.naver.com/mnews/article/422/0000905822
 
-英총리실, 트럼프 &#x27;통일 아일랜드&#x27; 발언에 &quot;입장 변화 없다&quot;
-https://n.news.naver.com/mnews/article/421/0009166379
+브릭스, 美 보란듯 “중동문제 최대한 자제” 촉구
+https://n.news.naver.com/mnews/article/009/0005734375
 
-“그러다 중국이 앞서가면요?”…‘AI 개발 늦추자’는 아모데이 답변은 [이런뉴스]
-https://n.news.naver.com/mnews/article/056/0012256439
+243명 탄 인도네시아 여객선, 기상 악화로 바다서 연락 두절
+https://n.news.naver.com/mnews/article/014/0005574896
 
-트럼프 &quot;이란에 남아 석유 가질 수도&quot;…베네수엘라 모델 거론
-https://n.news.naver.com/mnews/article/421/0009167528
+아일랜드 방문한 트럼프 “아일랜드 위스키 관세 철회하겠다”
+https://n.news.naver.com/mnews/article/056/0012256434
 
-“한국, 비싼 핵잠수함 왜 사는데?”…트럼프, 한일 경쟁 부추길까 [밀리터리+]
-https://n.news.naver.com/mnews/article/081/0003679717
+"희망 붙들고 버텼다"...희소병 이겨낸 셀린 디옹, 6년 만의 기적 귀환
+https://n.news.naver.com/mnews/article/052/0002406327
 
-오바마까지 AI 위험론 가세…“2028 대선 핵심 의제로 다뤄야”
-https://n.news.naver.com/mnews/article/018/0006368586</textarea>
-  <script>window.__content_world = "🌏 26년 9월 14일 월요일 세계 뉴스\n\n\"통제 불능 위험 막자\"… AI 라이벌 3사, 개발 속도 조절 한목소리\nhttps://n.news.naver.com/mnews/article/421/0009166672\n\n시진핑·푸틴 모였다…브릭스 정상회의 인도서 개막\nhttps://n.news.naver.com/mnews/article/277/0005815421\n\n트럼프에 질린 캐나다, 비밀회담서 'EU 준회원국' 제안…유럽도 \"개방적\"\nhttps://n.news.naver.com/mnews/article/002/0002456371\n\n호르무즈 이어 홍해도 막히나… 새로운 화약고 부상한 바브엘만데브 해협\nhttps://n.news.naver.com/mnews/article/014/0005574990\n\n인도네시아 여객선 사고…243명 중 140명 실종\nhttps://n.news.naver.com/mnews/article/277/0005815557\n\n英총리실, 트럼프 '통일 아일랜드' 발언에 \"입장 변화 없다\"\nhttps://n.news.naver.com/mnews/article/421/0009166379\n\n“그러다 중국이 앞서가면요?”…‘AI 개발 늦추자’는 아모데이 답변은 [이런뉴스]\nhttps://n.news.naver.com/mnews/article/056/0012256439\n\n트럼프 \"이란에 남아 석유 가질 수도\"…베네수엘라 모델 거론\nhttps://n.news.naver.com/mnews/article/421/0009167528\n\n“한국, 비싼 핵잠수함 왜 사는데?”…트럼프, 한일 경쟁 부추길까 [밀리터리+]\nhttps://n.news.naver.com/mnews/article/081/0003679717\n\n오바마까지 AI 위험론 가세…“2028 대선 핵심 의제로 다뤄야”\nhttps://n.news.naver.com/mnews/article/018/0006368586";</script>
+호르무즈 충돌 지속…게슘섬 인근 이란 상선 피격(종합)
+https://n.news.naver.com/mnews/article/001/0016307167</textarea>
+<script>window.__content_world = "🌏 26년 9월 14일 월요일 세계 뉴스\n\n美 AI '속도조절론' 떴는데…시진핑, 브릭스에 AI협력 제안\nhttps://n.news.naver.com/mnews/article/374/0000532627\n\n올트먼, \"오픈AI 올해 공개 안 해…할 일 많아\"…앤트로픽은 변동없어\nhttps://n.news.naver.com/mnews/article/003/0014187060\n\n러, 폴란드 부근 우크라이나 철도 시설 공습\nhttps://n.news.naver.com/mnews/article/052/0002406550\n\n트럼프 “이란전, 아마 중간선거 직후 끝나 유가 급락할 것”\nhttps://n.news.naver.com/mnews/article/023/0003998097\n\n오만 외무장관 \"이란·걸프국 호르무즈 회의 연기\"\nhttps://n.news.naver.com/mnews/article/422/0000905822\n\n브릭스, 美 보란듯 “중동문제 최대한 자제” 촉구\nhttps://n.news.naver.com/mnews/article/009/0005734375\n\n243명 탄 인도네시아 여객선, 기상 악화로 바다서 연락 두절\nhttps://n.news.naver.com/mnews/article/014/0005574896\n\n아일랜드 방문한 트럼프 “아일랜드 위스키 관세 철회하겠다”\nhttps://n.news.naver.com/mnews/article/056/0012256434\n\n\"희망 붙들고 버텼다\"...희소병 이겨낸 셀린 디옹, 6년 만의 기적 귀환\nhttps://n.news.naver.com/mnews/article/052/0002406327\n\n호르무즈 충돌 지속…게슘섬 인근 이란 상선 피격(종합)\nhttps://n.news.naver.com/mnews/article/001/0016307167";</script>
 </section>
 
-<section class="card" data-slot="11">
-  <div class="card-head">
-    <h2>11. 🏦 금융 뉴스</h2>
-    <button class="copy-btn" onclick="copySection('finance', this)">복사</button>
-  </div>
-  <textarea id="ta-finance" class="preview" readonly>🏦 26년 9월 14일 월요일 금융 뉴스
+<section class="card">
+<div class="card-head">
+<h2>11. 🏦 금융 뉴스</h2>
+<button class="copy-btn" onclick="copySection('finance', this)">복사</button>
+</div>
+<textarea id="ta-finance" class="preview" readonly>🏦 26년 9월 14일 월요일 금융 뉴스
+
+누구는 되고 누구는 안 되고…대출 문턱 '제각각' [누더기 대출①]
+https://n.news.naver.com/mnews/article/119/0003132172
+
+‘150조 생산금융’ 띄웠지만…가계빚·레버리지 복병 갇힌 ‘이억원호’
+https://n.news.naver.com/mnews/article/119/0003132170
+
+'리스크 전문가의 ‘리스크’ 장민영 행장의 6개월
+https://n.news.naver.com/mnews/article/243/0000103011
+
+정부, 주택공급에 금융지원…주요 내용은?[금알못]
+https://n.news.naver.com/mnews/article/003/0014187226
+
+‘빚투’ 다시 불붙었나…‘마통’서 7개월 새 6조원 더 꺼냈다
+https://n.news.naver.com/mnews/article/666/0000123215
+
+양종희 KB금융 회장 연임 '불발'… 황병우 iM금융 회장에 쏠리는 눈
+https://n.news.naver.com/mnews/article/088/0001028215
+
+스테이블코인 결제에도 세금...코인 과세 앞두고 곳곳이 빈틈
+https://n.news.naver.com/mnews/article/011/0004661400
+
+"자녀 통장에 무심코 보낸 생활비…자칫하면 증여세 부과 대상"
+https://n.news.naver.com/mnews/article/003/0014187217
 
 기준금리 올라도 거꾸로 내린 저축銀 예금금리…일부 은행보다 낮네
 https://n.news.naver.com/mnews/article/421/0009167634
 
-저축은행 &#x27;중금리 생활안전대출&#x27; 두 달 새 2천500억 늘었다
-https://n.news.naver.com/mnews/article/374/0000532639
-
-‘세대교체’ 택한 KB…금융권 CEO 거취도 주목
-https://n.news.naver.com/mnews/article/011/0004661396
-
-주성엔지니어링, 흑자전환 분기 수주잔고 급증…매출 전환 관건 [실적why]
-https://n.news.naver.com/mnews/article/421/0009167624
-
-&quot;亞 스테이블코인, 달러 뚫고 폭발 성장…ASA, 시장 잇는 윤활유&quot;
-https://n.news.naver.com/mnews/article/018/0006368750
-
-양종희도 바꾼 KB發 세대교체…5대 은행장 연임 셈법 흔든다
-https://n.news.naver.com/mnews/article/421/0009167622
-
-45조 미래대응기금, AI보다 현금지원에 1.6조 더 쏟았다
-https://n.news.naver.com/mnews/article/421/0009167612
-
-[인터뷰] 션 유 이뱅스 부사장 “결제 현지화로 K콘텐츠·뷰티 신흥시장 진출 지원”
-https://n.news.naver.com/mnews/article/366/0001192089
-
-종부세 특례 잘못 고르면 세금 528만원 차이...국세청 “유리한 쪽 먼저 안내” [Pick코노미]
-https://n.news.naver.com/mnews/article/011/0004661392
-
-&quot;아파텔도 집단대출 풀어달라&quot;…금융위, 가계대출 총량 관리서 제외 검토
-https://n.news.naver.com/mnews/article/014/0005575050</textarea>
-  <script>window.__content_finance = "🏦 26년 9월 14일 월요일 금융 뉴스\n\n기준금리 올라도 거꾸로 내린 저축銀 예금금리…일부 은행보다 낮네\nhttps://n.news.naver.com/mnews/article/421/0009167634\n\n저축은행 '중금리 생활안전대출' 두 달 새 2천500억 늘었다\nhttps://n.news.naver.com/mnews/article/374/0000532639\n\n‘세대교체’ 택한 KB…금융권 CEO 거취도 주목\nhttps://n.news.naver.com/mnews/article/011/0004661396\n\n주성엔지니어링, 흑자전환 분기 수주잔고 급증…매출 전환 관건 [실적why]\nhttps://n.news.naver.com/mnews/article/421/0009167624\n\n\"亞 스테이블코인, 달러 뚫고 폭발 성장…ASA, 시장 잇는 윤활유\"\nhttps://n.news.naver.com/mnews/article/018/0006368750\n\n양종희도 바꾼 KB發 세대교체…5대 은행장 연임 셈법 흔든다\nhttps://n.news.naver.com/mnews/article/421/0009167622\n\n45조 미래대응기금, AI보다 현금지원에 1.6조 더 쏟았다\nhttps://n.news.naver.com/mnews/article/421/0009167612\n\n[인터뷰] 션 유 이뱅스 부사장 “결제 현지화로 K콘텐츠·뷰티 신흥시장 진출 지원”\nhttps://n.news.naver.com/mnews/article/366/0001192089\n\n종부세 특례 잘못 고르면 세금 528만원 차이...국세청 “유리한 쪽 먼저 안내” [Pick코노미]\nhttps://n.news.naver.com/mnews/article/011/0004661392\n\n\"아파텔도 집단대출 풀어달라\"…금융위, 가계대출 총량 관리서 제외 검토\nhttps://n.news.naver.com/mnews/article/014/0005575050";</script>
+저축은행 '중금리 생활안전대출' 두 달 새 2천500억 늘었다
+https://n.news.naver.com/mnews/article/374/0000532639</textarea>
+<script>window.__content_finance = "🏦 26년 9월 14일 월요일 금융 뉴스\n\n누구는 되고 누구는 안 되고…대출 문턱 '제각각' [누더기 대출①]\nhttps://n.news.naver.com/mnews/article/119/0003132172\n\n‘150조 생산금융’ 띄웠지만…가계빚·레버리지 복병 갇힌 ‘이억원호’\nhttps://n.news.naver.com/mnews/article/119/0003132170\n\n'리스크 전문가의 ‘리스크’ 장민영 행장의 6개월\nhttps://n.news.naver.com/mnews/article/243/0000103011\n\n정부, 주택공급에 금융지원…주요 내용은?[금알못]\nhttps://n.news.naver.com/mnews/article/003/0014187226\n\n‘빚투’ 다시 불붙었나…‘마통’서 7개월 새 6조원 더 꺼냈다\nhttps://n.news.naver.com/mnews/article/666/0000123215\n\n양종희 KB금융 회장 연임 '불발'… 황병우 iM금융 회장에 쏠리는 눈\nhttps://n.news.naver.com/mnews/article/088/0001028215\n\n스테이블코인 결제에도 세금...코인 과세 앞두고 곳곳이 빈틈\nhttps://n.news.naver.com/mnews/article/011/0004661400\n\n\"자녀 통장에 무심코 보낸 생활비…자칫하면 증여세 부과 대상\"\nhttps://n.news.naver.com/mnews/article/003/0014187217\n\n기준금리 올라도 거꾸로 내린 저축銀 예금금리…일부 은행보다 낮네\nhttps://n.news.naver.com/mnews/article/421/0009167634\n\n저축은행 '중금리 생활안전대출' 두 달 새 2천500억 늘었다\nhttps://n.news.naver.com/mnews/article/374/0000532639";</script>
 </section>
 
-<section class="card" data-slot="12">
-  <div class="card-head">
-    <h2>12. 🤖 AI 뉴스</h2>
-    <button class="copy-btn" onclick="copySection('ai', this)">복사</button>
-  </div>
-  <textarea id="ta-ai" class="preview" readonly>🤖 26년 9월 14일 월요일 AI 뉴스
+<section class="card">
+<div class="card-head">
+<h2>12. 🤖 AI 뉴스</h2>
+<button class="copy-btn" onclick="copySection('ai', this)">복사</button>
+</div>
+<textarea id="ta-ai" class="preview" readonly>🤖 26년 9월 14일 월요일 AI 뉴스
 
 &amp;apos;가상 초파리&amp;apos; 뇌 시뮬레이션 이색 시도 열풍…‘파리 언어모델&amp;apos;까지 등장
 https://www.aitimes.com/news/articleView.html?idxno=215207
@@ -516,7 +425,7 @@ https://www.aitimes.com/news/articleView.html?idxno=215204
 KAIST, 미래기술 연구거점 ‘LOTTE x KAIST R&amp;D 센터’ 준공
 https://www.aitimes.com/news/articleView.html?idxno=215203
 
-&quot;지침 줄이고 완료 기준 명확히&quot;...오픈AI가 밝힌 &amp;apos;아스트라&amp;apos; 활용법
+"지침 줄이고 완료 기준 명확히"...오픈AI가 밝힌 &amp;apos;아스트라&amp;apos; 활용법
 https://www.aitimes.com/news/articleView.html?idxno=215202
 
 AI 데이터센터에 발목 잡힌 오라클…매출 폭증에도 재무 부담 가중
@@ -525,23 +434,23 @@ https://www.aitimes.com/news/articleView.html?idxno=215201
 테슬라, 10월 1일 2세대 로드스터 공개...‘비행’ 기능 베일 벗을까
 https://www.aitimes.com/news/articleView.html?idxno=215200
 
-오픈AI &amp;apos;불량 에이전트&amp;apos; 루비젬스까지 해킹 시도…&quot;데이터 수집일 뿐&quot;
+오픈AI &amp;apos;불량 에이전트&amp;apos; 루비젬스까지 해킹 시도…"데이터 수집일 뿐"
 https://www.aitimes.com/news/articleView.html?idxno=215199
 
-알트먼 &quot;2026년 상장은 시기상조…안전성 확보가 최우선 과제&quot;
+알트먼 "2026년 상장은 시기상조…안전성 확보가 최우선 과제"
 https://www.aitimes.com/news/articleView.html?idxno=215198
 
 제프 딘의 AI 스타트업 디스커버리 루프, 67조 몸값 노린다
 https://www.aitimes.com/news/articleView.html?idxno=215197</textarea>
-  <script>window.__content_ai = "🤖 26년 9월 14일 월요일 AI 뉴스\n\n&apos;가상 초파리&apos; 뇌 시뮬레이션 이색 시도 열풍…‘파리 언어모델&apos;까지 등장\nhttps://www.aitimes.com/news/articleView.html?idxno=215207\n\n구글, 코딩 강화 위해 스타트업 메카나이즈 인재 흡수\nhttps://www.aitimes.com/news/articleView.html?idxno=215205\n\n스페이스X, 미공개 고객과 월 1.5조 규모 컴퓨팅 계약 체결\nhttps://www.aitimes.com/news/articleView.html?idxno=215204\n\nKAIST, 미래기술 연구거점 ‘LOTTE x KAIST R&D 센터’ 준공\nhttps://www.aitimes.com/news/articleView.html?idxno=215203\n\n\"지침 줄이고 완료 기준 명확히\"...오픈AI가 밝힌 &apos;아스트라&apos; 활용법\nhttps://www.aitimes.com/news/articleView.html?idxno=215202\n\nAI 데이터센터에 발목 잡힌 오라클…매출 폭증에도 재무 부담 가중\nhttps://www.aitimes.com/news/articleView.html?idxno=215201\n\n테슬라, 10월 1일 2세대 로드스터 공개...‘비행’ 기능 베일 벗을까\nhttps://www.aitimes.com/news/articleView.html?idxno=215200\n\n오픈AI &apos;불량 에이전트&apos; 루비젬스까지 해킹 시도…\"데이터 수집일 뿐\"\nhttps://www.aitimes.com/news/articleView.html?idxno=215199\n\n알트먼 \"2026년 상장은 시기상조…안전성 확보가 최우선 과제\"\nhttps://www.aitimes.com/news/articleView.html?idxno=215198\n\n제프 딘의 AI 스타트업 디스커버리 루프, 67조 몸값 노린다\nhttps://www.aitimes.com/news/articleView.html?idxno=215197";</script>
+<script>window.__content_ai = "🤖 26년 9월 14일 월요일 AI 뉴스\n\n&apos;가상 초파리&apos; 뇌 시뮬레이션 이색 시도 열풍…‘파리 언어모델&apos;까지 등장\nhttps://www.aitimes.com/news/articleView.html?idxno=215207\n\n구글, 코딩 강화 위해 스타트업 메카나이즈 인재 흡수\nhttps://www.aitimes.com/news/articleView.html?idxno=215205\n\n스페이스X, 미공개 고객과 월 1.5조 규모 컴퓨팅 계약 체결\nhttps://www.aitimes.com/news/articleView.html?idxno=215204\n\nKAIST, 미래기술 연구거점 ‘LOTTE x KAIST R&D 센터’ 준공\nhttps://www.aitimes.com/news/articleView.html?idxno=215203\n\n\"지침 줄이고 완료 기준 명확히\"...오픈AI가 밝힌 &apos;아스트라&apos; 활용법\nhttps://www.aitimes.com/news/articleView.html?idxno=215202\n\nAI 데이터센터에 발목 잡힌 오라클…매출 폭증에도 재무 부담 가중\nhttps://www.aitimes.com/news/articleView.html?idxno=215201\n\n테슬라, 10월 1일 2세대 로드스터 공개...‘비행’ 기능 베일 벗을까\nhttps://www.aitimes.com/news/articleView.html?idxno=215200\n\n오픈AI &apos;불량 에이전트&apos; 루비젬스까지 해킹 시도…\"데이터 수집일 뿐\"\nhttps://www.aitimes.com/news/articleView.html?idxno=215199\n\n알트먼 \"2026년 상장은 시기상조…안전성 확보가 최우선 과제\"\nhttps://www.aitimes.com/news/articleView.html?idxno=215198\n\n제프 딘의 AI 스타트업 디스커버리 루프, 67조 몸값 노린다\nhttps://www.aitimes.com/news/articleView.html?idxno=215197";</script>
 </section>
 
-<section class="card" data-slot="13">
-  <div class="card-head">
-    <h2>13. 📰 엘리트 정책분석</h2>
-    <button class="copy-btn" onclick="copySection('analysis3', this)">복사</button>
-  </div>
-  <textarea id="ta-analysis3" class="preview" readonly>엘리트 데이터룸
+<section class="card">
+<div class="card-head">
+<h2>13. 📰 엘리트 정책분석</h2>
+<button class="copy-btn" onclick="copySection('analysis3', this)">복사</button>
+</div>
+<textarea id="ta-analysis3" class="preview" readonly>엘리트 데이터룸
 2026.09.14
 
 종부세 ‘부부 공동명의 1주택 특례’ 유불리 계산…국세청이 알아서 해준다
@@ -559,18 +468,18 @@ https://n.news.naver.com/mnews/article/032/0003470104
 다음에 볼 숫자: 9월 안내 예상세액과 11월 고지액, 특례 선택 후 공제 적용 내역을 확인해야 합니다.
 
 오픈채팅 엘리트 부동산 스터디</textarea>
-  <script>window.__content_analysis3 = "엘리트 데이터룸\n2026.09.14\n\n종부세 ‘부부 공동명의 1주택 특례’ 유불리 계산…국세청이 알아서 해준다\nhttps://n.news.naver.com/mnews/article/032/0003470104\n\n📊 핵심 수치\n- 특례 신청이 유리한 대상 약 5700명\n- 기존 특례 취소가 유리한 대상 약 2900명\n- 공동명의 기본공제 합계 18억원\n\n국세청은 부부 공동명의 1주택자의 일반 방식과 특례 세액을 직접 비교해 유리한 선택을 안내합니다. 납세 편의가 명분이지만 공제액, 연령과 보유기간에 따라 결과가 달라지는 복잡한 제도를 행정 계산으로 보완하는 구조입니다.\n\n특례를 적용하면 기본공제는 12억원이지만 최대 80%의 연령·보유기간 공제를 받을 수 있습니다. 적용하지 않으면 합계 18억원을 공제받는 대신 세액공제가 없어 가격과 보유자 조건별 계산이 필요합니다.\n\n다음에 볼 숫자: 9월 안내 예상세액과 11월 고지액, 특례 선택 후 공제 적용 내역을 확인해야 합니다.\n\n오픈채팅 엘리트 부동산 스터디";</script>
+<script>window.__content_analysis3 = "엘리트 데이터룸\n2026.09.14\n\n종부세 ‘부부 공동명의 1주택 특례’ 유불리 계산…국세청이 알아서 해준다\nhttps://n.news.naver.com/mnews/article/032/0003470104\n\n📊 핵심 수치\n- 특례 신청이 유리한 대상 약 5700명\n- 기존 특례 취소가 유리한 대상 약 2900명\n- 공동명의 기본공제 합계 18억원\n\n국세청은 부부 공동명의 1주택자의 일반 방식과 특례 세액을 직접 비교해 유리한 선택을 안내합니다. 납세 편의가 명분이지만 공제액, 연령과 보유기간에 따라 결과가 달라지는 복잡한 제도를 행정 계산으로 보완하는 구조입니다.\n\n특례를 적용하면 기본공제는 12억원이지만 최대 80%의 연령·보유기간 공제를 받을 수 있습니다. 적용하지 않으면 합계 18억원을 공제받는 대신 세액공제가 없어 가격과 보유자 조건별 계산이 필요합니다.\n\n다음에 볼 숫자: 9월 안내 예상세액과 11월 고지액, 특례 선택 후 공제 적용 내역을 확인해야 합니다.\n\n오픈채팅 엘리트 부동산 스터디";</script>
 </section>
 
-<section class="card" data-slot="14">
-  <div class="card-head">
-    <h2>14. 📰 여러분의 부동산 정책분석</h2>
-    <button class="copy-btn" onclick="copySection('analysis4', this)">복사</button>
-  </div>
-  <textarea id="ta-analysis4" class="preview" readonly>여러분의 부동산 조항노트
+<section class="card">
+<div class="card-head">
+<h2>14. 📰 여러분의 부동산 정책분석</h2>
+<button class="copy-btn" onclick="copySection('analysis4', this)">복사</button>
+</div>
+<textarea id="ta-analysis4" class="preview" readonly>여러분의 부동산 조항노트
 2026년 9월 14일자
 
-이형일 &quot;종부세·재산세 통합, 신중한 검토 필요&quot;
+이형일 "종부세·재산세 통합, 신중한 검토 필요"
 https://n.news.naver.com/mnews/article/003/0014187087
 
 1. 사실관계
@@ -586,15 +495,15 @@ https://n.news.naver.com/mnews/article/003/0014187087
 세목 통합 가능성보다 올해 과세기준일의 보유 현황, 공동명의 특례와 확정 세율을 기준으로 신고 준비를 해야 합니다.
 
 카카오톡 여러분의 부동산</textarea>
-  <script>window.__content_analysis4 = "여러분의 부동산 조항노트\n2026년 9월 14일자\n\n이형일 \"종부세·재산세 통합, 신중한 검토 필요\"\nhttps://n.news.naver.com/mnews/article/003/0014187087\n\n1. 사실관계\n경제부총리 후보자는 종부세와 재산세 통합에 신중한 검토가 필요하다고 밝혔습니다. 종부세의 인별 전국 합산 기능과 세수 전액이 부동산교부세로 쓰이는 점을 근거로 들었습니다.\n\n2. 제도적 쟁점\n두 세금의 통합은 납세 구조를 단순화할 수 있지만 종부세의 재분배 기능과 지방재정 배분 방식까지 바꿉니다. 실거주 1주택 보호와 비거주·고가주택 과세 강화 역시 거주 판정 기준의 명확성이 필요합니다.\n\n3. 실무 영향\n통합 검토 발언만으로 현행 세금이 바뀌지는 않습니다. 임대인과 실수요자는 정부안, 국회 수정안과 시행 법률을 구분해 보유비용을 계산해야 합니다.\n\n4. 실무 조언\n세목 통합 가능성보다 올해 과세기준일의 보유 현황, 공동명의 특례와 확정 세율을 기준으로 신고 준비를 해야 합니다.\n\n카카오톡 여러분의 부동산";</script>
+<script>window.__content_analysis4 = "여러분의 부동산 조항노트\n2026년 9월 14일자\n\n이형일 \"종부세·재산세 통합, 신중한 검토 필요\"\nhttps://n.news.naver.com/mnews/article/003/0014187087\n\n1. 사실관계\n경제부총리 후보자는 종부세와 재산세 통합에 신중한 검토가 필요하다고 밝혔습니다. 종부세의 인별 전국 합산 기능과 세수 전액이 부동산교부세로 쓰이는 점을 근거로 들었습니다.\n\n2. 제도적 쟁점\n두 세금의 통합은 납세 구조를 단순화할 수 있지만 종부세의 재분배 기능과 지방재정 배분 방식까지 바꿉니다. 실거주 1주택 보호와 비거주·고가주택 과세 강화 역시 거주 판정 기준의 명확성이 필요합니다.\n\n3. 실무 영향\n통합 검토 발언만으로 현행 세금이 바뀌지는 않습니다. 임대인과 실수요자는 정부안, 국회 수정안과 시행 법률을 구분해 보유비용을 계산해야 합니다.\n\n4. 실무 조언\n세목 통합 가능성보다 올해 과세기준일의 보유 현황, 공동명의 특례와 확정 세율을 기준으로 신고 준비를 해야 합니다.\n\n카카오톡 여러분의 부동산";</script>
 </section>
 
-<section class="card" data-slot="15">
-  <div class="card-head">
-    <h2>15. 📰 월부길 정책분석</h2>
-    <button class="copy-btn" onclick="copySection('analysis5', this)">복사</button>
-  </div>
-  <textarea id="ta-analysis5" class="preview" readonly>월급쟁이 부동산 브리핑
+<section class="card">
+<div class="card-head">
+<h2>15. 📰 월부길 정책분석</h2>
+<button class="copy-btn" onclick="copySection('analysis5', this)">복사</button>
+</div>
+<textarea id="ta-analysis5" class="preview" readonly>월급쟁이 부동산 브리핑
 2026년 9월 14일 월요일
 
 “재건축보다 사업 속도 월등”… 아파트 리모델링 주목
@@ -609,15 +518,15 @@ https://n.news.naver.com/mnews/article/022/0004158587
 오늘 챙길 것: 안전성 검토, 사업계획 승인, 공사비 증액 조항과 조합원별 분담금 추정표를 확인해야 합니다.
 
 [월부길] 월급쟁이 부동산 지름길</textarea>
-  <script>window.__content_analysis5 = "월급쟁이 부동산 브리핑\n2026년 9월 14일 월요일\n\n“재건축보다 사업 속도 월등”… 아파트 리모델링 주목\nhttps://n.news.naver.com/mnews/article/022/0004158587\n\n준공 후 15년 이상 된 공동주택은 리모델링을 추진할 수 있고 세대수는 기존의 15% 이내에서 늘릴 수 있습니다. 분당 느티마을4단지는 1006가구를 1149가구로 확대해 2027년 준공을 목표로 공사 중입니다.\n\n리모델링은 재건축보다 일찍 시작할 수 있다는 장점이 있지만 기존 골조와 지하 공사로 난도와 비용이 커질 수 있습니다. 조합설립부터 준공까지 약 13년이 걸리는 사례도 있어 빠르다는 표현만으로 일정을 판단해서는 안 됩니다.\n\n갈아타기를 고민한다면 증축 방식, 세대별 평면 차이와 추가분담금을 확인해야 합니다. 일반분양 증가분이 적으면 공사비 상승을 조합원이 더 많이 부담할 가능성이 있습니다.\n\n오늘 챙길 것: 안전성 검토, 사업계획 승인, 공사비 증액 조항과 조합원별 분담금 추정표를 확인해야 합니다.\n\n[월부길] 월급쟁이 부동산 지름길";</script>
+<script>window.__content_analysis5 = "월급쟁이 부동산 브리핑\n2026년 9월 14일 월요일\n\n“재건축보다 사업 속도 월등”… 아파트 리모델링 주목\nhttps://n.news.naver.com/mnews/article/022/0004158587\n\n준공 후 15년 이상 된 공동주택은 리모델링을 추진할 수 있고 세대수는 기존의 15% 이내에서 늘릴 수 있습니다. 분당 느티마을4단지는 1006가구를 1149가구로 확대해 2027년 준공을 목표로 공사 중입니다.\n\n리모델링은 재건축보다 일찍 시작할 수 있다는 장점이 있지만 기존 골조와 지하 공사로 난도와 비용이 커질 수 있습니다. 조합설립부터 준공까지 약 13년이 걸리는 사례도 있어 빠르다는 표현만으로 일정을 판단해서는 안 됩니다.\n\n갈아타기를 고민한다면 증축 방식, 세대별 평면 차이와 추가분담금을 확인해야 합니다. 일반분양 증가분이 적으면 공사비 상승을 조합원이 더 많이 부담할 가능성이 있습니다.\n\n오늘 챙길 것: 안전성 검토, 사업계획 승인, 공사비 증액 조항과 조합원별 분담금 추정표를 확인해야 합니다.\n\n[월부길] 월급쟁이 부동산 지름길";</script>
 </section>
 
-<section class="card" data-slot="16">
-  <div class="card-head">
-    <h2>16. 📰 부알남 정책분석</h2>
-    <button class="copy-btn" onclick="copySection('analysis2', this)">복사</button>
-  </div>
-  <textarea id="ta-analysis2" class="preview" readonly>부알남의 뉴스 논평 2026년 9월 14일
+<section class="card">
+<div class="card-head">
+<h2>16. 📰 부알남 정책분석</h2>
+<button class="copy-btn" onclick="copySection('analysis2', this)">복사</button>
+</div>
+<textarea id="ta-analysis2" class="preview" readonly>부알남의 뉴스 논평 2026년 9월 14일
 
 문재인 정부 기록 넘나…서울 아파트값 83주째 상승
 https://n.news.naver.com/mnews/article/422/0000905779
@@ -631,15 +540,15 @@ https://n.news.naver.com/mnews/article/422/0000905779
 오늘의 체크포인트: 주간 지수와 함께 실거래 건수, 매물 소진 속도, 신규 대출금리의 변화를 확인해야 합니다.
 
 오픈카톡 [부알남] 부동산 알려주는 남자</textarea>
-  <script>window.__content_analysis2 = "부알남의 뉴스 논평 2026년 9월 14일\n\n문재인 정부 기록 넘나…서울 아파트값 83주째 상승\nhttps://n.news.naver.com/mnews/article/422/0000905779\n\n한국부동산원 통계상 서울 아파트 매매가격은 83주 연속 상승했습니다. 반도체 경기와 구매력 개선, 대출규제 이후에도 상승 흐름이 이어질 수 있다는 관측이 제기됐습니다.\n\n금리와 대출규제는 차입 수요를 낮추지만 현금성 자산과 기존 주택 처분 자금까지 동일하게 통제하지는 못합니다. 공급 부족 기대가 강하면 제한된 매물이 가격을 지지해 거래 감소와 지수 상승이 동시에 나타날 수 있습니다.\n\n실수요자는 장기 상승을 추격 근거로 삼기보다 실제 대출 가능액과 보유기간을 기준으로 판단해야 합니다. 상승 주수는 방향을 보여줄 뿐 개별 단지의 적정 가격이나 환금성을 보장하지 않습니다.\n\n오늘의 체크포인트: 주간 지수와 함께 실거래 건수, 매물 소진 속도, 신규 대출금리의 변화를 확인해야 합니다.\n\n오픈카톡 [부알남] 부동산 알려주는 남자";</script>
+<script>window.__content_analysis2 = "부알남의 뉴스 논평 2026년 9월 14일\n\n문재인 정부 기록 넘나…서울 아파트값 83주째 상승\nhttps://n.news.naver.com/mnews/article/422/0000905779\n\n한국부동산원 통계상 서울 아파트 매매가격은 83주 연속 상승했습니다. 반도체 경기와 구매력 개선, 대출규제 이후에도 상승 흐름이 이어질 수 있다는 관측이 제기됐습니다.\n\n금리와 대출규제는 차입 수요를 낮추지만 현금성 자산과 기존 주택 처분 자금까지 동일하게 통제하지는 못합니다. 공급 부족 기대가 강하면 제한된 매물이 가격을 지지해 거래 감소와 지수 상승이 동시에 나타날 수 있습니다.\n\n실수요자는 장기 상승을 추격 근거로 삼기보다 실제 대출 가능액과 보유기간을 기준으로 판단해야 합니다. 상승 주수는 방향을 보여줄 뿐 개별 단지의 적정 가격이나 환금성을 보장하지 않습니다.\n\n오늘의 체크포인트: 주간 지수와 함께 실거래 건수, 매물 소진 속도, 신규 대출금리의 변화를 확인해야 합니다.\n\n오픈카톡 [부알남] 부동산 알려주는 남자";</script>
 </section>
 
-<section class="card" data-slot="17">
-  <div class="card-head">
-    <h2>17. 📰 부부투 정책분석</h2>
-    <button class="copy-btn" onclick="copySection('analysis6', this)">복사</button>
-  </div>
-  <textarea id="ta-analysis6" class="preview" readonly>부부투 문답노트
+<section class="card">
+<div class="card-head">
+<h2>17. 📰 부부투 정책분석</h2>
+<button class="copy-btn" onclick="copySection('analysis6', this)">복사</button>
+</div>
+<textarea id="ta-analysis6" class="preview" readonly>부부투 문답노트
 2026-09-14
 
 비거주1주택 종부세 55% 폭탄…이형일 청문회 쟁점
@@ -658,15 +567,15 @@ Q. 오늘 뭘 체크해야 하나?
 국회 확정안, 거주기간 인정 기준, 연령·보유 공제와 세 부담 상한 적용 후 금액을 확인해야 합니다.
 
 카카오톡 오픈채팅 [부부투] 부동산 부자들의 투자</textarea>
-  <script>window.__content_analysis6 = "부부투 문답노트\n2026-09-14\n\n비거주1주택 종부세 55% 폭탄…이형일 청문회 쟁점\nhttps://n.news.naver.com/mnews/article/031/0001057883\n\nQ. 무슨 일이 있었나?\n정부안이 확정되면 공시가격 30억원 비거주 1주택자의 종부세 산출액은 774만7000원에서 1203만8000원으로 늘어날 것으로 추산됐습니다. 기본공제는 수정안에서 현행 12억원을 유지합니다.\n\nQ. 표면적 명분과 실제 구조는?\n실거주 보호와 비거주 고가주택 과세 정상화가 명분입니다. 실제로는 주택 수뿐 아니라 거주 이력이 세 부담을 가르는 기준이 되면서 정부의 거주 판정과 자료 확인 권한이 중요해집니다.\n\nQ. 투자자·세입자에게 어떤 영향이 있나?\n비거주 고가주택 보유자는 보유비용 증가를 매도나 임대료 조정 판단에 반영할 수 있습니다. 다만 추산액은 세액공제와 상한 적용 전이므로 개별 부담은 다를 수 있습니다.\n\nQ. 오늘 뭘 체크해야 하나?\n국회 확정안, 거주기간 인정 기준, 연령·보유 공제와 세 부담 상한 적용 후 금액을 확인해야 합니다.\n\n카카오톡 오픈채팅 [부부투] 부동산 부자들의 투자";</script>
+<script>window.__content_analysis6 = "부부투 문답노트\n2026-09-14\n\n비거주1주택 종부세 55% 폭탄…이형일 청문회 쟁점\nhttps://n.news.naver.com/mnews/article/031/0001057883\n\nQ. 무슨 일이 있었나?\n정부안이 확정되면 공시가격 30억원 비거주 1주택자의 종부세 산출액은 774만7000원에서 1203만8000원으로 늘어날 것으로 추산됐습니다. 기본공제는 수정안에서 현행 12억원을 유지합니다.\n\nQ. 표면적 명분과 실제 구조는?\n실거주 보호와 비거주 고가주택 과세 정상화가 명분입니다. 실제로는 주택 수뿐 아니라 거주 이력이 세 부담을 가르는 기준이 되면서 정부의 거주 판정과 자료 확인 권한이 중요해집니다.\n\nQ. 투자자·세입자에게 어떤 영향이 있나?\n비거주 고가주택 보유자는 보유비용 증가를 매도나 임대료 조정 판단에 반영할 수 있습니다. 다만 추산액은 세액공제와 상한 적용 전이므로 개별 부담은 다를 수 있습니다.\n\nQ. 오늘 뭘 체크해야 하나?\n국회 확정안, 거주기간 인정 기준, 연령·보유 공제와 세 부담 상한 적용 후 금액을 확인해야 합니다.\n\n카카오톡 오픈채팅 [부부투] 부동산 부자들의 투자";</script>
 </section>
 
-<section class="card" data-slot="18">
-  <div class="card-head">
-    <h2>18. 📰 비밀노트 정책 분석</h2>
-    <button class="copy-btn" onclick="copySection('analysis1', this)">복사</button>
-  </div>
-  <textarea id="ta-analysis1" class="preview" readonly>프롭-페서가 말아주는 뉴스로 생각하기
+<section class="card">
+<div class="card-head">
+<h2>18. 📰 비밀노트 정책 분석</h2>
+<button class="copy-btn" onclick="copySection('analysis1', this)">복사</button>
+</div>
+<textarea id="ta-analysis1" class="preview" readonly>프롭-페서가 말아주는 뉴스로 생각하기
 2026-09-14
 
 서울 아파트값 83주째 상승…문재인 정부 시절 85주 기록 경신 눈앞
@@ -681,15 +590,15 @@ https://n.news.naver.com/mnews/article/028/0002822892
 오늘의 체크포인트: 서울 평균 상승률보다 자치구별 거래량, 전세 매물과 입주 예정 물량을 함께 확인해야 합니다.
 
 옵챗 부동산 부자들의 비밀노트</textarea>
-  <script>window.__content_analysis1 = "프롭-페서가 말아주는 뉴스로 생각하기\n2026-09-14\n\n서울 아파트값 83주째 상승…문재인 정부 시절 85주 기록 경신 눈앞\nhttps://n.news.naver.com/mnews/article/028/0002822892\n\n서울 아파트값은 83주 연속 상승해 기존 최장 기록인 85주에 근접했습니다. 상승 주도 지역은 강남권에서 성북·구로·강서 등 중저가 밀집 지역으로 이동했습니다.\n\n대출규제와 고가주택 세 부담 강화는 과열을 억제하려는 정책입니다. 그러나 전월세 매물 부족과 입주물량 감소가 남아 있으면 수요가 사라지기보다 규제 영향이 작은 가격대로 이동해 외곽의 키 맞추기를 만들 수 있습니다.\n\n실수요자는 상승 기간이라는 기록보다 목표 지역의 소득 대비 가격과 전세가율을 봐야 합니다. 투자자도 세제안과 금리 인상이 강남에서 외곽으로 전이될지 거래량을 통해 확인할 필요가 있습니다.\n\n오늘의 체크포인트: 서울 평균 상승률보다 자치구별 거래량, 전세 매물과 입주 예정 물량을 함께 확인해야 합니다.\n\n옵챗 부동산 부자들의 비밀노트";</script>
+<script>window.__content_analysis1 = "프롭-페서가 말아주는 뉴스로 생각하기\n2026-09-14\n\n서울 아파트값 83주째 상승…문재인 정부 시절 85주 기록 경신 눈앞\nhttps://n.news.naver.com/mnews/article/028/0002822892\n\n서울 아파트값은 83주 연속 상승해 기존 최장 기록인 85주에 근접했습니다. 상승 주도 지역은 강남권에서 성북·구로·강서 등 중저가 밀집 지역으로 이동했습니다.\n\n대출규제와 고가주택 세 부담 강화는 과열을 억제하려는 정책입니다. 그러나 전월세 매물 부족과 입주물량 감소가 남아 있으면 수요가 사라지기보다 규제 영향이 작은 가격대로 이동해 외곽의 키 맞추기를 만들 수 있습니다.\n\n실수요자는 상승 기간이라는 기록보다 목표 지역의 소득 대비 가격과 전세가율을 봐야 합니다. 투자자도 세제안과 금리 인상이 강남에서 외곽으로 전이될지 거래량을 통해 확인할 필요가 있습니다.\n\n오늘의 체크포인트: 서울 평균 상승률보다 자치구별 거래량, 전세 매물과 입주 예정 물량을 함께 확인해야 합니다.\n\n옵챗 부동산 부자들의 비밀노트";</script>
 </section>
 
-<section class="card" data-slot="19">
-  <div class="card-head">
-    <h2>19. 부동산 컨텐츠 1</h2>
-    <button class="copy-btn" onclick="copySection('daily19', this)">복사</button>
-  </div>
-  <textarea id="ta-daily19" class="preview" readonly>🛠️ 오늘의 집 관리
+<section class="card">
+<div class="card-head">
+<h2>19. 부동산 컨텐츠 1</h2>
+<button class="copy-btn" onclick="copySection('daily19', this)">복사</button>
+</div>
+<textarea id="ta-daily19" class="preview" readonly>🛠️ 오늘의 집 관리
 
 2026년 9월 14일
 
@@ -714,15 +623,15 @@ https://n.news.naver.com/mnews/article/028/0002822892
 ‘욕실이 습하다’보다 ‘샤워하지 않은 오전에도 문 앞 바닥이 젖어 있다’는 설명이 증상을 전달하기 정확합니다.
 
 표면 청소 뒤에 재발하는지 보아야 단순 물기인지 추가 점검이 필요한지 구분할 단서가 생깁니다.</textarea>
-  <script>window.__content_daily19 = "🛠️ 오늘의 집 관리\n\n2026년 9월 14일\n\n욕실 물기는 사용 직후 줄여보세요\n\n샤워 후 바닥에 남는 물을 보면 청소할 곳과 점검받을 곳을 나눌 수 있습니다.\n\n물이 배수구로 흐르지 않고 특정 모서리에 계속 모이면 위치를 찍어두세요.\n\n배수구 위에 쌓인 머리카락은 안전하게 걷어내고, 사용 직후 물기는 밀어내세요.\n\n환기설비는 제품 안내에 맞게 사용하세요.\n\n미끄러운 바닥에 서서 힘을 주거나 배관을 분해하지 마세요.\n\n눈에 보이는 이물질 제거와 배관·바닥 구조 문제의 해결은 다른 작업입니다.\n\n이물질을 제거했는데도 배수가 느리면 세정제를 반복해서 붓기보다 점검을 요청하세요.\n\n물을 쓰지 않았는데 같은 자리만 젖는다면 발견 시간과 사진을 남기세요.\n\n‘욕실이 습하다’보다 ‘샤워하지 않은 오전에도 문 앞 바닥이 젖어 있다’는 설명이 증상을 전달하기 정확합니다.\n\n표면 청소 뒤에 재발하는지 보아야 단순 물기인지 추가 점검이 필요한지 구분할 단서가 생깁니다.";</script>
+<script>window.__content_daily19 = "🛠️ 오늘의 집 관리\n\n2026년 9월 14일\n\n욕실 물기는 사용 직후 줄여보세요\n\n샤워 후 바닥에 남는 물을 보면 청소할 곳과 점검받을 곳을 나눌 수 있습니다.\n\n물이 배수구로 흐르지 않고 특정 모서리에 계속 모이면 위치를 찍어두세요.\n\n배수구 위에 쌓인 머리카락은 안전하게 걷어내고, 사용 직후 물기는 밀어내세요.\n\n환기설비는 제품 안내에 맞게 사용하세요.\n\n미끄러운 바닥에 서서 힘을 주거나 배관을 분해하지 마세요.\n\n눈에 보이는 이물질 제거와 배관·바닥 구조 문제의 해결은 다른 작업입니다.\n\n이물질을 제거했는데도 배수가 느리면 세정제를 반복해서 붓기보다 점검을 요청하세요.\n\n물을 쓰지 않았는데 같은 자리만 젖는다면 발견 시간과 사진을 남기세요.\n\n‘욕실이 습하다’보다 ‘샤워하지 않은 오전에도 문 앞 바닥이 젖어 있다’는 설명이 증상을 전달하기 정확합니다.\n\n표면 청소 뒤에 재발하는지 보아야 단순 물기인지 추가 점검이 필요한지 구분할 단서가 생깁니다.";</script>
 </section>
 
-<section class="card" data-slot="20">
-  <div class="card-head">
-    <h2>20. 부동산 컨텐츠 2</h2>
-    <button class="copy-btn" onclick="copySection('daily20', this)">복사</button>
-  </div>
-  <textarea id="ta-daily20" class="preview" readonly>📦 이사 준비 한 가지
+<section class="card">
+<div class="card-head">
+<h2>20. 부동산 컨텐츠 2</h2>
+<button class="copy-btn" onclick="copySection('daily20', this)">복사</button>
+</div>
+<textarea id="ta-daily20" class="preview" readonly>📦 이사 준비 한 가지
 
 2026년 9월 14일
 
@@ -749,15 +658,15 @@ https://n.news.naver.com/mnews/article/028/0002822892
 직접 문짝을 떼거나 무거운 가구를 기울여 시험하지 마세요.
 
 업체가 확인한 반입 방법과 추가 비용을 기록해 두어야 현장에서 처음 듣는 조건 때문에 일정이 멈추는 일을 줄일 수 있습니다.</textarea>
-  <script>window.__content_daily20 = "📦 이사 준비 한 가지\n\n2026년 9월 14일\n\n큰 가구는 설치 자리와 반입 경로를 따로 재세요\n\n소파가 거실에 들어간다고 현관과 복도를 통과할 수 있는 것은 아닙니다.\n\n이사 전에 지나갈 길도 재세요.\n\n가구의 가로·세로·높이를 적고 현관 문폭, 복도에서 꺾이는 구간, 엘리베이터 출입구를 재세요.\n\n문을 열었을 때 실제로 통과할 수 있는 폭을 기준으로 삼으세요.\n\n길이만 비교해 통과를 확정하지 말고 사진과 치수를 이사업체에 보내 회전하거나 분해해야 하는지 물으세요.\n\n분해 가능한 부품과 다시 조립할 담당자도 정해야 합니다.\n\n반입이 애매하면 이사 당일에 판단하도록 남겨두지 마세요.\n\n분해 작업비나 별도 장비가 필요한지 견적에 반영하세요.\n\n건물의 장비 사용과 차량 진입 조건도 관리 담당자에게 확인하세요.\n\n직접 문짝을 떼거나 무거운 가구를 기울여 시험하지 마세요.\n\n업체가 확인한 반입 방법과 추가 비용을 기록해 두어야 현장에서 처음 듣는 조건 때문에 일정이 멈추는 일을 줄일 수 있습니다.";</script>
+<script>window.__content_daily20 = "📦 이사 준비 한 가지\n\n2026년 9월 14일\n\n큰 가구는 설치 자리와 반입 경로를 따로 재세요\n\n소파가 거실에 들어간다고 현관과 복도를 통과할 수 있는 것은 아닙니다.\n\n이사 전에 지나갈 길도 재세요.\n\n가구의 가로·세로·높이를 적고 현관 문폭, 복도에서 꺾이는 구간, 엘리베이터 출입구를 재세요.\n\n문을 열었을 때 실제로 통과할 수 있는 폭을 기준으로 삼으세요.\n\n길이만 비교해 통과를 확정하지 말고 사진과 치수를 이사업체에 보내 회전하거나 분해해야 하는지 물으세요.\n\n분해 가능한 부품과 다시 조립할 담당자도 정해야 합니다.\n\n반입이 애매하면 이사 당일에 판단하도록 남겨두지 마세요.\n\n분해 작업비나 별도 장비가 필요한지 견적에 반영하세요.\n\n건물의 장비 사용과 차량 진입 조건도 관리 담당자에게 확인하세요.\n\n직접 문짝을 떼거나 무거운 가구를 기울여 시험하지 마세요.\n\n업체가 확인한 반입 방법과 추가 비용을 기록해 두어야 현장에서 처음 듣는 조건 때문에 일정이 멈추는 일을 줄일 수 있습니다.";</script>
 </section>
 
-<section class="card" data-slot="21">
-  <div class="card-head">
-    <h2>21. 부동산 컨텐츠 3</h2>
-    <button class="copy-btn" onclick="copySection('daily21', this)">복사</button>
-  </div>
-  <textarea id="ta-daily21" class="preview" readonly>⭕ 오늘의 부동산 OX
+<section class="card">
+<div class="card-head">
+<h2>21. 부동산 컨텐츠 3</h2>
+<button class="copy-btn" onclick="copySection('daily21', this)">복사</button>
+</div>
+<textarea id="ta-daily21" class="preview" readonly>⭕ 오늘의 부동산 OX
 
 2026년 9월 14일
 
@@ -775,22 +684,22 @@ https://n.news.naver.com/mnews/article/028/0002822892
 
 집주인이 매도를 보류하거나 중개업소를 바꾼 경우도 있기 때문입니다.
 
-매물이 사라지면 중개인에게 &#x27;계약이 체결됐습니까, 아니면 매물을 거둔 겁니까?&#x27;라고 물으세요.
+매물이 사라지면 중개인에게 '계약이 체결됐습니까, 아니면 매물을 거둔 겁니까?'라고 물으세요.
 
 실거래를 비교할 때는 계약일·면적·층을 함께 적고 취소 표시가 있는지도 보세요.
 
 신고까지 시차가 있으므로 아직 기록이 없다는 이유만으로 계약이 없었다고 단정하지 마세요.
 
 호가 상승과 거래 성립을 구분해야 시장 분위기를 과장해서 읽지 않습니다.</textarea>
-  <script>window.__content_daily21 = "⭕ 오늘의 부동산 OX\n\n2026년 9월 14일\n\n매물의 호가와 실제 계약가격은 다를 수 있을까요?\n\n정답은 O입니다.\n\n호가는 집주인이 부른 가격이고, 거래가격은 계약이 성립한 가격입니다.\n\n예를 들어 어제 8억원이던 매물의 호가가 오늘 8억5천만원으로 바뀌었다고 해서 5천만원 오른 가격에 팔린 것은 아닙니다.\n\n가격을 올린 뒤 매수 문의가 끊길 수도 있습니다.\n\n매물이 목록에서 사라져도 계약됐다고 단정할 수 없습니다.\n\n집주인이 매도를 보류하거나 중개업소를 바꾼 경우도 있기 때문입니다.\n\n매물이 사라지면 중개인에게 '계약이 체결됐습니까, 아니면 매물을 거둔 겁니까?'라고 물으세요.\n\n실거래를 비교할 때는 계약일·면적·층을 함께 적고 취소 표시가 있는지도 보세요.\n\n신고까지 시차가 있으므로 아직 기록이 없다는 이유만으로 계약이 없었다고 단정하지 마세요.\n\n호가 상승과 거래 성립을 구분해야 시장 분위기를 과장해서 읽지 않습니다.";</script>
+<script>window.__content_daily21 = "⭕ 오늘의 부동산 OX\n\n2026년 9월 14일\n\n매물의 호가와 실제 계약가격은 다를 수 있을까요?\n\n정답은 O입니다.\n\n호가는 집주인이 부른 가격이고, 거래가격은 계약이 성립한 가격입니다.\n\n예를 들어 어제 8억원이던 매물의 호가가 오늘 8억5천만원으로 바뀌었다고 해서 5천만원 오른 가격에 팔린 것은 아닙니다.\n\n가격을 올린 뒤 매수 문의가 끊길 수도 있습니다.\n\n매물이 목록에서 사라져도 계약됐다고 단정할 수 없습니다.\n\n집주인이 매도를 보류하거나 중개업소를 바꾼 경우도 있기 때문입니다.\n\n매물이 사라지면 중개인에게 '계약이 체결됐습니까, 아니면 매물을 거둔 겁니까?'라고 물으세요.\n\n실거래를 비교할 때는 계약일·면적·층을 함께 적고 취소 표시가 있는지도 보세요.\n\n신고까지 시차가 있으므로 아직 기록이 없다는 이유만으로 계약이 없었다고 단정하지 마세요.\n\n호가 상승과 거래 성립을 구분해야 시장 분위기를 과장해서 읽지 않습니다.";</script>
 </section>
 
-<section class="card" data-slot="22">
-  <div class="card-head">
-    <h2>22. 부동산 컨텐츠 4</h2>
-    <button class="copy-btn" onclick="copySection('daily22', this)">복사</button>
-  </div>
-  <textarea id="ta-daily22" class="preview" readonly>🏠 집 보러 갈 때 한 가지
+<section class="card">
+<div class="card-head">
+<h2>22. 부동산 컨텐츠 4</h2>
+<button class="copy-btn" onclick="copySection('daily22', this)">복사</button>
+</div>
+<textarea id="ta-daily22" class="preview" readonly>🏠 집 보러 갈 때 한 가지
 
 2026년 9월 14일
 
@@ -804,7 +713,7 @@ https://n.news.naver.com/mnews/article/028/0002822892
 
 맞은편에 깊이 60cm 서랍장을 놓으면 통로는 40cm로 줄어듭니다.
 
-서랍을 앞으로 빼는 공간까지 필요하므로 &#x27;침대와 장이 모두 들어간다&#x27;는 계산만으로는 부족합니다.
+서랍을 앞으로 빼는 공간까지 필요하므로 '침대와 장이 모두 들어간다'는 계산만으로는 부족합니다.
 
 책상도 상판 자리 외에 의자를 뒤로 빼고 앉을 자리가 필요합니다.
 
@@ -815,15 +724,15 @@ https://n.news.naver.com/mnews/article/028/0002822892
 간단한 평면도에 가구를 그렸을 때 문이나 통로와 겹치면 배치를 바꾸세요.
 
 입주한 뒤 가구를 처분하지 않으려면, 빈방의 느낌보다 치수와 여닫는 동작으로 결정하셔야 합니다.</textarea>
-  <script>window.__content_daily22 = "🏠 집 보러 갈 때 한 가지\n\n2026년 9월 14일\n\n침대가 들어가도 방문이 안 열릴 수 있습니다\n\n침대가 들어가도 서랍이 안 열리면 방 배치는 실패입니다.\n\n방 크기에서 가구 크기를 빼보셔야 합니다.\n\n가상 예시로 방 폭이 250cm이고 침대 폭이 150cm라면 100cm가 남습니다.\n\n맞은편에 깊이 60cm 서랍장을 놓으면 통로는 40cm로 줄어듭니다.\n\n서랍을 앞으로 빼는 공간까지 필요하므로 '침대와 장이 모두 들어간다'는 계산만으로는 부족합니다.\n\n책상도 상판 자리 외에 의자를 뒤로 빼고 앉을 자리가 필요합니다.\n\n방문 전 지금 쓰는 침대·서랍장·책상의 치수를 적으세요.\n\n현장에서는 방 가로·세로와 기둥 돌출부를 재고, 방문과 붙박이장 문을 끝까지 열어보세요.\n\n간단한 평면도에 가구를 그렸을 때 문이나 통로와 겹치면 배치를 바꾸세요.\n\n입주한 뒤 가구를 처분하지 않으려면, 빈방의 느낌보다 치수와 여닫는 동작으로 결정하셔야 합니다.";</script>
+<script>window.__content_daily22 = "🏠 집 보러 갈 때 한 가지\n\n2026년 9월 14일\n\n침대가 들어가도 방문이 안 열릴 수 있습니다\n\n침대가 들어가도 서랍이 안 열리면 방 배치는 실패입니다.\n\n방 크기에서 가구 크기를 빼보셔야 합니다.\n\n가상 예시로 방 폭이 250cm이고 침대 폭이 150cm라면 100cm가 남습니다.\n\n맞은편에 깊이 60cm 서랍장을 놓으면 통로는 40cm로 줄어듭니다.\n\n서랍을 앞으로 빼는 공간까지 필요하므로 '침대와 장이 모두 들어간다'는 계산만으로는 부족합니다.\n\n책상도 상판 자리 외에 의자를 뒤로 빼고 앉을 자리가 필요합니다.\n\n방문 전 지금 쓰는 침대·서랍장·책상의 치수를 적으세요.\n\n현장에서는 방 가로·세로와 기둥 돌출부를 재고, 방문과 붙박이장 문을 끝까지 열어보세요.\n\n간단한 평면도에 가구를 그렸을 때 문이나 통로와 겹치면 배치를 바꾸세요.\n\n입주한 뒤 가구를 처분하지 않으려면, 빈방의 느낌보다 치수와 여닫는 동작으로 결정하셔야 합니다.";</script>
 </section>
 
-<section class="card" data-slot="23">
-  <div class="card-head">
-    <h2>23. 부동산 컨텐츠 5</h2>
-    <button class="copy-btn" onclick="copySection('daily23', this)">복사</button>
-  </div>
-  <textarea id="ta-daily23" class="preview" readonly>💬 부동산 광고 해석기
+<section class="card">
+<div class="card-head">
+<h2>23. 부동산 컨텐츠 5</h2>
+<button class="copy-btn" onclick="copySection('daily23', this)">복사</button>
+</div>
+<textarea id="ta-daily23" class="preview" readonly>💬 부동산 광고 해석기
 
 2026년 9월 14일
 
@@ -848,15 +757,15 @@ https://n.news.naver.com/mnews/article/028/0002822892
 집을 다시 볼 수 있다면 수리 완료 여부를 확인한 뒤 이사 준비를 마무리하세요.
 
 입주 시점이 중요한 분에게는 빈집이라는 사진보다 열쇠를 받고 실제 사용할 수 있는 날짜가 중요합니다.</textarea>
-  <script>window.__content_daily23 = "💬 부동산 광고 해석기\n\n2026년 9월 14일\n\n‘즉시 입주’에도 확인할 날짜가 있습니다\n\n광고 문구: ‘즉시 입주’.\n\n방이 비어 있다는 뜻인지, 오늘 열쇠를 받아 생활할 수 있다는 뜻인지 구분하세요.\n\n집은 비어 있어도 도배가 끝나지 않았거나 남은 짐이 있을 수 있습니다.\n\n잔금일, 열쇠 인도일, 수리 완료일이 서로 다르면 이사 차량만 먼저 도착하는 상황이 생깁니다.\n\n중개인에게 ‘언제부터 들어갈 수 있나요?’라고만 묻지 말고 이 세 날짜를 각각 물으세요.\n\n날짜를 말하지 않는 ‘바로 가능하다’는 답은 이사 일정을 확정할 근거로 부족합니다.\n\n이삿짐을 예약하기 전에 남은 짐 처리, 청소, 도배, 고장 수리 중 어떤 항목을 언제 마치는지 적으세요.\n\n인도받을 상태와 날짜는 합의 내용으로 남기세요.\n\n집을 다시 볼 수 있다면 수리 완료 여부를 확인한 뒤 이사 준비를 마무리하세요.\n\n입주 시점이 중요한 분에게는 빈집이라는 사진보다 열쇠를 받고 실제 사용할 수 있는 날짜가 중요합니다.";</script>
+<script>window.__content_daily23 = "💬 부동산 광고 해석기\n\n2026년 9월 14일\n\n‘즉시 입주’에도 확인할 날짜가 있습니다\n\n광고 문구: ‘즉시 입주’.\n\n방이 비어 있다는 뜻인지, 오늘 열쇠를 받아 생활할 수 있다는 뜻인지 구분하세요.\n\n집은 비어 있어도 도배가 끝나지 않았거나 남은 짐이 있을 수 있습니다.\n\n잔금일, 열쇠 인도일, 수리 완료일이 서로 다르면 이사 차량만 먼저 도착하는 상황이 생깁니다.\n\n중개인에게 ‘언제부터 들어갈 수 있나요?’라고만 묻지 말고 이 세 날짜를 각각 물으세요.\n\n날짜를 말하지 않는 ‘바로 가능하다’는 답은 이사 일정을 확정할 근거로 부족합니다.\n\n이삿짐을 예약하기 전에 남은 짐 처리, 청소, 도배, 고장 수리 중 어떤 항목을 언제 마치는지 적으세요.\n\n인도받을 상태와 날짜는 합의 내용으로 남기세요.\n\n집을 다시 볼 수 있다면 수리 완료 여부를 확인한 뒤 이사 준비를 마무리하세요.\n\n입주 시점이 중요한 분에게는 빈집이라는 사진보다 열쇠를 받고 실제 사용할 수 있는 날짜가 중요합니다.";</script>
 </section>
 
-<section class="card" data-slot="24">
-  <div class="card-head">
-    <h2>24. 부동산 컨텐츠 6</h2>
-    <button class="copy-btn" onclick="copySection('daily24', this)">복사</button>
-  </div>
-  <textarea id="ta-daily24" class="preview" readonly>🧠 돈에 관한 착각
+<section class="card">
+<div class="card-head">
+<h2>24. 부동산 컨텐츠 6</h2>
+<button class="copy-btn" onclick="copySection('daily24', this)">복사</button>
+</div>
+<textarea id="ta-daily24" class="preview" readonly>🧠 돈에 관한 착각
 
 2026년 9월 14일
 
@@ -881,181 +790,18 @@ https://n.news.naver.com/mnews/article/028/0002822892
 수선비는 매달 조금씩 나오는 대신 한 번에 크게 생길 수 있으므로 연간 합계와 지출 시점도 구분하세요.
 
 수익률 광고를 볼 때는 임대료 총액만 보지 말고 어떤 비용과 공실 기간을 가정했는지 계산표를 요청하세요.</textarea>
-  <script>window.__content_daily24 = "🧠 돈에 관한 착각\n\n2026년 9월 14일\n\n월세 수입이 전부 남는 돈일까요?\n\n월세 100만원을 받는다고 한 해 1,200만원이 전부 남는 것은 아닙니다.\n\n못 받은 달과 실제 지출을 빼야 합니다.\n\n단순 예시로 12개월 중 한 달이 비어 있으면 임대료 수입은 1,100만원입니다.\n\n그해 수선비로 100만원을 썼다면 두 항목만 반영한 잔액은 1,000만원입니다.\n\n이 예시에는 세금, 대출이자, 중개 관련 비용 등 다른 항목을 넣지 않았습니다.\n\n임대료를 12배 한 숫자는 비용 반영 전 예상 수입이지 확정된 순수익이 아닙니다.\n\n달력에 임대료가 들어올 날과 이자·관리·수리비가 나갈 날을 따로 적으세요.\n\n공실 때도 계속 나가는 비용이 있는지 보세요.\n\n수선비는 매달 조금씩 나오는 대신 한 번에 크게 생길 수 있으므로 연간 합계와 지출 시점도 구분하세요.\n\n수익률 광고를 볼 때는 임대료 총액만 보지 말고 어떤 비용과 공실 기간을 가정했는지 계산표를 요청하세요.";</script>
+<script>window.__content_daily24 = "🧠 돈에 관한 착각\n\n2026년 9월 14일\n\n월세 수입이 전부 남는 돈일까요?\n\n월세 100만원을 받는다고 한 해 1,200만원이 전부 남는 것은 아닙니다.\n\n못 받은 달과 실제 지출을 빼야 합니다.\n\n단순 예시로 12개월 중 한 달이 비어 있으면 임대료 수입은 1,100만원입니다.\n\n그해 수선비로 100만원을 썼다면 두 항목만 반영한 잔액은 1,000만원입니다.\n\n이 예시에는 세금, 대출이자, 중개 관련 비용 등 다른 항목을 넣지 않았습니다.\n\n임대료를 12배 한 숫자는 비용 반영 전 예상 수입이지 확정된 순수익이 아닙니다.\n\n달력에 임대료가 들어올 날과 이자·관리·수리비가 나갈 날을 따로 적으세요.\n\n공실 때도 계속 나가는 비용이 있는지 보세요.\n\n수선비는 매달 조금씩 나오는 대신 한 번에 크게 생길 수 있으므로 연간 합계와 지출 시점도 구분하세요.\n\n수익률 광고를 볼 때는 임대료 총액만 보지 말고 어떤 비용과 공실 기간을 가정했는지 계산표를 요청하세요.";</script>
 </section>
-
-<section class="card" data-slot="25">
-  <div class="card-head">
-    <h2>25. 🏢 전국 신규 등록 실거래가</h2>
-    <button class="copy-btn" onclick="copySection('transactions', this)">복사</button>
-  </div>
-  <textarea id="ta-transactions" class="preview" readonly>9/13(일) 신규 등록 실거래가
-
-전국 32건 (🔥4)
-🚀 1억클럽 신고가 0건
-💎 1억클럽 0건
-
-[지역별 실거래가]
-경기 6건 (🔥2)
-서울 3건 (🔥1)
-충북 2건 (🔥1)
-
-[주요 신고가]
-중구    덕수궁롯데캐슬 28평 15억 신고가 5.4천/평
-안양동안  평촌트리지아 25평 12억 신고가 4.8천/평
-안양동안  꿈마을(동아) 47평 18.15억 신고가 3.9천/평
-
-[눈에 띄는 거래]
-영등포구  롯데캐슬아이비 43평 26억 6천/평
-안양동안  샛별(한양2,3단지) 23평 8억 3.5천/평</textarea>
-  <script>window.__content_transactions = "9/13(일) 신규 등록 실거래가\n\n전국 32건 (🔥4)\n🚀 1억클럽 신고가 0건\n💎 1억클럽 0건\n\n[지역별 실거래가]\n경기 6건 (🔥2)\n서울 3건 (🔥1)\n충북 2건 (🔥1)\n\n[주요 신고가]\n중구    덕수궁롯데캐슬 28평 15억 신고가 5.4천/평\n안양동안  평촌트리지아 25평 12억 신고가 4.8천/평\n안양동안  꿈마을(동아) 47평 18.15억 신고가 3.9천/평\n\n[눈에 띄는 거래]\n영등포구  롯데캐슬아이비 43평 26억 6천/평\n안양동안  샛별(한양2,3단지) 23평 8억 3.5천/평";</script>
-</section>
-</div>
 
 <script>
-// 홈 화면/사파리가 옛 사본을 보여줄 때: 페이지 날짜가 오늘과 다르면 캐시를 우회해 1회 다시 불러온다
 var BUILD_DATE = '2026-09-14';
-(function() {
-  var d = new Date();
-  var today = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
-  if (today !== BUILD_DATE && location.search.indexOf('r=') === -1) {
-    location.replace(location.pathname + '?r=' + Date.now());
-  }
+(function(){
+var d=new Date();
+var today = d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+if(today!==BUILD_DATE && location.search.indexOf('r=')===-1){location.replace(location.pathname+'?r='+Date.now());}
 })();
-
-function markCopied(btn) {
-  const original = btn.textContent;
-  btn.textContent = '복사됨';
-  btn.classList.add('copied');
-  setTimeout(() => {
-    btn.textContent = original;
-    btn.classList.remove('copied');
-  }, 1200);
-}
-
-function copySection(key, btn) {
-  // execCommand는 동기적으로 바로 결과가 나오고 권한 프롬프트로 멈추는 일이
-  // 없어서 이걸 기본으로 쓴다. navigator.clipboard는 일부 브라우저(특히
-  // 자동화/인앱 웹뷰 환경)에서 권한 대기 상태로 무한정 멈출 수 있어서
-  // 보조 수단으로만 쓴다.
-  const ta = document.getElementById('ta-' + key);
-  let copied = false;
-  try {
-    ta.style.position = 'fixed';
-    ta.style.top = '0';
-    ta.focus();
-    ta.select();
-    ta.setSelectionRange(0, ta.value.length);
-    copied = document.execCommand('copy');
-  } catch (e) {
-    copied = false;
-  }
-
-  if (copied) {
-    markCopied(btn);
-    return;
-  }
-
-  const text = window['__content_' + key];
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(text).then(() => markCopied(btn)).catch(() => {
-      alert('복사에 실패했습니다. 아래 미리보기 텍스트를 직접 길게 눌러 복사해주세요.');
-    });
-  } else {
-    alert('복사에 실패했습니다. 아래 미리보기 텍스트를 직접 길게 눌러 복사해주세요.');
-  }
-}
+function markCopied(btn){var o=btn.textContent;btn.textContent='복사됨';btn.classList.add('copied');setTimeout(function(){btn.textContent=o;btn.classList.remove('copied');},1200);}
+function copySection(key,btn){var ta=document.getElementById('ta-'+key);var copied=false;try{ta.style.position='fixed';ta.style.top='0';ta.focus();ta.select();ta.setSelectionRange(0,ta.value.length);copied=document.execCommand('copy');}catch(e){copied=false;}if(copied){markCopied(btn);return;}var text=window['__content_'+key];if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){markCopied(btn);}).catch(function(){alert('복사에 실패했습니다.');});}else{alert('복사에 실패했습니다.');}}
 </script>
-
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
-<script>
-(function() {
-  var firebaseConfig = {"apiKey": "AIzaSyBL3jjmzmNrYjqSc5jzt1F0kcaLLS55bEY", "authDomain": "naver-realestate-briefing.firebaseapp.com", "projectId": "naver-realestate-briefing", "storageBucket": "naver-realestate-briefing.firebasestorage.app", "messagingSenderId": "515367104622", "appId": "1:515367104622:web:c746a72e7fa0090663767f"};
-  firebase.initializeApp(firebaseConfig);
-  var auth = firebase.auth();
-  var db = firebase.firestore();
-
-  function show(id) {
-    ['gate-loading', 'gate-login', 'gate-pending'].forEach(function(x) {
-      document.getElementById(x).style.display = (x === id) ? 'block' : 'none';
-    });
-  }
-
-  function revealContent(isAdmin) {
-    document.getElementById('auth-gate').style.display = 'none';
-    document.getElementById('main-content').style.display = 'block';
-    var bar = document.createElement('div');
-    bar.style.cssText = 'position:fixed;top:0;left:0;right:0;background:#fff;border-bottom:1px solid #eee;padding:8px 16px;display:flex;justify-content:flex-end;gap:8px;z-index:100;font-size:12px;';
-    if (isAdmin) {
-      var a = document.createElement('a');
-      a.href = 'admin.html';
-      a.textContent = '🔑 관리자 승인 페이지';
-      a.style.cssText = 'color:#3b82f6;text-decoration:none;font-weight:600;';
-      bar.appendChild(a);
-    }
-    var out = document.createElement('button');
-    out.textContent = '로그아웃';
-    out.style.cssText = 'border:1px solid #ddd;border-radius:12px;background:#fff;padding:4px 10px;color:#888;';
-    out.onclick = function() { auth.signOut(); };
-    bar.appendChild(out);
-    document.body.insertBefore(bar, document.body.firstChild);
-    document.body.style.paddingTop = '40px';
-  }
-
-  auth.onAuthStateChanged(function(user) {
-    if (!user) { show('gate-login'); return; }
-    db.collection('users').doc(user.uid).get().then(function(doc) {
-      if (doc.exists && doc.data().approved === true) {
-        revealContent(doc.data().isAdmin === true);
-      } else {
-        show('gate-pending');
-      }
-    }).catch(function() { show('gate-pending'); });
-  });
-
-  document.getElementById('gate-login-btn').addEventListener('click', function() {
-    var email = document.getElementById('gate-email').value.trim();
-    var pw = document.getElementById('gate-password').value;
-    var err = document.getElementById('gate-error');
-    err.style.display = 'none';
-    auth.signInWithEmailAndPassword(email, pw).catch(function(e) {
-      err.textContent = '로그인 실패: 이메일 또는 비밀번호를 확인해주세요.';
-      err.style.display = 'block';
-    });
-  });
-
-  document.getElementById('gate-signup-btn').addEventListener('click', function() {
-    var email = document.getElementById('gate-email').value.trim();
-    var pw = document.getElementById('gate-password').value;
-    var err = document.getElementById('gate-error');
-    err.style.display = 'none';
-    if (!email || !pw || pw.length < 6) {
-      err.textContent = '이메일과 6자 이상 비밀번호를 입력해주세요.';
-      err.style.display = 'block';
-      return;
-    }
-    auth.createUserWithEmailAndPassword(email, pw).then(function(cred) {
-      return db.collection('users').doc(cred.user.uid).set({
-        email: email,
-        approved: false,
-        isAdmin: false,
-        createdAt: firebase.firestore.FieldValue.serverTimestamp()
-      });
-    }).then(function() {
-      show('gate-pending');
-    }).catch(function(e) {
-      err.textContent = (e.code === 'auth/email-already-in-use') ? '이미 가입된 이메일입니다.' : ('가입 실패: ' + e.message);
-      err.style.display = 'block';
-    });
-  });
-
-  document.getElementById('gate-logout-btn').addEventListener('click', function() {
-    auth.signOut();
-  });
-})();
-</script>
-
 </body>
 </html>
