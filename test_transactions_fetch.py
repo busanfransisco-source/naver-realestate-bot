@@ -1,8 +1,13 @@
 import unittest
 from datetime import date
+from pathlib import Path
+import json
+import os
+import tempfile
 
 from realestate_transactions_fetch import (
     build_digest,
+    already_collected_today,
     classify_records,
     complex_area_key,
     format_per_pyeong,
@@ -98,6 +103,24 @@ class TransactionDigestTests(unittest.TestCase):
         )
         rows = parse_government_csv(source.encode("cp949"))
         self.assertEqual([row["building_name"] for row in rows], ["덕수궁롯데캐슬"])
+
+    def test_same_day_success_skips_retry(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            previous = os.getcwd()
+            os.chdir(tmp)
+            try:
+                target = date(2026, 9, 14)
+                Path("transactions-state.json").write_text(
+                    json.dumps({"version": 4, "last_output_date": "2026-09-14"}),
+                    encoding="utf-8",
+                )
+                Path("transactions.txt").write_text(
+                    "9/14(월) 신규 등록 실거래가\n\n전국 57건 (🔥5)\n",
+                    encoding="utf-8",
+                )
+                self.assertTrue(already_collected_today(target))
+            finally:
+                os.chdir(previous)
 
 
 if __name__ == "__main__":

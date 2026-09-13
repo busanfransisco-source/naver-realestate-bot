@@ -7,6 +7,7 @@
 
 from __future__ import annotations
 
+import argparse
 import csv
 import hashlib
 import http.cookiejar
@@ -471,9 +472,36 @@ def write_outputs(today, content):
         path.write_text(content.rstrip() + "\n", encoding="utf-8")
 
 
-def main():
+def already_collected_today(today):
+    """오늘 정상 산출물이 이미 저장됐으면 반복 예약 수집을 건너뛴다."""
+    if not STATE_PATH.exists():
+        return False
+    try:
+        state = json.loads(STATE_PATH.read_text(encoding="utf-8"))
+        content = Path("transactions.txt").read_text(encoding="utf-8")
+    except (OSError, ValueError, json.JSONDecodeError):
+        return False
+    expected_title = f"{today.month}/{today.day}({WEEKDAY_KR_SHORT[today.weekday()]})"
+    return (
+        state.get("version") == 4
+        and state.get("last_output_date") == today.isoformat()
+        and content.startswith(expected_title)
+    )
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--skip-if-collected-today",
+        action="store_true",
+        help="오늘 정상 산출물이 있으면 API 호출 없이 종료합니다.",
+    )
+    args = parser.parse_args(argv)
     now = datetime.now(KST)
     today = now.date()
+    if args.skip_if_collected_today and already_collected_today(today):
+        print(f"{today.isoformat()} 실거래가 수집이 이미 완료되어 건너뜁니다")
+        return
     service_key = os.environ.get("MOLIT_API_KEY", "").strip()
     if service_key:
         rows = fetch_nationwide_api(today, service_key)

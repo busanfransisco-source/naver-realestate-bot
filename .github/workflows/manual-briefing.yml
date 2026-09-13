@@ -9,8 +9,6 @@ on:
     - cron: "55 18 * * *"
     - cron: "25 19 * * *"
     - cron: "55 19 * * *"
-    # 05:10 KST — 전국 신규 등록 실거래가 전용 수집 시각
-    - cron: "10 20 * * *"
     - cron: "25 20 * * *"
     - cron: "55 20 * * *"
     - cron: "25 21 * * *"
@@ -82,12 +80,6 @@ jobs:
         run: python aptinfo_fetch.py || echo "aptinfo failed"
         env:
           RONE_KEY: ${{ secrets.RONE_KEY }}
-
-      - name: Fetch nationwide apartment transactions
-        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '10 20 * * *'
-        run: python realestate_transactions_fetch.py || echo "transactions failed; keeping last good data"
-        env:
-          MOLIT_API_KEY: ${{ secrets.MOLIT_API_KEY }}
 
       - name: Regenerate pages and commit everything
         run: |
