@@ -33,6 +33,7 @@ DOWNLOAD_URL = "https://rt.molit.go.kr/pt/xls/ptXlsCSVDown.do"
 API_URL = "https://apis.data.go.kr/1613000/RTMSDataSvcAptTrade/getRTMSDataSvcAptTrade"
 REGION_CODES_PATH = Path("transactions-region-codes.json")
 API_MIN_INTERVAL_SECONDS = 0.55
+ONE_EOK_PER_PYEONG = 10_000  # 만원/평: 평당 1억원
 _API_RATE_LOCK = threading.Lock()
 _API_LAST_REQUEST_AT = 0.0
 
@@ -365,6 +366,9 @@ def format_eok(amount_manwon):
 
 def format_per_pyeong(value):
     value = int(value or 0)
+    if value >= ONE_EOK_PER_PYEONG:
+        text = f"{value / ONE_EOK_PER_PYEONG:.2f}".rstrip("0").rstrip(".")
+        return f"{text}억/평"
     if value >= 1000:
         text = f"{value / 1000:.1f}".rstrip("0").rstrip(".")
         return f"{text}천/평"
@@ -373,7 +377,11 @@ def format_per_pyeong(value):
 
 def format_transaction(row):
     area_pyeong = round(float(row.get("area") or 0) / 3.3058)
-    record = " 신고가" if row.get("is_record") else ""
+    is_one_eok_club = int(row.get("price_per_pyeong") or 0) >= ONE_EOK_PER_PYEONG
+    if row.get("is_record"):
+        record = " 신고가🚀" if is_one_eok_club else " 신고가"
+    else:
+        record = ""
     return (
         f"{district_name(row):<6}  {row.get('building_name', '')} "
         f"{area_pyeong}평 {format_eok(row.get('deal_amount'))}{record} "
@@ -384,10 +392,18 @@ def format_transaction(row):
 def build_digest(today, records):
     records = list(records)
     record_highs = [row for row in records if row.get("is_record")]
+    one_eok_club = [
+        row for row in records
+        if int(row.get("price_per_pyeong") or 0) >= ONE_EOK_PER_PYEONG
+    ]
+    one_eok_record_highs = [row for row in one_eok_club if row.get("is_record")]
+    one_eok_regular = [row for row in one_eok_club if not row.get("is_record")]
     lines = [
         f"{today.month}/{today.day}({WEEKDAY_KR_SHORT[today.weekday()]}) 신규 등록 실거래가",
         "",
         f"전국 {len(records):,}건 (🔥{len(record_highs):,})",
+        f"🚀 1억클럽 신고가 {len(one_eok_record_highs):,}건",
+        f"💎 1억클럽 {len(one_eok_regular):,}건",
     ]
     if not records:
         lines.extend(["", "전날 저장본과 비교해 새로 추가된 거래가 없습니다."])
@@ -405,13 +421,37 @@ def build_digest(today, records):
         highs = sum(1 for row in region_rows if row.get("is_record"))
         lines.append(f"{region} {len(region_rows):,}건 (🔥{highs:,})")
 
-    if record_highs:
+    if one_eok_club:
+        lines.extend(["", "[1억 클럽]"])
+        for row in sorted(
+            one_eok_club,
+            key=lambda x: (
+                int(x.get("price_per_pyeong") or 0),
+                int(x.get("deal_amount") or 0),
+            ),
+            reverse=True,
+        ):
+            lines.append(format_transaction(row))
+
+    ordinary_record_highs = [
+        row for row in record_highs
+        if int(row.get("price_per_pyeong") or 0) < ONE_EOK_PER_PYEONG
+    ]
+    if ordinary_record_highs:
         lines.extend(["", "[주요 신고가]"])
-        for row in sorted(record_highs, key=lambda x: int(x.get("deal_amount") or 0), reverse=True)[:3]:
+        for row in sorted(
+            ordinary_record_highs,
+            key=lambda x: int(x.get("deal_amount") or 0),
+            reverse=True,
+        )[:3]:
             lines.append(format_transaction(row))
 
     featured = sorted(
-        (row for row in records if not row.get("is_record")),
+        (
+            row for row in records
+            if not row.get("is_record")
+            and int(row.get("price_per_pyeong") or 0) < ONE_EOK_PER_PYEONG
+        ),
         key=lambda x: (int(x.get("price_per_pyeong") or 0), int(x.get("deal_amount") or 0)),
         reverse=True,
     )[:3]

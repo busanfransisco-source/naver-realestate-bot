@@ -5,6 +5,7 @@ from realestate_transactions_fetch import (
     build_digest,
     classify_records,
     complex_area_key,
+    format_per_pyeong,
     parse_government_csv,
     tokenized_rows,
 )
@@ -63,6 +64,29 @@ class TransactionDigestTests(unittest.TestCase):
         for i in range(6):
             self.assertIn(f"지역{i} 1건 (🔥{1 if i == 0 else 0})", text)
 
+    def test_one_eok_club_uses_per_pyeong_value(self):
+        regular = self.sample(
+            building_name="평당일억단지",
+
+            price_per_pyeong=10000,
+            deal_amount=300000,
+            is_record=False,
+        )
+        record = self.sample(
+            building_name="평당일억신고가",
+            price_per_pyeong=11000,
+            deal_amount=330000,
+            is_record=True,
+        )
+        text = build_digest(date(2026, 9, 13), [regular, record])
+        self.assertIn("전국 2건 (🔥1)", text)
+        self.assertIn("🚀 1억클럽 신고가 1건", text)
+        self.assertIn("💎 1억클럽 1건", text)
+        self.assertIn("\n\n[1억 클럽]\n", text)
+        self.assertIn("평당일억신고가", text)
+        self.assertIn("신고가🚀 1.1억/평", text)
+        self.assertEqual(format_per_pyeong(10000), "1억/평")
+        self.assertNotIn("\n\n[주요 신고가]\n", text)
     def test_government_csv_excludes_cancelled_deals(self):
         source = "\n".join(
             [
