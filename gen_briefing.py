@@ -265,6 +265,10 @@ def build_html():
             content = read_policy_text(fname_prefix, now)
         rendered_sections.append((key, label, content))
     rendered_sections.extend(build_rotating_sections(now.date()))
+    # 기존 자동발송 번호(1~24)는 그대로 두고 신규 실거래를 마지막 25번에 붙인다.
+    rendered_sections.append(
+        ("transactions", "🏢 전국 신규 등록 실거래가", read_section_text("transactions", weekday_en))
+    )
     for number, (key, label, content) in enumerate(rendered_sections, start=1):
         content_json = json.dumps(content, ensure_ascii=False)
         content_escaped = html.escape(content)
