@@ -1,5 +1,8 @@
 🤖 26년 9월 13일 일요일 AI 뉴스
 
+'가상 초파리' 뇌 시뮬레이션 이색 시도 열풍…‘파리 언어모델'까지 등장
+https://www.aitimes.com/news/articleView.html?idxno=215207
+
 구글, 코딩 강화 위해 스타트업 메카나이즈 인재 흡수…2조원대 계약
 https://www.aitimes.com/news/articleView.html?idxno=215205
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215198
 
 제프 딘의 AI 스타트업 디스커버리 루프, 67조 몸값 노린다
 https://www.aitimes.com/news/articleView.html?idxno=215197
-
-엔비디아, 앤트로픽 초대형 IPO에 '13조 앵커 투자' 논의
-https://www.aitimes.com/news/articleView.html?idxno=215196
