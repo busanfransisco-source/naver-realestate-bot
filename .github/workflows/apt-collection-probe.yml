@@ -1,0 +1,36 @@
+name: Apt collection probe (one-off)
+on:
+  push:
+    branches: [codex/apt-collection-probe-20260913]
+    paths: [.github/workflows/apt-collection-probe.yml]
+permissions:
+  contents: read
+jobs:
+  anonymous-fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Test anonymous public page access without cookies
+        shell: python
+        run: |
+          import json, urllib.request, urllib.error, re
+          url = 'https://apt.today/closings'
+          try:
+              response = urllib.request.urlopen(url, timeout=30)
+          except urllib.error.HTTPError as error:
+              response = error
+          body = response.read().decode('utf-8', errors='replace')
+          title = re.search(r'<title>(.*?)</title>', body, re.S)
+          data = {
+              'url': url,
+              'status': response.code,
+              'title': title.group(1) if title else None,
+              'bytes': len(body.encode('utf-8')),
+              'challenge': response.headers.get('X-Vercel-Mitigated'),
+              'has_new_transactions_heading': '새로 올라온 거래' in body,
+              'has_known_complex': '덕수궁롯데캐슬' in body,
+              'has_summary_heading': '지역별 신고가' in body,
+          }
+          print(json.dumps(data, ensure_ascii=False, indent=2))
+          if response.code != 200 or data['challenge'] or not data['has_new_transactions_heading']:
+              raise SystemExit('FAIL: no anonymously collectable transaction page')
