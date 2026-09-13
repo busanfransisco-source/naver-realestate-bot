@@ -33,6 +33,13 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          # A queued run may have been created before the previous run pushed.
+          # Always start from the latest main branch to avoid rebase conflicts.
+          ref: main
+
+      - name: Sync latest main
+        run: git pull --ff-only origin main
 
       - name: Set up Python
         uses: actions/setup-python@v5
