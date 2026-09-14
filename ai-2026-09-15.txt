@@ -1,5 +1,14 @@
 🤖 26년 9월 15일 화요일 AI 뉴스
 
+"탈모약 개발·암 진단·주식 투자도 AI로"...LG, 전문가 AI로 승부수
+https://www.aitimes.com/news/articleView.html?idxno=215257
+
+[게시판] 아크릴,  국제컨퍼런스서 ‘풀스택 헬스케어 AX’ 제시 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=215255
+
+국내 AI 업계, '속도 조절론'에 "취지 공감하나 규제 투명성 확보돼야"
+https://www.aitimes.com/news/articleView.html?idxno=215251
+
 8월 ICT 수출액 ‘600억달러’ 육박…반도체가 400억달러 이끌어
 https://www.aitimes.com/news/articleView.html?idxno=215249
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215240
 
 아이폰 듀오에 탑재된 'A20 프로'...벤치마크서 PC CPU 압도
 https://www.aitimes.com/news/articleView.html?idxno=215239
-
-와이즈넛, 대화로 만드는 AI 에이전트 공개…“기능 수정·추가도 손쉽게”
-https://www.aitimes.com/news/articleView.html?idxno=215238
-
-텐센트, 음성 생성·편집 모델 'AuK' 공개..."오디오용 나노바나나"
-https://www.aitimes.com/news/articleView.html?idxno=215235
-
-렐루게임즈, ‘미메시스’로 일본 호러 게임 어워드 수상..."AI 접목 차별화 입증"
-https://www.aitimes.com/news/articleView.html?idxno=215234
