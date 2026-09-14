@@ -171,12 +171,21 @@ def build_digest(summary):
         )
 
     highlights = summary.get("highlightTransactions") or []
-    record_highs = [row for row in highlights if row.get("isPYAllTimeHigh")][:3]
+    # 화면용 하이라이트 일부가 아니라, 당일 전국 신고가 전체 목록을 사용한다.
+    # 신고가가 많아도 잘라내지 않고 모두 브리핑 박스에 표시한다.
+    record_highs = summary.get("allTimeHighTransactions") or [
+        row for row in highlights if row.get("isPYAllTimeHigh")
+    ]
     if record_highs:
         lines.extend(["", "[주요 신고가]"])
         lines.extend(format_transaction(row) for row in record_highs)
 
-    featured = [row for row in highlights if not row.get("isPYAllTimeHigh")][:7]
+    record_ids = {row.get("id") for row in record_highs}
+    featured = [
+        row
+        for row in highlights
+        if row.get("id") not in record_ids and not row.get("isPYAllTimeHigh")
+    ][:7]
     if featured:
         lines.extend(["", "[눈에 띄는 거래]"])
         lines.extend(format_transaction(row) for row in featured)

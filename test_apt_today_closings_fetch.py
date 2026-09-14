@@ -43,6 +43,33 @@ class AptTodayClosingsTests(unittest.TestCase):
         self.assertNotIn("apt.today", text)
         self.assertNotIn("http", text)
 
+    def test_digest_lists_every_nationwide_record_high(self):
+        record_highs = [
+            {
+                "id": number,
+                "danjiName": f"신고가단지{number}",
+                "amount": 100000 + number,
+                "isPYAllTimeHigh": True,
+                "type": {"supplyPY": 34},
+                "sido": {"shortName": "서울"},
+                "sigungu": {"name": "강남구", "shortName": "강남"},
+            }
+            for number in range(1, 6)
+        ]
+        summary = {
+            "since": "2026-09-13T15:00:00.000Z",
+            "totalCount": 57,
+            "preconstructedSaleCount": 5,
+            "allTimeHighCount": 5,
+            "sidoStats": [],
+            "highlightTransactions": record_highs[:2],
+            "allTimeHighTransactions": record_highs,
+        }
+        _, text = build_digest(summary)
+        for number in range(1, 6):
+            self.assertIn(f"신고가단지{number}", text)
+        self.assertEqual(text.count("신고가단지"), 5)
+
 
 if __name__ == "__main__":
     unittest.main()
