@@ -29,10 +29,8 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Collect nationwide apartment transactions
-        run: python realestate_transactions_fetch.py
-        env:
-          MOLIT_API_KEY: ${{ secrets.MOLIT_API_KEY }}
+      - name: Collect the published 05:00 transaction batch
+        run: python apt_today_closings_fetch.py
 
       - name: Commit collected transaction files
         id: commit

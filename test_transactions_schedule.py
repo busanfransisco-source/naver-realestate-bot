@@ -9,6 +9,7 @@ class TransactionScheduleTests(unittest.TestCase):
         self.assertIn("timeout-minutes: 28", workflow)
         self.assertIn("group: nationwide-transactions", workflow)
         self.assertNotIn("--skip-if-collected-today", workflow)
+        self.assertIn("python apt_today_closings_fetch.py", workflow)
 
     def test_general_briefing_no_longer_collects_transactions(self):
         workflow = Path(".github/workflows/manual-briefing.yml").read_text(encoding="utf-8")
