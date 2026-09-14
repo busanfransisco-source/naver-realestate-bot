@@ -1,5 +1,8 @@
 🤖 26년 9월 14일 월요일 AI 뉴스
 
+8월 ICT 수출액 ‘600억달러’ 육박…반도체가 400억달러 이끌어
+https://www.aitimes.com/news/articleView.html?idxno=215249
+
 아시아 반도체 공급망 일제히 흔들…'AI 속도조절론'에 주가 급락
 https://www.aitimes.com/news/articleView.html?idxno=215248
 
@@ -21,11 +24,8 @@ https://www.aitimes.com/news/articleView.html?idxno=215239
 와이즈넛, 대화로 만드는 AI 에이전트 공개…“기능 수정·추가도 손쉽게”
 https://www.aitimes.com/news/articleView.html?idxno=215238
 
+텐센트, 음성 생성·편집 모델 'AuK' 공개..."오디오용 나노바나나"
+https://www.aitimes.com/news/articleView.html?idxno=215235
+
 렐루게임즈, ‘미메시스’로 일본 호러 게임 어워드 수상..."AI 접목 차별화 입증"
 https://www.aitimes.com/news/articleView.html?idxno=215234
-
-딥엑스, 저전력 AI 반도체 기술 정부 '녹색기술' 인증 획득
-https://www.aitimes.com/news/articleView.html?idxno=215232
-
-원프레딕트, AI 예지보전 기술로 코스닥 기평 통과...연내 상장예심 추진
-https://www.aitimes.com/news/articleView.html?idxno=215230
