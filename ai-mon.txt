@@ -1,5 +1,20 @@
 🤖 26년 9월 14일 월요일 AI 뉴스
 
+의료 AI 안전성 점검한 '레드팀 챌린지'…국내외 LLM 12종 공격 검증
+https://www.aitimes.com/news/articleView.html?idxno=215217
+
+앤트로픽·오픈AI·구글, 7월부터 'AI 안전 표준기구' 설립 물밑 논의
+https://www.aitimes.com/news/articleView.html?idxno=215212
+
+'AI 속도 조절'에 블랙 먼데이 오나...전문가들 "반도체 장기 수요는 탄탄"
+https://www.aitimes.com/news/articleView.html?idxno=215211
+
+미국 태양광 2분기 11.4GW 설치…전년 대비 45% 증가
+https://www.aitimes.com/news/articleView.html?idxno=215209
+
+미국 에너지부, 우주 태양광 R&D에 160억 지원
+https://www.aitimes.com/news/articleView.html?idxno=215208
+
 '가상 초파리' 뇌 시뮬레이션 이색 시도 열풍…‘파리 언어모델'까지 등장
 https://www.aitimes.com/news/articleView.html?idxno=215207
 
@@ -14,18 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215203
 
 "지침 줄이고 완료 기준 명확히"...오픈AI가 밝힌 '아스트라' 활용법
 https://www.aitimes.com/news/articleView.html?idxno=215202
-
-AI 데이터센터에 발목 잡힌 오라클…매출 폭증에도 재무 부담 가중
-https://www.aitimes.com/news/articleView.html?idxno=215201
-
-테슬라, 10월 1일 2세대 로드스터 공개...‘비행’ 기능 베일 벗을까
-https://www.aitimes.com/news/articleView.html?idxno=215200
-
-오픈AI '불량 에이전트' 루비젬스까지 해킹 시도…"데이터 수집일 뿐"
-https://www.aitimes.com/news/articleView.html?idxno=215199
-
-알트먼 "2026년 상장은 시기상조…안전성 확보가 최우선 과제"
-https://www.aitimes.com/news/articleView.html?idxno=215198
-
-제프 딘의 AI 스타트업 디스커버리 루프, 67조 몸값 노린다
-https://www.aitimes.com/news/articleView.html?idxno=215197
