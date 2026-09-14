@@ -1,31 +1,31 @@
 🤖 26년 9월 14일 월요일 AI 뉴스
 
-"구글, RSI 도달했나"... 트윗 한 줄에서 시작된 루머에 관심 폭발
-https://www.aitimes.com/news/articleView.html?idxno=215226
+아시아 반도체 공급망 일제히 흔들…'AI 속도조절론'에 주가 급락
+https://www.aitimes.com/news/articleView.html?idxno=215248
 
-트럼프 "AI 우려 세력 부정적...중국 이기는 것이 최우선"
-https://www.aitimes.com/news/articleView.html?idxno=215222
+업스테이지, ‘솔라 미니 4’ 무료 프리뷰 공개…“프로급 성능 구현”
+https://www.aitimes.com/news/articleView.html?idxno=215245
 
-의료 AI 안전성 점검한 '레드팀 챌린지'…국내외 LLM 12종 공격 검증
-https://www.aitimes.com/news/articleView.html?idxno=215217
+업스테이지, 엔비디아 본사 방문…GPU 지원 등 5개 안건 논의
+https://www.aitimes.com/news/articleView.html?idxno=215244
 
-아모데이 "AI 속도 조절 최대 난제는 중국과의 경쟁"
-https://www.aitimes.com/news/articleView.html?idxno=215216
+Z.AI, 신주·CB 발행으로 6.7조 조달…AI 인프라 투자 박차
+https://www.aitimes.com/news/articleView.html?idxno=215243
 
-구글·MS도 "AI 속도 조절 동감"...'안전 연합전선' 5곳으로 확대
-https://www.aitimes.com/news/articleView.html?idxno=215215
+KT, ‘AX 인사이트 리포트’ 발간…“금융기관 60%가 AX 실행 단계 진입”
+https://www.aitimes.com/news/articleView.html?idxno=215240
 
-앤트로픽·오픈AI·구글, 7월부터 'AI 안전 표준기구' 설립 물밑 논의
-https://www.aitimes.com/news/articleView.html?idxno=215212
+아이폰 듀오에 탑재된 'A20 프로'...벤치마크서 PC CPU 압도
+https://www.aitimes.com/news/articleView.html?idxno=215239
 
-'AI 속도 조절'에 블랙 먼데이 오나...전문가들 "반도체 장기 수요는 탄탄"
-https://www.aitimes.com/news/articleView.html?idxno=215211
+와이즈넛, 대화로 만드는 AI 에이전트 공개…“기능 수정·추가도 손쉽게”
+https://www.aitimes.com/news/articleView.html?idxno=215238
 
-미국 태양광 2분기 11.4GW 설치…전년 대비 45% 증가
-https://www.aitimes.com/news/articleView.html?idxno=215209
+렐루게임즈, ‘미메시스’로 일본 호러 게임 어워드 수상..."AI 접목 차별화 입증"
+https://www.aitimes.com/news/articleView.html?idxno=215234
 
-미국 에너지부, 우주 태양광 R&D에 160억 지원
-https://www.aitimes.com/news/articleView.html?idxno=215208
+딥엑스, 저전력 AI 반도체 기술 정부 '녹색기술' 인증 획득
+https://www.aitimes.com/news/articleView.html?idxno=215232
 
-'가상 초파리' 뇌 시뮬레이션 이색 시도 열풍…‘파리 언어모델'까지 등장
-https://www.aitimes.com/news/articleView.html?idxno=215207
+원프레딕트, AI 예지보전 기술로 코스닥 기평 통과...연내 상장예심 추진
+https://www.aitimes.com/news/articleView.html?idxno=215230
