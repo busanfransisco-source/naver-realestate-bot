@@ -1,7 +1,19 @@
 🤖 26년 9월 14일 월요일 AI 뉴스
 
+"구글, RSI 도달했나"... 트윗 한 줄에서 시작된 루머에 관심 폭발
+https://www.aitimes.com/news/articleView.html?idxno=215226
+
+트럼프 "AI 우려 세력 부정적...중국 이기는 것이 최우선"
+https://www.aitimes.com/news/articleView.html?idxno=215222
+
 의료 AI 안전성 점검한 '레드팀 챌린지'…국내외 LLM 12종 공격 검증
 https://www.aitimes.com/news/articleView.html?idxno=215217
+
+아모데이 "AI 속도 조절 최대 난제는 중국과의 경쟁"
+https://www.aitimes.com/news/articleView.html?idxno=215216
+
+구글·MS도 "AI 속도 조절 동감"...'안전 연합전선' 5곳으로 확대
+https://www.aitimes.com/news/articleView.html?idxno=215215
 
 앤트로픽·오픈AI·구글, 7월부터 'AI 안전 표준기구' 설립 물밑 논의
 https://www.aitimes.com/news/articleView.html?idxno=215212
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215208
 
 '가상 초파리' 뇌 시뮬레이션 이색 시도 열풍…‘파리 언어모델'까지 등장
 https://www.aitimes.com/news/articleView.html?idxno=215207
-
-구글, 코딩 강화 위해 스타트업 메카나이즈 인재 흡수
-https://www.aitimes.com/news/articleView.html?idxno=215205
-
-스페이스X, 미공개 고객과 월 1.5조 규모 컴퓨팅 계약 체결
-https://www.aitimes.com/news/articleView.html?idxno=215204
-
-KAIST, 미래기술 연구거점 ‘LOTTE x KAIST R&D 센터’ 준공
-https://www.aitimes.com/news/articleView.html?idxno=215203
-
-"지침 줄이고 완료 기준 명확히"...오픈AI가 밝힌 '아스트라' 활용법
-https://www.aitimes.com/news/articleView.html?idxno=215202
