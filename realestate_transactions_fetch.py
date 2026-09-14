@@ -31,8 +31,14 @@ WEEKDAY_KR_SHORT = ["월", "화", "수", "목", "금", "토", "일"]
 STATE_PATH = Path("transactions-state.json")
 DOWNLOAD_PAGE = "https://rt.molit.go.kr/pt/xls/xls.do?mobileAt="
 DOWNLOAD_URL = "https://rt.molit.go.kr/pt/xls/ptXlsCSVDown.do"
-API_URL = "https://apis.data.go.kr/1613000/RTMSDataSvcAptTrade/getRTMSDataSvcAptTrade"
+APT_API_URL = "https://apis.data.go.kr/1613000/RTMSDataSvcAptTrade/getRTMSDataSvcAptTrade"
+PRESALE_API_URL = "https://apis.data.go.kr/1613000/RTMSDataSvcSilvTrade/getRTMSDataSvcSilvTrade"
 REGION_CODES_PATH = Path("transactions-region-codes.json")
+STATE_VERSION = 5
+# 늦게 신고된 과거 계약도 잡기 위해 아파트는 최근 5개월을 다시 훑는다.
+# 분양권/입주권은 별도 공식 API에서 최근 2개월을 함께 비교한다.
+APT_LOOKBACK_MONTHS = 5
+PRESALE_LOOKBACK_MONTHS = 2
 API_MIN_INTERVAL_SECONDS = 0.55
 API_REQUEST_TIMEOUT_SECONDS = 15
 API_MAX_ATTEMPTS = 3
@@ -166,12 +172,16 @@ def fetch_nationwide_transactions(today):
     return parse_government_csv(payload)
 
 
-def api_months(today):
-    first = today.replace(day=1)
-    return [(first - timedelta(days=1)).strftime("%Y%m"), today.strftime("%Y%m")]
+def api_months(today, count=2):
+    months = []
+    cursor = today.replace(day=1)
+    for _ in range(count):
+        months.append(cursor.strftime("%Y%m"))
+        cursor = (cursor - timedelta(days=1)).replace(day=1)
+    return list(reversed(months))
 
 
-def api_request(service_key, region_code, year_month, page_no):
+def api_request(api_url, service_key, region_code, year_month, page_no):
     global _API_LAST_REQUEST_AT
     params = urllib.parse.urlencode(
         {
@@ -183,7 +193,7 @@ def api_request(service_key, region_code, year_month, page_no):
         }
     )
     request = urllib.request.Request(
-        f"{API_URL}?{params}",
+        f"{api_url}?{params}",
         headers={"User-Agent": "Mozilla/5.0 naver-realestate-bot/1.0"},
     )
     last_error = None
@@ -208,7 +218,7 @@ def api_request(service_key, region_code, year_month, page_no):
     raise RuntimeError(f"{region_code}/{year_month}/{page_no}: {last_error}")
 
 
-def parse_api_item(item, region_name):
+def parse_api_item(item, region_name, property_type="아파트"):
     get = lambda tag: (item.findtext(tag) or "").strip()
     if get("cdealDay"):
         return None
@@ -233,20 +243,31 @@ def parse_api_item(item, region_name):
         "price_per_pyeong": round(amount / (area / 3.3058)) if area else 0,
         "build_year": get("buildYear"),
         "deal_type": get("dealingGbn"),
+        "property_type": property_type,
+        "is_presale": property_type != "아파트",
     }
 
 
-def fetch_api_region_month(service_key, region_code, region_name, year_month):
+def fetch_api_region_month(
+    service_key,
+    api_url,
+    region_code,
+    region_name,
+    year_month,
+    property_type="아파트",
+):
     rows = []
     page_no = 1
     while True:
-        root = ET.fromstring(api_request(service_key, region_code, year_month, page_no))
+        root = ET.fromstring(
+            api_request(api_url, service_key, region_code, year_month, page_no)
+        )
         result_code = root.findtext(".//resultCode")
         if result_code not in (None, "00", "000"):
             message = root.findtext(".//resultMsg")
             raise RuntimeError(f"API 오류 {result_code}: {message}")
         for item in root.findall(".//item"):
-            parsed = parse_api_item(item, region_name)
+            parsed = parse_api_item(item, region_name, property_type)
             if parsed:
                 rows.append(parsed)
         total_count = int(root.findtext(".//totalCount", default="0"))
@@ -257,25 +278,44 @@ def fetch_api_region_month(service_key, region_code, region_name, year_month):
 
 def fetch_nationwide_api(today, service_key, workers=4):
     regions = json.loads(REGION_CODES_PATH.read_text(encoding="utf-8"))
-    jobs = [(code, name, month) for code, name in regions.items() for month in api_months(today)]
+    jobs = []
+    for code, name in regions.items():
+        jobs.extend(
+            (APT_API_URL, code, name, month, "아파트")
+            for month in api_months(today, APT_LOOKBACK_MONTHS)
+        )
+        jobs.extend(
+            (PRESALE_API_URL, code, name, month, "분양권/입주권")
+            for month in api_months(today, PRESALE_LOOKBACK_MONTHS)
+        )
     # 전국 작업 수백 개를 만들기 전에 한 지역으로 API 상태부터 확인한다.
     # 장애 중이면 약 1분 안에 종료해 다음 20분 예약이 다시 시도할 수 있게 한다.
     preflight = jobs.pop(0)
-    code, name, month = preflight
-    rows = fetch_api_region_month(service_key, code, name, month)
-    print(f"공공데이터 API 사전 확인 완료: {code}/{month}")
+    api_url, code, name, month, property_type = preflight
+    rows = fetch_api_region_month(
+        service_key, api_url, code, name, month, property_type
+    )
+    print(f"공공데이터 API 사전 확인 완료: {property_type}/{code}/{month}")
     errors = []
     with ThreadPoolExecutor(max_workers=workers) as executor:
         futures = {
-            executor.submit(fetch_api_region_month, service_key, code, name, month): (code, month)
-            for code, name, month in jobs
+            executor.submit(
+                fetch_api_region_month,
+                service_key,
+                api_url,
+                code,
+                name,
+                month,
+                property_type,
+            ): (property_type, code, month)
+            for api_url, code, name, month, property_type in jobs
         }
         for future in as_completed(futures):
-            code, month = futures[future]
+            property_type, code, month = futures[future]
             try:
                 rows.extend(future.result())
             except Exception as exc:
-                errors.append(f"{code}/{month}: {exc}")
+                errors.append(f"{property_type}/{code}/{month}: {exc}")
                 # 한 지역이라도 끝내 실패하면 전국 합계가 불완전해진다.
                 # 남은 대기 작업을 취소하고 다음 예약에서 전체를 다시 시도한다.
                 for pending in futures:
@@ -301,6 +341,7 @@ def base_signature(row):
         round(float(row.get("area") or 0), 4),
         str(row.get("floor") or ""),
         int(row.get("deal_amount") or 0),
+        str(row.get("property_type") or "아파트"),
     ]
     raw = json.dumps(fields, ensure_ascii=False, separators=(",", ":"))
     return hashlib.sha256(raw.encode("utf-8")).hexdigest()[:20]
@@ -338,7 +379,11 @@ def classify_records(new_rows, history_max):
         prior_max = history_max.get(complex_area_key(row))
         price = int(row.get("deal_amount") or 0)
         # 기준일 이전에 본 동일 단지·동일 면적 거래가 있어야만 신고가로 판정한다.
-        item["is_record"] = prior_max is not None and price > int(prior_max)
+        item["is_record"] = (
+            not item.get("is_presale")
+            and prior_max is not None
+            and price > int(prior_max)
+        )
         classified.append(item)
     return classified
 
@@ -406,6 +451,7 @@ def format_transaction(row):
 
 def build_digest(today, records):
     records = list(records)
+    presale_count = sum(1 for row in records if row.get("is_presale"))
     record_highs = [row for row in records if row.get("is_record")]
     one_eok_club = [
         row for row in records
@@ -417,6 +463,7 @@ def build_digest(today, records):
         f"{today.month}/{today.day}({WEEKDAY_KR_SHORT[today.weekday()]}) 신규 등록 실거래가",
         "",
         f"전국 {len(records):,}건 (🔥{len(record_highs):,})",
+        f"분양권/입주권 {presale_count:,}건",
         f"🚀 1억클럽 신고가 {len(one_eok_record_highs):,}건",
         f"💎 1억클럽 {len(one_eok_regular):,}건",
     ]
@@ -497,7 +544,7 @@ def already_collected_today(today):
         return False
     expected_title = f"{today.month}/{today.day}({WEEKDAY_KR_SHORT[today.weekday()]})"
     return (
-        state.get("version") == 4
+        state.get("version") == STATE_VERSION
         and state.get("last_output_date") == today.isoformat()
         and content.startswith(expected_title)
     )
@@ -529,16 +576,29 @@ def main(argv=None):
         state = json.loads(STATE_PATH.read_text(encoding="utf-8"))
     else:
         state = {}
-    if state.get("version") != 4:
+    previous_version = state.get("version")
+    if previous_version not in (4, STATE_VERSION):
         state = {}
     previous_tokens = set(state.get("seen_tokens", []))
     history_max = state.get("history_max", {})
     bootstrap_preserve_date = state.get("bootstrap_preserve_date")
 
-    if previous_tokens:
+    preserve_output_date = state.get("preserve_output_date")
+    if previous_version == 4:
+        # 조회 범위 확대와 분양권 추가 첫 실행에서는 과거 자료를 오늘 신규로 오인하지 않는다.
+        # 이미 사람이 확인해 넣은 오늘 요약은 유지하고 새 전체 목록만 비교 기준으로 저장한다.
+        today_records = state.get("today_new_records", [])
+        preserve_output_date = today.isoformat()
+        print("실거래 조회 범위 확대 기준점을 저장하고 오늘 확인된 요약은 유지합니다")
+    elif previous_tokens:
         newly_seen = [current[token] for token in current.keys() - previous_tokens]
         classified = classify_records(newly_seen, history_max)
-        if bootstrap_preserve_date == today.isoformat():
+        if preserve_output_date == today.isoformat():
+            existing = state.get("today_new_records", [])
+            merged = tokenized_rows([*existing, *classified])
+            today_records = list(merged.values())
+            print("오늘 확인된 요약은 유지하고 새 거래만 내부 기준에 합칩니다")
+        elif bootstrap_preserve_date == today.isoformat():
             # 첫날 사용자가 확인한 집계를 그날의 추가 실행이 0건으로 덮지 않는다.
             today_records = []
             print("첫날 검증 집계를 유지하고 비교 기준만 갱신합니다")
@@ -569,7 +629,7 @@ def main(argv=None):
         bootstrap_preserve_date = today.isoformat()
 
     state = {
-        "version": 4,
+        "version": STATE_VERSION,
         "source": source_name,
         "collected_at": now.isoformat(timespec="seconds"),
         "contract_date_range": [
@@ -581,6 +641,7 @@ def main(argv=None):
         "last_output_date": today.isoformat(),
         "today_new_records": today_records,
         "bootstrap_preserve_date": bootstrap_preserve_date,
+        "preserve_output_date": preserve_output_date,
     }
     STATE_PATH.write_text(
         json.dumps(state, ensure_ascii=False, separators=(",", ":"), sort_keys=True) + "\n",

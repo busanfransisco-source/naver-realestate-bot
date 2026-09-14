@@ -15,6 +15,7 @@ from realestate_transactions_fetch import (
     parse_government_csv,
     tokenized_rows,
     fetch_nationwide_api,
+    api_months,
 )
 
 
@@ -40,6 +41,12 @@ class TransactionDigestTests(unittest.TestCase):
     def test_duplicate_transactions_keep_their_count(self):
         rows = [self.sample(), self.sample()]
         self.assertEqual(len(tokenized_rows(rows)), 2)
+
+    def test_api_months_can_cover_late_reported_contracts(self):
+        self.assertEqual(
+            api_months(date(2026, 9, 14), 5),
+            ["202605", "202606", "202607", "202608", "202609"],
+        )
 
     def test_record_high_requires_prior_history(self):
         row = self.sample()
@@ -113,7 +120,7 @@ class TransactionDigestTests(unittest.TestCase):
             try:
                 target = date(2026, 9, 14)
                 Path("transactions-state.json").write_text(
-                    json.dumps({"version": 4, "last_output_date": "2026-09-14"}),
+                    json.dumps({"version": 5, "last_output_date": "2026-09-14"}),
                     encoding="utf-8",
                 )
                 Path("transactions.txt").write_text(
