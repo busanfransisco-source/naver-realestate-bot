@@ -1,31 +1,31 @@
 🤖 26년 9월 15일 화요일 AI 뉴스
 
+'AI 개발 속도 조절' 발언에 글로벌 테크·반도체주 일제히 급락
+https://www.aitimes.com/news/articleView.html?idxno=215273
+
+"AI 에이전트 결제 전, 문자로 물어본다"...SKT, GSMA RCS 회의 개최
+https://www.aitimes.com/news/articleView.html?idxno=215272
+
+"최고 성능에 비용은 반값"...'라이너 모델 API' 출시
+https://www.aitimes.com/news/articleView.html?idxno=215271
+
+삼성전자, 네덜란드 AI칩 스타트업 유클리드 3200억 공동 투자 나서
+https://www.aitimes.com/news/articleView.html?idxno=215270
+
+뉴엔AI, 산업 AI 데이터 분석 기술로 북미 진출…뉴저지주에 법인 설립
+https://www.aitimes.com/news/articleView.html?idxno=215267
+
+트럼프 "아모데이는 위선자...AI 안전 우려는 사기"
+https://www.aitimes.com/news/articleView.html?idxno=215264
+
+바닷속 10미터에서 태양광 발전…페로브스카이트로 2시간 실증
+https://www.aitimes.com/news/articleView.html?idxno=215262
+
+미국, 인도 등 3개국 태양광에 최대 170%대 상계관세 판정
+https://www.aitimes.com/news/articleView.html?idxno=215260
+
 "탈모약 개발·암 진단·주식 투자도 AI로"...LG, 전문가 AI로 승부수
 https://www.aitimes.com/news/articleView.html?idxno=215257
 
 [게시판] 아크릴,  국제컨퍼런스서 ‘풀스택 헬스케어 AX’ 제시 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=215255
-
-국내 AI 업계, '속도 조절론'에 "취지 공감하나 규제 투명성 확보돼야"
-https://www.aitimes.com/news/articleView.html?idxno=215251
-
-8월 ICT 수출액 ‘600억달러’ 육박…반도체가 400억달러 이끌어
-https://www.aitimes.com/news/articleView.html?idxno=215249
-
-아시아 반도체 공급망 일제히 흔들…'AI 속도조절론'에 주가 급락
-https://www.aitimes.com/news/articleView.html?idxno=215248
-
-업스테이지, ‘솔라 미니 4’ 무료 프리뷰 공개…“프로급 성능 구현”
-https://www.aitimes.com/news/articleView.html?idxno=215245
-
-업스테이지, 엔비디아 본사 방문…GPU 지원 등 5개 안건 논의
-https://www.aitimes.com/news/articleView.html?idxno=215244
-
-Z.AI, 신주·CB 발행으로 6.7조 조달…AI 인프라 투자 박차
-https://www.aitimes.com/news/articleView.html?idxno=215243
-
-KT, ‘AX 인사이트 리포트’ 발간…“금융기관 60%가 AX 실행 단계 진입”
-https://www.aitimes.com/news/articleView.html?idxno=215240
-
-아이폰 듀오에 탑재된 'A20 프로'...벤치마크서 PC CPU 압도
-https://www.aitimes.com/news/articleView.html?idxno=215239
