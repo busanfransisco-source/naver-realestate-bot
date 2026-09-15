@@ -16,7 +16,9 @@ concurrency:
 
 jobs:
   refresh-transactions:
-    runs-on: ubuntu-latest
+    # apt.today가 일부 Linux 데이터센터 IP를 429로 제한한다. Windows 풀은
+    # 별도 네트워크 대역을 사용하므로 원본 HTML을 직접 읽을 수 있다.
+    runs-on: windows-latest
     timeout-minutes: 28
     steps:
       - name: Checkout latest main
@@ -30,9 +32,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install browser-compatible collector
-        run: |
-          pip install curl-cffi playwright
-          playwright install --with-deps chromium
+        run: pip install curl-cffi
 
       - name: Collect the published 05:00 transaction batch
         run: python apt_today_closings_fetch.py
