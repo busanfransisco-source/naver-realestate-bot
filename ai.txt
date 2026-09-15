@@ -1,5 +1,8 @@
 🤖 26년 9월 15일 화요일 AI 뉴스
 
+AI로 영양학 오랜 측정 난제 도전…아이들의 1년 치 식사가 연구 데이터로
+https://www.aitimes.com/news/articleView.html?idxno=215296
+
 알티엠, ‘제조 AI 도입점검 프로그램’ 출시…적은 데이터로 AI 적용 여부 먼저 확인
 https://www.aitimes.com/news/articleView.html?idxno=215292
 
@@ -12,6 +15,9 @@ https://www.aitimes.com/news/articleView.html?idxno=215288
 'AI 위협' 조회수 1.7억 폭발…앤트로픽 떠난 콕슨 '커리어 전환점'
 https://www.aitimes.com/news/articleView.html?idxno=215282
 
+AI 의료 영상 전문 코로로직, 카카오벤처스·서울대기술지주서 시드 투자 유치
+https://www.aitimes.com/news/articleView.html?idxno=215275
+
 'AI 개발 속도 조절' 발언에 글로벌 테크·반도체주 일제히 급락
 https://www.aitimes.com/news/articleView.html?idxno=215273
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215271
 
 삼성전자, 네덜란드 AI칩 스타트업 유클리드 3200억 공동 투자 나서
 https://www.aitimes.com/news/articleView.html?idxno=215270
-
-뉴엔AI, 산업 AI 데이터 분석 기술로 북미 진출…뉴저지주에 법인 설립
-https://www.aitimes.com/news/articleView.html?idxno=215267
-
-트럼프 "아모데이는 위선자...AI 안전 우려는 사기"
-https://www.aitimes.com/news/articleView.html?idxno=215264
