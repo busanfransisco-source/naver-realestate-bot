@@ -1,7 +1,25 @@
 🤖 26년 9월 15일 화요일 AI 뉴스
 
+플레이태그, AI 행동분석으로 아이 맞춤형 교육 제공…‘스토리라인 원’ 공개
+https://www.aitimes.com/news/articleView.html?idxno=215312
+
+“AI 에이전트가 상호 거래·정산까지”...카카오페이 자율결제 실증 완료
+https://www.aitimes.com/news/articleView.html?idxno=215311
+
+[게시판] 에어빌리티, 드론 R&D·생산거점 '기흥 캠퍼스'로 통합 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=215302
+
+애플, 시리 AI 탑재 'iOS 27' 배포 시작...차세대 아이폰 출격 채비
+https://www.aitimes.com/news/articleView.html?idxno=215300
+
+인포시즈, SKT 부사장 출신 박준 CBO 영입 "기업 AI 전환 속도"
+https://www.aitimes.com/news/articleView.html?idxno=215298
+
 AI로 영양학 오랜 측정 난제 도전…아이들의 1년 치 식사가 연구 데이터로
 https://www.aitimes.com/news/articleView.html?idxno=215296
+
+베스핀글로벌, 업스테이지 '솔라' 활용해 울산 공교육 AI 서비스 구축
+https://www.aitimes.com/news/articleView.html?idxno=215295
 
 알티엠, ‘제조 AI 도입점검 프로그램’ 출시…적은 데이터로 AI 적용 여부 먼저 확인
 https://www.aitimes.com/news/articleView.html?idxno=215292
@@ -9,23 +27,5 @@ https://www.aitimes.com/news/articleView.html?idxno=215292
 '카나나' 독립 앱 결국 종료…카카오, 기존 서비스 내 탑재로 전환
 https://www.aitimes.com/news/articleView.html?idxno=215291
 
-알트먼, 트럼프와 비공개로 만났지만…AI 속도 조절 입장차 못 좁혀
-https://www.aitimes.com/news/articleView.html?idxno=215288
-
-'AI 위협' 조회수 1.7억 폭발…앤트로픽 떠난 콕슨 '커리어 전환점'
-https://www.aitimes.com/news/articleView.html?idxno=215282
-
-AI 의료 영상 전문 코로로직, 카카오벤처스·서울대기술지주서 시드 투자 유치
-https://www.aitimes.com/news/articleView.html?idxno=215275
-
-'AI 개발 속도 조절' 발언에 글로벌 테크·반도체주 일제히 급락
-https://www.aitimes.com/news/articleView.html?idxno=215273
-
-"AI 에이전트 결제 전, 문자로 물어본다"...SKT, GSMA RCS 회의 개최
-https://www.aitimes.com/news/articleView.html?idxno=215272
-
-"최고 성능에 비용은 반값"...'라이너 모델 API' 출시
-https://www.aitimes.com/news/articleView.html?idxno=215271
-
-삼성전자, 네덜란드 AI칩 스타트업 유클리드 3200억 공동 투자 나서
-https://www.aitimes.com/news/articleView.html?idxno=215270
+앤트로픽, 금융 시장 본격 공략…'클로드 포 파이낸셜 어드바이저스' 출시
+https://www.aitimes.com/news/articleView.html?idxno=215289
