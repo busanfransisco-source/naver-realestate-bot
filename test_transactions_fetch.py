@@ -16,6 +16,7 @@ from realestate_transactions_fetch import (
     tokenized_rows,
     fetch_nationwide_api,
     api_months,
+    STATE_VERSION,
 )
 
 
@@ -149,7 +150,9 @@ class TransactionDigestTests(unittest.TestCase):
             try:
                 target = date(2026, 9, 14)
                 Path("transactions-state.json").write_text(
-                    json.dumps({"version": 5, "last_output_date": "2026-09-14"}),
+                    json.dumps(
+                        {"version": STATE_VERSION, "last_output_date": "2026-09-14"}
+                    ),
                     encoding="utf-8",
                 )
                 Path("transactions.txt").write_text(
