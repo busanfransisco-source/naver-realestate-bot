@@ -68,9 +68,9 @@ PROVINCE_SHORT = {
 }
 
 
-def download_form(today):
+def download_form(today, thing_no="A"):
     return {
-        "srhThingNo": "A",          # 아파트
+        "srhThingNo": thing_no,       # A: 아파트, E: 분양/입주권
         "srhDelngSecd": "1",       # 매매
         "srhAddrGbn": "1",         # 지번주소
         "srhLfstsSecd": "1",
@@ -98,7 +98,7 @@ def download_form(today):
     }
 
 
-def parse_government_csv(payload):
+def parse_government_csv(payload, property_type="아파트"):
     text = payload.decode("cp949")
     lines = text.splitlines()
     header_index = next(
@@ -146,6 +146,8 @@ def parse_government_csv(payload):
                 "price_per_pyeong": price_per_pyeong,
                 "build_year": (raw.get("건축년도") or "").strip(),
                 "deal_type": (raw.get("거래유형") or "").strip(),
+                "property_type": property_type,
+                "is_presale": property_type != "아파트",
             }
         )
     if not rows:
@@ -153,7 +155,7 @@ def parse_government_csv(payload):
     return rows
 
 
-def fetch_nationwide_transactions(today):
+def fetch_nationwide_transactions(today, thing_no="A", property_type="아파트"):
     """국토부 공개시스템에서 전국 최근 31일 계약분을 한 파일로 받는다."""
     cookies = http.cookiejar.CookieJar()
     opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cookies))
@@ -165,11 +167,11 @@ def fetch_nationwide_transactions(today):
         "Referer": DOWNLOAD_PAGE,
     }
     opener.open(urllib.request.Request(DOWNLOAD_PAGE, headers=headers), timeout=45).read()
-    body = urllib.parse.urlencode(download_form(today)).encode("utf-8")
+    body = urllib.parse.urlencode(download_form(today, thing_no)).encode("utf-8")
     request = urllib.request.Request(DOWNLOAD_URL, data=body, headers=headers)
     with opener.open(request, timeout=180) as response:
         payload = response.read()
-    return parse_government_csv(payload)
+    return parse_government_csv(payload, property_type)
 
 
 def api_months(today, count=2):
@@ -283,10 +285,6 @@ def fetch_nationwide_api(today, service_key, workers=4):
         jobs.extend(
             (APT_API_URL, code, name, month, "아파트")
             for month in api_months(today, APT_LOOKBACK_MONTHS)
-        )
-        jobs.extend(
-            (PRESALE_API_URL, code, name, month, "분양권/입주권")
-            for month in api_months(today, PRESALE_LOOKBACK_MONTHS)
         )
     # 전국 작업 수백 개를 만들기 전에 한 지역으로 API 상태부터 확인한다.
     # 장애 중이면 약 1분 안에 종료해 다음 20분 예약이 다시 시도할 수 있게 한다.
@@ -566,7 +564,14 @@ def main(argv=None):
     service_key = os.environ.get("MOLIT_API_KEY", "").strip()
     if service_key:
         rows = fetch_nationwide_api(today, service_key)
-        source_name = "국토교통부 공공데이터 API"
+        # 분양권 API는 아파트 API와 별도 활용신청이 필요하므로, 같은 국토부
+        # 공개시스템의 전국 CSV를 사용한다. 로그인이나 별도 인증키가 필요 없다.
+        rows.extend(
+            fetch_nationwide_transactions(
+                today, thing_no="E", property_type="분양권/입주권"
+            )
+        )
+        source_name = "국토교통부 공공데이터 API + 실거래가 공개시스템 전국 CSV"
     else:
         rows = fetch_nationwide_transactions(today)
         source_name = "국토교통부 실거래가 공개시스템 전국 CSV"
