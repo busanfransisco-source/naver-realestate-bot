@@ -73,6 +73,19 @@ jobs:
       - name: Fetch AI news
         run: python ai_news_fetch.py || echo "AI news failed"
 
+      # 전용 실거래 예약 작업이 GitHub 스케줄러에서 누락되더라도,
+      # 정상적으로 자주 실행되는 브리핑 작업이 아침 세 차례 다시 호출한다.
+      # 실거래 작업 자체의 concurrency가 중복 실행을 순서대로 처리한다.
+      - name: Backstop nationwide transaction refresh
+        if: >-
+          github.event_name == 'schedule' &&
+          (github.event.schedule == '25 20 * * *' ||
+           github.event.schedule == '25 21 * * *' ||
+           github.event.schedule == '25 22 * * *')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run transactions.yml --ref main
+
       - name: Fetch market info
         run: python market_fetch.py || echo "market failed"
 
@@ -93,7 +106,7 @@ jobs:
           git add finance.txt finance-*.txt || true
           git add ai.txt ai-*.txt || true
           git add subs.txt subs-*.txt trend.txt trend-*.txt rone-cache.json || true
-          git add fuelfx.txt fuelfx-*.txt metalcoin.txt metalcoin-*.txt books.txt books-*.txt fx-cache.json || true
+          git add fuelfx.txt fuelfx-*.txt metalcoin.txt metalcoin-*.txt books.txt books-*.txt fx-cache.json fuel-cache.json || true
           git add transactions.txt transactions-*.txt transactions-state.json || true
           git add weather.txt weather-*.txt fortune.txt fortune-*.txt realestate.txt realestate-*.txt latest.json latest-*.json index.html hub.html briefing.html last-refresh.txt
           git add realestate-analysis-candidates.json || true

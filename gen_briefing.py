@@ -44,6 +44,16 @@ def read_section_text(prefix, weekday):
     if not has_fetch_failure(current):
         return current
 
+    # 기름값과 환율은 한 박스 안에서 따로 수집한다. 한쪽만 실패했을 때
+    # 정상 수집된 나머지 정보까지 통째로 지우지 않는다.
+    if prefix == "fuelfx":
+        cleaned = "\n".join(
+            line for line in current.splitlines() if not has_fetch_failure(line)
+        ).strip()
+        if cleaned and re.search(r"(?:달러|엔\(100\)|유로|위안|원/L)", cleaned):
+            print("fuelfx: 실패한 항목만 제거하고 정상 수집 항목을 발행")
+            return cleaned
+
     # 당일 수집이 실패했더라도 기존 정상 prefix.txt나 직전 요일 자료를 재사용한다.
     # 같은 실행에서 current/prefix가 모두 실패 문구로 바뀐 과거 파일도 건너뛴다.
     weekday_index = WEEKDAY_EN.index(weekday) if weekday in WEEKDAY_EN else 0

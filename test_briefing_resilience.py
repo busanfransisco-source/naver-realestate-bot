@@ -9,6 +9,41 @@ import market_fetch
 
 
 class BriefingResilienceTests(unittest.TestCase):
+    def test_market_workflows_commit_fuel_cache(self):
+        for workflow_name in ("manual-briefing.yml", "naver-realestate.yml"):
+            workflow = Path(".github/workflows", workflow_name).read_text(encoding="utf-8")
+            self.assertIn("fuel-cache.json", workflow)
+
+    def test_oil_detail_uses_new_naver_energy_json(self):
+        response = mock.Mock()
+        response.json.return_value = {
+            "closePrice": "1,858.50",
+            "fluctuations": "-0.07",
+        }
+        with mock.patch.object(market_fetch, "get", return_value=response) as mocked_get:
+            self.assertEqual(market_fetch.oil_detail("OIL_GSL"), (1858.5, -0.07))
+        mocked_get.assert_called_once_with(
+            "https://stock.naver.com/api/securityService/marketindex/energy/OIL_GSL"
+        )
+
+    def test_partial_fuelfx_keeps_valid_exchange_rows(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            previous = os.getcwd()
+            os.chdir(tmp)
+            try:
+                Path("fuelfx-wed.txt").write_text(
+                    "26년 9월 16일 수요일 기름값·환율\n\n"
+                    "⛽ 전국 평균 기름값\n\n"
+                    "(기름값을 가져오지 못했습니다)\n\n"
+                    "💱 주요국 환율\n\n미국 달러 : 1,364.00원",
+                    encoding="utf-8",
+                )
+                content = gen_briefing.read_section_text("fuelfx", "wed")
+                self.assertIn("미국 달러 : 1,364.00원", content)
+                self.assertNotIn("가져오지 못했습니다", content)
+            finally:
+                os.chdir(previous)
+
     def test_previous_valid_books_are_used_when_today_failed(self):
         with tempfile.TemporaryDirectory() as tmp:
             previous = os.getcwd()

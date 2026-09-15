@@ -15,6 +15,7 @@ KST = timezone(timedelta(hours=9))
 WEEKDAY_EN = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 WEEKDAY_KR = ["월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"]
 H = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"}
+FUEL_CACHE_PATH = Path("fuel-cache.json")
 
 FX_LIST = [
     ("USD", "미국 달러"), ("JPY", "일본 엔(100)"), ("EUR", "유럽 유로"),
@@ -57,21 +58,29 @@ def naver_market_items():
 
 
 def oil_detail(code):
-    """네이버 유가 상세 페이지 (OIL_GSL=휘발유, OIL_LO=경유)"""
-    r = get(f"https://finance.naver.com/marketindex/oilDetail.naver?marketindexCd={code}")
-    soup = BeautifulSoup(r.text, "html.parser")
-    today = soup.select_one("p.no_today")
-    ex = soup.select_one("p.no_exday")
-    val = float(re.sub(r"[^\d.]", "", today.get_text()))
-    chg = None
-    if ex:
-        t = ex.get_text(" ", strip=True)
-        m = re.search(r"([\d,]+\.?\d*)", t)
-        if m:
-            chg = float(m.group(1).replace(",", ""))
-            if "하락" in t:
-                chg = -chg
+    """네이버페이 증권 JSON에서 오피넷 유가를 읽는다."""
+    r = get(f"https://stock.naver.com/api/securityService/marketindex/energy/{code}")
+    data = r.json()
+    val = float(str(data["closePrice"]).replace(",", ""))
+    raw_change = data.get("fluctuations")
+    chg = float(str(raw_change).replace(",", "")) if raw_change not in (None, "") else None
     return val, chg
+
+
+def load_fuel_cache():
+    try:
+        data = json.loads(FUEL_CACHE_PATH.read_text(encoding="utf-8"))
+        return data if isinstance(data, dict) else {}
+    except (FileNotFoundError, json.JSONDecodeError, OSError):
+        return {}
+
+
+def save_fuel_cache(values):
+    payload = {"updatedAt": datetime.now(KST).isoformat(), "fuels": values}
+    FUEL_CACHE_PATH.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
 
 
 def fx_rates():
@@ -158,20 +167,34 @@ def main():
     lines.append("⛽ 전국 평균 기름값 (오피넷 기준, 전일 대비)")
     lines.append("")
     fuel_rows = []
+    cached_fuels = load_fuel_cache().get("fuels", {})
+    collected_fuels = dict(cached_fuels)
+    fresh_fuel_codes = set()
     try:
         items = naver_market_items()
-        if "휘발유" in items:
-            v, c = items["휘발유"]
-            fuel_rows.append(f"휘발유 {v:,.2f}원/L ({sign_fmt(c)})")
     except Exception:
         items = {}
-    for code, label in [("OIL_LO", "경유")]:
+    for code, label in [("OIL_GSL", "휘발유"), ("OIL_LO", "경유")]:
         try:
             v, c = oil_detail(code)
             chg_s = f" ({sign_fmt(c)})" if c is not None else ""
             fuel_rows.append(f"{label} {v:,.2f}원/L{chg_s}")
-        except Exception:
-            pass
+            collected_fuels[code] = {"label": label, "value": v, "change": c}
+            fresh_fuel_codes.add(code)
+        except Exception as exc:
+            cached = cached_fuels.get(code)
+            if cached and cached.get("value") is not None:
+                fuel_rows.append(
+                    f"{label} {float(cached['value']):,.2f}원/L (직전 정상값)"
+                )
+                print(f"{label} 수집 실패: {exc} - 직전 정상값을 유지합니다.")
+            else:
+                print(f"{label} 수집 실패: {exc} - 저장된 정상값이 없습니다.")
+    if fresh_fuel_codes:
+        try:
+            save_fuel_cache(collected_fuels)
+        except OSError as exc:
+            print(f"기름값 캐시 저장 실패: {exc}")
     lines.extend(fuel_rows or ["(기름값을 가져오지 못했습니다)"])
     lines.append("")
     lines.append("💱 주요국 환율 (매매기준율, 전일 대비)")
@@ -251,9 +274,9 @@ def main():
             for i, t in enumerate(books, 1):
                 lines.append(f"{i}. {t}")
             books_content = "\n".join(lines).strip() + "\n"
-            print(f"베스트셀러 수집 실패: {e} — 직전 정상 TOP 10을 유지합니다.")
+            print(f"베스트셀러 수집 실패: {e} - 직전 정상 TOP 10을 유지합니다.")
         else:
-            print(f"베스트셀러 수집 실패: {e} — 정상 대체 목록이 없어 기존 파일을 보존합니다.")
+            print(f"베스트셀러 수집 실패: {e} - 정상 대체 목록이 없어 기존 파일을 보존합니다.")
 
     for prefix, content in (("fuelfx", fuelfx), ("metalcoin", metalcoin)):
         for fname in (f"{prefix}.txt", f"{prefix}-{weekday_en}.txt"):
