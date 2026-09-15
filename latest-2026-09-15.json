@@ -1,8 +1,36 @@
 {
-  "updated_at_kst": "2026-09-15 09:45:08",
+  "updated_at_kst": "2026-09-15 09:59:40",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 15일 화요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "H-테크노밸리 개발 본격화…KCC건설 ‘향남역 그로브 스위첸’ 10월 분양",
+      "url": "https://n.news.naver.com/mnews/article/016/0002697325"
+    },
+    {
+      "title": "DL그룹 통합 '지속가능경영보고서' 발간…기후 시나리오 분석",
+      "url": "https://n.news.naver.com/mnews/article/003/0014190296"
+    },
+    {
+      "title": "GS건설, 증강현실 기술 활용 플랜트 기자재 품질 검사",
+      "url": "https://n.news.naver.com/mnews/article/366/0001192392"
+    },
+    {
+      "title": "서울 신통기획 절반이 2030년 이후로…\"공급절벽 해결 못해\"",
+      "url": "https://n.news.naver.com/mnews/article/277/0005816386"
+    },
+    {
+      "title": "GS건설, 품질검사에 증강현실(AR) 활용…효율·정확성↑",
+      "url": "https://n.news.naver.com/mnews/article/277/0005816387"
+    },
+    {
+      "title": "GS건설, AR로 플랜트 기자재 검사…설계 오류·누락 잡는다",
+      "url": "https://n.news.naver.com/mnews/article/018/0006369491"
+    },
+    {
+      "title": "대우건설, '스마트 안전교육·AI 실시간 번역기' 전 현장 적용",
+      "url": "https://n.news.naver.com/mnews/article/014/0005575839"
+    },
     {
       "title": "태블릿 비추면 오설치 잡는다…GS건설, 플랜트 검사에 AR 도입",
       "url": "https://n.news.naver.com/mnews/article/015/0005332364"
@@ -14,34 +42,6 @@
     {
       "title": "스마트 기술로 안전관리 강화…DL, 지속가능경영보고서 발간",
       "url": "https://n.news.naver.com/mnews/article/277/0005816363"
-    },
-    {
-      "title": "HUG, '산업단지 구조고도화 어워드' 산업부 장관상 수상",
-      "url": "https://n.news.naver.com/mnews/article/014/0005575831"
-    },
-    {
-      "title": "현대차, 중증 장애어린이 500명에게 특수유모차 지원",
-      "url": "https://n.news.naver.com/mnews/article/021/0002818795"
-    },
-    {
-      "title": "7월 전국 부동산 매매량 전월比 10% 감소…상가·사무실 침체 뚜렷",
-      "url": "https://n.news.naver.com/mnews/article/421/0009170186"
-    },
-    {
-      "title": "혈압 재고 AI와 마음 상담까지…아파트가 입주민 건강 챙긴다",
-      "url": "https://n.news.naver.com/mnews/article/015/0005332359"
-    },
-    {
-      "title": "7월 전국 부동산 거래량 9.8%↓…4개월 연속 감소",
-      "url": "https://n.news.naver.com/mnews/article/629/0000533756"
-    },
-    {
-      "title": "동부건설, 新조직문화 프로그램 운영…첫 특강 개최",
-      "url": "https://n.news.naver.com/mnews/article/003/0014190155"
-    },
-    {
-      "title": "대우건설, '스마트 안전교육·AI 실시간 번역기' 전면 확대",
-      "url": "https://n.news.naver.com/mnews/article/003/0014190152"
     }
   ]
 }
