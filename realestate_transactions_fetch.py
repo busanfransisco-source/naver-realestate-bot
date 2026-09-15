@@ -32,13 +32,12 @@ STATE_PATH = Path("transactions-state.json")
 DOWNLOAD_PAGE = "https://rt.molit.go.kr/pt/xls/xls.do?mobileAt="
 DOWNLOAD_URL = "https://rt.molit.go.kr/pt/xls/ptXlsCSVDown.do"
 APT_API_URL = "https://apis.data.go.kr/1613000/RTMSDataSvcAptTrade/getRTMSDataSvcAptTrade"
-PRESALE_API_URL = "https://apis.data.go.kr/1613000/RTMSDataSvcSilvTrade/getRTMSDataSvcSilvTrade"
 REGION_CODES_PATH = Path("transactions-region-codes.json")
-STATE_VERSION = 5
-# 법정 신고기한(계약 후 30일)과 월 경계를 함께 덮도록 최근 2개월을 훑는다.
-# 분양권/입주권도 같은 범위에서 별도 공식 API로 확인한다.
-APT_LOOKBACK_MONTHS = 2
-PRESALE_LOOKBACK_MONTHS = 2
+STATE_VERSION = 6
+# 법정 신고기한을 넘겨 늦게 반영되거나 정정되는 건도 놓치지 않도록
+# 아파트는 최근 5개월을 다시 훑는다.
+# 분양권/입주권은 국토부 전국 CSV가 허용하는 최근 30일을 확인한다.
+APT_LOOKBACK_MONTHS = 5
 API_MIN_INTERVAL_SECONDS = 0.55
 API_REQUEST_TIMEOUT_SECONDS = 15
 API_MAX_ATTEMPTS = 3
@@ -582,14 +581,14 @@ def main(argv=None):
     else:
         state = {}
     previous_version = state.get("version")
-    if previous_version not in (4, STATE_VERSION):
+    if previous_version not in (4, 5, STATE_VERSION):
         state = {}
     previous_tokens = set(state.get("seen_tokens", []))
     history_max = state.get("history_max", {})
     bootstrap_preserve_date = state.get("bootstrap_preserve_date")
 
     preserve_output_date = state.get("preserve_output_date")
-    if previous_version == 4:
+    if previous_version in (4, 5):
         # 분양권을 포함한 새 기준으로 바꾸는 첫 실행에서는 기존 거래를 오늘 신규로
         # 오인하지 않는다. 이미 게시된 오늘 요약은 그대로 두고 비교 기준만 교체한다.
         today_records = []
