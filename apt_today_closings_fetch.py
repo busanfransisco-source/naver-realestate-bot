@@ -10,6 +10,8 @@ import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+from transaction_region_order import population_order_key
+
 
 KST = timezone(timedelta(hours=9))
 WEEKDAY_EN = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
@@ -184,10 +186,14 @@ def build_digest(summary):
         "",
         "[지역별 실거래가]",
     ]
+    region_stats = []
     for region in summary.get("sidoStats") or []:
         name = region.get("sidoShortName") or region.get("sidoName") or "기타"
         if name == "전남광주통합":
             name = "광주·전남"
+        region_stats.append((name, region))
+
+    for name, region in sorted(region_stats, key=lambda item: population_order_key(item[0])):
         lines.append(
             f"{name} {int(region.get('count') or 0):,}건 "
             f"(🔥{int(region.get('allTimeHighCount') or 0):,})"

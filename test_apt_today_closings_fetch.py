@@ -40,6 +40,7 @@ class AptTodayClosingsTests(unittest.TestCase):
         self.assertIn("전국 57건 (🔥5)", text)
         self.assertIn("분양권/입주권 5건", text)
         self.assertIn("충남 30건 (🔥1)", text)
+        self.assertLess(text.index("서울 9건"), text.index("충남 30건"))
         self.assertNotIn("apt.today", text)
         self.assertNotIn("http", text)
 

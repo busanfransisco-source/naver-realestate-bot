@@ -24,6 +24,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
+from transaction_region_order import population_order_key
+
 
 KST = timezone(timedelta(hours=9))
 WEEKDAY_EN = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
@@ -471,10 +473,7 @@ def build_digest(today, records):
     by_region = defaultdict(list)
     for row in records:
         by_region[short_region(row)].append(row)
-    ranked_regions = sorted(
-        by_region.items(),
-        key=lambda item: (-len(item[1]), item[0]),
-    )
+    ranked_regions = sorted(by_region.items(), key=lambda item: population_order_key(item[0]))
     lines.extend(["", "[지역별 실거래가]"])
     for region, region_rows in ranked_regions:
         highs = sum(1 for row in region_rows if row.get("is_record"))

@@ -79,6 +79,23 @@ class TransactionDigestTests(unittest.TestCase):
         for i in range(6):
             self.assertIn(f"지역{i} 1건 (🔥{1 if i == 0 else 0})", text)
 
+    def test_regions_are_sorted_by_population_not_transaction_count(self):
+        rows = [
+            self.sample(region_name="세종특별자치시 세종시", building_name=f"세종{i}")
+            for i in range(5)
+        ]
+        rows.extend(
+            [
+                self.sample(region_name="서울특별시 중구", building_name="서울"),
+                self.sample(region_name="경기도 수원시 장안구", building_name="경기"),
+                self.sample(region_name="부산광역시 남구", building_name="부산"),
+            ]
+        )
+        text = build_digest(date(2026, 9, 13), rows)
+        self.assertLess(text.index("경기 1건"), text.index("서울 1건"))
+        self.assertLess(text.index("서울 1건"), text.index("부산 1건"))
+        self.assertLess(text.index("부산 1건"), text.index("세종 5건"))
+
     def test_one_eok_club_uses_per_pyeong_value(self):
         regular = self.sample(
             building_name="평당일억단지",
