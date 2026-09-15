@@ -30,6 +30,41 @@ HEADERS = {
 }
 
 BASE = "https://askjiyun.com/"
+ANIMAL_HEADING_RE = re.compile(r"^〈[^〉]+띠〉$")
+SCORE_LINE_RE = re.compile(r"^운세지수\s*\d+%")
+
+
+def format_animal_blocks(lines):
+    """띠 제목·본문·운세지수를 사용자가 정한 고정 줄바꿈으로 조립한다."""
+    blocks = []
+    current = None
+
+    for line in lines:
+        if ANIMAL_HEADING_RE.fullmatch(line):
+            if current:
+                blocks.append(current)
+            current = {"heading": line, "body": [], "score": ""}
+        elif current is not None and SCORE_LINE_RE.match(line):
+            current["score"] = line
+        elif current is not None:
+            current["body"].append(line)
+
+    if current:
+        blocks.append(current)
+
+    # 구조가 깨진 원문을 억지로 재조립하지 않는다.
+    if not blocks or any(not block["body"] or not block["score"] for block in blocks):
+        return "\n".join(lines)
+
+    formatted = []
+    for block in blocks:
+        body = " ".join(block["body"])
+        # 제목 뒤 빈 줄 1개, 본문 뒤 빈 줄 2개를 항상 고정한다.
+        formatted.append(
+            f'{block["heading"]}\n\n{body}\n\n\n{block["score"]}'
+        )
+    # 한 띠의 지수와 다음 띠 제목 사이는 빈 줄 1개로 고정한다.
+    return "\n\n".join(formatted)
 
 
 def find_today_document_srl(month, day):
@@ -113,11 +148,7 @@ def fetch_document_text(srl, title_needle):
 
     lines = [ln.strip() for ln in body.splitlines()]
     lines = [ln for ln in lines if ln]
-    body = "\n".join(lines)
-    # 띠 블록 사이에 빈 줄 유지 (카톡 가독성)
-    body = body.replace("\n〈", "\n\n〈")
-    # "운세지수 NN%..." 줄을 본문과 빈 줄로 분리 (카톡 가독성)
-    body = re.sub(r"[ \t]*(운세지수 ?\d+%)", r"\n\n\1", body)
+    body = format_animal_blocks(lines)
     return lunar_line, body
 
 
