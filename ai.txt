@@ -1,5 +1,14 @@
 🤖 26년 9월 15일 화요일 AI 뉴스
 
+알티엠, ‘제조 AI 도입점검 프로그램’ 출시…적은 데이터로 AI 적용 여부 먼저 확인
+https://www.aitimes.com/news/articleView.html?idxno=215292
+
+'카나나' 독립 앱 결국 종료…카카오, 기존 서비스 내 탑재로 전환
+https://www.aitimes.com/news/articleView.html?idxno=215291
+
+알트먼, 트럼프와 비공개로 만났지만…AI 속도 조절 입장차 못 좁혀
+https://www.aitimes.com/news/articleView.html?idxno=215288
+
 'AI 위협' 조회수 1.7억 폭발…앤트로픽 떠난 콕슨 '커리어 전환점'
 https://www.aitimes.com/news/articleView.html?idxno=215282
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215267
 
 트럼프 "아모데이는 위선자...AI 안전 우려는 사기"
 https://www.aitimes.com/news/articleView.html?idxno=215264
-
-바닷속 10미터에서 태양광 발전…페로브스카이트로 2시간 실증
-https://www.aitimes.com/news/articleView.html?idxno=215262
-
-미국, 인도 등 3개국 태양광에 최대 170%대 상계관세 판정
-https://www.aitimes.com/news/articleView.html?idxno=215260
-
-"탈모약 개발·암 진단·주식 투자도 AI로"...LG, 전문가 AI로 승부수
-https://www.aitimes.com/news/articleView.html?idxno=215257
