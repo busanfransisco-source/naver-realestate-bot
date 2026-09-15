@@ -3,8 +3,8 @@ name: Nationwide Transaction Refresh
 on:
   workflow_dispatch: {}
   schedule:
-    # 05:10~08:50 KST, 20분 간격. 새로 보강된 거래도 같은 날 계속 합친다.
-    - cron: "10,30,50 20-23 * * *"
+    # 05:10~08:10 KST, 매시간. 새로 보강된 거래는 같은 날 계속 합친다.
+    - cron: "10 20-23 * * *"
 
 permissions:
   contents: write
@@ -16,9 +16,7 @@ concurrency:
 
 jobs:
   refresh-transactions:
-    # apt.today가 GitHub의 Linux/Windows 데이터센터 IP를 429로 제한하므로
-    # 네트워크 풀이 다른 macOS 실행 환경에서 원본 HTML을 직접 읽는다.
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 28
     steps:
       - name: Checkout latest main
@@ -31,11 +29,10 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install browser-compatible collector
-        run: pip install curl-cffi
-
-      - name: Collect the published 05:00 transaction batch
-        run: python apt_today_closings_fetch.py
+      - name: Collect nationwide official transactions
+        run: python realestate_transactions_fetch.py
+        env:
+          MOLIT_API_KEY: ${{ secrets.MOLIT_API_KEY }}
 
       - name: Commit collected transaction files
         id: commit

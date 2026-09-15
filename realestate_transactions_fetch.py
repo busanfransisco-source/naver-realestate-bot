@@ -35,9 +35,9 @@ APT_API_URL = "https://apis.data.go.kr/1613000/RTMSDataSvcAptTrade/getRTMSDataSv
 PRESALE_API_URL = "https://apis.data.go.kr/1613000/RTMSDataSvcSilvTrade/getRTMSDataSvcSilvTrade"
 REGION_CODES_PATH = Path("transactions-region-codes.json")
 STATE_VERSION = 5
-# 늦게 신고된 과거 계약도 잡기 위해 아파트는 최근 5개월을 다시 훑는다.
-# 분양권/입주권은 별도 공식 API에서 최근 2개월을 함께 비교한다.
-APT_LOOKBACK_MONTHS = 5
+# 법정 신고기한(계약 후 30일)과 월 경계를 함께 덮도록 최근 2개월을 훑는다.
+# 분양권/입주권도 같은 범위에서 별도 공식 API로 확인한다.
+APT_LOOKBACK_MONTHS = 2
 PRESALE_LOOKBACK_MONTHS = 2
 API_MIN_INTERVAL_SECONDS = 0.55
 API_REQUEST_TIMEOUT_SECONDS = 15
@@ -505,7 +505,7 @@ def build_digest(today, records):
             ordinary_record_highs,
             key=lambda x: int(x.get("deal_amount") or 0),
             reverse=True,
-        )[:3]:
+        ):
             lines.append(format_transaction(row))
 
     featured = sorted(
@@ -585,11 +585,11 @@ def main(argv=None):
 
     preserve_output_date = state.get("preserve_output_date")
     if previous_version == 4:
-        # 조회 범위 확대와 분양권 추가 첫 실행에서는 과거 자료를 오늘 신규로 오인하지 않는다.
-        # 이미 사람이 확인해 넣은 오늘 요약은 유지하고 새 전체 목록만 비교 기준으로 저장한다.
-        today_records = state.get("today_new_records", [])
+        # 분양권을 포함한 새 기준으로 바꾸는 첫 실행에서는 기존 거래를 오늘 신규로
+        # 오인하지 않는다. 이미 게시된 오늘 요약은 그대로 두고 비교 기준만 교체한다.
+        today_records = []
         preserve_output_date = today.isoformat()
-        print("실거래 조회 범위 확대 기준점을 저장하고 오늘 확인된 요약은 유지합니다")
+        print("공식 실거래 비교 기준을 교체하고 오늘 게시된 요약은 유지합니다")
     elif previous_tokens:
         newly_seen = [current[token] for token in current.keys() - previous_tokens]
         classified = classify_records(newly_seen, history_max)
