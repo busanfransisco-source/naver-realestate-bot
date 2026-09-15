@@ -1,5 +1,8 @@
 🤖 26년 9월 15일 화요일 AI 뉴스
 
+[게시판] 뉴로퓨전,  금융 플랫폼 '밸리 AI'에 투자 리서치 에이전트 탑재 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=215314
+
 플레이태그, AI 행동분석으로 아이 맞춤형 교육 제공…‘스토리라인 원’ 공개
 https://www.aitimes.com/news/articleView.html?idxno=215312
 
@@ -21,11 +24,8 @@ https://www.aitimes.com/news/articleView.html?idxno=215296
 베스핀글로벌, 업스테이지 '솔라' 활용해 울산 공교육 AI 서비스 구축
 https://www.aitimes.com/news/articleView.html?idxno=215295
 
+"독점 정보 유출 막아라"...엔비디아·팔란티어, 첨단 AI 모델 도입 축소
+https://www.aitimes.com/news/articleView.html?idxno=215294
+
 알티엠, ‘제조 AI 도입점검 프로그램’ 출시…적은 데이터로 AI 적용 여부 먼저 확인
 https://www.aitimes.com/news/articleView.html?idxno=215292
-
-'카나나' 독립 앱 결국 종료…카카오, 기존 서비스 내 탑재로 전환
-https://www.aitimes.com/news/articleView.html?idxno=215291
-
-앤트로픽, 금융 시장 본격 공략…'클로드 포 파이낸셜 어드바이저스' 출시
-https://www.aitimes.com/news/articleView.html?idxno=215289
