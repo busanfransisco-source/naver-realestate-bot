@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-09-15 08:55:14",
+  "updated_at_kst": "2026-09-15 09:00:55",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 15일 화요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "서울 아파트 ‘불장’, 전국 부동산 ‘얼음’…\"넉 달째 내리막\"",
+      "url": "https://n.news.naver.com/mnews/article/018/0006369459"
+    },
+    {
+      "title": "경기주택도시공사 지분적립형 분양주택, 본격 궤도에",
+      "url": "https://n.news.naver.com/mnews/article/029/0003047999"
+    },
     {
       "title": "철도공단, 부산 센텀·거제역 유휴부지 개발 제안 접수",
       "url": "https://n.news.naver.com/mnews/article/014/0005575773"
@@ -34,14 +42,6 @@
     {
       "title": "재산세 가장 많이 낸 곳은 강남구···서울시 9월분 재산세 확정",
       "url": "https://n.news.naver.com/mnews/article/032/0003470429"
-    },
-    {
-      "title": "\"AI 설계, 책임 기준부터 세워야\"",
-      "url": "https://n.news.naver.com/mnews/article/088/0001028470"
-    },
-    {
-      "title": "도로공사, 고속도로에 전력·데이터 입힌다…'비전 2035' 제시",
-      "url": "https://n.news.naver.com/mnews/article/014/0005575750"
     }
   ]
 }
