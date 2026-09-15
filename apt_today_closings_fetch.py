@@ -14,10 +14,28 @@ from pathlib import Path
 KST = timezone(timedelta(hours=9))
 WEEKDAY_EN = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 WEEKDAY_KR_SHORT = ["월", "화", "수", "목", "금", "토", "일"]
+SOURCE_URL = "https://apt.today/closings"
 READER_URL = "https://r.jina.ai/https://apt.today/closings"
 
 
 def fetch_page_html():
+    errors = []
+
+    # apt.today 원본을 크롬과 같은 방식으로 직접 읽는다. 일반 urllib 요청은
+    # 사이트 보호 장치에서 429/403으로 차단될 수 있어 브라우저 지문을 사용한다.
+    try:
+        from curl_cffi import requests
+
+        response = requests.get(SOURCE_URL, impersonate="chrome", timeout=90)
+        response.raise_for_status()
+        payload = response.text
+        if "todaySummary" in payload:
+            return payload
+        errors.append("원본 페이지에 todaySummary 없음")
+    except Exception as exc:
+        errors.append(f"원본 직접 수집 실패: {exc}")
+
+    # 원본 직접 수집이 일시적으로 막힐 때만 Reader를 보조 경로로 사용한다.
     request = urllib.request.Request(
         READER_URL,
         headers={
@@ -26,11 +44,16 @@ def fetch_page_html():
             "X-Timeout": "60",
         },
     )
-    with urllib.request.urlopen(request, timeout=90) as response:
-        payload = response.read().decode("utf-8")
-    if "todaySummary" not in payload:
-        raise RuntimeError("당일 실거래 집계가 페이지에 아직 준비되지 않았습니다")
-    return payload
+    try:
+        with urllib.request.urlopen(request, timeout=90) as response:
+            payload = response.read().decode("utf-8")
+        if "todaySummary" in payload:
+            return payload
+        errors.append("Reader 페이지에 todaySummary 없음")
+    except Exception as exc:
+        errors.append(f"Reader 수집 실패: {exc}")
+
+    raise RuntimeError("당일 실거래 집계를 읽지 못했습니다: " + " | ".join(errors))
 
 
 def decode_next_payloads(page_html):
