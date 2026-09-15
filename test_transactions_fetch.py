@@ -88,12 +88,14 @@ class TransactionDigestTests(unittest.TestCase):
             [
                 self.sample(region_name="서울특별시 중구", building_name="서울"),
                 self.sample(region_name="경기도 수원시 장안구", building_name="경기"),
+                self.sample(region_name="인천광역시 연수구", building_name="인천"),
                 self.sample(region_name="부산광역시 남구", building_name="부산"),
             ]
         )
         text = build_digest(date(2026, 9, 13), rows)
-        self.assertLess(text.index("경기 1건"), text.index("서울 1건"))
-        self.assertLess(text.index("서울 1건"), text.index("부산 1건"))
+        self.assertLess(text.index("서울 1건"), text.index("경기 1건"))
+        self.assertLess(text.index("경기 1건"), text.index("인천 1건"))
+        self.assertLess(text.index("인천 1건"), text.index("부산 1건"))
         self.assertLess(text.index("부산 1건"), text.index("세종 5건"))
 
     def test_one_eok_club_uses_per_pyeong_value(self):

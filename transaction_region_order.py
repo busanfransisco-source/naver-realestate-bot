@@ -1,13 +1,13 @@
-"""전국 실거래 요약에서 사용하는 시도 인구순 정렬 기준."""
+"""전국 실거래 요약에서 사용하는 시도 표시 순서."""
 
-# 행정안전부 주민등록 인구통계 2026년 8월 말 기준, 인구 내림차순.
+# 사용자가 지정한 수도권·부산 우선순위 뒤에 나머지 지역을 인구순으로 배치한다.
 POPULATION_ORDER = (
-    "경기",
     "서울",
+    "경기",
+    "인천",
     "부산",
     "경남",
     "광주·전남",
-    "인천",
     "경북",
     "대구",
     "충남",
@@ -24,5 +24,5 @@ _POPULATION_RANK = {name: index for index, name in enumerate(POPULATION_ORDER)}
 
 
 def population_order_key(name):
-    """알려진 시도는 인구순, 새 지역명은 맨 뒤 가나다순으로 보낸다."""
+    """알려진 시도는 지정 순서, 새 지역명은 맨 뒤 가나다순으로 보낸다."""
     return (_POPULATION_RANK.get(name, len(POPULATION_ORDER)), name)
