@@ -16,9 +16,9 @@ concurrency:
 
 jobs:
   refresh-transactions:
-    # apt.today가 일부 Linux 데이터센터 IP를 429로 제한한다. Windows 풀은
-    # 별도 네트워크 대역을 사용하므로 원본 HTML을 직접 읽을 수 있다.
-    runs-on: windows-latest
+    # apt.today가 GitHub의 Linux/Windows 데이터센터 IP를 429로 제한하므로
+    # 네트워크 풀이 다른 macOS 실행 환경에서 원본 HTML을 직접 읽는다.
+    runs-on: macos-latest
     timeout-minutes: 28
     steps:
       - name: Checkout latest main
