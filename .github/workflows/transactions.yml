@@ -30,7 +30,9 @@ jobs:
           python-version: "3.11"
 
       - name: Install browser-compatible collector
-        run: pip install curl-cffi
+        run: |
+          pip install curl-cffi playwright
+          playwright install --with-deps chromium
 
       - name: Collect the published 05:00 transaction batch
         run: python apt_today_closings_fetch.py

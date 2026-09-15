@@ -35,6 +35,40 @@ def fetch_page_html():
     except Exception as exc:
         errors.append(f"원본 직접 수집 실패: {exc}")
 
+    # GitHub Actions의 서버 IP가 일반 HTTP 요청만 제한하는 경우 실제
+    # Chromium으로 페이지를 열어 서버 렌더링 원문을 가져온다.
+    try:
+        from playwright.sync_api import sync_playwright
+
+        with sync_playwright() as playwright:
+            browser = playwright.chromium.launch(
+                headless=True,
+                args=["--disable-dev-shm-usage", "--no-sandbox"],
+            )
+            page = browser.new_page(
+                user_agent=(
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                    "AppleWebKit/537.36 (KHTML, like Gecko) "
+                    "Chrome/131.0.0.0 Safari/537.36"
+                )
+            )
+            page.goto(SOURCE_URL, wait_until="domcontentloaded", timeout=90_000)
+            try:
+                page.wait_for_function(
+                    "Array.from(document.scripts).some(s => "
+                    "(s.textContent || '').includes('todaySummary'))",
+                    timeout=30_000,
+                )
+            except Exception:
+                pass
+            payload = page.content()
+            browser.close()
+        if "todaySummary" in payload:
+            return payload
+        errors.append("Chromium 페이지에 todaySummary 없음")
+    except Exception as exc:
+        errors.append(f"Chromium 수집 실패: {exc}")
+
     # 원본 직접 수집이 일시적으로 막힐 때만 Reader를 보조 경로로 사용한다.
     request = urllib.request.Request(
         READER_URL,
