@@ -101,6 +101,20 @@ class TransactionDigestTests(unittest.TestCase):
         self.assertIn("신고가🚀 1.1억/평", text)
         self.assertEqual(format_per_pyeong(10000), "1억/평")
         self.assertNotIn("\n\n[주요 신고가]\n", text)
+
+    def test_every_nationwide_record_high_is_listed(self):
+        rows = [
+            self.sample(
+                building_name=f"신고가단지{i}",
+                deal_amount=100000 + i,
+                is_record=True,
+            )
+            for i in range(8)
+        ]
+        text = build_digest(date(2026, 9, 13), rows)
+        for i in range(8):
+            self.assertIn(f"신고가단지{i}", text)
+
     def test_government_csv_excludes_cancelled_deals(self):
         source = "\n".join(
             [
@@ -112,6 +126,21 @@ class TransactionDigestTests(unittest.TestCase):
         )
         rows = parse_government_csv(source.encode("cp949"))
         self.assertEqual([row["building_name"] for row in rows], ["덕수궁롯데캐슬"])
+
+    def test_presale_csv_rows_are_marked_separately(self):
+        source = "\n".join(
+            [
+                '"안내"',
+                '"NO","시군구","번지","단지명","전용면적(㎡)","거래금액(만원)","층","매수","매도","계약년월","계약일","분/입주권","해제사유발생일","거래유형","중개사소재지"',
+                '"1","경기도 평택시 가재동","가-","분양단지","84.9","44,580","18","개인","개인","202609","14","분양권","-","중개거래","경기 평택시"',
+            ]
+        )
+        rows = parse_government_csv(
+            source.encode("cp949"), property_type="분양권/입주권"
+        )
+        self.assertEqual(len(rows), 1)
+        self.assertTrue(rows[0]["is_presale"])
+        self.assertEqual(rows[0]["property_type"], "분양권/입주권")
 
     def test_same_day_success_skips_retry(self):
         with tempfile.TemporaryDirectory() as tmp:
