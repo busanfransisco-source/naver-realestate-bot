@@ -1,31 +1,31 @@
 🤖 26년 9월 16일 수요일 AI 뉴스
 
-비드래프트 온디바이스 AI '포켓', 공개 7주 만에 100만 다운로드
-https://www.aitimes.com/news/articleView.html?idxno=215322
+버즈니, 비스킷AI에 '클립 만들기' 추가... 숏폼부터 미들폼·카드뉴스 지원
+https://www.aitimes.com/news/articleView.html?idxno=215345
 
-플레이태그, AI 행동분석으로 아이 맞춤형 교육 제공…‘스토리라인 원’ 공개
-https://www.aitimes.com/news/articleView.html?idxno=215312
+알트먼 "이번 주 대형 제품 출시"...‘데브데이’까지 연속 배포 예고
+https://www.aitimes.com/news/articleView.html?idxno=215342
 
-"뇌처럼 학습한다"…사카나 AI, 역전파 대체 기술 'PC-ALM' 발표
-https://www.aitimes.com/news/articleView.html?idxno=215305
+모레, 이기종 AI 가속기 하나처럼 활용하는 ‘토큰 팩토리 OS’ 제시
+https://www.aitimes.com/news/articleView.html?idxno=215341
 
-[게시판] 에어빌리티, 드론 R&D·생산거점 '기흥 캠퍼스'로 통합 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=215302
+네이버, 실제 서비스에 ‘AI 안전성 체계’ 적용...세이프티 리포트 공개
+https://www.aitimes.com/news/articleView.html?idxno=215340
 
-애플, 시리 AI 탑재 'iOS 27' 배포 시작...차세대 아이폰 출격 채비
-https://www.aitimes.com/news/articleView.html?idxno=215300
+머스크, 테슬라·스페이스X 합병 재차 시사..."가능성 열려있어"
+https://www.aitimes.com/news/articleView.html?idxno=215339
 
-인포시즈, SKT 부사장 출신 박준 CBO 영입 "기업 AI 전환 속도"
-https://www.aitimes.com/news/articleView.html?idxno=215298
+포티투마루, LLM42·RAG42 2종 정부 AI 공인인증 취득
+https://www.aitimes.com/news/articleView.html?idxno=215338
 
-AI로 영양학 오랜 측정 난제 도전…아이들의 1년 치 식사가 연구 데이터로
-https://www.aitimes.com/news/articleView.html?idxno=215296
+메타, '사생활 침해' 논란에 카메라 없앤 스마트 안경 선보인다
+https://www.aitimes.com/news/articleView.html?idxno=215336
 
-베스핀글로벌, 업스테이지 '솔라' 활용해 울산 공교육 AI 서비스 구축
-https://www.aitimes.com/news/articleView.html?idxno=215295
+"AI 학습 데이터 무단 도용 멈춰"...멘탯, 제이펍과 도서 AI 라이선싱 계약
+https://www.aitimes.com/news/articleView.html?idxno=215335
 
-알티엠, ‘제조 AI 도입점검 프로그램’ 출시…적은 데이터로 AI 적용 여부 먼저 확인
-https://www.aitimes.com/news/articleView.html?idxno=215292
+"AI로 날씨 예측한다"...엔라이튼, 태양광 발전량 예측 기술 특허 획득
+https://www.aitimes.com/news/articleView.html?idxno=215333
 
-'카나나' 독립 앱 결국 종료…카카오, 기존 서비스 내 탑재로 전환
-https://www.aitimes.com/news/articleView.html?idxno=215291
+구글, 말하며 생각하는 '제미나이 3.8 라이브' 공개..."음성 품질 1위"
+https://www.aitimes.com/news/articleView.html?idxno=215332
