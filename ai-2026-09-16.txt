@@ -1,5 +1,8 @@
 🤖 26년 9월 16일 수요일 AI 뉴스
 
+[게시판] 플래티어, CJ제일제당·하이트진로음료에 젠서 GEO 도입 확대 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=215361
+
 리벨리온, 일본 현지에 AI 추론 인프라 지원…‘리벨랙’ 100대 이상 공급 계획
 https://www.aitimes.com/news/articleView.html?idxno=215358
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215348
 
 구글, '제미나이 노트북'에 맞춤형 학습 기능 추가..."듣고 말하며 공부한다"
 https://www.aitimes.com/news/articleView.html?idxno=215347
-
-배경훈 장관 "AI 속도 늦출 여유 없다...중요한 것은 속도책임"
-https://www.aitimes.com/news/articleView.html?idxno=215346
