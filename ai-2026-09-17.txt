@@ -3,8 +3,14 @@
 VAN, 대격변 시대 속 AI 기술주권·노동대체 논의
 https://www.aitimes.com/news/articleView.html?idxno=215418
 
+"환각·타입 오류 없다"...오픈AI 출신, 의사결정 특화 AI '제브' 선보여
+https://www.aitimes.com/news/articleView.html?idxno=215416
+
 AAII 국내 1위 ‘모티프 3’ 29일까지 API 무료 공개..."에이전트에 집중"
 https://www.aitimes.com/news/articleView.html?idxno=215415
+
+"국산 휴머노이드로 담낭 절제까지"...삼성서울병원 로봇 수술 시연
+https://www.aitimes.com/news/articleView.html?idxno=215413
 
 세일즈포스, '하네스' 최적화로 브라우저 작업 성공률 93% 달성
 https://www.aitimes.com/news/articleView.html?idxno=215411
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215406
 
 과기부, 한양대 ‘AI반도체 혁신연구소’ 개소…”실전형 인재 매년 20명씩 양성”
 https://www.aitimes.com/news/articleView.html?idxno=215405
-
-인민일보 “AI 증류는 중립적 기술”…미국 도용 주장에 상응 조치 경고
-https://www.aitimes.com/news/articleView.html?idxno=215404
-
-EU, AI '속도조절론' 가세…최첨단 연구소 초청 회동 추진
-https://www.aitimes.com/news/articleView.html?idxno=215397
