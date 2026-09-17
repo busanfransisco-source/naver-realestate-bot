@@ -1,5 +1,11 @@
 🤖 26년 9월 17일 목요일 AI 뉴스
 
+[게시판] KT, 과기부 ‘AI 다크팩토리 설계·구축 솔루션 개발’과제 참여 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=215422
+
+[게시판] NC AI, 1.4조 전북·경남 피지컬 AI 국책과제 참여 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=215421
+
 VAN, 대격변 시대 속 AI 기술주권·노동대체 논의
 https://www.aitimes.com/news/articleView.html?idxno=215418
 
@@ -8,6 +14,9 @@ https://www.aitimes.com/news/articleView.html?idxno=215416
 
 AAII 국내 1위 ‘모티프 3’ 29일까지 API 무료 공개..."에이전트에 집중"
 https://www.aitimes.com/news/articleView.html?idxno=215415
+
+피어리오딕 랩스, 재료과학 AI '네온' 공개..."첨단 모델 성능 뛰어넘어"
+https://www.aitimes.com/news/articleView.html?idxno=215414
 
 "국산 휴머노이드로 담낭 절제까지"...삼성서울병원 로봇 수술 시연
 https://www.aitimes.com/news/articleView.html?idxno=215413
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215410
 
 팀스파르타, 국내 10대 그룹 9곳에 AI 교육 제공…계약 규모 220% 증가
 https://www.aitimes.com/news/articleView.html?idxno=215409
-
-"13세 미만 SNS 완전 금지"…EU, 온라인 규제 강화한 '키즈 액트' 제안
-https://www.aitimes.com/news/articleView.html?idxno=215408
-
-노보 노디스크, 앤트로픽 ‘클로드’로 신약 개발 속도 낸다
-https://www.aitimes.com/news/articleView.html?idxno=215406
-
-과기부, 한양대 ‘AI반도체 혁신연구소’ 개소…”실전형 인재 매년 20명씩 양성”
-https://www.aitimes.com/news/articleView.html?idxno=215405
