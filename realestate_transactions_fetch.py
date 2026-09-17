@@ -448,6 +448,15 @@ def format_transaction(row):
     )
 
 
+def record_display_sort_key(row):
+    """신고가를 지정 지역순으로 묶고, 지역 안에서는 거래가 내림차순으로 정렬한다."""
+    return (
+        population_order_key(short_region(row)),
+        -int(row.get("deal_amount") or 0),
+        str(row.get("building_name") or ""),
+    )
+
+
 def build_digest(today, records):
     records = list(records)
     presale_count = sum(1 for row in records if row.get("is_presale"))
@@ -497,11 +506,7 @@ def build_digest(today, records):
     ]
     if ordinary_record_highs:
         lines.extend(["", "[주요 신고가]"])
-        for row in sorted(
-            ordinary_record_highs,
-            key=lambda x: int(x.get("deal_amount") or 0),
-            reverse=True,
-        ):
+        for row in sorted(ordinary_record_highs, key=record_display_sort_key):
             lines.append(format_transaction(row))
 
     featured = sorted(

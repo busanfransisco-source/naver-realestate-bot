@@ -166,6 +166,22 @@ def format_transaction(transaction):
     )
 
 
+def transaction_region_name(transaction):
+    name = (transaction.get("sido") or {}).get("shortName", "") or "기타"
+    if name in {"광주", "전남", "전남광주통합"}:
+        return "광주·전남"
+    return name
+
+
+def record_display_sort_key(transaction):
+    """신고가를 지정 지역순으로 묶고, 지역 안에서는 거래가 내림차순으로 정렬한다."""
+    return (
+        population_order_key(transaction_region_name(transaction)),
+        -int(transaction.get("amount") or 0),
+        str(transaction.get("danjiName") or ""),
+    )
+
+
 def summary_date(summary):
     since = str(summary.get("since") or "").replace("Z", "+00:00")
     return datetime.fromisoformat(since).astimezone(KST).date()
@@ -207,7 +223,10 @@ def build_digest(summary):
     ]
     if record_highs:
         lines.extend(["", "[주요 신고가]"])
-        lines.extend(format_transaction(row) for row in record_highs)
+        lines.extend(
+            format_transaction(row)
+            for row in sorted(record_highs, key=record_display_sort_key)
+        )
 
     record_ids = {row.get("id") for row in record_highs}
     featured = [

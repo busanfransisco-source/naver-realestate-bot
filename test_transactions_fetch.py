@@ -135,6 +135,19 @@ class TransactionDigestTests(unittest.TestCase):
         for i in range(8):
             self.assertIn(f"신고가단지{i}", text)
 
+    def test_record_highs_are_grouped_by_region_then_price_descending(self):
+        rows = [
+            self.sample(region_name="부산광역시 남구", building_name="부산50억", deal_amount=500000, is_record=True),
+            self.sample(region_name="서울특별시 중구", building_name="서울10억", deal_amount=100000, is_record=True),
+            self.sample(region_name="인천광역시 연수구", building_name="인천25억", deal_amount=250000, is_record=True),
+            self.sample(region_name="경기도 수원시 장안구", building_name="경기30억", deal_amount=300000, is_record=True),
+            self.sample(region_name="서울특별시 강남구", building_name="서울20억", deal_amount=200000, is_record=True),
+        ]
+        text = build_digest(date(2026, 9, 13), rows)
+        names = ["서울20억", "서울10억", "경기30억", "인천25억", "부산50억"]
+        positions = [text.index(name) for name in names]
+        self.assertEqual(positions, sorted(positions))
+
     def test_government_csv_excludes_cancelled_deals(self):
         source = "\n".join(
             [

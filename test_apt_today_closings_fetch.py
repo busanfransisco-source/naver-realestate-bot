@@ -71,6 +71,38 @@ class AptTodayClosingsTests(unittest.TestCase):
             self.assertIn(f"신고가단지{number}", text)
         self.assertEqual(text.count("신고가단지"), 5)
 
+    def test_record_highs_are_grouped_by_region_then_price_descending(self):
+        def row(number, region, amount):
+            return {
+                "id": number,
+                "danjiName": f"{region}{amount}",
+                "amount": amount,
+                "isPYAllTimeHigh": True,
+                "type": {"supplyPY": 34},
+                "sido": {"shortName": region},
+                "sigungu": {"name": "테스트구", "shortName": "테스트"},
+            }
+
+        record_highs = [
+            row(1, "부산", 500000),
+            row(2, "서울", 100000),
+            row(3, "인천", 250000),
+            row(4, "경기", 300000),
+            row(5, "서울", 200000),
+        ]
+        summary = {
+            "since": "2026-09-13T15:00:00.000Z",
+            "totalCount": 5,
+            "allTimeHighCount": 5,
+            "sidoStats": [],
+            "highlightTransactions": [],
+            "allTimeHighTransactions": record_highs,
+        }
+        _, text = build_digest(summary)
+        names = ["서울200000", "서울100000", "경기300000", "인천250000", "부산500000"]
+        positions = [text.index(name) for name in names]
+        self.assertEqual(positions, sorted(positions))
+
 
 if __name__ == "__main__":
     unittest.main()
