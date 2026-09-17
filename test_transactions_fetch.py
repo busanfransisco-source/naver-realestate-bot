@@ -147,6 +147,11 @@ class TransactionDigestTests(unittest.TestCase):
         names = ["서울20억", "서울10억", "경기30억", "인천25억", "부산50억"]
         positions = [text.index(name) for name in names]
         self.assertEqual(positions, sorted(positions))
+        headings = ["🏙️ 서울", "🏘️ 경기", "🌉 인천", "🌊 부산"]
+        heading_positions = [text.index(heading) for heading in headings]
+        self.assertEqual(heading_positions, sorted(heading_positions))
+        self.assertLess(text.index("🏙️ 서울"), text.index("서울20억"))
+        self.assertLess(text.index("🌊 부산"), text.index("부산50억"))
 
     def test_government_csv_excludes_cancelled_deals(self):
         source = "\n".join(

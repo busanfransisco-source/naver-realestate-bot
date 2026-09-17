@@ -102,6 +102,9 @@ class AptTodayClosingsTests(unittest.TestCase):
         names = ["서울200000", "서울100000", "경기300000", "인천250000", "부산500000"]
         positions = [text.index(name) for name in names]
         self.assertEqual(positions, sorted(positions))
+        headings = ["🏙️ 서울", "🏘️ 경기", "🌉 인천", "🌊 부산"]
+        heading_positions = [text.index(heading) for heading in headings]
+        self.assertEqual(heading_positions, sorted(heading_positions))
 
 
 if __name__ == "__main__":

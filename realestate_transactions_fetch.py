@@ -24,7 +24,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-from transaction_region_order import population_order_key
+from transaction_region_order import population_order_key, region_heading
 
 
 KST = timezone(timedelta(hours=9))
@@ -506,7 +506,12 @@ def build_digest(today, records):
     ]
     if ordinary_record_highs:
         lines.extend(["", "[주요 신고가]"])
+        current_region = None
         for row in sorted(ordinary_record_highs, key=record_display_sort_key):
+            row_region = short_region(row)
+            if row_region != current_region:
+                lines.extend(["", region_heading(row_region)])
+                current_region = row_region
             lines.append(format_transaction(row))
 
     featured = sorted(

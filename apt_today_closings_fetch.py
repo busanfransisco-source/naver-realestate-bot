@@ -10,7 +10,7 @@ import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from transaction_region_order import population_order_key
+from transaction_region_order import population_order_key, region_heading
 
 
 KST = timezone(timedelta(hours=9))
@@ -223,10 +223,13 @@ def build_digest(summary):
     ]
     if record_highs:
         lines.extend(["", "[주요 신고가]"])
-        lines.extend(
-            format_transaction(row)
-            for row in sorted(record_highs, key=record_display_sort_key)
-        )
+        current_region = None
+        for row in sorted(record_highs, key=record_display_sort_key):
+            row_region = transaction_region_name(row)
+            if row_region != current_region:
+                lines.extend(["", region_heading(row_region)])
+                current_region = row_region
+            lines.append(format_transaction(row))
 
     record_ids = {row.get("id") for row in record_highs}
     featured = [
