@@ -1,5 +1,8 @@
 🤖 26년 9월 18일 금요일 AI 뉴스
 
+"AI가 진료 기록 대신 써준다"...픽스업헬스, 의료 자동화 솔루션 출시
+https://www.aitimes.com/news/articleView.html?idxno=215425
+
 [게시판] KT, 과기부 ‘AI 다크팩토리 설계·구축 솔루션 개발’과제 참여 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=215422
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215411
 
 미·중 안보 전문가 "군사 AI 오작동 막을 '핵무기급 안전장치' 필요"
 https://www.aitimes.com/news/articleView.html?idxno=215410
-
-팀스파르타, 국내 10대 그룹 9곳에 AI 교육 제공…계약 규모 220% 증가
-https://www.aitimes.com/news/articleView.html?idxno=215409
