@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-09-18 07:16:44",
+  "updated_at_kst": "2026-09-18 07:31:22",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 18일 금요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "[오늘 부동산] 토허제 실거주 유예 1년 더…효과는 '제한적'",
+      "url": "https://n.news.naver.com/mnews/article/119/0003134088"
+    },
     {
       "title": "9월 재산세, 추석 연휴 끝나고 사흘뿐…10월 1일이면 3% 가산세",
       "url": "https://n.news.naver.com/mnews/article/088/0001029234"
@@ -38,10 +42,6 @@
     {
       "title": "[단독]안 여나 못 여나…완공하고도 10개월째 문 닫힌 용산공원 파크골프장",
       "url": "https://n.news.naver.com/mnews/article/277/0005818144"
-    },
-    {
-      "title": "\"지금 안 사는 게 더 이상하죠\"…삼성맨 몰리자 집값 '들썩' [시장톡]",
-      "url": "https://n.news.naver.com/mnews/article/015/0005333714"
     }
   ]
 }
