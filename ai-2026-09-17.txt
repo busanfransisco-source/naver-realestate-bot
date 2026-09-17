@@ -1,31 +1,31 @@
 🤖 26년 9월 17일 목요일 AI 뉴스
 
-지니젠AI, 오픈라우터 426종 분석 '한국어 AI 품질 리더보드' 공개
-https://www.aitimes.com/news/articleView.html?idxno=215396
+VAN, 대격변 시대 속 AI 기술주권·노동대체 논의
+https://www.aitimes.com/news/articleView.html?idxno=215418
 
-"외부 감사에 연구실 개방하라"…오픈AI·앤트로픽, 내부 반발로 '몸살'
-https://www.aitimes.com/news/articleView.html?idxno=215394
+AAII 국내 1위 ‘모티프 3’ 29일까지 API 무료 공개..."에이전트에 집중"
+https://www.aitimes.com/news/articleView.html?idxno=215415
 
-술레이먼, 앤트로픽에 직격탄..."AI에 의식·권리 부여는 재앙적 위험"
-https://www.aitimes.com/news/articleView.html?idxno=215391
+세일즈포스, '하네스' 최적화로 브라우저 작업 성공률 93% 달성
+https://www.aitimes.com/news/articleView.html?idxno=215411
 
-"승강기 내 위험 AI가 돕는다"...LGU+, 현대엘리베이터와 원격관제 협력
-https://www.aitimes.com/news/articleView.html?idxno=215387
+미·중 안보 전문가 "군사 AI 오작동 막을 '핵무기급 안전장치' 필요"
+https://www.aitimes.com/news/articleView.html?idxno=215410
 
-노타, 인텔과 'AI 영상관제 패키지' 출시..."GPU 1개로 CCTV 32개 감시"
-https://www.aitimes.com/news/articleView.html?idxno=215385
+팀스파르타, 국내 10대 그룹 9곳에 AI 교육 제공…계약 규모 220% 증가
+https://www.aitimes.com/news/articleView.html?idxno=215409
 
-AMD, 연내 국내에 '아시아 첫' AI 우수 연구센터 설립…과기부와 공동연구 본격화
-https://www.aitimes.com/news/articleView.html?idxno=215384
+"13세 미만 SNS 완전 금지"…EU, 온라인 규제 강화한 '키즈 액트' 제안
+https://www.aitimes.com/news/articleView.html?idxno=215408
 
-일레븐랩스, 유니버설과 파트너십..."정식 라이선스로 AI 음악 플랙폼 선보일 것"
-https://www.aitimes.com/news/articleView.html?idxno=215382
+노보 노디스크, 앤트로픽 ‘클로드’로 신약 개발 속도 낸다
+https://www.aitimes.com/news/articleView.html?idxno=215406
 
-인텔리빅스, 증권신고서 제출...안전관제 AI로 코스닥 상장 돌입
-https://www.aitimes.com/news/articleView.html?idxno=215381
+과기부, 한양대 ‘AI반도체 혁신연구소’ 개소…”실전형 인재 매년 20명씩 양성”
+https://www.aitimes.com/news/articleView.html?idxno=215405
 
-보이스루, AI·전문가 결합 더빙 서비스 ‘폴리타’ 출시
-https://www.aitimes.com/news/articleView.html?idxno=215380
+인민일보 “AI 증류는 중립적 기술”…미국 도용 주장에 상응 조치 경고
+https://www.aitimes.com/news/articleView.html?idxno=215404
 
-미국인 63% “AI, 인류 파멸시킬 수도”...개발 중단은 48% 지지
-https://www.aitimes.com/news/articleView.html?idxno=215379
+EU, AI '속도조절론' 가세…최첨단 연구소 초청 회동 추진
+https://www.aitimes.com/news/articleView.html?idxno=215397
