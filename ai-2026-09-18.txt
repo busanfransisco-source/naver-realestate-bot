@@ -1,31 +1,31 @@
 🤖 26년 9월 18일 금요일 AI 뉴스
 
+저커버그·젠슨 황·머스크, 트럼프 직접 설득…백악관 'AI 규제안' 무산
+https://www.aitimes.com/news/articleView.html?idxno=215469
+
+오픈AI, '대형 신제품' 출시 일주일 연기…'GPT-6 솔' 기대감 고조
+https://www.aitimes.com/news/articleView.html?idxno=215462
+
+위버스브레인, 18년 축적 학습 데이터로 '습관 설계 AI' 개발 나서
+https://www.aitimes.com/news/articleView.html?idxno=215458
+
+"작지만 강하다"...업스테이지 '솔라 미니 4', 수능 수학 정답률·속도 모두 잡았다
+https://www.aitimes.com/news/articleView.html?idxno=215457
+
+네이버 D2SF, 헬스케어 스타트업 임프리메드·무니스에 신규 투자
+https://www.aitimes.com/news/articleView.html?idxno=215456
+
+화웨이, 차세대 AI 칩 출시 앞당긴다..."대규모 연결로 엔비디아 추격"
+https://www.aitimes.com/news/articleView.html?idxno=215455
+
 루닛, 타임 선정 '세계 최고 헬스테크 기업' 등재…“AI 진단 경쟁력 입증”
 https://www.aitimes.com/news/articleView.html?idxno=215453
 
 네이버클라우드 “AI 풀스택·FDE 동원해 국방 AX 지원할 것”
 https://www.aitimes.com/news/articleView.html?idxno=215451
 
+오픈AI, ‘법률용 아스트라’ 발표...빅 로펌·기술 기업 맞춤 AI 지원
+https://www.aitimes.com/news/articleView.html?idxno=215450
+
 한국인 76% "AI가 내 일자리 뺏을 것"...고용 불안도 세계 최고 수준
 https://www.aitimes.com/news/articleView.html?idxno=215449
-
-제논, 화면 인식·컴퓨터 조작 특화 '훈민 VLM 397B' 오픈소스 공개
-https://www.aitimes.com/news/articleView.html?idxno=215447
-
-에바 ‘에이스 프로 맥스’, 기후에너지 혁신상 수상… 열화상 감지 ‘세이버’ 공개
-https://www.aitimes.com/news/articleView.html?idxno=215444
-
-셀렉트스타 "AI 검증, 일회성 시험 아냐"...전 주기 상시 평가 체계 강조
-https://www.aitimes.com/news/articleView.html?idxno=215439
-
-앤트로픽 "클로드, 자기개선 주도 26%…관여는 90%"
-https://www.aitimes.com/news/articleView.html?idxno=215435
-
-찰스 3세, 젠슨 황·허사비스 만나 "AI 통제 수단 마련해야"
-https://www.aitimes.com/news/articleView.html?idxno=215434
-
-앤트로픽, 장기 개발 관리 에이전트 '클로드 코드 프로젝트' 공개
-https://www.aitimes.com/news/articleView.html?idxno=215430
-
-폴란드 태양광 개발사업 40.6GW…프로젝트 수 줄고 규모는 커져
-https://www.aitimes.com/news/articleView.html?idxno=215428
