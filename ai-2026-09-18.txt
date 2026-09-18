@@ -1,5 +1,8 @@
 🤖 26년 9월 18일 금요일 AI 뉴스
 
+에바 ‘에이스 프로 맥스’, 기후에너지 혁신상 수상… 열화상 감지 ‘세이버’ 공개
+https://www.aitimes.com/news/articleView.html?idxno=215444
+
 "AI가 진료 기록 대신 써준다"...픽스업헬스, 의료 자동화 솔루션 출시
 https://www.aitimes.com/news/articleView.html?idxno=215425
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215413
 
 세일즈포스, '하네스' 최적화로 브라우저 작업 성공률 93% 달성
 https://www.aitimes.com/news/articleView.html?idxno=215411
-
-미·중 안보 전문가 "군사 AI 오작동 막을 '핵무기급 안전장치' 필요"
-https://www.aitimes.com/news/articleView.html?idxno=215410
