@@ -3,6 +3,9 @@
 [게시판] 에스트래픽, 강릉 ITS 세계총회서 지능형 AI 챗봇 운영 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=215473
 
+AI스페라, 위협 노출 관리 솔루션에 MS 에이전트 기술 적용
+https://www.aitimes.com/news/articleView.html?idxno=215471
+
 "낯선 가정서 집안일 척척"...피규어 AI, 로봇 모델 '헬릭스 2.5' 공개
 https://www.aitimes.com/news/articleView.html?idxno=215470
 
@@ -12,20 +15,17 @@ https://www.aitimes.com/news/articleView.html?idxno=215469
 [게시판] 코난테크놀로지, 경남 '피지컬AI 국책사업' 선정 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=215468
 
+스탠포드, 논문을 '대화형 에이전트'로 만드는 프레임워크 공개
+https://www.aitimes.com/news/articleView.html?idxno=215465
+
 중국 AI 총매출, 오픈AI·앤트로픽 10% 불과...몸값 '거품' 논란
 https://www.aitimes.com/news/articleView.html?idxno=215463
 
 오픈AI, '대형 신제품' 출시 일주일 연기…'GPT-6 솔' 기대감 고조
 https://www.aitimes.com/news/articleView.html?idxno=215462
 
+앤드류 응 "AI 인류 멸종 위협은 SF"...'공포 마케팅' 일침
+https://www.aitimes.com/news/articleView.html?idxno=215461
+
 "AI 검색 속도 최대 20배"...구글, 차세대 프레임워크 'R4T' 발표
 https://www.aitimes.com/news/articleView.html?idxno=215460
-
-위버스브레인, 18년 축적 학습 데이터로 '습관 설계 AI' 개발 나서
-https://www.aitimes.com/news/articleView.html?idxno=215458
-
-"작지만 강하다"...업스테이지 '솔라 미니 4', 수능 수학 정답률·속도 모두 잡았다
-https://www.aitimes.com/news/articleView.html?idxno=215457
-
-네이버 D2SF, 헬스케어 스타트업 임프리메드·무니스에 신규 투자
-https://www.aitimes.com/news/articleView.html?idxno=215456
