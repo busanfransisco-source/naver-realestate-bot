@@ -3,6 +3,7 @@ from pathlib import Path
 import tempfile
 import unittest
 from unittest import mock
+import json
 
 import gen_briefing
 import market_fetch
@@ -24,6 +25,27 @@ class BriefingResilienceTests(unittest.TestCase):
             self.assertEqual(market_fetch.oil_detail("OIL_GSL"), (1858.5, -0.07))
         mocked_get.assert_called_once_with(
             "https://stock.naver.com/api/securityService/marketindex/energy/OIL_GSL"
+        )
+
+    def test_fx_rates_use_new_naver_exchange_json(self):
+        def response_for(url, **kwargs):
+            response = mock.Mock()
+            response.json.return_value = {
+                "exchangeInfo": {
+                    "closePrice": "1,383.70",
+                    "fluctuationsRatio": "0.12",
+                    "localTradedAt": "2026-09-18T10:14:53+09:00",
+                }
+            }
+            return response
+
+        with mock.patch.object(market_fetch, "get", side_effect=response_for) as mocked_get:
+            rates = market_fetch.fx_rates()
+        self.assertEqual(rates["USD"]["value"], 1383.7)
+        self.assertEqual(rates["USD"]["change_pct"], 0.12)
+        self.assertIn(
+            "https://stock.naver.com/api/securityService/marketindex/exchange/FX_USDKRW",
+            [call.args[0] for call in mocked_get.call_args_list],
         )
 
     def test_partial_fuelfx_keeps_valid_exchange_rows(self):
@@ -74,6 +96,9 @@ class BriefingResilienceTests(unittest.TestCase):
                 targets = [Path("books.txt"), Path(f"books-{weekday}.txt")]
                 for path in targets:
                     path.write_text("기존 정상 베스트셀러 10권", encoding="utf-8")
+                Path("fx-cache.json").write_text(
+                    json.dumps({"USD": 1380.5}), encoding="utf-8"
+                )
 
                 with mock.patch.object(market_fetch, "naver_market_items", return_value={}), \
                      mock.patch.object(market_fetch, "oil_detail", side_effect=RuntimeError), \
@@ -85,6 +110,10 @@ class BriefingResilienceTests(unittest.TestCase):
 
                 for path in targets:
                     self.assertEqual(path.read_text(encoding="utf-8"), "기존 정상 베스트셀러 10권")
+                self.assertIn(
+                    "미국 달러 : 1,380.50원 (직전 정상값)",
+                    Path("fuelfx.txt").read_text(encoding="utf-8"),
+                )
             finally:
                 os.chdir(previous)
 

@@ -22,6 +22,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: manual-briefing
@@ -84,7 +85,9 @@ jobs:
            github.event.schedule == '25 22 * * *')
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh workflow run transactions.yml --ref main
+        run: >-
+          gh workflow run transactions.yml --ref main ||
+          echo "transaction backstop dispatch failed; dedicated schedule will retry"
 
       - name: Fetch market info
         run: python market_fetch.py || echo "market failed"

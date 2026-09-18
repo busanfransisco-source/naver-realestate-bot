@@ -18,6 +18,8 @@ class TransactionScheduleTests(unittest.TestCase):
         self.assertNotIn("Fetch nationwide apartment transactions", workflow)
         self.assertIn("Backstop nationwide transaction refresh", workflow)
         self.assertIn("gh workflow run transactions.yml --ref main", workflow)
+        self.assertIn("actions: write", workflow)
+        self.assertIn("transaction backstop dispatch failed", workflow)
         for hour in range(20, 23):
             self.assertIn(f"25 {hour} * * *", workflow)
 

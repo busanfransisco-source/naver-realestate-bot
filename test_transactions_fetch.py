@@ -15,6 +15,8 @@ from realestate_transactions_fetch import (
     parse_government_csv,
     tokenized_rows,
     fetch_nationwide_api,
+    collect_transaction_rows,
+    seen_tokens_for_state,
     api_months,
     STATE_VERSION,
 )
@@ -215,6 +217,32 @@ class TransactionDigestTests(unittest.TestCase):
                 with self.assertRaisesRegex(RuntimeError, "API unavailable"):
                     fetch_nationwide_api(date(2026, 9, 14), "key")
                 fetch.assert_called_once()
+
+    def test_presale_timeout_does_not_discard_apartment_rows(self):
+        apartment = self.sample(building_name="오늘신고가")
+        with mock.patch(
+            "realestate_transactions_fetch.fetch_nationwide_api",
+            return_value=[apartment],
+        ), mock.patch(
+            "realestate_transactions_fetch.fetch_nationwide_transactions",
+            side_effect=TimeoutError("CSV timeout"),
+        ):
+            rows, source, complete = collect_transaction_rows(
+                date(2026, 9, 18), "service-key"
+            )
+        self.assertEqual(rows, [apartment])
+        self.assertFalse(complete)
+        self.assertIn("분양권 CSV 일시 실패", source)
+
+    def test_partial_collection_preserves_previous_seen_tokens(self):
+        self.assertEqual(
+            seen_tokens_for_state({"new-apartment"}, {"old-presale"}, False),
+            ["new-apartment", "old-presale"],
+        )
+        self.assertEqual(
+            seen_tokens_for_state({"new-apartment"}, {"old-presale"}, True),
+            ["new-apartment"],
+        )
 
 
 if __name__ == "__main__":

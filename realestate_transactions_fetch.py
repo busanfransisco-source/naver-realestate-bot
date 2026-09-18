@@ -556,6 +556,36 @@ def already_collected_today(today):
     )
 
 
+def collect_transaction_rows(today, service_key):
+    """아파트 API가 성공하면 보조 분양권 CSV 장애로 결과 전체를 버리지 않는다."""
+    auxiliary_complete = True
+    if service_key:
+        rows = fetch_nationwide_api(today, service_key)
+        try:
+            rows.extend(
+                fetch_nationwide_transactions(
+                    today, thing_no="E", property_type="분양권/입주권"
+                )
+            )
+            source_name = "국토교통부 공공데이터 API + 실거래가 공개시스템 전국 CSV"
+        except Exception as exc:
+            auxiliary_complete = False
+            source_name = "국토교통부 공공데이터 API (분양권 CSV 일시 실패)"
+            print(f"분양권/입주권 보조 수집 실패: {exc} - 아파트 신고가는 계속 발행합니다")
+    else:
+        rows = fetch_nationwide_transactions(today)
+        source_name = "국토교통부 실거래가 공개시스템 전국 CSV"
+    return rows, source_name, auxiliary_complete
+
+
+def seen_tokens_for_state(current_tokens, previous_tokens, auxiliary_complete):
+    """보조 자료가 실패한 날에는 기존 토큰을 보존해 다음 성공 때 중복 집계하지 않는다."""
+    tokens = set(current_tokens)
+    if not auxiliary_complete:
+        tokens.update(previous_tokens)
+    return sorted(tokens)
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -570,19 +600,7 @@ def main(argv=None):
         print(f"{today.isoformat()} 실거래가 수집이 이미 완료되어 건너뜁니다")
         return
     service_key = os.environ.get("MOLIT_API_KEY", "").strip()
-    if service_key:
-        rows = fetch_nationwide_api(today, service_key)
-        # 분양권 API는 아파트 API와 별도 활용신청이 필요하므로, 같은 국토부
-        # 공개시스템의 전국 CSV를 사용한다. 로그인이나 별도 인증키가 필요 없다.
-        rows.extend(
-            fetch_nationwide_transactions(
-                today, thing_no="E", property_type="분양권/입주권"
-            )
-        )
-        source_name = "국토교통부 공공데이터 API + 실거래가 공개시스템 전국 CSV"
-    else:
-        rows = fetch_nationwide_transactions(today)
-        source_name = "국토교통부 실거래가 공개시스템 전국 CSV"
+    rows, source_name, auxiliary_complete = collect_transaction_rows(today, service_key)
     current = tokenized_rows(rows)
 
     if STATE_PATH.exists():
@@ -649,7 +667,9 @@ def main(argv=None):
             (today - timedelta(days=30)).isoformat(),
             today.isoformat(),
         ],
-        "seen_tokens": sorted(current),
+        "seen_tokens": seen_tokens_for_state(
+            current, previous_tokens, auxiliary_complete
+        ),
         "history_max": update_history_max(history_max, rows),
         "last_output_date": today.isoformat(),
         "today_new_records": today_records,

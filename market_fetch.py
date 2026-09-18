@@ -84,21 +84,19 @@ def save_fuel_cache(values):
 
 
 def fx_rates():
-    """환율 목록: {코드: 매매기준율}"""
-    r = get("https://finance.naver.com/marketindex/exchangeList.naver")
-    soup = BeautifulSoup(r.text, "html.parser")
+    """네이버페이 증권 JSON의 환율과 실제 전일 대비 등락률을 읽는다."""
     rates = {}
-    for tr in soup.select("table tbody tr"):
-        cells = [td.get_text(" ", strip=True) for td in tr.find_all("td")]
-        if len(cells) < 2:
-            continue
-        name = cells[0]
-        for code, _ in FX_LIST:
-            if code in name and code not in rates:
-                try:
-                    rates[code] = float(cells[1].replace(",", ""))
-                except ValueError:
-                    pass
+    for code, _ in FX_LIST:
+        r = get(
+            "https://stock.naver.com/api/securityService/marketindex/"
+            f"exchange/FX_{code}KRW"
+        )
+        info = r.json()["exchangeInfo"]
+        rates[code] = {
+            "value": float(str(info["closePrice"]).replace(",", "")),
+            "change_pct": float(str(info.get("fluctuationsRatio") or 0).replace(",", "")),
+            "traded_at": info.get("localTradedAt"),
+        }
     return rates
 
 
@@ -209,20 +207,25 @@ def main():
     except Exception:
         prev = {}
     if rates:
+        current_values = {}
         for code, label in FX_LIST:
             if code not in rates:
                 continue
-            cur = rates[code]
-            pct = ""
-            if prev.get(code):
-                p = (cur / prev[code] - 1) * 100
-                pct = f" ({p:+.2f}%)"
-            lines.append(f"{label} : {cur:,.2f}원{pct}")
+            detail = rates[code]
+            cur = float(detail["value"])
+            pct = float(detail.get("change_pct") or 0)
+            current_values[code] = cur
+            lines.append(f"{label} : {cur:,.2f}원 ({pct:+.2f}%)")
         try:
             with open("fx-cache.json", "w", encoding="utf-8") as f:
-                json.dump(rates, f)
+                json.dump(current_values, f)
         except Exception:
             pass
+    elif prev:
+        for code, label in FX_LIST:
+            if prev.get(code) is not None:
+                lines.append(f"{label} : {float(prev[code]):,.2f}원 (직전 정상값)")
+        print("환율 수집 실패 - 직전 정상값을 유지합니다.")
     else:
         lines.append("(환율을 가져오지 못했습니다)")
     fuelfx = "\n".join(lines).strip() + "\n"
