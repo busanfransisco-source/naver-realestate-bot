@@ -1,31 +1,31 @@
 🤖 26년 9월 18일 금요일 AI 뉴스
 
+루닛, 타임 선정 '세계 최고 헬스테크 기업' 등재…“AI 진단 경쟁력 입증”
+https://www.aitimes.com/news/articleView.html?idxno=215453
+
+네이버클라우드 “AI 풀스택·FDE 동원해 국방 AX 지원할 것”
+https://www.aitimes.com/news/articleView.html?idxno=215451
+
+한국인 76% "AI가 내 일자리 뺏을 것"...고용 불안도 세계 최고 수준
+https://www.aitimes.com/news/articleView.html?idxno=215449
+
+제논, 화면 인식·컴퓨터 조작 특화 '훈민 VLM 397B' 오픈소스 공개
+https://www.aitimes.com/news/articleView.html?idxno=215447
+
 에바 ‘에이스 프로 맥스’, 기후에너지 혁신상 수상… 열화상 감지 ‘세이버’ 공개
 https://www.aitimes.com/news/articleView.html?idxno=215444
 
-"AI가 진료 기록 대신 써준다"...픽스업헬스, 의료 자동화 솔루션 출시
-https://www.aitimes.com/news/articleView.html?idxno=215425
+셀렉트스타 "AI 검증, 일회성 시험 아냐"...전 주기 상시 평가 체계 강조
+https://www.aitimes.com/news/articleView.html?idxno=215439
 
-[게시판] KT, 과기부 ‘AI 다크팩토리 설계·구축 솔루션 개발’과제 참여 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=215422
+앤트로픽 "클로드, 자기개선 주도 26%…관여는 90%"
+https://www.aitimes.com/news/articleView.html?idxno=215435
 
-[게시판] NC AI, 1.4조 전북·경남 피지컬 AI 국책과제 참여 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=215421
+찰스 3세, 젠슨 황·허사비스 만나 "AI 통제 수단 마련해야"
+https://www.aitimes.com/news/articleView.html?idxno=215434
 
-VAN, 대격변 시대 속 AI 기술주권·노동대체 논의
-https://www.aitimes.com/news/articleView.html?idxno=215418
+앤트로픽, 장기 개발 관리 에이전트 '클로드 코드 프로젝트' 공개
+https://www.aitimes.com/news/articleView.html?idxno=215430
 
-"환각·타입 오류 없다"...오픈AI 출신, 의사결정 특화 AI '제브' 선보여
-https://www.aitimes.com/news/articleView.html?idxno=215416
-
-AAII 국내 1위 ‘모티프 3’ 29일까지 API 무료 공개..."에이전트에 집중"
-https://www.aitimes.com/news/articleView.html?idxno=215415
-
-피어리오딕 랩스, 재료과학 AI '네온' 공개..."첨단 모델 성능 뛰어넘어"
-https://www.aitimes.com/news/articleView.html?idxno=215414
-
-"국산 휴머노이드로 담낭 절제까지"...삼성서울병원 로봇 수술 시연
-https://www.aitimes.com/news/articleView.html?idxno=215413
-
-세일즈포스, '하네스' 최적화로 브라우저 작업 성공률 93% 달성
-https://www.aitimes.com/news/articleView.html?idxno=215411
+폴란드 태양광 개발사업 40.6GW…프로젝트 수 줄고 규모는 커져
+https://www.aitimes.com/news/articleView.html?idxno=215428
