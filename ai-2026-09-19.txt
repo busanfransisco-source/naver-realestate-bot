@@ -1,5 +1,8 @@
 🤖 26년 9월 19일 토요일 AI 뉴스
 
+오픈AI, 앤트로픽 '클로드'에 뚫렸다...핵심 코드 저장소까지 노출
+https://www.aitimes.com/news/articleView.html?idxno=215477
+
 [게시판] 에스트래픽, 강릉 ITS 세계총회서 지능형 AI 챗봇 운영 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=215473
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215462
 
 앤드류 응 "AI 인류 멸종 위협은 SF"...'공포 마케팅' 일침
 https://www.aitimes.com/news/articleView.html?idxno=215461
-
-"AI 검색 속도 최대 20배"...구글, 차세대 프레임워크 'R4T' 발표
-https://www.aitimes.com/news/articleView.html?idxno=215460
