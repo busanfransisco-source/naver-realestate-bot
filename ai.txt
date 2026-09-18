@@ -1,10 +1,25 @@
 🤖 26년 9월 18일 금요일 AI 뉴스
 
+[게시판] 에스트래픽, 강릉 ITS 세계총회서 지능형 AI 챗봇 운영 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=215473
+
+"낯선 가정서 집안일 척척"...피규어 AI, 로봇 모델 '헬릭스 2.5' 공개
+https://www.aitimes.com/news/articleView.html?idxno=215470
+
 저커버그·젠슨 황·머스크, 트럼프 직접 설득…백악관 'AI 규제안' 무산
 https://www.aitimes.com/news/articleView.html?idxno=215469
 
+[게시판] 코난테크놀로지, 경남 '피지컬AI 국책사업' 선정 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=215468
+
+중국 AI 총매출, 오픈AI·앤트로픽 10% 불과...몸값 '거품' 논란
+https://www.aitimes.com/news/articleView.html?idxno=215463
+
 오픈AI, '대형 신제품' 출시 일주일 연기…'GPT-6 솔' 기대감 고조
 https://www.aitimes.com/news/articleView.html?idxno=215462
+
+"AI 검색 속도 최대 20배"...구글, 차세대 프레임워크 'R4T' 발표
+https://www.aitimes.com/news/articleView.html?idxno=215460
 
 위버스브레인, 18년 축적 학습 데이터로 '습관 설계 AI' 개발 나서
 https://www.aitimes.com/news/articleView.html?idxno=215458
@@ -14,18 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215457
 
 네이버 D2SF, 헬스케어 스타트업 임프리메드·무니스에 신규 투자
 https://www.aitimes.com/news/articleView.html?idxno=215456
-
-화웨이, 차세대 AI 칩 출시 앞당긴다..."대규모 연결로 엔비디아 추격"
-https://www.aitimes.com/news/articleView.html?idxno=215455
-
-루닛, 타임 선정 '세계 최고 헬스테크 기업' 등재…“AI 진단 경쟁력 입증”
-https://www.aitimes.com/news/articleView.html?idxno=215453
-
-네이버클라우드 “AI 풀스택·FDE 동원해 국방 AX 지원할 것”
-https://www.aitimes.com/news/articleView.html?idxno=215451
-
-오픈AI, ‘법률용 아스트라’ 발표...빅 로펌·기술 기업 맞춤 AI 지원
-https://www.aitimes.com/news/articleView.html?idxno=215450
-
-한국인 76% "AI가 내 일자리 뺏을 것"...고용 불안도 세계 최고 수준
-https://www.aitimes.com/news/articleView.html?idxno=215449
