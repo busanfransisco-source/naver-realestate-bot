@@ -1,5 +1,8 @@
 🤖 26년 9월 19일 토요일 AI 뉴스
 
+앤트로픽, AI 안전 평가 기관으로 액센추어 선정…독립성 논란 확대
+https://www.aitimes.com/news/articleView.html?idxno=215480
+
 오픈AI, 앤트로픽 '클로드'에 뚫렸다...핵심 코드 저장소까지 노출
 https://www.aitimes.com/news/articleView.html?idxno=215477
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215463
 
 오픈AI, '대형 신제품' 출시 일주일 연기…'GPT-6 솔' 기대감 고조
 https://www.aitimes.com/news/articleView.html?idxno=215462
-
-앤드류 응 "AI 인류 멸종 위협은 SF"...'공포 마케팅' 일침
-https://www.aitimes.com/news/articleView.html?idxno=215461
