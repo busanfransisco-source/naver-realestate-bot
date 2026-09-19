@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-09-19 08:43:14",
+  "updated_at_kst": "2026-09-19 09:27:31",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 19일 토요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "서울 아파트 매매가, 지난해보다 15%↑ 거래량은 ‘뚝’",
+      "url": "https://n.news.naver.com/mnews/article/021/0002819941"
+    },
+    {
+      "title": "30억대에도 3800명 몰려…아파트값 부담에 대체재 아파텔 부상",
+      "url": "https://n.news.naver.com/mnews/article/003/0014200975"
+    },
     {
       "title": "[부동산캘린더] 내주 더샵분당하이스트 등 전국 4천591가구 청약",
       "url": "https://n.news.naver.com/mnews/article/001/0016321949"
@@ -34,14 +42,6 @@
     {
       "title": "토지거래허가제, ‘유예’는 답이 아니다[손바닥부동산]",
       "url": "https://n.news.naver.com/mnews/article/018/0006372364"
-    },
-    {
-      "title": "경매도 ‘셔세권’ 열풍…동탄·영통 아파트 감정가 웃돌아[집슐랭]",
-      "url": "https://n.news.naver.com/mnews/article/011/0004663526"
-    },
-    {
-      "title": "김기대 부동산소비자보호기획단장 \"이상징후 조기 포착해 피해 막겠다\"",
-      "url": "https://n.news.naver.com/mnews/article/421/0009179920"
     }
   ]
 }
