@@ -1,5 +1,14 @@
 🤖 26년 9월 19일 토요일 AI 뉴스
 
+디즈니, 사상 첫 CTO 선임…'저작권 마찰' 캐릭터닷AI CEO 영입
+https://www.aitimes.com/news/articleView.html?idxno=215487
+
+술레이만 "오픈AI의 '셀프 프롬프트 인젝션'은 매우 심각한 상황"
+https://www.aitimes.com/news/articleView.html?idxno=215486
+
+앤트로픽 IPO에 월가 신중론...1000억달러 매출 속 '적자 전환' 우려
+https://www.aitimes.com/news/articleView.html?idxno=215484
+
 캘리포니아, AI ‘킬 스위치’ 의무화 추진… 뉴섬 주지사, 트럼프에 대립각
 https://www.aitimes.com/news/articleView.html?idxno=215482
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215473
 
 AI스페라, 위협 노출 관리 솔루션에 MS 에이전트 기술 적용
 https://www.aitimes.com/news/articleView.html?idxno=215471
-
-"낯선 가정서 집안일 척척"...피규어 AI, 로봇 모델 '헬릭스 2.5' 공개
-https://www.aitimes.com/news/articleView.html?idxno=215470
-
-저커버그·젠슨 황·머스크, 트럼프 직접 설득…백악관 'AI 규제안' 무산
-https://www.aitimes.com/news/articleView.html?idxno=215469
-
-[게시판] 코난테크놀로지, 경남 '피지컬AI 국책사업' 선정 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=215468
