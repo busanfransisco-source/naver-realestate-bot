@@ -3,7 +3,7 @@
 오픈AI, 기업 시장 점유율 역전…앤트로픽, IPO전 신형 모델 출시 검토
 https://www.aitimes.com/news/articleView.html?idxno=215494
 
-구글 &apos;제미나이&apos;, 보안 테스트 환경 오류로 기업 3곳 침투 사고 발생
+구글 '제미나이', 보안 테스트 환경 오류로 기업 3곳 침투 사고 발생
 https://www.aitimes.com/news/articleView.html?idxno=215493
 
 SK하이닉스, 미국에 첫 낸드 생산거점 구축..."확정된 바 없다"
@@ -15,17 +15,17 @@ https://www.aitimes.com/news/articleView.html?idxno=215491
 네오클라우드 엔스케일, 엔비디아 지원으로 뉴욕증시 상장 추진
 https://www.aitimes.com/news/articleView.html?idxno=215489
 
-조비, 사람 조종 없이 미국 대륙 횡단…&apos;최초&apos; 완전 자율비행 성공
+조비, 사람 조종 없이 미국 대륙 횡단…'최초' 완전 자율비행 성공
 https://www.aitimes.com/news/articleView.html?idxno=215488
 
-디즈니, 사상 첫 CTO 선임…&apos;저작권 마찰&apos; 캐릭터닷AI CEO 영입
+디즈니, 사상 첫 CTO 선임…'저작권 마찰' 캐릭터닷AI CEO 영입
 https://www.aitimes.com/news/articleView.html?idxno=215487
 
-술레이만 "오픈AI의 &apos;셀프 프롬프트 인젝션&apos;은 매우 심각한 상황"
+술레이만 "오픈AI의 '셀프 프롬프트 인젝션'은 매우 심각한 상황"
 https://www.aitimes.com/news/articleView.html?idxno=215486
 
-스페이스XAI, ‘그록 보이스 트랜스크라이브 2.0’ 공개...전사 정확도 1위
+스페이스XAI, ‘그록 보이스 트랜스크라이브  2.0’ 공개...전사 정확도 1위
 https://www.aitimes.com/news/articleView.html?idxno=215485
 
-앤트로픽 IPO에 월가 신중론...1000억달러 매출 속 &apos;적자 전환&apos; 우려
+앤트로픽 IPO에 월가 신중론...1000억달러 매출 속 '적자 전환' 우려
 https://www.aitimes.com/news/articleView.html?idxno=215484
