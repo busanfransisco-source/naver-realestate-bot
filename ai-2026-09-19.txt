@@ -1,5 +1,8 @@
 🤖 26년 9월 19일 토요일 AI 뉴스
 
+SK하이닉스, 미국에 첫 낸드 생산거점 구축..."확정된 바 없다"
+https://www.aitimes.com/news/articleView.html?idxno=215492
+
 네오클라우드 엔스케일, 엔비디아 지원으로 뉴욕증시 상장 추진
 https://www.aitimes.com/news/articleView.html?idxno=215489
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215481
 
 앤트로픽, AI 안전 평가 기관으로 액센추어 선정…독립성 논란 확대
 https://www.aitimes.com/news/articleView.html?idxno=215480
-
-오픈AI, 앤트로픽 '클로드'에 뚫렸다...핵심 코드 저장소까지 노출
-https://www.aitimes.com/news/articleView.html?idxno=215477
