@@ -1,10 +1,19 @@
 🤖 26년 9월 19일 토요일 AI 뉴스
 
+캘리포니아, AI ‘킬 스위치’ 의무화 추진… 뉴섬 주지사, 트럼프에 대립각
+https://www.aitimes.com/news/articleView.html?idxno=215482
+
 앤트로픽, AI 안전 평가 기관으로 액센추어 선정…독립성 논란 확대
 https://www.aitimes.com/news/articleView.html?idxno=215480
 
 오픈AI, 앤트로픽 '클로드'에 뚫렸다...핵심 코드 저장소까지 노출
 https://www.aitimes.com/news/articleView.html?idxno=215477
+
+[내면 지도 그리기] 34 Inner Mapping: 나를 찾는 지도
+https://www.aitimes.com/news/articleView.html?idxno=215475
+
+[AI카툰] Bob, Senior IT guy - 밥, 그걸로 숙제하지 말라고
+https://www.aitimes.com/news/articleView.html?idxno=215474
 
 [게시판] 에스트래픽, 강릉 ITS 세계총회서 지능형 AI 챗봇 운영 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=215473
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215469
 
 [게시판] 코난테크놀로지, 경남 '피지컬AI 국책사업' 선정 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=215468
-
-스탠포드, 논문을 '대화형 에이전트'로 만드는 프레임워크 공개
-https://www.aitimes.com/news/articleView.html?idxno=215465
-
-중국 AI 총매출, 오픈AI·앤트로픽 10% 불과...몸값 '거품' 논란
-https://www.aitimes.com/news/articleView.html?idxno=215463
-
-오픈AI, '대형 신제품' 출시 일주일 연기…'GPT-6 솔' 기대감 고조
-https://www.aitimes.com/news/articleView.html?idxno=215462
