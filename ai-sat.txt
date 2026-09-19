@@ -1,10 +1,19 @@
 🤖 26년 9월 19일 토요일 AI 뉴스
 
+네오클라우드 엔스케일, 엔비디아 지원으로 뉴욕증시 상장 추진
+https://www.aitimes.com/news/articleView.html?idxno=215489
+
+조비, 사람 조종 없이 미국 대륙 횡단…'최초' 완전 자율비행 성공
+https://www.aitimes.com/news/articleView.html?idxno=215488
+
 디즈니, 사상 첫 CTO 선임…'저작권 마찰' 캐릭터닷AI CEO 영입
 https://www.aitimes.com/news/articleView.html?idxno=215487
 
 술레이만 "오픈AI의 '셀프 프롬프트 인젝션'은 매우 심각한 상황"
 https://www.aitimes.com/news/articleView.html?idxno=215486
+
+스페이스XAI, ‘그록 보이스 트랜스크라이브  2.0’ 공개...음성 전사 정확도 1위
+https://www.aitimes.com/news/articleView.html?idxno=215485
 
 앤트로픽 IPO에 월가 신중론...1000억달러 매출 속 '적자 전환' 우려
 https://www.aitimes.com/news/articleView.html?idxno=215484
@@ -12,20 +21,11 @@ https://www.aitimes.com/news/articleView.html?idxno=215484
 캘리포니아, AI ‘킬 스위치’ 의무화 추진… 뉴섬 주지사, 트럼프에 대립각
 https://www.aitimes.com/news/articleView.html?idxno=215482
 
+알리바바, 보고 듣고 행동하는 옴니모달 '큐원3.8-옴니-플래시' 공개
+https://www.aitimes.com/news/articleView.html?idxno=215481
+
 앤트로픽, AI 안전 평가 기관으로 액센추어 선정…독립성 논란 확대
 https://www.aitimes.com/news/articleView.html?idxno=215480
 
 오픈AI, 앤트로픽 '클로드'에 뚫렸다...핵심 코드 저장소까지 노출
 https://www.aitimes.com/news/articleView.html?idxno=215477
-
-[내면 지도 그리기] 34 Inner Mapping: 나를 찾는 지도
-https://www.aitimes.com/news/articleView.html?idxno=215475
-
-[AI카툰] Bob, Senior IT guy - 밥, 그걸로 숙제하지 말라고
-https://www.aitimes.com/news/articleView.html?idxno=215474
-
-[게시판] 에스트래픽, 강릉 ITS 세계총회서 지능형 AI 챗봇 운영 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=215473
-
-AI스페라, 위협 노출 관리 솔루션에 MS 에이전트 기술 적용
-https://www.aitimes.com/news/articleView.html?idxno=215471

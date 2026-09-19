@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-09-19 14:53:12",
+  "updated_at_kst": "2026-09-19 16:58:06",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 19일 토요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "드론 무단 비행하면 1000만원 벌금…비행 규정 강화[짤막영상]",
+      "url": "https://n.news.naver.com/mnews/article/003/0014201354"
+    },
     {
       "title": "\"집값 올랐다고 3억 더 내라\" 멘붕...누군가는 '독박' 쓴다 [부동산 아토즈]",
       "url": "https://n.news.naver.com/mnews/article/014/0005578226"
@@ -38,10 +42,6 @@
     {
       "title": "상가 월세 3기 연체 뒤 일부 갚았다면…계약해지 막을 수 있을까?",
       "url": "https://n.news.naver.com/mnews/article/015/0005334102"
-    },
-    {
-      "title": "\"은마아파트 상가 옥상에…\" 재건축 앞두고 퍼진 '괴소문' 정체 [이슬기의 새집다오]",
-      "url": "https://n.news.naver.com/mnews/article/015/0005334099"
     }
   ]
 }
