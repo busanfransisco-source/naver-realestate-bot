@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-09-21 07:32:45",
+  "updated_at_kst": "2026-09-21 07:37:35",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 21일 월요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "서울 성북 국평 전세 11억…등골 휘는 집값 평탄화",
+      "url": "https://n.news.naver.com/mnews/article/374/0000533982"
+    },
     {
       "title": "단지명에 ‘반포·마포·성동’…아파트도 ‘지역 브랜드’ 경쟁",
       "url": "https://n.news.naver.com/mnews/article/119/0003134787"
@@ -38,10 +42,6 @@
     {
       "title": "[우보세]해명보다 필요한 답",
       "url": "https://n.news.naver.com/mnews/article/008/0005416425"
-    },
-    {
-      "title": "[단독] 지방 정비사업 공사비, 부동산원 검증 후에도 46.6% 뛰었다",
-      "url": "https://n.news.naver.com/mnews/article/366/0001193519"
     }
   ]
 }
