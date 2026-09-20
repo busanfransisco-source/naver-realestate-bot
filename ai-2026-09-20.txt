@@ -1,5 +1,8 @@
 🤖 26년 9월 20일 일요일 AI 뉴스
 
+앤트로픽, 자체 생물학 연구소 설립…시뮬레이션 넘어 실제 실험 진출
+https://www.aitimes.com/news/articleView.html?idxno=215504
+
 "안전 핑계 대고 밀실 담합"…앤트로픽·오픈AI 등 4곳, 소비자에게 피소
 https://www.aitimes.com/news/articleView.html?idxno=215502
 
@@ -18,14 +21,11 @@ https://www.aitimes.com/news/articleView.html?idxno=215498
 프랑스 검찰, 스마트 안경 이용한 '성희롱·불법 촬영' 수사 착수
 https://www.aitimes.com/news/articleView.html?idxno=215497
 
+젠슨 황, AI 종말론 또 일축... "2030년 세계 끝날 확률 0%"
+https://www.aitimes.com/news/articleView.html?idxno=215496
+
+중국, 앤트로픽 겨냥 “미 정보기관에 사용자 데이터 넘길 수도”
+https://www.aitimes.com/news/articleView.html?idxno=215495
+
 오픈AI, 기업 시장 점유율 역전…앤트로픽, IPO전 신형 모델 출시 검토
 https://www.aitimes.com/news/articleView.html?idxno=215494
-
-구글 '제미나이', 보안 테스트 환경 오류로 기업 3곳 침투 사고 발생
-https://www.aitimes.com/news/articleView.html?idxno=215493
-
-SK하이닉스, 미국에 첫 낸드 생산거점 구축..."확정된 바 없다"
-https://www.aitimes.com/news/articleView.html?idxno=215492
-
-[AI 이슈트렌드] 역대급 수출 실적 속 AI 속도조절론·대통령 지지율 최저 주목
-https://www.aitimes.com/news/articleView.html?idxno=215491
