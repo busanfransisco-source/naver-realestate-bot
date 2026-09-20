@@ -1,5 +1,8 @@
 🤖 26년 9월 21일 월요일 AI 뉴스
 
+삼성전자, 실리콘밸리서 ‘테크 포럼’개최…AI 비전과 사업전략 공유
+https://www.aitimes.com/news/articleView.html?idxno=215508
+
 카카오모빌리티, 태국·체코 교통부 차관 요청에 ‘자율주행 기술 역량’ 직접 선보여
 https://www.aitimes.com/news/articleView.html?idxno=215507
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215499
 
 샘 알트먼, 유엔 안보리서 'AI와 국제 안보' 브리핑 예정
 https://www.aitimes.com/news/articleView.html?idxno=215498
-
-프랑스 검찰, 스마트 안경 이용한 '성희롱·불법 촬영' 수사 착수
-https://www.aitimes.com/news/articleView.html?idxno=215497
