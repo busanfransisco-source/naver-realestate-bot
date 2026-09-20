@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-09-20 09:26:24",
+  "updated_at_kst": "2026-09-20 09:31:10",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 20일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "현대건설, 도시정비사업 수주액 2년 연속 10조원 돌파",
+      "url": "https://n.news.naver.com/mnews/article/001/0016323123"
+    },
     {
       "title": "강남도 아닌데 '국평 11억'…전셋값 더 뛰었다",
       "url": "https://n.news.naver.com/mnews/article/215/0001266577"
@@ -38,10 +42,6 @@
     {
       "title": "“건설사 이익추구 탓만 아니라” 건축교수가 MBC서 한 말",
       "url": "https://n.news.naver.com/mnews/article/021/0002820025"
-    },
-    {
-      "title": "\"33억 차익\" 국민 첫사랑 수지가 사는 논현동 고급 빌라[누구집]",
-      "url": "https://n.news.naver.com/mnews/article/018/0006372759"
     }
   ]
 }
