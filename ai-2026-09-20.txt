@@ -1,5 +1,8 @@
 🤖 26년 9월 20일 일요일 AI 뉴스
 
+카카오모빌리티, 태국·체코 교통부 차관 요청에 ‘자율주행 기술 역량’ 직접 선보여
+https://www.aitimes.com/news/articleView.html?idxno=215507
+
 “문장 생성 버렸다”…판단 전용 AI ‘제브’에 개발자 반응 폭발
 https://www.aitimes.com/news/articleView.html?idxno=215506
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215498
 
 프랑스 검찰, 스마트 안경 이용한 '성희롱·불법 촬영' 수사 착수
 https://www.aitimes.com/news/articleView.html?idxno=215497
-
-젠슨 황, AI 종말론 또 일축... "2030년 세계 끝날 확률 0%"
-https://www.aitimes.com/news/articleView.html?idxno=215496
