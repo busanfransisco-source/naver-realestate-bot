@@ -1,10 +1,22 @@
 🤖 26년 9월 20일 일요일 AI 뉴스
 
+"안전 핑계 대고 밀실 담합"…앤트로픽·오픈AI 등 4곳, 소비자에게 피소
+https://www.aitimes.com/news/articleView.html?idxno=215502
+
+"AI 환각에 중국과 충돌할 뻔"…미군, 정보 오류에 ‘식은땀’
+https://www.aitimes.com/news/articleView.html?idxno=215501
+
 오픈AI 2030년까지 386조 소진… 컴퓨팅 비용 폭증에 투자 유치 압박
 https://www.aitimes.com/news/articleView.html?idxno=215500
 
 트럼프 "새 'AI 차르' 임명할 것…인공지능 명칭 바꿔야"
 https://www.aitimes.com/news/articleView.html?idxno=215499
+
+샘 알트먼, 유엔 안보리서 'AI와 국제 안보' 브리핑 예정
+https://www.aitimes.com/news/articleView.html?idxno=215498
+
+프랑스 검찰, 스마트 안경 이용한 '성희롱·불법 촬영' 수사 착수
+https://www.aitimes.com/news/articleView.html?idxno=215497
 
 오픈AI, 기업 시장 점유율 역전…앤트로픽, IPO전 신형 모델 출시 검토
 https://www.aitimes.com/news/articleView.html?idxno=215494
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215492
 
 [AI 이슈트렌드] 역대급 수출 실적 속 AI 속도조절론·대통령 지지율 최저 주목
 https://www.aitimes.com/news/articleView.html?idxno=215491
-
-네오클라우드 엔스케일, 엔비디아 지원으로 뉴욕증시 상장 추진
-https://www.aitimes.com/news/articleView.html?idxno=215489
-
-조비, 사람 조종 없이 미국 대륙 횡단…'최초' 완전 자율비행 성공
-https://www.aitimes.com/news/articleView.html?idxno=215488
-
-디즈니, 사상 첫 CTO 선임…'저작권 마찰' 캐릭터닷AI CEO 영입
-https://www.aitimes.com/news/articleView.html?idxno=215487
-
-술레이만 "오픈AI의 '셀프 프롬프트 인젝션'은 매우 심각한 상황"
-https://www.aitimes.com/news/articleView.html?idxno=215486
