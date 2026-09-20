@@ -1,5 +1,11 @@
 🤖 26년 9월 20일 일요일 AI 뉴스
 
+오픈AI 2030년까지 386조 소진… 컴퓨팅 비용 폭증에 투자 유치 압박
+https://www.aitimes.com/news/articleView.html?idxno=215500
+
+트럼프 "새 'AI 차르' 임명할 것…인공지능 명칭 바꿔야"
+https://www.aitimes.com/news/articleView.html?idxno=215499
+
 오픈AI, 기업 시장 점유율 역전…앤트로픽, IPO전 신형 모델 출시 검토
 https://www.aitimes.com/news/articleView.html?idxno=215494
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215487
 
 술레이만 "오픈AI의 '셀프 프롬프트 인젝션'은 매우 심각한 상황"
 https://www.aitimes.com/news/articleView.html?idxno=215486
-
-스페이스XAI, ‘그록 보이스 트랜스크라이브  2.0’ 공개...전사 정확도 1위
-https://www.aitimes.com/news/articleView.html?idxno=215485
-
-앤트로픽 IPO에 월가 신중론...1000억달러 매출 속 '적자 전환' 우려
-https://www.aitimes.com/news/articleView.html?idxno=215484
