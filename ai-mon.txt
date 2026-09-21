@@ -1,5 +1,14 @@
 🤖 26년 9월 21일 월요일 AI 뉴스
 
+AI스페라 강병탁 대표, 지방정부 AI 확산 속 ‘바이브 코딩 보안’ 강조
+https://www.aitimes.com/news/articleView.html?idxno=215517
+
+플레이태그, 영상 속 맥락 읽는 '모노' 출시..."700만 시간 행동 데이터 학습"
+https://www.aitimes.com/news/articleView.html?idxno=215514
+
+오케스트로, 퓨리오사AI NPU로 추론 안정성 확인…"사업 모델 본격 발굴"
+https://www.aitimes.com/news/articleView.html?idxno=215512
+
 삼성전자, 실리콘밸리서 ‘테크 포럼’개최…AI 비전과 사업전략 공유
 https://www.aitimes.com/news/articleView.html?idxno=215508
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215502
 
 "AI 환각에 중국과 충돌할 뻔"…미군, 정보 오류에 ‘식은땀’
 https://www.aitimes.com/news/articleView.html?idxno=215501
-
-오픈AI 2030년까지 386조 소진… 컴퓨팅 비용 폭증에 투자 유치 압박
-https://www.aitimes.com/news/articleView.html?idxno=215500
-
-트럼프 "새 'AI 차르' 임명할 것…인공지능 명칭 바꿔야"
-https://www.aitimes.com/news/articleView.html?idxno=215499
-
-샘 알트먼, 유엔 안보리서 'AI와 국제 안보' 브리핑 예정
-https://www.aitimes.com/news/articleView.html?idxno=215498
