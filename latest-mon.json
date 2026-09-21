@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-09-21 22:55:49",
+  "updated_at_kst": "2026-09-21 23:53:14",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 21일 월요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "“강남 국평 아파트 3억원대 분양”…토지임대부 아파트가 뭐길래",
+      "url": "https://n.news.naver.com/mnews/article/018/0006373969"
+    },
     {
       "title": "신규 택지엔 중산층 위한 ‘85㎡’·도심엔 청년 ‘우선 입주’…2030년까지 ‘보편형 임대’ 19만호 공급",
       "url": "https://n.news.naver.com/mnews/article/032/0003471891"
@@ -38,10 +42,6 @@
     {
       "title": "IPARK현산, 추석 앞두고 CEO 현장 안전점검",
       "url": "https://n.news.naver.com/mnews/article/014/0005579253"
-    },
-    {
-      "title": "전월세 민심 들끓자… “공적주택 119만호 2030년까지 공급”",
-      "url": "https://n.news.naver.com/mnews/article/005/0001874373"
     }
   ]
 }
