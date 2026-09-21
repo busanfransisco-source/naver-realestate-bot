@@ -1,5 +1,11 @@
 🤖 26년 9월 22일 화요일 AI 뉴스
 
+뉴로퓨전, 답 없는 글로벌 AI 미래 예측 벤치마크 1위…국내 스타트업 ‘기술력 증명’
+https://www.aitimes.com/news/articleView.html?idxno=215547
+
+KAIST, ‘지식 재사용’으로 서버 호출 57% 줄였다…“증류·추가학습 필요 없어”
+https://www.aitimes.com/news/articleView.html?idxno=215545
+
 [게시판] SK하이닉스, AI 실전 역량 겨루는 해커톤 개최 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=215542
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215535
 
 오픈아트, AI 이미지·비디오 모델 평가 '아레나' 출시..."용도별 최적 모델 찾아준다"
 https://www.aitimes.com/news/articleView.html?idxno=215531
-
-술레이먼 "중국 경쟁 핑계로 AI 안전 규제 미뤄선 안 돼"
-https://www.aitimes.com/news/articleView.html?idxno=215530
-
-CXMT, 5세대 DRAM 플랫폼 양산 개시...“세계 최고 수준 근접”
-https://www.aitimes.com/news/articleView.html?idxno=215529
