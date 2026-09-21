@@ -1,31 +1,31 @@
 🤖 26년 9월 21일 월요일 AI 뉴스
 
-"바이브 코딩으로 앱은 늘어났지만"…이용자 외면으로 '앱 슬롭' 확산
-https://www.aitimes.com/news/articleView.html?idxno=215524
+권오현 전 삼성전자 대표, KAIST 신임 이사장 선임
+https://www.aitimes.com/news/articleView.html?idxno=215541
 
-중국 스마트 안경 판매량 120% 급증...가성비·AI로 시장 공략
-https://www.aitimes.com/news/articleView.html?idxno=215522
+대화창 하나로 음성·영상까지 제작…일레븐랩스, MCP로 창작 도구 통합
+https://www.aitimes.com/news/articleView.html?idxno=215539
 
-AI스페라 강병탁 대표, 지방정부 AI 확산 속 ‘바이브 코딩 보안’ 강조
-https://www.aitimes.com/news/articleView.html?idxno=215517
+2030년까지 15.7만명 부족...미국 반도체 인력난에 삼성·마이크론 등 경고등
+https://www.aitimes.com/news/articleView.html?idxno=215538
 
-메리엄-웹스터 사전, ‘바이브 코딩’·‘불쾌한 골짜기’ 등 신조어 1400개 등재
-https://www.aitimes.com/news/articleView.html?idxno=215515
+MS, 기업 AI 전환 지침서 '프런티어 플레이북' 공개..."핵심은 조직 재설계"
+https://www.aitimes.com/news/articleView.html?idxno=215536
 
-플레이태그, 영상 속 맥락 읽는 '모노' 출시..."700만 시간 행동 데이터 학습"
-https://www.aitimes.com/news/articleView.html?idxno=215514
+‘암호 해독·마인크래프트’ 성과 낸 발스, AI 벤치마크 강자로 주목
+https://www.aitimes.com/news/articleView.html?idxno=215535
 
-오케스트로, 퓨리오사AI NPU로 추론 안정성 확인…"사업 모델 본격 발굴"
-https://www.aitimes.com/news/articleView.html?idxno=215512
+오픈아트, AI 이미지·비디오 모델 평가 '아레나' 출시..."용도별 최적 모델 찾아준다"
+https://www.aitimes.com/news/articleView.html?idxno=215531
 
-‘통설’ 뒤집은 GPT-6 아스트라, 108년 된 독일군 암호 해독
-https://www.aitimes.com/news/articleView.html?idxno=215511
+술레이먼 "중국 경쟁 핑계로 AI 안전 규제 미뤄선 안 돼"
+https://www.aitimes.com/news/articleView.html?idxno=215530
 
-트럼프 행정부 "AI 속도 조절 원하면 정부 탓 말고 스스로 멈춰라"
-https://www.aitimes.com/news/articleView.html?idxno=215510
+CXMT, 5세대 DRAM 플랫폼 양산 개시...“세계 최고 수준 근접”
+https://www.aitimes.com/news/articleView.html?idxno=215529
 
-삼성전자, 실리콘밸리서 ‘테크 포럼’개최…AI 비전과 사업전략 공유
-https://www.aitimes.com/news/articleView.html?idxno=215508
+샤오미, AI 훈련 과정 첫 '생중계'…일주일 만에 50억 투입
+https://www.aitimes.com/news/articleView.html?idxno=215528
 
-카카오모빌리티, 태국·체코 교통부 차관 요청에 ‘자율주행 기술 역량’ 직접 선보여
-https://www.aitimes.com/news/articleView.html?idxno=215507
+태양광 패널 땅에 바로 설치…미국 텍사스서 직류 93MW 규모 건설
+https://www.aitimes.com/news/articleView.html?idxno=215527
