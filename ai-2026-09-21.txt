@@ -1,18 +1,24 @@
 🤖 26년 9월 21일 월요일 AI 뉴스
 
+[게시판] SK하이닉스, AI 실전 역량 겨루는 해커톤 개최 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=215542
+
 권오현 전 삼성전자 대표, KAIST 신임 이사장 선임
 https://www.aitimes.com/news/articleView.html?idxno=215541
 
 대화창 하나로 음성·영상까지 제작…일레븐랩스, MCP로 창작 도구 통합
 https://www.aitimes.com/news/articleView.html?idxno=215539
 
-2030년까지 15.7만명 부족...미국 반도체 인력난에 삼성·마이크론 등 경고등
+2030년까지 15.7만명 부족...미국 반도체 인력난에 경고등
 https://www.aitimes.com/news/articleView.html?idxno=215538
+
+앤돈랩스, AI가 기업 전반 자율 운영하는 플랫폼 '파이온' 공개
+https://www.aitimes.com/news/articleView.html?idxno=215537
 
 MS, 기업 AI 전환 지침서 '프런티어 플레이북' 공개..."핵심은 조직 재설계"
 https://www.aitimes.com/news/articleView.html?idxno=215536
 
-‘암호 해독·마인크래프트’ 성과 낸 발스, AI 벤치마크 강자로 주목
+‘암호 해독·마인크래프트’ 성과 낸 발스, AI 벤치마크 강자로 부상
 https://www.aitimes.com/news/articleView.html?idxno=215535
 
 오픈아트, AI 이미지·비디오 모델 평가 '아레나' 출시..."용도별 최적 모델 찾아준다"
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215530
 
 CXMT, 5세대 DRAM 플랫폼 양산 개시...“세계 최고 수준 근접”
 https://www.aitimes.com/news/articleView.html?idxno=215529
-
-샤오미, AI 훈련 과정 첫 '생중계'…일주일 만에 50억 투입
-https://www.aitimes.com/news/articleView.html?idxno=215528
-
-태양광 패널 땅에 바로 설치…미국 텍사스서 직류 93MW 규모 건설
-https://www.aitimes.com/news/articleView.html?idxno=215527
