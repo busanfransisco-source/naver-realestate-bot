@@ -1,7 +1,16 @@
 🤖 26년 9월 21일 월요일 AI 뉴스
 
+"바이브 코딩으로 앱은 늘어났지만"…이용자 외면으로 '앱 슬롭' 확산
+https://www.aitimes.com/news/articleView.html?idxno=215524
+
+중국 스마트 안경 판매량 120% 급증...가성비·AI로 시장 공략
+https://www.aitimes.com/news/articleView.html?idxno=215522
+
 AI스페라 강병탁 대표, 지방정부 AI 확산 속 ‘바이브 코딩 보안’ 강조
 https://www.aitimes.com/news/articleView.html?idxno=215517
+
+메리엄-웹스터 사전, ‘바이브 코딩’·‘불쾌한 골짜기’ 등 신조어 1400개 등재
+https://www.aitimes.com/news/articleView.html?idxno=215515
 
 플레이태그, 영상 속 맥락 읽는 '모노' 출시..."700만 시간 행동 데이터 학습"
 https://www.aitimes.com/news/articleView.html?idxno=215514
@@ -9,23 +18,14 @@ https://www.aitimes.com/news/articleView.html?idxno=215514
 오케스트로, 퓨리오사AI NPU로 추론 안정성 확인…"사업 모델 본격 발굴"
 https://www.aitimes.com/news/articleView.html?idxno=215512
 
+‘통설’ 뒤집은 GPT-6 아스트라, 108년 된 독일군 암호 해독
+https://www.aitimes.com/news/articleView.html?idxno=215511
+
+트럼프 행정부 "AI 속도 조절 원하면 정부 탓 말고 스스로 멈춰라"
+https://www.aitimes.com/news/articleView.html?idxno=215510
+
 삼성전자, 실리콘밸리서 ‘테크 포럼’개최…AI 비전과 사업전략 공유
 https://www.aitimes.com/news/articleView.html?idxno=215508
 
 카카오모빌리티, 태국·체코 교통부 차관 요청에 ‘자율주행 기술 역량’ 직접 선보여
 https://www.aitimes.com/news/articleView.html?idxno=215507
-
-“문장 생성 버렸다”…판단 전용 AI ‘제브’에 개발자 반응 폭발
-https://www.aitimes.com/news/articleView.html?idxno=215506
-
-과기부, 연구자가 지켜야 할 ‘AI 활용’ 7대 권고사항 제시
-https://www.aitimes.com/news/articleView.html?idxno=215505
-
-앤트로픽, 자체 생물학 연구소 설립…시뮬레이션 넘어 실제 실험 진출
-https://www.aitimes.com/news/articleView.html?idxno=215504
-
-"안전 핑계 대고 밀실 담합"…앤트로픽·오픈AI 등 4곳, 소비자에게 피소
-https://www.aitimes.com/news/articleView.html?idxno=215502
-
-"AI 환각에 중국과 충돌할 뻔"…미군, 정보 오류에 ‘식은땀’
-https://www.aitimes.com/news/articleView.html?idxno=215501
