@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-09-23 08:15:19",
+  "updated_at_kst": "2026-09-23 08:21:56",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 23일 수요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "‘전세금 3억 맡기면 월 109만원’…김이탁 차관 “전월세 안심신탁, 주거 선순환 출발점” [부동산360]",
+      "url": "https://n.news.naver.com/mnews/article/016/0002701184"
+    },
+    {
+      "title": "코레일 자회사 5곳→3곳으로…\"편의점 할인·수하물 공간 늘린다\"",
+      "url": "https://n.news.naver.com/mnews/article/422/0000908959"
+    },
     {
       "title": "'14억 아파트 7억에 판다' 너도나도 우르르...5만4600명 몰렸다",
       "url": "https://n.news.naver.com/mnews/article/014/0005580075"
@@ -34,14 +42,6 @@
     {
       "title": "‘두산위브더제니스 센트럴 천안’ 계약 순항…마감 임박",
       "url": "https://n.news.naver.com/mnews/article/015/0005335448"
-    },
-    {
-      "title": "돈 주고도 못 배우는 공사장 노하우, AI가 '일타강사'",
-      "url": "https://n.news.naver.com/mnews/article/648/0000051011"
-    },
-    {
-      "title": "부동산마케팅협회, 집코노미 박람회서 ‘AI 전시관’ 운영",
-      "url": "https://n.news.naver.com/mnews/article/015/0005335446"
     }
   ]
 }
