@@ -1,31 +1,31 @@
 🤖 26년 9월 22일 화요일 AI 뉴스
 
-미 재무장관 "허깅페이스 해킹 책임은 AI 아닌 오픈AI 경영진에 있어"
-https://www.aitimes.com/news/articleView.html?idxno=215555
+캐나다 BC주, 오픈AI 고소..."총격 사건 전 위험 신호 무시"
+https://www.aitimes.com/news/articleView.html?idxno=215572
 
-알리바바, 생성·편집 통합 '큐원 이미지 2.1' 공개…'선발주자 따라하기' 비판도
-https://www.aitimes.com/news/articleView.html?idxno=215554
+중국 국영기업, 15GW 태양광 모듈 입찰…TOPCon·HJT·BC 경쟁 구도
+https://www.aitimes.com/news/articleView.html?idxno=215571
 
-LG전자·LG엔솔, 엔비디아 AI 팩토리 인프라 ‘DSX 레디’ 합류
-https://www.aitimes.com/news/articleView.html?idxno=215551
+LGU+, 소도몰과 '소상공인 특화 AI 솔루션' 개발한다
+https://www.aitimes.com/news/articleView.html?idxno=215565
 
-LG, MS와 파트너십 체결..."AI 데이터센터·AX·피지컬AI 3대 협력"
-https://www.aitimes.com/news/articleView.html?idxno=215550
+AMD, AI 붐 타고 시가총액 '1조달러' 돌파...반도체 기업 4번째
+https://www.aitimes.com/news/articleView.html?idxno=215564
 
-기대 못 미친 '그록 4.7'…스페이스XAI, 프런티어 경쟁 '4.8'로 미뤄
-https://www.aitimes.com/news/articleView.html?idxno=215549
+라이너, ‘과학기술정책 연구’까지 AI 리서치 확대…KAIST 연구실과 협력
+https://www.aitimes.com/news/articleView.html?idxno=215563
 
-오픈AI·앤트로픽, AI 모델 교차 검증 합의 임박...미공개 모델은 제외
-https://www.aitimes.com/news/articleView.html?idxno=215548
+카카오, LG CNS와 협력으로 ‘데이터센터 냉방설비 제어’에 에이전트 적용
+https://www.aitimes.com/news/articleView.html?idxno=215562
 
-뉴로퓨전, 답 없는 글로벌 AI 미래 예측 벤치마크 1위…국내 스타트업 ‘기술력 증명’
-https://www.aitimes.com/news/articleView.html?idxno=215547
+오픈AI, 미 정부에 차세대 AI 안전 기준 촉구..."RSI 통제력 잃을 수도"
+https://www.aitimes.com/news/articleView.html?idxno=215561
 
-KAIST, ‘지식 재사용’으로 서버 호출 57% 줄였다…“증류·추가학습 필요 없어”
-https://www.aitimes.com/news/articleView.html?idxno=215545
+노타, 퀄컴 NPU로 로봇 모델 최적화 성공..."로봇팔 작업 속도 3배 향상"
+https://www.aitimes.com/news/articleView.html?idxno=215560
 
-[게시판] SK하이닉스, AI 실전 역량 겨루는 해커톤 개최 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=215542
+로브로스,자체 휴머노이드에 '전신 텔레오퍼레이션' 기술 탑재
+https://www.aitimes.com/news/articleView.html?idxno=215557
 
-권오현 전 삼성전자 대표, KAIST 신임 이사장 선임
-https://www.aitimes.com/news/articleView.html?idxno=215541
+구글, 제미나이·안드로이드 결합한 프리미엄 '구글북' 출시
+https://www.aitimes.com/news/articleView.html?idxno=215556
