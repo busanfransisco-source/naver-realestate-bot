@@ -1,6 +1,12 @@
 🤖 26년 9월 22일 화요일 AI 뉴스
 
-네이버클라우드 “모델 크기 넘어 ‘보안 역량’ 집중…”프런티어 수준 도달할 것”
+[게시판] 티디지, K방산 ‘한화오션’ AX 지원 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=215581
+
+튜링 GPAI, 대학생 겨냥 신기능 대거 출시…"자료 정리·시험 대비·발표 준비까지"
+https://www.aitimes.com/news/articleView.html?idxno=215580
+
+네이버클라우드 “모델 크기 넘어 ‘보안 역량’ 집중…프런티어 도달할 것”
 https://www.aitimes.com/news/articleView.html?idxno=215577
 
 호주 뉴사우스웨일스주, 태양광 패널 의무 재활용 추진
@@ -15,17 +21,11 @@ https://www.aitimes.com/news/articleView.html?idxno=215572
 중국 국영기업, 15GW 태양광 모듈 입찰…TOPCon·HJT·BC 경쟁 구도
 https://www.aitimes.com/news/articleView.html?idxno=215571
 
-LGU+, 소도몰과 '소상공인 특화 AI 솔루션' 개발한다
-https://www.aitimes.com/news/articleView.html?idxno=215565
+"대본만 넣으면 숏드라마 제작"...바이트플러스, AI '드라매직' 공개
+https://www.aitimes.com/news/articleView.html?idxno=215569
 
-AMD, AI 붐 타고 시가총액 '1조달러' 돌파...반도체 기업 4번째
-https://www.aitimes.com/news/articleView.html?idxno=215564
+에포크 AI, 벤치마크 검증 착수..."15개 중 9개 결함"
+https://www.aitimes.com/news/articleView.html?idxno=215568
 
-라이너, ‘과학기술정책 연구’까지 AI 리서치 확대…KAIST 연구실과 협력
-https://www.aitimes.com/news/articleView.html?idxno=215563
-
-카카오, LG CNS와 협력으로 ‘데이터센터 냉방설비 제어’에 에이전트 적용
-https://www.aitimes.com/news/articleView.html?idxno=215562
-
-오픈AI, 미 정부에 차세대 AI 안전 기준 촉구..."RSI 통제력 잃을 수도"
-https://www.aitimes.com/news/articleView.html?idxno=215561
+[게시판] 포지큐브, S-OIL·하나은행에 AI 에이전트 구축 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=215567
