@@ -1,5 +1,8 @@
 🤖 26년 9월 23일 수요일 AI 뉴스
 
+새로운 최고 성능·가격 40% 인하…앤트로픽, '클로드 오퍼스 5.5' 공개
+https://www.aitimes.com/news/articleView.html?idxno=215583
+
 [게시판] 티디지, K방산 ‘한화오션’ AX 지원 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=215581
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215569
 
 에포크 AI, 벤치마크 검증 착수..."15개 중 9개 결함"
 https://www.aitimes.com/news/articleView.html?idxno=215568
-
-[게시판] 포지큐브, S-OIL·하나은행에 AI 에이전트 구축 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=215567
