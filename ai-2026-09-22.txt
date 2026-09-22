@@ -1,5 +1,23 @@
 🤖 26년 9월 22일 화요일 AI 뉴스
 
+미 재무장관 "허깅페이스 해킹 책임은 AI 아닌 오픈AI 경영진에 있어"
+https://www.aitimes.com/news/articleView.html?idxno=215555
+
+알리바바, 생성·편집 통합 '큐원 이미지 2.1' 공개…'선발주자 따라하기' 비판도
+https://www.aitimes.com/news/articleView.html?idxno=215554
+
+LG전자·LG엔솔, 엔비디아 AI 팩토리 인프라 ‘DSX 레디’ 합류
+https://www.aitimes.com/news/articleView.html?idxno=215551
+
+LG, MS와 파트너십 체결..."AI 데이터센터·AX·피지컬AI 3대 협력"
+https://www.aitimes.com/news/articleView.html?idxno=215550
+
+기대 못 미친 '그록 4.7'…스페이스XAI, 프런티어 경쟁 '4.8'로 미뤄
+https://www.aitimes.com/news/articleView.html?idxno=215549
+
+오픈AI·앤트로픽, AI 모델 교차 검증 합의 임박...미공개 모델은 제외
+https://www.aitimes.com/news/articleView.html?idxno=215548
+
 뉴로퓨전, 답 없는 글로벌 AI 미래 예측 벤치마크 1위…국내 스타트업 ‘기술력 증명’
 https://www.aitimes.com/news/articleView.html?idxno=215547
 
@@ -11,21 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215542
 
 권오현 전 삼성전자 대표, KAIST 신임 이사장 선임
 https://www.aitimes.com/news/articleView.html?idxno=215541
-
-대화창 하나로 음성·영상까지 제작…일레븐랩스, MCP로 창작 도구 통합
-https://www.aitimes.com/news/articleView.html?idxno=215539
-
-2030년까지 15.7만명 부족...미국 반도체 인력난에 경고등
-https://www.aitimes.com/news/articleView.html?idxno=215538
-
-앤돈랩스, AI가 기업 전반 자율 운영하는 플랫폼 '파이온' 공개
-https://www.aitimes.com/news/articleView.html?idxno=215537
-
-MS, 기업 AI 전환 지침서 '프런티어 플레이북' 공개..."핵심은 조직 재설계"
-https://www.aitimes.com/news/articleView.html?idxno=215536
-
-‘암호 해독·마인크래프트’ 성과 낸 발스, AI 벤치마크 강자로 부상
-https://www.aitimes.com/news/articleView.html?idxno=215535
-
-오픈아트, AI 이미지·비디오 모델 평가 '아레나' 출시..."용도별 최적 모델 찾아준다"
-https://www.aitimes.com/news/articleView.html?idxno=215531
