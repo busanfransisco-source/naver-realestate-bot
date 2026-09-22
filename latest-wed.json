@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-09-23 06:42:33",
+  "updated_at_kst": "2026-09-23 07:18:55",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 23일 수요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "거침 없지만 둔감한 대통령의 부동산 언어 [기자수첩-부동산]",
+      "url": "https://n.news.naver.com/mnews/article/119/0003135799"
+    },
     {
       "title": "‘두산위브더제니스 센트럴 천안’ 계약 순항…마감 임박",
       "url": "https://n.news.naver.com/mnews/article/015/0005335448"
@@ -38,10 +42,6 @@
     {
       "title": "불황에도 10대 건설사 7곳 신입 공채…원전·데이터센터 인재 확보전",
       "url": "https://n.news.naver.com/mnews/article/421/0009187739"
-    },
-    {
-      "title": "서울시, ‘서울우수한옥’ 11번째 공모…한옥·건축양식 대상",
-      "url": "https://n.news.naver.com/mnews/article/018/0006374686"
     }
   ]
 }
