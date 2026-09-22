@@ -1,5 +1,8 @@
 🤖 26년 9월 23일 수요일 AI 뉴스
 
+오픈AI, 'GPT-6 솔·루나' 공개…"필요한 성능만 올리고 가격은 반값"
+https://www.aitimes.com/news/articleView.html?idxno=215584
+
 새로운 최고 성능·가격 40% 인하…앤트로픽, '클로드 오퍼스 5.5' 공개
 https://www.aitimes.com/news/articleView.html?idxno=215583
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215571
 
 "대본만 넣으면 숏드라마 제작"...바이트플러스, AI '드라매직' 공개
 https://www.aitimes.com/news/articleView.html?idxno=215569
-
-에포크 AI, 벤치마크 검증 착수..."15개 중 9개 결함"
-https://www.aitimes.com/news/articleView.html?idxno=215568
