@@ -1,5 +1,14 @@
 🤖 26년 9월 22일 화요일 AI 뉴스
 
+네이버클라우드 “모델 크기 넘어 ‘보안 역량’ 집중…”프런티어 수준 도달할 것”
+https://www.aitimes.com/news/articleView.html?idxno=215577
+
+호주 뉴사우스웨일스주, 태양광 패널 의무 재활용 추진
+https://www.aitimes.com/news/articleView.html?idxno=215575
+
+낮에 남은 태양광 저녁에 쓴다…구글 지원 배터리 실증서 9.2GWh 충·방전
+https://www.aitimes.com/news/articleView.html?idxno=215574
+
 캐나다 BC주, 오픈AI 고소..."총격 사건 전 위험 신호 무시"
 https://www.aitimes.com/news/articleView.html?idxno=215572
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215562
 
 오픈AI, 미 정부에 차세대 AI 안전 기준 촉구..."RSI 통제력 잃을 수도"
 https://www.aitimes.com/news/articleView.html?idxno=215561
-
-노타, 퀄컴 NPU로 로봇 모델 최적화 성공..."로봇팔 작업 속도 3배 향상"
-https://www.aitimes.com/news/articleView.html?idxno=215560
-
-로브로스,자체 휴머노이드에 '전신 텔레오퍼레이션' 기술 탑재
-https://www.aitimes.com/news/articleView.html?idxno=215557
-
-구글, 제미나이·안드로이드 결합한 프리미엄 '구글북' 출시
-https://www.aitimes.com/news/articleView.html?idxno=215556
