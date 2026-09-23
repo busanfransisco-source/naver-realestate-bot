@@ -1,7 +1,22 @@
 🤖 26년 9월 23일 수요일 AI 뉴스
 
-[게시판] KAIST·스카이인텔리전스·다임리서치, ‘제조 피지컬AI 스타케이드’ 결성 등 단신
+에임인텔리전스·파일러, 엔비디아 인셉션 '아태 톱 10' 선정
+https://www.aitimes.com/news/articleView.html?idxno=215625
+
+AWS, 토큰 비용 28% 낮춘 AI 에이전트 실행환경 '스트랜즈 하네스' 공개
+https://www.aitimes.com/news/articleView.html?idxno=215620
+
+3D 코딩 대결...클로드 오퍼스 5.5 "디테일" vs GPT-5.6 "비용·속도"
+https://www.aitimes.com/news/articleView.html?idxno=215618
+
+[게시판] KAIST·스카이인텔리전스·다임리서치, ‘제조 피지컬AI 스타케이트’ 결성 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=215617
+
+오픈AI, 모델 개발 초기부터 외부 안전성 검증 받는다
+https://www.aitimes.com/news/articleView.html?idxno=215615
+
+퀄컴, 차세대 온디바이스 AI 칩 공개…"에이전트 중심 경험 전환"
+https://www.aitimes.com/news/articleView.html?idxno=215614
 
 알트먼·아모데이·딥시크 총출동…유엔 안보리서 'AI 안전' 논의
 https://www.aitimes.com/news/articleView.html?idxno=215613
@@ -14,18 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215610
 
 트럼프 "AI 명칭 '초지능'으로 변경"…글로벌 규약도 거부
 https://www.aitimes.com/news/articleView.html?idxno=215609
-
-알리바바, 10조 매개변수 초대형 모델 내놓는다...중국 최강 칩도 선보여
-https://www.aitimes.com/news/articleView.html?idxno=215594
-
-햇빛소득마을 2차 공모 617곳 신청…에너지공단, 사업관리 강화
-https://www.aitimes.com/news/articleView.html?idxno=215587
-
-프랑스 영농형 태양광 실증…가뭄 속 옥수수 수확량 19.6% 증가
-https://www.aitimes.com/news/articleView.html?idxno=215586
-
-오픈AI, 'GPT-6 솔·루나' 공개…"필요한 성능만 올리고 가격은 반값"
-https://www.aitimes.com/news/articleView.html?idxno=215584
-
-새로운 최고 성능·가격 40% 인하…앤트로픽, '클로드 오퍼스 5.5' 공개
-https://www.aitimes.com/news/articleView.html?idxno=215583
