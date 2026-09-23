@@ -1,5 +1,8 @@
 🤖 26년 9월 23일 수요일 AI 뉴스
 
+노타 ‘휴머노이드 서밋’서 로봇 AI 모델 7종 최적화 성과 공개
+https://www.aitimes.com/news/articleView.html?idxno=215628
+
 에임인텔리전스·파일러, 엔비디아 인셉션 '아태 톱 10' 선정
 https://www.aitimes.com/news/articleView.html?idxno=215625
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215612
 
 중국, 딥시크·문샷 수사 중..."국방·민감 정보, 미국 서버로 넘어가"
 https://www.aitimes.com/news/articleView.html?idxno=215610
-
-트럼프 "AI 명칭 '초지능'으로 변경"…글로벌 규약도 거부
-https://www.aitimes.com/news/articleView.html?idxno=215609
