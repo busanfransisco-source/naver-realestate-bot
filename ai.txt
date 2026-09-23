@@ -1,31 +1,31 @@
 🤖 26년 9월 23일 수요일 AI 뉴스
 
+[게시판] KAIST·스카이인텔리전스·다임리서치, ‘제조 피지컬AI 스타케이드’ 결성 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=215617
+
+알트먼·아모데이·딥시크 총출동…유엔 안보리서 'AI 안전' 논의
+https://www.aitimes.com/news/articleView.html?idxno=215613
+
+인핸스, GS칼텍스와 암묵지 AI 모델 개발 착수 "제조 베테랑 노하우 AI에 새긴다"
+https://www.aitimes.com/news/articleView.html?idxno=215612
+
+중국 당국, 딥시크·문샷 수사 중..."국방·민감 정보, 미국 서버로 넘어가"
+https://www.aitimes.com/news/articleView.html?idxno=215610
+
+트럼프 "AI 명칭 '초지능'으로 변경"…글로벌 규약도 거부
+https://www.aitimes.com/news/articleView.html?idxno=215609
+
 알리바바, 10조 매개변수 초대형 모델 내놓는다...중국 최강 칩도 선보여
 https://www.aitimes.com/news/articleView.html?idxno=215594
+
+햇빛소득마을 2차 공모 617곳 신청…에너지공단, 사업관리 강화
+https://www.aitimes.com/news/articleView.html?idxno=215587
+
+프랑스 영농형 태양광 실증…가뭄 속 옥수수 수확량 19.6% 증가
+https://www.aitimes.com/news/articleView.html?idxno=215586
 
 오픈AI, 'GPT-6 솔·루나' 공개…"필요한 성능만 올리고 가격은 반값"
 https://www.aitimes.com/news/articleView.html?idxno=215584
 
 새로운 최고 성능·가격 40% 인하…앤트로픽, '클로드 오퍼스 5.5' 공개
 https://www.aitimes.com/news/articleView.html?idxno=215583
-
-[게시판] 티디지, K방산 ‘한화오션’ AX 지원 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=215581
-
-튜링 GPAI, 대학생 겨냥 신기능 대거 출시…"자료 정리·시험 대비·발표 준비까지"
-https://www.aitimes.com/news/articleView.html?idxno=215580
-
-네이버클라우드 “모델 크기 넘어 ‘보안 역량’ 집중…프런티어 도달할 것”
-https://www.aitimes.com/news/articleView.html?idxno=215577
-
-호주 뉴사우스웨일스주, 태양광 패널 의무 재활용 추진
-https://www.aitimes.com/news/articleView.html?idxno=215575
-
-낮에 남은 태양광 저녁에 쓴다…구글 지원 배터리 실증서 9.2GWh 충·방전
-https://www.aitimes.com/news/articleView.html?idxno=215574
-
-캐나다 BC주, 오픈AI 고소..."총격 사건 전 위험 신호 무시"
-https://www.aitimes.com/news/articleView.html?idxno=215572
-
-중국 국영기업, 15GW 태양광 모듈 입찰…TOPCon·HJT·BC 경쟁 구도
-https://www.aitimes.com/news/articleView.html?idxno=215571
