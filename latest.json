@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-09-24 07:22:32",
+  "updated_at_kst": "2026-09-24 07:32:47",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 24일 목요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "'쿵쿵' 소리 잡은 조립식 아파트…22층 모듈러, 층간소음 1등급 성적표[부동산AtoZ]",
+      "url": "https://n.news.naver.com/mnews/article/277/0005820668"
+    },
+    {
+      "title": "‘주택청약 당첨, 기뻤했는데 이게 웬 날벼락!’…‘부적격자’ 1만3천명..27%는 사전확인 가능했다",
+      "url": "https://n.news.naver.com/mnews/article/021/0002821042"
+    },
     {
       "title": "초고층만으론 부족…글로벌 랜드마크 ‘복합개발’ 경쟁",
       "url": "https://n.news.naver.com/mnews/article/119/0003136136"
@@ -34,14 +42,6 @@
     {
       "title": "추석 때 기름값 부담 줄이려면…고속道 주유소 가세요",
       "url": "https://n.news.naver.com/mnews/article/003/0014211880"
-    },
-    {
-      "title": "공적주택 119만호 중 92만호 수도권에…전월세 시장 '안전판' 될까",
-      "url": "https://n.news.naver.com/mnews/article/421/0009189891"
-    },
-    {
-      "title": "삼성맨 주택대출 풀리자 영통 0.61%↑… 경기, 서울보다 더 올랐다",
-      "url": "https://n.news.naver.com/mnews/article/366/0001194293"
     }
   ]
 }
