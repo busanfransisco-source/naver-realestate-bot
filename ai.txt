@@ -1,5 +1,8 @@
 🤖 26년 9월 24일 목요일 AI 뉴스
 
+[게시판] 한컴위드, N2SF 기반 'AI 문서 분류 기술' 개발 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=215629
+
 노타 ‘휴머노이드 서밋’서 로봇 AI 모델 7종 최적화 성과 공개
 https://www.aitimes.com/news/articleView.html?idxno=215628
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215613
 
 인핸스, GS칼텍스와 '제조 베테랑 노하우' AI로 구축
 https://www.aitimes.com/news/articleView.html?idxno=215612
-
-KAIST, 세계 최초 풀코스 마라톤 완주한 ‘로봇 설계 원리’ 발표
-https://www.aitimes.com/news/articleView.html?idxno=215611
