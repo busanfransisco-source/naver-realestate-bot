@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-09-24 08:21:53",
+  "updated_at_kst": "2026-09-24 08:49:31",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 24일 목요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "추석 이후 4만8829가구 일반분양…10월에만 3만가구 몰린다",
+      "url": "https://n.news.naver.com/mnews/article/119/0003136153"
+    },
+    {
+      "title": "\"○○○ 아파트 살아요?\"…강남 부자동네 新인맥에 '술렁' [시장톡]",
+      "url": "https://n.news.naver.com/mnews/article/015/0005335853"
+    },
     {
       "title": "노후 임대주택 15만 가구 넘었는데 리모델링은 지지부진 [코주부]",
       "url": "https://n.news.naver.com/mnews/article/011/0004665141"
@@ -16,7 +24,7 @@
       "url": "https://n.news.naver.com/mnews/article/001/0016334334"
     },
     {
-      "title": "서울 아파트 입주 물량 들쭉날쭉 왜?…올해 7천가구, 내년 5천가구 증가한다",
+      "title": "서울 아파트 입주 물량 들쭉날쭉 왜?…올해 7천가구, 내년 5천가구 증가",
       "url": "https://n.news.naver.com/mnews/article/028/0002824518"
     },
     {
@@ -34,14 +42,6 @@
     {
       "title": "'쿵쿵' 소리 잡은 조립식 아파트…22층 모듈러, 층간소음 1등급 성적표[부동산AtoZ]",
       "url": "https://n.news.naver.com/mnews/article/277/0005820668"
-    },
-    {
-      "title": "‘주택청약 당첨, 기뻤했는데 이게 웬 날벼락!’…‘부적격자’ 1만3천명..27%는 사전확인 가능했다",
-      "url": "https://n.news.naver.com/mnews/article/021/0002821042"
-    },
-    {
-      "title": "초고층만으론 부족…글로벌 랜드마크 ‘복합개발’ 경쟁",
-      "url": "https://n.news.naver.com/mnews/article/119/0003136136"
     }
   ]
 }
