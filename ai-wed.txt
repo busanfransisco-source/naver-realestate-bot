@@ -1,5 +1,8 @@
 🤖 26년 9월 23일 수요일 AI 뉴스
 
+알리바바, 10조 매개변수 초대형 모델 내놓는다...중국 최강 칩도 선보여
+https://www.aitimes.com/news/articleView.html?idxno=215594
+
 오픈AI, 'GPT-6 솔·루나' 공개…"필요한 성능만 올리고 가격은 반값"
 https://www.aitimes.com/news/articleView.html?idxno=215584
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215572
 
 중국 국영기업, 15GW 태양광 모듈 입찰…TOPCon·HJT·BC 경쟁 구도
 https://www.aitimes.com/news/articleView.html?idxno=215571
-
-"대본만 넣으면 숏드라마 제작"...바이트플러스, AI '드라매직' 공개
-https://www.aitimes.com/news/articleView.html?idxno=215569
