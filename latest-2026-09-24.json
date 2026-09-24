@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-09-24 17:21:26",
+  "updated_at_kst": "2026-09-24 17:53:15",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 24일 목요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "[데일리안 오늘뉴스 종합] 北포로 한국행, 한·멕시코 FTA 협상 재개, \"적 쳐들어와도 쉴 건가\", 사라지는 검찰청, '도산대지급금' 폭증 등",
+      "url": "https://n.news.naver.com/mnews/article/119/0003136232"
+    },
     {
       "title": "“청약 되기도 어렵고 분양가 너무 높아” 올해만 44만명 이탈 [부동산360]",
       "url": "https://n.news.naver.com/mnews/article/016/0002701693"
@@ -38,10 +42,6 @@
     {
       "title": "대구 아파트값, 3주만에 하락 전환…전셋값은 10주째 올라",
       "url": "https://n.news.naver.com/mnews/article/421/0009190326"
-    },
-    {
-      "title": "강북은 수백대일 경쟁률, 강남은 미달...보증금 11억짜리 공공임대주택이 외면 받은 이유는? [부동산360]",
-      "url": "https://n.news.naver.com/mnews/article/016/0002701673"
     }
   ]
 }

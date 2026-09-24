@@ -1,5 +1,8 @@
 🤖 26년 9월 24일 목요일 AI 뉴스
 
+블랙 포레스트, 경쟁 모델 절반 크기로 세계 최고 성능 낸 '로봇 AI' 공개
+https://www.aitimes.com/news/articleView.html?idxno=215643
+
 메타, '뮤즈' 탑재한 AI 안경 라인업 공개…카메라 뺀 '오디오 버전'도 선보여
 https://www.aitimes.com/news/articleView.html?idxno=215642
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215629
 
 노타 ‘휴머노이드 서밋’서 로봇 AI 모델 7종 최적화 성과 공개
 https://www.aitimes.com/news/articleView.html?idxno=215628
-
-에임인텔리전스·파일러, 엔비디아 인셉션 '아태 톱 10' 선정
-https://www.aitimes.com/news/articleView.html?idxno=215625
