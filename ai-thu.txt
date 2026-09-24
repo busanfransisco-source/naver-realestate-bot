@@ -1,10 +1,16 @@
 🤖 26년 9월 24일 목요일 AI 뉴스
 
+유튜브, 생성 AI 전면 도입..."말 한마디로 편집하고 맞춤 피드 구축"
+https://www.aitimes.com/news/articleView.html?idxno=215644
+
 블랙 포레스트, 경쟁 모델 절반 크기로 세계 최고 성능 낸 '로봇 AI' 공개
 https://www.aitimes.com/news/articleView.html?idxno=215643
 
-메타, '뮤즈' 탑재한 AI 안경 라인업 공개…카메라 뺀 '오디오 버전'도 선보여
+메타, '뮤즈' 탑재한 AI 안경 라인업 공개…카메라 뺀 '오디오 버전' 추가
 https://www.aitimes.com/news/articleView.html?idxno=215642
+
+오픈AI, 우크라이나에 사이버 보안 '데이브레이크' 무료 지원..."러시아 공격 대응"
+https://www.aitimes.com/news/articleView.html?idxno=215641
 
 오픈AI 에이전트, '정부 망'까지 뚫었다…호주, 국가 인프라 침투 첫 확인
 https://www.aitimes.com/news/articleView.html?idxno=215640
@@ -12,20 +18,14 @@ https://www.aitimes.com/news/articleView.html?idxno=215640
 알리바바, ‘큐원-오디오-3.1’ 공개...최대 95% 가격 파괴
 https://www.aitimes.com/news/articleView.html?idxno=215639
 
+앤트로픽, '오퍼스 5.5' 프롬프트 팁 공개..."불필요 문구 삭제해야"
+https://www.aitimes.com/news/articleView.html?idxno=215638
+
 MS, 코파일럿 '슈퍼 앱' 전환 맞춰 최대 50% 파격 할인
 https://www.aitimes.com/news/articleView.html?idxno=215637
 
-앤트로픽, 유전자 편집 효소 시스템 발견…바이오·제약 확장 가속
-https://www.aitimes.com/news/articleView.html?idxno=215633
+구글, '제미나이 3.8 플래시 TTS' 공개...'음성 디자인' 패러다임 연다
+https://www.aitimes.com/news/articleView.html?idxno=215636
 
-메타 '뮤즈' 돌풍에 증시 흔들…금융·구독주 덮친 에이전트 공포
-https://www.aitimes.com/news/articleView.html?idxno=215632
-
-구글, '제미나이 4 프로'  테스트 착수 포착…"UI·웹 디자인 성능 도약"
-https://www.aitimes.com/news/articleView.html?idxno=215631
-
-[게시판] 한컴위드, N2SF 기반 'AI 문서 분류 기술' 개발 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=215629
-
-노타 ‘휴머노이드 서밋’서 로봇 AI 모델 7종 최적화 성과 공개
-https://www.aitimes.com/news/articleView.html?idxno=215628
+오픈AI, '챗GPT 음성'에 에이전트 결합..."말 한마디로 앱 조작·업무 처리"
+https://www.aitimes.com/news/articleView.html?idxno=215635
