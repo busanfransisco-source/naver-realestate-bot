@@ -1,5 +1,8 @@
 🤖 26년 9월 24일 목요일 AI 뉴스
 
+구글, '제미나이 4 프로'  테스트 착수…"UI·웹 디자인 도약"
+https://www.aitimes.com/news/articleView.html?idxno=215631
+
 [게시판] 한컴위드, N2SF 기반 'AI 문서 분류 기술' 개발 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=215629
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215614
 
 알트먼·아모데이·딥시크 총출동…유엔 안보리서 'AI 안전' 논의
 https://www.aitimes.com/news/articleView.html?idxno=215613
-
-인핸스, GS칼텍스와 '제조 베테랑 노하우' AI로 구축
-https://www.aitimes.com/news/articleView.html?idxno=215612
