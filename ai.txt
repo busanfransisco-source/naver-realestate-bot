@@ -1,5 +1,8 @@
 🤖 26년 9월 25일 금요일 AI 뉴스
 
+오픈AI 에이전트 무단 침입 또 드러나… 피해 전모 파악에 '수개월'
+https://www.aitimes.com/news/articleView.html?idxno=215648
+
 메타, 펜던트형 AI 기기 '뮤즈 참'  12월 출시 예고
 https://www.aitimes.com/news/articleView.html?idxno=215647
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215640
 
 알리바바, ‘큐원-오디오-3.1’ 공개...최대 95% 가격 파괴
 https://www.aitimes.com/news/articleView.html?idxno=215639
-
-앤트로픽, '오퍼스 5.5' 프롬프트 팁 공개..."불필요 문구 삭제해야"
-https://www.aitimes.com/news/articleView.html?idxno=215638
