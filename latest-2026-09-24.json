@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-09-24 09:39:38",
+  "updated_at_kst": "2026-09-24 09:44:37",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 24일 목요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "집값 띄우려는 ‘담합’ 끊이지 않았다…수도권 신고만 483건 [부동산360]",
+      "url": "https://n.news.naver.com/mnews/article/016/0002701610"
+    },
     {
       "title": "서울 집값 최장 상승 기록 눈앞…신임 국토부 장관, '공급 실행력' 시험대",
       "url": "https://n.news.naver.com/mnews/article/003/0014211982"
@@ -38,10 +42,6 @@
     {
       "title": "LH, 수도권 공동주택 용지 5000억원 매입…29일부터 접수",
       "url": "https://n.news.naver.com/mnews/article/014/0005580605"
-    },
-    {
-      "title": "'경희궁유보라 아파트' 보류지 1가구 매각 재입찰",
-      "url": "https://n.news.naver.com/mnews/article/119/0003136160"
     }
   ]
 }
