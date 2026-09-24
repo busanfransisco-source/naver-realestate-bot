@@ -1,5 +1,17 @@
 🤖 26년 9월 24일 목요일 AI 뉴스
 
+메타, '뮤즈' 탑재한 AI 안경 라인업 공개…카메라 뺀 '오디오 버전'도 선보여
+https://www.aitimes.com/news/articleView.html?idxno=215642
+
+오픈AI 에이전트, '정부 망'까지 뚫었다…호주, 국가 인프라 침투 첫 확인
+https://www.aitimes.com/news/articleView.html?idxno=215640
+
+알리바바, ‘큐원-오디오-3.1’ 공개...최대 95% 가격 파괴
+https://www.aitimes.com/news/articleView.html?idxno=215639
+
+MS, 코파일럿 '슈퍼 앱' 전환 맞춰 최대 50% 파격 할인
+https://www.aitimes.com/news/articleView.html?idxno=215637
+
 앤트로픽, 유전자 편집 효소 시스템 발견…바이오·제약 확장 가속
 https://www.aitimes.com/news/articleView.html?idxno=215633
 
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215628
 
 에임인텔리전스·파일러, 엔비디아 인셉션 '아태 톱 10' 선정
 https://www.aitimes.com/news/articleView.html?idxno=215625
-
-AWS, 토큰 비용 28% 낮춘 AI 에이전트 실행환경 '스트랜즈 하네스' 공개
-https://www.aitimes.com/news/articleView.html?idxno=215620
-
-3D 코딩 대결...클로드 오퍼스 5.5 "디테일" vs GPT-5.6 "비용·속도"
-https://www.aitimes.com/news/articleView.html?idxno=215618
-
-[게시판] KAIST·스카이인텔리전스·다임리서치, ‘제조 피지컬AI 스타케이트’ 결성 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=215617
-
-오픈AI, 모델 개발 초기부터 외부 안전성 검증 받는다
-https://www.aitimes.com/news/articleView.html?idxno=215615
