@@ -1,6 +1,12 @@
 🤖 26년 9월 24일 목요일 AI 뉴스
 
-구글, '제미나이 4 프로'  테스트 착수…"UI·웹 디자인 도약"
+앤트로픽, 유전자 편집 효소 시스템 발견…바이오·제약 확장 가속
+https://www.aitimes.com/news/articleView.html?idxno=215633
+
+메타 '뮤즈' 돌풍에 증시 흔들…금융·구독주 덮친 에이전트 공포
+https://www.aitimes.com/news/articleView.html?idxno=215632
+
+구글, '제미나이 4 프로'  테스트 착수 포착…"UI·웹 디자인 성능 도약"
 https://www.aitimes.com/news/articleView.html?idxno=215631
 
 [게시판] 한컴위드, N2SF 기반 'AI 문서 분류 기술' 개발 등 단신
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215617
 
 오픈AI, 모델 개발 초기부터 외부 안전성 검증 받는다
 https://www.aitimes.com/news/articleView.html?idxno=215615
-
-퀄컴, 차세대 온디바이스 AI 칩 공개…"에이전트 중심 경험 전환"
-https://www.aitimes.com/news/articleView.html?idxno=215614
-
-알트먼·아모데이·딥시크 총출동…유엔 안보리서 'AI 안전' 논의
-https://www.aitimes.com/news/articleView.html?idxno=215613
