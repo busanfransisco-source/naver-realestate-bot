@@ -1,5 +1,11 @@
 🤖 26년 9월 24일 목요일 AI 뉴스
 
+메타, 펜던트형 AI 기기 '뮤즈 참'  12월 출시 예고
+https://www.aitimes.com/news/articleView.html?idxno=215647
+
+"제미나이 4 조기 출시"… 구글 딥마인드 수장, 첫 인터뷰서 공식화
+https://www.aitimes.com/news/articleView.html?idxno=215646
+
 안보리 무대 선 알트먼·아모데이 "AI 통제 불능 위험...글로벌 공조 시급"
 https://www.aitimes.com/news/articleView.html?idxno=215645
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215639
 
 앤트로픽, '오퍼스 5.5' 프롬프트 팁 공개..."불필요 문구 삭제해야"
 https://www.aitimes.com/news/articleView.html?idxno=215638
-
-MS, 코파일럿 '슈퍼 앱' 전환 맞춰 최대 50% 파격 할인
-https://www.aitimes.com/news/articleView.html?idxno=215637
-
-구글, '제미나이 3.8 플래시 TTS' 공개...'음성 디자인' 패러다임 연다
-https://www.aitimes.com/news/articleView.html?idxno=215636
