@@ -1,5 +1,8 @@
 🤖 26년 9월 24일 목요일 AI 뉴스
 
+안보리 무대 선 알트먼·아모데이 "AI 통제 불능 위험...글로벌 공조 시급"
+https://www.aitimes.com/news/articleView.html?idxno=215645
+
 유튜브, 생성 AI 전면 도입..."말 한마디로 편집하고 맞춤 피드 구축"
 https://www.aitimes.com/news/articleView.html?idxno=215644
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215637
 
 구글, '제미나이 3.8 플래시 TTS' 공개...'음성 디자인' 패러다임 연다
 https://www.aitimes.com/news/articleView.html?idxno=215636
-
-오픈AI, '챗GPT 음성'에 에이전트 결합..."말 한마디로 앱 조작·업무 처리"
-https://www.aitimes.com/news/articleView.html?idxno=215635
