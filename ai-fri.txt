@@ -6,7 +6,7 @@ https://www.aitimes.com/news/articleView.html?idxno=215651
 오픈AI, 신규 개발자 플랫폼·요금제 준비...앱 개발 전 과정 지원
 https://www.aitimes.com/news/articleView.html?idxno=215650
 
-앤트로픽, 거부된 클로드 요청도 과금…‘모델 증류 공격’ 방어선 구축
+앤트로픽, ‘모델 증류’ 방어선 구축...거부된 클로드 요청도 과금
 https://www.aitimes.com/news/articleView.html?idxno=215649
 
 오픈AI 에이전트 무단 침입 또 드러나… 피해 전모 파악에 '수개월'
