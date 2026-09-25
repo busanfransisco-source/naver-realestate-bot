@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-09-25 23:53:14",
+  "updated_at_kst": "2026-09-26 00:47:47",
   "source": "https://news.naver.com/breakingnews/section/101/260",
-  "headline": "26년 9월 25일 금요일 부동산 주요뉴스",
+  "headline": "26년 9월 26일 토요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "‘1등=인생역전?’ 그래도 서울 집은 못산다 [주형연의 에구MONEY]",
+      "url": "https://n.news.naver.com/mnews/article/029/0003049846"
+    },
     {
       "title": "“아파트 문턱 높아지자 오피스텔 뜬다”…상반기 거래량 전년比 8.24% ‘쑥’",
       "url": "https://n.news.naver.com/mnews/article/009/0005740034"
@@ -38,10 +42,6 @@
     {
       "title": "전문가 4인 \"내집마련 적기는 연휴 직후 … 한강벨트 노려볼만\"",
       "url": "https://n.news.naver.com/mnews/article/009/0005739995"
-    },
-    {
-      "title": "‘복비 깎아주세요’ 못하게 될까…‘중개보수 정률제’ 재점화 [부동산360]",
-      "url": "https://n.news.naver.com/mnews/article/016/0002701872"
     }
   ]
 }
