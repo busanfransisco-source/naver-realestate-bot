@@ -1,5 +1,8 @@
 🤖 26년 9월 26일 토요일 AI 뉴스
 
+MS, 에이전트·코드 생성 통합한 새 '코파일럿' 공개…'AI 시대 업무 OS' 선언
+https://www.aitimes.com/news/articleView.html?idxno=215662
+
 백악관, 오픈AI·앤트로픽에 "신모델, 영국 사전 검증 거부하라" 압박
 https://www.aitimes.com/news/articleView.html?idxno=215658
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215648
 
 메타, 펜던트형 AI 기기 '뮤즈 참'  12월 출시 예고
 https://www.aitimes.com/news/articleView.html?idxno=215647
-
-"제미나이 4 조기 출시"… 구글 딥마인드 수장, 첫 인터뷰서 공식화
-https://www.aitimes.com/news/articleView.html?idxno=215646
