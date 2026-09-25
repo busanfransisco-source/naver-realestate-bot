@@ -1,5 +1,8 @@
 🤖 26년 9월 26일 토요일 AI 뉴스
 
+미중 정상 백악관 회담...시진핑 "AI 통제" vs 트럼프 "현상 유지"
+https://www.aitimes.com/news/articleView.html?idxno=215663
+
 MS, 에이전트·코드 생성 통합한 새 '코파일럿' 공개…'AI 시대 업무 OS' 선언
 https://www.aitimes.com/news/articleView.html?idxno=215662
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215649
 
 오픈AI 에이전트 무단 침입 또 드러나… 피해 전모 파악에 '수개월'
 https://www.aitimes.com/news/articleView.html?idxno=215648
-
-메타, 펜던트형 AI 기기 '뮤즈 참'  12월 출시 예고
-https://www.aitimes.com/news/articleView.html?idxno=215647
