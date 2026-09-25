@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-09-25 09:04:11",
+  "updated_at_kst": "2026-09-25 09:09:09",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 25일 금요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "'청약 당첨의 기쁨도 잠시'…6년간 5만 4000명 부적격 판정",
+      "url": "https://n.news.naver.com/mnews/article/656/0000187741"
+    },
     {
       "title": "생활 인프라 한곳에…‘옥정중앙역 디에트르Ⅱ’ 콤팩트시티형 단지로 눈길",
       "url": "https://n.news.naver.com/mnews/article/016/0002701801"
@@ -38,10 +42,6 @@
     {
       "title": "집 앞에서 교육·쇼핑·여가까지… 주거 패러다임 바꾸는 ‘콤팩트시티’",
       "url": "https://n.news.naver.com/mnews/article/029/0003049814"
-    },
-    {
-      "title": "\"무조건 서울 고집보단…\" 전문가 '경기도 인기 지역' 눈여겨보는 이유",
-      "url": "https://n.news.naver.com/mnews/article/003/0014213091"
     }
   ]
 }
