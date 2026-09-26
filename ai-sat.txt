@@ -1,5 +1,8 @@
 🤖 26년 9월 26일 토요일 AI 뉴스
 
+말 못하는 AI '제브'가 실리콘밸리 흔들었다..."일주일 새 몸값 50배 뛰어"
+https://www.aitimes.com/news/articleView.html?idxno=215675
+
 머스크 "연말까지 콜로서스 2 GPU 두 배 증설"... 최대 121만개 달성
 https://www.aitimes.com/news/articleView.html?idxno=215674
 
@@ -21,11 +24,8 @@ https://www.aitimes.com/news/articleView.html?idxno=215669
 미 항소법원 "국방부의 앤트로픽 배제 조치는 정당"
 https://www.aitimes.com/news/articleView.html?idxno=215668
 
-오픈AI, 'GPT-6 사이버' 공개 임박…API 넘어서는 '전용 배포 제품' 선보인다
+오픈AI, 'GPT-6 사이버' 공개 임박…API 넘어 '전용 배포' 선보인다
 https://www.aitimes.com/news/articleView.html?idxno=215667
 
 메타, AI 에이전트 '뮤즈' 보안 취약점 발견…안전 경고 강화
 https://www.aitimes.com/news/articleView.html?idxno=215666
-
-앤트로픽, IPO 앞두고 공동 창립자 7명에 의결권 50.1% 부여 추진
-https://www.aitimes.com/news/articleView.html?idxno=215665
