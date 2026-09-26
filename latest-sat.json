@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-09-26 09:11:03",
+  "updated_at_kst": "2026-09-26 09:20:30",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 26일 토요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "신축보다 더 뛴 구축…서울 집값, 강북 재건축 ‘키 맞추기’",
+      "url": "https://n.news.naver.com/mnews/article/119/0003136408"
+    },
+    {
+      "title": "“일자리가 곧 집값”… 자족도시 품은반도건설의 ‘계양신도시 카이브 유보라’",
+      "url": "https://n.news.naver.com/mnews/article/277/0005820940"
+    },
     {
       "title": "채명기 경기도의원 \"개발사업 때 교통·교육 평가 명확해야\"",
       "url": "https://n.news.naver.com/mnews/article/001/0016336781"
@@ -34,14 +42,6 @@
     {
       "title": "추석 휴게소 전기차 충전 4배↑…충전기는 40% 증가 그쳐",
       "url": "https://n.news.naver.com/mnews/article/003/0014214018"
-    },
-    {
-      "title": "'평탄화'?…강남3구 3주째 하락, 광교는 1% 쑥",
-      "url": "https://n.news.naver.com/mnews/article/648/0000051072"
-    },
-    {
-      "title": "\"국평이 20억\"…반도체 품은 동탄, 올해 집값 전국 1위",
-      "url": "https://n.news.naver.com/mnews/article/003/0014214008"
     }
   ]
 }
