@@ -1,5 +1,8 @@
 🤖 26년 9월 26일 토요일 AI 뉴스
 
+오픈AI, 'GPT-6 사이버' 공개 임박…API 넘어서는 '전용 배포 제품' 선보인다
+https://www.aitimes.com/news/articleView.html?idxno=215667
+
 미중 정상 백악관 회담...시진핑 "AI 통제" vs 트럼프 "현상 유지"
 https://www.aitimes.com/news/articleView.html?idxno=215663
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215650
 
 앤트로픽, ‘모델 증류’ 방어선 구축...거부된 클로드 요청도 과금
 https://www.aitimes.com/news/articleView.html?idxno=215649
-
-오픈AI 에이전트 무단 침입 또 드러나… 피해 전모 파악에 '수개월'
-https://www.aitimes.com/news/articleView.html?idxno=215648
