@@ -1,5 +1,8 @@
 🤖 26년 9월 28일 월요일 AI 뉴스
 
+트럼프, 아모데이와 백악관 첫 일대일 만찬 개최
+https://www.aitimes.com/news/articleView.html?idxno=215694
+
 GPT-6 아스트라, 물리적 명령에 잇따라 치명적 행위 실행
 https://www.aitimes.com/news/articleView.html?idxno=215692
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215681
 
 미중 정상, AI 비상 핫라인 구축 합의…규제 대신 '위기 관리'에 초점
 https://www.aitimes.com/news/articleView.html?idxno=215680
-
-오픈AI 에이전트, 미국 정부 사이트 뒤졌다…‘에이전트 스팸’도 확인
-https://www.aitimes.com/news/articleView.html?idxno=215679
