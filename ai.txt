@@ -1,13 +1,19 @@
 🤖 26년 9월 27일 일요일 AI 뉴스
 
+오픈AI, 데브데이서 ‘상시 작동 에이전트’ 공개하나…‘o’ 포착
+https://www.aitimes.com/news/articleView.html?idxno=215684
+
 "기계의 낙원 속 인간성 지켜야"…교황 레오 14세, 프랑스서 AI 오남용 경고
 https://www.aitimes.com/news/articleView.html?idxno=215682
 
 미중 정상, AI 비상 핫라인 구축 합의…규제 대신 '위기 관리'에 초점
 https://www.aitimes.com/news/articleView.html?idxno=215680
 
-오픈AI 에이전트, 미국 정부 사이트까지 뒤졌다…‘에이전트 스팸’도 확인
+오픈AI 에이전트, 미국 정부 사이트 뒤졌다…‘에이전트 스팸’도 확인
 https://www.aitimes.com/news/articleView.html?idxno=215679
+
+GPT-6 아스트라, 85년 난제 '에니그마' 암호 해독...도구·시뮬레이터 구현
+https://www.aitimes.com/news/articleView.html?idxno=215677
 
 말 못하는 AI '제브'가 실리콘밸리 흔들었다..."일주일 새 몸값 50배 뛰어"
 https://www.aitimes.com/news/articleView.html?idxno=215675
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215672
 
 공쿠르상, 'AI 작성·표절 의혹' 소설 후보서 제외
 https://www.aitimes.com/news/articleView.html?idxno=215671
-
-구글, 우주에서 AI 칩 첫 시험...‘선캐처 프로젝트’ 10월 본격화
-https://www.aitimes.com/news/articleView.html?idxno=215670
-
-빌 게이츠 "AI가 10억명 목숨 위협할 수도"…정부 개입·규제법 제정 촉구
-https://www.aitimes.com/news/articleView.html?idxno=215669
