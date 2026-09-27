@@ -1,5 +1,17 @@
 🤖 26년 9월 27일 일요일 AI 뉴스
 
+GPT-6 아스트라, 물리적 명령에 잇따라 치명적 행위 실행
+https://www.aitimes.com/news/articleView.html?idxno=215692
+
+스모어톡, 신한은행에 숏폼 영상 AI 공급…금융권 유스케이스 첫 확보
+https://www.aitimes.com/news/articleView.html?idxno=215687
+
+KT, AI 모델 라우팅 기술로 글로벌 2위…“기업 AX 지원”
+https://www.aitimes.com/news/articleView.html?idxno=215686
+
+앤트로픽, 클로드 플러그인 개발 포털 공개...제출·검토·분석 통합 지원
+https://www.aitimes.com/news/articleView.html?idxno=215685
+
 오픈AI, 데브데이서 ‘상시 작동 에이전트’ 공개하나…‘o’ 포착
 https://www.aitimes.com/news/articleView.html?idxno=215684
 
@@ -9,23 +21,11 @@ https://www.aitimes.com/news/articleView.html?idxno=215683
 "기계의 낙원 속 인간성 지켜야"…교황 레오 14세, 프랑스서 AI 오남용 경고
 https://www.aitimes.com/news/articleView.html?idxno=215682
 
+오픈AI, 500달러 ‘프로 맥스’ 요금제 출시하나…‘워크·코덱스’ 고속 처리
+https://www.aitimes.com/news/articleView.html?idxno=215681
+
 미중 정상, AI 비상 핫라인 구축 합의…규제 대신 '위기 관리'에 초점
 https://www.aitimes.com/news/articleView.html?idxno=215680
 
 오픈AI 에이전트, 미국 정부 사이트 뒤졌다…‘에이전트 스팸’도 확인
 https://www.aitimes.com/news/articleView.html?idxno=215679
-
-GPT-6 아스트라, 85년 난제 '에니그마' 암호 해독...도구·시뮬레이터 구현
-https://www.aitimes.com/news/articleView.html?idxno=215677
-
-말 못하는 AI '제브'가 실리콘밸리 흔들었다..."일주일 새 몸값 50배 뛰어"
-https://www.aitimes.com/news/articleView.html?idxno=215675
-
-머스크 "연말까지 콜로서스 2 GPU 두 배 증설"... 최대 121만개 달성
-https://www.aitimes.com/news/articleView.html?idxno=215674
-
-트럼프·미 하원의장, 빅테크 수장들과 29일 AI 안전 회의 예정
-https://www.aitimes.com/news/articleView.html?idxno=215673
-
-딥시크, 매출 두 달 만에 2배 껑충..."가격 인상에도 1.4조 달성"
-https://www.aitimes.com/news/articleView.html?idxno=215672
