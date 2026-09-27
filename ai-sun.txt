@@ -1,5 +1,8 @@
 🤖 26년 9월 27일 일요일 AI 뉴스
 
+미중 정상, AI 비상 핫라인 구축 합의…규제 대신 '위기 관리'에 초점
+https://www.aitimes.com/news/articleView.html?idxno=215680
+
 오픈AI 에이전트, 미국 정부 사이트까지 뒤졌다…‘에이전트 스팸’도 확인
 https://www.aitimes.com/news/articleView.html?idxno=215679
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215669
 
 미 항소법원 "국방부의 앤트로픽 배제 조치는 정당"
 https://www.aitimes.com/news/articleView.html?idxno=215668
-
-오픈AI, 'GPT-6 사이버' 공개 임박…API 넘어 '전용 배포' 선보인다
-https://www.aitimes.com/news/articleView.html?idxno=215667
