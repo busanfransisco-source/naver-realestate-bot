@@ -3,6 +3,9 @@
 오픈AI, 데브데이서 ‘상시 작동 에이전트’ 공개하나…‘o’ 포착
 https://www.aitimes.com/news/articleView.html?idxno=215684
 
+"제브보다 9배 빠르다"...스탠퍼드·엔비디아, 'CLM-8B'로 맞불
+https://www.aitimes.com/news/articleView.html?idxno=215683
+
 "기계의 낙원 속 인간성 지켜야"…교황 레오 14세, 프랑스서 AI 오남용 경고
 https://www.aitimes.com/news/articleView.html?idxno=215682
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215673
 
 딥시크, 매출 두 달 만에 2배 껑충..."가격 인상에도 1.4조 달성"
 https://www.aitimes.com/news/articleView.html?idxno=215672
-
-공쿠르상, 'AI 작성·표절 의혹' 소설 후보서 제외
-https://www.aitimes.com/news/articleView.html?idxno=215671
