@@ -1,5 +1,8 @@
 🤖 26년 9월 27일 일요일 AI 뉴스
 
+오픈AI 에이전트, 미국 정부 사이트까지 뒤졌다…‘에이전트 스팸’도 확인
+https://www.aitimes.com/news/articleView.html?idxno=215679
+
 말 못하는 AI '제브'가 실리콘밸리 흔들었다..."일주일 새 몸값 50배 뛰어"
 https://www.aitimes.com/news/articleView.html?idxno=215675
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215668
 
 오픈AI, 'GPT-6 사이버' 공개 임박…API 넘어 '전용 배포' 선보인다
 https://www.aitimes.com/news/articleView.html?idxno=215667
-
-메타, AI 에이전트 '뮤즈' 보안 취약점 발견…안전 경고 강화
-https://www.aitimes.com/news/articleView.html?idxno=215666
