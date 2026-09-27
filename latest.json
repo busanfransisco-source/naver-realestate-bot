@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-09-28 08:09:00",
+  "updated_at_kst": "2026-09-28 08:12:56",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 28일 월요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "신혼부부 대출잔액 중앙값, 8년새 2.3배 증가해 1.8억원",
+      "url": "https://n.news.naver.com/mnews/article/032/0003472752"
+    },
     {
       "title": "강남구, 제15회 아름다운 건축물 전시회 개최",
       "url": "https://n.news.naver.com/mnews/article/018/0006376108"
@@ -24,7 +28,7 @@
       "url": "https://n.news.naver.com/mnews/article/014/0005581328"
     },
     {
-      "title": "17개 시·도 중 16곳 공실 늘었다…공실률 13.36% ‘최근 5년 최고’",
+      "title": "상가 8곳 중 1곳 비었다…공실률 2021년 이후 최고",
       "url": "https://n.news.naver.com/mnews/article/666/0000125074"
     },
     {
@@ -38,10 +42,6 @@
     {
       "title": "“상가 8곳 중 1곳은 썰렁”…공실률 13.36% ‘5년 새 최고’",
       "url": "https://n.news.naver.com/mnews/article/029/0003050072"
-    },
-    {
-      "title": "“다음달에 공실 하나 또 늘어나네요”…고금리 겹치자 경매 쏟아지는 서울 상가",
-      "url": "https://n.news.naver.com/mnews/article/009/0005740505"
     }
   ]
 }
