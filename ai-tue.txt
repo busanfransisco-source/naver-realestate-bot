@@ -1,5 +1,8 @@
 🤖 26년 9월 29일 화요일 AI 뉴스
 
+앤트로픽, '클로드 소네트 5.5' 공개…오퍼스급 지능에 최강 가성비
+https://www.aitimes.com/news/articleView.html?idxno=215734
+
 과기부, 국대 AI 중단설 일축..."현 구조로는 프런티어 역부족" 지적도
 https://www.aitimes.com/news/articleView.html?idxno=215733
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215723
 
 중국, 미국 제치고 최상위 AI 인재 1위…한국은 자국 잔류율 77%로 2위
 https://www.aitimes.com/news/articleView.html?idxno=215722
-
-셀렉트스타, EMNLP서 AI 신뢰성 연구 5편 채택
-https://www.aitimes.com/news/articleView.html?idxno=215721
