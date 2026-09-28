@@ -1,31 +1,31 @@
 🤖 26년 9월 28일 월요일 AI 뉴스
 
-'AI 칩 부족' 중국, 엔비디아 PC용 GPU 구매 허용하나
-https://www.aitimes.com/news/articleView.html?idxno=215701
+중국, 미국 제치고 최상위 AI 인재 1위…한국은 자국 잔류율 77%로 2위
+https://www.aitimes.com/news/articleView.html?idxno=215722
 
-앤트로픽, '클로드 소네트 5.5' 출시 임박...오픈AI '데브데이' 견제하나
-https://www.aitimes.com/news/articleView.html?idxno=215700
+셀렉트스타, EMNLP서 AI 신뢰성 연구 5편 채택
+https://www.aitimes.com/news/articleView.html?idxno=215721
 
-트럼프, 아모데이와 백악관 첫 일대일 만찬 개최
-https://www.aitimes.com/news/articleView.html?idxno=215694
+'정부망 침투' 여파…호주 상원, 오픈AI·앤트로픽 CEO 소환
+https://www.aitimes.com/news/articleView.html?idxno=215720
 
-GPT-6 아스트라, 물리적 명령에 잇따라 치명적 행위 실행
-https://www.aitimes.com/news/articleView.html?idxno=215692
+오픈AI "챗GPT 아이폰 통합 실적 저조"…법원서 파트너십 균열 드러나
+https://www.aitimes.com/news/articleView.html?idxno=215718
 
-스모어톡, 신한은행에 숏폼 영상 AI 공급…금융권 유스케이스 첫 확보
-https://www.aitimes.com/news/articleView.html?idxno=215687
+포지큐브, 하나은행에 AI 에이전트 서비스 구축..."금융 AX 가속"
+https://www.aitimes.com/news/articleView.html?idxno=215713
 
-KT, AI 모델 라우팅 기술로 글로벌 2위…“기업 AX 지원”
-https://www.aitimes.com/news/articleView.html?idxno=215686
+마키나락스, 'AI 참모' 군 지휘통제체계 적용...을지연습서 실증 나서
+https://www.aitimes.com/news/articleView.html?idxno=215711
 
-앤트로픽, 클로드 플러그인 개발 포털 공개...제출·검토·분석 통합 지원
-https://www.aitimes.com/news/articleView.html?idxno=215685
+메타, 스마트폰으로 AI 게임 만드는 '호라이즌 크리에이트' 공개
+https://www.aitimes.com/news/articleView.html?idxno=215710
 
-오픈AI, 데브데이서 ‘상시 작동 에이전트’ 공개하나…‘o’ 포착
-https://www.aitimes.com/news/articleView.html?idxno=215684
+카카오, CA협의체 공동 의장에 김도영 카카오X 대표 내정자 확정
+https://www.aitimes.com/news/articleView.html?idxno=215709
 
-"제브보다 9배 빠르다"...스탠퍼드·엔비디아, 'CLM-8B'로 맞불
-https://www.aitimes.com/news/articleView.html?idxno=215683
+스캐터랩, 캐릭터챗 '제타' 신규 기능 출시..."대화 따라 표정·배경 바뀐다"
+https://www.aitimes.com/news/articleView.html?idxno=215708
 
-"기계의 낙원 속 인간성 지켜야"…교황 레오 14세, 프랑스서 AI 오남용 경고
-https://www.aitimes.com/news/articleView.html?idxno=215682
+오픈AI 에이전트, 유엔 데이터 차단막 우회…'무차별 스캔' 포착
+https://www.aitimes.com/news/articleView.html?idxno=215706
