@@ -1,5 +1,20 @@
 🤖 26년 9월 28일 월요일 AI 뉴스
 
+미국·러시아, 유엔 AI 무기 협약서 '인간 감독' 안전장치 삭제
+https://www.aitimes.com/news/articleView.html?idxno=215728
+
+리퀴드 AI, '추측적 디코딩'으로 VLM 추론 3배 가속
+https://www.aitimes.com/news/articleView.html?idxno=215727
+
+AI 불안 확산에 '인간 과학자 vs AI' 연구 맞대결서 '협력'으로 선회
+https://www.aitimes.com/news/articleView.html?idxno=215726
+
+우크라이나, '로봇 군단' 발족...드론 이어 지상 전장 무인화 박차
+https://www.aitimes.com/news/articleView.html?idxno=215725
+
+"GPU인 줄 알고 훔쳤는데 모래만 18톤"...엔비디아 로고 트럭 절도 해프닝
+https://www.aitimes.com/news/articleView.html?idxno=215723
+
 중국, 미국 제치고 최상위 AI 인재 1위…한국은 자국 잔류율 77%로 2위
 https://www.aitimes.com/news/articleView.html?idxno=215722
 
@@ -12,20 +27,5 @@ https://www.aitimes.com/news/articleView.html?idxno=215720
 오픈AI "챗GPT 아이폰 통합 실적 저조"…법원서 파트너십 균열 드러나
 https://www.aitimes.com/news/articleView.html?idxno=215718
 
-포지큐브, 하나은행에 AI 에이전트 서비스 구축..."금융 AX 가속"
-https://www.aitimes.com/news/articleView.html?idxno=215713
-
-마키나락스, 'AI 참모' 군 지휘통제체계 적용...을지연습서 실증 나서
-https://www.aitimes.com/news/articleView.html?idxno=215711
-
-메타, 스마트폰으로 AI 게임 만드는 '호라이즌 크리에이트' 공개
-https://www.aitimes.com/news/articleView.html?idxno=215710
-
-카카오, CA협의체 공동 의장에 김도영 카카오X 대표 내정자 확정
-https://www.aitimes.com/news/articleView.html?idxno=215709
-
-스캐터랩, 캐릭터챗 '제타' 신규 기능 출시..."대화 따라 표정·배경 바뀐다"
-https://www.aitimes.com/news/articleView.html?idxno=215708
-
-오픈AI 에이전트, 유엔 데이터 차단막 우회…'무차별 스캔' 포착
-https://www.aitimes.com/news/articleView.html?idxno=215706
+빌 게이츠 "트럼프의 AI 안전장치 거부는 착오...중국도 규제 동참할 것"
+https://www.aitimes.com/news/articleView.html?idxno=215717
