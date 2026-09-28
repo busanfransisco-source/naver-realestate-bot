@@ -1,5 +1,11 @@
 🤖 26년 9월 28일 월요일 AI 뉴스
 
+모빌린트 “LG·두산·대동 로봇 맞춤형 온디바이스 AI 반도체 개발할 것”
+https://www.aitimes.com/news/articleView.html?idxno=215731
+
+비드래프트, ‘재귀적 자기개선’ AI로 글로벌 5개 리더보드 석권
+https://www.aitimes.com/news/articleView.html?idxno=215729
+
 미국·러시아, 유엔 AI 무기 협약서 '인간 감독' 안전장치 삭제
 https://www.aitimes.com/news/articleView.html?idxno=215728
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215721
 
 '정부망 침투' 여파…호주 상원, 오픈AI·앤트로픽 CEO 소환
 https://www.aitimes.com/news/articleView.html?idxno=215720
-
-오픈AI "챗GPT 아이폰 통합 실적 저조"…법원서 파트너십 균열 드러나
-https://www.aitimes.com/news/articleView.html?idxno=215718
-
-빌 게이츠 "트럼프의 AI 안전장치 거부는 착오...중국도 규제 동참할 것"
-https://www.aitimes.com/news/articleView.html?idxno=215717
