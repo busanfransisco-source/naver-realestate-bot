@@ -1,5 +1,11 @@
 🤖 26년 9월 28일 월요일 AI 뉴스
 
+'AI 칩 부족' 중국, 엔비디아 PC용 GPU 구매 허용하나
+https://www.aitimes.com/news/articleView.html?idxno=215701
+
+앤트로픽, '클로드 소네트 5.5' 출시 임박...오픈AI '데브데이' 견제하나
+https://www.aitimes.com/news/articleView.html?idxno=215700
+
 트럼프, 아모데이와 백악관 첫 일대일 만찬 개최
 https://www.aitimes.com/news/articleView.html?idxno=215694
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215683
 
 "기계의 낙원 속 인간성 지켜야"…교황 레오 14세, 프랑스서 AI 오남용 경고
 https://www.aitimes.com/news/articleView.html?idxno=215682
-
-오픈AI, 500달러 ‘프로 맥스’ 요금제 출시하나…‘워크·코덱스’ 고속 처리
-https://www.aitimes.com/news/articleView.html?idxno=215681
-
-미중 정상, AI 비상 핫라인 구축 합의…규제 대신 '위기 관리'에 초점
-https://www.aitimes.com/news/articleView.html?idxno=215680
