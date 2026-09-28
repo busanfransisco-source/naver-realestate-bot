@@ -1,5 +1,8 @@
 🤖 26년 9월 28일 월요일 AI 뉴스
 
+과기부, 국대 AI 중단설 일축..."현 구조로는 프런티어 역부족" 지적도
+https://www.aitimes.com/news/articleView.html?idxno=215733
+
 모빌린트 “LG·두산·대동 로봇 맞춤형 온디바이스 AI 반도체 개발할 것”
 https://www.aitimes.com/news/articleView.html?idxno=215731
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215722
 
 셀렉트스타, EMNLP서 AI 신뢰성 연구 5편 채택
 https://www.aitimes.com/news/articleView.html?idxno=215721
-
-'정부망 침투' 여파…호주 상원, 오픈AI·앤트로픽 CEO 소환
-https://www.aitimes.com/news/articleView.html?idxno=215720
