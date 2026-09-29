@@ -1,5 +1,8 @@
 🤖 26년 9월 30일 수요일 AI 뉴스
 
+"아스트라급 지능을 5분의 1 가격에"…오픈AI, 'GPT-6.1 솔' 공개
+https://www.aitimes.com/news/articleView.html?idxno=215778
+
 알트먼·아모데이, 호주 의회 AI 청문회 불참...오픈AI는 CSO 파견
 https://www.aitimes.com/news/articleView.html?idxno=215771
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215762
 
 "한도 차면 할인 끝" 앤트로픽…오픈AI는 '파격 할인'으로 고객 빼앗기
 https://www.aitimes.com/news/articleView.html?idxno=215761
-
-카카오, AI안전연구소와 AI 안전성 평가 도구 개발
-https://www.aitimes.com/news/articleView.html?idxno=215760
