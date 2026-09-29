@@ -1,5 +1,8 @@
 🤖 26년 9월 29일 화요일 AI 뉴스
 
+AMD, 페이페이 리의 월드랩스 11조 인수…'월드 모델'로 엔비디아 추격
+https://www.aitimes.com/news/articleView.html?idxno=215738
+
 앤트로픽, '클로드 소네트 5.5' 공개…오퍼스급 지능에 최강 가성비
 https://www.aitimes.com/news/articleView.html?idxno=215734
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215725
 
 "GPU인 줄 알고 훔쳤는데 모래만 18톤"...엔비디아 로고 트럭 절도 해프닝
 https://www.aitimes.com/news/articleView.html?idxno=215723
-
-중국, 미국 제치고 최상위 AI 인재 1위…한국은 자국 잔류율 77%로 2위
-https://www.aitimes.com/news/articleView.html?idxno=215722
