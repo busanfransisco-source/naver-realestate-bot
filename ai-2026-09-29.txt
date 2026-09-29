@@ -1,31 +1,31 @@
 🤖 26년 9월 29일 화요일 AI 뉴스
 
+알트먼·아모데이, 호주 의회 AI 청문회 불참...오픈AI는 CSO 파견
+https://www.aitimes.com/news/articleView.html?idxno=215771
+
+플로리다주, 오픈AI '안전장치 없는' 신규 모델 개발 금지 가처분 신청
+https://www.aitimes.com/news/articleView.html?idxno=215769
+
+‘소비자용 에이전트’ 인스팅트, 한 달 만에 기업가치 4배 폭등
+https://www.aitimes.com/news/articleView.html?idxno=215768
+
+마누스, '2.0 버전'·'큐' 공개...전문 작업·일상 업무로 영역 확장
+https://www.aitimes.com/news/articleView.html?idxno=215767
+
+과기부, AI중심대학 18개교·AX대학원 15개교 출범
+https://www.aitimes.com/news/articleView.html?idxno=215766
+
+테슬라 차세대 '로드스터' 공개 행사, 기상 악화로 10월15일 연기
+https://www.aitimes.com/news/articleView.html?idxno=215765
+
+"이족보행 대신 휠 선택"...뉴빌리티, 제조·물류 로봇 '빌리' 공개
+https://www.aitimes.com/news/articleView.html?idxno=215763
+
+일레븐랩스, 감정 표현·지연 시간 혁신한 '일레븐 v4' 공개…TTS 아레나 1위
+https://www.aitimes.com/news/articleView.html?idxno=215762
+
+카카오, AI안전연구소와 AI 안전성 평가 도구 개발
+https://www.aitimes.com/news/articleView.html?idxno=215760
+
 교황 "AI 멸망론, 가짜 뉴스 아니다"...트럼프 입장과 대립각
 https://www.aitimes.com/news/articleView.html?idxno=215757
-
-삼성 6개사, 미국 AI 인프라 기업 헬릭스에 1.4조 투자
-https://www.aitimes.com/news/articleView.html?idxno=215753
-
-스페이스X, 스타십 최초 궤도 진입 성공… '우주 데이터센터' 구축 발판
-https://www.aitimes.com/news/articleView.html?idxno=215752
-
-오픈AI, 안전 문제로 'GPT-6.1 아스트라' 출시 철회..."기만·무단 접근"
-https://www.aitimes.com/news/articleView.html?idxno=215751
-
-오픈AI, 데브데이서 신제품 20개 예고...'상시 작동 에이전트' 주목
-https://www.aitimes.com/news/articleView.html?idxno=215750
-
-"STT 오류 복원부터 추론 효율화까지"...롯데이노베이트·아크릴, EMNLP 논문 채택
-https://www.aitimes.com/news/articleView.html?idxno=215748
-
-"RSI 통제력 잃기 전에 규제해야"...세계 최고 AI 연구자 20인 공동 경고
-https://www.aitimes.com/news/articleView.html?idxno=215741
-
-엔비디아, 에이전트 '보안 플랫폼' 공개..."허깅페이스 사태 막을 수 있어"
-https://www.aitimes.com/news/articleView.html?idxno=215739
-
-AMD, 페이페이 리의 월드랩스 11조 인수…'월드 모델'로 엔비디아 추격
-https://www.aitimes.com/news/articleView.html?idxno=215738
-
-아부다비, 2035년 태양광 35GW 이상으로 확대…배터리 최대 15GW 구축
-https://www.aitimes.com/news/articleView.html?idxno=215737
