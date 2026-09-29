@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-09-29 11:05:29",
+  "updated_at_kst": "2026-09-29 11:10:12",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 29일 화요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "“유모차 끌고 육교를?”…반포천 새 다리에 주민들 뿔났다",
+      "url": "https://n.news.naver.com/mnews/article/009/0005741223"
+    },
+    {
+      "title": "[데스크칼럼] ‘강남불패’보다 무서운 중저가 아파트 상승",
+      "url": "https://n.news.naver.com/mnews/article/016/0002703037"
+    },
     {
       "title": "철도 차량정리 안전 강화…외부 탑승 최소화·첨단기술 활용",
       "url": "https://n.news.naver.com/mnews/article/018/0006376904"
@@ -34,14 +42,6 @@
     {
       "title": "“땅 밑에 가스관 있을까?” 주소만 입력하면 쉽게 찾는다",
       "url": "https://n.news.naver.com/mnews/article/016/0002703030"
-    },
-    {
-      "title": "굴착 전 주소만 입력하면 지하시설물 확인...30일부터 간편 조회",
-      "url": "https://n.news.naver.com/mnews/article/014/0005582167"
-    },
-    {
-      "title": "‘앗, 여기 아니네’ 고속도로 출구 착각 15분 내 진입 시 요금 감면",
-      "url": "https://n.news.naver.com/mnews/article/016/0002703029"
     }
   ]
 }
