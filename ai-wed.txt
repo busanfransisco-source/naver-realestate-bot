@@ -1,5 +1,8 @@
 🤖 26년 9월 30일 수요일 AI 뉴스
 
+오픈AI, 24시간 자율 에이전트 '닷츠' 공개…소비자용 아닌 B2B 승부수
+https://www.aitimes.com/news/articleView.html?idxno=215779
+
 "아스트라급 지능을 5분의 1 가격에"…오픈AI, 'GPT-6.1 솔' 공개
 https://www.aitimes.com/news/articleView.html?idxno=215778
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215763
 
 일레븐랩스, 감정 표현·지연 시간 혁신한 '일레븐 v4' 공개…TTS 아레나 1위
 https://www.aitimes.com/news/articleView.html?idxno=215762
-
-"한도 차면 할인 끝" 앤트로픽…오픈AI는 '파격 할인'으로 고객 빼앗기
-https://www.aitimes.com/news/articleView.html?idxno=215761
