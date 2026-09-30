@@ -6,10 +6,21 @@ from apt_today_closings_fetch import (
     build_digest,
     decode_next_payloads,
     extract_json_object,
+    format_transaction,
 )
 
 
 class AptTodayClosingsTests(unittest.TestCase):
+    def test_fallback_estimates_pyeong_type_only_when_source_supply_is_missing(self):
+        transaction = {
+            "danjiName": "전용59", "amount": 280000, "exclusiveArea": 59.97,
+            "type": {}, "sido": {"shortName": "서울"},
+            "sigungu": {"name": "강남구", "shortName": "강남"},
+        }
+        self.assertIn("전용59 약26평형 28억", format_transaction(transaction))
+        transaction["type"] = {"supplyPY": 27}
+        self.assertIn("전용59 27평형 28억", format_transaction(transaction))
+
     def test_decodes_next_payload_and_extracts_today_summary(self):
         summary = {
             "since": "2026-09-13T15:00:00.000Z",

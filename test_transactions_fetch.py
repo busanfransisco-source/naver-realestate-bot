@@ -20,6 +20,7 @@ from realestate_transactions_fetch import (
     api_months,
     STATE_VERSION,
 )
+from transaction_area_format import approximate_pyeong_type
 
 
 class TransactionDigestTests(unittest.TestCase):
@@ -120,9 +121,27 @@ class TransactionDigestTests(unittest.TestCase):
         self.assertIn("💎 1억클럽 1건", text)
         self.assertIn("\n\n[1억 클럽]\n", text)
         self.assertIn("평당일억신고가", text)
-        self.assertIn("신고가🚀 1.1억/평", text)
-        self.assertEqual(format_per_pyeong(10000), "1억/평")
+        self.assertIn("신고가🚀 1.1억/전용평", text)
+        self.assertEqual(format_per_pyeong(10000), "1억/전용평")
         self.assertNotIn("\n\n[주요 신고가]\n", text)
+
+    def test_requested_pyeong_type_applies_to_all_sizes_without_changing_club_basis(self):
+        self.assertEqual(approximate_pyeong_type(59), 26)
+        self.assertEqual(approximate_pyeong_type(59.97), 26)
+        self.assertEqual(approximate_pyeong_type(84), 34)
+        self.assertEqual(approximate_pyeong_type(84.99), 34)
+        self.assertEqual(approximate_pyeong_type(49), 22)
+        self.assertEqual(approximate_pyeong_type(114), 44)
+        rows = [
+            self.sample(area=59.97, building_name="59형", deal_amount=280000,
+                        price_per_pyeong=15435, is_record=True),
+            self.sample(area=84.99, building_name="84형", deal_amount=170000,
+                        price_per_pyeong=6612, is_record=True),
+        ]
+        text = build_digest(date(2026, 9, 30), rows)
+        self.assertIn("59형 약26평형 28억 신고가🚀 1.54억/전용평", text)
+        self.assertIn("84형 약34평형 17억 신고가 6.6천/전용평", text)
+        self.assertIn("🚀 1억클럽 신고가 1건", text)
 
     def test_every_nationwide_record_high_is_listed(self):
         rows = [

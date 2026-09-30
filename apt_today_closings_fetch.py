@@ -10,6 +10,7 @@ import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+from transaction_area_format import approximate_pyeong_type
 from transaction_region_order import population_order_key, region_heading
 
 
@@ -150,9 +151,12 @@ def district_label(transaction):
 
 def format_transaction(transaction):
     supply_pyeong = (transaction.get("type") or {}).get("supplyPY")
-    if not supply_pyeong:
+    if supply_pyeong:
+        area_label = f"{supply_pyeong}평형"
+    else:
         area = float(transaction.get("exclusiveArea") or 0)
-        supply_pyeong = round(area / 3.3058) if area else 0
+        supply_pyeong = approximate_pyeong_type(area)
+        area_label = f"약{supply_pyeong}평형" if supply_pyeong else "면적 확인 중"
     marker = ""
     if transaction.get("isPYAllTimeHigh"):
         marker = " 신고가"
@@ -160,7 +164,7 @@ def format_transaction(transaction):
         marker = " 타입 신고가⭐"
     return (
         f"{district_label(transaction):<7} "
-        f"{transaction.get('danjiName', '')} {supply_pyeong}평 "
+        f"{transaction.get('danjiName', '')} {area_label} "
         f"{format_eok(transaction.get('amount'))}{marker} "
         f"{format_per_pyeong(transaction.get('amount'), supply_pyeong)}"
     )

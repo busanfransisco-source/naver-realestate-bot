@@ -25,6 +25,7 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 from transaction_region_order import population_order_key, region_heading
+from transaction_area_format import approximate_pyeong_type
 
 
 KST = timezone(timedelta(hours=9))
@@ -427,15 +428,16 @@ def format_per_pyeong(value):
     value = int(value or 0)
     if value >= ONE_EOK_PER_PYEONG:
         text = f"{value / ONE_EOK_PER_PYEONG:.2f}".rstrip("0").rstrip(".")
-        return f"{text}억/평"
+        return f"{text}억/전용평"
     if value >= 1000:
         text = f"{value / 1000:.1f}".rstrip("0").rstrip(".")
-        return f"{text}천/평"
-    return f"{value:,}만/평"
+        return f"{text}천/전용평"
+    return f"{value:,}만/전용평"
 
 
 def format_transaction(row):
-    area_pyeong = round(float(row.get("area") or 0) / 3.3058)
+    area_pyeong = approximate_pyeong_type(row.get("area"))
+    area_label = f"약{area_pyeong}평형" if area_pyeong else "면적 확인 중"
     is_one_eok_club = int(row.get("price_per_pyeong") or 0) >= ONE_EOK_PER_PYEONG
     if row.get("is_record"):
         record = " 신고가🚀" if is_one_eok_club else " 신고가"
@@ -443,7 +445,7 @@ def format_transaction(row):
         record = ""
     return (
         f"{district_name(row):<6}  {row.get('building_name', '')} "
-        f"{area_pyeong}평 {format_eok(row.get('deal_amount'))}{record} "
+        f"{area_label} {format_eok(row.get('deal_amount'))}{record} "
         f"{format_per_pyeong(row.get('price_per_pyeong'))}"
     )
 
@@ -474,6 +476,7 @@ def build_digest(today, records):
         f"분양권/입주권 {presale_count:,}건",
         f"🚀 1억클럽 신고가 {len(one_eok_record_highs):,}건",
         f"💎 1억클럽 {len(one_eok_regular):,}건",
+        "※ 평형은 전용면적 기반 통상형 추정치(59㎡≈26평형, 84㎡≈34평형), 평당가는 전용면적 기준",
     ]
     if not records:
         lines.extend(["", "전날 저장본과 비교해 새로 추가된 거래가 없습니다."])
