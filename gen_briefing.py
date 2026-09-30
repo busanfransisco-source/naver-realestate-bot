@@ -268,26 +268,37 @@ def build_html():
     build_date = now.strftime("%Y-%m-%d")
 
     section_blocks = []
-    rendered_sections = []
+    core_sections = []
     for key, label, fname_prefix in SECTIONS:
         content = read_section_text(fname_prefix, weekday_en)
         if key.startswith("analysis"):
             content = read_policy_text(fname_prefix, now)
-        rendered_sections.append((key, label, content))
-    rendered_sections.extend(build_rotating_sections(now.date()))
-    # 기존 자동발송 번호(1~24)와 실거래 25번은 그대로 유지한다.
-    rendered_sections.append(
-        ("transactions", "🏢 전국 신규 등록 실거래가", read_section_text("transactions", weekday_en))
+        core_sections.append((key, label, content))
+    # 화면 순서와 자동공유기가 읽는 박스 번호를 1~26으로 일치시킨다.
+    rendered_sections = [
+        (number, key, label, content)
+        for number, (key, label, content) in enumerate(core_sections[:12], start=1)
+    ]
+    rendered_sections.extend(
+        (number, key, label, content)
+        for number, (key, label, content) in enumerate(build_rotating_sections(now.date()), start=13)
     )
-    # 신규 정책분석은 기존 번호를 밀지 않도록 26번에 독립 추가한다.
+    rendered_sections.append(
+        (19, "transactions", "🏢 전국 신규 등록 실거래가", read_section_text("transactions", weekday_en))
+    )
+    rendered_sections.extend(
+        (number, key, label, content)
+        for number, (key, label, content) in enumerate(core_sections[12:], start=20)
+    )
     rendered_sections.append(
         (
+            26,
             "analysis7",
             "📰 부동산 불장의 진실 정책분석",
             read_policy_text("analysis7", now),
         )
     )
-    for number, (key, label, content) in enumerate(rendered_sections, start=1):
+    for number, key, label, content in rendered_sections:
         content_json = json.dumps(content, ensure_ascii=False)
         content_escaped = html.escape(content)
         section_blocks.append(f"""

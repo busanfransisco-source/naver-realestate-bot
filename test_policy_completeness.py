@@ -8,18 +8,6 @@ from validate_policy import validate
 
 
 class PolicyTests(unittest.TestCase):
-    def test_analysis7_template_keeps_required_market_breadth_sections(self):
-        template = Path('templates/analysis7-template.txt').read_text(encoding='utf-8')
-        for heading in (
-            '불장으로 보이는 숫자',
-            '실제로 번진 범위',
-            '정책이 움직인 힘',
-            '반대편 신호',
-            '오늘의 판정',
-            '다음 확인 숫자:',
-        ):
-            self.assertIn(heading, template)
-
     def test_blank_lines_and_invalid_date(self):
         self.assertTrue(is_fresh_analysis('제목\n\n2026년 9월 12일 토요일', datetime(2026, 9, 12)))
         self.assertIsNone(analysis_date('제목\n2026-99-99'))

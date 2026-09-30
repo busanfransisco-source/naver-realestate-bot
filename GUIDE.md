@@ -4,13 +4,12 @@
 
 브리핑 페이지: https://busanfransisco-source.github.io/naver-realestate-bot/briefing.html
 
-## 26번 정책분석 작성
+## 정책분석 박스
 
 - 박스명: `부동산 불장의 진실 정책분석`
-- 작성 포맷: `POLICY_ANALYSIS7_FORMAT.md`
-- 복사용 원고 틀: `templates/analysis7-template.txt`
-- 당일 파일명: `analysis7-{요일}.txt`
-- 당일 원고가 없으면 사이트에는 준비 중 문구가 표시된다.
+- 화면과 자동공유기 번호를 일치시킨다: 기본 1~12번, 일반 콘텐츠 13~18번, 실거래가 19번, 정책분석 20~26번.
+- 26번은 선정한 뉴스 한 건을 원문·공식 자료로 검증해 심층 해석한다. 선정·원고 기준: `POLICY_ANALYSIS7_FORMAT.md`.
+- 원고가 없으면 사이트에는 준비 중 문구가 표시된다.
 
 ## 작동 방식 (2026-07-24 기준)
 

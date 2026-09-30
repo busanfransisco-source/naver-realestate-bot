@@ -547,10 +547,12 @@ function buildBriefingHtml_(now, sections) {
     ["fortune", "1. 🔮 오늘의 운세"], ["weather", "2. ☀️ 날씨"], ["shortnews", "3. ⚡ 오늘의 퀵뉴스"],
     ["subs", "4. 🏗️ 청약 소식"], ["trend", "5. 📈 부동산 주간 시세동향"], ["fuelfx", "6. ⛽ 기름값·환율"],
     ["metalcoin", "7. 🥇 금·은·코인"], ["books", "8. 📚 주간 베스트셀러"], ["realestate", "9. 🏠 부동산 뉴스"],
-    ["world", "10. 🌏 세계 뉴스"], ["finance", "11. 🏦 금융 뉴스"], ["ai", "12. 🤖 AI 뉴스"],
-    ["analysis3", "13. 📰 엘리트 정책분석"], ["analysis4", "14. 📰 여러분의 부동산 정책분석"],
-    ["analysis5", "15. 📰 월부길 정책분석"], ["analysis2", "16. 📰 부알남 정책분석"],
-    ["analysis6", "17. 📰 부부투 정책분석"], ["analysis1", "18. 📰 비밀노트 정책 분석"]
+    ["world", "10. 🌏 세계 뉴스"], ["finance", "11. 🏦 금융 뉴스"], ["ai", "12. 🤖 AI 뉴스"]
+  ];
+  var policyOrder = [
+    ["analysis3", "20. 📰 엘리트 정책분석"], ["analysis4", "21. 📰 여러분의 부동산 정책분석"],
+    ["analysis5", "22. 📰 월부길 정책분석"], ["analysis2", "23. 📰 부알남 정책분석"],
+    ["analysis6", "24. 📰 부부투 정책분석"], ["analysis1", "25. 📰 비밀노트 정책 분석"]
   ];
 
   // Same library and date arithmetic as daily_rotation.py; no browser-side shuffle.
@@ -562,11 +564,12 @@ function buildBriefingHtml_(now, sections) {
     var entry = topic.entries[elapsed % topic.entries.length];
     var key = "daily" + (19 + slot);
     sections[key] = [topic.label, now.getUTCFullYear() + "년 " + (now.getUTCMonth() + 1) + "월 " + now.getUTCDate() + "일"].concat(entry).join("\n\n");
-    order.push([key, (19 + slot) + ". 부동산 컨텐츠 " + (slot + 1)]);
+    order.push([key, (13 + slot) + ". 부동산 컨텐츠 " + (slot + 1)]);
   }
 
-  // Python 주 파이프라인과 번호를 맞춘다. 기존 1~25번은 절대 밀지 않는다.
-  order.push(["transactions", "25. 🏢 전국 신규 등록 실거래가"]);
+  // Python 주 파이프라인과 동일하게 화면 순서와 실제 번호를 일치시킨다.
+  order.push(["transactions", "19. 🏢 전국 신규 등록 실거래가"]);
+  Array.prototype.push.apply(order, policyOrder);
   order.push(["analysis7", "26. 📰 부동산 불장의 진실 정책분석"]);
 
   var blocks = order.map(function (pair) {
