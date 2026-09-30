@@ -1,31 +1,31 @@
 🤖 26년 9월 30일 수요일 AI 뉴스
 
-딥시크, 화웨이 '어센드'용 핵심 소프트웨어 공개… ‘탈엔비디아’ 동맹 가속
-https://www.aitimes.com/news/articleView.html?idxno=215798
+리사 수 AMD CEO, 10월8일 방한…국내 NPU 기업과 인프라 협력 구체화
+https://www.aitimes.com/news/articleView.html?idxno=215815
 
-'스마트 링' 오우라, 시장 불확실성에 IPO 연기
-https://www.aitimes.com/news/articleView.html?idxno=215797
+NYT "오픈AI, 직원·외부 연구원 AI 보안 경고 묵살"
+https://www.aitimes.com/news/articleView.html?idxno=215814
 
-메타, 소상공인용 AI 에이전트 출시…‘뮤즈’로 B2B 시장 확대
-https://www.aitimes.com/news/articleView.html?idxno=215792
+교황 레오 14세, 젠슨 황 공개 비판..."AI 위험성 경고 경시해선 안 돼"
+https://www.aitimes.com/news/articleView.html?idxno=215813
 
-트럼프, 빅테크 대거 소집해 '규제 불가' 재확인…업계 자발적 서약에 그쳐
-https://www.aitimes.com/news/articleView.html?idxno=215791
+구글, AI 답변 기여도에 따라 디지털 출판사 100여곳에 비용 지급
+https://www.aitimes.com/news/articleView.html?idxno=215811
 
-앤트로픽, IPO 신청서에 "AI의 실존적 위험" 공식 경고
-https://www.aitimes.com/news/articleView.html?idxno=215790
+AIIA, 국내 AI 기업 발굴·성장 지원 위해 한국평가데이터와 협력
+https://www.aitimes.com/news/articleView.html?idxno=215809
 
-오픈AI 추가 투자 유치 목표는 '1900조 가치'...연 매출은 95조 육박
-https://www.aitimes.com/news/articleView.html?idxno=215788
+알리바바, 대화 타이밍까지 판단하는 음성 AI ‘큐원-오디오-3.1-리얼타임’ 공개
+https://www.aitimes.com/news/articleView.html?idxno=215808
 
-알트먼 "기업공개 압박 없이 AI 안전 확보가 우선"
-https://www.aitimes.com/news/articleView.html?idxno=215787
+AWS, 서울 리전서 최신 '클로드' 모델 제공..."데이터 국경 안 넘는다"
+https://www.aitimes.com/news/articleView.html?idxno=215807
 
-스페인 연구진, 태양광발전소 맹금류 행동 추적…사냥·휴식 공간 활용
-https://www.aitimes.com/news/articleView.html?idxno=215785
+S2W, 온톨로지 기반 기술 고도화…’엔터프라이즈 AX’ 공략 가속
+https://www.aitimes.com/news/articleView.html?idxno=215806
 
-인도 양면형 태양광, 단면형보다 발전량 최대 27.1% 증가
-https://www.aitimes.com/news/articleView.html?idxno=215784
+구글·MS, AI 데이터 표준 '아파치 오시' 합류…'폐쇄 생태계' 연다
+https://www.aitimes.com/news/articleView.html?idxno=215803
 
-오픈AI, 24시간 자율 에이전트 '닷츠' 공개…소비자용 아닌 B2B 승부수
-https://www.aitimes.com/news/articleView.html?idxno=215779
+카카오, 'AI 국민비서'로 국민연금 조회·신청까지 확대
+https://www.aitimes.com/news/articleView.html?idxno=215800
