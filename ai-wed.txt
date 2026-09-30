@@ -1,10 +1,19 @@
 🤖 26년 9월 30일 수요일 AI 뉴스
 
+스페인 연구진, 태양광발전소 맹금류 행동 추적…사냥·휴식 공간 활용
+https://www.aitimes.com/news/articleView.html?idxno=215785
+
+인도 양면형 태양광, 단면형보다 발전량 최대 27.1% 증가
+https://www.aitimes.com/news/articleView.html?idxno=215784
+
 오픈AI, 24시간 자율 에이전트 '닷츠' 공개…소비자용 아닌 B2B 승부수
 https://www.aitimes.com/news/articleView.html?idxno=215779
 
 "아스트라급 지능을 5분의 1 가격에"…오픈AI, 'GPT-6.1 솔' 공개
 https://www.aitimes.com/news/articleView.html?idxno=215778
+
+이 대통령이 꺼낸 ‘태양광 농사’…패널 아래서도 쌀농사 될까
+https://www.aitimes.com/news/articleView.html?idxno=215774
 
 알트먼·아모데이, 호주 의회 AI 청문회 불참...오픈AI는 CSO 파견
 https://www.aitimes.com/news/articleView.html?idxno=215771
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215767
 
 과기부, AI중심대학 18개교·AX대학원 15개교 출범
 https://www.aitimes.com/news/articleView.html?idxno=215766
-
-테슬라 차세대 '로드스터' 공개 행사, 기상 악화로 10월15일 연기
-https://www.aitimes.com/news/articleView.html?idxno=215765
-
-"이족보행 대신 휠 선택"...뉴빌리티, 제조·물류 로봇 '빌리' 공개
-https://www.aitimes.com/news/articleView.html?idxno=215763
-
-일레븐랩스, 감정 표현·지연 시간 혁신한 '일레븐 v4' 공개…TTS 아레나 1위
-https://www.aitimes.com/news/articleView.html?idxno=215762
