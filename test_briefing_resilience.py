@@ -4,12 +4,50 @@ import tempfile
 import unittest
 from unittest import mock
 import json
+from datetime import date
 
 import gen_briefing
 import market_fetch
 
 
 class BriefingResilienceTests(unittest.TestCase):
+    def test_transactions_reject_stale_weekday_and_show_today_pending(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            previous = os.getcwd()
+            os.chdir(tmp)
+            try:
+                Path("transactions-thu.txt").write_text(
+                    "9/24(목) 신규 등록 실거래가\n\n전국 1,736건", encoding="utf-8"
+                )
+                Path("transactions.txt").write_text(
+                    "9/30(수) 신규 등록 실거래가\n\n전국 1,748건", encoding="utf-8"
+                )
+                content = gen_briefing.read_transactions_text(date(2026, 10, 1))
+                self.assertTrue(content.startswith("10/1(목) 신규 등록 실거래가"))
+                self.assertIn("수집 중", content)
+                self.assertNotIn("1,736", content)
+                self.assertNotIn("1,748", content)
+            finally:
+                os.chdir(previous)
+
+    def test_transactions_prefer_today_dated_file(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            previous = os.getcwd()
+            os.chdir(tmp)
+            try:
+                Path("transactions-2026-10-01.txt").write_text(
+                    "10/1(목) 신규 등록 실거래가\n\n전국 321건", encoding="utf-8"
+                )
+                Path("transactions-thu.txt").write_text(
+                    "9/24(목) 신규 등록 실거래가\n\n전국 1,736건", encoding="utf-8"
+                )
+                self.assertIn(
+                    "전국 321건",
+                    gen_briefing.read_transactions_text(date(2026, 10, 1)),
+                )
+            finally:
+                os.chdir(previous)
+
     def test_new_policy_box_is_appended_without_renumbering_existing_boxes(self):
         generated = gen_briefing.build_html()
         self.assertIn('<h2>13. 부동산 컨텐츠 1</h2>', generated)

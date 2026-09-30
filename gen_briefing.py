@@ -19,6 +19,7 @@ from daily_rotation import build_rotating_sections
 KST = timezone(timedelta(hours=9))
 WEEKDAY_EN = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 WEEKDAY_KR = ["월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"]
+WEEKDAY_KR_SHORT = ["월", "화", "수", "목", "금", "토", "일"]
 
 
 def read_text(path):
@@ -77,6 +78,21 @@ def read_section_text(prefix, weekday):
 
     print(f"{prefix}: 정상 대체 파일이 없어 이번 발행에서 비움")
     return ""
+
+
+def read_transactions_text(today):
+    """실거래 박스에는 실제로 오늘 수집된 내용만 표시한다."""
+    title = (
+        f"{today.month}/{today.day}({WEEKDAY_KR_SHORT[today.weekday()]}) "
+        "신규 등록 실거래가"
+    )
+    path = Path(f"transactions-{today.isoformat()}.txt")
+    if path.exists():
+        content = path.read_text(encoding="utf-8").strip()
+        if content.startswith(title) and not has_fetch_failure(content):
+            return content
+    print(f"transactions: {today.isoformat()} 정상 수집 자료가 없어 집계 대기 표시")
+    return f"{title}\n\n오늘 신규 등록 실거래가를 수집 중입니다.\n집계가 완료되면 업데이트됩니다."
 
 
 def analysis_date(content):
@@ -284,7 +300,7 @@ def build_html():
         for number, (key, label, content) in enumerate(build_rotating_sections(now.date()), start=13)
     )
     rendered_sections.append(
-        (19, "transactions", "🏢 전국 신규 등록 실거래가", read_section_text("transactions", weekday_en))
+        (19, "transactions", "🏢 전국 신규 등록 실거래가", read_transactions_text(now.date()))
     )
     rendered_sections.extend(
         (number, key, label, content)
