@@ -81,7 +81,7 @@ def read_section_text(prefix, weekday):
 
 def analysis_date(content):
     """analysis 파일 안에 적힌 날짜가 오늘 날짜와 일치하는지 확인 (방마다 날짜 형식이 달라 여러 패턴을 시도)"""
-    first_lines = "\n".join(line.strip() for line in content.splitlines() if line.strip()).split("\n")[:2]
+    first_lines = "\n".join(line.strip() for line in content.splitlines() if line.strip()).split("\n")[:3]
     first_lines = "\n".join(first_lines)
     m = re.search(r"(\d{4})[-.](\d{1,2})[-.](\d{1,2})", first_lines)
     if not m:

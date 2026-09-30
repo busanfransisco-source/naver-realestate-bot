@@ -10,6 +10,7 @@ from validate_policy import validate
 class PolicyTests(unittest.TestCase):
     def test_blank_lines_and_invalid_date(self):
         self.assertTrue(is_fresh_analysis('제목\n\n2026년 9월 12일 토요일', datetime(2026, 9, 12)))
+        self.assertTrue(is_fresh_analysis('제목\n\n부동산 불장의 진실 정책분석\n2026-09-12 |', datetime(2026, 9, 12)))
         self.assertIsNone(analysis_date('제목\n2026-99-99'))
         self.assertFalse(is_fresh_analysis('제목\n2026-09-05', datetime(2026, 9, 12)))
 
