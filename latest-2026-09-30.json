@@ -1,8 +1,20 @@
 {
-  "updated_at_kst": "2026-09-30 10:22:57",
+  "updated_at_kst": "2026-09-30 10:28:36",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 9월 30일 수요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "GS건설 'K-연어' 육상양식 실증 성공",
+      "url": "https://n.news.naver.com/mnews/article/417/0001159621"
+    },
+    {
+      "title": "LH, 고양은평선 2031년 개통 추진…고양시청~새절역 50분→20분",
+      "url": "https://n.news.naver.com/mnews/article/008/0005420147"
+    },
+    {
+      "title": "GS건설, '청정 K-연어' 육상양식 성공…수처리기술로 사육수 99% 재사용",
+      "url": "https://n.news.naver.com/mnews/article/008/0005420145"
+    },
     {
       "title": "GS건설, 'K-연어' 육상양식 실증 성공…부산서 첫 출하",
       "url": "https://n.news.naver.com/mnews/article/119/0003137832"
@@ -30,18 +42,6 @@
     {
       "title": "'반도체 거점' 경기 남부...미분양 무덤 경기도서 '나홀로 호황'",
       "url": "https://n.news.naver.com/mnews/article/014/0005582766"
-    },
-    {
-      "title": "‘광명 시티프라디움 에듀하임’ 30일 1순위 청약…서울 인접 입지 주목",
-      "url": "https://n.news.naver.com/mnews/article/241/0003533074"
-    },
-    {
-      "title": "대화하는 국토교통부 장관과 서울시장",
-      "url": "https://n.news.naver.com/mnews/article/001/0016345771"
-    },
-    {
-      "title": "서울 인접 지식산업센터 관심…‘현대 테라타워 구리갈매’ 입주 진행",
-      "url": "https://n.news.naver.com/mnews/article/241/0003533073"
     }
   ]
 }
