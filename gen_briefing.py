@@ -275,9 +275,17 @@ def build_html():
             content = read_policy_text(fname_prefix, now)
         rendered_sections.append((key, label, content))
     rendered_sections.extend(build_rotating_sections(now.date()))
-    # 기존 자동발송 번호(1~24)는 그대로 두고 신규 실거래를 마지막 25번에 붙인다.
+    # 기존 자동발송 번호(1~24)와 실거래 25번은 그대로 유지한다.
     rendered_sections.append(
         ("transactions", "🏢 전국 신규 등록 실거래가", read_section_text("transactions", weekday_en))
+    )
+    # 신규 정책분석은 기존 번호를 밀지 않도록 26번에 독립 추가한다.
+    rendered_sections.append(
+        (
+            "analysis7",
+            "📰 부동산 불장의 진실 정책분석",
+            read_policy_text("analysis7", now),
+        )
     )
     for number, (key, label, content) in enumerate(rendered_sections, start=1):
         content_json = json.dumps(content, ensure_ascii=False)

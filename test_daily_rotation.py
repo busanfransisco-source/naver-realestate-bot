@@ -69,12 +69,14 @@ class DailyRotationTests(unittest.TestCase):
     def test_empty_old_sections_do_not_shift_slots(self):
         with patch.object(gen_briefing, 'read_section_text', return_value=''):
             page = gen_briefing.build_html()
-        self.assertEqual(page.count('<section class="card"'), 25)
+        self.assertEqual(page.count('<section class="card"'), 26)
         for number in range(19, 25):
             self.assertIn(f'data-slot="{number}"', page)
             self.assertIn(f'id="ta-daily{number}"', page)
         self.assertIn('data-slot="25"', page)
         self.assertIn('id="ta-transactions"', page)
+        self.assertIn('data-slot="26"', page)
+        self.assertIn('id="ta-analysis7"', page)
 
 
 if __name__ == '__main__':

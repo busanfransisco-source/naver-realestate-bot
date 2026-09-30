@@ -565,6 +565,10 @@ function buildBriefingHtml_(now, sections) {
     order.push([key, (19 + slot) + ". 부동산 컨텐츠 " + (slot + 1)]);
   }
 
+  // Python 주 파이프라인과 번호를 맞춘다. 기존 1~25번은 절대 밀지 않는다.
+  order.push(["transactions", "25. 🏢 전국 신규 등록 실거래가"]);
+  order.push(["analysis7", "26. 📰 부동산 불장의 진실 정책분석"]);
+
   var blocks = order.map(function (pair) {
     var key = pair[0], label = pair[1];
     var content = (sections[key] || "(데이터 없음)").replace(/\n+$/, "");
@@ -686,11 +690,14 @@ function runBackupNow() {
     if (existing) results[key] = existing;
   });
 
-  // 백업 경로가 페이지를 다시 만들어도 정책분석 6개 박스와 순번을 유지한다.
-  ["analysis3", "analysis4", "analysis5", "analysis2", "analysis6", "analysis1"].forEach(function (key) {
+  // 백업 경로가 페이지를 다시 만들어도 정책분석 7개 박스와 순번을 유지한다.
+  ["analysis3", "analysis4", "analysis5", "analysis2", "analysis6", "analysis1", "analysis7"].forEach(function (key) {
     var existing = ghGetTextFile_(key + "-" + weekday_en + ".txt");
-    if (existing) results[key] = existing;
+    results[key] = existing || "(오늘의 분석이 아직 준비되지 않았습니다)";
   });
+
+  var transactions = ghGetTextFile_("transactions-" + weekday_en + ".txt");
+  results.transactions = transactions || "(오늘의 실거래가가 아직 준비되지 않았습니다)";
 
   var html = buildBriefingHtml_(now, results);
 
@@ -699,7 +706,7 @@ function runBackupNow() {
 
   Object.keys(results).forEach(function (key) {
     if (/^daily(19|20|21|22|23|24)$/.test(key)) return;
-    if (["subs", "trend", "analysis3", "analysis4", "analysis5", "analysis2", "analysis6", "analysis1"].indexOf(key) !== -1) return;
+    if (["subs", "trend", "transactions", "analysis3", "analysis4", "analysis5", "analysis2", "analysis6", "analysis1", "analysis7"].indexOf(key) !== -1) return;
     try {
       ghPutFile_(key + ".txt", results[key], "Backup pipeline data: " + key);
       ghPutFile_(key + "-" + weekday_en + ".txt", results[key], "Backup pipeline data: " + key);
