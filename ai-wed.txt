@@ -1,5 +1,14 @@
 🤖 26년 9월 30일 수요일 AI 뉴스
 
+트럼프, 빅테크 대거 소집해 '규제 불가' 재확인…업계 자발적 서약에 그쳐
+https://www.aitimes.com/news/articleView.html?idxno=215791
+
+오픈AI 추가 투자 유치 목표는 '1900조 가치'...연 매출은 95조 육박
+https://www.aitimes.com/news/articleView.html?idxno=215788
+
+알트먼 "기업공개 압박 없이 AI 안전 확보가 우선"
+https://www.aitimes.com/news/articleView.html?idxno=215787
+
 스페인 연구진, 태양광발전소 맹금류 행동 추적…사냥·휴식 공간 활용
 https://www.aitimes.com/news/articleView.html?idxno=215785
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215771
 
 플로리다주, 오픈AI '안전장치 없는' 신규 모델 개발 금지 가처분 신청
 https://www.aitimes.com/news/articleView.html?idxno=215769
-
-‘소비자용 에이전트’ 인스팅트, 한 달 만에 기업가치 4배 폭등
-https://www.aitimes.com/news/articleView.html?idxno=215768
-
-마누스, '2.0 버전'·'큐' 공개...전문 작업·일상 업무로 영역 확장
-https://www.aitimes.com/news/articleView.html?idxno=215767
-
-과기부, AI중심대학 18개교·AX대학원 15개교 출범
-https://www.aitimes.com/news/articleView.html?idxno=215766
