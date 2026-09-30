@@ -4,6 +4,14 @@
 
 브리핑 페이지: https://busanfransisco-source.github.io/naver-realestate-bot/briefing.html
 
+## 26번 정책분석 작성
+
+- 박스명: `부동산 불장의 진실 정책분석`
+- 작성 포맷: `POLICY_ANALYSIS7_FORMAT.md`
+- 복사용 원고 틀: `templates/analysis7-template.txt`
+- 당일 파일명: `analysis7-{요일}.txt`
+- 당일 원고가 없으면 사이트에는 준비 중 문구가 표시된다.
+
 ## 작동 방식 (2026-07-24 기준)
 
 GitHub Actions(깃허브의 자동 실행 기능)가 매일 스스로 데이터를 수집해 briefing.html을 새로 만든다. 클로드 앱이나 내 컴퓨터가 꺼져 있어도 상관없이 돌아간다.
