@@ -1,5 +1,8 @@
 🤖 26년 10월 1일 목요일 AI 뉴스
 
+구글, '제미나이 4 아르곤' 공개…성능 1위 탈환에도 "일반 사용 제한"
+https://www.aitimes.com/news/articleView.html?idxno=215821
+
 [게시판] 최수연 네이버 대표, UNGC이사회 참석 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=215818
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215809
 
 알리바바, 대화 타이밍까지 판단하는 음성 AI ‘큐원-오디오-3.1-리얼타임’ 공개
 https://www.aitimes.com/news/articleView.html?idxno=215808
-
-AWS, 서울 리전서 최신 '클로드' 모델 제공..."데이터 국경 안 넘는다"
-https://www.aitimes.com/news/articleView.html?idxno=215807
