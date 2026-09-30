@@ -1,7 +1,19 @@
 🤖 26년 9월 30일 수요일 AI 뉴스
 
+딥시크, 화웨이 '어센드'용 핵심 소프트웨어 공개… ‘탈엔비디아’ 동맹 가속
+https://www.aitimes.com/news/articleView.html?idxno=215798
+
+'스마트 링' 오우라, 시장 불확실성에 IPO 연기
+https://www.aitimes.com/news/articleView.html?idxno=215797
+
+메타, 소상공인용 AI 에이전트 출시…‘뮤즈’로 B2B 시장 확대
+https://www.aitimes.com/news/articleView.html?idxno=215792
+
 트럼프, 빅테크 대거 소집해 '규제 불가' 재확인…업계 자발적 서약에 그쳐
 https://www.aitimes.com/news/articleView.html?idxno=215791
+
+앤트로픽, IPO 신청서에 "AI의 실존적 위험" 공식 경고
+https://www.aitimes.com/news/articleView.html?idxno=215790
 
 오픈AI 추가 투자 유치 목표는 '1900조 가치'...연 매출은 95조 육박
 https://www.aitimes.com/news/articleView.html?idxno=215788
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215784
 
 오픈AI, 24시간 자율 에이전트 '닷츠' 공개…소비자용 아닌 B2B 승부수
 https://www.aitimes.com/news/articleView.html?idxno=215779
-
-"아스트라급 지능을 5분의 1 가격에"…오픈AI, 'GPT-6.1 솔' 공개
-https://www.aitimes.com/news/articleView.html?idxno=215778
-
-이 대통령이 꺼낸 ‘태양광 농사’…패널 아래서도 쌀농사 될까
-https://www.aitimes.com/news/articleView.html?idxno=215774
-
-알트먼·아모데이, 호주 의회 AI 청문회 불참...오픈AI는 CSO 파견
-https://www.aitimes.com/news/articleView.html?idxno=215771
-
-플로리다주, 오픈AI '안전장치 없는' 신규 모델 개발 금지 가처분 신청
-https://www.aitimes.com/news/articleView.html?idxno=215769
