@@ -1,31 +1,31 @@
 🤖 26년 10월 1일 목요일 AI 뉴스
 
-메타, '뮤즈' 흥행에 월간 주가 29% 껑충…실제 사용성·수익성은 시험대
-https://www.aitimes.com/news/articleView.html?idxno=215838
+AI 가격 급락, 기술 역사상 최고 속도…기업 지속가능성은 '비상'
+https://www.aitimes.com/news/articleView.html?idxno=215863
 
-"촬영 즉시 AI 데이터 변환"...한국딥러닝, '딥 에이전트' 모바일 출시
-https://www.aitimes.com/news/articleView.html?idxno=215837
+"증시 폭락해서라도 AI 기업 IPO 막아야"…마이클 버리의 강력 경고
+https://www.aitimes.com/news/articleView.html?idxno=215860
 
-오픈AI, 자체 에이전트에 ‘디시전스 API’ 적용...AI 아키텍처 판도 바뀐다
-https://www.aitimes.com/news/articleView.html?idxno=215835
+GPU 클라우드 제공업체 GMI, 엔비디아 등으로부터 9000억 투자 유치
+https://www.aitimes.com/news/articleView.html?idxno=215859
 
-올거나이즈, 기업용 AI로 '일본 코스닥' 간다...그로스시장 상장 승인
-https://www.aitimes.com/news/articleView.html?idxno=215833
+영국 MI5, 중국 학술 침투에 ‘간첩 경보’…대학에 협력 중단 요구
+https://www.aitimes.com/news/articleView.html?idxno=215856
 
-'불량 AI 에이전트' 논란에…미 FTC 조사 착수·오픈AI 첫 피소
-https://www.aitimes.com/news/articleView.html?idxno=215830
+애플, 13일 스마트홈 허브 공개…'AI 시리' 앞세워 아마존·구글에 도전장
+https://www.aitimes.com/news/articleView.html?idxno=215852
 
-현대차그룹, 전국 고속도로서 피지컬 AI·지능형 충전 기술 실증
-https://www.aitimes.com/news/articleView.html?idxno=215829
+비드래프트, 법률 데이터 학습 없이 글로벌 벤치마크 1위 달성
+https://www.aitimes.com/news/articleView.html?idxno=215851
 
-"앤트로픽 몸값 1.5조 달러로 하향해야"…월가의 AI IPO '거품' 경고
-https://www.aitimes.com/news/articleView.html?idxno=215828
+네이버, 웨일 브라우저 내 'AI 챗' 탑재..."타 서비스 도입도 검토"
+https://www.aitimes.com/news/articleView.html?idxno=215849
 
-업스테이지, sLM '솔라 미니 4' 출시... '프로·미니' 투트랙 본격화
-https://www.aitimes.com/news/articleView.html?idxno=215826
+"오프라인 매장 분석도 AI로"…딥핑소스, '사이'로 해외 진출
+https://www.aitimes.com/news/articleView.html?idxno=215846
 
-구글, 내부서 '제미나이 4 아르곤' 성능 회의론..."벤치맥싱 한계" 지적
-https://www.aitimes.com/news/articleView.html?idxno=215824
+오스트리아, 개인 간 전력 공유 허용…태양광 잉여전력 직접 판매
+https://www.aitimes.com/news/articleView.html?idxno=215842
 
-덴컴, 치과 진료 전 과정 연결한 AI 플랫폼 ‘덴트허브 1.0’ 공개
-https://www.aitimes.com/news/articleView.html?idxno=215822
+메타, AI 데이터센터 '실험 시설' 지정...수십억달러 세액공제 논란
+https://www.aitimes.com/news/articleView.html?idxno=215841
