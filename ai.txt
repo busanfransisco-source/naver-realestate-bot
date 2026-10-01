@@ -1,5 +1,14 @@
 🤖 26년 10월 1일 목요일 AI 뉴스
 
+"앤트로픽 몸값 1.5조 달러로 하향해야"…월가의 AI IPO '거품' 경고
+https://www.aitimes.com/news/articleView.html?idxno=215828
+
+업스테이지, sLM '솔라 미니 4' 출시... '프로·미니' 투트랙 본격화
+https://www.aitimes.com/news/articleView.html?idxno=215826
+
+구글, 내부서 '제미나이 4 아르곤' 성능 회의론..."벤치맥싱 한계" 지적
+https://www.aitimes.com/news/articleView.html?idxno=215824
+
 덴컴, 치과 진료 전 과정 연결한 AI 플랫폼 ‘덴트허브 1.0’ 공개
 https://www.aitimes.com/news/articleView.html?idxno=215822
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215816
 
 리사 수 AMD CEO, 10월8일 방한…국내 NPU 기업과 인프라 협력 구체화
 https://www.aitimes.com/news/articleView.html?idxno=215815
-
-NYT "오픈AI, 직원·외부 연구원 AI 보안 경고 묵살"
-https://www.aitimes.com/news/articleView.html?idxno=215814
-
-교황 레오 14세, 젠슨 황 공개 비판..."AI 위험성 경고 경시해선 안 돼"
-https://www.aitimes.com/news/articleView.html?idxno=215813
-
-구글, AI 답변 기여도에 따라 디지털 출판사 100여곳에 비용 지급
-https://www.aitimes.com/news/articleView.html?idxno=215811
