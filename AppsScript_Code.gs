@@ -560,11 +560,11 @@ function buildBriefingHtml_(now, sections) {
   var day = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
   var elapsed = Math.max(0, Math.floor((day - Date.parse(library.start_date + "T00:00:00Z")) / 86400000));
   for (var slot = 0; slot < 6; slot++) {
-    var topic = library.topics[((slot - elapsed) % 6 + 6) % 6];
+    var topic = library.topics[slot];
     var entry = topic.entries[elapsed % topic.entries.length];
     var key = "daily" + (19 + slot);
     sections[key] = [topic.label, now.getUTCFullYear() + "년 " + (now.getUTCMonth() + 1) + "월 " + now.getUTCDate() + "일"].concat(entry).join("\n\n");
-    order.push([key, (13 + slot) + ". 부동산 컨텐츠 " + (slot + 1)]);
+    order.push([key, (13 + slot) + ". " + topic.label]);
   }
 
   // Python 주 파이프라인과 동일하게 화면 순서와 실제 번호를 일치시킨다.
