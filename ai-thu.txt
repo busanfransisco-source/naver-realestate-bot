@@ -1,5 +1,23 @@
 🤖 26년 10월 1일 목요일 AI 뉴스
 
+메타, '뮤즈' 흥행에 월간 주가 29% 껑충…실제 사용성·수익성은 시험대
+https://www.aitimes.com/news/articleView.html?idxno=215838
+
+"촬영 즉시 AI 데이터 변환"...한국딥러닝, '딥 에이전트' 모바일 출시
+https://www.aitimes.com/news/articleView.html?idxno=215837
+
+오픈AI, 자체 에이전트에 ‘디시전스 API’ 적용...AI 아키텍처 판도 바뀐다
+https://www.aitimes.com/news/articleView.html?idxno=215835
+
+올거나이즈, 기업용 AI로 '일본 코스닥' 간다...그로스시장 상장 승인
+https://www.aitimes.com/news/articleView.html?idxno=215833
+
+'불량 AI 에이전트' 논란에…미 FTC 조사 착수·오픈AI 첫 피소
+https://www.aitimes.com/news/articleView.html?idxno=215830
+
+현대차그룹, 전국 고속도로서 피지컬 AI·지능형 충전 기술 실증
+https://www.aitimes.com/news/articleView.html?idxno=215829
+
 "앤트로픽 몸값 1.5조 달러로 하향해야"…월가의 AI IPO '거품' 경고
 https://www.aitimes.com/news/articleView.html?idxno=215828
 
@@ -11,21 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215824
 
 덴컴, 치과 진료 전 과정 연결한 AI 플랫폼 ‘덴트허브 1.0’ 공개
 https://www.aitimes.com/news/articleView.html?idxno=215822
-
-구글, '제미나이 4 아르곤' 공개…성능 1위 탈환에도 "일반 사용 제한"
-https://www.aitimes.com/news/articleView.html?idxno=215821
-
-[기고] AI판 빅맥지수가 비춘 'AI 강국'의 그림자
-https://www.aitimes.com/news/articleView.html?idxno=215819
-
-[게시판] 최수연 네이버 대표, UNGC이사회 참석 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=215818
-
-배경훈 장관 “독파모 계속된다…SPC 프론티어 AI 도전과 병행”
-https://www.aitimes.com/news/articleView.html?idxno=215817
-
-"한국판 코어위브 넘는다"...'1조 몸값' 엘리스그룹, 코스닥 도전
-https://www.aitimes.com/news/articleView.html?idxno=215816
-
-리사 수 AMD CEO, 10월8일 방한…국내 NPU 기업과 인프라 협력 구체화
-https://www.aitimes.com/news/articleView.html?idxno=215815
