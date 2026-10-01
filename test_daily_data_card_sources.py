@@ -6,6 +6,23 @@ import daily_data_card_sources as cards
 
 
 class DailyDataCardSourceTests(unittest.TestCase):
+    def test_seoul_sample_shape_requires_matching_area_and_source_time(self):
+        payload = {
+            "RESULT": {"resultCode": "INFO-000"},
+            "AREA_NM": "광화문·덕수궁",
+            "LIVE_CMRCL_STTS": {
+                "CMRCL_TIME": "20261001 1940",
+                "AREA_CMRCL_LVL": "바쁜",
+                "AREA_SH_PAYMENT_CNT": "163",
+            },
+        }
+        parsed = cards.parse_seoul_commerce_payload(payload, "광화문·덕수궁")
+        self.assertEqual(parsed["relative_level"], "바쁜")
+        self.assertEqual(parsed["observed_at_kst"], datetime(2026, 10, 1, 19, 40))
+        self.assertEqual(parsed["shinhan_payment_count"], 163)
+        with self.assertRaises(cards.SourceUnavailable):
+            cards.parse_seoul_commerce_payload(payload, "홍대입구역")
+
     def test_crypto_uses_source_date_and_30_day_range(self):
         newest = date(2026, 10, 1)
         rows = [

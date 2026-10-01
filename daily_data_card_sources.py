@@ -28,10 +28,37 @@ CRYPTO_LABELS = {
     "Greed": "탐욕",
     "Extreme Greed": "극도의 탐욕",
 }
+SEOUL_COMMERCE_LEVEL_PREFIXES = ("한산", "보통", "바쁜", "분주")
 
 
 class SourceUnavailable(ValueError):
     """A source did not provide enough trustworthy data for a new card."""
+
+
+def parse_seoul_commerce_payload(payload, expected_area):
+    """Validate one place's official citydata_cmrcl JSON response.
+
+    The public sample key exposes only 광화문·덕수궁. Parsing one place is not
+    evidence that the planned 82-place card is ready for release.
+    """
+    if not isinstance(payload, dict) or payload.get("RESULT", {}).get("resultCode") != "INFO-000":
+        raise SourceUnavailable("서울 상권 API가 정상 응답을 주지 않았습니다")
+    if payload.get("AREA_NM") != expected_area:
+        raise SourceUnavailable("요청 장소와 응답 장소가 다릅니다")
+    commerce = payload.get("LIVE_CMRCL_STTS")
+    if not isinstance(commerce, dict):
+        raise SourceUnavailable("서울 상권 현황이 없습니다")
+    try:
+        observed_at = datetime.strptime(commerce["CMRCL_TIME"], "%Y%m%d %H%M")
+        level = commerce["AREA_CMRCL_LVL"]
+        payments = int(commerce["AREA_SH_PAYMENT_CNT"])
+    except (KeyError, TypeError, ValueError) as exc:
+        raise SourceUnavailable("서울 상권 현황 형식이 잘못됐습니다") from exc
+    if (not isinstance(level, str) or
+            not level.startswith(SEOUL_COMMERCE_LEVEL_PREFIXES) or payments < 0):
+        raise SourceUnavailable("서울 상권 현황 값이 유효하지 않습니다")
+    return {"area": expected_area, "observed_at_kst": observed_at,
+            "relative_level": level, "shinhan_payment_count": payments}
 
 
 def _request_json(session, url, *, params=None, headers=None):
