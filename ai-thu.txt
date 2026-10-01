@@ -1,5 +1,8 @@
 🤖 26년 10월 1일 목요일 AI 뉴스
 
+덴컴, 치과 진료 전 과정 연결한 AI 플랫폼 ‘덴트허브 1.0’ 공개
+https://www.aitimes.com/news/articleView.html?idxno=215822
+
 구글, '제미나이 4 아르곤' 공개…성능 1위 탈환에도 "일반 사용 제한"
 https://www.aitimes.com/news/articleView.html?idxno=215821
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215813
 
 구글, AI 답변 기여도에 따라 디지털 출판사 100여곳에 비용 지급
 https://www.aitimes.com/news/articleView.html?idxno=215811
-
-AIIA, 국내 AI 기업 발굴·성장 지원 위해 한국평가데이터와 협력
-https://www.aitimes.com/news/articleView.html?idxno=215809
