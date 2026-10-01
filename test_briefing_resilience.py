@@ -50,8 +50,8 @@ class BriefingResilienceTests(unittest.TestCase):
 
     def test_new_policy_box_is_appended_without_renumbering_existing_boxes(self):
         generated = gen_briefing.build_html()
-        self.assertIn('<h2>13. 부동산 컨텐츠 1</h2>', generated)
-        self.assertIn('<h2>18. 부동산 컨텐츠 6</h2>', generated)
+        self.assertIn('<h2>13. ⭕ 오늘의 부동산 OX</h2>', generated)
+        self.assertIn('<h2>18. 📦 이사 준비 한 가지</h2>', generated)
         self.assertIn('<h2>19. 🏢 전국 신규 등록 실거래가</h2>', generated)
         self.assertIn('<h2>26. 📰 부동산 불장의 진실 정책분석</h2>', generated)
         self.assertIn('id="ta-analysis7"', generated)
