@@ -1,7 +1,7 @@
-"""Build a local 30-card preview; never replace the live 26-card briefing.
+"""Build a local 29-card preview; never replace the live 26-card briefing.
 
-The Seoul and KPX cards remain visibly unavailable until their approved API
-keys and live response checks are complete. This script does not send messages.
+Seoul remains unavailable until its full freshness checks are complete.
+Power is excluded and is never collected. This script does not send messages.
 """
 
 from datetime import datetime, timezone
@@ -12,6 +12,7 @@ import requests
 
 from daily_data_card_sources import (
     SourceUnavailable,
+    WIKIMEDIA_TOPICS,
     build_crypto_digest,
     fetch_crypto_history,
     fetch_wikimedia_digest,
@@ -19,15 +20,15 @@ from daily_data_card_sources import (
 from gen_briefing import build_html
 
 
-WIKI_TITLES = ("부동산", "금리", "한국은행", "비트코인", "아파트")
-OUTPUT = Path("tmp/briefing-30-preview.html")
-PENDING_SEOUL = "인증키 준비 전 · 원자료 미수집\n\n자동공유 비활성\n출처: 서울 열린데이터광장"
-PENDING_KPX = "활용승인·서비스키 준비 전 · 원자료 미수집\n\n자동공유 비활성\n출처: 한국전력거래소"
+WIKI_TITLES = tuple(title for titles in WIKIMEDIA_TOPICS.values() for title in titles)
+OUTPUT = Path("tmp/briefing-29-preview.html")
+LEGACY_OUTPUT = Path("tmp/briefing-30-preview.html")
+PENDING_SEOUL = "정식 키 발급 완료 · 전체 상권 최신성 검증 중\n\n자동공유 비활성\n출처: 서울 열린데이터광장"
 
 
 def preview_contents(session=requests, *, today_utc=None):
     today_utc = today_utc or datetime.now(timezone.utc).date()
-    contents = {"seoulcommerce": PENDING_SEOUL, "kpxpower": PENDING_KPX}
+    contents = {"seoulcommerce": PENDING_SEOUL}
     try:
         history = fetch_crypto_history(session)
         source_day = history[0][0]
@@ -50,7 +51,10 @@ def preview_contents(session=requests, *, today_utc=None):
 def main():
     OUTPUT.parent.mkdir(exist_ok=True)
     html = build_html(new_data_contents=preview_contents())
-    OUTPUT.write_text("<!-- LOCAL PREVIEW ONLY: DO NOT DEPLOY OR AUTO-SEND -->\n" + html, encoding="utf-8")
+    rendered = "<!-- LOCAL PREVIEW ONLY: 29 CARDS, POWER EXCLUDED; DO NOT DEPLOY OR AUTO-SEND -->\n" + html
+    OUTPUT.write_text(rendered, encoding="utf-8")
+    # Refresh the previously opened preview too, so it cannot retain the removed card.
+    LEGACY_OUTPUT.write_text(rendered, encoding="utf-8")
     print(OUTPUT.resolve())
 
 

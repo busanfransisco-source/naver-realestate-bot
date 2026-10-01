@@ -29,7 +29,6 @@ jobs:
         run: python -m unittest test_daily_data_card_sources.py
       - name: Test live sources without publishing or sending
         env:
-          KPX_SERVICE_KEY: ${{ secrets.KPX_SERVICE_KEY }}
           SEOUL_OPEN_DATA_KEY: ${{ secrets.SEOUL_OPEN_DATA_KEY }}
         run: python check_daily_data_connections.py
       - name: Save non-secret diagnostic report

@@ -11,26 +11,32 @@ import market_fetch
 
 
 class BriefingResilienceTests(unittest.TestCase):
-    def test_30_card_preview_keeps_policy_analyses_last(self):
+    def test_29_card_preview_keeps_policy_analyses_last(self):
         preview = gen_briefing.build_html(new_data_contents={
             key: f"{label}\n원자료 기준일: 2026-10-01"
             for key, label in gen_briefing.NEW_DATA_SECTIONS
         })
-        self.assertEqual(preview.count('<section class="card"'), 30)
+        self.assertEqual(preview.count('<section class="card"'), 29)
+        self.assertNotIn('id="ta-kpxpower"', preview)
         for number, (key, label) in enumerate(gen_briefing.NEW_DATA_SECTIONS, start=20):
             self.assertIn(f'<h2>{number}. {label}</h2>', preview)
             self.assertIn(f'id="ta-{key}"', preview)
         for number, key in enumerate(
             ('analysis3', 'analysis4', 'analysis5', 'analysis2', 'analysis6', 'analysis1', 'analysis7'),
-            start=24,
+            start=23,
         ):
             self.assertIn(f'data-slot="{number}"', preview)
             self.assertIn(f'id="ta-{key}"', preview)
         self.assertLess(preview.index('id="ta-wikiinterest"'), preview.index('id="ta-analysis3"'))
 
-    def test_30_card_preview_rejects_incomplete_data(self):
+    def test_29_card_preview_rejects_incomplete_data(self):
         with self.assertRaises(ValueError):
             gen_briefing.build_html(new_data_contents={'cryptofear': '10/1 기준 74점'})
+        with self.assertRaises(ValueError):
+            gen_briefing.build_html(new_data_contents={
+                **{key: label for key, label in gen_briefing.NEW_DATA_SECTIONS},
+                'kpxpower': '제외한 전력 카드',
+            })
 
     def test_transactions_reject_stale_weekday_and_show_today_pending(self):
         with tempfile.TemporaryDirectory() as tmp:

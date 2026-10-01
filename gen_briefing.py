@@ -156,7 +156,6 @@ SECTIONS = [
 NEW_DATA_SECTIONS = [
     ("seoulcommerce", "📍 서울 주요 상권 실시간"),
     ("cryptofear", "📊 비트코인 공포·탐욕 지수"),
-    ("kpxpower", "⚡ 대한민국 전력 수급·도매가격"),
     ("wikiinterest", "📖 경제 주제 읽기 관심도"),
 ]
 
@@ -284,14 +283,14 @@ GATE_SCRIPT_TEMPLATE = """<script src="https://www.gstatic.com/firebasejs/10.7.1
 
 
 def build_html(*, new_data_contents=None):
-    """Render the live 26 cards or an explicit, complete 30-card preview."""
+    """Render the live 26 cards or an explicit, complete 29-card preview."""
     if new_data_contents is not None:
         required = {key for key, _ in NEW_DATA_SECTIONS}
         if set(new_data_contents) != required or any(
             not isinstance(new_data_contents[key], str) or not new_data_contents[key].strip()
             for key in required
         ):
-            raise ValueError("30개 카드 미리보기에는 새 데이터 카드 4개의 본문이 모두 필요합니다")
+            raise ValueError("29개 카드 미리보기에는 새 데이터 카드 3개의 본문이 모두 필요합니다")
     now = datetime.now(KST)
     weekday_en = WEEKDAY_EN[now.weekday()]
     weekday_kr = WEEKDAY_KR[now.weekday()]
@@ -322,7 +321,7 @@ def build_html(*, new_data_contents=None):
             (number, key, label, new_data_contents[key])
             for number, (key, label) in enumerate(NEW_DATA_SECTIONS, start=20)
         )
-    policy_start = 24 if new_data_contents is not None else 20
+    policy_start = 20 + len(NEW_DATA_SECTIONS) if new_data_contents is not None else 20
     rendered_sections.extend(
         (number, key, label, content)
         for number, (key, label, content) in enumerate(core_sections[12:], start=policy_start)

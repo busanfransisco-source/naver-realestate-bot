@@ -2,10 +2,8 @@
 
 from datetime import datetime, timedelta, timezone
 import json
-import socket
 from pathlib import Path
 from urllib.parse import quote
-from xml.etree import ElementTree
 
 import requests
 
@@ -37,50 +35,6 @@ def check_connections():
         digest = sources.fetch_wikimedia_digest(requests, titles)
         return {"status": "ok", "documents": len(titles), "source_line": digest.splitlines()[1]}
 
-    def supply():
-        key = load_secret("kpx")
-        if not key:
-            return {"status": "missing_key"}
-        response = requests.get(sources.KPX_SUPPLY_URL, params={"ServiceKey": key}, timeout=25)
-        response.raise_for_status()
-        root = ElementTree.fromstring(response.text)
-        code = root.findtext(".//resultCode")
-        if code != "00":
-            return {"status": "failed", "http_status": response.status_code,
-                    "result_code": code,
-                    "reason": "provider_does_not_recognize_key" if code == "30" else "provider_error"}
-        actual = sources.parse_kpx_supply_xml(response.text)
-        return {"status": "ok", "source_time_kst": str(actual["observed_at_kst"])}
-
-    def supply_network():
-        host = "openapi.kpx.or.kr"
-        addresses = sorted({item[4][0] for item in socket.getaddrinfo(host, 443)})
-        try:
-            with socket.create_connection((host, 443), timeout=8):
-                return {"status": "ok", "host": host, "dns_addresses": addresses,
-                        "tcp_port": 443}
-        except OSError as exc:
-            return {"status": "failed", "host": host, "dns_addresses": addresses,
-                    "tcp_port": 443, "reason": type(exc).__name__}
-
-    def price():
-        key = load_secret("kpx")
-        if not key:
-            return {"status": "missing_key"}
-        rows = sources.fetch_kpx_prices(requests, key, now.date())
-        return {"status": "ok", "records": len(rows),
-                "dates_kst": sorted({str(row["date_kst"]) for row in rows}),
-                "areas": sorted({row["area"] for row in rows})}
-
-    def power_card():
-        key = load_secret("kpx")
-        if not key:
-            return {"status": "missing_key"}
-        digest = sources.fetch_kpx_digest(requests, key, now_kst=now.replace(tzinfo=None))
-        return {"status": "ok", "source_line": digest.splitlines()[1],
-                "route_line": next(line for line in digest.splitlines() if line.startswith("수급 수집경로:")),
-                "digest": digest}
-
     def seoul():
         key = load_secret("seoul")
         # Exact names from Seoul's official 82-place catalogue (2026-04-14).
@@ -97,10 +51,9 @@ def check_connections():
                 "private_key_stored": bool(key), "tested_places": len(areas),
                 "observations": observations}
 
-    for name, action in (("crypto", crypto), ("wikimedia", wiki),
-                         ("kpx_supply_network", supply_network),
-                         ("kpx_supply", supply), ("kpx_price", price),
-                         ("kpx_power_card", power_card), ("seoul", seoul)):
+    # Power was explicitly excluded by the user on 2026-10-02.
+    # Do not read its key or call either KPX endpoint, even for diagnostics.
+    for name, action in (("crypto", crypto), ("wikimedia", wiki), ("seoul", seoul)):
         run(name, action)
     return report
 
