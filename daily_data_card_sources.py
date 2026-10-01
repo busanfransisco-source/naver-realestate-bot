@@ -8,6 +8,8 @@ from __future__ import annotations
 
 from datetime import date, datetime, timedelta, timezone
 from math import isfinite
+from html.parser import HTMLParser
+import re
 from urllib.parse import quote
 from xml.etree import ElementTree
 
@@ -35,6 +37,7 @@ KPX_SUPPLY_URL = (
     "https://openapi.kpx.or.kr/openapi/sukub5mMaxDatetime/"
     "getSukub5mMaxDatetime"
 )
+KPX_SUPPLY_PAGE_URL = "https://www.kpx.or.kr/powerinfoSubmain.es?mid=a10404030000"
 WIKIMEDIA_TOPICS = {
     "주택·세금": ("부동산", "아파트", "전세권", "도시 재개발", "재건축",
                 "종합부동산세", "취득세", "양도소득세"),
@@ -50,6 +53,74 @@ KPX_PRICE_URL = (
 
 class SourceUnavailable(ValueError):
     """A source did not provide enough trustworthy data for a new card."""
+
+
+class _KpxSupplyPageParser(HTMLParser):
+    """Only collect the timestamp and explicitly identified actual-value cells."""
+
+    def __init__(self):
+        super().__init__()
+        self.fields = {}
+        self.active = None
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        target = attrs.get("id") if tag == "td" else None
+        if tag == "p" and "info_top" in attrs.get("class", "").split():
+            target = "timestamp"
+        if target in ("timestamp", "avil", "load", "supPow", "supPer"):
+            if target in self.fields:
+                raise SourceUnavailable("전력수급 공식 페이지의 항목이 중복됐습니다")
+            self.active = (target, tag)
+            self.fields[target] = ""
+
+    def handle_data(self, data):
+        if self.active:
+            self.fields[self.active[0]] += data
+
+    def handle_endtag(self, tag):
+        if self.active and tag == self.active[1]:
+            self.active = None
+
+
+def parse_kpx_supply_page(html_text):
+    """Read KPX's market-demand actuals, not estimated total demand or forecasts."""
+    parser = _KpxSupplyPageParser()
+    parser.feed(html_text)
+    fields = parser.fields
+    stamp = re.search(r"(\d{4})\.(\d{2})\.(\d{2})\([^)]*\)\s+(\d{2}):(\d{2})",
+                      fields.get("timestamp", ""))
+    if not stamp or "현재수요(전력시장)" not in html_text:
+        raise SourceUnavailable("전력수급 공식 페이지의 기준시각·시장수요 표기가 없습니다")
+    try:
+        observed_at = datetime(*(int(value) for value in stamp.groups()))
+    except ValueError as exc:
+        raise SourceUnavailable("전력수급 공식 페이지의 기준시각이 잘못됐습니다") from exc
+
+    def cell(name, unit):
+        match = re.fullmatch(r"\s*([\d,]+(?:\.\d+)?)\s*" + re.escape(unit) + r"\s*",
+                             fields.get(name, ""))
+        if not match:
+            raise SourceUnavailable("전력수급 공식 페이지의 수치·단위가 잘못됐습니다")
+        return _positive_number(match[1].replace(",", ""), name, allow_zero=True)
+
+    capacity, demand = cell("avil", "MW"), cell("load", "MW")
+    reserve, rate = cell("supPow", "MW"), cell("supPer", "%")
+    if (demand <= 0 or capacity < demand or rate > 100 or
+            abs(capacity - demand - reserve) > 3 or
+            abs(reserve / demand * 100 - rate) > 0.1):
+        raise SourceUnavailable("전력수급 공식 페이지의 수치 사이에 모순이 있습니다")
+    return {"observed_at_kst": observed_at, "demand_mw": demand,
+            "capacity_mw": capacity, "reserve_rate_pct": rate,
+            "source_url": KPX_SUPPLY_PAGE_URL, "source_route": "official_web",
+            "demand_scope": "전력시장"}
+
+
+def fetch_kpx_supply_page(session):
+    response = session.get(KPX_SUPPLY_PAGE_URL, timeout=25)
+    response.raise_for_status()
+    response.encoding = "utf-8"
+    return parse_kpx_supply_page(response.text)
 
 
 def parse_seoul_commerce_payload(payload, expected_area):
@@ -185,7 +256,8 @@ def build_kpx_digest(supply, prices, *, today=None, now_kst=None):
     return "\n".join([
         "대한민국 전력 수급·도매가격",
         f"전력수급 실측: {observed_at:%Y-%m-%d %H:%M} (KST)",
-        f"현재 전력수요 {supply['demand_mw']:,.0f}MW · 공급능력 {supply['capacity_mw']:,.0f}MW",
+        f"현재 전력수요{(' (' + supply['demand_scope'] + ')') if supply.get('demand_scope') else ''} "
+        f"{supply['demand_mw']:,.0f}MW · 공급능력 {supply['capacity_mw']:,.0f}MW",
         f"공급예비율 {supply['reserve_rate_pct']:.1f}%",
         "",
         f"육지 하루전 계획 대상일: {forecast_day.isoformat()} (KST)",
@@ -198,6 +270,8 @@ def build_kpx_digest(supply, prices, *, today=None, now_kst=None):
         "※ 위의 현재수요는 실측, 최대수요는 하루전 예측입니다. "
         "SMP는 도매시장 가격이며 가정용 전기요금이 아닙니다.",
         "출처: 한국전력거래소·공공데이터포털",
+        "수급 수집경로: " + ("전력거래소 공식 홈페이지" if supply.get("source_route") == "official_web" else "전력수급 API"),
+        supply.get("source_url", KPX_SUPPLY_URL),
     ])
 
 
@@ -224,7 +298,13 @@ def fetch_kpx_prices(session, service_key, target_day):
 
 def fetch_kpx_digest(session, service_key, *, now_kst=None):
     now_kst = now_kst or datetime.now(timezone(timedelta(hours=9))).replace(tzinfo=None)
-    supply = fetch_kpx_supply(session, service_key)
+    try:
+        supply = fetch_kpx_supply(session, service_key)
+        age = now_kst - supply["observed_at_kst"]
+        if not timedelta(minutes=-5) <= age <= timedelta(minutes=20):
+            raise SourceUnavailable("전력수급 API 자료가 오래됐습니다")
+    except (requests.RequestException, SourceUnavailable):
+        supply = fetch_kpx_supply_page(session)
     prices = fetch_kpx_prices(session, service_key, now_kst.date())
     return build_kpx_digest(supply, prices, now_kst=now_kst)
 

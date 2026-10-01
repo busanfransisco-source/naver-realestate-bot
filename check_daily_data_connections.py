@@ -72,6 +72,15 @@ def check_connections():
                 "dates_kst": sorted({str(row["date_kst"]) for row in rows}),
                 "areas": sorted({row["area"] for row in rows})}
 
+    def power_card():
+        key = load_secret("kpx")
+        if not key:
+            return {"status": "missing_key"}
+        digest = sources.fetch_kpx_digest(requests, key, now_kst=now.replace(tzinfo=None))
+        return {"status": "ok", "source_line": digest.splitlines()[1],
+                "route_line": next(line for line in digest.splitlines() if line.startswith("수급 수집경로:")),
+                "digest": digest}
+
     def seoul():
         key = load_secret("seoul")
         # Exact names from Seoul's official 82-place catalogue (2026-04-14).
@@ -90,7 +99,8 @@ def check_connections():
 
     for name, action in (("crypto", crypto), ("wikimedia", wiki),
                          ("kpx_supply_network", supply_network),
-                         ("kpx_supply", supply), ("kpx_price", price), ("seoul", seoul)):
+                         ("kpx_supply", supply), ("kpx_price", price),
+                         ("kpx_power_card", power_card), ("seoul", seoul)):
         run(name, action)
     return report
 

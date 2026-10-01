@@ -6,6 +6,43 @@ import daily_data_card_sources as cards
 
 
 class DailyDataCardSourceTests(unittest.TestCase):
+    PAGE = ('<p class="info_top">2026.10.01(목) 23:40 <a>새로고침</a></p>'
+            '<table><tr><th>공급능력</th><td id="avil">98,448 MW</td></tr>'
+            '<tr><th>현재수요(전력시장)</th><td id="load">61,991 MW</td></tr>'
+            '<tr><th>공급예비력</th><td id="supPow">36,457 MW</td></tr>'
+            '<tr><th>공급예비율</th><td id="supPer">58.81 %</td></tr></table>')
+
+    def test_kpx_official_page_actuals_and_units(self):
+        actual = cards.parse_kpx_supply_page(self.PAGE)
+        self.assertEqual(actual['observed_at_kst'], datetime(2026, 10, 1, 23, 40))
+        self.assertEqual(actual['demand_mw'], 61991)
+        self.assertEqual(actual['source_route'], 'official_web')
+        self.assertEqual(actual['demand_scope'], '전력시장')
+
+    def test_kpx_official_page_rejects_missing_or_contradictory_values(self):
+        for page in (self.PAGE.replace('id="load"', 'id="changed"'),
+                     self.PAGE.replace('98,448', '50,000'),
+                     self.PAGE.replace('58.81', '5.81'),
+                     self.PAGE.replace(' MW', ' kW'),
+                     self.PAGE.replace('2026.10.01', '2026.13.01'),
+                     self.PAGE + '<td id="load">61,991 MW</td>'):
+            with self.subTest(page=page), self.assertRaises(cards.SourceUnavailable):
+                cards.parse_kpx_supply_page(page)
+
+    def test_kpx_card_fallback_and_stale_page_gate(self):
+        prices = [{'date_kst': date(2026, 10, 1), 'hour_ending': hour,
+                   'area': '육지', 'smp_krw_per_kwh': 100,
+                   'mainland_forecast_mw': 60000} for hour in range(1, 25)]
+        for api_error in (cards.SourceUnavailable('코드 30'), cards.requests.ConnectTimeout()):
+            with mock.patch.object(cards, 'fetch_kpx_supply', side_effect=api_error), \
+                 mock.patch.object(cards, 'fetch_kpx_supply_page', return_value=cards.parse_kpx_supply_page(self.PAGE)), \
+                 mock.patch.object(cards, 'fetch_kpx_prices', return_value=prices):
+                digest = cards.fetch_kpx_digest(mock.Mock(), 'test-key', now_kst=datetime(2026, 10, 1, 23, 45))
+                self.assertIn('수급 수집경로: 전력거래소 공식 홈페이지', digest)
+                self.assertIn('전력수요 (전력시장) 61,991MW', digest)
+                with self.assertRaisesRegex(cards.SourceUnavailable, '20분'):
+                    cards.fetch_kpx_digest(mock.Mock(), 'test-key', now_kst=datetime(2026, 10, 1, 23, 59) + timedelta(minutes=5))
+
     def test_kpx_supply_uses_official_case_sensitive_key_parameter(self):
         response = mock.Mock()
         response.text = ("<response><header><resultCode>30</resultCode>"
