@@ -1,5 +1,11 @@
 🤖 26년 10월 2일 금요일 AI 뉴스
 
+국가AI전략위 "AI 속도조절보다 RSI 초지능 완성 전 기술 추격 우선"
+https://www.aitimes.com/news/articleView.html?idxno=215868
+
+최대선 센터장 "사이버보안 특화 모델 AI 기본법 사각지대...기준 마련 시급"
+https://www.aitimes.com/news/articleView.html?idxno=215867
+
 래블업 "AI 지능도 측정하는 시대…1인 1에이전트 인프라 구축"
 https://www.aitimes.com/news/articleView.html?idxno=215865
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215859
 
 영국 MI5, 중국 학술 침투에 ‘간첩 경보’…대학에 협력 중단 요구
 https://www.aitimes.com/news/articleView.html?idxno=215856
-
-애플, 13일 스마트홈 허브 공개…'AI 시리' 앞세워 아마존·구글에 도전장
-https://www.aitimes.com/news/articleView.html?idxno=215852
-
-비드래프트, 법률 데이터 학습 없이 글로벌 벤치마크 1위 달성
-https://www.aitimes.com/news/articleView.html?idxno=215851
