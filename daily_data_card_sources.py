@@ -85,12 +85,15 @@ class _KpxSupplyPageParser(HTMLParser):
 
 def parse_kpx_supply_page(html_text):
     """Read KPX's market-demand actuals, not estimated total demand or forecasts."""
+    sections = re.findall(r"<h3>\s*실시간 전력수급현황\s*</h3>(.*?)<h4>", html_text, re.S)
+    if len(sections) != 1:
+        raise SourceUnavailable("전력수급 공식 페이지의 실시간 수급 영역이 없습니다")
     parser = _KpxSupplyPageParser()
-    parser.feed(html_text)
+    parser.feed(sections[0])
     fields = parser.fields
     stamp = re.search(r"(\d{4})\.(\d{2})\.(\d{2})\([^)]*\)\s+(\d{2}):(\d{2})",
                       fields.get("timestamp", ""))
-    if not stamp or "현재수요(전력시장)" not in html_text:
+    if not stamp or "현재수요(전력시장)" not in sections[0]:
         raise SourceUnavailable("전력수급 공식 페이지의 기준시각·시장수요 표기가 없습니다")
     try:
         observed_at = datetime(*(int(value) for value in stamp.groups()))
