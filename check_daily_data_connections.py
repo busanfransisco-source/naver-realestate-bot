@@ -74,14 +74,19 @@ def check_connections():
 
     def seoul():
         key = load_secret("seoul")
-        area = "광화문·덕수궁"
-        url = f"http://openapi.seoul.go.kr:8088/{key or 'sample'}/json/citydata_cmrcl/1/5/{quote(area)}"
-        response = requests.get(url, timeout=25)
-        response.raise_for_status()
-        actual = sources.parse_seoul_commerce_payload(response.json(), area)
+        # Exact names from Seoul's official 82-place catalogue (2026-04-14).
+        areas = ("광화문·덕수궁", "홍대입구역(2호선)", "강남역") if key else ("광화문·덕수궁",)
+        observations = []
+        for area in areas:
+            url = f"http://openapi.seoul.go.kr:8088/{key or 'sample'}/json/citydata_cmrcl/1/5/{quote(area)}"
+            response = requests.get(url, timeout=25)
+            response.raise_for_status()
+            actual = sources.parse_seoul_commerce_payload(response.json(), area)
+            observations.append({"area": area,
+                                 "source_time_kst": str(actual["observed_at_kst"])})
         return {"status": "ok" if key else "sample_only",
-                "private_key_stored": bool(key), "area": area,
-                "source_time_kst": str(actual["observed_at_kst"])}
+                "private_key_stored": bool(key), "tested_places": len(areas),
+                "observations": observations}
 
     for name, action in (("crypto", crypto), ("wikimedia", wiki),
                          ("kpx_supply_network", supply_network),
