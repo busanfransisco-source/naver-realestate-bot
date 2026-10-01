@@ -2,6 +2,7 @@
 
 from datetime import datetime, timedelta, timezone
 import json
+import socket
 from pathlib import Path
 from urllib.parse import quote
 from xml.etree import ElementTree
@@ -51,6 +52,17 @@ def check_connections():
         actual = sources.parse_kpx_supply_xml(response.text)
         return {"status": "ok", "source_time_kst": str(actual["observed_at_kst"])}
 
+    def supply_network():
+        host = "openapi.kpx.or.kr"
+        addresses = sorted({item[4][0] for item in socket.getaddrinfo(host, 443)})
+        try:
+            with socket.create_connection((host, 443), timeout=8):
+                return {"status": "ok", "host": host, "dns_addresses": addresses,
+                        "tcp_port": 443}
+        except OSError as exc:
+            return {"status": "failed", "host": host, "dns_addresses": addresses,
+                    "tcp_port": 443, "reason": type(exc).__name__}
+
     def price():
         key = load_secret("kpx")
         if not key:
@@ -72,6 +84,7 @@ def check_connections():
                 "source_time_kst": str(actual["observed_at_kst"])}
 
     for name, action in (("crypto", crypto), ("wikimedia", wiki),
+                         ("kpx_supply_network", supply_network),
                          ("kpx_supply", supply), ("kpx_price", price), ("seoul", seoul)):
         run(name, action)
     return report
