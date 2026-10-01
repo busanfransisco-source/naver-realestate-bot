@@ -3,6 +3,9 @@
 구글, '제미나이 4 아르곤' 공개…성능 1위 탈환에도 "일반 사용 제한"
 https://www.aitimes.com/news/articleView.html?idxno=215821
 
+[기고] AI판 빅맥지수가 비춘 'AI 강국'의 그림자
+https://www.aitimes.com/news/articleView.html?idxno=215819
+
 [게시판] 최수연 네이버 대표, UNGC이사회 참석 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=215818
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215811
 
 AIIA, 국내 AI 기업 발굴·성장 지원 위해 한국평가데이터와 협력
 https://www.aitimes.com/news/articleView.html?idxno=215809
-
-알리바바, 대화 타이밍까지 판단하는 음성 AI ‘큐원-오디오-3.1-리얼타임’ 공개
-https://www.aitimes.com/news/articleView.html?idxno=215808
