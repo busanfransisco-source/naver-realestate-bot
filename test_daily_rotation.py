@@ -35,31 +35,35 @@ class DailyRotationTests(unittest.TestCase):
 
     def test_fixed_slots_and_six_distinct_topics_every_day(self):
         start = date(2026, 9, 12)
+        topics = json.loads(rotation.LIBRARY_PATH.read_text(encoding='utf-8'))['topics']
+        labels = [topic['label'] for topic in topics]
         for offset in range(66):
             today = start + timedelta(days=offset)
             rows = rotation.build_rotating_sections(today)
             self.assertEqual([r[0] for r in rows], ['daily19', 'daily20', 'daily21', 'daily22', 'daily23', 'daily24'])
-            self.assertEqual([r[1] for r in rows], [f'부동산 컨텐츠 {n}' for n in range(1, 7)])
-            self.assertEqual(len(set(r[2].split('\n\n')[0] for r in rows)), 6)
+            self.assertEqual([r[1] for r in rows], labels)
+            self.assertEqual([r[2].split('\n\n')[0] for r in rows], labels)
             self.assertTrue(all(len(r[2]) > 180 for r in rows))
             self.assertEqual(rows, rotation.build_rotating_sections(today))
 
-    def test_each_fixed_slot_gets_all_66_stories_before_repeat(self):
+    def test_each_fixed_topic_cycles_its_11_stories(self):
         start = date(2026, 9, 12)
         for slot in range(6):
             stories = []
-            for day in range(66):
+            for day in range(12):
                 row = rotation.build_rotating_sections(start + timedelta(days=day))[slot]
                 stories.append(row[2].split('\n\n')[2])
-            self.assertEqual(len(set(stories)), 66)
+            self.assertEqual(len(set(stories[:11])), 11)
+            self.assertEqual(stories[11], stories[0])
 
-    def test_topics_move_one_slot_right(self):
+    def test_topics_stay_in_the_same_slot(self):
         before = rotation.build_rotating_sections(date(2026, 9, 12))
         after = rotation.build_rotating_sections(date(2026, 9, 13))
         self.assertEqual([r[1] for r in before], [r[1] for r in after])
         old_topics = [r[2].split('\n\n')[0] for r in before]
         new_topics = [r[2].split('\n\n')[0] for r in after]
-        self.assertEqual(new_topics, old_topics[-1:] + old_topics[:-1])
+        self.assertEqual(new_topics, old_topics)
+        self.assertNotEqual([r[2] for r in before], [r[2] for r in after])
 
     def test_kst_midnight_changes_the_daily_selection(self):
         before = datetime(2026, 9, 12, 14, 59, tzinfo=timezone.utc).astimezone(gen_briefing.KST)
