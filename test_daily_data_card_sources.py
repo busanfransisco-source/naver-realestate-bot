@@ -6,6 +6,19 @@ import daily_data_card_sources as cards
 
 
 class DailyDataCardSourceTests(unittest.TestCase):
+    def test_kpx_supply_uses_official_case_sensitive_key_parameter(self):
+        response = mock.Mock()
+        response.text = ("<response><header><resultCode>30</resultCode>"
+                         "</header></response>")
+        session = mock.Mock()
+        session.get.return_value = response
+        with self.assertRaisesRegex(cards.SourceUnavailable, "코드 30"):
+            cards.fetch_kpx_supply(session, "test-only-key")
+        session.get.assert_called_once_with(
+            cards.KPX_SUPPLY_URL,
+            params={"ServiceKey": "test-only-key"}, timeout=25,
+        )
+
     def test_seoul_sample_shape_requires_matching_area_and_source_time(self):
         payload = {
             "RESULT": {"resultCode": "INFO-000"},
@@ -43,8 +56,13 @@ class DailyDataCardSourceTests(unittest.TestCase):
         digest = cards.build_crypto_digest(cards.fetch_crypto_history(session))
         self.assertIn("원자료 기준일: 2026-10-01 (UTC)", digest)
         self.assertIn("74/100", digest)
-        self.assertIn("전일 +1점", digest)
-        self.assertIn("최근 30일: 45~74점", digest)
+        self.assertIn("전일 73점 대비 +1점", digest)
+        self.assertIn("7일 전 67점 대비 +7점", digest)
+        self.assertIn("최근 7일 평균 71.0점", digest)
+        self.assertIn("직전 7일 평균 64.0점", digest)
+        self.assertIn("최근 30일 평균 59.5점 · 최저 45점 / 최고 74점", digest)
+        self.assertIn("현재 위치: 최저~최고 구간의 100% 지점", digest)
+        self.assertIn("가격 전망·매수 신호가 아닙니다", digest)
         session.get.assert_called_once_with(
             cards.CRYPTO_URL,
             params={"limit": 31, "format": "json"},
@@ -61,6 +79,46 @@ class DailyDataCardSourceTests(unittest.TestCase):
         with self.assertRaises(cards.SourceUnavailable):
             cards.build_crypto_digest(rows)
 
+    def test_kpx_supply_xml_keeps_actual_time_and_units(self):
+        xml = ("<response><header><resultCode>00</resultCode></header><body><items><item>"
+               "<baseDatetime>20261001203500</baseDatetime><currPwrTot>63213.2</currPwrTot>"
+               "<suppAbility>82238.0</suppAbility><suppReserveRate>30.096</suppReserveRate>"
+               "</item></items></body></response>")
+        actual = cards.parse_kpx_supply_xml(xml)
+        self.assertEqual(actual["observed_at_kst"], datetime(2026, 10, 1, 20, 35))
+        self.assertEqual(actual["demand_mw"], 63213.2)
+        self.assertAlmostEqual(actual["reserve_rate_pct"], 30.096)
+        with self.assertRaises(cards.SourceUnavailable):
+            cards.parse_kpx_supply_xml(xml.replace("00</resultCode>", "20</resultCode>"))
+
+    def test_kpx_price_requires_full_page_and_24_hours(self):
+        rows = [
+            {"date": "20261002", "hour": str(hour), "areaName": "육지",
+             "smp": str(90 + hour), "mlfd": str(60000 + hour * 100)}
+            for hour in range(1, 25)
+        ]
+        payload = {"header": {"resultCode": "00"},
+                   "body": {"totalCount": "24", "items": {"item": rows}}}
+        prices = cards.parse_kpx_price_json({"response": payload})
+        actual = {"observed_at_kst": datetime(2026, 10, 1, 20, 35),
+                  "demand_mw": 63213.2, "capacity_mw": 82238.0,
+                  "reserve_rate_pct": 30.096}
+        digest = cards.build_kpx_digest(
+            actual, prices, today=date(2026, 10, 1),
+            now_kst=datetime(2026, 10, 1, 20, 40),
+        )
+        self.assertIn("실측: 2026-10-01 20:35", digest)
+        self.assertIn("계획 대상일: 2026-10-02", digest)
+        self.assertIn("예측 최대수요 62,400MW", digest)
+        self.assertIn("도매시장 가격", digest)
+        with self.assertRaises(cards.SourceUnavailable):
+            cards.parse_kpx_price_json({**payload, "body": {**payload["body"], "totalCount": "48"}})
+        with self.assertRaises(cards.SourceUnavailable):
+            cards.build_kpx_digest(
+                actual, prices[:-1], today=date(2026, 10, 1),
+                now_kst=datetime(2026, 10, 1, 20, 40),
+            )
+
     def test_wikimedia_uses_common_utc_day_and_minimum_sample(self):
         newest = date(2026, 9, 30)
         days = [newest - timedelta(days=offset) for offset in range(14)]
@@ -74,6 +132,9 @@ class DailyDataCardSourceTests(unittest.TestCase):
         digest = cards.build_wikimedia_digest(histories)
         self.assertIn("2026-09-30 (UTC)", digest)
         self.assertIn("금리 1,260회 (직전 7일 700회, +80%)", digest)
+        self.assertIn("조회 증가 1개 · 감소 0개 · 보합 1개 문서", digest)
+        self.assertIn("이번 주 읽기 흐름", digest)
+        self.assertIn("선정 문서만 본 작은 표본", digest)
         self.assertNotIn("부동산 14회", digest)
         self.assertIn("문서 조회수", digest)
 

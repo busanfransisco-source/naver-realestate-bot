@@ -1,0 +1,40 @@
+name: Data API connection diagnostic
+
+on:
+  push:
+    branches: [feature/four-data-briefings]
+    paths:
+      - .github/workflows/data-api-diagnostic.yml
+      - check_daily_data_connections.py
+      - daily_data_card_sources.py
+      - local_api_secrets.py
+      - test_daily_data_card_sources.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install collector dependency
+        run: pip install requests
+      - name: Collector regression tests
+        run: python -m unittest test_daily_data_card_sources.py
+      - name: Test live sources without publishing or sending
+        env:
+          KPX_SERVICE_KEY: ${{ secrets.KPX_SERVICE_KEY }}
+          SEOUL_OPEN_DATA_KEY: ${{ secrets.SEOUL_OPEN_DATA_KEY }}
+        run: python check_daily_data_connections.py
+      - name: Save non-secret diagnostic report
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-connection-status
+          path: tmp/api-connection-status.json
+          retention-days: 7

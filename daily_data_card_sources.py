@@ -7,7 +7,9 @@ Each rendered value carries its source date; callers must not relabel it as toda
 from __future__ import annotations
 
 from datetime import date, datetime, timedelta, timezone
+from math import isfinite
 from urllib.parse import quote
+from xml.etree import ElementTree
 
 import requests
 
@@ -29,6 +31,21 @@ CRYPTO_LABELS = {
     "Extreme Greed": "극도의 탐욕",
 }
 SEOUL_COMMERCE_LEVEL_PREFIXES = ("한산", "보통", "바쁜", "분주")
+KPX_SUPPLY_URL = (
+    "https://openapi.kpx.or.kr/openapi/sukub5mMaxDatetime/"
+    "getSukub5mMaxDatetime"
+)
+WIKIMEDIA_TOPICS = {
+    "주택·세금": ("부동산", "아파트", "전세권", "도시 재개발", "재건축",
+                "종합부동산세", "취득세", "양도소득세"),
+    "거시·금융": ("기준금리", "한국은행", "인플레이션", "소비자 물가지수",
+                "환율", "국내총생산"),
+    "시장·가상자산": ("비트코인", "이더리움", "코스피", "코스닥"),
+}
+KPX_PRICE_URL = (
+    "https://apis.data.go.kr/B552115/SmpWithForecastDemand/"
+    "getSmpWithForecastDemand"
+)
 
 
 class SourceUnavailable(ValueError):
@@ -59,6 +76,157 @@ def parse_seoul_commerce_payload(payload, expected_area):
         raise SourceUnavailable("서울 상권 현황 값이 유효하지 않습니다")
     return {"area": expected_area, "observed_at_kst": observed_at,
             "relative_level": level, "shinhan_payment_count": payments}
+
+
+def _positive_number(value, label, *, allow_zero=False):
+    try:
+        number = float(value)
+    except (TypeError, ValueError) as exc:
+        raise SourceUnavailable(f"{label} 값이 없습니다") from exc
+    if not isfinite(number) or number < 0 or (number == 0 and not allow_zero):
+        raise SourceUnavailable(f"{label} 값이 유효하지 않습니다")
+    return number
+
+
+def parse_kpx_supply_xml(xml_text):
+    """Validate the official five-minute actuals, without inventing a source time."""
+    try:
+        root = ElementTree.fromstring(xml_text)
+    except ElementTree.ParseError as exc:
+        raise SourceUnavailable("전력수급 API XML 형식이 잘못됐습니다") from exc
+    code = root.findtext(".//resultCode")
+    if code != "00":
+        if code == "30":
+            raise SourceUnavailable("전력수급 API 인증 서버가 키를 등록된 키로 인정하지 않습니다 (코드 30)")
+        raise SourceUnavailable("전력수급 API가 정상 응답을 주지 않았습니다")
+    try:
+        observed_at = datetime.strptime(root.findtext(".//baseDatetime"), "%Y%m%d%H%M%S")
+    except (TypeError, ValueError) as exc:
+        raise SourceUnavailable("전력수급 실측 기준시각이 없습니다") from exc
+    demand = _positive_number(root.findtext(".//currPwrTot"), "현재 전력수요")
+    capacity = _positive_number(root.findtext(".//suppAbility"), "공급능력")
+    reserve_rate = _positive_number(
+        root.findtext(".//suppReserveRate"), "공급예비율", allow_zero=True
+    )
+    if demand > capacity or reserve_rate > 100:
+        raise SourceUnavailable("전력수급 실측값 사이에 모순이 있습니다")
+    return {
+        "observed_at_kst": observed_at,
+        "demand_mw": demand,
+        "capacity_mw": capacity,
+        "reserve_rate_pct": reserve_rate,
+    }
+
+
+def parse_kpx_price_json(payload):
+    """Validate one complete JSON page of hourly day-ahead data."""
+    if isinstance(payload, dict) and isinstance(payload.get("response"), dict):
+        payload = payload["response"]
+    if not isinstance(payload, dict) or payload.get("header", {}).get("resultCode") != "00":
+        raise SourceUnavailable("도매가격 API가 정상 응답을 주지 않았습니다")
+    body = payload.get("body")
+    if not isinstance(body, dict) or not isinstance(body.get("items"), dict):
+        raise SourceUnavailable("도매가격 API 응답 항목이 없습니다")
+    rows = body["items"].get("item")
+    if isinstance(rows, dict):
+        rows = [rows]
+    if not isinstance(rows, list) or not rows:
+        raise SourceUnavailable("도매가격·수요예측 자료가 없습니다")
+    try:
+        total_count = int(body.get("totalCount", len(rows)))
+    except (TypeError, ValueError) as exc:
+        raise SourceUnavailable("도매가격 API 전체 건수가 잘못됐습니다") from exc
+    if total_count != len(rows):
+        raise SourceUnavailable("도매가격 API 페이지가 일부만 수집됐습니다")
+    result = []
+    for row in rows:
+        try:
+            day = datetime.strptime(str(row["date"]), "%Y%m%d").date()
+            hour = int(row["hour"])
+            area = str(row["areaName"]).strip()
+        except (KeyError, TypeError, ValueError) as exc:
+            raise SourceUnavailable("도매가격·수요예측 시각 형식이 잘못됐습니다") from exc
+        if not 1 <= hour <= 24 or not area:
+            raise SourceUnavailable("도매가격·수요예측 지역·시간이 유효하지 않습니다")
+        result.append({
+            "date_kst": day,
+            "hour_ending": hour,
+            "area": area,
+            "smp_krw_per_kwh": _positive_number(row.get("smp"), "계통한계가격", allow_zero=True),
+            "mainland_forecast_mw": (
+                _positive_number(row.get("mlfd"), "육지 예측수요")
+                if area == "육지" else None
+            ),
+        })
+    return result
+
+
+def build_kpx_digest(supply, prices, *, today=None, now_kst=None):
+    """Keep real-time actual demand separate from day-ahead forecast and SMP."""
+    now_kst = now_kst or datetime.now(timezone(timedelta(hours=9))).replace(tzinfo=None)
+    today = today or now_kst.date()
+    observed_at = supply["observed_at_kst"]
+    age = now_kst - observed_at
+    if observed_at.date() != today or not timedelta(minutes=-5) <= age <= timedelta(minutes=20):
+        raise SourceUnavailable("전력수급 실측값이 최근 20분 이내 자료가 아닙니다")
+    mainland = [row for row in prices if row["area"] == "육지"]
+    if not mainland:
+        raise SourceUnavailable("육지 도매가격·예측수요 자료가 없습니다")
+    forecast_day = max(row["date_kst"] for row in mainland)
+    if forecast_day not in (today, today + timedelta(days=1)):
+        raise SourceUnavailable("도매가격·수요예측 대상일이 오늘 또는 내일이 아닙니다")
+    day_rows = [row for row in mainland if row["date_kst"] == forecast_day]
+    hours = {row["hour_ending"] for row in day_rows}
+    if len(day_rows) != 24 or hours != set(range(1, 25)):
+        raise SourceUnavailable("육지 시간별 도매가격·예측수요 24개가 모이지 않았습니다")
+    peak_forecast = max(day_rows, key=lambda row: row["mainland_forecast_mw"])
+    peak_smp = max(day_rows, key=lambda row: row["smp_krw_per_kwh"])
+    mean_smp = sum(row["smp_krw_per_kwh"] for row in day_rows) / 24
+    return "\n".join([
+        "대한민국 전력 수급·도매가격",
+        f"전력수급 실측: {observed_at:%Y-%m-%d %H:%M} (KST)",
+        f"현재 전력수요 {supply['demand_mw']:,.0f}MW · 공급능력 {supply['capacity_mw']:,.0f}MW",
+        f"공급예비율 {supply['reserve_rate_pct']:.1f}%",
+        "",
+        f"육지 하루전 계획 대상일: {forecast_day.isoformat()} (KST)",
+        f"예측 최대수요 {peak_forecast['mainland_forecast_mw']:,.0f}MW "
+        f"({peak_forecast['hour_ending']}시 종료 구간)",
+        f"계통한계가격(SMP) 24시간 평균 {mean_smp:.1f}원/kWh · "
+        f"최고 {peak_smp['smp_krw_per_kwh']:.1f}원/kWh "
+        f"({peak_smp['hour_ending']}시 종료 구간)",
+        "",
+        "※ 위의 현재수요는 실측, 최대수요는 하루전 예측입니다. "
+        "SMP는 도매시장 가격이며 가정용 전기요금이 아닙니다.",
+        "출처: 한국전력거래소·공공데이터포털",
+    ])
+
+
+def fetch_kpx_supply(session, service_key):
+    """Read the official five-minute actuals using a locally protected key."""
+    response = session.get(
+        KPX_SUPPLY_URL, params={"ServiceKey": service_key}, timeout=25
+    )
+    response.raise_for_status()
+    return parse_kpx_supply_xml(response.text)
+
+
+def fetch_kpx_prices(session, service_key, target_day):
+    """Read every hourly mainland/Jeju record for one plan date."""
+    payload = _request_json(session, KPX_PRICE_URL, params={
+        "serviceKey": service_key,
+        "pageNo": "1",
+        "numOfRows": "100",
+        "dataType": "json",
+        "date": target_day.strftime("%Y%m%d"),
+    })
+    return parse_kpx_price_json(payload)
+
+
+def fetch_kpx_digest(session, service_key, *, now_kst=None):
+    now_kst = now_kst or datetime.now(timezone(timedelta(hours=9))).replace(tzinfo=None)
+    supply = fetch_kpx_supply(session, service_key)
+    prices = fetch_kpx_prices(session, service_key, now_kst.date())
+    return build_kpx_digest(supply, prices, now_kst=now_kst)
 
 
 def _request_json(session, url, *, params=None, headers=None):
@@ -109,6 +277,11 @@ def build_crypto_digest(history):
     lowest, highest = min(values), max(values)
     change = value - previous[1]
     change_text = f"{change:+d}점" if change else "변동 없음"
+    week_change = value - history[7][1]
+    week_change_text = f"{week_change:+d}점" if week_change else "변동 없음"
+    week_average = sum(values[:7]) / 7
+    prior_week_average = sum(values[7:14]) / 7
+    month_average = sum(values) / 30
     if lowest == highest:
         position = "30일간 같은 점수"
     else:
@@ -118,11 +291,16 @@ def build_crypto_digest(history):
             "비트코인 공포·탐욕 지수",
             f"원자료 기준일: {day.isoformat()} (UTC)",
             "",
-            f"{value}/100 · {CRYPTO_LABELS[classification]} (전일 {change_text})",
-            f"최근 30일: {lowest}~{highest}점 · 현재 {position}",
-            "",
-            "※ 비트코인 시장 심리 지표이며 주식시장 전체 심리가 아닙니다.",
+            f"현재 {value}/100 · {CRYPTO_LABELS[classification]}",
             "출처: Alternative.me (Crypto Fear & Greed Index)",
+            "",
+            f"전일 {previous[1]}점 대비 {change_text} · 7일 전 {history[7][1]}점 대비 {week_change_text}",
+            f"최근 7일 평균 {week_average:.1f}점 · 직전 7일 평균 {prior_week_average:.1f}점",
+            f"최근 30일 평균 {month_average:.1f}점 · 최저 {lowest}점 / 최고 {highest}점",
+            f"현재 위치: {position}",
+            "",
+            "읽는 법: 0에 가까울수록 공포, 100에 가까울수록 탐욕입니다.",
+            "※ 비트코인 시장 심리 지표입니다. 주식시장 전체 심리나 가격 전망·매수 신호가 아닙니다.",
         ]
     )
 
@@ -169,35 +347,100 @@ def build_wikimedia_digest(histories, *, min_weekly_views=100):
         raise SourceUnavailable("모든 문서에 공통인 14일치 집계가 없습니다")
     day = max(valid_days)
     ranked = []
+    all_stats = {}
     for title, history in histories.items():
         recent = sum(history[day - timedelta(days=offset)] for offset in range(7))
         previous = sum(
             history[day - timedelta(days=offset)] for offset in range(7, 14)
         )
+        all_stats[title] = (recent, previous)
         if recent >= min_weekly_views and previous >= min_weekly_views / 2:
             change = (recent / previous - 1) * 100
             ranked.append((change, recent, previous, title))
     ranked.sort(reverse=True)
+    total_recent = sum(recent for recent, _ in all_stats.values())
+    total_previous = sum(previous for _, previous in all_stats.values())
+
+    def delta_label(recent, previous):
+        if previous == 0:
+            return "전주 비교 불가"
+        return f"{(recent / previous - 1) * 100:+.0f}%"
+
     lines = [
         "경제 주제 읽기 관심도",
         f"집계 마감: {day.isoformat()} (UTC) · 한국어 위키백과 문서 조회수",
-        "비교: 최근 7일 합계 vs 직전 7일 합계",
+        f"선정 {len(histories)}개 문서 최근 7일 조회 합계 {total_recent:,}회 "
+        f"(직전 7일 대비 {delta_label(total_recent, total_previous)})",
+        f"비교 기간: {day - timedelta(days=6):%m/%d}~{day:%m/%d} vs "
+        f"{day - timedelta(days=13):%m/%d}~{day - timedelta(days=7):%m/%d} (UTC)",
         "",
     ]
+    groups = []
+    group_stats = []
+    for label, titles in WIKIMEDIA_TOPICS.items():
+        included = [all_stats[title] for title in titles if title in all_stats]
+        if included:
+            recent = sum(value[0] for value in included)
+            previous = sum(value[1] for value in included)
+            group_stats.append((label, recent, previous))
+            groups.append(f"{label} {recent:,}회 ({delta_label(recent, previous)}) · {len(included)}개 문서")
+    if groups:
+        lines.append("주제별 조회 합계")
+        lines.extend(groups)
+        lines.append("")
+    rising_count = sum(recent > previous for recent, previous in all_stats.values())
+    falling_count = sum(recent < previous for recent, previous in all_stats.values())
+    flat_count = len(all_stats) - rising_count - falling_count
+    top_group = max(group_stats, key=lambda row: row[1], default=None)
+    lines.append("이번 주 읽기 흐름")
+    lines.append(f"조회 증가 {rising_count}개 · 감소 {falling_count}개 · 보합 {flat_count}개 문서")
+    if top_group and total_recent:
+        label, recent, previous = top_group
+        lines.append(
+            f"가장 많이 읽힌 묶음은 {label} ({recent:,}회, 전체의 {recent / total_recent * 100:.0f}%)"
+        )
+    rising_groups = [row for row in group_stats if row[1] > row[2]]
+    falling_groups = [row for row in group_stats if row[1] < row[2]]
+    if rising_groups and falling_groups:
+        up = max(rising_groups, key=lambda row: row[1] / row[2] if row[2] else float("inf"))
+        down = min(falling_groups, key=lambda row: row[1] / row[2])
+        lines.append(
+            f"선정 문서 기준 {up[0]}은 {delta_label(up[1], up[2])}, "
+            f"{down[0]}은 {delta_label(down[1], down[2])}로 방향이 엇갈렸습니다."
+        )
+    lines.append("")
+    most_read = sorted(ranked, key=lambda row: (row[1], row[3]), reverse=True)[:3]
+    if most_read:
+        lines.append("가장 많이 읽힌 문서")
+        lines.extend(
+            f"{index}. {title} {recent:,}회"
+            for index, (_, recent, previous, title) in enumerate(most_read, 1)
+        )
+        lines.append("")
     growing = [row for row in ranked if row[0] > 0][:3]
     if growing:
-        lines.append("조회가 늘어난 문서")
+        lines.append("조회 증가가 두드러진 문서")
         lines.extend(
-            f"{title} {recent:,}회 (직전 7일 {previous:,}회, +{change:.0f}%)"
-            for change, recent, previous, title in growing
+            f"{index}. {title} {recent:,}회 (직전 7일 {previous:,}회, +{change:.0f}%)"
+            for index, (change, recent, previous, title) in enumerate(growing, 1)
         )
     else:
         lines.append("표본 기준을 넘는 관심 증가 문서가 없습니다.")
+    lines.append("")
+    declining = sorted((row for row in ranked if row[0] < 0), key=lambda row: row[0])[:2]
+    if declining:
+        lines.append("조회 감소가 두드러진 문서")
+        lines.extend(
+            f"{index}. {title} {recent:,}회 (직전 7일 {previous:,}회, {change:.0f}%)"
+            for index, (change, recent, previous, title) in enumerate(declining, 1)
+        )
     lines.extend(
         [
             "",
-            f"비교 대상: 사전 지정한 {len(histories)}개 문서 · 최근 7일 100회 이상만 표시",
-            "※ 검색량이나 매수 수요가 아닌 문서 조회수입니다.",
+            f"순위 표시 기준: 최근 7일 {min_weekly_views:,}회 이상 · "
+            f"직전 7일 {min_weekly_views / 2:g}회 이상",
+            "※ 선정 문서만 본 작은 표본입니다. 같은 사람의 여러 문서 조회도 각각 집계됩니다.",
+            "검색량·여론 전체·매수 수요가 아니라, 이 문서들의 읽기 변화입니다.",
             "출처: Wikimedia Analytics API (CC0)",
         ]
     )
