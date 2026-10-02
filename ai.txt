@@ -1,31 +1,31 @@
 🤖 26년 10월 2일 금요일 AI 뉴스
 
+"잘 가라 02"…슈워제네거 '터미네이터 2' 오마주한 휴머노이드 해체 화제
+https://www.aitimes.com/news/articleView.html?idxno=215894
+
+오퍼스 5.5 ‘이것은 중요합니다’ 남발…습관 못 버린 AI 글쓰기
+https://www.aitimes.com/news/articleView.html?idxno=215890
+
+업스테이지 ‘솔라 프로 4’, 다음 포털 금융 서비스에 전면 적용
+https://www.aitimes.com/news/articleView.html?idxno=215885
+
+브록먼 오픈AI 사장, 사내 반발에 '친AI' 정치 단체 340억 추가 기부 철회
+https://www.aitimes.com/news/articleView.html?idxno=215884
+
+캘리포니아주, '불량 에이전트' 관련 오픈AI에 수사 소환장 발부
+https://www.aitimes.com/news/articleView.html?idxno=215883
+
+엔비디아·소프트뱅크, 오픈AI 투자 잔여분 27조 최종 집행
+https://www.aitimes.com/news/articleView.html?idxno=215880
+
+코드잇, 600명 수용 AI 오프라인 교육 공간 ‘텐엑스 강남’ 개관
+https://www.aitimes.com/news/articleView.html?idxno=215879
+
+앤트로픽, 14일 투자자 행사 개최...11월 추수감사절 전 상장 목표
+https://www.aitimes.com/news/articleView.html?idxno=215878
+
+오픈AI, 내부 기밀 유출 혐의로 정렬·안전팀 연구원 3명 해고
+https://www.aitimes.com/news/articleView.html?idxno=215876
+
 국가AI전략위 "AI 속도조절보다 RSI 초지능 완성 전 기술 추격 우선"
 https://www.aitimes.com/news/articleView.html?idxno=215868
-
-최대선 센터장 "사이버보안 특화 모델 AI 기본법 사각지대...기준 마련 시급"
-https://www.aitimes.com/news/articleView.html?idxno=215867
-
-래블업 "AI 지능도 측정하는 시대…1인 1에이전트 인프라 구축"
-https://www.aitimes.com/news/articleView.html?idxno=215865
-
-인셉션, 음성 에이전트 ‘머큐리 보이스’ 출시…'확산 모델'로 지연시간 한계 깼다
-https://www.aitimes.com/news/articleView.html?idxno=215864
-
-AI 가격 급락, 기술 역사상 최고 속도…기업 지속가능성은 '비상'
-https://www.aitimes.com/news/articleView.html?idxno=215863
-
-엔비디아, 물리 법칙 배우는 영상 생성 프레임워크 ‘파이시스-랭’ 공개
-https://www.aitimes.com/news/articleView.html?idxno=215862
-
-링크드인 "AI 안전 직종 채용 91% 급증...고용 한파 속 틈새 성장"
-https://www.aitimes.com/news/articleView.html?idxno=215861
-
-"증시 폭락해서라도 AI 기업 IPO 막아야"…마이클 버리의 강력 경고
-https://www.aitimes.com/news/articleView.html?idxno=215860
-
-GPU 클라우드 제공업체 GMI, 엔비디아 등으로부터 9000억 투자 유치
-https://www.aitimes.com/news/articleView.html?idxno=215859
-
-영국 MI5, 중국 학술 침투에 ‘간첩 경보’…대학에 협력 중단 요구
-https://www.aitimes.com/news/articleView.html?idxno=215856
