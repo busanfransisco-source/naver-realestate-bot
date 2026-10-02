@@ -1,5 +1,14 @@
 🤖 26년 10월 2일 금요일 AI 뉴스
 
+[AI 모델 신작] MS 음성인식 'MAI-트랜스크라이브-2-스트리밍' 등 6종
+https://www.aitimes.com/news/articleView.html?idxno=215930
+
+[게시판] KT, 소상공인 플랫폼 ‘사장이지’에 AI면접 서비스 출시 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=215928
+
+플리토, 첫 브랜드 ‘보글’로 글로벌 통역 시장 조준…"매출 상승 이어갈 것"
+https://www.aitimes.com/news/articleView.html?idxno=215927
+
 에스티엔인포텍, 크레도와 한국 시장 총판 계약 체결
 https://www.aitimes.com/news/articleView.html?idxno=215921
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215914
 
 머스크, 미 국방부 '미래 전쟁' 자문으로 공직 복귀...AI·드론 중심 미래전 대비
 https://www.aitimes.com/news/articleView.html?idxno=215912
-
-캘리포니아, AI만으로 직원 해고·징계 못한다…뉴섬 주지사 법안 서명
-https://www.aitimes.com/news/articleView.html?idxno=215911
-
-텐센트, 오라클서 AI 칩 10만개 임대…규제 피하려 동남아 데이터센터 확보
-https://www.aitimes.com/news/articleView.html?idxno=215909
-
-“반도체 성능 지표 ‘K-Perf’, 실험실 벗어나 실제 현장서 실증”
-https://www.aitimes.com/news/articleView.html?idxno=215903
