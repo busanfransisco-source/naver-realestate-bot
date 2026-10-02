@@ -12,6 +12,9 @@ https://www.aitimes.com/news/articleView.html?idxno=215919
 백악관에 모인 AI 수장들…젠슨 황·저커버그, 아모데이에 '질문 세례'
 https://www.aitimes.com/news/articleView.html?idxno=215918
 
+"다섯 손가락 필요 없다"...보스턴 다이내믹스, 네 손가락 로봇 손 공개
+https://www.aitimes.com/news/articleView.html?idxno=215916
+
 "콜센터 AI 말 끊어도 알아듣는다"...포지큐브, 차세대 AICC 개발
 https://www.aitimes.com/news/articleView.html?idxno=215914
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215909
 
 “반도체 성능 지표 ‘K-Perf’, 실험실 벗어나 실제 현장서 실증”
 https://www.aitimes.com/news/articleView.html?idxno=215903
-
-비드래프트, 중국 모델스코프서 '연구기관' 인증…AX-RAY 기반 중국 진출 추진
-https://www.aitimes.com/news/articleView.html?idxno=215897
