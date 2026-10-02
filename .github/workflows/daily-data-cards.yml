@@ -37,3 +37,12 @@ jobs:
           git add briefing.html
           git diff --cached --quiet || git commit -m 'Regenerate 29-card briefing from latest sources'
           git push origin HEAD:main
+      - name: Verify public deployment and remaining source lifetime
+        run: python audit_data_cards.py
+      - name: Save source and deployment diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: data-card-deployment-audit
+          path: tmp/data-card-deployment-audit.json
+          retention-days: 7

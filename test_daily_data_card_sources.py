@@ -20,6 +20,9 @@ class DailyDataCardSourceTests(unittest.TestCase):
         self.assertNotIn('오래된장소', digest)
         self.assertIn('매출액 순위가 아닙니다', digest)
         self.assertIn('신한카드 내국인', digest)
+        self.assertIn('자료 확보율 98.8% (81/82곳)', digest)
+        self.assertIn('바쁨·분주 비중 100.0%', digest)
+        self.assertIn('전일 비중과 바로 비교하지 않습니다', digest)
         self.assertEqual(digest, cards.build_seoul_commerce_digest(list(reversed(rows)), now_kst=now))
         with self.assertRaises(cards.SourceUnavailable):
             cards.build_seoul_commerce_digest(rows[:61], now_kst=now)
@@ -145,6 +148,25 @@ class DailyDataCardSourceTests(unittest.TestCase):
         with self.assertRaises(cards.SourceUnavailable):
             cards.build_crypto_digest(rows)
 
+    def test_crypto_ties_flat_and_transition_are_explicit(self):
+        newest = date(2026, 10, 3)
+        flat = [(newest-timedelta(days=i), 50, 'Neutral') for i in range(30)]
+        digest = cards.build_crypto_digest(flat)
+        self.assertIn('30일간 같은 점수', digest)
+        self.assertIn('낮은 날 0일 · 같은 날 30일 · 높은 날 0일', digest)
+        self.assertIn("'중립' 분류가 최소 30일 연속", digest)
+        mixed = [(newest, 50, 'Neutral')] + [
+            (newest-timedelta(days=i), 49 if i % 2 else 50, 'Fear')
+            for i in range(1, 30)]
+        digest = cards.build_crypto_digest(mixed)
+        self.assertIn('낮은 날 15일 · 같은 날 15일 · 높은 날 0일', digest)
+        self.assertIn("'중립' 분류가 1일 연속", digest)
+        self.assertIn("전일 '공포'에서 분류가 바뀌었습니다", digest)
+        broken = flat.copy()
+        broken[20] = (newest-timedelta(days=21), 50, 'Neutral')
+        with self.assertRaises(cards.SourceUnavailable):
+            cards.build_crypto_digest(broken)
+
     def test_kpx_supply_xml_keeps_actual_time_and_units(self):
         xml = ("<response><header><resultCode>00</resultCode></header><body><items><item>"
                "<baseDatetime>20261001203500</baseDatetime><currPwrTot>63213.2</currPwrTot>"
@@ -212,6 +234,40 @@ class DailyDataCardSourceTests(unittest.TestCase):
         }
         with self.assertRaises(cards.SourceUnavailable):
             cards.build_wikimedia_digest(histories)
+
+    def test_wikimedia_distinguishes_growth_rate_absolute_and_low_base(self):
+        newest = date(2026, 10, 2)
+        pairs = {'부동산': (20, 10), '코스피': (200, 150),
+                 '기준금리': (1, 0), '환율': (100, 200)}
+        histories = {title: {newest-timedelta(days=i): pair[0 if i < 7 else 1]
+                            for i in range(14)} for title, pair in pairs.items()}
+        digest = cards.build_wikimedia_digest(histories)
+        self.assertIn("조회 증가율이 가장 큰 문서는 '부동산'", digest)
+        self.assertIn('조회 증가 횟수가 가장 큰 문서: 코스피 +350회 (1,050→1,400회)', digest)
+        self.assertIn('증가율 순위 비교 대상 3/4개 문서', digest)
+        self.assertNotIn('1. 기준금리', digest)
+        self.assertIn('한 문서의 급증을 경제 전반의 관심 증가로 확대하지', digest)
+        self.assertIn('적용 대상·시점·예외', digest)
+
+    def test_wikimedia_flat_and_zero_denominator_never_invent_growth(self):
+        newest = date(2026, 10, 2)
+        histories = {'부동산': {newest-timedelta(days=i): 20 for i in range(14)},
+                     '기준금리': {newest-timedelta(days=i): 0 for i in range(14)}}
+        digest = cards.build_wikimedia_digest(histories)
+        self.assertIn('선정 문서 전체 증감 +0회', digest)
+        self.assertIn('전주 비교 불가', digest)
+        self.assertIn('주제별 합계가 보합', digest)
+        self.assertNotIn('조회 증가 횟수가 가장 큰 문서:', digest)
+
+    def test_wikimedia_growth_ties_and_new_readers_keep_distinct_lists(self):
+        newest = date(2026, 10, 2)
+        pairs = {'부동산': (20, 10), '코스피': (40, 20), '환율': (500, 0)}
+        histories = {title: {newest-timedelta(days=i): pair[0 if i < 7 else 1]
+                            for i in range(14)} for title, pair in pairs.items()}
+        digest = cards.build_wikimedia_digest(histories)
+        self.assertIn('증가율 공동 1위: 부동산 · 코스피', digest)
+        self.assertIn('가장 많이 읽힌 문서\n1. 환율 3,500회', digest)
+        self.assertIn('증가율 순위 비교 대상 2/3개 문서', digest)
 
     def test_wikimedia_request_identifies_client_and_article(self):
         response = mock.Mock()

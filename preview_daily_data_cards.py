@@ -29,29 +29,51 @@ LEGACY_OUTPUT = Path("tmp/briefing-30-preview.html")
 PENDING_SEOUL = "집계 대기 · 최신 상권 자료 검증 실패\n\n자동공유 비활성\n출처: 서울 열린데이터광장"
 
 
-def preview_contents(session=requests, *, today_utc=None):
+def failure_reason(error):
+    """Public diagnostic labels only; never expose an exception URL or API key."""
+    if isinstance(error, requests.Timeout):
+        return '네트워크 응답 시간 초과'
+    if isinstance(error, requests.HTTPError):
+        return '원자료 서버 HTTP 오류'
+    if isinstance(error, requests.RequestException):
+        return '원자료 서버 연결 실패'
+    if isinstance(error, SourceUnavailable):
+        message = str(error)
+        if any(word in message for word in ('오래', '미래', '최신', '지연', 'fresh')):
+            return '원자료 기준시각 또는 최신 표본 부족'
+        return '원자료 형식 또는 집계 검증 실패'
+    return '인증 또는 자료 형식 검증 실패'
+
+
+def preview_contents(session=requests, *, today_utc=None, diagnostics=None):
     today_utc = today_utc or datetime.now(timezone.utc).date()
     contents = {"seoulcommerce": PENDING_SEOUL}
     try:
         contents['seoulcommerce'] = fetch_seoul_commerce_digest(session, load_secret('seoul'))
-    except (requests.RequestException, SourceUnavailable, ValueError, RuntimeError):
+    except (requests.RequestException, SourceUnavailable, ValueError, RuntimeError) as error:
         contents['seoulcommerce'] = PENDING_SEOUL
+        if diagnostics is not None:
+            diagnostics['seoulcommerce'] = failure_reason(error)
     try:
         history = fetch_crypto_history(session)
         source_day = history[0][0]
         if not 0 <= (today_utc - source_day).days <= 1:
             raise SourceUnavailable("원자료 기준일이 오래됐거나 미래입니다")
         contents["cryptofear"] = build_crypto_digest(history)
-    except (requests.RequestException, SourceUnavailable, ValueError):
+    except (requests.RequestException, SourceUnavailable, ValueError) as error:
         contents["cryptofear"] = "집계 대기 · 새 원자료 검증 실패\n\n자동공유 비활성\n출처: Alternative.me"
+        if diagnostics is not None:
+            diagnostics['cryptofear'] = failure_reason(error)
     try:
         digest = fetch_wikimedia_digest(session, WIKI_TITLES, today=today_utc)
         match = re.search(r"집계 마감: (\d{4}-\d{2}-\d{2}) \(UTC\)", digest)
         if not match or not 1 <= (today_utc - datetime.fromisoformat(match.group(1)).date()).days <= 3:
             raise SourceUnavailable("공통 집계 마감일이 오래됐거나 미래입니다")
         contents["wikiinterest"] = digest
-    except (requests.RequestException, SourceUnavailable, ValueError):
+    except (requests.RequestException, SourceUnavailable, ValueError) as error:
         contents["wikiinterest"] = "집계 대기 · 새 원자료 검증 실패\n\n자동공유 비활성\n출처: Wikimedia Analytics API"
+        if diagnostics is not None:
+            diagnostics['wikiinterest'] = failure_reason(error)
     return contents
 
 

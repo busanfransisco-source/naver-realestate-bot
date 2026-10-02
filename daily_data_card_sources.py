@@ -190,6 +190,8 @@ def build_seoul_commerce_digest(rows, *, now_kst=None, expected_count=82):
              f"원자료 시각: {source_min:%H:%M}~{source_max:%H:%M} · 최근 30분 자료만 반영",
              "",
              f"한눈에: 최신 {len(fresh)}곳 중 {active_count}곳이 평소보다 바쁘거나 분주합니다.",
+             f"자료 확보율 {len(fresh)/expected_count*100:.1f}% ({len(fresh)}/{expected_count}곳) · "
+             f"최신 표본의 바쁨·분주 비중 {active_count/len(fresh)*100:.1f}%",
              f"분주 {len(grouped['분주'])}곳 · 바쁨 {len(grouped['바쁜'])}곳 · "
              f"보통 {len(grouped['보통'])}곳 · 한산 {len(grouped['한산'])}곳",
              f"대상 {expected_count}곳 중 지연 {len(rows)-len(fresh)}곳·수집 실패 {expected_count-len(rows)}곳 제외",
@@ -209,6 +211,8 @@ def build_seoul_commerce_digest(rows, *, now_kst=None, expected_count=82):
     lines.extend(["", "소비가 활발한 업종 사례"])
     lines.extend(sector_examples[:4] or ["최신 자료에 바쁨·분주 단계 업종이 없습니다."])
     lines.extend(["", "읽는 법: 각 장소·업종의 최근 4주 같은 요일·시간대 대비 소비 상태입니다.",
+                  "활용: 방문·영업 동선을 고를 때 현재 소비가 평소보다 활발한 장소와 업종을 함께 확인하십시오.",
+                  "비중의 분모는 최신 자료가 확보된 장소입니다. 제외 장소가 달라지므로 전일 비중과 바로 비교하지 않습니다.",
                   "예시는 단계별·가나다순이며 매출액 순위가 아닙니다. 관광특구와 역세권은 범위가 겹칠 수 있습니다.",
                   "신한카드 내국인 소비 기준입니다. 서울 전체 매출·유동인구·임대수익을 뜻하지 않습니다.",
                   "출처: 서울 열린데이터광장·신한카드",
@@ -430,6 +434,11 @@ def build_crypto_digest(history):
     """Use the API's UTC date label, never the page-generation date."""
     if len(history) < 30:
         raise SourceUnavailable("비트코인 심리 지수 30일치가 부족합니다")
+    history = history[:30]
+    if any(row[0] != history[0][0] - timedelta(days=offset)
+           or not isinstance(row[1], int) or not 0 <= row[1] <= 100
+           or row[2] not in CRYPTO_LABELS for offset, row in enumerate(history)):
+        raise SourceUnavailable("비트코인 심리 지수의 날짜·점수·분류가 유효하지 않습니다")
     day, value, classification = history[0]
     previous = history[1]
     if previous[0] != day - timedelta(days=1):
@@ -444,6 +453,15 @@ def build_crypto_digest(history):
     prior_week_average = sum(values[7:14]) / 7
     month_average = sum(values) / 30
     month_gap = value - month_average
+    lower_days = sum(score < value for score in values)
+    equal_days = sum(score == value for score in values)
+    higher_days = sum(score > value for score in values)
+    streak = next((offset for offset, row in enumerate(history)
+                   if row[2] != classification), len(history))
+    streak_text = (f"현재 '{CRYPTO_LABELS[classification]}' 분류가 "
+                   f"{'최소 ' if streak == 30 else ''}{streak}일 연속입니다.")
+    if classification != previous[2]:
+        streak_text += f" 전일 '{CRYPTO_LABELS[previous[2]]}'에서 분류가 바뀌었습니다."
     summary = (f"한눈에: {CRYPTO_LABELS[classification]} {value}점, 전일 대비 {change_text}. "
                f"30일 평균보다 {abs(month_gap):.1f}점 {'높습니다' if month_gap >= 0 else '낮습니다'}.")
     if lowest == highest:
@@ -464,6 +482,9 @@ def build_crypto_digest(history):
             f"최근 7일 평균 {week_average:.1f}점 · 직전 7일 평균 {prior_week_average:.1f}점",
             f"최근 30일 평균 {month_average:.1f}점 · 최저 {lowest}점 / 최고 {highest}점",
             f"현재 위치: {position}",
+            f"30일 관측 비교: 현재보다 낮은 날 {lower_days}일 · 같은 날 {equal_days}일 · 높은 날 {higher_days}일 (현재일 포함)",
+            "구간 위치는 최저·최고 사이 거리이며 관측일 순위나 확률이 아닙니다.",
+            streak_text,
             "",
             "읽는 법: 0에 가까울수록 공포, 100에 가까울수록 탐욕입니다.",
             "※ 비트코인 시장 심리 지표입니다. 주식시장 전체 심리나 가격 전망·매수 신호가 아닙니다.",
@@ -542,6 +563,11 @@ def build_wikimedia_digest(histories, *, min_weekly_views=100):
         f"{day - timedelta(days=13):%m/%d}~{day - timedelta(days=7):%m/%d} (UTC)",
         "",
     ]
+    # Keep absolute changes next to percentages so a small denominator cannot
+    # masquerade as broad interest. Low-base articles still enter totals, not ranks.
+    absolute_change = total_recent - total_previous
+    lines.append(f"선정 문서 전체 증감 {absolute_change:+,}회 · 증가율 순위 비교 대상 {len(ranked)}/{len(histories)}개 문서")
+    lines.append("")
     groups = []
     group_stats = []
     for label, titles in WIKIMEDIA_TOPICS.items():
@@ -575,13 +601,24 @@ def build_wikimedia_digest(histories, *, min_weekly_views=100):
             f"선정 문서 기준 {up[0]}은 {delta_label(up[1], up[2])}, "
             f"{down[0]}은 {delta_label(down[1], down[2])}로 방향이 엇갈렸습니다."
         )
+        lines.append("읽기 포인트: 주제별 방향이 다르므로 한 문서의 급증을 경제 전반의 관심 증가로 확대하지 마십시오.")
+    elif group_stats and all(row[1] == row[2] for row in group_stats):
+        lines.append("읽기 포인트: 주제별 합계가 보합입니다. 증가 문서가 있어도 다른 문서의 감소와 상쇄될 수 있습니다.")
+    elif total_recent <= total_previous:
+        lines.append("읽기 포인트: 선정 문서 전체 조회는 늘지 않았습니다. 개별 증가 문서는 전체 흐름과 나눠 읽으십시오.")
+    else:
+        lines.append("읽기 포인트: 선정 문서 전체 조회가 늘었습니다. 증가 문서 수와 실제 증가 횟수도 함께 보십시오.")
     lines.append("")
-    most_read = sorted(ranked, key=lambda row: (row[1], row[3]), reverse=True)[:3]
+    most_read = sorted(
+        [(recent, previous, title) for title, (recent, previous) in all_stats.items()
+         if recent >= min_weekly_views],
+        key=lambda row: (-row[0], row[2]),
+    )[:3]
     if most_read:
         lines.append("가장 많이 읽힌 문서")
         lines.extend(
             f"{index}. {title} {recent:,}회"
-            for index, (_, recent, previous, title) in enumerate(most_read, 1)
+            for index, (recent, previous, title) in enumerate(most_read, 1)
         )
         lines.append("")
     growing = [row for row in ranked if row[0] > 0][:3]
@@ -595,6 +632,23 @@ def build_wikimedia_digest(histories, *, min_weekly_views=100):
             f"{index}. {title} {recent:,}회 (직전 7일 {previous:,}회, +{change:.0f}%)"
             for index, (change, recent, previous, title) in enumerate(growing, 1)
         )
+        absolute_leader = max([row for row in ranked if row[0] > 0],
+                              key=lambda row: (row[1] - row[2], row[3]))
+        _, leader_recent, leader_previous, leader_title = absolute_leader
+        lines.append(f"조회 증가 횟수가 가장 큰 문서: {leader_title} +{leader_recent-leader_previous:,}회 "
+                     f"({leader_previous:,}→{leader_recent:,}회), 순위 비교 대상 중입니다. 증가율 1위와 다를 수 있습니다.")
+        tied_growth = [row[3] for row in ranked if row[0] == change]
+        if len(tied_growth) > 1:
+            lines.append("증가율 공동 1위: " + " · ".join(sorted(tied_growth)))
+        reading_questions = {
+            "주택·세금": "주택·세금 용어를 읽을 때는 적용 대상·시점·예외가 무엇인지 확인하십시오.",
+            "거시·금융": "거시·금융 용어를 읽을 때는 지표의 정의와 발표 주기, 실제 최신 발표치를 따로 확인하십시오.",
+            "시장·가상자산": "시장·가상자산 용어를 읽을 때는 가격 변화와 문서 조회 증가가 실제로 함께 나타났는지 따로 확인하십시오.",
+        }
+        for label, titles in WIKIMEDIA_TOPICS.items():
+            if title in titles:
+                lines.append(f"'{title}'에서 이어 읽을 점: {reading_questions[label]}")
+                break
     else:
         lines.append("표본 기준을 넘는 관심 증가 문서가 없습니다.")
     lines.append("")

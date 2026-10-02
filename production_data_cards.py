@@ -10,10 +10,11 @@ KEYS = ('seoulcommerce', 'cryptofear', 'wikiinterest')
 CACHE = Path('data-cards.json')
 
 
-def pending_body(key):
+def pending_body(key, reason=None):
     names = {'seoulcommerce': '서울 주요 상권', 'cryptofear': '비트코인 공포·탐욕',
              'wikiinterest': '경제 주제 읽기 관심도'}
-    return f"{names[key]}\n\n집계 대기 · 최신 원자료 검증 후 업데이트됩니다.\n자동공유 비활성"
+    detail = f'\n보류 사유: {reason}' if reason else ''
+    return f"{names[key]}\n\n집계 대기 · 최신 원자료 검증 후 업데이트됩니다.{detail}\n자동공유 비활성"
 
 
 def card_metadata(key, body):
@@ -73,25 +74,46 @@ def load_contents(path=CACHE, *, now=None):
         cards = data.get('cards', {})
     except (OSError, ValueError, AttributeError):
         cards = {}
+    if not isinstance(cards, dict):
+        cards = {}
     return {key: cards[key]['body'] if valid_card(key, cards.get(key), now)
-            else pending_body(key) for key in KEYS}
+            else pending_body(key, (cards.get(key) if isinstance(cards.get(key), dict) else {}).get('failureReason')
+                              or '자료가 없거나 원자료 유효시간이 지났습니다') for key in KEYS}
 
 
 def collect(path=CACHE):
     # Lazy import avoids the preview renderer's dependency on gen_briefing.
     from preview_daily_data_cards import preview_contents
-    bodies = preview_contents()
+    diagnostics = {}
+    bodies = preview_contents(diagnostics=diagnostics)
     now = datetime.now(KST)
+    try:
+        previous = json.loads(Path(path).read_text(encoding='utf-8')).get('cards', {})
+    except (OSError, ValueError, AttributeError):
+        previous = {}
+    if not isinstance(previous, dict):
+        previous = {}
     entries = {key: card_metadata(key, bodies[key]) for key in KEYS}
     # Other APIs can take time after Seoul's call. Recheck at collection completion.
     for key, entry in entries.items():
+        reason = diagnostics.get(key)
         if not valid_card(key, entry, now):
-            entry.update(ready=False, body=pending_body(key))
+            reason = reason or '원자료 기준일·시각 검증 실패 또는 유효시간 만료'
+            if valid_card(key, previous.get(key), now):
+                entries[key] = entry = dict(previous[key])
+                entry.update(refreshStatus='retained_valid_source', checkedAtKst=now.isoformat(), failureReason=reason)
+            else:
+                entry.update(ready=False, body=pending_body(key, reason), refreshStatus='pending',
+                             checkedAtKst=now.isoformat(), failureReason=reason)
+        else:
+            entry.update(refreshStatus='collected', collectedAtKst=now.isoformat(),
+                         checkedAtKst=now.isoformat(), failureReason=None)
     data = {'schemaVersion': 1, 'generatedAtKst': now.isoformat(),
             'powerExcluded': True,
             'cards': entries}
     Path(path).write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print('Source checks:', ', '.join(f"{key}={data['cards'][key]['ready']}" for key in KEYS))
+    print('Refresh status:', ', '.join(f"{key}={data['cards'][key]['refreshStatus']}" for key in KEYS))
     return data
 
 

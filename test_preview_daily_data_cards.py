@@ -55,3 +55,13 @@ class PreviewDailyDataCardsTests(TestCase):
         self.assertIn("집계 대기", contents["cryptofear"])
         self.assertIn("집계 대기", contents["wikiinterest"])
         self.assertNotIn("70/100", contents["cryptofear"])
+
+    def test_diagnostic_reason_never_exposes_exception_url(self):
+        secret_error = preview.requests.Timeout('http://example.test/PRIVATE_API_KEY?x=1')
+        self.assertEqual(preview.failure_reason(secret_error), '네트워크 응답 시간 초과')
+        diagnostics = {}
+        with mock.patch.object(preview, 'fetch_crypto_history', side_effect=secret_error), \
+             mock.patch.object(preview, 'fetch_wikimedia_digest', side_effect=preview.SourceUnavailable('old source')):
+            preview.preview_contents(diagnostics=diagnostics)
+        self.assertIn('cryptofear', diagnostics)
+        self.assertNotIn('PRIVATE_API_KEY', str(diagnostics))

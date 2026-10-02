@@ -62,6 +62,41 @@ class ProductionDataCardsTests(unittest.TestCase):
         self.assertIn('setInterval(refreshDataCardExpiry, 15000)', content)
         self.assertIn("업데이트됩니다.\\n자동공유 비활성'", content)
 
+    def test_non_object_cache_fails_closed(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / 'cards.json'
+            for data in ({'cards': []}, {'cards': {'cryptofear': 'bad'}}):
+                path.write_text(json.dumps(data), encoding='utf-8')
+                self.assertTrue(all('집계 대기' in body for body in cards.load_contents(path, now=self.now).values()))
+
+    def test_collect_retains_only_valid_source_without_relabeling(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / 'cards.json'
+            old = cards.card_metadata('cryptofear', self.crypto)
+            old['collectedAtKst'] = '2026-10-03T17:00:00+09:00'
+            path.write_text(json.dumps({'cards': {'cryptofear': old}}), encoding='utf-8')
+            with patch('production_data_cards.datetime') as clock, patch('preview_daily_data_cards.preview_contents', return_value={k: cards.pending_body(k) for k in cards.KEYS}):
+                clock.now.return_value = self.now
+                clock.fromisoformat.side_effect = datetime.fromisoformat
+                data = cards.collect(path)
+            current = data['cards']['cryptofear']
+            self.assertEqual(current['refreshStatus'], 'retained_valid_source')
+            for field in ('body', 'sourceDate', 'sourceWindow', 'expiresAtKst', 'collectedAtKst'):
+                self.assertEqual(current[field], old[field])
+            self.assertFalse(data['cards']['seoulcommerce']['ready'])
+            self.assertIn('보류 사유:', data['cards']['seoulcommerce']['body'])
+
+    def test_collect_never_reuses_expired_source(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / 'cards.json'
+            path.write_text(json.dumps({'cards': {'seoulcommerce': cards.card_metadata('seoulcommerce', self.seoul)}}), encoding='utf-8')
+            with patch('production_data_cards.datetime') as clock, patch('preview_daily_data_cards.preview_contents', return_value={k: cards.pending_body(k) for k in cards.KEYS}):
+                clock.now.return_value = self.now + timedelta(hours=1)
+                clock.fromisoformat.side_effect = datetime.fromisoformat
+                data = cards.collect(path)
+            self.assertFalse(data['cards']['seoulcommerce']['ready'])
+            self.assertNotIn('18:10~18:15', data['cards']['seoulcommerce']['body'])
+
 
 if __name__ == '__main__':
     unittest.main()

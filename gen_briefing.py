@@ -499,7 +499,9 @@ function refreshDataCardExpiry() {{
     if (!Number.isFinite(expiry) || Date.now() >= expiry) {{
       const ta = card.querySelector('textarea');
       const key = ta.id.slice(3);
-      const pending = '집계 대기 · 최신 원자료 검증 후 업데이트됩니다.\\n자동공유 비활성';
+      const pending = !Number.isFinite(expiry) && ta.value.includes('집계 대기')
+        ? ta.value
+        : '집계 대기 · 원자료 유효시간이 지났습니다.\\n최신 원자료 검증 후 업데이트됩니다.\\n자동공유 비활성';
       ta.value = pending;
       window['__content_' + key] = pending;
       const button = card.querySelector('.copy-btn');
