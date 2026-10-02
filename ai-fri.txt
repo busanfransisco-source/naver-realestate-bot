@@ -1,31 +1,31 @@
 🤖 26년 10월 2일 금요일 AI 뉴스
 
-"잘 가라 02"…슈워제네거 '터미네이터 2' 오마주한 휴머노이드 해체 화제
-https://www.aitimes.com/news/articleView.html?idxno=215894
+에스티엔인포텍, 크레도와 한국 시장 총판 계약 체결
+https://www.aitimes.com/news/articleView.html?idxno=215921
 
-오퍼스 5.5 ‘이것은 중요합니다’ 남발…습관 못 버린 AI 글쓰기
-https://www.aitimes.com/news/articleView.html?idxno=215890
+[게시판] LG유플러스, 옵트에이아이와 AI 모델 경량화 협력 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=215920
 
-업스테이지 ‘솔라 프로 4’, 다음 포털 금융 서비스에 전면 적용
-https://www.aitimes.com/news/articleView.html?idxno=215885
+업스테이지, 판단 전용 AI ‘솔라 디사이드’ 출시…“제브보다 빠르고 정확”
+https://www.aitimes.com/news/articleView.html?idxno=215919
 
-브록먼 오픈AI 사장, 사내 반발에 '친AI' 정치 단체 340억 추가 기부 철회
-https://www.aitimes.com/news/articleView.html?idxno=215884
+백악관에 모인 AI 수장들…젠슨 황·저커버그, 아모데이에 '질문 세례'
+https://www.aitimes.com/news/articleView.html?idxno=215918
 
-캘리포니아주, '불량 에이전트' 관련 오픈AI에 수사 소환장 발부
-https://www.aitimes.com/news/articleView.html?idxno=215883
+"콜센터 AI 말 끊어도 알아듣는다"...포지큐브, 차세대 AICC 개발
+https://www.aitimes.com/news/articleView.html?idxno=215914
 
-엔비디아·소프트뱅크, 오픈AI 투자 잔여분 27조 최종 집행
-https://www.aitimes.com/news/articleView.html?idxno=215880
+머스크, 미 국방부 '미래 전쟁' 자문으로 공직 복귀...AI·드론 중심 미래전 대비
+https://www.aitimes.com/news/articleView.html?idxno=215912
 
-코드잇, 600명 수용 AI 오프라인 교육 공간 ‘텐엑스 강남’ 개관
-https://www.aitimes.com/news/articleView.html?idxno=215879
+캘리포니아, AI만으로 직원 해고·징계 못한다…뉴섬 주지사 법안 서명
+https://www.aitimes.com/news/articleView.html?idxno=215911
 
-앤트로픽, 14일 투자자 행사 개최...11월 추수감사절 전 상장 목표
-https://www.aitimes.com/news/articleView.html?idxno=215878
+텐센트, 오라클서 AI 칩 10만개 임대…규제 피하려 동남아 데이터센터 확보
+https://www.aitimes.com/news/articleView.html?idxno=215909
 
-오픈AI, 내부 기밀 유출 혐의로 정렬·안전팀 연구원 3명 해고
-https://www.aitimes.com/news/articleView.html?idxno=215876
+“반도체 성능 지표 ‘K-Perf’, 실험실 벗어나 실제 현장서 실증”
+https://www.aitimes.com/news/articleView.html?idxno=215903
 
-국가AI전략위 "AI 속도조절보다 RSI 초지능 완성 전 기술 추격 우선"
-https://www.aitimes.com/news/articleView.html?idxno=215868
+비드래프트, 중국 모델스코프서 '연구기관' 인증…AX-RAY 기반 중국 진출 추진
+https://www.aitimes.com/news/articleView.html?idxno=215897
