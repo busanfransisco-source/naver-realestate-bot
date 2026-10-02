@@ -177,9 +177,9 @@ def build_seoul_commerce_digest(rows, *, now_kst=None, expected_count=82):
     if len(set(names)) != len(names) or len(rows) > expected_count:
         raise SourceUnavailable("서울 상권 응답의 장소가 중복되거나 범위를 초과했습니다")
     fresh = [row for row in rows if row['observed_at_kst'].date() == now_kst.date()
-             and timedelta(minutes=-5) <= now_kst-row['observed_at_kst'] <= timedelta(minutes=30)]
+             and timedelta(minutes=-5) <= now_kst-row['observed_at_kst'] <= timedelta(minutes=20)]
     if len(fresh) < (expected_count * 3 + 3) // 4:
-        raise SourceUnavailable("서울 상권 최신 자료가 대상 장소의 75%에 못 미칩니다")
+        raise SourceUnavailable("서울 상권 최근 20분 자료가 대상 장소의 75%에 못 미쳐 배포 여유를 확보할 수 없습니다")
     grouped = {prefix: sorted((row for row in fresh if row['relative_level'].startswith(prefix)),
                              key=lambda row: row['area']) for prefix in SEOUL_COMMERCE_LEVEL_PREFIXES}
     active_count = len(grouped['바쁜']) + len(grouped['분주'])
@@ -187,14 +187,15 @@ def build_seoul_commerce_digest(rows, *, now_kst=None, expected_count=82):
     source_max = max(row['observed_at_kst'] for row in fresh)
     lines = ["서울 주요 상권 실시간",
              f"조회: {now_kst:%Y-%m-%d %H:%M} (KST)",
-             f"원자료 시각: {source_min:%H:%M}~{source_max:%H:%M} · 최근 30분 자료만 반영",
+             f"원자료 시각: {source_min:%H:%M}~{source_max:%H:%M} · 최근 20분 자료만 반영",
+             "원자료 유효시간은 30분이며, 수집 단계에서 배포·발송을 위한 10분 여유를 확보합니다.",
              "",
              f"한눈에: 최신 {len(fresh)}곳 중 {active_count}곳이 평소보다 바쁘거나 분주합니다.",
              f"자료 확보율 {len(fresh)/expected_count*100:.1f}% ({len(fresh)}/{expected_count}곳) · "
              f"최신 표본의 바쁨·분주 비중 {active_count/len(fresh)*100:.1f}%",
              f"분주 {len(grouped['분주'])}곳 · 바쁨 {len(grouped['바쁜'])}곳 · "
              f"보통 {len(grouped['보통'])}곳 · 한산 {len(grouped['한산'])}곳",
-             f"대상 {expected_count}곳 중 지연 {len(rows)-len(fresh)}곳·수집 실패 {expected_count-len(rows)}곳 제외",
+             f"대상 {expected_count}곳 중 지연·배포 여유 부족 {len(rows)-len(fresh)}곳·수집 실패 {expected_count-len(rows)}곳 제외",
              "", "평소 대비 소비가 활발한 상권"]
     active = grouped['분주'] + grouped['바쁜']
     for row in active[:6]:
