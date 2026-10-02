@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-10-03 04:34:00",
+  "updated_at_kst": "2026-10-03 06:00:36",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 3일 토요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "노량진뉴타운 노른자 '8구역', 그중에서도 중심 [권준호의 요·아·정]",
+      "url": "https://n.news.naver.com/mnews/article/014/0005584498"
+    },
+    {
+      "title": "\"16억 빌라가 20억 호가\"…방배·효창공원 일대 들썩[르포]",
+      "url": "https://n.news.naver.com/mnews/article/003/0014231260"
+    },
     {
       "title": "서울 아파트 매수심리 5주째 하락… 동남권은 매도 우위",
       "url": "https://n.news.naver.com/mnews/article/020/0003752467"
@@ -34,14 +42,6 @@
     {
       "title": "수도권 공공주택, 4분기에 4만5000가구 몰린다",
       "url": "https://n.news.naver.com/mnews/article/015/0005338742"
-    },
-    {
-      "title": "김이탁 국토1차관 “올해 수도권 공공주택 6.2만가구 착공 달성 총력”",
-      "url": "https://n.news.naver.com/mnews/article/119/0003139167"
-    },
-    {
-      "title": "추미애 \"일자리와 주거 연결해야\"…경기도형 특화전략 제시",
-      "url": "https://n.news.naver.com/mnews/article/001/0016354599"
     }
   ]
 }
