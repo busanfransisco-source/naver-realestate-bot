@@ -29,6 +29,7 @@ def assess(cache, page, public_cache, now):
         parent = area.find_parent('section') if area else None
         expiry_guard = bool(not usable and area and area.get_text() == entry.get('body')
                             and parent and expiry and parent.get('data-expires') == expiry
+                            and datetime.fromisoformat(expiry) <= now
                             and 'refreshDataCardExpiry' in page)
         result['cards'][key] = {'publicBodyMatches': body_matches, 'browserExpiryGuardPresent': expiry_guard,
                                 'sourceUsableNow': usable,
