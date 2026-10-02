@@ -1,0 +1,39 @@
+name: Refresh three daily data cards
+on:
+  workflow_dispatch:
+  schedule:
+    # KST 09:15 / 10:15 / 18:05 and 18:15. GitHub cron may be delayed.
+    - cron: '15 0,1,9 * * *'
+    - cron: '5 9 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: manual-briefing
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - name: Collect fresh source snapshots (no power calls)
+        run: python production_data_cards.py --collect
+        env:
+          SEOUL_OPEN_DATA_KEY: ${{ secrets.SEOUL_OPEN_DATA_KEY }}
+      - name: Publish cache and regenerate all 29 cards
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add data-cards.json
+          git diff --cached --quiet || git commit -m 'Refresh three data card source snapshots'
+          git pull --rebase origin main
+          python gen_briefing.py
+          git add briefing.html
+          git diff --cached --quiet || git commit -m 'Regenerate 29-card briefing from latest sources'
+          git push origin HEAD:main

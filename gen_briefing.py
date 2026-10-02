@@ -337,8 +337,13 @@ def build_html(*, new_data_contents=None):
     for number, key, label, content in rendered_sections:
         content_json = json.dumps(content, ensure_ascii=False)
         content_escaped = html.escape(content)
+        expiry_attribute = ''
+        if key in {item[0] for item in NEW_DATA_SECTIONS}:
+            from production_data_cards import card_metadata
+            metadata = card_metadata(key, content)
+            expiry_attribute = f' data-data-card="true" data-expires="{metadata["expiresAtKst"] or ""}"'
         section_blocks.append(f"""
-<section class="card" data-slot="{number}">
+<section class="card" data-slot="{number}"{expiry_attribute}>
   <div class="card-head">
     <h2>{number}. {label}</h2>
     <button class="copy-btn" onclick="copySection('{key}', this)">복사</button>
@@ -454,6 +459,8 @@ function markCopied(btn) {{
 }}
 
 function copySection(key, btn) {{
+  refreshDataCardExpiry();
+  if (btn.disabled) return;
   // execCommand는 동기적으로 바로 결과가 나오고 권한 프롬프트로 멈추는 일이
   // 없어서 이걸 기본으로 쓴다. navigator.clipboard는 일부 브라우저(특히
   // 자동화/인앱 웹뷰 환경)에서 권한 대기 상태로 무한정 멈출 수 있어서
@@ -485,6 +492,24 @@ function copySection(key, btn) {{
     alert('복사에 실패했습니다. 아래 미리보기 텍스트를 직접 길게 눌러 복사해주세요.');
   }}
 }}
+
+function refreshDataCardExpiry() {{
+  document.querySelectorAll('[data-data-card]').forEach(card => {{
+    const expiry = Date.parse(card.dataset.expires);
+    if (!Number.isFinite(expiry) || Date.now() >= expiry) {{
+      const ta = card.querySelector('textarea');
+      const key = ta.id.slice(3);
+      const pending = '집계 대기 · 최신 원자료 검증 후 업데이트됩니다.\\n자동공유 비활성';
+      ta.value = pending;
+      window['__content_' + key] = pending;
+      const button = card.querySelector('.copy-btn');
+      button.disabled = true;
+      button.textContent = '집계 대기';
+    }}
+  }});
+}}
+refreshDataCardExpiry();
+setInterval(refreshDataCardExpiry, 15000);
 </script>
 
 {gate_script}
@@ -494,7 +519,8 @@ function copySection(key, btn) {{
 
 
 def main():
-    html_content = build_html()
+    from production_data_cards import load_contents
+    html_content = build_html(new_data_contents=load_contents())
     with open("briefing.html", "w", encoding="utf-8") as f:
         f.write(html_content)
     print("briefing.html 생성 완료")
