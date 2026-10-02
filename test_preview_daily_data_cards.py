@@ -6,6 +6,15 @@ import check_daily_data_connections as diagnostics
 
 
 class PreviewDailyDataCardsTests(TestCase):
+    def setUp(self):
+        patcher = mock.patch.object(preview, 'fetch_seoul_commerce_digest',
+                                    side_effect=preview.SourceUnavailable('test only'))
+        patcher.start()
+        self.addCleanup(patcher.stop)
+        secrets = mock.patch.object(preview, 'load_secret', return_value='test-only')
+        secrets.start()
+        self.addCleanup(secrets.stop)
+
     def test_diagnostics_never_load_power_key_or_call_power_endpoints(self):
         history = [(date(2026, 10, 1) - timedelta(days=i), 70, 'Greed') for i in range(30)]
         with mock.patch.object(diagnostics, 'load_secret', return_value=None) as keys, \

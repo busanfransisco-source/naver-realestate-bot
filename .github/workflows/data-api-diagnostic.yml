@@ -9,6 +9,10 @@ on:
       - daily_data_card_sources.py
       - local_api_secrets.py
       - test_daily_data_card_sources.py
+      - test_preview_daily_data_cards.py
+      - preview_daily_data_cards.py
+      - seoul_commerce_catalogue.py
+      - gen_briefing.py
   workflow_dispatch:
 
 permissions:
@@ -26,14 +30,21 @@ jobs:
       - name: Install collector dependency
         run: pip install requests
       - name: Collector regression tests
-        run: python -m unittest test_daily_data_card_sources.py
+        run: python -m unittest test_daily_data_card_sources.py test_preview_daily_data_cards.py
       - name: Test live sources without publishing or sending
         env:
           SEOUL_OPEN_DATA_KEY: ${{ secrets.SEOUL_OPEN_DATA_KEY }}
         run: python check_daily_data_connections.py
+      - name: Build all three manual-share cards with freshness gates
+        env:
+          SEOUL_OPEN_DATA_KEY: ${{ secrets.SEOUL_OPEN_DATA_KEY }}
+        run: python preview_daily_data_cards.py
       - name: Save non-secret diagnostic report
         uses: actions/upload-artifact@v4
         with:
           name: api-connection-status
-          path: tmp/api-connection-status.json
+          path: |
+            tmp/api-connection-status.json
+            tmp/briefing-29-preview.html
+            tmp/share-ready-*/
           retention-days: 7

@@ -10,10 +10,12 @@ from datetime import date, datetime, timedelta, timezone
 from math import isfinite
 from html.parser import HTMLParser
 import re
+from concurrent.futures import ThreadPoolExecutor
 from urllib.parse import quote
 from xml.etree import ElementTree
 
 import requests
+from seoul_commerce_catalogue import SEOUL_COMMERCE_CODES
 
 
 CRYPTO_URL = "https://api.alternative.me/fng/"
@@ -134,7 +136,8 @@ def parse_seoul_commerce_payload(payload, expected_area):
     """
     if not isinstance(payload, dict) or payload.get("RESULT", {}).get("resultCode") != "INFO-000":
         raise SourceUnavailable("서울 상권 API가 정상 응답을 주지 않았습니다")
-    if payload.get("AREA_NM") != expected_area:
+    if (payload.get("AREA_CD") != expected_area if expected_area.startswith("POI")
+            else payload.get("AREA_NM") != expected_area):
         raise SourceUnavailable("요청 장소와 응답 장소가 다릅니다")
     commerce = payload.get("LIVE_CMRCL_STTS")
     if not isinstance(commerce, dict):
@@ -148,8 +151,83 @@ def parse_seoul_commerce_payload(payload, expected_area):
     if (not isinstance(level, str) or
             not level.startswith(SEOUL_COMMERCE_LEVEL_PREFIXES) or payments < 0):
         raise SourceUnavailable("서울 상권 현황 값이 유효하지 않습니다")
-    return {"area": expected_area, "observed_at_kst": observed_at,
-            "relative_level": level, "shinhan_payment_count": payments}
+    area = payload.get("AREA_NM")
+    if not isinstance(area, str) or not area.strip():
+        raise SourceUnavailable("서울 상권 장소명이 없습니다")
+    industries = []
+    industry_rows = commerce.get("CMRCL_RSB", [])
+    if not isinstance(industry_rows, list):
+        raise SourceUnavailable("서울 상권 업종 자료 형식이 잘못됐습니다")
+    for row in industry_rows:
+        if not isinstance(row, dict):
+            raise SourceUnavailable("서울 상권 업종 항목 형식이 잘못됐습니다")
+        name, industry_level = row.get("RSB_MID_CTGR"), row.get("RSB_PAYMENT_LVL")
+        if (isinstance(name, str) and isinstance(industry_level, str)
+                and industry_level.startswith(SEOUL_COMMERCE_LEVEL_PREFIXES)):
+            industries.append({"industry": name, "relative_level": industry_level})
+    return {"area": area, "code": payload.get("AREA_CD"), "observed_at_kst": observed_at,
+            "relative_level": level, "shinhan_payment_count": payments,
+            "industries": industries}
+
+
+def build_seoul_commerce_digest(rows, *, now_kst=None, expected_count=82):
+    """Current snapshot, never an absolute sales ranking or city total."""
+    now_kst = now_kst or datetime.now(timezone(timedelta(hours=9))).replace(tzinfo=None)
+    names = [row['area'] for row in rows]
+    if len(set(names)) != len(names) or len(rows) > expected_count:
+        raise SourceUnavailable("서울 상권 응답의 장소가 중복되거나 범위를 초과했습니다")
+    fresh = [row for row in rows if row['observed_at_kst'].date() == now_kst.date()
+             and timedelta(minutes=-5) <= now_kst-row['observed_at_kst'] <= timedelta(minutes=30)]
+    if len(fresh) < (expected_count * 3 + 3) // 4:
+        raise SourceUnavailable("서울 상권 최신 자료가 대상 장소의 75%에 못 미칩니다")
+    grouped = {prefix: sorted((row for row in fresh if row['relative_level'].startswith(prefix)),
+                             key=lambda row: row['area']) for prefix in SEOUL_COMMERCE_LEVEL_PREFIXES}
+    active_count = len(grouped['바쁜']) + len(grouped['분주'])
+    source_min = min(row['observed_at_kst'] for row in fresh)
+    source_max = max(row['observed_at_kst'] for row in fresh)
+    lines = ["서울 주요 상권 실시간",
+             f"조회: {now_kst:%Y-%m-%d %H:%M} (KST)",
+             f"원자료 시각: {source_min:%H:%M}~{source_max:%H:%M} · 최근 30분 자료만 반영",
+             "",
+             f"한눈에: 최신 {len(fresh)}곳 중 {active_count}곳이 평소보다 바쁘거나 분주합니다.",
+             f"분주 {len(grouped['분주'])}곳 · 바쁨 {len(grouped['바쁜'])}곳 · "
+             f"보통 {len(grouped['보통'])}곳 · 한산 {len(grouped['한산'])}곳",
+             f"대상 {expected_count}곳 중 지연 {len(rows)-len(fresh)}곳·수집 실패 {expected_count-len(rows)}곳 제외",
+             "", "평소 대비 소비가 활발한 상권"]
+    active = grouped['분주'] + grouped['바쁜']
+    for row in active[:6]:
+        lines.append(f"{row['area']} — {row['relative_level']} ({row['observed_at_kst']:%H:%M})")
+    if not active:
+        lines.append("최신 자료에서 바쁨·분주 단계인 상권은 없습니다.")
+    elif len(active) > 6:
+        lines.append(f"그 외 {len(active)-6}곳도 바쁨·분주 단계입니다.")
+    sector_examples = []
+    for row in sorted(fresh, key=lambda row: row['area']):
+        for industry in sorted(row.get('industries', []), key=lambda item: item['industry']):
+            if industry['relative_level'].startswith(('분주', '바쁜')):
+                sector_examples.append(f"{row['area']} / {industry['industry']} — {industry['relative_level']} ({row['observed_at_kst']:%H:%M})")
+    lines.extend(["", "소비가 활발한 업종 사례"])
+    lines.extend(sector_examples[:4] or ["최신 자료에 바쁨·분주 단계 업종이 없습니다."])
+    lines.extend(["", "읽는 법: 각 장소·업종의 최근 4주 같은 요일·시간대 대비 소비 상태입니다.",
+                  "예시는 단계별·가나다순이며 매출액 순위가 아닙니다. 관광특구와 역세권은 범위가 겹칠 수 있습니다.",
+                  "신한카드 내국인 소비 기준입니다. 서울 전체 매출·유동인구·임대수익을 뜻하지 않습니다.",
+                  "출처: 서울 열린데이터광장·신한카드",
+                  "https://data.seoul.go.kr/dataList/OA-22385/A/1/datasetView.do"])
+    return '\n'.join(lines)
+
+
+def fetch_seoul_commerce_digest(session, service_key, *, now_kst=None):
+    if not service_key:
+        raise SourceUnavailable("서울 정식 인증키가 없습니다")
+    def collect(code):
+        try:
+            url = f"http://openapi.seoul.go.kr:8088/{service_key}/json/citydata_cmrcl/1/5/{code}"
+            return parse_seoul_commerce_payload(_request_json(session, url), code)
+        except (requests.RequestException, SourceUnavailable, ValueError):
+            return None  # Never print credential-bearing request URLs.
+    with ThreadPoolExecutor(max_workers=4) as executor:
+        rows = [row for row in executor.map(collect, SEOUL_COMMERCE_CODES) if row is not None]
+    return build_seoul_commerce_digest(rows, now_kst=now_kst)
 
 
 def _positive_number(value, label, *, allow_zero=False):
@@ -365,6 +443,9 @@ def build_crypto_digest(history):
     week_average = sum(values[:7]) / 7
     prior_week_average = sum(values[7:14]) / 7
     month_average = sum(values) / 30
+    month_gap = value - month_average
+    summary = (f"한눈에: {CRYPTO_LABELS[classification]} {value}점, 전일 대비 {change_text}. "
+               f"30일 평균보다 {abs(month_gap):.1f}점 {'높습니다' if month_gap >= 0 else '낮습니다'}.")
     if lowest == highest:
         position = "30일간 같은 점수"
     else:
@@ -377,6 +458,8 @@ def build_crypto_digest(history):
             f"현재 {value}/100 · {CRYPTO_LABELS[classification]}",
             "출처: Alternative.me (Crypto Fear & Greed Index)",
             "",
+            summary,
+            "",
             f"전일 {previous[1]}점 대비 {change_text} · 7일 전 {history[7][1]}점 대비 {week_change_text}",
             f"최근 7일 평균 {week_average:.1f}점 · 직전 7일 평균 {prior_week_average:.1f}점",
             f"최근 30일 평균 {month_average:.1f}점 · 최저 {lowest}점 / 최고 {highest}점",
@@ -384,6 +467,7 @@ def build_crypto_digest(history):
             "",
             "읽는 법: 0에 가까울수록 공포, 100에 가까울수록 탐욕입니다.",
             "※ 비트코인 시장 심리 지표입니다. 주식시장 전체 심리나 가격 전망·매수 신호가 아닙니다.",
+            "https://alternative.me/crypto/fear-and-greed-index/",
         ]
     )
 
@@ -502,6 +586,10 @@ def build_wikimedia_digest(histories, *, min_weekly_views=100):
         lines.append("")
     growing = [row for row in ranked if row[0] > 0][:3]
     if growing:
+        change, recent, previous, title = growing[0]
+        lines[4:4] = ["", f"한눈에: 조회 증가가 가장 큰 문서는 '{title}'. "
+                      f"최근 7일 {recent:,}회로 직전 {previous:,}회보다 {change:.0f}% 늘었습니다.",
+                      "증가율 순위는 아래 최소 조회수 기준을 넘는 문서만 비교합니다."]
         lines.append("조회 증가가 두드러진 문서")
         lines.extend(
             f"{index}. {title} {recent:,}회 (직전 7일 {previous:,}회, +{change:.0f}%)"
@@ -525,6 +613,7 @@ def build_wikimedia_digest(histories, *, min_weekly_views=100):
             "※ 선정 문서만 본 작은 표본입니다. 같은 사람의 여러 문서 조회도 각각 집계됩니다.",
             "검색량·여론 전체·매수 수요가 아니라, 이 문서들의 읽기 변화입니다.",
             "출처: Wikimedia Analytics API (CC0)",
+            "https://doc.wikimedia.org/generated-data-platform/aqs/analytics-api/documentation/getting-started.html",
         ]
     )
     return "\n".join(lines)

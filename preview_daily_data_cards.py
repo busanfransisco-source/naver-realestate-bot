@@ -1,12 +1,13 @@
 """Build a local 29-card preview; never replace the live 26-card briefing.
 
-Seoul remains unavailable until its full freshness checks are complete.
-Power is excluded and is never collected. This script does not send messages.
+All three cards use source dates and fail closed. Power is excluded.
+This script exports manual-share text but does not send messages.
 """
 
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 import re
+import json
 
 import requests
 
@@ -15,20 +16,26 @@ from daily_data_card_sources import (
     WIKIMEDIA_TOPICS,
     build_crypto_digest,
     fetch_crypto_history,
+    fetch_seoul_commerce_digest,
     fetch_wikimedia_digest,
 )
 from gen_briefing import build_html
+from local_api_secrets import load_secret
 
 
 WIKI_TITLES = tuple(title for titles in WIKIMEDIA_TOPICS.values() for title in titles)
 OUTPUT = Path("tmp/briefing-29-preview.html")
 LEGACY_OUTPUT = Path("tmp/briefing-30-preview.html")
-PENDING_SEOUL = "정식 키 발급 완료 · 전체 상권 최신성 검증 중\n\n자동공유 비활성\n출처: 서울 열린데이터광장"
+PENDING_SEOUL = "집계 대기 · 최신 상권 자료 검증 실패\n\n자동공유 비활성\n출처: 서울 열린데이터광장"
 
 
 def preview_contents(session=requests, *, today_utc=None):
     today_utc = today_utc or datetime.now(timezone.utc).date()
     contents = {"seoulcommerce": PENDING_SEOUL}
+    try:
+        contents['seoulcommerce'] = fetch_seoul_commerce_digest(session, load_secret('seoul'))
+    except (requests.RequestException, SourceUnavailable, ValueError, RuntimeError):
+        contents['seoulcommerce'] = PENDING_SEOUL
     try:
         history = fetch_crypto_history(session)
         source_day = history[0][0]
@@ -50,12 +57,36 @@ def preview_contents(session=requests, *, today_utc=None):
 
 def main():
     OUTPUT.parent.mkdir(exist_ok=True)
-    html = build_html(new_data_contents=preview_contents())
+    contents = preview_contents()
+    html = build_html(new_data_contents=contents)
     rendered = "<!-- LOCAL PREVIEW ONLY: 29 CARDS, POWER EXCLUDED; DO NOT DEPLOY OR AUTO-SEND -->\n" + html
     OUTPUT.write_text(rendered, encoding="utf-8")
     # Refresh the previously opened preview too, so it cannot retain the removed card.
     LEGACY_OUTPUT.write_text(rendered, encoding="utf-8")
+    now = datetime.now(timezone.utc).astimezone(timezone(timedelta(hours=9)))
+    output_dir = Path('tmp') / f'share-ready-{now:%Y-%m-%d-%H%M%S}'
+    output_dir.mkdir(parents=True, exist_ok=False)
+    manifest = {'generated_at_kst': now.isoformat(), 'manual_share_ready': {},
+                'auto_send_enabled': False, 'power_excluded': True, 'files': {}}
+    for key, content in contents.items():
+        ready = '집계 대기' not in content and '자동공유 비활성' not in content
+        manifest['manual_share_ready'][key] = ready
+        if ready:
+            if key == 'seoulcommerce':
+                match = re.search(r'원자료 시각: (\d{2}:\d{2})~', content)
+                if not match:
+                    raise ValueError('서울 상권 원자료 시각 누락')
+                source_min = datetime.combine(now.date(), datetime.strptime(match.group(1), '%H:%M').time(), now.tzinfo)
+                manifest['seoul_snapshot_expires_at_kst'] = (source_min + timedelta(minutes=30)).isoformat()
+            filename = f'{key}.txt'
+            (output_dir / filename).write_text(content + '\n', encoding='utf-8')
+            manifest['files'][key] = filename
+    manifest['all_manual_share_ready'] = all(manifest['manual_share_ready'].values())
+    (output_dir / 'manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding='utf-8')
     print(OUTPUT.resolve())
+    print(output_dir.resolve())
+    if not manifest['all_manual_share_ready']:
+        raise SystemExit('Some sources failed freshness checks: manual-share bundle incomplete')
 
 
 if __name__ == "__main__":

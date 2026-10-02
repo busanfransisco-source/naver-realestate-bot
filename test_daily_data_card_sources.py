@@ -6,6 +6,34 @@ import daily_data_card_sources as cards
 
 
 class DailyDataCardSourceTests(unittest.TestCase):
+    def test_seoul_share_digest_coverage_freshness_and_no_sales_ranking(self):
+        now = datetime(2026, 10, 2, 17, 0)
+        rows = [{'area': f'장소{i:02d}', 'observed_at_kst': now-timedelta(minutes=20),
+                 'relative_level': '바쁜', 'industries': [{'industry': '커피', 'relative_level': '분주한'}]}
+                for i in range(82)]
+        rows[-1]['area'] = '오래된장소'
+        rows[-1]['observed_at_kst'] = now-timedelta(hours=2)
+        digest = cards.build_seoul_commerce_digest(rows, now_kst=now)
+        self.assertIn('최신 81곳 중 81곳', digest)
+        self.assertIn('지연 1곳·수집 실패 0곳 제외', digest)
+        self.assertIn('커피 — 분주한', digest)
+        self.assertNotIn('오래된장소', digest)
+        self.assertIn('매출액 순위가 아닙니다', digest)
+        self.assertIn('신한카드 내국인', digest)
+        self.assertEqual(digest, cards.build_seoul_commerce_digest(list(reversed(rows)), now_kst=now))
+        with self.assertRaises(cards.SourceUnavailable):
+            cards.build_seoul_commerce_digest(rows[:61], now_kst=now)
+        with self.assertRaises(cards.SourceUnavailable):
+            cards.build_seoul_commerce_digest(rows + [rows[0]], now_kst=now)
+        with self.assertRaises(cards.SourceUnavailable):
+            cards.build_seoul_commerce_digest(rows, now_kst=now+timedelta(hours=1))
+
+    def test_seoul_catalogue_contains_exactly_82_unique_codes(self):
+        self.assertEqual(len(cards.SEOUL_COMMERCE_CODES), 82)
+        self.assertEqual(len(set(cards.SEOUL_COMMERCE_CODES)), 82)
+        self.assertIn('POI122', cards.SEOUL_COMMERCE_CODES)
+        self.assertNotIn('POI008', cards.SEOUL_COMMERCE_CODES)
+
     PAGE = ('<h3>실시간 전력수급현황</h3><p class="info_top">2026.10.01(목) 23:40 <a>새로고침</a></p>'
             '<table><tr><th>공급능력</th><td id="avil">98,448 MW</td></tr>'
             '<tr><th>현재수요(전력시장)</th><td id="load">61,991 MW</td></tr>'
