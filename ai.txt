@@ -1,31 +1,31 @@
-🤖 26년 10월 1일 목요일 AI 뉴스
+🤖 26년 10월 3일 토요일 AI 뉴스
 
-래블업 "AI 지능도 측정하는 시대…1인 1에이전트 인프라 구축"
-https://www.aitimes.com/news/articleView.html?idxno=215865
+[AI 모델 신작] MS 음성인식 'MAI-트랜스크라이브-2-스트리밍' 등 6종
+https://www.aitimes.com/news/articleView.html?idxno=215930
 
-인셉션, 음성 에이전트 ‘머큐리 보이스’ 출시…'확산 모델'로 지연시간 한계 깼다
-https://www.aitimes.com/news/articleView.html?idxno=215864
+[게시판] KT, 소상공인 플랫폼 ‘사장이지’에 AI면접 서비스 출시 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=215928
 
-AI 가격 급락, 기술 역사상 최고 속도…기업 지속가능성은 '비상'
-https://www.aitimes.com/news/articleView.html?idxno=215863
+플리토, 첫 브랜드 ‘보글’로 글로벌 통역 시장 조준…"매출 상승 이어갈 것"
+https://www.aitimes.com/news/articleView.html?idxno=215927
 
-엔비디아, 물리 법칙 배우는 영상 생성 프레임워크 ‘파이시스-랭’ 공개
-https://www.aitimes.com/news/articleView.html?idxno=215862
+에스티엔인포텍, 크레도와 한국 시장 총판 계약 체결
+https://www.aitimes.com/news/articleView.html?idxno=215921
 
-링크드인 "AI 안전 직종 채용 91% 급증...고용 한파 속 틈새 성장"
-https://www.aitimes.com/news/articleView.html?idxno=215861
+[게시판] LG유플러스, 옵트에이아이와 AI 모델 경량화 협력 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=215920
 
-"증시 폭락해서라도 AI 기업 IPO 막아야"…마이클 버리의 강력 경고
-https://www.aitimes.com/news/articleView.html?idxno=215860
+업스테이지, 판단 전용 AI ‘솔라 디사이드’ 출시…“제브보다 빠르고 정확”
+https://www.aitimes.com/news/articleView.html?idxno=215919
 
-GPU 클라우드 제공업체 GMI, 엔비디아 등으로부터 9000억 투자 유치
-https://www.aitimes.com/news/articleView.html?idxno=215859
+백악관에 모인 AI 수장들…젠슨 황·저커버그, 아모데이에 '질문 세례'
+https://www.aitimes.com/news/articleView.html?idxno=215918
 
-영국 MI5, 중국 학술 침투에 ‘간첩 경보’…대학에 협력 중단 요구
-https://www.aitimes.com/news/articleView.html?idxno=215856
+"다섯 손가락 필요 없다"...보스턴 다이내믹스, 네 손가락 로봇 손 공개
+https://www.aitimes.com/news/articleView.html?idxno=215916
 
-애플, 13일 스마트홈 허브 공개…'AI 시리' 앞세워 아마존·구글에 도전장
-https://www.aitimes.com/news/articleView.html?idxno=215852
+"콜센터 AI 말 끊어도 알아듣는다"...포지큐브, 차세대 AICC 개발
+https://www.aitimes.com/news/articleView.html?idxno=215914
 
-비드래프트, 법률 데이터 학습 없이 글로벌 벤치마크 1위 달성
-https://www.aitimes.com/news/articleView.html?idxno=215851
+머스크, 미 국방부 '미래 전쟁' 자문으로 공직 복귀...AI·드론 중심 미래전 대비
+https://www.aitimes.com/news/articleView.html?idxno=215912
