@@ -587,7 +587,7 @@ def build_wikimedia_digest(histories, *, min_weekly_views=100):
     growing = [row for row in ranked if row[0] > 0][:3]
     if growing:
         change, recent, previous, title = growing[0]
-        lines[4:4] = ["", f"한눈에: 조회 증가가 가장 큰 문서는 '{title}'. "
+        lines[4:4] = ["", f"한눈에: 조회 증가율이 가장 큰 문서는 '{title}'. "
                       f"최근 7일 {recent:,}회로 직전 {previous:,}회보다 {change:.0f}% 늘었습니다.",
                       "증가율 순위는 아래 최소 조회수 기준을 넘는 문서만 비교합니다."]
         lines.append("조회 증가가 두드러진 문서")
