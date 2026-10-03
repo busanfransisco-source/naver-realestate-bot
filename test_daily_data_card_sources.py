@@ -259,7 +259,11 @@ class DailyDataCardSourceTests(unittest.TestCase):
         self.assertIn("금리 1,260회 (직전 7일 700회, +80%)", digest)
         self.assertIn("조회 증가 1개 · 감소 0개 · 보합 1개 문서", digest)
         self.assertIn("이번 주 읽기 흐름", digest)
-        self.assertIn("선정 문서만 본 작은 표본", digest)
+        self.assertNotIn("선정 문서만 본 작은 표본", digest)
+        self.assertTrue(digest.startswith('📚 경제 주제 읽기 관심도'))
+        self.assertIn('\n\n📈 조회 증가가 두드러진 문서\n\n', digest)
+        self.assertTrue(digest.endswith('직전 7일 50회 이상'))
+        self.assertNotIn('https://doc.wikimedia.org', digest)
         self.assertNotIn("부동산 14회", digest)
         self.assertIn("문서 조회수", digest)
 
@@ -303,7 +307,7 @@ class DailyDataCardSourceTests(unittest.TestCase):
                             for i in range(14)} for title, pair in pairs.items()}
         digest = cards.build_wikimedia_digest(histories)
         self.assertIn('증가율 공동 1위: 부동산 · 코스피', digest)
-        self.assertIn('가장 많이 읽힌 문서\n1. 환율 3,500회', digest)
+        self.assertIn('가장 많이 읽힌 문서\n\n1. 환율 3,500회', digest)
         self.assertIn('증가율 순위 비교 대상 2/3개 문서', digest)
 
     def test_wikimedia_request_identifies_client_and_article(self):

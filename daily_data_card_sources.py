@@ -585,8 +585,8 @@ def build_wikimedia_digest(histories, *, min_weekly_views=100):
         return f"{(recent / previous - 1) * 100:+.0f}%"
 
     lines = [
-        "경제 주제 읽기 관심도",
-        f"집계 마감: {day.isoformat()} (UTC) · 한국어 위키백과 문서 조회수",
+        "📚 경제 주제 읽기 관심도",
+        f"📅 집계 마감: {day.isoformat()} (UTC) · 한국어 위키백과 문서 조회수",
         f"선정 {len(histories)}개 문서 최근 7일 조회 합계 {total_recent:,}회 "
         f"(직전 7일 대비 {delta_label(total_recent, total_previous)})",
         f"비교 기간: {day - timedelta(days=6):%m/%d}~{day:%m/%d} vs "
@@ -608,14 +608,14 @@ def build_wikimedia_digest(histories, *, min_weekly_views=100):
             group_stats.append((label, recent, previous))
             groups.append(f"{label} {recent:,}회 ({delta_label(recent, previous)}) · {len(included)}개 문서")
     if groups:
-        lines.append("주제별 조회 합계")
+        lines.extend(["🗂️ 주제별 조회 합계", ""])
         lines.extend(groups)
         lines.append("")
     rising_count = sum(recent > previous for recent, previous in all_stats.values())
     falling_count = sum(recent < previous for recent, previous in all_stats.values())
     flat_count = len(all_stats) - rising_count - falling_count
     top_group = max(group_stats, key=lambda row: row[1], default=None)
-    lines.append("이번 주 읽기 흐름")
+    lines.extend(["📊 이번 주 읽기 흐름", ""])
     lines.append(f"조회 증가 {rising_count}개 · 감소 {falling_count}개 · 보합 {flat_count}개 문서")
     if top_group and total_recent:
         label, recent, previous = top_group
@@ -645,7 +645,7 @@ def build_wikimedia_digest(histories, *, min_weekly_views=100):
         key=lambda row: (-row[0], row[2]),
     )[:3]
     if most_read:
-        lines.append("가장 많이 읽힌 문서")
+        lines.extend(["🏆 가장 많이 읽힌 문서", ""])
         lines.extend(
             f"{index}. {title} {recent:,}회"
             for index, (recent, previous, title) in enumerate(most_read, 1)
@@ -654,10 +654,10 @@ def build_wikimedia_digest(histories, *, min_weekly_views=100):
     growing = [row for row in ranked if row[0] > 0][:3]
     if growing:
         change, recent, previous, title = growing[0]
-        lines[4:4] = ["", f"한눈에: 조회 증가율이 가장 큰 문서는 '{title}'. "
+        lines[4:4] = ["", f"📌 한눈에: 조회 증가율이 가장 큰 문서는 '{title}'. "
                       f"최근 7일 {recent:,}회로 직전 {previous:,}회보다 {change:.0f}% 늘었습니다.",
                       "증가율 순위는 아래 최소 조회수 기준을 넘는 문서만 비교합니다."]
-        lines.append("조회 증가가 두드러진 문서")
+        lines.extend(["📈 조회 증가가 두드러진 문서", ""])
         lines.extend(
             f"{index}. {title} {recent:,}회 (직전 7일 {previous:,}회, +{change:.0f}%)"
             for index, (change, recent, previous, title) in enumerate(growing, 1)
@@ -665,8 +665,9 @@ def build_wikimedia_digest(histories, *, min_weekly_views=100):
         absolute_leader = max([row for row in ranked if row[0] > 0],
                               key=lambda row: (row[1] - row[2], row[3]))
         _, leader_recent, leader_previous, leader_title = absolute_leader
-        lines.append(f"조회 증가 횟수가 가장 큰 문서: {leader_title} +{leader_recent-leader_previous:,}회 "
-                     f"({leader_previous:,}→{leader_recent:,}회), 순위 비교 대상 중입니다. 증가율 1위와 다를 수 있습니다.")
+        lines.extend(["", f"🔎 조회 증가 횟수가 가장 큰 문서: {leader_title} +{leader_recent-leader_previous:,}회 "
+                     f"({leader_previous:,}→{leader_recent:,}회), 순위 비교 대상 중입니다.",
+                     "", "증가율 1위와 다를 수 있습니다."])
         tied_growth = [row[3] for row in ranked if row[0] == change]
         if len(tied_growth) > 1:
             lines.append("증가율 공동 1위: " + " · ".join(sorted(tied_growth)))
@@ -677,14 +678,14 @@ def build_wikimedia_digest(histories, *, min_weekly_views=100):
         }
         for label, titles in WIKIMEDIA_TOPICS.items():
             if title in titles:
-                lines.append(f"'{title}'에서 이어 읽을 점: {reading_questions[label]}")
+                lines.extend(["", f"💡 '{title}'에서 이어 읽을 점: {reading_questions[label]}"])
                 break
     else:
         lines.append("표본 기준을 넘는 관심 증가 문서가 없습니다.")
     lines.append("")
     declining = sorted((row for row in ranked if row[0] < 0), key=lambda row: row[0])[:2]
     if declining:
-        lines.append("조회 감소가 두드러진 문서")
+        lines.extend(["📉 조회 감소가 두드러진 문서", ""])
         lines.extend(
             f"{index}. {title} {recent:,}회 (직전 7일 {previous:,}회, {change:.0f}%)"
             for index, (change, recent, previous, title) in enumerate(declining, 1)
@@ -692,12 +693,8 @@ def build_wikimedia_digest(histories, *, min_weekly_views=100):
     lines.extend(
         [
             "",
-            f"순위 표시 기준: 최근 7일 {min_weekly_views:,}회 이상 · "
+            f"📏 순위 표시 기준: 최근 7일 {min_weekly_views:,}회 이상 · "
             f"직전 7일 {min_weekly_views / 2:g}회 이상",
-            "※ 선정 문서만 본 작은 표본입니다. 같은 사람의 여러 문서 조회도 각각 집계됩니다.",
-            "검색량·여론 전체·매수 수요가 아니라, 이 문서들의 읽기 변화입니다.",
-            "출처: Wikimedia Analytics API (CC0)",
-            "https://doc.wikimedia.org/generated-data-platform/aqs/analytics-api/documentation/getting-started.html",
         ]
     )
     return "\n".join(lines)
