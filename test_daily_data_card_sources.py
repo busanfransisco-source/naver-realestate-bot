@@ -18,13 +18,13 @@ class DailyDataCardSourceTests(unittest.TestCase):
         self.assertIn('지연 1곳·수집 실패 0곳 제외', digest)
         self.assertIn('커피 — 분주한', digest)
         self.assertNotIn('오래된장소', digest)
-        self.assertIn('매출액 순위가 아닙니다', digest)
-        self.assertIn('신한카드 내국인', digest)
+        self.assertNotIn('매출액 순위가 아닙니다', digest)
+        self.assertNotIn('신한카드 내국인', digest)
         self.assertIn('자료 확보율 98.8% (81/82곳)', digest)
         self.assertIn('바쁨·분주 비중 100.0%', digest)
-        self.assertIn('전일 비중과 바로 비교하지 않습니다', digest)
-        for paragraph in ('활용:', '비중의 분모', '예시는 단계별', '신한카드 내국인', '출처:'):
-            self.assertIn('\n\n' + paragraph, digest)
+        for removed in ('비중의 분모', '전일 비중과 바로 비교하지 않습니다', '출처:', 'https://data.seoul.go.kr'):
+            self.assertNotIn(removed, digest)
+        self.assertIn('\n\n활용:', digest)
         self.assertEqual(digest, cards.build_seoul_commerce_digest(list(reversed(rows)), now_kst=now))
         with self.assertRaises(cards.SourceUnavailable):
             cards.build_seoul_commerce_digest(rows[:61], now_kst=now)
