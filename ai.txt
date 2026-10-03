@@ -1,9 +1,15 @@
 🤖 26년 10월 3일 토요일 AI 뉴스
 
+'AI 반감' 가리는 귀여운 캐릭터…'뮤즈' 흥행 이끈 알렉산드르 왕
+https://www.aitimes.com/news/articleView.html?idxno=215941
+
+[AI 이슈트렌드] 계속된 DMZ 논란 속 트럼프 LNG 협박·청주 흉기 성폭행 화제
+https://www.aitimes.com/news/articleView.html?idxno=215940
+
 AWS, AI 데이터센터 반발 정면 돌파…지역사회에 1.4조 추가 투입
 https://www.aitimes.com/news/articleView.html?idxno=215939
 
-애플, 맥OS '전체 디스크 접근' 제어 강화...AI 에이전트 무단 접근 막는다
+애플, AI 에이전트 무단 접근 증가로 맥OS '전체 디스크 접근' 제어 강화
 https://www.aitimes.com/news/articleView.html?idxno=215938
 
 엔비디아, 4999달러짜리 ‘DGX 스파크’ 출시...메모리 대란에 가격 낮췄다
@@ -12,20 +18,14 @@ https://www.aitimes.com/news/articleView.html?idxno=215937
 메타, 오픈소스 '뮤즈 가젯' 공개...AI 에이전트 하드웨어 이식 본격화
 https://www.aitimes.com/news/articleView.html?idxno=215936
 
-회계 업무서 AI '100%’ vs 인간 '37%'...역전 18개월 만에 '완벽' 단계로
+회계 업무서 AI '완벽' 단계 도달…인간 '37%' 역전
 https://www.aitimes.com/news/articleView.html?idxno=215935
 
 AI '생각의 사슬' 무력화되나…'순환 깊이' 기술이 부른 불투명성 우려
 https://www.aitimes.com/news/articleView.html?idxno=215934
 
-딥시크, 슈퍼 앱 형태 데스크톱 앱 '딥시크 하네스' 출시..."챗·코딩·문서 통합"
+딥시크, 데스크톱 앱 '딥시크 하네스' 출시..."챗·코딩·문서 통합"
 https://www.aitimes.com/news/articleView.html?idxno=215933
 
 '나만의 클로드 코드' 만든다...앤트로픽, 커스텀 확장 기능 '모드' 출시
 https://www.aitimes.com/news/articleView.html?idxno=215932
-
-앤트로픽, '클로드 프론티어 아카데미' 출범... 1300억 투입해 FDE 1만명 양성
-https://www.aitimes.com/news/articleView.html?idxno=215931
-
-[AI 모델 신작] MS 음성인식 'MAI-트랜스크라이브-2-스트리밍' 등 6종
-https://www.aitimes.com/news/articleView.html?idxno=215930
