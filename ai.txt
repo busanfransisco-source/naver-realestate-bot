@@ -3,29 +3,29 @@
 AWS, AI 데이터센터 반발 정면 돌파…지역사회에 1.4조 추가 투입
 https://www.aitimes.com/news/articleView.html?idxno=215939
 
+애플, 맥OS '전체 디스크 접근' 제어 강화...AI 에이전트 무단 접근 막는다
+https://www.aitimes.com/news/articleView.html?idxno=215938
+
+엔비디아, 4999달러짜리 ‘DGX 스파크’ 출시...메모리 대란에 가격 낮췄다
+https://www.aitimes.com/news/articleView.html?idxno=215937
+
+메타, 오픈소스 '뮤즈 가젯' 공개...AI 에이전트 하드웨어 이식 본격화
+https://www.aitimes.com/news/articleView.html?idxno=215936
+
 회계 업무서 AI '100%’ vs 인간 '37%'...역전 18개월 만에 '완벽' 단계로
 https://www.aitimes.com/news/articleView.html?idxno=215935
 
 AI '생각의 사슬' 무력화되나…'순환 깊이' 기술이 부른 불투명성 우려
 https://www.aitimes.com/news/articleView.html?idxno=215934
 
+딥시크, 슈퍼 앱 형태 데스크톱 앱 '딥시크 하네스' 출시..."챗·코딩·문서 통합"
+https://www.aitimes.com/news/articleView.html?idxno=215933
+
+'나만의 클로드 코드' 만든다...앤트로픽, 커스텀 확장 기능 '모드' 출시
+https://www.aitimes.com/news/articleView.html?idxno=215932
+
+앤트로픽, '클로드 프론티어 아카데미' 출범... 1300억 투입해 FDE 1만명 양성
+https://www.aitimes.com/news/articleView.html?idxno=215931
+
 [AI 모델 신작] MS 음성인식 'MAI-트랜스크라이브-2-스트리밍' 등 6종
 https://www.aitimes.com/news/articleView.html?idxno=215930
-
-[AI카툰] Bob, Senior IT guy - 밥, AI가 못 들어가는 틈새시장 개발자
-https://www.aitimes.com/news/articleView.html?idxno=215929
-
-[게시판] KT, 소상공인 플랫폼 ‘사장이지’에 AI면접 서비스 출시 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=215928
-
-플리토, 첫 브랜드 ‘보글’로 글로벌 통역 시장 조준…"매출 상승 이어갈 것"
-https://www.aitimes.com/news/articleView.html?idxno=215927
-
-에스티엔인포텍, 크레도와 한국 시장 총판 계약 체결
-https://www.aitimes.com/news/articleView.html?idxno=215921
-
-[게시판] LG유플러스, 옵트에이아이와 AI 모델 경량화 협력 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=215920
-
-업스테이지, 판단 전용 AI ‘솔라 디사이드’ 출시…“제브보다 빠르고 정확”
-https://www.aitimes.com/news/articleView.html?idxno=215919
