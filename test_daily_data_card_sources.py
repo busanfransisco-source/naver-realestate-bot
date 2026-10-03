@@ -165,6 +165,10 @@ class DailyDataCardSourceTests(unittest.TestCase):
         self.assertIn("최근 30일 평균 59.5점 · 최저 45점 / 최고 74점", digest)
         self.assertIn("현재 위치: 최저~최고 구간의 100% 지점", digest)
         self.assertIn("가격 전망·매수 신호가 아닙니다", digest)
+        self.assertTrue(digest.startswith('🪙 비트코인 공포·탐욕 지수'))
+        self.assertIn('\n\n📊 최근 흐름\n\n', digest)
+        self.assertNotIn('https://alternative.me/', digest)
+        self.assertTrue(digest.endswith('매수 신호가 아닙니다.'))
         session.get.assert_called_once_with(
             cards.CRYPTO_URL,
             params={"limit": 31, "format": "json"},
@@ -186,13 +190,13 @@ class DailyDataCardSourceTests(unittest.TestCase):
         flat = [(newest-timedelta(days=i), 50, 'Neutral') for i in range(30)]
         digest = cards.build_crypto_digest(flat)
         self.assertIn('30일간 같은 점수', digest)
-        self.assertIn('낮은 날 0일 · 같은 날 30일 · 높은 날 0일', digest)
+        self.assertIn('낮은 날 0일\n• 같은 날 30일\n• 높은 날 0일', digest)
         self.assertIn("'중립' 분류가 최소 30일 연속", digest)
         mixed = [(newest, 50, 'Neutral')] + [
             (newest-timedelta(days=i), 49 if i % 2 else 50, 'Fear')
             for i in range(1, 30)]
         digest = cards.build_crypto_digest(mixed)
-        self.assertIn('낮은 날 15일 · 같은 날 15일 · 높은 날 0일', digest)
+        self.assertIn('낮은 날 15일\n• 같은 날 15일\n• 높은 날 0일', digest)
         self.assertIn("'중립' 분류가 1일 연속", digest)
         self.assertIn("전일 '공포'에서 분류가 바뀌었습니다", digest)
         broken = flat.copy()

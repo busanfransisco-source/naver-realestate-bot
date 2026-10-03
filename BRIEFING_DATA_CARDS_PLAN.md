@@ -114,6 +114,8 @@
 
 ## 출처 URL
 
+- 비트코인 공유 본문은 🪙 제목, 📌 요약, 📊 최근 흐름, 📍 30일 위치, 🔎 심리 지속, 💡 읽는 법, ⚠️ 주의문으로 구분한다. 관측일 비교는 세 줄로 나누고 마지막 주의문까지만 출력한다. Alternative.me 출처 표시는 유지하되 본문 끝 URL은 붙이지 않는다. 원자료 기준일과 수치는 변경하지 않는다.
+
 - 서울시: https://data.seoul.go.kr/dataList/OA-22385/A/1/datasetView.do
 - Alternative.me: https://alternative.me/crypto/fear-and-greed-index/
 - KPX 전력수급: https://www.data.go.kr/data/15056640/openapi.do
