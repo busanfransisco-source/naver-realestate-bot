@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-10-04 08:01:25",
+  "updated_at_kst": "2026-10-04 08:09:47",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 4일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "최소 100억’ 싸이 사는 남산 하이앤드 주거단지는 어디[누구집]",
+      "url": "https://n.news.naver.com/mnews/article/018/0006380616"
+    },
     {
       "title": "'고양 장항 아테라' 줍줍 6가구 나온다…국평 6억원대",
       "url": "https://n.news.naver.com/mnews/article/003/0014232425"
@@ -38,10 +42,6 @@
     {
       "title": "“2년 안에 리모델링 끝낸다” 철거 않고 새 집 짓는 삼성물산 ‘넥스트 리모델링’ [헤럴드머니페스타 2026]",
       "url": "https://n.news.naver.com/mnews/article/016/0002705248"
-    },
-    {
-      "title": "‘반도체머니’ 영통보다 더 올랐다…올해 15% 뛴 이곳 어디?",
-      "url": "https://n.news.naver.com/mnews/article/011/0004668050"
     }
   ]
 }
