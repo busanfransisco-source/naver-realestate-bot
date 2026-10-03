@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-10-03 08:54:52",
+  "updated_at_kst": "2026-10-03 09:02:03",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 3일 토요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "청라에 10년 만의 대단지…'청라 아크원 푸르지오' 이달 분양",
+      "url": "https://n.news.naver.com/mnews/article/003/0014231377"
+    },
+    {
+      "title": "“서울보다 더 뜨겁다”…수원 팔달·영통, 용인 수지까지 ‘핵심지 행진’",
+      "url": "https://n.news.naver.com/mnews/article/009/0005743512"
+    },
     {
       "title": "\"금리 대폭 올리기 힘들어\"…전문가가 본 수도권 집값 안정의 조건",
       "url": "https://n.news.naver.com/mnews/article/003/0014231365"
@@ -34,14 +42,6 @@
     {
       "title": "분당 한솔1·2·3단지, 특별정비계획 수용…최고 37층·3447가구로 탈바꿈",
       "url": "https://n.news.naver.com/mnews/article/011/0004667921"
-    },
-    {
-      "title": "동탄 3.4억→18.6억, 판교 3.9억→20.9억…2기 신도시 집값 5배",
-      "url": "https://n.news.naver.com/mnews/article/119/0003139219"
-    },
-    {
-      "title": "‘주거 실핏줄’ 빌라 공급 급감…금융 지원 통해 생태계 복원 시급[집슐랭]",
-      "url": "https://n.news.naver.com/mnews/article/011/0004667920"
     }
   ]
 }
