@@ -15,7 +15,7 @@ class DailyDataCardSourceTests(unittest.TestCase):
         rows[-1]['observed_at_kst'] = now-timedelta(hours=2)
         digest = cards.build_seoul_commerce_digest(rows, now_kst=now)
         self.assertIn('최신 81곳 중 81곳', digest)
-        self.assertIn('지연·배포 여유 부족 1곳·수집 실패 0곳 제외', digest)
+        self.assertIn('지연 1곳·수집 실패 0곳 제외', digest)
         self.assertIn('커피 — 분주한', digest)
         self.assertNotIn('오래된장소', digest)
         self.assertIn('매출액 순위가 아닙니다', digest)
@@ -31,17 +31,18 @@ class DailyDataCardSourceTests(unittest.TestCase):
         with self.assertRaises(cards.SourceUnavailable):
             cards.build_seoul_commerce_digest(rows, now_kst=now+timedelta(hours=1))
 
-    def test_seoul_reserves_ten_minutes_without_extending_source_expiry(self):
+    def test_seoul_accepts_twenty_five_minute_source_but_excludes_over_thirty(self):
         now = datetime(2026, 10, 3, 18, 15)
         rows = [{'area': f'장소{i:02d}', 'observed_at_kst': now-timedelta(minutes=10),
                  'relative_level': '보통', 'industries': []} for i in range(82)]
         for row in rows[62:]:
             row['observed_at_kst'] = now-timedelta(minutes=25)
         digest = cards.build_seoul_commerce_digest(rows, now_kst=now)
-        self.assertIn('최신 62곳', digest)
-        self.assertIn('18:05~18:05', digest)
-        self.assertIn('10분 여유', digest)
-        rows[61]['observed_at_kst'] = now-timedelta(minutes=25)
+        self.assertIn('최신 82곳', digest)
+        self.assertIn('17:50~18:05', digest)
+        self.assertIn('최근 30분 자료만 반영', digest)
+        for row in rows[61:]:
+            row['observed_at_kst'] = now-timedelta(minutes=31)
         with self.assertRaises(cards.SourceUnavailable):
             cards.build_seoul_commerce_digest(rows, now_kst=now)
 
