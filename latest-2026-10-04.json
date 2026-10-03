@@ -1,8 +1,20 @@
 {
-  "updated_at_kst": "2026-10-04 07:31:21",
+  "updated_at_kst": "2026-10-04 08:01:25",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 4일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "'고양 장항 아테라' 줍줍 6가구 나온다…국평 6억원대",
+      "url": "https://n.news.naver.com/mnews/article/003/0014232425"
+    },
+    {
+      "title": "천장 높이고 지하 활용하고…'K아파트' 공간 혁신",
+      "url": "https://n.news.naver.com/mnews/article/119/0003139321"
+    },
+    {
+      "title": "'올해 집살 때 이게 달랐다'…강남 9%·노원38%",
+      "url": "https://n.news.naver.com/mnews/article/215/0001268124"
+    },
     {
       "title": "같은 동네인데 2~3억원 차이…‘물 보이는 집’이 비싼 이유",
       "url": "https://n.news.naver.com/mnews/article/119/0003139316"
@@ -30,18 +42,6 @@
     {
       "title": "‘반도체머니’ 영통보다 더 올랐다…올해 15% 뛴 이곳 어디?",
       "url": "https://n.news.naver.com/mnews/article/011/0004668050"
-    },
-    {
-      "title": "명절 통행료 공짜 선심에 도로公 매년 985억 손실",
-      "url": "https://n.news.naver.com/mnews/article/003/0014232409"
-    },
-    {
-      "title": "올해 도시정비 수주 40조 눈앞…현대·삼성·GS '빅3'가 60% 쓸었다",
-      "url": "https://n.news.naver.com/mnews/article/421/0009208570"
-    },
-    {
-      "title": "대출 더 조이면 누가 영향받나…노도강 매입자금 30%대가 대출",
-      "url": "https://n.news.naver.com/mnews/article/001/0016356196"
     }
   ]
 }
