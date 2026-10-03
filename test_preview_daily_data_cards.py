@@ -6,6 +6,14 @@ import check_daily_data_connections as diagnostics
 
 
 class PreviewDailyDataCardsTests(TestCase):
+    def test_selected_seoul_does_not_fetch_other_sources(self):
+        with mock.patch.object(preview, 'fetch_crypto_history') as crypto, \
+             mock.patch.object(preview, 'fetch_wikimedia_digest') as wiki:
+            contents = preview.preview_contents(only=('seoulcommerce',))
+        self.assertEqual(set(contents), {'seoulcommerce'})
+        crypto.assert_not_called()
+        wiki.assert_not_called()
+
     def setUp(self):
         patcher = mock.patch.object(preview, 'fetch_seoul_commerce_digest',
                                     side_effect=preview.SourceUnavailable('test only'))

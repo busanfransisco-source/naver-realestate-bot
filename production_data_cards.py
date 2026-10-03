@@ -96,11 +96,14 @@ def load_contents(path=CACHE, *, now=None):
                               or '자료가 없거나 원자료 유효시간이 지났습니다') for key in KEYS}
 
 
-def collect(path=CACHE):
+def collect(path=CACHE, *, only=None):
     # Lazy import avoids the preview renderer's dependency on gen_briefing.
     from preview_daily_data_cards import preview_contents
     diagnostics = {}
-    bodies = preview_contents(diagnostics=diagnostics)
+    selected = tuple(only) if only is not None else KEYS
+    if not selected or set(selected) - set(KEYS):
+        raise ValueError('Unknown data card selection')
+    bodies = preview_contents(diagnostics=diagnostics, only=selected)
     now = datetime.now(KST)
     try:
         previous = json.loads(Path(path).read_text(encoding='utf-8')).get('cards', {})
@@ -108,9 +111,13 @@ def collect(path=CACHE):
         previous = {}
     if not isinstance(previous, dict):
         previous = {}
-    entries = {key: card_metadata(key, bodies[key]) for key in KEYS}
+    entries = {key: card_metadata(key, bodies[key]) if key in selected else
+               (previous[key] if isinstance(previous.get(key), dict) else card_metadata(key, pending_body(key)))
+               for key in KEYS}
     # Other APIs can take time after Seoul's call. Recheck at collection completion.
     for key, entry in entries.items():
+        if key not in selected:
+            continue
         reason = diagnostics.get(key)
         if not valid_card(key, entry, now):
             reason = reason or '원자료 기준일·시각 검증 실패 또는 유효시간 만료'
@@ -132,13 +139,14 @@ def collect(path=CACHE):
             'cards': entries}
     Path(path).write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print('Source checks:', ', '.join(f"{key}={data['cards'][key]['ready']}" for key in KEYS))
-    print('Refresh status:', ', '.join(f"{key}={data['cards'][key]['refreshStatus']}" for key in KEYS))
+    print('Refresh status:', ', '.join(f"{key}={data['cards'][key].get('refreshStatus', 'unchanged')}" for key in KEYS))
     return data
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--collect', action='store_true')
+    parser.add_argument('--card', choices=KEYS)
     args = parser.parse_args()
     if args.collect:
-        collect()
+        collect(only=(args.card,) if args.card else None)

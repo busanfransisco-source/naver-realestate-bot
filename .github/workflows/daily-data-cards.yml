@@ -1,10 +1,17 @@
 name: Refresh three daily data cards
 on:
   workflow_dispatch:
+    inputs:
+      card:
+        description: Card to refresh
+        type: choice
+        default: seoulcommerce
+        options: [seoulcommerce, cryptofear, wikiinterest]
   schedule:
-    # KST 09:15 / 10:15 / 18:05 and 18:15. GitHub cron may be delayed.
-    - cron: '15 0,1,9 * * *'
-    - cron: '5 9 * * *'
+    # Each card once a day: KST crypto09:15 / wiki10:15 / Seoul18:15.
+    - cron: '15 0 * * *'
+    - cron: '15 1 * * *'
+    - cron: '15 9 * * *'
 permissions:
   contents: write
 concurrency:
@@ -23,8 +30,9 @@ jobs:
           python-version: '3.11'
       - run: pip install -r requirements.txt
       - name: Collect fresh source snapshots (no power calls)
-        run: python production_data_cards.py --collect
+        run: python production_data_cards.py --collect --card "$REFRESH_CARD"
         env:
+          REFRESH_CARD: ${{ inputs.card || (github.event.schedule == '15 0 * * *' && 'cryptofear') || (github.event.schedule == '15 1 * * *' && 'wikiinterest') || 'seoulcommerce' }}
           SEOUL_OPEN_DATA_KEY: ${{ secrets.SEOUL_OPEN_DATA_KEY }}
       - name: Publish cache and regenerate all 29 cards
         run: |

@@ -104,6 +104,21 @@ class ProductionDataCardsTests(unittest.TestCase):
         entry['expiresAtKst'] = '2099-01-01T00:00:00+09:00'
         self.assertFalse(cards.stored_seoul_snapshot(entry, self.now))
 
+    def test_selected_refresh_preserves_other_cards_exactly(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / 'cards.json'
+            old = {key: cards.card_metadata(key, body) for key, body in
+                   zip(cards.KEYS, (self.seoul, self.crypto, self.wiki))}
+            path.write_text(json.dumps({'cards': old}), encoding='utf-8')
+            with patch('production_data_cards.datetime') as clock, \
+                 patch('preview_daily_data_cards.preview_contents', return_value={'seoulcommerce': self.seoul}) as fetch:
+                clock.now.return_value = self.now
+                clock.fromisoformat.side_effect = datetime.fromisoformat
+                updated = cards.collect(path, only=('seoulcommerce',))
+            self.assertEqual(fetch.call_args.kwargs['only'], ('seoulcommerce',))
+            for key in ('cryptofear', 'wikiinterest'):
+                self.assertEqual(updated['cards'][key], old[key])
+
 
 if __name__ == '__main__':
     unittest.main()
