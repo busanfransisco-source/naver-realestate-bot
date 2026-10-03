@@ -348,6 +348,7 @@ def build_html(*, new_data_contents=None):
     <h2>{number}. {label}</h2>
     <button class="copy-btn" onclick="copySection('{key}', this)">복사</button>
   </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
   <textarea id="ta-{key}" class="preview" readonly>{content_escaped}</textarea>
   <script>window.__content_{key} = {content_json};</script>
 </section>""")
@@ -466,6 +467,8 @@ function copySection(key, btn) {{
   // 자동화/인앱 웹뷰 환경)에서 권한 대기 상태로 무한정 멈출 수 있어서
   // 보조 수단으로만 쓴다.
   const ta = document.getElementById('ta-' + key);
+  const previewValue = ta.value;
+  ta.value = window['__content_' + key] || previewValue;
   let copied = false;
   try {{
     ta.style.position = 'fixed';
@@ -476,6 +479,8 @@ function copySection(key, btn) {{
     copied = document.execCommand('copy');
   }} catch (e) {{
     copied = false;
+  }} finally {{
+    ta.value = previewValue;
   }}
 
   if (copied) {{
@@ -499,6 +504,17 @@ function refreshDataCardExpiry() {{
     if (!Number.isFinite(expiry) || Date.now() >= expiry) {{
       const ta = card.querySelector('textarea');
       const key = ta.id.slice(3);
+      if (key === 'seoulcommerce' && Number.isFinite(expiry) && !ta.value.includes('집계 대기')) {{
+        const notice = '이전 수집자료입니다. 아래 원자료 기준시각을 확인하십시오. 최신 상태가 아니며 자동공유는 보류됩니다.';
+        const status = card.querySelector('.data-status');
+        status.textContent = notice;
+        status.style.display = 'block';
+        window['__content_' + key] = notice + '\\n\\n' + ta.value;
+        const button = card.querySelector('.copy-btn');
+        button.disabled = false;
+        button.textContent = '이전 자료 복사';
+        return;
+      }}
       const pending = !Number.isFinite(expiry) && ta.value.includes('집계 대기')
         ? ta.value
         : '집계 대기 · 원자료 유효시간이 지났습니다.\\n최신 원자료 검증 후 업데이트됩니다.\\n자동공유 비활성';

@@ -67,6 +67,20 @@ def valid_card(key, entry, now):
         return False
 
 
+def stored_seoul_snapshot(entry, now):
+    """A dated last-good snapshot can remain visible, but is not send-ready."""
+    if not isinstance(entry, dict):
+        return False
+    try:
+        derived = card_metadata('seoulcommerce', entry['body'])
+        return (derived['ready'] and all(entry.get(field) == derived[field]
+                for field in ('sourceDate', 'sourceWindow', 'expiresAtKst'))
+                and datetime.fromisoformat(derived['expiresAtKst']) - timedelta(minutes=30)
+                <= now + timedelta(minutes=5))
+    except (KeyError, TypeError, ValueError):
+        return False
+
+
 def load_contents(path=CACHE, *, now=None):
     now = now or datetime.now(KST)
     try:
@@ -76,7 +90,8 @@ def load_contents(path=CACHE, *, now=None):
         cards = {}
     if not isinstance(cards, dict):
         cards = {}
-    return {key: cards[key]['body'] if valid_card(key, cards.get(key), now)
+    return {key: cards[key]['body'] if (valid_card(key, cards.get(key), now)
+            or key == 'seoulcommerce' and stored_seoul_snapshot(cards.get(key), now))
             else pending_body(key, (cards.get(key) if isinstance(cards.get(key), dict) else {}).get('failureReason')
                               or '자료가 없거나 원자료 유효시간이 지났습니다') for key in KEYS}
 
@@ -102,6 +117,10 @@ def collect(path=CACHE):
             if valid_card(key, previous.get(key), now):
                 entries[key] = entry = dict(previous[key])
                 entry.update(refreshStatus='retained_valid_source', checkedAtKst=now.isoformat(), failureReason=reason)
+            elif key == 'seoulcommerce' and stored_seoul_snapshot(previous.get(key), now):
+                entries[key] = entry = dict(previous[key])
+                entry.update(ready=False, refreshStatus='retained_expired_source',
+                             checkedAtKst=now.isoformat(), failureReason=reason)
             else:
                 entry.update(ready=False, body=pending_body(key, reason), refreshStatus='pending',
                              checkedAtKst=now.isoformat(), failureReason=reason)

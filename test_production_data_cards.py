@@ -49,7 +49,7 @@ class ProductionDataCardsTests(unittest.TestCase):
             self.assertTrue(all('집계 대기' in body for body in cards.load_contents(path, now=self.now).values()))
             path.write_text(json.dumps({'cards': {'seoulcommerce': cards.card_metadata('seoulcommerce', self.seoul)}}), encoding='utf-8')
             self.assertEqual(cards.load_contents(path, now=self.now)['seoulcommerce'], self.seoul)
-            self.assertIn('집계 대기', cards.load_contents(path, now=self.now + timedelta(hours=1))['seoulcommerce'])
+            self.assertEqual(cards.load_contents(path, now=self.now + timedelta(hours=1))['seoulcommerce'], self.seoul)
 
     def test_production_main_always_requests_29_cards(self):
         with patch('production_data_cards.load_contents', return_value={key: cards.pending_body(key) for key in cards.KEYS}), patch('gen_briefing.build_html', return_value='rendered') as build, patch('builtins.open', unittest.mock.mock_open()):
@@ -86,7 +86,7 @@ class ProductionDataCardsTests(unittest.TestCase):
             self.assertFalse(data['cards']['seoulcommerce']['ready'])
             self.assertIn('보류 사유:', data['cards']['seoulcommerce']['body'])
 
-    def test_collect_never_reuses_expired_source(self):
+    def test_collect_retains_expired_seoul_for_display_but_never_sending(self):
         with tempfile.TemporaryDirectory() as temp:
             path = Path(temp) / 'cards.json'
             path.write_text(json.dumps({'cards': {'seoulcommerce': cards.card_metadata('seoulcommerce', self.seoul)}}), encoding='utf-8')
@@ -95,7 +95,14 @@ class ProductionDataCardsTests(unittest.TestCase):
                 clock.fromisoformat.side_effect = datetime.fromisoformat
                 data = cards.collect(path)
             self.assertFalse(data['cards']['seoulcommerce']['ready'])
-            self.assertNotIn('18:10~18:15', data['cards']['seoulcommerce']['body'])
+            self.assertIn('18:10~18:15', data['cards']['seoulcommerce']['body'])
+            self.assertEqual(data['cards']['seoulcommerce']['refreshStatus'], 'retained_expired_source')
+            self.assertFalse(cards.valid_card('seoulcommerce', data['cards']['seoulcommerce'], self.now + timedelta(hours=1)))
+
+    def test_stored_snapshot_rejects_corrupted_metadata(self):
+        entry = cards.card_metadata('seoulcommerce', self.seoul)
+        entry['expiresAtKst'] = '2099-01-01T00:00:00+09:00'
+        self.assertFalse(cards.stored_seoul_snapshot(entry, self.now))
 
 
 if __name__ == '__main__':
