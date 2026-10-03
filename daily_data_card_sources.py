@@ -185,33 +185,52 @@ def build_seoul_commerce_digest(rows, *, now_kst=None, expected_count=82):
     active_count = len(grouped['바쁜']) + len(grouped['분주'])
     source_min = min(row['observed_at_kst'] for row in fresh)
     source_max = max(row['observed_at_kst'] for row in fresh)
-    lines = ["서울 주요 상권 실시간",
-             f"조회: {now_kst:%Y-%m-%d %H:%M} (KST)",
-             f"원자료 시각: {source_min:%H:%M}~{source_max:%H:%M} · 최근 30분 자료만 반영",
-             "",
-             f"한눈에: 최신 {len(fresh)}곳 중 {active_count}곳이 평소보다 바쁘거나 분주합니다.",
-             f"자료 확보율 {len(fresh)/expected_count*100:.1f}% ({len(fresh)}/{expected_count}곳) · "
-             f"최신 표본의 바쁨·분주 비중 {active_count/len(fresh)*100:.1f}%",
-             f"분주 {len(grouped['분주'])}곳 · 바쁨 {len(grouped['바쁜'])}곳 · "
-             f"보통 {len(grouped['보통'])}곳 · 한산 {len(grouped['한산'])}곳",
-             f"대상 {expected_count}곳 중 지연 {len(rows)-len(fresh)}곳·수집 실패 {expected_count-len(rows)}곳 제외",
-             "", "평소 대비 소비가 활발한 상권"]
+    weekday = '월화수목금토일'[now_kst.weekday()]
+    lines = ["📍 서울 주요 상권 실시간",
+             f"{now_kst.month}월 {now_kst.day}일({weekday}) 소비 현황", "",
+             f"🕚 조회: {now_kst:%Y-%m-%d %H:%M} (KST)",
+             f"원자료 시각: {source_min:%H:%M}~{source_max:%H:%M}",
+             "조회 시점 기준 최근 30분 자료 반영", "",
+             "📊 한눈에 보는 상권 분위기", "",
+             f"자료가 확보된 {len(fresh)}곳 중 {active_count}곳이 평소보다 소비가 활발합니다.", "",
+             f"🔴 분주 {len(grouped['분주'])}곳 · 🟠 바쁨 {len(grouped['바쁜'])}곳",
+             f"🟢 보통 {len(grouped['보통'])}곳 · ⚪ 한산 {len(grouped['한산'])}곳", "",
+             f"바쁨·분주 비중은 {active_count/len(fresh)*100:.1f}%입니다.",
+             f"전체 {expected_count}곳 중 {len(fresh)}곳을 반영했으며, "
+             f"자료가 지연된 {len(rows)-len(fresh)}곳·수집 실패 {expected_count-len(rows)}곳은 제외했습니다.",
+             "", "🔥 평소보다 소비가 활발한 상권"]
     active = grouped['분주'] + grouped['바쁜']
-    for row in active[:6]:
-        lines.append(f"{row['area']} — {row['relative_level']} ({row['observed_at_kst']:%H:%M})")
+    def append_examples(examples, label):
+        clocks = {row['observed_at_kst'].strftime('%H:%M') for row in examples}
+        for prefix, heading in (('분주', '🔴 분주'), ('바쁜', '🟠 바쁨')):
+            selected = [row for row in examples if row['relative_level'].startswith(prefix)]
+            if selected:
+                lines.extend(['', heading])
+                lines.extend('• ' + label(row) + (f" ({row['observed_at_kst']:%H:%M})"
+                             if len(clocks) > 1 else '') for row in selected)
+        return clocks
+    clocks = append_examples(active[:6], lambda row: row['area'])
     if not active:
-        lines.append("최신 자료에서 바쁨·분주 단계인 상권은 없습니다.")
+        lines.extend(['', "자료에서 바쁨·분주 단계인 상권은 없습니다."])
     elif len(active) > 6:
-        lines.append(f"그 외 {len(active)-6}곳도 바쁨·분주 단계입니다.")
+        lines.extend(['', f"이 밖에 {len(active)-6}곳도 바쁨·분주 단계입니다."])
+    if len(clocks) == 1:
+        lines.append(f"위에 표시한 {min(len(active),6)}곳의 원자료 기준시각은 모두 {next(iter(clocks))}입니다.")
     sector_examples = []
     for row in sorted(fresh, key=lambda row: row['area']):
         for industry in sorted(row.get('industries', []), key=lambda item: item['industry']):
             if industry['relative_level'].startswith(('분주', '바쁜')):
-                sector_examples.append(f"{row['area']} / {industry['industry']} — {industry['relative_level']} ({row['observed_at_kst']:%H:%M})")
-    lines.extend(["", "소비가 활발한 업종 사례"])
-    lines.extend(sector_examples[:4] or ["최신 자료에 바쁨·분주 단계 업종이 없습니다."])
-    lines.extend(["", "읽는 법: 각 장소·업종의 최근 4주 같은 요일·시간대 대비 소비 상태입니다.",
-                  "", "활용: 방문·영업 동선을 고를 때 현재 소비가 평소보다 활발한 장소와 업종을 함께 확인하십시오."])
+                sector_examples.append(dict(area=row['area'], industry=industry['industry'],
+                    relative_level=industry['relative_level'], observed_at_kst=row['observed_at_kst']))
+    lines.extend(["", "🏪 소비가 활발한 업종 사례"])
+    clocks = append_examples(sector_examples[:4], lambda row: row['area'] + ' — ' + row['industry'].replace('/', '·'))
+    if not sector_examples:
+        lines.extend(['', "자료에 바쁨·분주 단계 업종이 없습니다."])
+    elif len(clocks) == 1:
+        lines.extend(['', f"위 업종 사례의 원자료 기준시각은 모두 {next(iter(clocks))}입니다."])
+    lines.extend(["", "💡 이렇게 읽으세요", "",
+                  "‘바쁨·분주’는 최근 4주 같은 요일·시간대와 비교한 소비 상태입니다.", "",
+                  "방문·영업 동선을 정할 때, 평소보다 소비가 활발한 상권과 업종을 함께 살펴보세요."])
     return '\n'.join(lines)
 
 

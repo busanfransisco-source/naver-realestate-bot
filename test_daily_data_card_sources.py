@@ -14,17 +14,18 @@ class DailyDataCardSourceTests(unittest.TestCase):
         rows[-1]['area'] = '오래된장소'
         rows[-1]['observed_at_kst'] = now-timedelta(hours=2)
         digest = cards.build_seoul_commerce_digest(rows, now_kst=now)
-        self.assertIn('최신 81곳 중 81곳', digest)
-        self.assertIn('지연 1곳·수집 실패 0곳 제외', digest)
-        self.assertIn('커피 — 분주한', digest)
+        self.assertIn('확보된 81곳 중 81곳', digest)
+        self.assertIn('지연된 1곳·수집 실패 0곳은 제외', digest)
+        self.assertIn('— 커피', digest)
         self.assertNotIn('오래된장소', digest)
         self.assertNotIn('매출액 순위가 아닙니다', digest)
         self.assertNotIn('신한카드 내국인', digest)
-        self.assertIn('자료 확보율 98.8% (81/82곳)', digest)
-        self.assertIn('바쁨·분주 비중 100.0%', digest)
+        self.assertIn('전체 82곳 중 81곳', digest)
+        self.assertIn('바쁨·분주 비중은 100.0%', digest)
         for removed in ('비중의 분모', '전일 비중과 바로 비교하지 않습니다', '출처:', 'https://data.seoul.go.kr'):
             self.assertNotIn(removed, digest)
-        self.assertIn('\n\n활용:', digest)
+        self.assertIn('📍 서울 주요 상권 실시간', digest)
+        self.assertIn('\n\n💡 이렇게 읽으세요\n\n', digest)
         self.assertEqual(digest, cards.build_seoul_commerce_digest(list(reversed(rows)), now_kst=now))
         with self.assertRaises(cards.SourceUnavailable):
             cards.build_seoul_commerce_digest(rows[:61], now_kst=now)
@@ -40,9 +41,9 @@ class DailyDataCardSourceTests(unittest.TestCase):
         for row in rows[62:]:
             row['observed_at_kst'] = now-timedelta(minutes=25)
         digest = cards.build_seoul_commerce_digest(rows, now_kst=now)
-        self.assertIn('최신 82곳', digest)
+        self.assertIn('확보된 82곳', digest)
         self.assertIn('17:50~18:05', digest)
-        self.assertIn('최근 30분 자료만 반영', digest)
+        self.assertIn('조회 시점 기준 최근 30분 자료 반영', digest)
         for row in rows[61:]:
             row['observed_at_kst'] = now-timedelta(minutes=31)
         with self.assertRaises(cards.SourceUnavailable):
@@ -53,6 +54,21 @@ class DailyDataCardSourceTests(unittest.TestCase):
         self.assertEqual(len(set(cards.SEOUL_COMMERCE_CODES)), 82)
         self.assertIn('POI122', cards.SEOUL_COMMERCE_CODES)
         self.assertNotIn('POI008', cards.SEOUL_COMMERCE_CODES)
+
+    def test_seoul_emoji_groups_preserve_mixed_source_clocks_and_metadata(self):
+        from production_data_cards import card_metadata
+        now = datetime(2026, 10, 3, 18, 15)
+        rows = [{'area': f'장소{i:02d}', 'observed_at_kst': now-timedelta(minutes=10),
+                 'relative_level': '보통', 'industries': []} for i in range(82)]
+        rows[0].update(relative_level='분주한', observed_at_kst=now-timedelta(minutes=20))
+        rows[1].update(relative_level='바쁜', industries=[{'industry': '커피', 'relative_level': '바쁜'}])
+        digest = cards.build_seoul_commerce_digest(rows, now_kst=now)
+        self.assertIn('🔴 분주\n• 장소00 (17:55)', digest)
+        self.assertIn('🟠 바쁨\n• 장소01 (18:05)', digest)
+        self.assertNotIn('2곳의 원자료 기준시각은 모두', digest)
+        metadata = card_metadata('seoulcommerce', digest)
+        self.assertTrue(metadata['ready'])
+        self.assertEqual(metadata['sourceWindow'], '2026-10-03 17:55~18:05')
 
     PAGE = ('<h3>실시간 전력수급현황</h3><p class="info_top">2026.10.01(목) 23:40 <a>새로고침</a></p>'
             '<table><tr><th>공급능력</th><td id="avil">98,448 MW</td></tr>'
