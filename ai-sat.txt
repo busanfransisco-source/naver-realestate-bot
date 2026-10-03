@@ -1,5 +1,8 @@
 🤖 26년 10월 3일 토요일 AI 뉴스
 
+"수익성 불투명한 10조달러 투자"...월가, AI 거품 붕괴 경고
+https://www.aitimes.com/news/articleView.html?idxno=215942
+
 'AI 반감' 가리는 귀여운 캐릭터…'뮤즈' 흥행 이끈 알렉산드르 왕
 https://www.aitimes.com/news/articleView.html?idxno=215941
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215934
 
 딥시크, 데스크톱 앱 '딥시크 하네스' 출시..."챗·코딩·문서 통합"
 https://www.aitimes.com/news/articleView.html?idxno=215933
-
-'나만의 클로드 코드' 만든다...앤트로픽, 커스텀 확장 기능 '모드' 출시
-https://www.aitimes.com/news/articleView.html?idxno=215932
