@@ -15,7 +15,7 @@ https://www.aitimes.com/news/articleView.html?idxno=215940
 AWS, AI 데이터센터 반발 정면 돌파…지역사회에 1.4조 추가 투입
 https://www.aitimes.com/news/articleView.html?idxno=215939
 
-애플, AI 에이전트 무단 접근 증가로 맥OS '전체 디스크 접근' 제어 강화
+애플, AI 에이전트 공격 대비해 맥OS '전체 디스크 접근' 제어 강화
 https://www.aitimes.com/news/articleView.html?idxno=215938
 
 엔비디아, 4999달러짜리 ‘DGX 스파크’ 출시...메모리 대란에 가격 낮췄다
