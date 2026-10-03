@@ -1,7 +1,19 @@
 🤖 26년 10월 3일 토요일 AI 뉴스
 
+AWS, AI 데이터센터 반발 정면 돌파…지역사회에 1.4조 추가 투입
+https://www.aitimes.com/news/articleView.html?idxno=215939
+
+회계 업무서 AI '100%’ vs 인간 '37%'...역전 18개월 만에 '완벽' 단계로
+https://www.aitimes.com/news/articleView.html?idxno=215935
+
+AI '생각의 사슬' 무력화되나…'순환 깊이' 기술이 부른 불투명성 우려
+https://www.aitimes.com/news/articleView.html?idxno=215934
+
 [AI 모델 신작] MS 음성인식 'MAI-트랜스크라이브-2-스트리밍' 등 6종
 https://www.aitimes.com/news/articleView.html?idxno=215930
+
+[AI카툰] Bob, Senior IT guy - 밥, AI가 못 들어가는 틈새시장 개발자
+https://www.aitimes.com/news/articleView.html?idxno=215929
 
 [게시판] KT, 소상공인 플랫폼 ‘사장이지’에 AI면접 서비스 출시 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=215928
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215920
 
 업스테이지, 판단 전용 AI ‘솔라 디사이드’ 출시…“제브보다 빠르고 정확”
 https://www.aitimes.com/news/articleView.html?idxno=215919
-
-백악관에 모인 AI 수장들…젠슨 황·저커버그, 아모데이에 '질문 세례'
-https://www.aitimes.com/news/articleView.html?idxno=215918
-
-"다섯 손가락 필요 없다"...보스턴 다이내믹스, 네 손가락 로봇 손 공개
-https://www.aitimes.com/news/articleView.html?idxno=215916
-
-"콜센터 AI 말 끊어도 알아듣는다"...포지큐브, 차세대 AICC 개발
-https://www.aitimes.com/news/articleView.html?idxno=215914
-
-머스크, 미 국방부 '미래 전쟁' 자문으로 공직 복귀...AI·드론 중심 미래전 대비
-https://www.aitimes.com/news/articleView.html?idxno=215912
