@@ -505,11 +505,10 @@ function refreshDataCardExpiry() {{
       const ta = card.querySelector('textarea');
       const key = ta.id.slice(3);
       if (key === 'seoulcommerce' && Number.isFinite(expiry) && !ta.value.includes('집계 대기')) {{
-        const notice = '이전 수집자료입니다. 아래 원자료 기준시각을 확인하십시오. 최신 상태가 아니며 자동공유는 보류됩니다.';
         const status = card.querySelector('.data-status');
-        status.textContent = notice;
-        status.style.display = 'block';
-        window['__content_' + key] = notice + '\\n\\n' + ta.value;
+        status.textContent = '';
+        status.style.display = 'none';
+        window['__content_' + key] = ta.value;
         const button = card.querySelector('.copy-btn');
         button.disabled = false;
         button.textContent = '이전 자료 복사';

@@ -30,12 +30,12 @@ Date.now=()=>Date.parse('2026-10-03T11:15:00+09:00');
 SCRIPT
 assert.equal(ta.value,body);assert.equal(button.disabled,false);
 assert.equal(button.textContent,'이전 자료 복사');
-assert.equal(status.style.display,'block');
-assert.ok(window.__content_seoulcommerce.startsWith('이전 수집자료'));
-assert.ok(window.__content_seoulcommerce.endsWith(body));
+assert.equal(status.style.display,'none');
+assert.equal(status.textContent,'');
+assert.equal(window.__content_seoulcommerce,body);
 Date.now=()=>Date.parse('2026-10-04T11:15:00+09:00');
 refreshDataCardExpiry();assert.equal(ta.value,body);
-assert.equal(window.__content_seoulcommerce.split('이전 수집자료').length,2);
+assert.equal(window.__content_seoulcommerce,body);
 '''.replace('BODY', json.dumps(body, ensure_ascii=False)).replace('SCRIPT', script)
         result = subprocess.run([shutil.which('node'), '-e', harness], capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(result.returncode, 0, result.stderr)

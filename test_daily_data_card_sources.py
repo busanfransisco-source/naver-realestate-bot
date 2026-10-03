@@ -23,6 +23,8 @@ class DailyDataCardSourceTests(unittest.TestCase):
         self.assertIn('자료 확보율 98.8% (81/82곳)', digest)
         self.assertIn('바쁨·분주 비중 100.0%', digest)
         self.assertIn('전일 비중과 바로 비교하지 않습니다', digest)
+        for paragraph in ('활용:', '비중의 분모', '예시는 단계별', '신한카드 내국인', '출처:'):
+            self.assertIn('\n\n' + paragraph, digest)
         self.assertEqual(digest, cards.build_seoul_commerce_digest(list(reversed(rows)), now_kst=now))
         with self.assertRaises(cards.SourceUnavailable):
             cards.build_seoul_commerce_digest(rows[:61], now_kst=now)
