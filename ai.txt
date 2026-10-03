@@ -1,5 +1,8 @@
 🤖 26년 10월 4일 일요일 AI 뉴스
 
+[내면 지도 그리기] 36 Inner Mapping: 나를 찾는 지도
+https://www.aitimes.com/news/articleView.html?idxno=215944
+
 "수익성 불투명한 10조달러 투자"...월가, AI 거품 붕괴 경고
 https://www.aitimes.com/news/articleView.html?idxno=215942
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215935
 
 AI '생각의 사슬' 무력화되나…'순환 깊이' 기술이 부른 불투명성 우려
 https://www.aitimes.com/news/articleView.html?idxno=215934
-
-딥시크, 데스크톱 앱 '딥시크 하네스' 출시..."챗·코딩·문서 통합"
-https://www.aitimes.com/news/articleView.html?idxno=215933
