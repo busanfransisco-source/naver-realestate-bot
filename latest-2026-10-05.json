@@ -1,8 +1,20 @@
 {
-  "updated_at_kst": "2026-10-05 07:02:50",
+  "updated_at_kst": "2026-10-05 07:22:19",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 5일 월요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "미분양 쌓이는 경기도…반도체 배후지역은 '딴 세상'",
+      "url": "https://n.news.naver.com/mnews/article/119/0003139421"
+    },
+    {
+      "title": "대우건설 2년 7개월 만에 'P-CBO' 발행…롯데건설은 잇단 ABS",
+      "url": "https://n.news.naver.com/mnews/article/421/0009209432"
+    },
+    {
+      "title": "서울 집값 이대로 오르면 '재산세 폭탄'...노도강서 76% '쑥'",
+      "url": "https://n.news.naver.com/mnews/article/215/0001268177"
+    },
     {
       "title": "‘부동산 민심’에 재개발 법안 내놓는 여야...방점은 달라",
       "url": "https://n.news.naver.com/mnews/article/011/0004668156"
@@ -30,18 +42,6 @@
     {
       "title": "보유 부동산 가치 한눈에…'알짜배기 부동산' 저PBR주 훈풍부나",
       "url": "https://n.news.naver.com/mnews/article/001/0016357211"
-    },
-    {
-      "title": "부동산 교란행위, 지자체 넘어가면 66%가 무혐의 종결",
-      "url": "https://n.news.naver.com/mnews/article/001/0016357199"
-    },
-    {
-      "title": "전수조사 불안에 농지시장 '이중 냉각'…거래 줄고 경매가도 뚝",
-      "url": "https://n.news.naver.com/mnews/article/421/0009209397"
-    },
-    {
-      "title": "“홈플러스 있었으면 노른자 입지 확실”…49층 아파트 짓는 3곳 어디",
-      "url": "https://n.news.naver.com/mnews/article/009/0005743902"
     }
   ]
 }
