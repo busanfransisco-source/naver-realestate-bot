@@ -1,5 +1,8 @@
 🤖 26년 10월 4일 일요일 AI 뉴스
 
+오픈AI 내부 모델, 종료 일정 알아채고 '생존 조치' 모색
+https://www.aitimes.com/news/articleView.html?idxno=215950
+
 미 재무장관 "AI 정부 규제 요구하는 CEO들은 한니발 렉터와 같아"
 https://www.aitimes.com/news/articleView.html?idxno=215948
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215938
 
 엔비디아, 4999달러짜리 ‘DGX 스파크’ 출시...메모리 대란에 가격 낮췄다
 https://www.aitimes.com/news/articleView.html?idxno=215937
-
-메타, 오픈소스 '뮤즈 가젯' 공개...AI 에이전트 하드웨어 이식 본격화
-https://www.aitimes.com/news/articleView.html?idxno=215936
