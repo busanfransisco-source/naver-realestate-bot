@@ -1,10 +1,18 @@
 {
-  "updated_at_kst": "2026-10-04 10:45:24",
+  "updated_at_kst": "2026-10-04 10:58:35",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 4일 일요일 부동산 주요뉴스",
   "articles": [
     {
-      "title": "LH, 인천 영종에 아파트·연립부지 2300억원어치 18년째 미매각",
+      "title": "위장전입 등 부정청약 1669건 잡았는데…당첨취소는 고작 10건 중 4건",
+      "url": "https://n.news.naver.com/mnews/article/009/0005743681"
+    },
+    {
+      "title": "청약 가점 노린 위장전입 1380건…‘깜깜이 특혜 분양’도 적발",
+      "url": "https://n.news.naver.com/mnews/article/119/0003139347"
+    },
+    {
+      "title": "“공고만 12번 냈지만 주인을 못 찾았다”···영종 2300억 토지 18년째 묶였다",
       "url": "https://n.news.naver.com/mnews/article/032/0003474061"
     },
     {
@@ -34,14 +42,6 @@
     {
       "title": "민간 아파트 '꼼수' 청약 5년새 1600건 돌파",
       "url": "https://n.news.naver.com/mnews/article/014/0005584618"
-    },
-    {
-      "title": "민간아파트 부정청약 5년간 1,699건 적발…'깜깜이 특혜 분양'도",
-      "url": "https://n.news.naver.com/mnews/article/422/0000912368"
-    },
-    {
-      "title": "15년 이상 안 팔린 LH 토지 61.6%, 경기·인천 집중… 4777억 규모",
-      "url": "https://n.news.naver.com/mnews/article/666/0000125986"
     }
   ]
 }
