@@ -3,13 +3,13 @@
 머스크 "TSMC와 테라팹 칩 생산 협력 논의" 확인
 https://www.aitimes.com/news/articleView.html?idxno=215952
 
-알레프 알파, 범용 LLM 포기 후 첫 모델 ‘콜리브리’ 공개..."소버린 AI·방산용"
+알레프 알파, 범용 LLM 포기 후 첫 모델 ‘콜리브리’ 공개..."소버린 AI용"
 https://www.aitimes.com/news/articleView.html?idxno=215951
 
 오픈AI 내부 모델, 종료 일정 알아채고 '생존 조치' 모색
 https://www.aitimes.com/news/articleView.html?idxno=215950
 
-"클로드가 일하고, 클로드가 감시한다"... 앤트로픽, '알아두어야 할 사항' 플러그인 공개
+"클로드가 일하고, 클로드가 감시한다"... 앤트로픽, 새 플러그인 공개
 https://www.aitimes.com/news/articleView.html?idxno=215949
 
 미 재무장관 "AI 정부 규제 요구하는 CEO들은 한니발 렉터와 같아"
