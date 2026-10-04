@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-10-04 09:00:26",
+  "updated_at_kst": "2026-10-04 09:07:38",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 4일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "\"3억 올릴게요\"…분당 아파트에 무슨일이",
+      "url": "https://n.news.naver.com/mnews/article/648/0000051302"
+    },
+    {
+      "title": "“계약금만 포기하면 끝?”…중도금 냈다면 계약 못 깰 수도",
+      "url": "https://n.news.naver.com/mnews/article/138/0002243608"
+    },
     {
       "title": "83%가 위장전입…민간아파트 부정청약  5년간 1699건 적발",
       "url": "https://n.news.naver.com/mnews/article/658/0000157381"
@@ -34,14 +42,6 @@
     {
       "title": "천장 높이고 지하 활용하고…'K아파트' 공간 혁신",
       "url": "https://n.news.naver.com/mnews/article/119/0003139321"
-    },
-    {
-      "title": "'올해 집살 때 이게 달랐다'…강남 9%·노원38%",
-      "url": "https://n.news.naver.com/mnews/article/215/0001268124"
-    },
-    {
-      "title": "같은 동네인데 2~3억원 차이…‘물 보이는 집’이 비싼 이유",
-      "url": "https://n.news.naver.com/mnews/article/119/0003139316"
     }
   ]
 }
