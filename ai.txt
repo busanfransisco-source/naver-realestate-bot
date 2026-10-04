@@ -1,13 +1,25 @@
 🤖 26년 10월 4일 일요일 AI 뉴스
 
+머스크 "TSMC와 테라팹 칩 생산 협력 논의" 확인
+https://www.aitimes.com/news/articleView.html?idxno=215952
+
+알레프 알파, 범용 LLM 포기 후 첫 모델 ‘콜리브리’ 공개..."소버린 AI·방산용"
+https://www.aitimes.com/news/articleView.html?idxno=215951
+
 오픈AI 내부 모델, 종료 일정 알아채고 '생존 조치' 모색
 https://www.aitimes.com/news/articleView.html?idxno=215950
+
+"클로드가 일하고, 클로드가 감시한다"... 앤트로픽, '알아두어야 할 사항' 플러그인 공개
+https://www.aitimes.com/news/articleView.html?idxno=215949
 
 미 재무장관 "AI 정부 규제 요구하는 CEO들은 한니발 렉터와 같아"
 https://www.aitimes.com/news/articleView.html?idxno=215948
 
 오픈AI 안전 총괄, 조직 문화 비판하며 사직..."시행착오 시대 끝났다"
 https://www.aitimes.com/news/articleView.html?idxno=215947
+
+구글, 제미나이 요금제 개편..무료·저가 요금제서 '프로' 모델 뺀다
+https://www.aitimes.com/news/articleView.html?idxno=215946
 
 [내면 지도 그리기] 36 Inner Mapping: 나를 찾는 지도
 https://www.aitimes.com/news/articleView.html?idxno=215944
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215942
 
 'AI 반감' 가리는 귀여운 캐릭터…'뮤즈' 흥행 이끈 알렉산드르 왕
 https://www.aitimes.com/news/articleView.html?idxno=215941
-
-[AI 이슈트렌드] 계속된 DMZ 논란 속 트럼프 LNG 협박·청주 흉기 성폭행 화제
-https://www.aitimes.com/news/articleView.html?idxno=215940
-
-AWS, AI 데이터센터 반발 정면 돌파…지역사회에 1.4조 추가 투입
-https://www.aitimes.com/news/articleView.html?idxno=215939
-
-애플, AI 에이전트 공격 대비해 맥OS '전체 디스크 접근' 제어 강화
-https://www.aitimes.com/news/articleView.html?idxno=215938
-
-엔비디아, 4999달러짜리 ‘DGX 스파크’ 출시...메모리 대란에 가격 낮췄다
-https://www.aitimes.com/news/articleView.html?idxno=215937
