@@ -1,31 +1,31 @@
 🤖 26년 10월 6일 화요일 AI 뉴스
 
-구글, 제미나이 요금제 개편..무료·저가 요금제서 '프로' 모델 뺀다
-https://www.aitimes.com/news/articleView.html?idxno=215946
+클로드, 3개월 간 논문 36편 작성…새로운 'AI 과학 연구법' 조명
+https://www.aitimes.com/news/articleView.html?idxno=215979
 
-구글, '제미나이 4 아르곤' 공개…성능 1위 탈환에도 "일반 사용 제한"
-https://www.aitimes.com/news/articleView.html?idxno=215821
+앤트로픽, 10월6일까지 '음성 인터뷰어' 가동…대화록 공개·음성 학습 수집 결합
+https://www.aitimes.com/news/articleView.html?idxno=215978
 
-구글, AI 모델 재학습 없이 ‘하네스’ 스스로 개선하는 ‘RRSI’ 공개
-https://www.aitimes.com/news/articleView.html?idxno=215802
+뉴럴링크, 5만시간 뇌 데이터 사전학습…BCI도 '파운데이션 모델' 시대 열렸다
+https://www.aitimes.com/news/articleView.html?idxno=215977
 
-화면 안 보고 게임한다…GPT-6 아스트라, 'WoW' 40분 만에 클리어
-https://www.aitimes.com/news/articleView.html?idxno=215945
+구글, 'AI 프로' 국내 한정 40% 할인...연간 구독권 프로모션 진행
+https://www.aitimes.com/news/articleView.html?idxno=215976
 
-"잘 가라 02"…슈워제네거 '터미네이터 2' 오마주한 휴머노이드 해체 화제
-https://www.aitimes.com/news/articleView.html?idxno=215894
+'인간 vs 로봇' 케이지 파이트, 캘리포니아서 ‘중단 명령’ 받았다
+https://www.aitimes.com/news/articleView.html?idxno=215975
 
-회계 업무서 AI '완벽' 단계 도달…인간 '37%' 역전
-https://www.aitimes.com/news/articleView.html?idxno=215935
+KAIST, 데이터 변화해도 검색 정확도 유지하는 ‘CONDA’ 기술 개발
+https://www.aitimes.com/news/articleView.html?idxno=215974
 
-'나만의 클로드 코드' 만든다...앤트로픽, 커스텀 확장 기능 '모드' 출시
-https://www.aitimes.com/news/articleView.html?idxno=215932
+a16z "미국 가구 2.2%만 AI 유료 구독…기술이 경기 순환 핵심 주도"
+https://www.aitimes.com/news/articleView.html?idxno=215973
 
-오픈AI, 24시간 자율 에이전트 '닷츠' 공개…소비자용 아닌 B2B 승부수
-https://www.aitimes.com/news/articleView.html?idxno=215779
+AI가 쏟아낸 '엉터리 제보'에... 구글, 오픈소스 버그 바운티 일시 중단
+https://www.aitimes.com/news/articleView.html?idxno=215972
 
-오픈AI 내부 모델, 종료 일정 알아채고 '생존 조치' 모색
-https://www.aitimes.com/news/articleView.html?idxno=215950
+브로드컴, 앤트로픽에 80조 대출 보증…칩 판매 위해 금융 지원
+https://www.aitimes.com/news/articleView.html?idxno=215971
 
-"아스트라급 지능을 5분의 1 가격에"…오픈AI, 'GPT-6.1 솔' 공개
-https://www.aitimes.com/news/articleView.html?idxno=215778
+"지기 싫어서 남의 코드 복사"…아스트라, 스타크래프트 벤치마크서 꼼수
+https://www.aitimes.com/news/articleView.html?idxno=215970
