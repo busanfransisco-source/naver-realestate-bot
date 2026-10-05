@@ -3,11 +3,20 @@
 클로드, 18개 분야 36편 논문 원고 작성… 앤트로픽이 조명한 AI 과학 연구
 https://www.aitimes.com/news/articleView.html?idxno=215979
 
+앤트로픽, 10월6일까지 '음성 인터뷰어' 가동…대화록 공개·음성 학습 수집 결합
+https://www.aitimes.com/news/articleView.html?idxno=215978
+
 뉴럴링크, 5만시간 뇌 데이터 사전학습…BCI도 '파운데이션 모델' 시대 열렸다
 https://www.aitimes.com/news/articleView.html?idxno=215977
 
+구글, 'AI 프로' 국내 한정 40% 할인...연간 구독권 프로모션 진행
+https://www.aitimes.com/news/articleView.html?idxno=215976
+
 '인간 vs 로봇' 케이지 파이트, 캘리포니아서 ‘중단 명령’ 받았다
 https://www.aitimes.com/news/articleView.html?idxno=215975
+
+KAIST, 데이터 변화해도 검색 정확도 유지하는 ‘CONDA’ 기술 개발
+https://www.aitimes.com/news/articleView.html?idxno=215974
 
 a16z "미국 가구 2.2%만 AI 유료 구독…기술이 경기 순환 핵심 주도"
 https://www.aitimes.com/news/articleView.html?idxno=215973
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215971
 
 "지기 싫어서 남의 코드 복사"…아스트라, 스타크래프트 벤치마크서 꼼수
 https://www.aitimes.com/news/articleView.html?idxno=215970
-
-챗GPT서 옷 입어보고 쇼핑한다... 오픈AI, '가상 착용' 도입
-https://www.aitimes.com/news/articleView.html?idxno=215969
-
-오픈AI '에이전트 폭주'에 사면초가... 전 세계서 법적·규제 경고 폭풍
-https://www.aitimes.com/news/articleView.html?idxno=215968
-
-MIT·사카나, 자가 진화 AI 에이전트 'SIFT' 발표...'검증 비용 병목' 해결
-https://www.aitimes.com/news/articleView.html?idxno=215967
