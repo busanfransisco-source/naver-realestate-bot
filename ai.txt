@@ -1,18 +1,18 @@
 🤖 26년 10월 6일 화요일 AI 뉴스
 
-클로드, 18개 분야 36편 논문 원고 작성… 앤트로픽이 조명한 AI 과학 연구
+클로드, 18개 분야 36편 논문 작성… 앤트로픽이 조명한 AI 과학 연구
 https://www.aitimes.com/news/articleView.html?idxno=215979
 
-앤트로픽, 10월6일까지 '음성 인터뷰어' 가동…대화록 공개·음성 학습 수집 결합
+앤트로픽, 10월6일까지 &apos;음성 인터뷰어&apos; 가동…대화록 공개·음성 학습 수집 결합
 https://www.aitimes.com/news/articleView.html?idxno=215978
 
-뉴럴링크, 5만시간 뇌 데이터 사전학습…BCI도 '파운데이션 모델' 시대 열렸다
+뉴럴링크, 5만시간 뇌 데이터 사전학습…BCI도 &apos;파운데이션 모델&apos; 시대 열렸다
 https://www.aitimes.com/news/articleView.html?idxno=215977
 
-구글, 'AI 프로' 국내 한정 40% 할인...연간 구독권 프로모션 진행
+구글, &apos;AI 프로&apos; 국내 한정 40% 할인...연간 구독권 프로모션 진행
 https://www.aitimes.com/news/articleView.html?idxno=215976
 
-'인간 vs 로봇' 케이지 파이트, 캘리포니아서 ‘중단 명령’ 받았다
+&apos;인간 vs 로봇&apos; 케이지 파이트, 캘리포니아서 ‘중단 명령’ 받았다
 https://www.aitimes.com/news/articleView.html?idxno=215975
 
 KAIST, 데이터 변화해도 검색 정확도 유지하는 ‘CONDA’ 기술 개발
@@ -21,7 +21,7 @@ https://www.aitimes.com/news/articleView.html?idxno=215974
 a16z "미국 가구 2.2%만 AI 유료 구독…기술이 경기 순환 핵심 주도"
 https://www.aitimes.com/news/articleView.html?idxno=215973
 
-AI가 쏟아낸 '엉터리 제보'에... 구글, 오픈소스 버그 바운티 일시 중단
+AI가 쏟아낸 &apos;엉터리 제보&apos;에... 구글, 오픈소스 버그 바운티 일시 중단
 https://www.aitimes.com/news/articleView.html?idxno=215972
 
 브로드컴, 앤트로픽에 80조 대출 보증…칩 판매 위해 금융 지원
