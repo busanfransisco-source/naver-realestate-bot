@@ -1,5 +1,20 @@
 🤖 26년 10월 5일 월요일 AI 뉴스
 
+'AI 피해자 영상'에 속아 내려진 중형...미국 법원 "형량 잘못됐다" 선고 파기
+https://www.aitimes.com/news/articleView.html?idxno=215964
+
+"AI가 인류 위협" 경고한 제이콥 콕슨, 뉴욕시의회 청문회 선다
+https://www.aitimes.com/news/articleView.html?idxno=215959
+
+[AI리더의 서가] AI 루프를 설계하라
+https://www.aitimes.com/news/articleView.html?idxno=215955
+
+머스크, '스페이스XSI'로 리브랜딩 시사…트럼프 'SI' 발언 동조
+https://www.aitimes.com/news/articleView.html?idxno=215954
+
+트럼프, ‘슈퍼 인텔리전스 부대’ 출범…국가정보국장, 백악관 AI 차르 겸임
+https://www.aitimes.com/news/articleView.html?idxno=215953
+
 머스크 "TSMC와 테라팹 칩 생산 협력 논의" 확인
 https://www.aitimes.com/news/articleView.html?idxno=215952
 
@@ -14,18 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215949
 
 미 재무장관 "AI 정부 규제 요구하는 CEO들은 한니발 렉터와 같아"
 https://www.aitimes.com/news/articleView.html?idxno=215948
-
-오픈AI 안전 총괄, 조직 문화 비판하며 사직..."시행착오 시대 끝났다"
-https://www.aitimes.com/news/articleView.html?idxno=215947
-
-구글, 제미나이 요금제 개편..무료·저가 요금제서 '프로' 모델 뺀다
-https://www.aitimes.com/news/articleView.html?idxno=215946
-
-화면 안 보고 게임한다…GPT-6 아스트라, 'WoW' 40분 만에 클리어
-https://www.aitimes.com/news/articleView.html?idxno=215945
-
-[내면 지도 그리기] 36 Inner Mapping: 나를 찾는 지도
-https://www.aitimes.com/news/articleView.html?idxno=215944
-
-"수익성 불투명한 10조달러 투자"...월가, AI 거품 붕괴 경고
-https://www.aitimes.com/news/articleView.html?idxno=215942
