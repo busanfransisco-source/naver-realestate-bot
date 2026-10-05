@@ -1,5 +1,14 @@
 🤖 26년 10월 5일 월요일 AI 뉴스
 
+클로드, 18개 분야 36편 논문 원고 작성… 앤트로픽이 조명한 AI 과학 연구
+https://www.aitimes.com/news/articleView.html?idxno=215979
+
+뉴럴링크, 5만시간 뇌 데이터 사전학습…BCI도 '파운데이션 모델' 시대 열렸다
+https://www.aitimes.com/news/articleView.html?idxno=215977
+
+'인간 vs 로봇' 케이지 파이트, 캘리포니아서 ‘중단 명령’ 받았다
+https://www.aitimes.com/news/articleView.html?idxno=215975
+
 a16z "미국 가구 2.2%만 AI 유료 구독…기술이 경기 순환 핵심 주도"
 https://www.aitimes.com/news/articleView.html?idxno=215973
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215968
 
 MIT·사카나, 자가 진화 AI 에이전트 'SIFT' 발표...'검증 비용 병목' 해결
 https://www.aitimes.com/news/articleView.html?idxno=215967
-
-아마존, 11조 규모 AI 칩 투자자에 매각 후 리스…재무 부담 낮춘다
-https://www.aitimes.com/news/articleView.html?idxno=215966
-
-손정의 "초지능, 잘못된 손에 들어가면 극도로 위험"…AI 안전성에 이례적 경고
-https://www.aitimes.com/news/articleView.html?idxno=215965
-
-'AI 피해자 영상'에 속아 내려진 중형..."형량 잘못됐다" 선고 파기
-https://www.aitimes.com/news/articleView.html?idxno=215964
