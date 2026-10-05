@@ -1,10 +1,25 @@
 🤖 26년 10월 5일 월요일 AI 뉴스
 
+AI가 쏟아낸 '엉터리 제보'에... 구글, 오픈소스 버그 바운티 일시 중단
+https://www.aitimes.com/news/articleView.html?idxno=215972
+
+브로드컴, 앤트로픽에 80조 대출 보증…칩 판매 위해 금융 지원
+https://www.aitimes.com/news/articleView.html?idxno=215971
+
 "지기 싫어서 남의 코드 복사"…아스트라, 스타크래프트 벤치마크서 꼼수
 https://www.aitimes.com/news/articleView.html?idxno=215970
 
+챗GPT서 옷 입어보고 쇼핑한다... 오픈AI, '가상 착용' 도입
+https://www.aitimes.com/news/articleView.html?idxno=215969
+
 오픈AI '에이전트 폭주'에 사면초가... 전 세계서 법적·규제 경고 폭풍
 https://www.aitimes.com/news/articleView.html?idxno=215968
+
+MIT·사카나, 자가 진화 AI 에이전트 'SIFT' 발표...'검증 비용 병목' 해결
+https://www.aitimes.com/news/articleView.html?idxno=215967
+
+아마존, 11조 규모 AI 칩 투자자에 매각 후 리스…재무 부담 낮춘다
+https://www.aitimes.com/news/articleView.html?idxno=215966
 
 손정의 "초지능, 잘못된 손에 들어가면 극도로 위험"…AI 안전성에 이례적 경고
 https://www.aitimes.com/news/articleView.html?idxno=215965
@@ -12,20 +27,5 @@ https://www.aitimes.com/news/articleView.html?idxno=215965
 'AI 피해자 영상'에 속아 내려진 중형...미국 법원 "형량 잘못됐다" 선고 파기
 https://www.aitimes.com/news/articleView.html?idxno=215964
 
-"AI가 인류 위협" 경고한 제이콥 콕슨, 뉴욕시의회 청문회 선다
-https://www.aitimes.com/news/articleView.html?idxno=215959
-
-[AI리더의 서가] AI 루프를 설계하라
-https://www.aitimes.com/news/articleView.html?idxno=215955
-
-머스크, '스페이스XSI'로 리브랜딩 시사…트럼프 'SI' 발언 동조
-https://www.aitimes.com/news/articleView.html?idxno=215954
-
-트럼프, ‘슈퍼 인텔리전스 부대’ 출범…국가정보국장, 백악관 AI 차르 겸임
-https://www.aitimes.com/news/articleView.html?idxno=215953
-
-머스크 "TSMC와 테라팹 칩 생산 협력 논의" 확인
-https://www.aitimes.com/news/articleView.html?idxno=215952
-
-알레프 알파, 범용 LLM 포기 후 첫 모델 ‘콜리브리’ 공개..."소버린 AI용"
-https://www.aitimes.com/news/articleView.html?idxno=215951
+"전직 미국 관료 사칭"…중국 해커, AI 정책 전문가 계정 노렸다
+https://www.aitimes.com/news/articleView.html?idxno=215963
