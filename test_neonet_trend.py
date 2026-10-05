@@ -31,7 +31,8 @@ class NeonetTrendTests(unittest.TestCase):
 
     def test_dash_and_direction_checks(self):
         self.assertIsNone(trend.rate('-'))
-        self.assertEqual(trend.display(None), '—')
+        self.assertEqual(trend.display(None), '변동 없음')
+        self.assertEqual(trend.display('0.00'), '변동 없음')
         for invalid in ('0.03% 상승 (▼)', '0.03%', '집계 대기', '101% 상승 (▲)'):
             with self.subTest(invalid=invalid), self.assertRaises(ValueError):
                 trend.rate(invalid)
@@ -57,9 +58,16 @@ class NeonetTrendTests(unittest.TestCase):
                 second = trend.collect(now=datetime(2026,10,6,9,tzinfo=trend.KST), session=session)
                 self.assertEqual(first, second)
                 self.assertEqual(original, Path(trend.CACHE).read_bytes())
-                self.assertIn('2026-10-05 09:00', second)
+                self.assertNotIn('조회:', second)
+                self.assertEqual(json.loads(Path(trend.CACHE).read_text(encoding='utf-8'))['checkedAtKst'],
+                                 '2026-10-05T09:00:00+09:00')
                 self.assertNotIn('2026-10-06', second)
-                self.assertIn('서울 / +0.05% / -0.03%', second)
+                self.assertIn('서울  +0.05%', second)
+                self.assertIn('서울  -0.03%', second)
+                self.assertIn('🏘️ 지역별 매매가 변동률', second)
+                self.assertIn('🔑 지역별 전세가 변동률', second)
+                for removed in ('출처:', '통계 기준일:', '부동산뱅크 ·', '※', 'https://'):
+                    self.assertNotIn(removed, second)
                 self.assertEqual(gen_briefing.read_section_text('trend', 'tue'), second)
             finally:
                 os.chdir(previous)

@@ -63,24 +63,22 @@ def parse_page(page):
 
 
 def display(value):
-    return '—' if value is None else f'{Decimal(value):+.2f}%'
+    return '변동 없음' if value is None or Decimal(value) == 0 else f'{Decimal(value):+.2f}%'
 
 
 def format_digest(snapshot):
     checked = datetime.fromisoformat(snapshot['checkedAtKst'])
     data = snapshot['data']
     national = data['national']
-    lines = ['📈 부동산 주간 시세동향', '부동산뱅크 · 전국 아파트 · 전주 대비',
-             f'조회: {checked:%Y-%m-%d %H:%M} (KST)',
-             '통계 기준일: 원문 화면에 별도 표시 없음', '',
+    lines = ['📈 부동산 주간 시세동향', '전국 아파트 · 전주 대비', '',
              '🏠 전국 시세', '',
-             f"매매 {display(national['sale'])} · 전세 {display(national['jeonse'])}",
-             f"3.3㎡당 매매 {national['salePrice']:,}만원 · 전세 {national['jeonsePrice']:,}만원", '',
-             '🗺️ 지역별 변동률', '지역 / 매매 / 전세', '']
-    lines.extend(f"{LABELS[row['region']]} / {display(row['sale'])} / {display(row['jeonse'])}"
-                 for row in data['regions'])
-    lines.extend(['', '※ 원문 변동률을 그대로 사용하며, 가격표의 반올림된 금액으로 재계산하지 않습니다.',
-                  '—는 원문이 숫자 대신 표시한 항목입니다.', '출처: 부동산뱅크 지역별 주간 시세통계', URL])
+             f"매매가 {display(national['sale'])}",
+             f"전세가 {display(national['jeonse'])}", '',
+             f"3.3㎡당 매매가 {national['salePrice']:,}만원",
+             f"3.3㎡당 전세가 {national['jeonsePrice']:,}만원"]
+    for key, heading in (('sale', '🏘️ 지역별 매매가 변동률'), ('jeonse', '🔑 지역별 전세가 변동률')):
+        lines.extend(['', heading, ''])
+        lines.extend(f"{LABELS[row['region']]}  {display(row[key])}" for row in data['regions'])
     return '\n'.join(lines)
 
 
