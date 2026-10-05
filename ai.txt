@@ -1,5 +1,8 @@
 🤖 26년 10월 5일 월요일 AI 뉴스
 
+손정의 "초지능, 잘못된 손에 들어가면 극도로 위험"…AI 안전성에 이례적 경고
+https://www.aitimes.com/news/articleView.html?idxno=215965
+
 'AI 피해자 영상'에 속아 내려진 중형...미국 법원 "형량 잘못됐다" 선고 파기
 https://www.aitimes.com/news/articleView.html?idxno=215964
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215950
 
 "클로드가 일하고, 클로드가 감시한다"... 앤트로픽, 새 플러그인 공개
 https://www.aitimes.com/news/articleView.html?idxno=215949
-
-미 재무장관 "AI 정부 규제 요구하는 CEO들은 한니발 렉터와 같아"
-https://www.aitimes.com/news/articleView.html?idxno=215948
