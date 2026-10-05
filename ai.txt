@@ -1,31 +1,31 @@
-🤖 26년 10월 3일 토요일 AI 뉴스
+🤖 26년 10월 5일 월요일 AI 뉴스
 
-AWS, AI 데이터센터 반발 정면 돌파…지역사회에 1.4조 추가 투입
-https://www.aitimes.com/news/articleView.html?idxno=215939
+손정의 "초지능, 잘못된 손에 들어가면 극도로 위험"…AI 안전성에 이례적 경고
+https://www.aitimes.com/news/articleView.html?idxno=215965
 
-애플, 맥OS '전체 디스크 접근' 제어 강화...AI 에이전트 무단 접근 막는다
-https://www.aitimes.com/news/articleView.html?idxno=215938
+'AI 피해자 영상'에 속아 내려진 중형...미국 법원 "형량 잘못됐다" 선고 파기
+https://www.aitimes.com/news/articleView.html?idxno=215964
 
-엔비디아, 4999달러짜리 ‘DGX 스파크’ 출시...메모리 대란에 가격 낮췄다
-https://www.aitimes.com/news/articleView.html?idxno=215937
+"AI가 인류 위협" 경고한 제이콥 콕슨, 뉴욕시의회 청문회 선다
+https://www.aitimes.com/news/articleView.html?idxno=215959
 
-메타, 오픈소스 '뮤즈 가젯' 공개...AI 에이전트 하드웨어 이식 본격화
-https://www.aitimes.com/news/articleView.html?idxno=215936
+[AI리더의 서가] AI 루프를 설계하라
+https://www.aitimes.com/news/articleView.html?idxno=215955
 
-회계 업무서 AI '100%’ vs 인간 '37%'...역전 18개월 만에 '완벽' 단계로
-https://www.aitimes.com/news/articleView.html?idxno=215935
+머스크, '스페이스XSI'로 리브랜딩 시사…트럼프 'SI' 발언 동조
+https://www.aitimes.com/news/articleView.html?idxno=215954
 
-AI '생각의 사슬' 무력화되나…'순환 깊이' 기술이 부른 불투명성 우려
-https://www.aitimes.com/news/articleView.html?idxno=215934
+트럼프, ‘슈퍼 인텔리전스 부대’ 출범…국가정보국장, 백악관 AI 차르 겸임
+https://www.aitimes.com/news/articleView.html?idxno=215953
 
-딥시크, 슈퍼 앱 형태 데스크톱 앱 '딥시크 하네스' 출시..."챗·코딩·문서 통합"
-https://www.aitimes.com/news/articleView.html?idxno=215933
+머스크 "TSMC와 테라팹 칩 생산 협력 논의" 확인
+https://www.aitimes.com/news/articleView.html?idxno=215952
 
-'나만의 클로드 코드' 만든다...앤트로픽, 커스텀 확장 기능 '모드' 출시
-https://www.aitimes.com/news/articleView.html?idxno=215932
+알레프 알파, 범용 LLM 포기 후 첫 모델 ‘콜리브리’ 공개..."소버린 AI용"
+https://www.aitimes.com/news/articleView.html?idxno=215951
 
-앤트로픽, '클로드 프론티어 아카데미' 출범... 1300억 투입해 FDE 1만명 양성
-https://www.aitimes.com/news/articleView.html?idxno=215931
+오픈AI 내부 모델, 종료 일정 알아채고 '생존 조치' 모색
+https://www.aitimes.com/news/articleView.html?idxno=215950
 
-[AI 모델 신작] MS 음성인식 'MAI-트랜스크라이브-2-스트리밍' 등 6종
-https://www.aitimes.com/news/articleView.html?idxno=215930
+"클로드가 일하고, 클로드가 감시한다"... 앤트로픽, 새 플러그인 공개
+https://www.aitimes.com/news/articleView.html?idxno=215949
