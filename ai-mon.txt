@@ -1,5 +1,8 @@
 🤖 26년 10월 5일 월요일 AI 뉴스
 
+오픈AI '에이전트 폭주'에 사면초가... 전 세계서 법적·규제 경고 폭풍
+https://www.aitimes.com/news/articleView.html?idxno=215968
+
 손정의 "초지능, 잘못된 손에 들어가면 극도로 위험"…AI 안전성에 이례적 경고
 https://www.aitimes.com/news/articleView.html?idxno=215965
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=215951
 
 오픈AI 내부 모델, 종료 일정 알아채고 '생존 조치' 모색
 https://www.aitimes.com/news/articleView.html?idxno=215950
-
-"클로드가 일하고, 클로드가 감시한다"... 앤트로픽, 새 플러그인 공개
-https://www.aitimes.com/news/articleView.html?idxno=215949
