@@ -76,9 +76,28 @@ def format_digest(snapshot):
              f"전세가 {display(national['jeonse'])}", '',
              f"3.3㎡당 매매가 {national['salePrice']:,}만원",
              f"3.3㎡당 전세가 {national['jeonsePrice']:,}만원"]
+    lines.extend(['', '📌 지역별 흐름 (17개 구분)', ''])
+    for key, label in (('sale', '매매'), ('jeonse', '전세')):
+        values = [Decimal(row[key]) if row[key] is not None else Decimal(0) for row in data['regions']]
+        lines.append(f"{label} 상승 {sum(v > 0 for v in values)} · 하락 {sum(v < 0 for v in values)} · 변동 없음 {sum(v == 0 for v in values)}")
     for key, heading in (('sale', '🏘️ 지역별 매매가 변동률'), ('jeonse', '🔑 지역별 전세가 변동률')):
         lines.extend(['', heading, ''])
-        lines.extend(f"{LABELS[row['region']]}  {display(row[key])}" for row in data['regions'])
+        pair = []
+        for row in data['regions']:
+            label = LABELS[row['region']]
+            entry = f"{label}  {display(row[key])}"
+            if len(label) > 6:
+                if pair:
+                    lines.append('   '.join(pair))
+                    pair = []
+                lines.append(entry)
+            else:
+                pair.append(entry)
+                if len(pair) == 2:
+                    lines.append('   '.join(pair))
+                    pair = []
+        if pair:
+            lines.append('   '.join(pair))
     return '\n'.join(lines)
 
 

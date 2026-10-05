@@ -29,6 +29,16 @@ class NeonetTrendTests(unittest.TestCase):
         self.assertEqual(data['regions'][0]['jeonse'], '-0.03')
         self.assertEqual(len(data['regions']), 17)
 
+    def test_two_column_layout_long_name_and_computed_summary(self):
+        saved = {'checkedAtKst': '2026-10-05T09:00:00+09:00', 'data': trend.parse_page(fixture())}
+        body = trend.format_digest(saved)
+        self.assertIn('서울  +0.05%   신도시  +0.05%', body)
+        self.assertIn('\n전남광주통합특별시  +0.05%\n대전  +0.05%   울산  +0.05%', body)
+        self.assertIn('매매 상승 17 · 하락 0 · 변동 없음 0', body)
+        self.assertIn('전세 상승 0 · 하락 17 · 변동 없음 0', body)
+        saved['data']['regions'][0]['sale'] = None
+        self.assertIn('매매 상승 16 · 하락 0 · 변동 없음 1', trend.format_digest(saved))
+
     def test_dash_and_direction_checks(self):
         self.assertIsNone(trend.rate('-'))
         self.assertEqual(trend.display(None), '변동 없음')
