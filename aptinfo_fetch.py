@@ -2,7 +2,7 @@
 """
 청약 소식(subs) + 부동산 주간 시세동향(trend) 수집 (GitHub Actions용)
 - subs-{요일}.txt : 청약홈 전국 접수중/접수예정(2주) 단지
-- trend-{요일}.txt : 부동산원 R-ONE 주간 아파트 매매/전세 지역별 변동률
+- trend-{요일}.txt : 부동산뱅크 전국 아파트 주간 매매/전세 표시 변동률
 어떤 단계가 실패해도 죽지 않고 모을 수 있는 것만 담는다.
 """
 import os
@@ -169,61 +169,13 @@ def main():
         lines.append("(2주 이내 접수 예정인 단지가 없습니다)")
     subs_content = "\n".join(lines).strip() + "\n"
 
-    # ---- 주간 시세동향 ----
-    tlines = [f"{date_head} 부동산 주간 시세동향", ""]
-    import json as _json
-    try:
-        with open("rone-cache.json", "r", encoding="utf-8") as f:
-            cache = _json.load(f)
-    except Exception:
-        cache = {}
-
-    def get_with_cache(statbl, key):
-        try:
-            d, ch = rone_weekly_changes(statbl)
-            cache[key] = {"date": d, "changes": ch}
-            return d, ch
-        except Exception:
-            c = cache.get(key)
-            if c and c.get("changes"):
-                return c["date"], c["changes"]
-            return None
-
-    sale = get_with_cache(STATBL_SALE, "sale")
-    time.sleep(3)
-    jeonse = get_with_cache(STATBL_JEONSE, "jeonse")
-    try:
-        with open("rone-cache.json", "w", encoding="utf-8") as f:
-            _json.dump(cache, f, ensure_ascii=False)
-    except Exception:
-        pass
-
-    if sale:
-        d, ch = sale
-        base = f" ({int(d[5:7])}/{int(d[8:10])} 기준)" if len(d) >= 10 else ""
-        tlines.append(f"📈 주간 아파트 매매가격 변동률{base}")
-        tlines.append("")
-        tlines.extend(format_changes(ch))
-        tlines.append("")
-    if jeonse:
-        d, ch = jeonse
-        tlines.append("🔑 주간 아파트 전세가격 변동률")
-        tlines.append("")
-        tlines.extend(format_changes(ch))
-        tlines.append("")
-    if sale or jeonse:
-        tlines.append("* 한국부동산원 주간 아파트가격 동향 (전주 대비)")
-    else:
-        tlines.append("(주간 시세 데이터를 가져오지 못했습니다)")
-    trend_content = "\n".join(tlines).strip() + "\n"
-
-    for prefix, content in (("subs", subs_content), ("trend", trend_content)):
-        for fname in (f"{prefix}.txt", f"{prefix}-{weekday_en}.txt"):
-            with open(fname, "w", encoding="utf-8") as f:
-                f.write(content)
-
-    print(f"완료: 청약 {len(subs) if subs else 0}건, 매매 {'O' if sale else 'X'}, 전세 {'O' if jeonse else 'X'}")
-
+    # Box 5 uses Neonet's published weekly percentages, not R-ONE indices.
+    for fname in ("subs.txt", f"subs-{weekday_en}.txt"):
+        with open(fname, "w", encoding="utf-8") as f:
+            f.write(subs_content)
+    from neonet_trend import collect
+    collect(now=now)
+    print(f"완료: 청약 {len(subs) if subs else 0}건, 부동산뱅크 주간 통계 처리")
 
 if __name__ == "__main__":
     main()

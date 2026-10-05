@@ -41,6 +41,9 @@ def has_fetch_failure(content):
 
 def read_section_text(prefix, weekday):
     """실패 문구를 발행하지 않고, 직전 정상 파일이 있으면 그대로 유지한다."""
+    if prefix == 'trend':
+        from neonet_trend import load_digest
+        return load_digest()
     current = read_text(f"{prefix}-{weekday}.txt")
     if not has_fetch_failure(current):
         return current
