@@ -1,5 +1,8 @@
 🤖 26년 10월 5일 월요일 AI 뉴스
 
+a16z "미국 가구 2.2%만 AI 유료 구독…기술이 경기 순환 핵심 주도"
+https://www.aitimes.com/news/articleView.html?idxno=215973
+
 AI가 쏟아낸 '엉터리 제보'에... 구글, 오픈소스 버그 바운티 일시 중단
 https://www.aitimes.com/news/articleView.html?idxno=215972
 
@@ -24,8 +27,5 @@ https://www.aitimes.com/news/articleView.html?idxno=215966
 손정의 "초지능, 잘못된 손에 들어가면 극도로 위험"…AI 안전성에 이례적 경고
 https://www.aitimes.com/news/articleView.html?idxno=215965
 
-'AI 피해자 영상'에 속아 내려진 중형...미국 법원 "형량 잘못됐다" 선고 파기
+'AI 피해자 영상'에 속아 내려진 중형..."형량 잘못됐다" 선고 파기
 https://www.aitimes.com/news/articleView.html?idxno=215964
-
-"전직 미국 관료 사칭"…중국 해커, AI 정책 전문가 계정 노렸다
-https://www.aitimes.com/news/articleView.html?idxno=215963
