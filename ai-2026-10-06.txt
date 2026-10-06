@@ -1,31 +1,31 @@
 🤖 26년 10월 6일 화요일 AI 뉴스
 
+[게시판] 딥엑스-두산로보틱스, 원전 제조 ‘AI 용접 솔루션’ 공동개발 협력 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=216017
+
+코히어, 에이전트 비용·보안 통제 플랫폼 '노스 2' 출시...알레프 알파 인수 후 첫 행보
+https://www.aitimes.com/news/articleView.html?idxno=216014
+
+[게시판] 두산로보틱스, 989억 규모 피지컬 AI 국책과제 2건 선정 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=216013
+
+19세 청년의 반란...고스트, 개인용 AI PC '코어'로 147억 투자 유치
+https://www.aitimes.com/news/articleView.html?idxno=216012
+
+카카오모빌리티, 고려대와 AX 협력…모빌리티 핵심 기술 국방 분야 접목
+https://www.aitimes.com/news/articleView.html?idxno=216011
+
+엔비디아-그로크 27조 계약 파장…소외된 엔지니어들 "거래 불공정" 소송
+https://www.aitimes.com/news/articleView.html?idxno=216009
+
+뉴뉴욕시의회, AI 빅테크 청문회…전직 내부고발자 "통제력 상실" 경고
+https://www.aitimes.com/news/articleView.html?idxno=216008
+
+이탈리아 멜로니 총리, AI 딥페이크 막으려 '목소리 상표권' 신청
+https://www.aitimes.com/news/articleView.html?idxno=216007
+
+“180B 모델, 개인용 노트북으로 구동”...비드래프트, 고성능 모델 경량화 전략 이어간다
+https://www.aitimes.com/news/articleView.html?idxno=216005
+
 '클로드'에 폭력 협박 남겼다 체포..."AI 챗봇은 일기장 아니다"
 https://www.aitimes.com/news/articleView.html?idxno=216001
-
-포지큐브, 롯데벤처스와 멀티 AI 에이전트 기반 AX 추진
-https://www.aitimes.com/news/articleView.html?idxno=215997
-
-헨켈, SEDEX 2026서 AI·HBM 시대 위한 첨단 패키징 소재 솔루션 선보여
-https://www.aitimes.com/news/articleView.html?idxno=215996
-
-오픈AI, 28일 연속 '코덱스' 개선 예고...첫날부터 처리 속도 50% 향상
-https://www.aitimes.com/news/articleView.html?idxno=215992
-
-LG전자, 북미서 5GW 규모 AIDC 냉각솔루션 장기계약 체결
-https://www.aitimes.com/news/articleView.html?idxno=215989
-
-오픈AI, 챗GPT에 '투명 워터마크' 도입… EU만 우선 적용
-https://www.aitimes.com/news/articleView.html?idxno=215984
-
-클로드, 3개월 간 논문 36편 작성…새로운 'AI 과학 연구법' 조명
-https://www.aitimes.com/news/articleView.html?idxno=215979
-
-앤트로픽, 10월6일까지 '음성 인터뷰어' 가동…대화록 공개·음성 학습 수집 결합
-https://www.aitimes.com/news/articleView.html?idxno=215978
-
-뉴럴링크, 5만시간 뇌 데이터 사전학습…BCI도 '파운데이션 모델' 시대 열렸다
-https://www.aitimes.com/news/articleView.html?idxno=215977
-
-구글, 'AI 프로' 국내 한정 40% 할인...연간 구독권 프로모션 진행
-https://www.aitimes.com/news/articleView.html?idxno=215976
