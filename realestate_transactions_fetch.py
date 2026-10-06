@@ -473,9 +473,11 @@ def build_digest(today, records):
         f"{today.month}/{today.day}({WEEKDAY_KR_SHORT[today.weekday()]}) 신규 등록 실거래가",
         "",
         f"전국 {len(records):,}건 (🔥{len(record_highs):,})",
+        "",
         f"분양권/입주권 {presale_count:,}건",
         f"🚀 1억클럽 신고가 {len(one_eok_record_highs):,}건",
         f"💎 1억클럽 {len(one_eok_regular):,}건",
+        "",
         "※ 평형은 전용면적 기반 통상형 추정치(59㎡≈26평형, 84㎡≈34평형), 평당가는 전용면적 기준",
     ]
     if not records:

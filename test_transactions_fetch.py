@@ -24,6 +24,11 @@ from transaction_area_format import approximate_pyeong_type
 
 
 class TransactionDigestTests(unittest.TestCase):
+    def test_summary_blank_lines_match_approved_format(self):
+        digest = build_digest(date(2026, 10, 6), [])
+        self.assertIn('전국 0건 (🔥0)\n\n분양권/입주권 0건', digest)
+        self.assertIn('💎 1억클럽 0건\n\n※ 평형', digest)
+
     def test_normal_empty_new_records_display_zero_not_pending(self):
         digest = build_digest(date(2026, 10, 6), [])
         self.assertIn('10/6(화) 신규 등록 실거래가', digest)
