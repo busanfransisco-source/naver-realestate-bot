@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-10-07 08:07:11",
+  "updated_at_kst": "2026-10-07 08:26:24",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 7일 수요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "서초구 민선9기 100일…재건축·청년정책 등 '쾌속 시동'",
+      "url": "https://n.news.naver.com/mnews/article/001/0016361258"
+    },
     {
       "title": "건설현장 사망 절반이 추락사…‘작업자 부주의’ 최다",
       "url": "https://n.news.naver.com/mnews/article/018/0006382631"
@@ -38,10 +42,6 @@
     {
       "title": "스마트시티 서비스 10개 중 4개 운영차질…국비 환수는 0건",
       "url": "https://n.news.naver.com/mnews/article/001/0016361189"
-    },
-    {
-      "title": "[오늘 부동산] 국토부 국감 7일 개막…86주 오른 집값·주택공급 해법 도마",
-      "url": "https://n.news.naver.com/mnews/article/119/0003140105"
     }
   ]
 }
