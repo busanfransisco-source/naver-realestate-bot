@@ -33,7 +33,20 @@ jobs:
           python-version: "3.11"
 
       - name: Collect nationwide official transactions
-        run: python realestate_transactions_fetch.py
+        shell: bash
+        run: |
+          # A brief API timeout must not leave today's box pending until tomorrow.
+          for attempt in 1 2; do
+            if python realestate_transactions_fetch.py; then
+              exit 0
+            fi
+            if [ "$attempt" = "2" ]; then
+              echo "Transaction collection failed twice; no fabricated zero published."
+              exit 1
+            fi
+            echo "Collection failed; retrying once after 30 seconds."
+            sleep 30
+          done
         env:
           MOLIT_API_KEY: ${{ secrets.MOLIT_API_KEY }}
 

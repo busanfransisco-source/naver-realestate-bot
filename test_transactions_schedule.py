@@ -12,6 +12,10 @@ class TransactionScheduleTests(unittest.TestCase):
         self.assertNotIn("--skip-if-collected-today", workflow)
         self.assertIn("python realestate_transactions_fetch.py", workflow)
         self.assertIn("MOLIT_API_KEY", workflow)
+        self.assertIn('for attempt in 1 2; do', workflow)
+        self.assertIn('if python realestate_transactions_fetch.py; then', workflow)
+        self.assertIn('sleep 30', workflow)
+        self.assertIn('no fabricated zero published', workflow)
 
     def test_general_briefing_dispatches_a_morning_transaction_backstop(self):
         workflow = Path(".github/workflows/manual-briefing.yml").read_text(encoding="utf-8")

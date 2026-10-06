@@ -24,6 +24,14 @@ from transaction_area_format import approximate_pyeong_type
 
 
 class TransactionDigestTests(unittest.TestCase):
+    def test_normal_empty_new_records_display_zero_not_pending(self):
+        digest = build_digest(date(2026, 10, 6), [])
+        self.assertIn('10/6(화) 신규 등록 실거래가', digest)
+        self.assertIn('전국 0건', digest)
+        self.assertIn('새로 추가된 거래가 없습니다.', digest)
+        self.assertNotIn('수집 중', digest)
+        self.assertNotIn('집계 대기', digest)
+
     def sample(self, **changes):
         row = {
             "region_code": "11140",
