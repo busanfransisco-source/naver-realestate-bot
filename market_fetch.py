@@ -238,9 +238,31 @@ def main():
     if "국제 금" in items:
         v, c = items["국제 금"]
         metal_rows.append(f"국제 금 {v:,.2f}달러/온스 ({sign_fmt(c)})")
+    else:
+        try:
+            # Old Naver HTML now redirects to a client-rendered site. Futures
+            # are explicitly labelled, never silently substituted for spot gold.
+            meta = get("https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?range=1d&interval=1d").json()["chart"]["result"][0]["meta"]
+            price = float(meta['regularMarketPrice'])
+            change = price - float(meta['chartPreviousClose'])
+            stamp = datetime.fromtimestamp(meta['regularMarketTime'], KST).strftime('%m/%d %H:%M')
+            metal_rows.append(f"국제 금 선물 {price:,.2f}달러/온스 ({sign_fmt(change)}) · {stamp} KST")
+        except Exception:
+            metal_rows.append("국제 금 — 수집 실패 (정상 값 확보 후 갱신)")
     if "국내 금" in items:
         v, c = items["국내 금"]
         metal_rows.append(f"국내 금 {v:,.0f}원/g ({sign_fmt(c, 0)})")
+    else:
+        try:
+            data = get('https://stock.naver.com/api/securityService/marketindex/metals/CMDT_GD').json()
+            if data.get('name') != '국내 금' or data.get('unit') != '원/g':
+                raise ValueError('Unexpected gold series')
+            price = float(data['closePrice'].replace(',', ''))
+            change = float(data['fluctuations'].replace(',', ''))
+            stamp = datetime.fromisoformat(data['localTradedAt']).astimezone(KST).strftime('%m/%d %H:%M')
+            metal_rows.append(f"국내 금 {price:,.0f}원/g ({sign_fmt(change, 0)}) · {stamp} KST")
+        except Exception:
+            metal_rows.append("국내 금 — 수집 실패 (정상 값 확보 후 갱신)")
     try:
         r = get("https://query1.finance.yahoo.com/v8/finance/chart/SI%3DF?range=1d&interval=1d")
         si = r.json()["chart"]["result"][0]["meta"]["regularMarketPrice"]

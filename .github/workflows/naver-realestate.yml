@@ -10,6 +10,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: manual-briefing
+  cancel-in-progress: false
+
 jobs:
   fetch:
     runs-on: ubuntu-latest
@@ -26,7 +30,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run fetch script
-        run: python naver_realestate_fetch.py
+        run: python naver_realestate_fetch.py || echo "realestate failed; per-card recovery will retry"
 
       - name: Fetch daum short news
         run: python daum_news_fetch.py || echo "shortnews failed"
@@ -57,7 +61,20 @@ jobs:
       - name: Generate briefing.html (원터치 복사 페이지)
         run: |
           python gen_briefing.py
+          python briefing_health.py --repair || echo "Incomplete cards will fail the public gate"
+          git add shortnews*.txt world*.txt finance*.txt ai*.txt weather*.txt fortune*.txt realestate*.txt latest*.json subs*.txt trend*.txt neonet-trend-cache.json fuelfx*.txt metalcoin*.txt books*.txt fx-cache.json fuel-cache.json
           git add briefing.html
           git diff --cached --quiet && echo "No briefing changes" || git commit -m "Update briefing.html"
           git pull --rebase origin main
           git push
+
+      - name: Verify every published briefing card
+        run: python briefing_health.py --url https://busanfransisco-source.github.io/naver-realestate-bot/briefing.html
+
+      - name: Save per-card health report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: briefing-health
+          path: briefing-health.json
+          retention-days: 7

@@ -60,14 +60,24 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add transactions.txt transactions-*.txt transactions-state.json
+          python gen_briefing.py
+          git add transactions.txt transactions-*.txt transactions-state.json briefing.html
           git commit -m "Update nationwide apartment transactions"
           git pull --rebase origin main
+          python gen_briefing.py
+          git add briefing.html
+          git diff --cached --quiet || git commit -m "Regenerate briefing from merged sources"
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
-      - name: Regenerate briefing after successful collection
+      - name: Verify every published briefing card
         if: steps.commit.outputs.changed == 'true'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh workflow run manual-briefing.yml --ref main
+        run: python briefing_health.py --url https://busanfransisco-source.github.io/naver-realestate-bot/briefing.html
+
+      - name: Save per-card health report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: briefing-health
+          path: briefing-health.json
+          retention-days: 7

@@ -51,13 +51,13 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Fetch weather
-        run: python weather_fetch.py
+        run: python weather_fetch.py || echo "weather failed; per-card recovery will retry"
 
       - name: Fetch fortune
-        run: python fortune_fetch.py
+        run: python fortune_fetch.py || echo "fortune failed; per-card recovery will retry"
 
       - name: Fetch realestate news
-        run: python naver_realestate_fetch.py
+        run: python naver_realestate_fetch.py || echo "realestate failed; per-card recovery will retry"
 
       - name: Fetch realestate policy analysis candidates
         run: python naver_realestate_analysis_fetch.py || echo "analysis candidates failed"
@@ -103,6 +103,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           python gen_index.py
           python gen_briefing.py
+          python briefing_health.py --repair || echo "Some cards remain incomplete; final public gate will report failure"
           date -u +"%Y-%m-%dT%H:%M:%SZ" > last-refresh.txt
           git add shortnews.txt shortnews-*.txt shortnews-debug.log || true
           git add world.txt world-*.txt || true
@@ -116,3 +117,14 @@ jobs:
           git commit -m "Manual briefing refresh" --allow-empty
           git pull --rebase origin main
           git push
+
+      - name: Verify every published briefing card
+        run: python briefing_health.py --url https://busanfransisco-source.github.io/naver-realestate-bot/briefing.html
+
+      - name: Save per-card health report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: briefing-health
+          path: briefing-health.json
+          retention-days: 7

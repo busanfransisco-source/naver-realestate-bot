@@ -59,6 +59,15 @@ jobs:
           git push origin HEAD:main
       - name: Verify public deployment and remaining source lifetime
         run: python audit_data_cards.py
+      - name: Verify every published briefing card
+        run: python briefing_health.py --url https://busanfransisco-source.github.io/naver-realestate-bot/briefing.html
+      - name: Save per-card health report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: briefing-health
+          path: briefing-health.json
+          retention-days: 7
       - name: Fail visibly when the requested source was not refreshed
         if: steps.collect.outcome == 'failure'
         run: |

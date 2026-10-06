@@ -10,6 +10,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: manual-briefing
+  cancel-in-progress: false
+
 jobs:
   fetch:
     runs-on: ubuntu-latest
@@ -23,7 +27,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install -r requirements.txt
 
       - name: Run weather fetch script
         run: python weather_fetch.py
@@ -36,6 +40,18 @@ jobs:
           git diff --cached --quiet && echo "No changes" || git commit -m "Update weather.txt"
           git pull --rebase origin main
           python gen_index.py
-          git add index.html hub.html
+          python gen_briefing.py
+          git add index.html hub.html briefing.html
           git diff --cached --quiet && echo "No index changes" || git commit -m "Update index.html/hub.html"
           git push
+
+      - name: Verify every published briefing card
+        run: python briefing_health.py --url https://busanfransisco-source.github.io/naver-realestate-bot/briefing.html
+
+      - name: Save per-card health report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: briefing-health
+          path: briefing-health.json
+          retention-days: 7
