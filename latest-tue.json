@@ -1,10 +1,14 @@
 {
-  "updated_at_kst": "2026-10-06 23:07:16",
+  "updated_at_kst": "2026-10-06 23:53:16",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 6일 화요일 부동산 주요뉴스",
   "articles": [
     {
-      "title": "대형교회 2곳도 해킹 정황... \"긴급 보안점검 및 교인 정보 보호조치\"",
+      "title": "오세훈 “정신승리만 거듭하면 부동산 지옥만 길어져” 李대통령 직격",
+      "url": "https://n.news.naver.com/mnews/article/021/0002823422"
+    },
+    {
+      "title": "대형 교회 2곳도 해킹 공격 노출… \"교인 100만 명 정보 유출 정황\"",
       "url": "https://n.news.naver.com/mnews/article/469/0000958026"
     },
     {
@@ -38,10 +42,6 @@
     {
       "title": "'10억 로또' 강변역 아이파크 '줍줍' 1가구에 6.7만 명 몰렸다",
       "url": "https://n.news.naver.com/mnews/article/421/0009212673"
-    },
-    {
-      "title": "이재명 대통령 “전세사기 피해자 빠른 일상 회복 지원…보증금 부족분 보전\"",
-      "url": "https://n.news.naver.com/mnews/article/666/0000126315"
     }
   ]
 }
