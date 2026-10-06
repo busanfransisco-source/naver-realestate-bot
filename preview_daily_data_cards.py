@@ -39,7 +39,7 @@ def failure_reason(error):
         return '원자료 서버 연결 실패'
     if isinstance(error, SourceUnavailable):
         message = str(error)
-        if any(word in message for word in ('오래', '미래', '최신', '지연', 'fresh', '배포 여유')):
+        if any(word in message for word in ('오래', '미래', '최신', '최근 30분', '75%', '지연', 'fresh', '배포 여유')):
             return '원자료 기준시각 또는 최신 표본 부족'
         return '원자료 형식 또는 집계 검증 실패'
     return '인증 또는 자료 형식 검증 실패'

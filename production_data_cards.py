@@ -139,14 +139,24 @@ def collect(path=CACHE, *, only=None):
             'cards': entries}
     Path(path).write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print('Source checks:', ', '.join(f"{key}={data['cards'][key]['ready']}" for key in KEYS))
-    print('Refresh status:', ', '.join(f"{key}={data['cards'][key].get('refreshStatus', 'unchanged')}" for key in KEYS))
+    print('Refresh status:', ', '.join(f"{key}={data['cards'][key].get('refreshStatus', 'unchanged') if key in selected else 'unchanged'}" for key in KEYS))
     return data
+
+
+def refresh_succeeded(data, selected, now=None):
+    now = now or datetime.now(KST)
+    return all(data['cards'][key].get('refreshStatus') == 'collected'
+               and valid_card(key, data['cards'][key], now) for key in selected)
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--collect', action='store_true')
     parser.add_argument('--card', choices=KEYS)
+    parser.add_argument('--require-fresh', action='store_true')
     args = parser.parse_args()
     if args.collect:
-        collect(only=(args.card,) if args.card else None)
+        selected = (args.card,) if args.card else KEYS
+        result = collect(only=selected)
+        if args.require_fresh and not refresh_succeeded(result, selected):
+            raise SystemExit('Requested source refresh failed; retained data is not a new successful refresh.')
