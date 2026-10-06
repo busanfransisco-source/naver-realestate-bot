@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-10-07 07:49:21",
+  "updated_at_kst": "2026-10-07 08:07:11",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 7일 수요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "건설현장 사망 절반이 추락사…‘작업자 부주의’ 최다",
+      "url": "https://n.news.naver.com/mnews/article/018/0006382631"
+    },
+    {
+      "title": "\"일단 30만원만 내세요\"…우편 한 통에 오피스텔 '술렁'",
+      "url": "https://n.news.naver.com/mnews/article/015/0005339862"
+    },
     {
       "title": "당첨만 되면 10억 번다...6만7000여명 우르르, 서울 광진 '줍줍' 결과 보니",
       "url": "https://n.news.naver.com/mnews/article/014/0005585856"
@@ -34,14 +42,6 @@
     {
       "title": "[오늘 부동산] 국토부 국감 7일 개막…86주 오른 집값·주택공급 해법 도마",
       "url": "https://n.news.naver.com/mnews/article/119/0003140105"
-    },
-    {
-      "title": "[사설] 대출 기준을 20개월새 149차례나 바꿀 정도로 은행들을 옥죄나",
-      "url": "https://n.news.naver.com/mnews/article/138/0002243855"
-    },
-    {
-      "title": "분양 물량 34% 늘었는데 청약자는 27% 줄었다…‘선별 청약’ 뚜렷[코주부]",
-      "url": "https://n.news.naver.com/mnews/article/011/0004668803"
     }
   ]
 }
