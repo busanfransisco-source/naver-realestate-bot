@@ -69,6 +69,9 @@ class DailyRotationTests(unittest.TestCase):
     def test_today_originals_pass_and_relabelled_date_fails(self):
         packet = json.loads((rotation.CONTENT_DIR / '2026-10-07.json').read_text(encoding='utf-8'))
         rotation.validate_packet(packet, date(2026,10,7))
+        for topic in packet['topics']:
+            for paragraph in topic['entry'][1:]:
+                self.assertIsNone(re.search(r'[.!?][”’]?[ \t]+', paragraph), topic['entry'][0])
         with self.assertRaisesRegex(ValueError, 'date/count'):
             rotation.validate_packet(packet, date(2026,10,8))
         packet['date'] = '2026-10-08'
@@ -80,6 +83,13 @@ class DailyRotationTests(unittest.TestCase):
         packet['topics'][0]['entry'][0] = '같은 전용면적이면 집 안의 느낌도 같을까요?'
         with self.assertRaisesRegex(ValueError, 'Repeated'):
             rotation.validate_packet(packet, date(2026,10,7))
+
+    def test_public_originals_gate_rejects_other_body(self):
+        from verify_daily_originals import verify
+        page = gen_briefing.build_html(now=datetime(2026,10,7,20,0,tzinfo=gen_briefing.KST))
+        self.assertTrue(verify(page, date(2026,10,7)))
+        with self.assertRaisesRegex(ValueError, 'mismatch'):
+            verify(page.replace('창문이 많으면 환기도 무조건 잘될까요?', '다른 제목'), date(2026,10,7))
 
     def test_empty_old_sections_do_not_shift_slots(self):
         with patch.object(gen_briefing, 'read_section_text', return_value=''):
