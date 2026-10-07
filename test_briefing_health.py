@@ -31,6 +31,11 @@ class HealthTests(unittest.TestCase):
         rows = inspect(self.page().replace('ta-ai', 'ta-wrong'), datetime(2026, 10, 6, 15, tzinfo=KST))
         self.assertIn('missing/duplicate/wrong slot', rows[11]['issues'])
 
+    def test_transaction_missing_is_failure_after_seven_not_noon(self):
+        page = self.page().replace('id="ta-transactions">2026-10-06', 'id="ta-transactions">수집 중입니다')
+        row = inspect(page, datetime(2026, 10, 6, 7, 30, tzinfo=KST))[18]
+        self.assertEqual(row['status'], 'failed')
+
     def test_workflows_gate_after_publish(self):
         for name in ('manual-briefing', 'naver-realestate', 'daily-data-cards', 'transactions', 'weather', 'fortune'):
             text = Path(f'.github/workflows/{name}.yml').read_text(encoding='utf-8')

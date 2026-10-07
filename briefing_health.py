@@ -64,7 +64,7 @@ def inspect(page, now=None):
         if key.startswith('analysis'):
             due = 8
         elif key == 'transactions':
-            due = 12
+            due = 7
         elif key == 'seoulcommerce':
             due = 19
         elif key == 'cryptofear':
