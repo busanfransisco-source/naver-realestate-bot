@@ -1,79 +1,97 @@
 name: Nationwide Transaction Refresh
-
 on:
   workflow_dispatch: {}
   schedule:
-    # 05:10~08:10 KST, 매시간. 새로 보강된 거래는 같은 날 계속 합친다.
+    # 05:10~08:10 KST; GitHub scheduling can be delayed.
     - cron: "10 20 * * *"
     - cron: "10 21 * * *"
     - cron: "10 22 * * *"
     - cron: "10 23 * * *"
-
 permissions:
   contents: write
-  actions: write
-
 concurrency:
   group: nationwide-transactions
   cancel-in-progress: false
-
 jobs:
-  refresh-transactions:
+  collect:
     runs-on: ubuntu-latest
     timeout-minutes: 28
     steps:
-      - name: Checkout latest main
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           ref: main
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
+      - name: Install all collection and publication dependencies
+        run: pip install -r requirements.txt
+      - name: Preflight publication before expensive collection
+        run: |
+          python -c "import requests, bs4; import gen_briefing; from production_data_cards import load_contents; gen_briefing.build_html(new_data_contents=load_contents())"
       - name: Collect nationwide official transactions
         shell: bash
         run: |
-          # A brief API timeout must not leave today's box pending until tomorrow.
           for attempt in 1 2; do
             if python realestate_transactions_fetch.py; then
               exit 0
             fi
             if [ "$attempt" = "2" ]; then
-              echo "Transaction collection failed twice; no fabricated zero published."
+              echo "Collection failed twice; no fabricated zero published."
               exit 1
             fi
-            echo "Collection failed; retrying once after 30 seconds."
             sleep 30
           done
         env:
           MOLIT_API_KEY: ${{ secrets.MOLIT_API_KEY }}
-
-      - name: Commit collected transaction files
-        id: commit
-        shell: bash
+      - name: Preserve collected source independently of publication
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: transaction-source
+          path: |
+            transactions.txt
+            transactions-*.txt
+            transactions-state.json
+          retention-days: 7
+          if-no-files-found: error
+  publish:
+    needs: collect
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    concurrency:
+      group: manual-briefing
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install publication dependencies
+        run: pip install -r requirements.txt
+      - name: Restore this run's completed collection
+        uses: actions/download-artifact@v4
+        with:
+          name: transaction-source
+      - name: Persist source before rendering pages
         run: |
-          if git diff --quiet -- transactions.txt transactions-*.txt transactions-state.json; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          python gen_briefing.py
-          git add transactions.txt transactions-*.txt transactions-state.json briefing.html
-          git commit -m "Update nationwide apartment transactions"
+          git add transactions.txt transactions-*.txt transactions-state.json
+          git diff --cached --quiet || git commit -m "Persist completed nationwide transaction collection"
           git pull --rebase origin main
+          git push origin HEAD:main
+      - name: Render and publish latest merged briefing
+        run: |
           python gen_briefing.py
           git add briefing.html
-          git diff --cached --quiet || git commit -m "Regenerate briefing from merged sources"
-          git push
-          echo "changed=true" >> "$GITHUB_OUTPUT"
-
-      - name: Verify every published briefing card
-        if: steps.commit.outputs.changed == 'true'
-        run: python briefing_health.py --url https://busanfransisco-source.github.io/naver-realestate-bot/briefing.html
-
+          git diff --cached --quiet || git commit -m "Publish briefing with completed transactions"
+          git push origin HEAD:main
+      - name: Verify today's transaction body and all published cards
+        run: |
+          python verify_transaction_publication.py
+          python briefing_health.py --url https://busanfransisco-source.github.io/naver-realestate-bot/briefing.html
       - name: Save per-card health report
         if: always()
         uses: actions/upload-artifact@v4
