@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-10-07 09:12:30",
+  "updated_at_kst": "2026-10-07 09:14:41",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 7일 수요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "[단독]“생숙인데 오피스텔” 허위광고 판치는데…단속은 4년에 1번 불과",
+      "url": "https://n.news.naver.com/mnews/article/018/0006382694"
+    },
     {
       "title": "신동아건설, 남양주 진접에 590가구…자체사업 다시 시동",
       "url": "https://n.news.naver.com/mnews/article/016/0002706219"
@@ -38,10 +42,6 @@
     {
       "title": "충남도, 청년 전세대출 이자 최대 50% 지원…330명 모집",
       "url": "https://n.news.naver.com/mnews/article/001/0016361324"
-    },
-    {
-      "title": "롯데건설, 앱으로 조명·냉난방 '음성 제어 서비스' 도입",
-      "url": "https://n.news.naver.com/mnews/article/003/0014237233"
     }
   ]
 }
