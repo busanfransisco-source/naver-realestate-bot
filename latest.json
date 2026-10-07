@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-10-07 19:08:07",
+  "updated_at_kst": "2026-10-07 20:53:16",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 7일 수요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "홍지선 \"토허제, 집값 상승 묶어…삼성역, 시민 안전 담보 우선\"",
+      "url": "https://n.news.naver.com/mnews/article/018/0006383192"
+    },
+    {
+      "title": "홍지선 \"연말엔 서울 집값 안정…전세 감소는 메가트렌드\"",
+      "url": "https://n.news.naver.com/mnews/article/422/0000913488"
+    },
     {
       "title": "오세훈 “전북과 올림픽 공동 개최?…어떤 제안도 받아들일 것” [종합]",
       "url": "https://n.news.naver.com/mnews/article/016/0002706662"
@@ -24,7 +32,7 @@
       "url": "https://n.news.naver.com/mnews/article/119/0003140610"
     },
     {
-      "title": "현대건설 \"삼성역 철근 누락, 준공 후에도 책임 이어갈 것\"",
+      "title": "현대건설 \"삼성역 철근 누락 보강부위 10년 책임, 하자 책임도 이어갈 것\"",
       "url": "https://n.news.naver.com/mnews/article/003/0014240158"
     },
     {
@@ -34,14 +42,6 @@
     {
       "title": "[2026 국감] GTX 삼성역 공방…홍지선 “안전 담보 없이 공사 재개 불가”",
       "url": "https://n.news.naver.com/mnews/article/119/0003140608"
-    },
-    {
-      "title": "[2026 국감] 주택공급 늘린다지만 착공 목표 미달 전망…용산공원·규제 놓고 공방",
-      "url": "https://n.news.naver.com/mnews/article/119/0003140607"
-    },
-    {
-      "title": "세제개편 대국민 조사.. 정부, 손질 수순 밟는다",
-      "url": "https://n.news.naver.com/mnews/article/014/0005586391"
     }
   ]
 }
