@@ -24,7 +24,7 @@ https://www.aitimes.com/news/articleView.html?idxno=216035
 아모데이 지난해 보수 240억...'대형 기술 기업 CEO 중 중간 수준'
 https://www.aitimes.com/news/articleView.html?idxno=216034
 
-스튜어트 러셀의 경고 "AI 정렬은 불가능…모방 학습과 RLHF의 한계"
+스튜어트 러셀의 경고 "LLM 정렬 불가능…모방 학습과 RLHF 한계"
 https://www.aitimes.com/news/articleView.html?idxno=216033
 
 "결정 피로 줄인다"…오픈AI, 코덱스 2일차 업데이트로 ‘오토리뷰’ 전면 무료화
