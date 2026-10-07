@@ -46,6 +46,10 @@ jobs:
         env:
           REFRESH_CARD: ${{ inputs.card || (github.event.schedule == '15 0 * * *' && 'cryptofear') || (github.event.schedule == '15 1 * * *' && 'wikiinterest') || 'seoulcommerce' }}
           SEOUL_OPEN_DATA_KEY: ${{ secrets.SEOUL_OPEN_DATA_KEY }}
+      - name: Backstop missing today Seoul snapshot during daytime
+        run: python ensure_seoul_daily.py || echo "Seoul source still unavailable; dated snapshot retained"
+        env:
+          SEOUL_OPEN_DATA_KEY: ${{ secrets.SEOUL_OPEN_DATA_KEY }}
       - name: Publish cache and regenerate all 29 cards
         run: |
           git config user.name 'github-actions[bot]'
