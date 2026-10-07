@@ -81,6 +81,12 @@ def stored_seoul_snapshot(entry, now):
         return False
 
 
+def daily_seoul_snapshot(entry, now):
+    """A verified first snapshot stays fixed and distributable on its KST date."""
+    return (stored_seoul_snapshot(entry, now)
+            and entry.get('sourceDate') == now.astimezone(KST).date().isoformat())
+
+
 def load_contents(path=CACHE, *, now=None):
     now = now or datetime.now(KST)
     try:
@@ -103,7 +109,6 @@ def collect(path=CACHE, *, only=None):
     selected = tuple(only) if only is not None else KEYS
     if not selected or set(selected) - set(KEYS):
         raise ValueError('Unknown data card selection')
-    bodies = preview_contents(diagnostics=diagnostics, only=selected)
     now = datetime.now(KST)
     try:
         previous = json.loads(Path(path).read_text(encoding='utf-8')).get('cards', {})
@@ -111,12 +116,23 @@ def collect(path=CACHE, *, only=None):
         previous = {}
     if not isinstance(previous, dict):
         previous = {}
+    frozen = 'seoulcommerce' in selected and daily_seoul_snapshot(previous.get('seoulcommerce'), now)
+    requested = tuple(key for key in selected if not (key == 'seoulcommerce' and frozen))
+    bodies = preview_contents(diagnostics=diagnostics, only=requested) if requested else {}
+    now = datetime.now(KST)
+    if frozen and not daily_seoul_snapshot(previous.get('seoulcommerce'), now):
+        raise RuntimeError('수집 중 날짜 변경: 당일 고정본 재확인이 필요합니다')
     entries = {key: card_metadata(key, bodies[key]) if key in selected else
                (previous[key] if isinstance(previous.get(key), dict) else card_metadata(key, pending_body(key)))
-               for key in KEYS}
+               for key in KEYS if not (key == 'seoulcommerce' and frozen)}
+    if frozen:
+        entries['seoulcommerce'] = dict(previous['seoulcommerce'])
+        entries['seoulcommerce'].update(ready=True, refreshStatus='fixed_daily_snapshot', failureReason=None)
     # Other APIs can take time after Seoul's call. Recheck at collection completion.
     for key, entry in entries.items():
         if key not in selected:
+            continue
+        if key == 'seoulcommerce' and frozen:
             continue
         reason = diagnostics.get(key)
         if not valid_card(key, entry, now):
@@ -145,8 +161,11 @@ def collect(path=CACHE, *, only=None):
 
 def refresh_succeeded(data, selected, now=None):
     now = now or datetime.now(KST)
-    return all(data['cards'][key].get('refreshStatus') == 'collected'
-               and valid_card(key, data['cards'][key], now) for key in selected)
+    return all((key == 'seoulcommerce'
+                and data['cards'][key].get('refreshStatus') == 'fixed_daily_snapshot'
+                and daily_seoul_snapshot(data['cards'][key], now))
+               or (data['cards'][key].get('refreshStatus') == 'collected'
+                   and valid_card(key, data['cards'][key], now)) for key in selected)
 
 
 if __name__ == '__main__':

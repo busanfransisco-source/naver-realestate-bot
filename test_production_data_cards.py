@@ -86,7 +86,7 @@ class ProductionDataCardsTests(unittest.TestCase):
             self.assertFalse(data['cards']['seoulcommerce']['ready'])
             self.assertIn('보류 사유:', data['cards']['seoulcommerce']['body'])
 
-    def test_collect_retains_expired_seoul_for_display_but_never_sending(self):
+    def test_collect_fixes_today_seoul_even_after_realtime_window(self):
         with tempfile.TemporaryDirectory() as temp:
             path = Path(temp) / 'cards.json'
             path.write_text(json.dumps({'cards': {'seoulcommerce': cards.card_metadata('seoulcommerce', self.seoul)}}), encoding='utf-8')
@@ -94,10 +94,12 @@ class ProductionDataCardsTests(unittest.TestCase):
                 clock.now.return_value = self.now + timedelta(hours=1)
                 clock.fromisoformat.side_effect = datetime.fromisoformat
                 data = cards.collect(path)
-            self.assertFalse(data['cards']['seoulcommerce']['ready'])
+            self.assertTrue(data['cards']['seoulcommerce']['ready'])
             self.assertIn('18:10~18:15', data['cards']['seoulcommerce']['body'])
-            self.assertEqual(data['cards']['seoulcommerce']['refreshStatus'], 'retained_expired_source')
+            self.assertEqual(data['cards']['seoulcommerce']['refreshStatus'], 'fixed_daily_snapshot')
             self.assertFalse(cards.valid_card('seoulcommerce', data['cards']['seoulcommerce'], self.now + timedelta(hours=1)))
+            self.assertTrue(cards.refresh_succeeded(data, ('seoulcommerce',), self.now + timedelta(hours=1)))
+            self.assertFalse(cards.daily_seoul_snapshot(data['cards']['seoulcommerce'], self.now + timedelta(days=1)))
 
     def test_stored_snapshot_rejects_corrupted_metadata(self):
         entry = cards.card_metadata('seoulcommerce', self.seoul)
@@ -115,7 +117,8 @@ class ProductionDataCardsTests(unittest.TestCase):
                 clock.now.return_value = self.now
                 clock.fromisoformat.side_effect = datetime.fromisoformat
                 updated = cards.collect(path, only=('seoulcommerce',))
-            self.assertEqual(fetch.call_args.kwargs['only'], ('seoulcommerce',))
+            fetch.assert_not_called()
+            self.assertEqual(updated['cards']['seoulcommerce']['body'], self.seoul)
             for key in ('cryptofear', 'wikiinterest'):
                 self.assertEqual(updated['cards'][key], old[key])
 

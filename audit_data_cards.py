@@ -7,7 +7,7 @@ from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
-from production_data_cards import CACHE, KEYS, KST, load_contents, valid_card
+from production_data_cards import CACHE, KEYS, KST, load_contents, valid_card, daily_seoul_snapshot
 
 BASE = 'https://busanfransisco-source.github.io/naver-realestate-bot/'
 
@@ -32,6 +32,7 @@ def assess(cache, page, public_cache, now):
                             and datetime.fromisoformat(expiry) <= now
                             and 'refreshDataCardExpiry' in page)
         result['cards'][key] = {'publicBodyMatches': body_matches, 'browserExpiryGuardPresent': expiry_guard,
+                                'dailySnapshotReady': key == 'seoulcommerce' and entry.get('ready') is True and daily_seoul_snapshot(entry, now),
                                 'sourceUsableNow': usable,
                                 'remainingSourceSeconds': remaining, 'sourceWindow': entry.get('sourceWindow'),
                                 'refreshStatus': entry.get('refreshStatus'), 'failureReason': entry.get('failureReason')}

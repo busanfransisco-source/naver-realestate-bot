@@ -345,6 +345,9 @@ def build_html(*, new_data_contents=None):
             from production_data_cards import card_metadata
             metadata = card_metadata(key, content)
             expiry_attribute = f' data-data-card="true" data-expires="{metadata["expiresAtKst"] or ""}"'
+            if key == 'seoulcommerce' and metadata['sourceDate']:
+                daily_end = datetime.fromisoformat(metadata['sourceDate']) + timedelta(days=1)
+                expiry_attribute += f' data-daily-expires="{daily_end:%Y-%m-%d}T00:00:00+09:00"'
         section_blocks.append(f"""
 <section class="card" data-slot="{number}"{expiry_attribute}>
   <div class="card-head">
@@ -503,7 +506,7 @@ function copySection(key, btn) {{
 
 function refreshDataCardExpiry() {{
   document.querySelectorAll('[data-data-card]').forEach(card => {{
-    const expiry = Date.parse(card.dataset.expires);
+    const expiry = Date.parse(card.dataset.dailyExpires || card.dataset.expires);
     if (!Number.isFinite(expiry) || Date.now() >= expiry) {{
       const ta = card.querySelector('textarea');
       const key = ta.id.slice(3);

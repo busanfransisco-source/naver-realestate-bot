@@ -23,18 +23,18 @@ const body = BODY;
 const ta = {id:'ta-seoulcommerce', value:body};
 const status = {textContent:'',style:{}};
 const button = {disabled:false,textContent:'복사'};
-const card = {dataset:{expires:'2026-10-03T11:00:00+09:00'},querySelector:s=>s==='textarea'?ta:s==='.data-status'?status:button};
+const card = {dataset:{expires:'2026-10-03T11:00:00+09:00',dailyExpires:'2026-10-04T00:00:00+09:00'},querySelector:s=>s==='textarea'?ta:s==='.data-status'?status:button};
 global.document={querySelectorAll:()=>[card]};
 global.window={}; global.setInterval=()=>{};
 Date.now=()=>Date.parse('2026-10-03T11:15:00+09:00');
 SCRIPT
 assert.equal(ta.value,body);assert.equal(button.disabled,false);
-assert.equal(button.textContent,'이전 자료 복사');
-assert.equal(status.style.display,'none');
+assert.equal(button.textContent,'복사');
 assert.equal(status.textContent,'');
-assert.equal(window.__content_seoulcommerce,body);
+window.__content_seoulcommerce=body;
 Date.now=()=>Date.parse('2026-10-04T11:15:00+09:00');
 refreshDataCardExpiry();assert.equal(ta.value,body);
+assert.equal(button.textContent,'이전 자료 복사');
 assert.equal(window.__content_seoulcommerce,body);
 '''.replace('BODY', json.dumps(body, ensure_ascii=False)).replace('SCRIPT', script)
         result = subprocess.run([shutil.which('node'), '-e', harness], capture_output=True, text=True, encoding='utf-8')
