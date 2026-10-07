@@ -1,5 +1,8 @@
 🤖 26년 10월 8일 목요일 AI 뉴스
 
+앤트로픽, API 비용 최대 90% 낮춘 '클로드 하이쿠 5.5' 공개
+https://www.aitimes.com/news/articleView.html?idxno=216044
+
 [게시판] SKT, 독파모 'A.X K2'로 순우리말 선정·글꼴 제작 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=216043
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216034
 
 스튜어트 러셀의 경고 "LLM 정렬 불가능…모방 학습과 RLHF 한계"
 https://www.aitimes.com/news/articleView.html?idxno=216033
-
-"결정 피로 줄인다"…오픈AI, 코덱스 2일차 업데이트로 ‘오토리뷰’ 전면 무료화
-https://www.aitimes.com/news/articleView.html?idxno=216032
