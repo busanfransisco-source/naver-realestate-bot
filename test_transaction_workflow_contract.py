@@ -12,6 +12,7 @@ class TransactionWorkflowContract(unittest.TestCase):
         self.assertIn('actions/download-artifact@v4', text)
         self.assertLess(text.index('Persist source before'), text.index('Render and publish'))
         self.assertIn('python verify_transaction_publication.py', text)
+        self.assertEqual(text.count('overwrite: true'), 2)
 
     def test_today_only_including_true_zero(self):
         self.assertTrue(verify_body('10/7(수) 신규 등록 실거래가\n전국 0건', date(2026, 10, 7)))

@@ -53,6 +53,7 @@ jobs:
             transactions-*.txt
             transactions-state.json
           retention-days: 7
+          overwrite: true
           if-no-files-found: error
   publish:
     needs: collect
@@ -99,3 +100,4 @@ jobs:
           name: briefing-health
           path: briefing-health.json
           retention-days: 7
+          overwrite: true
