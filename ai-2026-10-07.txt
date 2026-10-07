@@ -1,31 +1,31 @@
 🤖 26년 10월 7일 수요일 AI 뉴스
 
-딥시크, 투자 수요 폭발…IPO 전 자금 조달 규모 2배 확대
-https://www.aitimes.com/news/articleView.html?idxno=216026
+[게시판] SKT, 독파모 'A.X K2'로 순우리말 선정·글꼴 제작 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=216043
 
-미스트랄, 1조 매개변수 ‘라지 4’ 공개..."사이버 보안·오픈 모델 최상위"
-https://www.aitimes.com/news/articleView.html?idxno=216024
+AMD, 연내 한국에 'AI 우수 연구센터' 설립...정부와 3대 메가프로젝트 협력 추진
+https://www.aitimes.com/news/articleView.html?idxno=216042
 
-앤트로픽, '프로젝트 글래스윙' 개편...첨단 모델 접근 대폭 확대
-https://www.aitimes.com/news/articleView.html?idxno=216023
+앤트로픽, 구글 워크스페이스 연동 확장...문서 안에서 '클로드' 직접 호출
+https://www.aitimes.com/news/articleView.html?idxno=216040
 
-"1인칭 영상을 로봇 학습 데이터로"...트웰브랩스 '페가수스 1.6' 출시
-https://www.aitimes.com/news/articleView.html?idxno=216022
+하크, '스마트폰 대체' AI 에이전트 공개...2027년 전용 기기 출시
+https://www.aitimes.com/news/articleView.html?idxno=216039
 
-[게시판] 딥엑스-두산로보틱스, 원전 제조 ‘AI 용접 솔루션’ 공동개발 협력 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=216017
+구글, AI 데이터센터 전력 확보 위해 3.6GW 규모 원전 계약 체결
+https://www.aitimes.com/news/articleView.html?idxno=216038
 
-코히어, 에이전트 비용·보안 통제 플랫폼 '노스 2' 출시...알레프 알파 인수 후 첫 행보
-https://www.aitimes.com/news/articleView.html?idxno=216014
+호주 청문회 출석한 오픈AI·앤트로픽 "에이전트 사고 신고 의무화 찬성"
+https://www.aitimes.com/news/articleView.html?idxno=216035
 
-[게시판] 두산로보틱스, 989억 규모 피지컬 AI 국책과제 2건 선정 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=216013
+아모데이 지난해 보수 240억...'대형 기술 기업 CEO 중 중간 수준'
+https://www.aitimes.com/news/articleView.html?idxno=216034
 
-19세 청년의 반란...고스트, 개인용 AI PC '코어'로 147억 투자 유치
-https://www.aitimes.com/news/articleView.html?idxno=216012
+스튜어트 러셀의 경고 "AI 정렬은 불가능…모방 학습과 RLHF의 한계"
+https://www.aitimes.com/news/articleView.html?idxno=216033
 
-카카오모빌리티, 고려대와 AX 협력…모빌리티 핵심 기술 국방 분야 접목
-https://www.aitimes.com/news/articleView.html?idxno=216011
+"결정 피로 줄인다"…오픈AI, 코덱스 2일차 업데이트로 ‘오토리뷰’ 전면 무료화
+https://www.aitimes.com/news/articleView.html?idxno=216032
 
-엔비디아-그로크 27조 계약 파장…소외된 엔지니어들 "거래 불공정" 소송
-https://www.aitimes.com/news/articleView.html?idxno=216009
+구글, ‘임베딩젬마 2’ 공개…온디바이스서 텍스트·이미지·음성 한 번에 처리
+https://www.aitimes.com/news/articleView.html?idxno=216031
