@@ -1,5 +1,17 @@
 🤖 26년 10월 7일 수요일 AI 뉴스
 
+딥시크, 투자 수요 폭발…IPO 전 자금 조달 규모 2배 확대
+https://www.aitimes.com/news/articleView.html?idxno=216026
+
+미스트랄, 1조 매개변수 ‘라지 4’ 공개..."사이버 보안·오픈 모델 최상위"
+https://www.aitimes.com/news/articleView.html?idxno=216024
+
+앤트로픽, '프로젝트 글래스윙' 개편...첨단 모델 접근 대폭 확대
+https://www.aitimes.com/news/articleView.html?idxno=216023
+
+"1인칭 영상을 로봇 학습 데이터로"...트웰브랩스 '페가수스 1.6' 출시
+https://www.aitimes.com/news/articleView.html?idxno=216022
+
 [게시판] 딥엑스-두산로보틱스, 원전 제조 ‘AI 용접 솔루션’ 공동개발 협력 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=216017
 
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216011
 
 엔비디아-그로크 27조 계약 파장…소외된 엔지니어들 "거래 불공정" 소송
 https://www.aitimes.com/news/articleView.html?idxno=216009
-
-뉴욕시의회, AI 빅테크 청문회…전직 내부고발자 "통제력 상실" 경고
-https://www.aitimes.com/news/articleView.html?idxno=216008
-
-이탈리아 멜로니 총리, AI 딥페이크 막으려 '목소리 상표권' 신청
-https://www.aitimes.com/news/articleView.html?idxno=216007
-
-“180B 모델, 개인용 노트북으로 구동”...비드래프트, 고성능 모델 경량화 전략 이어간다
-https://www.aitimes.com/news/articleView.html?idxno=216005
-
-위키피디아 "오픈AI 불량 에이전트, 5월 장애·무단 편집 연관 가능성"
-https://www.aitimes.com/news/articleView.html?idxno=216002
