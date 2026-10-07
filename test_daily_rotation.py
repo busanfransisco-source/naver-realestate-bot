@@ -43,22 +43,18 @@ class DailyRotationTests(unittest.TestCase):
             self.assertEqual([r[0] for r in rows], ['daily19', 'daily20', 'daily21', 'daily22', 'daily23', 'daily24'])
             self.assertEqual([r[1] for r in rows], labels)
             self.assertEqual([r[2].split('\n\n')[0] for r in rows], labels)
-            self.assertTrue(all(len(r[2]) > 180 for r in rows))
+            self.assertTrue(all('준비되지 않았습니다' in r[2] or len(r[2]) > 180 for r in rows))
             self.assertEqual(rows, rotation.build_rotating_sections(today))
 
-    def test_each_fixed_topic_cycles_its_11_stories(self):
-        start = date(2026, 9, 12)
-        for slot in range(6):
-            stories = []
-            for day in range(12):
-                row = rotation.build_rotating_sections(start + timedelta(days=day))[slot]
-                stories.append(row[2].split('\n\n')[2])
-            self.assertEqual(len(set(stories[:11])), 11)
-            self.assertEqual(stories[11], stories[0])
+    def test_missing_day_never_cycles_old_stories(self):
+        for today in (date(2026, 9, 12), date(2026, 9, 23), date(2026, 10, 8)):
+            rows = rotation.build_rotating_sections(today)
+            self.assertTrue(all('오늘의 새 원고가 아직 준비되지 않았습니다' in row[2] for row in rows))
+            self.assertTrue(all('같은 전용면적' not in row[2] for row in rows))
 
     def test_topics_stay_in_the_same_slot(self):
-        before = rotation.build_rotating_sections(date(2026, 9, 12))
-        after = rotation.build_rotating_sections(date(2026, 9, 13))
+        before = rotation.build_rotating_sections(date(2026, 10, 7))
+        after = rotation.build_rotating_sections(date(2026, 10, 8))
         self.assertEqual([r[1] for r in before], [r[1] for r in after])
         old_topics = [r[2].split('\n\n')[0] for r in before]
         new_topics = [r[2].split('\n\n')[0] for r in after]
@@ -66,9 +62,24 @@ class DailyRotationTests(unittest.TestCase):
         self.assertNotEqual([r[2] for r in before], [r[2] for r in after])
 
     def test_kst_midnight_changes_the_daily_selection(self):
-        before = datetime(2026, 9, 12, 14, 59, tzinfo=timezone.utc).astimezone(gen_briefing.KST)
-        after = datetime(2026, 9, 12, 15, 0, tzinfo=timezone.utc).astimezone(gen_briefing.KST)
+        before = datetime(2026, 10, 7, 14, 59, tzinfo=timezone.utc).astimezone(gen_briefing.KST)
+        after = datetime(2026, 10, 7, 15, 0, tzinfo=timezone.utc).astimezone(gen_briefing.KST)
         self.assertNotEqual(rotation.build_rotating_sections(before.date()), rotation.build_rotating_sections(after.date()))
+
+    def test_today_originals_pass_and_relabelled_date_fails(self):
+        packet = json.loads((rotation.CONTENT_DIR / '2026-10-07.json').read_text(encoding='utf-8'))
+        rotation.validate_packet(packet, date(2026,10,7))
+        with self.assertRaisesRegex(ValueError, 'date/count'):
+            rotation.validate_packet(packet, date(2026,10,8))
+        packet['date'] = '2026-10-08'
+        with self.assertRaisesRegex(ValueError, 'Repeated'):
+            rotation.validate_packet(packet, date(2026,10,8))
+
+    def test_legacy_title_cannot_be_republished(self):
+        packet = json.loads((rotation.CONTENT_DIR / '2026-10-07.json').read_text(encoding='utf-8'))
+        packet['topics'][0]['entry'][0] = '같은 전용면적이면 집 안의 느낌도 같을까요?'
+        with self.assertRaisesRegex(ValueError, 'Repeated'):
+            rotation.validate_packet(packet, date(2026,10,7))
 
     def test_empty_old_sections_do_not_shift_slots(self):
         with patch.object(gen_briefing, 'read_section_text', return_value=''):

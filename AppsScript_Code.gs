@@ -555,15 +555,23 @@ function buildBriefingHtml_(now, sections) {
     ["analysis6", "24. 📰 부부투 정책분석"], ["analysis1", "25. 📰 비밀노트 정책 분석"]
   ];
 
-  // Same library and date arithmetic as daily_rotation.py; no browser-side shuffle.
+  // Same dated original manuscripts as Python; no old-story rotation.
   var library = JSON.parse(ghGetTextFile_("daily-content-library.json"));
-  var day = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
-  var elapsed = Math.max(0, Math.floor((day - Date.parse(library.start_date + "T00:00:00Z")) / 86400000));
+  var manuscriptDay = now.getUTCFullYear() + '-' + ('0' + (now.getUTCMonth()+1)).slice(-2) + '-' + ('0'+now.getUTCDate()).slice(-2);
+  var manuscript = null;
+  try {
+    manuscript = JSON.parse(ghGetTextFile_('daily-content/' + manuscriptDay + '.json'));
+    if (manuscript.date !== manuscriptDay || manuscript.topics.length !== 6) manuscript = null;
+  } catch (error) { manuscript = null; }
   for (var slot = 0; slot < 6; slot++) {
     var topic = library.topics[slot];
-    var entry = topic.entries[elapsed % topic.entries.length];
     var key = "daily" + (19 + slot);
-    sections[key] = [topic.label, now.getUTCFullYear() + "년 " + (now.getUTCMonth() + 1) + "월 " + now.getUTCDate() + "일"].concat(entry).join("\n\n");
+    var authored = manuscript && manuscript.topics[slot];
+    if (authored && authored.key === topic.key && authored.label === topic.label) {
+      sections[key] = [topic.label, now.getUTCFullYear() + "년 " + (now.getUTCMonth() + 1) + "월 " + now.getUTCDate() + "일"].concat(authored.entry).join("\n\n");
+    } else {
+      sections[key] = topic.label + '\n\n오늘의 새 원고가 아직 준비되지 않았습니다.\n\n이전 글을 오늘 자료처럼 반복하지 않습니다.';
+    }
     order.push([key, (13 + slot) + ". " + topic.label]);
   }
 
