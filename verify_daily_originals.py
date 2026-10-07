@@ -1,7 +1,7 @@
 """Read-only proof that public boxes 13..18 contain the dated original packet."""
 import argparse
 import json
-from datetime import datetime
+from datetime import datetime, date
 import requests
 from bs4 import BeautifulSoup
 from gen_briefing import KST
@@ -21,8 +21,15 @@ def verify(page, today):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
+    parser.add_argument('--all-local', action='store_true', help='Validate every prepared dated packet without network')
     parser.add_argument('--url', default='https://busanfransisco-source.github.io/naver-realestate-bot/briefing.html')
     args = parser.parse_args()
+    if args.all_local:
+        paths = sorted(CONTENT_DIR.glob('*.json'))
+        for path in paths:
+            validate_packet(json.loads(path.read_text(encoding='utf-8')), date.fromisoformat(path.stem))
+        print(f'PASS: {len(paths)} dated packets / {len(paths)*6} original manuscripts')
+        raise SystemExit(0)
     today = datetime.now(KST).date()
     response = requests.get(args.url, params={'originals': today.isoformat()}, timeout=20)
     response.raise_for_status()

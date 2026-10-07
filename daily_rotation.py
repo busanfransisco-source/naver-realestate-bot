@@ -53,12 +53,14 @@ def validate_packet(packet, today):
     if packet.get('date') != today.isoformat() or len(topics) != 6:
         raise ValueError('Daily manuscript date/count mismatch')
     history = {topic['key']: list(topic['entries']) for topic in library['topics']}
+    prior_angles = {topic['key']: set() for topic in library['topics']}
     for archive in CONTENT_DIR.glob('*.json'):
         if archive.stem >= today.isoformat():
             continue
         previous = json.loads(archive.read_text(encoding='utf-8'))
         for topic in previous['topics']:
             history[topic['key']].append(topic['entry'])
+            prior_angles[topic['key']].add(normalized(topic.get('editorialAngle', '')))
     titles = set()
     for topic, expected in zip(topics, library['topics']):
         if topic.get('key') != expected['key'] or topic.get('label') != expected['label']:
@@ -67,6 +69,13 @@ def validate_packet(packet, today):
         validate_entry(entry)
         if not topic.get('editorialAngle') or not isinstance(topic.get('sources'), list):
             raise ValueError('Editorial angle and source notes required')
+        if normalized(topic['editorialAngle']) in prior_angles[topic['key']]:
+            raise ValueError('Repeated editorial angle: '+entry[0])
+        if any(not isinstance(url, str) or not url.startswith('https://') for url in topic['sources']):
+            raise ValueError('Invalid source URL: '+entry[0])
+        if topic['key'] == 'money' and re.search(r'\d', '\n'.join(entry[1:])) and not topic['sources']:
+            if not re.search(r'가상|가정', '\n'.join(entry[1:])):
+                raise ValueError('Hypothetical arithmetic must state its assumptions: '+entry[0])
         title = normalized(entry[0])
         body = normalized('\n'.join(entry[1:]))
         if title in titles:

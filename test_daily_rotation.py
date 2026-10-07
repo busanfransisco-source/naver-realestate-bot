@@ -47,7 +47,7 @@ class DailyRotationTests(unittest.TestCase):
             self.assertEqual(rows, rotation.build_rotating_sections(today))
 
     def test_missing_day_never_cycles_old_stories(self):
-        for today in (date(2026, 9, 12), date(2026, 9, 23), date(2026, 10, 8)):
+        for today in (date(2026, 9, 12), date(2026, 9, 23), date(2099, 1, 1)):
             rows = rotation.build_rotating_sections(today)
             self.assertTrue(all('오늘의 새 원고가 아직 준비되지 않았습니다' in row[2] for row in rows))
             self.assertTrue(all('같은 전용면적' not in row[2] for row in rows))
@@ -86,10 +86,30 @@ class DailyRotationTests(unittest.TestCase):
 
     def test_public_originals_gate_rejects_other_body(self):
         from verify_daily_originals import verify
-        page = gen_briefing.build_html(now=datetime(2026,10,7,20,0,tzinfo=gen_briefing.KST))
+        class FrozenDateTime(datetime):
+            @classmethod
+            def now(cls, tz=None):
+                return cls(2026,10,7,20,0,tzinfo=tz)
+        with patch.object(gen_briefing, 'datetime', FrozenDateTime):
+            page = gen_briefing.build_html()
         self.assertTrue(verify(page, date(2026,10,7)))
         with self.assertRaisesRegex(ValueError, 'mismatch'):
             verify(page.replace('창문이 많으면 환기도 무조건 잘될까요?', '다른 제목'), date(2026,10,7))
+
+    def test_prepared_month_has_six_new_stories_each_day(self):
+        titles = {topic['key']: set() for topic in json.loads(rotation.LIBRARY_PATH.read_text(encoding='utf-8'))['topics']}
+        for offset in range(30):
+            today = date(2026,10,8) + timedelta(days=offset)
+            path = rotation.CONTENT_DIR / (today.isoformat()+'.json')
+            self.assertTrue(path.exists(), str(path))
+            packet = json.loads(path.read_text(encoding='utf-8'))
+            rotation.validate_packet(packet, today)
+            for topic in packet['topics']:
+                self.assertNotIn(topic['entry'][0], titles[topic['key']])
+                titles[topic['key']].add(topic['entry'][0])
+                for paragraph in topic['entry'][1:]:
+                    self.assertIsNone(re.search(r'[.!?][”’]?[ \t]+', paragraph), topic['entry'][0])
+        self.assertTrue(all(len(values) == 30 for values in titles.values()))
 
     def test_empty_old_sections_do_not_shift_slots(self):
         with patch.object(gen_briefing, 'read_section_text', return_value=''):
