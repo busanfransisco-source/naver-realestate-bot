@@ -3,10 +3,13 @@
 [게시판] SKT, 독파모 'A.X K2'로 순우리말 선정·글꼴 제작 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=216043
 
-AMD, 연내 한국에 'AI 우수 연구센터' 설립...정부와 3대 메가프로젝트 협력 추진
+AMD, 연내 국내 'AI 연구센터' 설립...정부와 메가프로젝트 협력 추진
 https://www.aitimes.com/news/articleView.html?idxno=216042
 
-앤트로픽, 구글 워크스페이스 연동 확장...문서 안에서 '클로드' 직접 호출
+"AI가 대신 전화 건다"…구글 제미나이, 개인 통화 대행 정황 포착
+https://www.aitimes.com/news/articleView.html?idxno=216041
+
+앤트로픽, 구글 워크스페이스 연동...문서 안에서 '클로드' 직접 호출
 https://www.aitimes.com/news/articleView.html?idxno=216040
 
 하크, '스마트폰 대체' AI 에이전트 공개...2027년 전용 기기 출시
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216033
 
 "결정 피로 줄인다"…오픈AI, 코덱스 2일차 업데이트로 ‘오토리뷰’ 전면 무료화
 https://www.aitimes.com/news/articleView.html?idxno=216032
-
-구글, ‘임베딩젬마 2’ 공개…온디바이스서 텍스트·이미지·음성 한 번에 처리
-https://www.aitimes.com/news/articleView.html?idxno=216031
