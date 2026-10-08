@@ -1,31 +1,31 @@
 🤖 26년 10월 8일 목요일 AI 뉴스
 
+리퀴드 AI, 10배 큰 체급 제친 멀티모달 의사결정 모델 ‘d1-3B’ 출시
+https://www.aitimes.com/news/articleView.html?idxno=216087
+
+누리호 올라탄 토종 AI 반도체, 우주 궤도서 성능 실증 나선다
+https://www.aitimes.com/news/articleView.html?idxno=216085
+
+'헤르메스 에이전트' 누스 리서치, 대규모 투자 유치로 기업용 시장 진출
+https://www.aitimes.com/news/articleView.html?idxno=216082
+
+저커버그 부부의 바이오허브, 미 정부·구글과 2.4조 AI 생물학 데이터 구축
+https://www.aitimes.com/news/articleView.html?idxno=216081
+
+머스크 “테라팹 직접 운영한다”…TSMC 위탁운영설 일축
+https://www.aitimes.com/news/articleView.html?idxno=216080
+
 메타 '뮤즈', 스마트폰 이어 아이패드용 앱 출시…업무용 도구 연동 강화
 https://www.aitimes.com/news/articleView.html?idxno=216078
 
-구글, AI 생성 구분하는 '신스ID 감지기' 공개…이미지·영상·음성 판별
+구글, 텍스트 입력으로 게임 만드는 플랫폼 공개…유니티와 협력
+https://www.aitimes.com/news/articleView.html?idxno=216076
+
+구글, AI 생성물 구분하는 '신스ID 감지기' 일반에 전면 공개
 https://www.aitimes.com/news/articleView.html?idxno=216075
 
-삼성전자, 3분기 영업익 107조...애플·엔비디아도 못 넘은 '100조' 첫 달성
-https://www.aitimes.com/news/articleView.html?idxno=216062
+오픈AI "10대 챗GPT 평균 15분 사용" 주장에 안전성 논란 불붙어
+https://www.aitimes.com/news/articleView.html?idxno=216074
 
-스페이스X, AI 칩 구매에 53조 조달 추진...GPU 121만개 확보 나선다
-https://www.aitimes.com/news/articleView.html?idxno=216061
-
-오픈AI, 질문에 맞춰 화면 생성하는 'GPT-6' 공개...전 사용자 무료 적용
-https://www.aitimes.com/news/articleView.html?idxno=216059
-
-앤트로픽, API 비용 최대 90% 낮춘 '클로드 하이쿠 5.5' 공개
-https://www.aitimes.com/news/articleView.html?idxno=216044
-
-[게시판] SKT, 독파모 'A.X K2'로 순우리말 선정·글꼴 제작 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=216043
-
-AMD, 연내 국내 'AI 연구센터' 설립...정부와 메가프로젝트 협력 추진
-https://www.aitimes.com/news/articleView.html?idxno=216042
-
-"AI가 대신 전화 건다"…구글 제미나이, 개인 통화 대행 정황 포착
-https://www.aitimes.com/news/articleView.html?idxno=216041
-
-앤트로픽, 구글 워크스페이스 연동...문서 안에서 '클로드' 직접 호출
-https://www.aitimes.com/news/articleView.html?idxno=216040
+카카오, 국제 AI 학회서 MoE 학습 최적화·모델 경량화 성과 공개
+https://www.aitimes.com/news/articleView.html?idxno=216073
