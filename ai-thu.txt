@@ -1,31 +1,31 @@
 🤖 26년 10월 8일 목요일 AI 뉴스
 
-[10월7일] “비싸다던 클로드, 실제로는 챗GPT보다 5배 더 쓸 수 있었다”
-https://www.aitimes.com/news/articleView.html?idxno=216025
-
 앤트로픽, API 비용 최대 90% 낮춘 '클로드 하이쿠 5.5' 공개
 https://www.aitimes.com/news/articleView.html?idxno=216044
 
-구글, ‘나노 바나나 2.1’ 공개...성능 높이고 비용은 반값으로
-https://www.aitimes.com/news/articleView.html?idxno=216030
-
-"AI가 대신 전화 건다"…구글 제미나이, 개인 통화 대행 정황 포착
-https://www.aitimes.com/news/articleView.html?idxno=216041
-
-구글, 온디바이스 ‘임베딩젬마 2’ 공개…텍스트·이미지·음성 통합 처리
-https://www.aitimes.com/news/articleView.html?idxno=216031
-
-스튜어트 러셀의 경고 "LLM 정렬 불가능…모방 학습과 RLHF 한계"
-https://www.aitimes.com/news/articleView.html?idxno=216033
-
-앤트로픽, 구글 워크스페이스 연동...문서 안에서 '클로드' 직접 호출
-https://www.aitimes.com/news/articleView.html?idxno=216040
-
-앤트로픽, 스타트업 지원 프로그램 확대...초기 고객 선점 속도
-https://www.aitimes.com/news/articleView.html?idxno=216029
+[게시판] SKT, 독파모 'A.X K2'로 순우리말 선정·글꼴 제작 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=216043
 
 AMD, 연내 국내 'AI 연구센터' 설립...정부와 메가프로젝트 협력 추진
 https://www.aitimes.com/news/articleView.html?idxno=216042
 
-[게시판] SKT, 독파모 'A.X K2'로 순우리말 선정·글꼴 제작 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=216043
+"AI가 대신 전화 건다"…구글 제미나이, 개인 통화 대행 정황 포착
+https://www.aitimes.com/news/articleView.html?idxno=216041
+
+앤트로픽, 구글 워크스페이스 연동...문서 안에서 '클로드' 직접 호출
+https://www.aitimes.com/news/articleView.html?idxno=216040
+
+하크, '스마트폰 대체' AI 에이전트 공개...2027년 전용 기기 출시
+https://www.aitimes.com/news/articleView.html?idxno=216039
+
+구글, AI 데이터센터 전력 확보 위해 3.6GW 규모 원전 계약 체결
+https://www.aitimes.com/news/articleView.html?idxno=216038
+
+호주 청문회 출석한 오픈AI·앤트로픽 "에이전트 사고 신고 의무화 찬성"
+https://www.aitimes.com/news/articleView.html?idxno=216035
+
+아모데이 지난해 보수 240억...'대형 기술 기업 CEO 중 중간 수준'
+https://www.aitimes.com/news/articleView.html?idxno=216034
+
+스튜어트 러셀의 경고 "LLM 정렬 불가능…모방 학습과 RLHF 한계"
+https://www.aitimes.com/news/articleView.html?idxno=216033
