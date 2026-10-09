@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-10-09 23:53:16",
+  "updated_at_kst": "2026-10-10 02:25:02",
   "source": "https://news.naver.com/breakingnews/section/101/260",
-  "headline": "26년 10월 9일 금요일 부동산 주요뉴스",
+  "headline": "26년 10월 10일 토요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "\"도쿄는 매년 10만채 짓는데 서울은 3만채…이 시스템 못 깨면 집값 상승 불가피\"",
+      "url": "https://n.news.naver.com/mnews/article/003/0014243942"
+    },
     {
       "title": "서울시, JYP 신사옥 철회 책임론 반박…\"공공에 대한 불신 조장 유감\"",
       "url": "https://n.news.naver.com/mnews/article/008/0005424264"
@@ -38,10 +42,6 @@
     {
       "title": "15억 이하도 주담대 더 조이자?… 과녁 틀린 LH 사장의 훈수 [박상길의 부동산톡]",
       "url": "https://n.news.naver.com/mnews/article/029/0003052213"
-    },
-    {
-      "title": "청약통장 25만원 상향 2년, 10만원 그대로면 해마다 180만원 뒤처진다",
-      "url": "https://n.news.naver.com/mnews/article/088/0001033216"
     }
   ]
 }
