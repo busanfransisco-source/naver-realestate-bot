@@ -119,7 +119,7 @@ jobs:
           git add transactions.txt transactions-*.txt transactions-state.json || true
           git add weather.txt weather-*.txt fortune.txt fortune-*.txt realestate.txt realestate-*.txt latest.json latest-*.json index.html hub.html briefing.html last-refresh.txt
           git add realestate-analysis-candidates.json || true
-          git add data-cards.json
+          git add data-cards.json seoul-time-snapshots.json
           git commit -m "Manual briefing refresh" --allow-empty
           git pull --rebase origin main
           git push

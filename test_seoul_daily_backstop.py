@@ -5,7 +5,7 @@ from production_data_cards import KST, card_metadata
 
 class SeoulDailyBackstopTests(unittest.TestCase):
     def test_daytime_missing_and_yesterday_retry(self):
-        now = datetime(2026, 10, 7, 10, 30, tzinfo=KST)
+        now = datetime(2026, 10, 7, 12, 5, tzinfo=KST)
         self.assertTrue(needs_collection(None, now))
         old = card_metadata('seoulcommerce', '조회: 2026-10-06 18:00\n원자료 시각: 17:40~17:50')
         self.assertTrue(needs_collection(old, now))

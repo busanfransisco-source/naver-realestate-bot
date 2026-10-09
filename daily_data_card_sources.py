@@ -234,7 +234,7 @@ def build_seoul_commerce_digest(rows, *, now_kst=None, expected_count=82):
     return '\n'.join(lines)
 
 
-def fetch_seoul_commerce_digest(session, service_key, *, now_kst=None):
+def fetch_seoul_commerce_rows(session, service_key):
     if not service_key:
         raise SourceUnavailable("서울 정식 인증키가 없습니다")
     def collect(code):
@@ -245,7 +245,11 @@ def fetch_seoul_commerce_digest(session, service_key, *, now_kst=None):
             return None  # Never print credential-bearing request URLs.
     with ThreadPoolExecutor(max_workers=4) as executor:
         rows = [row for row in executor.map(collect, SEOUL_COMMERCE_CODES) if row is not None]
-    return build_seoul_commerce_digest(rows, now_kst=now_kst)
+    return rows
+
+
+def fetch_seoul_commerce_digest(session, service_key, *, now_kst=None):
+    return build_seoul_commerce_digest(fetch_seoul_commerce_rows(session, service_key), now_kst=now_kst)
 
 
 def _positive_number(value, label, *, allow_zero=False):

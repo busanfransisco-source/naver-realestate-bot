@@ -21,6 +21,14 @@ def card_metadata(key, body):
     """Derive expiry from the source clock, never the regeneration clock."""
     result = {'body': body, 'ready': False, 'sourceDate': None,
               'sourceWindow': None, 'expiresAtKst': None}
+    previous_day = re.search(r'기준일: (\d{4}-\d{2}-\d{2}) \(전날 · KST\)', body) if key == 'seoulcommerce' else None
+    if previous_day:
+        day = datetime.fromisoformat(previous_day[1]).replace(tzinfo=KST)
+        result.update(sourceDate=previous_day[1], sourceWindow=previous_day[1]+' 12:00 / 18:00',
+                      expiresAtKst=(day+timedelta(days=2)).isoformat(),
+                      ready='미수집' not in body and '자동공유 비활성' not in body
+                      and '🕛 전날 정오 기준' in body and '🌆 전날 오후 6시 기준' in body)
+        return result
     if '집계 대기' in body or '자동공유 비활성' in body:
         return result
     if key == 'seoulcommerce':
@@ -59,6 +67,8 @@ def valid_card(key, entry, now):
             return False
         source_day = datetime.fromisoformat(entry['sourceDate']).date()
         if key == 'seoulcommerce':
+            if '기준일:' in entry['body'] and '(전날 · KST)' in entry['body']:
+                return source_day == now.astimezone(KST).date()-timedelta(days=1)
             source = expiry - timedelta(minutes=30)
             return source_day == now.astimezone(KST).date() and source <= now + timedelta(minutes=5)
         age = (now.astimezone(timezone.utc).date() - source_day).days
@@ -83,6 +93,8 @@ def stored_seoul_snapshot(entry, now):
 
 def daily_seoul_snapshot(entry, now):
     """A verified first snapshot stays fixed and distributable on its KST date."""
+    if isinstance(entry, dict) and '(전날 · KST)' in entry.get('body', ''):
+        return valid_card('seoulcommerce', entry, now)
     return (stored_seoul_snapshot(entry, now)
             and entry.get('sourceDate') == now.astimezone(KST).date().isoformat())
 
@@ -96,10 +108,14 @@ def load_contents(path=CACHE, *, now=None):
         cards = {}
     if not isinstance(cards, dict):
         cards = {}
-    return {key: cards[key]['body'] if (valid_card(key, cards.get(key), now)
+    contents = {key: cards[key]['body'] if (valid_card(key, cards.get(key), now)
             or key == 'seoulcommerce' and stored_seoul_snapshot(cards.get(key), now))
             else pending_body(key, (cards.get(key) if isinstance(cards.get(key), dict) else {}).get('failureReason')
                               or '자료가 없거나 원자료 유효시간이 지났습니다') for key in KEYS}
+    from seoul_previous_day import ARCHIVE, read_archive, render_previous_day
+    if Path(path).resolve() == CACHE.resolve() and ARCHIVE.exists():
+        contents['seoulcommerce'] = render_previous_day(now, read_archive())
+    return contents
 
 
 def collect(path=CACHE, *, only=None):
@@ -176,6 +192,10 @@ if __name__ == '__main__':
     args = parser.parse_args()
     if args.collect:
         selected = (args.card,) if args.card else KEYS
-        result = collect(only=selected)
+        if 'seoulcommerce' in selected:
+            from seoul_previous_day import main as update_seoul
+            update_seoul()
+            selected = tuple(key for key in selected if key != 'seoulcommerce')
+        result = collect(only=selected) if selected else json.loads(CACHE.read_text(encoding='utf-8'))
         if args.require_fresh and not refresh_succeeded(result, selected):
             raise SystemExit('Requested source refresh failed; retained data is not a new successful refresh.')

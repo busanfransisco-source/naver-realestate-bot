@@ -157,7 +157,7 @@ SECTIONS = [
 ]
 
 NEW_DATA_SECTIONS = [
-    ("seoulcommerce", "📍 서울 주요 상권 실시간"),
+    ("seoulcommerce", "📍 서울 주요 상권 · 전날 정오 / 오후 6시"),
     ("cryptofear", "📊 비트코인 공포·탐욕 지수"),
     ("wikiinterest", "📖 경제 주제 읽기 관심도"),
 ]
@@ -346,7 +346,7 @@ def build_html(*, new_data_contents=None):
             metadata = card_metadata(key, content)
             expiry_attribute = f' data-data-card="true" data-expires="{metadata["expiresAtKst"] or ""}"'
             if key == 'seoulcommerce' and metadata['sourceDate']:
-                daily_end = datetime.fromisoformat(metadata['sourceDate']) + timedelta(days=1)
+                daily_end = datetime.fromisoformat(metadata['sourceDate']) + timedelta(days=2 if '(전날 · KST)' in content else 1)
                 expiry_attribute += f' data-daily-expires="{daily_end:%Y-%m-%d}T00:00:00+09:00"'
         section_blocks.append(f"""
 <section class="card" data-slot="{number}"{expiry_attribute}>

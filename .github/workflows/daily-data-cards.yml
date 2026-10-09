@@ -8,10 +8,10 @@ on:
         default: seoulcommerce
         options: [seoulcommerce, cryptofear, wikiinterest]
   schedule:
-    # Each card once a day: KST crypto09:15 / wiki10:15 / Seoul18:15.
+    # KST crypto09:15 / wiki10:15; archive Seoul12:00 and18:00 for next day.
     - cron: '15 0 * * *'
     - cron: '15 1 * * *'
-    - cron: '15 9 * * *'
+    - cron: '5,15 3,9 * * *'
 permissions:
   contents: write
 concurrency:
@@ -54,7 +54,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add data-cards.json
+          git add data-cards.json seoul-time-snapshots.json
           git diff --cached --quiet || git commit -m 'Refresh three data card source snapshots'
           git pull --rebase origin main
           python gen_briefing.py
