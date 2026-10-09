@@ -1,5 +1,11 @@
 🤖 26년 10월 9일 금요일 AI 뉴스
 
+앤트로픽 '클로드 사이언스', 인류 최초 자외선 전체 하늘 지도 완성
+https://www.aitimes.com/news/articleView.html?idxno=216106
+
+오픈AI, 연구원 해고 논란 해명..."안전 제기 보복 아닌 보안 위반"
+https://www.aitimes.com/news/articleView.html?idxno=216105
+
 스페이스X, 무선 통신 진출…미·유럽 통신주 '직격탄'
 https://www.aitimes.com/news/articleView.html?idxno=216104
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216098
 
 미국, 외국인 노동자 단속 강화…MS·어도비 영주권 신청 중단
 https://www.aitimes.com/news/articleView.html?idxno=216097
-
-구글, 기업용 '제미나이 에이전트' 출시…'아르곤'·'클로드' 동시 탑재
-https://www.aitimes.com/news/articleView.html?idxno=216096
-
-앤트로픽, ‘클로드 대시보드·모션’ 공개…"기업 데이터 분석·영상 제작"
-https://www.aitimes.com/news/articleView.html?idxno=216095
