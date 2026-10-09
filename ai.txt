@@ -1,31 +1,31 @@
 🤖 26년 10월 9일 금요일 AI 뉴스
 
-구글, 제미나이 요금제 개편..무료·저가 요금제서 '프로' 모델 뺀다
-https://www.aitimes.com/news/articleView.html?idxno=215946
+오픈AI, 연간 매출 추정치 27조 하향…빅테크 주가 일제히 요동
+https://www.aitimes.com/news/articleView.html?idxno=216098
 
-GPT-6 아스트라, 217년 된 나폴레옹 암호 6시간 만에 해독
-https://www.aitimes.com/news/articleView.html?idxno=215961
+구글, 기업용 '제미나이 에이전트' 출시…'아르곤'·'클로드' 동시 탑재
+https://www.aitimes.com/news/articleView.html?idxno=216096
 
-화면 안 보고 게임한다…GPT-6 아스트라, 'WoW' 40분 만에 클리어
-https://www.aitimes.com/news/articleView.html?idxno=215945
+한국 금융권 공격한 중국 26세 해커…'어설픈 신원 노출'로 덜미
+https://www.aitimes.com/news/articleView.html?idxno=216092
 
-"지기 싫어서 남의 코드 복사"…아스트라, 스타크래프트 벤치마크서 꼼수
-https://www.aitimes.com/news/articleView.html?idxno=215970
+리퀴드 AI, 10배 큰 체급 제친 멀티모달 의사결정 모델 ‘d1-3B’ 출시
+https://www.aitimes.com/news/articleView.html?idxno=216087
 
-구글, 'AI 프로' 국내 한정 40% 할인...연간 구독권 프로모션 진행
-https://www.aitimes.com/news/articleView.html?idxno=215976
+누리호 올라탄 토종 AI 반도체, 우주 궤도서 성능 실증 나선다
+https://www.aitimes.com/news/articleView.html?idxno=216085
 
-회계 업무서 AI '완벽' 단계 도달…인간 '37%' 역전
-https://www.aitimes.com/news/articleView.html?idxno=215935
+'헤르메스 에이전트' 누스 리서치, 대규모 투자 유치로 기업용 시장 진출
+https://www.aitimes.com/news/articleView.html?idxno=216082
 
-오픈AI 내부 모델, 종료 일정 알아채고 '생존 조치' 모색
-https://www.aitimes.com/news/articleView.html?idxno=215950
+저커버그 부부의 바이오허브, 미 정부·구글과 2.4조 AI 생물학 데이터 구축
+https://www.aitimes.com/news/articleView.html?idxno=216081
 
-'나만의 클로드 코드' 만든다...앤트로픽, 커스텀 확장 기능 '모드' 출시
-https://www.aitimes.com/news/articleView.html?idxno=215932
+머스크 “테라팹 직접 운영한다”…TSMC 위탁운영설 일축
+https://www.aitimes.com/news/articleView.html?idxno=216080
 
-[10월7일] “비싸다던 클로드, 실제로는 챗GPT보다 5배 더 쓸 수 있었다”
-https://www.aitimes.com/news/articleView.html?idxno=216025
+메타 '뮤즈', 스마트폰 이어 아이패드용 앱 출시…업무용 도구 연동 강화
+https://www.aitimes.com/news/articleView.html?idxno=216078
 
-"클로드가 일하고, 클로드가 감시한다"... 앤트로픽, 새 플러그인 공개
-https://www.aitimes.com/news/articleView.html?idxno=215949
+구글, 텍스트 입력으로 게임 만드는 플랫폼 공개…유니티와 협력
+https://www.aitimes.com/news/articleView.html?idxno=216076
