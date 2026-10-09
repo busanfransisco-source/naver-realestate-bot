@@ -1,10 +1,19 @@
 🤖 26년 10월 9일 금요일 AI 뉴스
 
+트럼프, 빅테크에 훈장 수여·주식 매수...이면엔 ‘비자 규제·안전 압박’
+https://www.aitimes.com/news/articleView.html?idxno=216102
+
 오픈AI, 연간 매출 추정치 27조 하향…빅테크 주가 일제히 요동
 https://www.aitimes.com/news/articleView.html?idxno=216098
 
+미국, 외국인 노동자 단속 강화…MS·어도비 영주권 신청 중단
+https://www.aitimes.com/news/articleView.html?idxno=216097
+
 구글, 기업용 '제미나이 에이전트' 출시…'아르곤'·'클로드' 동시 탑재
 https://www.aitimes.com/news/articleView.html?idxno=216096
+
+오픈AI 해고 연구원 3인 "AI 추론 감시 기능 보존해야"
+https://www.aitimes.com/news/articleView.html?idxno=216093
 
 한국 금융권 공격한 중국 26세 해커…'어설픈 신원 노출'로 덜미
 https://www.aitimes.com/news/articleView.html?idxno=216092
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216082
 
 저커버그 부부의 바이오허브, 미 정부·구글과 2.4조 AI 생물학 데이터 구축
 https://www.aitimes.com/news/articleView.html?idxno=216081
-
-머스크 “테라팹 직접 운영한다”…TSMC 위탁운영설 일축
-https://www.aitimes.com/news/articleView.html?idxno=216080
-
-메타 '뮤즈', 스마트폰 이어 아이패드용 앱 출시…업무용 도구 연동 강화
-https://www.aitimes.com/news/articleView.html?idxno=216078
-
-구글, 텍스트 입력으로 게임 만드는 플랫폼 공개…유니티와 협력
-https://www.aitimes.com/news/articleView.html?idxno=216076
