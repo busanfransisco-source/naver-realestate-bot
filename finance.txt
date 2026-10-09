@@ -1,5 +1,17 @@
 🏦 26년 10월 9일 금요일 금융 뉴스
 
+“AI 탓만 할 수 있나”…은행 보안 관리에 경영진 책임 도마위
+https://n.news.naver.com/mnews/article/243/0000104020
+
+'내 정보 다 아는' 대출 사기꾼…7만건 유출, 2차 피해 막으려면?
+https://n.news.naver.com/mnews/article/421/0009218814
+
+'이러다 다 죽어'…카드사, 스테이블코인 결제 선점 나선 이유
+https://n.news.naver.com/mnews/article/648/0000051449
+
+부산은행, 청년 자산 형성 돕는 '청년 기쁨두배통장' 출시
+https://n.news.naver.com/mnews/article/001/0016367252
+
 해킹 당해도 누가 공격했는지 몰라…이래서 AI 막으려면 AI 써야 한다?
 https://n.news.naver.com/mnews/article/016/0002707269
 
@@ -17,15 +29,3 @@ https://n.news.naver.com/mnews/article/003/0014243157
 
 “수백억 보안 투자에도 뚫렸다”…은행권 덮친 정보유출 파장
 https://n.news.naver.com/mnews/article/243/0000104018
-
-‘코인 금고’의 변신…거래부터 스테이블코인까지
-https://n.news.naver.com/mnews/article/119/0003141109
-
-수천억 쏟고도 '쪽문' 못 지켰다…은행은 왜 뚫렸나[K금융의 보안 민낯①]
-https://n.news.naver.com/mnews/article/003/0014243141
-
-[1mm 금융톡]1금융권까지 번진 해킹 위협…감독당국, 인력·조직 갖추고 방어 총력
-https://n.news.naver.com/mnews/article/277/0005826515
-
-금융권 해외發 해킹에 '깜깜이'…18건 중 16건 공격자 불명
-https://n.news.naver.com/mnews/article/001/0016367193
