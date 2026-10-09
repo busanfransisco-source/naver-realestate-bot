@@ -45,7 +45,7 @@ def render_previous_day(now, days):
         else:
             lines.append(snapshot['body'])
     lines.extend(['', '읽는 법: 최근 4주 같은 요일·시간대 대비 신한카드 내국인 소비 상태입니다.',
-                  '', '출처: 서울 열린데이터광장·신한카드'])
+                  '', '활용: 전날 점심·저녁 시간대에 평소보다 소비가 활발했던 상권과 업종을 함께 살펴보세요.'])
     if not complete:
         lines.extend(['', '자동공유 비활성 · 두 시간대 자료 확보 후 공유 가능합니다.'])
     return '\n'.join(lines)

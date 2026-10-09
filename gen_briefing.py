@@ -340,6 +340,7 @@ def build_html(*, new_data_contents=None):
     for number, key, label, content in rendered_sections:
         content_json = json.dumps(content, ensure_ascii=False)
         content_escaped = html.escape(content)
+        source_credit = ('<p style="font-size:12px;color:#666">출처: <a href="https://data.seoul.go.kr/dataList/OA-22385/A/1/datasetView.do">서울 열린데이터광장</a> · 신한카드</p>' if key == 'seoulcommerce' else '')
         expiry_attribute = ''
         if key in {item[0] for item in NEW_DATA_SECTIONS}:
             from production_data_cards import card_metadata
@@ -356,6 +357,7 @@ def build_html(*, new_data_contents=None):
   </div>
   <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
   <textarea id="ta-{key}" class="preview" readonly>{content_escaped}</textarea>
+  {source_credit}
   <script>window.__content_{key} = {content_json};</script>
 </section>""")
 
