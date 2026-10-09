@@ -7,4 +7,5 @@ def needs_collection(entry, now):
 
 
 if __name__ == '__main__':
-    main()
+    if not main():
+        raise SystemExit('Seoul target slot missing; previous-day display preserved')

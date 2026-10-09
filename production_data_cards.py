@@ -192,10 +192,11 @@ if __name__ == '__main__':
     args = parser.parse_args()
     if args.collect:
         selected = (args.card,) if args.card else KEYS
+        seoul_ok = True
         if 'seoulcommerce' in selected:
             from seoul_previous_day import main as update_seoul
-            update_seoul()
+            seoul_ok = update_seoul()
             selected = tuple(key for key in selected if key != 'seoulcommerce')
         result = collect(only=selected) if selected else json.loads(CACHE.read_text(encoding='utf-8'))
-        if args.require_fresh and not refresh_succeeded(result, selected):
+        if args.require_fresh and (not seoul_ok or not refresh_succeeded(result, selected)):
             raise SystemExit('Requested source refresh failed; retained data is not a new successful refresh.')

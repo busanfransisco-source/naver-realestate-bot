@@ -104,7 +104,10 @@ def main():
     data['generatedAtKst'] = now.isoformat()
     CACHE.write_text(json.dumps(data, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     print('Seoul previous-day display ready:', entry['ready'], '| captured target slot:', changed)
+    target_hour = now.hour if now.hour in (12, 18) and now.minute <= 20 else None
+    return target_hour is None or valid_snapshot(days.get(now.date().isoformat(), {}).get(str(target_hour)), now.date().isoformat(), target_hour)
 
 
 if __name__ == '__main__':
-    main()
+    if not main():
+        raise SystemExit('Seoul target slot missing; no substitute source was saved')
