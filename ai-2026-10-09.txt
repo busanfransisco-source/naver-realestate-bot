@@ -1,5 +1,11 @@
 🤖 26년 10월 9일 금요일 AI 뉴스
 
+스페이스X, 무선 통신 진출…미·유럽 통신주 '직격탄'
+https://www.aitimes.com/news/articleView.html?idxno=216104
+
+데이터센터 전문 퍼머스, 호주 IPO 철회…'엔비디아 후광'도 안 통했다
+https://www.aitimes.com/news/articleView.html?idxno=216103
+
 트럼프, 빅테크에 훈장 수여·주식 매수...이면엔 ‘비자 규제·안전 압박’
 https://www.aitimes.com/news/articleView.html?idxno=216102
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216096
 
 앤트로픽, ‘클로드 대시보드·모션’ 공개…"기업 데이터 분석·영상 제작"
 https://www.aitimes.com/news/articleView.html?idxno=216095
-
-애플, 10월 말 첫 터치스크린 맥북 공개...M6 칩으로 전문가 시장 공략
-https://www.aitimes.com/news/articleView.html?idxno=216094
-
-오픈AI 해고 연구원 3인 "AI 추론 감시 기능 보존해야"
-https://www.aitimes.com/news/articleView.html?idxno=216093
