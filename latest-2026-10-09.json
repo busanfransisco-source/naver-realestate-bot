@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-10-09 09:28:49",
+  "updated_at_kst": "2026-10-09 09:44:37",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 9일 금요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "못 기다리는 무주택자, 청약통장 깨고 그냥 집 산다",
+      "url": "https://n.news.naver.com/mnews/article/648/0000051450"
+    },
+    {
+      "title": "견본주택 열자마자 방문객 발길 잇따라… ‘쌍용 더 플래티넘 한강’ 개관",
+      "url": "https://n.news.naver.com/mnews/article/277/0005826528"
+    },
     {
       "title": "수도권 주택 착공부터...미분양 나도 LH가 1.8만구 매입 약속",
       "url": "https://n.news.naver.com/mnews/article/023/0004002938"
@@ -34,14 +42,6 @@
     {
       "title": "LH, 수도권 공공택지 미분양 매입확약 추가 시행",
       "url": "https://n.news.naver.com/mnews/article/014/0005587064"
-    },
-    {
-      "title": "서울 아파트 전셋값 상승에 주거 선택지 변화… 도심형 시니어 레지던스 주목",
-      "url": "https://n.news.naver.com/mnews/article/016/0002707272"
-    },
-    {
-      "title": "침체와 회복 반복하는 부동산 시장… 과거 분양 단지 가격 변화 주목",
-      "url": "https://n.news.naver.com/mnews/article/016/0002707271"
     }
   ]
 }
