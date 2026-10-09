@@ -3,6 +3,15 @@
 트럼프, 빅테크에 훈장 수여·주식 매수...이면엔 ‘비자 규제·안전 압박’
 https://www.aitimes.com/news/articleView.html?idxno=216102
 
+"오픈소스 취약점 AI가 잡는다"...앤트로픽, 무료 보안 검사 도구 공개
+https://www.aitimes.com/news/articleView.html?idxno=216101
+
+"모델 학대도 금지"...앤트로픽, '클로드' 오용 막기 위해 사용 정책 개정
+https://www.aitimes.com/news/articleView.html?idxno=216100
+
+아마존, '파이어 OS' 버리고 안드로이드 태블릿 첫 출시…프리미엄 시장 도전
+https://www.aitimes.com/news/articleView.html?idxno=216099
+
 오픈AI, 연간 매출 추정치 27조 하향…빅테크 주가 일제히 요동
 https://www.aitimes.com/news/articleView.html?idxno=216098
 
@@ -12,20 +21,11 @@ https://www.aitimes.com/news/articleView.html?idxno=216097
 구글, 기업용 '제미나이 에이전트' 출시…'아르곤'·'클로드' 동시 탑재
 https://www.aitimes.com/news/articleView.html?idxno=216096
 
+애플, 10월 말 첫 터치스크린 맥북 공개...M6 칩으로 전문가 시장 공략
+https://www.aitimes.com/news/articleView.html?idxno=216094
+
 오픈AI 해고 연구원 3인 "AI 추론 감시 기능 보존해야"
 https://www.aitimes.com/news/articleView.html?idxno=216093
 
 한국 금융권 공격한 중국 26세 해커…'어설픈 신원 노출'로 덜미
 https://www.aitimes.com/news/articleView.html?idxno=216092
-
-리퀴드 AI, 10배 큰 체급 제친 멀티모달 의사결정 모델 ‘d1-3B’ 출시
-https://www.aitimes.com/news/articleView.html?idxno=216087
-
-누리호 올라탄 토종 AI 반도체, 우주 궤도서 성능 실증 나선다
-https://www.aitimes.com/news/articleView.html?idxno=216085
-
-'헤르메스 에이전트' 누스 리서치, 대규모 투자 유치로 기업용 시장 진출
-https://www.aitimes.com/news/articleView.html?idxno=216082
-
-저커버그 부부의 바이오허브, 미 정부·구글과 2.4조 AI 생물학 데이터 구축
-https://www.aitimes.com/news/articleView.html?idxno=216081
