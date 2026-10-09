@@ -1,8 +1,20 @@
 {
-  "updated_at_kst": "2026-10-10 04:50:59",
+  "updated_at_kst": "2026-10-10 06:00:38",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 10일 토요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "[부동산캘린더] 내주 향남역 그로브 스위첸 등 1천829가구 분양",
+      "url": "https://n.news.naver.com/mnews/article/001/0016367999"
+    },
+    {
+      "title": "[챗집피티] 40년 된 송파 '알짜' 오금현대…1.6조에 삼성·포스코 경쟁",
+      "url": "https://n.news.naver.com/mnews/article/008/0005424277"
+    },
+    {
+      "title": "압구정·반포도 제쳤다…평당 2억 찍은 '그사세' 아파트, 어디?",
+      "url": "https://n.news.naver.com/mnews/article/008/0005424275"
+    },
     {
       "title": "빗길에선 더 위험한 마모 타이어…제동거리 1.7배 늘어[짤막영상]",
       "url": "https://n.news.naver.com/mnews/article/003/0014243968"
@@ -30,18 +42,6 @@
     {
       "title": "서울시 “JYP 사옥 건립 철회, SH 잘못 아니다…불신 조장 유감”",
       "url": "https://n.news.naver.com/mnews/article/011/0004669770"
-    },
-    {
-      "title": "서울시 “JYP 사옥 철회가 SH공사 잘못처럼 알려진 건 사실과 달라”",
-      "url": "https://n.news.naver.com/mnews/article/009/0005746477"
-    },
-    {
-      "title": "서울시, JYP 신사옥 철회 책임론 반박…\"토지계획 변경 사전 명시\"",
-      "url": "https://n.news.naver.com/mnews/article/421/0009219434"
-    },
-    {
-      "title": "서울시 “JYP 신사옥 건립 포기, SH 잘못처럼 호도해 유감”",
-      "url": "https://n.news.naver.com/mnews/article/016/0002707374"
     }
   ]
 }
