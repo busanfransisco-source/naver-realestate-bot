@@ -1,9 +1,21 @@
 🤖 26년 10월 10일 토요일 AI 뉴스
 
+백악관, AI 기업 '보안 사고' 보고 의무화...앤트로픽 침해 사건이 계기
+https://www.aitimes.com/news/articleView.html?idxno=216120
+
+[AI 이슈트렌드] 대통령 지지율 제자리 속 은행권 해킹·누리호 발사·북한 도발 주목
+https://www.aitimes.com/news/articleView.html?idxno=216119
+
+메타 인수 무산된 마누스, 6700억 투자 유치로 독립 경영 가속
+https://www.aitimes.com/news/articleView.html?idxno=216118
+
+앤트로픽 AI, 경찰 미제사건 제보 사이트에 '허위 제보' 소동
+https://www.aitimes.com/news/articleView.html?idxno=216117
+
 [내면 지도 그리기] 37 Inner Mapping: 나를 찾는 지도
 https://www.aitimes.com/news/articleView.html?idxno=216116
 
-[AI카툰] Bob, Senior IT guy - 밥, 마운자로효과보면…
+[AI카툰] Bob, Senior IT guy - 밥, 마운자로 효과 보면…
 https://www.aitimes.com/news/articleView.html?idxno=216114
 
 "6~12개월 내 터진다"…주요 AI 기업, 최악의 AI 재난 시나리오 가동
@@ -12,20 +24,8 @@ https://www.aitimes.com/news/articleView.html?idxno=216112
 타입세이프, '제브' 출시 3주 만에 대규모 투자 유치...기업가치 10조 등극
 https://www.aitimes.com/news/articleView.html?idxno=216111
 
+물리 법칙 실시간 예측하는 월드 모델 '오딧세이-3' 공개..."벤치마크 최고 기록"
+https://www.aitimes.com/news/articleView.html?idxno=216110
+
 구글, '제미나이 4 아르곤' 후속 '카본' 테스트 중…"오퍼스 5.5 수준"
 https://www.aitimes.com/news/articleView.html?idxno=216109
-
-앤트로픽 '클로드 사이언스', 인류 최초 자외선 전체 하늘 지도 완성
-https://www.aitimes.com/news/articleView.html?idxno=216106
-
-오픈AI, 연구원 해고 논란 해명..."안전 제기 보복 아닌 보안 위반"
-https://www.aitimes.com/news/articleView.html?idxno=216105
-
-스페이스X, 무선 통신 진출…미·유럽 통신주 '직격탄'
-https://www.aitimes.com/news/articleView.html?idxno=216104
-
-데이터센터 전문 퍼머스, 호주 IPO 철회…'엔비디아 후광'도 안 통했다
-https://www.aitimes.com/news/articleView.html?idxno=216103
-
-트럼프, 빅테크에 훈장 수여·주식 매수...이면엔 ‘비자 규제·안전 압박’
-https://www.aitimes.com/news/articleView.html?idxno=216102
