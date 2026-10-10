@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-10-11 07:04:40",
+  "updated_at_kst": "2026-10-11 07:41:28",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 11일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "AI로 불법주청자 잡고 교량 진단...건설연, 상용화 속도",
+      "url": "https://n.news.naver.com/mnews/article/011/0004669896"
+    },
+    {
+      "title": "8년째 더딘 '서울형 리모델링'…시범단지 7곳 중 1곳만 행위허가",
+      "url": "https://n.news.naver.com/mnews/article/421/0009220107"
+    },
     {
       "title": "청약시장서 입지는 기본, 특화설계·커뮤니티 등 차별화 경쟁",
       "url": "https://n.news.naver.com/mnews/article/119/0003141354"
@@ -34,14 +42,6 @@
     {
       "title": "장기수선충당금 환급, 2년 살면 59만원…수선유지비는 못 돌려받는다",
       "url": "https://n.news.naver.com/mnews/article/088/0001033391"
-    },
-    {
-      "title": "공유재산 총조사 법제화…마당 낀 시유지 3천만원 이하면 수의매수",
-      "url": "https://n.news.naver.com/mnews/article/088/0001033387"
-    },
-    {
-      "title": "“70억 트리마제도 안 통했다”…초고가 아파트도 경매시장서 굴욕",
-      "url": "https://n.news.naver.com/mnews/article/009/0005746617"
     }
   ]
 }
