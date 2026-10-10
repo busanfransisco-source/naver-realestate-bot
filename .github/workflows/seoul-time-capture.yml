@@ -1,0 +1,81 @@
+name: Capture Seoul noon and evening independently
+on:
+  workflow_dispatch:
+    inputs:
+      hour:
+        description: KST target hour (today)
+        type: choice
+        options: ['12', '18']
+        default: '12'
+  schedule:
+    # Start early to absorb schedule delay; the runner waits for actual source time.
+    # UTC23:47 = KST08:47 -> noon; UTC05:47 = KST14:47 ->18:00.
+    - cron: '47 23 * * *'
+    - cron: '47 5 * * *'
+permissions:
+  contents: write
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 230
+    concurrency:
+      group: seoul-capture-${{ inputs.hour || (github.event.schedule == '47 23 * * *' && '12') || '18' }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - name: Wait for and archive the real target source clocks
+        run: python -u seoul_previous_day.py --watch-hour "$TARGET_HOUR"
+        env:
+          TARGET_HOUR: ${{ inputs.hour || (github.event.schedule == '47 23 * * *' && '12') || '18' }}
+          SEOUL_OPEN_DATA_KEY: ${{ secrets.SEOUL_OPEN_DATA_KEY }}
+      - name: Preserve verified archive even if later attempts fail
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seoul-capture-${{ github.run_id }}
+          path: seoul-time-snapshots.json
+          retention-days: 7
+  publish:
+    needs: capture
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    concurrency:
+      group: manual-briefing
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: seoul-capture-${{ github.run_id }}
+          path: tmp/seoul-captured
+      - name: Merge with latest archive and publish previous-day text
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git pull --ff-only origin main
+          python seoul_previous_day.py --merge tmp/seoul-captured/seoul-time-snapshots.json --publish-only
+          python gen_briefing.py
+          git add seoul-time-snapshots.json data-cards.json briefing.html
+          git diff --cached --quiet || git commit -m 'Publish independently verified Seoul target-time archive'
+          git push origin HEAD:main
+      - name: Verify public cache and page parity
+        run: python audit_data_cards.py
+      - name: Surface a missed real-time slot as failure, not success
+        if: needs.capture.result != 'success'
+        run: |
+          echo 'Target-time capture failed. Preserved any verified samples; no fake historical data.'
+          exit 1

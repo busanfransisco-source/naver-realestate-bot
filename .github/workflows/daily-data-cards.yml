@@ -8,10 +8,9 @@ on:
         default: seoulcommerce
         options: [seoulcommerce, cryptofear, wikiinterest]
   schedule:
-    # KST crypto09:15 / wiki10:15; archive Seoul12:00 and18:00 for next day.
+    # KST crypto09:15 / wiki10:15. Seoul uses its independent early-start collector.
     - cron: '15 0 * * *'
     - cron: '15 1 * * *'
-    - cron: '5,15 3,9 * * *'
 permissions:
   contents: write
 concurrency:

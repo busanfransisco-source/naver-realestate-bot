@@ -209,13 +209,11 @@ def build_seoul_commerce_digest(rows, *, now_kst=None, expected_count=82):
                 lines.extend('• ' + label(row) + (f" ({row['observed_at_kst']:%H:%M})"
                              if len(clocks) > 1 else '') for row in selected)
         return clocks
-    clocks = append_examples(active[:6], lambda row: row['area'])
+    clocks = append_examples(active, lambda row: row['area'])
     if not active:
         lines.extend(['', "자료에서 바쁨·분주 단계인 상권은 없습니다."])
-    elif len(active) > 6:
-        lines.extend(['', f"이 밖에 {len(active)-6}곳도 바쁨·분주 단계입니다."])
     if len(clocks) == 1:
-        lines.append(f"위에 표시한 {min(len(active),6)}곳의 원자료 기준시각은 모두 {next(iter(clocks))}입니다.")
+        lines.append(f"위에 표시한 {len(active)}곳의 원자료 기준시각은 모두 {next(iter(clocks))}입니다.")
     sector_examples = []
     for row in sorted(fresh, key=lambda row: row['area']):
         for industry in sorted(row.get('industries', []), key=lambda item: item['industry']):

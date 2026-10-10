@@ -24,7 +24,8 @@ def valid_snapshot(snapshot, day, hour):
         source_max = datetime.fromisoformat(snapshot['sourceMaxKst'])
         captured = datetime.fromisoformat(snapshot['collectedAtKst'])
         return (target-timedelta(minutes=30) <= source_min <= source_max <= target
-                and target <= captured <= target+timedelta(minutes=20)
+                and target-timedelta(minutes=30) <= captured <= target+timedelta(minutes=20)
+                and source_max <= captured+timedelta(minutes=5)
                 and snapshot['placeCount'] >= 62 and snapshot['placeCount'] <= 82
                 and isinstance(snapshot['body'], str) and '집계 대기' not in snapshot['body']
                 and f'원자료 시각: {day} {source_min:%H:%M}~{source_max:%H:%M} (KST)' in snapshot['body'])
@@ -51,14 +52,27 @@ def render_previous_day(now, days):
     return '\n'.join(lines)
 
 
+def snapshot_quality(snapshot):
+    return (snapshot['sourceMinKst'], snapshot['sourceMaxKst'], snapshot['placeCount'])
+
+
+def active_hour(now):
+    for hour, _ in SLOTS:
+        target = now.replace(hour=hour, minute=0, second=0, microsecond=0)
+        if target-timedelta(minutes=30) <= now <= target+timedelta(minutes=20):
+            return hour
+    return None
+
+
 def capture_slot(now, days, fetch_rows):
     """A late run cannot masquerade as noon. Only <=target source clocks qualify."""
     now = now.astimezone(KST)
-    hour = next((h for h, _ in SLOTS if now.hour == h and now.minute <= 20), None)
+    hour = active_hour(now)
     if hour is None:
         return False
     day = now.date().isoformat()
-    if valid_snapshot(days.get(day, {}).get(str(hour)), day, hour):
+    previous = days.get(day, {}).get(str(hour))
+    if valid_snapshot(previous, day, hour) and datetime.fromisoformat(previous['sourceMinKst']).hour == hour:
         return False
     from daily_data_card_sources import build_seoul_commerce_digest
     target = now.replace(hour=hour, minute=0, second=0, microsecond=0)
@@ -79,11 +93,63 @@ def capture_slot(now, days, fetch_rows):
                 'collectedAtKst': now.isoformat(), 'placeCount': len(rows), 'body': body}
     if not valid_snapshot(snapshot, day, hour):
         raise ValueError('Invalid Seoul time-slot snapshot')
+    if valid_snapshot(previous, day, hour) and snapshot_quality(snapshot) <= snapshot_quality(previous):
+        return False
     days.setdefault(day, {})[str(hour)] = snapshot
     return True
 
 
-def main():
+def save_archive(days):
+    ARCHIVE.write_text(json.dumps({'schemaVersion': 1, 'days': days}, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+
+
+def merge_archive(days, incoming):
+    for day, slots in incoming.items():
+        for hour, _ in SLOTS:
+            item = slots.get(str(hour))
+            if not valid_snapshot(item, day, hour):
+                continue
+            old = days.get(day, {}).get(str(hour))
+            if not valid_snapshot(old, day, hour) or snapshot_quality(item) > snapshot_quality(old):
+                days.setdefault(day, {})[str(hour)] = item
+    return days
+
+
+def watch_slot(hour, *, clock=None, sleeper=None, fetch_rows=None):
+    import time
+    import requests
+    from daily_data_card_sources import fetch_seoul_commerce_rows, SourceUnavailable
+    from local_api_secrets import load_secret
+    clock = clock or (lambda: datetime.now(KST))
+    sleeper = sleeper or time.sleep
+    fetch_rows = fetch_rows or (lambda: fetch_seoul_commerce_rows(requests, load_secret('seoul')))
+    started = clock().astimezone(KST)
+    target = started.replace(hour=hour, minute=0, second=0, microsecond=0)
+    end = target+timedelta(minutes=20)
+    days = read_archive()
+    print('Seoul collector target:', target.isoformat(), '| runner started:', started.isoformat(), flush=True)
+    if started > end:
+        print('MISSED: runner started after target window; no API or fake historical capture', flush=True)
+        return False
+    attempt_after = target-timedelta(minutes=30)
+    while clock() <= end:
+        now = clock().astimezone(KST)
+        if now >= attempt_after:
+            try:
+                if capture_slot(now, days, fetch_rows):
+                    save_archive(days)
+                    print('SAVED:', days[target.date().isoformat()][str(hour)]['sourceMaxKst'], flush=True)
+            except (SourceUnavailable, requests.RequestException, ValueError):
+                print('Source sample unavailable; retrying within the real target window', flush=True)
+            item = days.get(target.date().isoformat(), {}).get(str(hour))
+            if valid_snapshot(item, target.date().isoformat(), hour) and datetime.fromisoformat(item['sourceMinKst']) >= target:
+                return True
+            attempt_after = now+timedelta(minutes=3)
+        sleeper(60)
+    return valid_snapshot(days.get(target.date().isoformat(), {}).get(str(hour)), target.date().isoformat(), hour)
+
+
+def main(publish_only=False):
     import requests
     from local_api_secrets import load_secret
     from daily_data_card_sources import fetch_seoul_commerce_rows, SourceUnavailable
@@ -91,12 +157,12 @@ def main():
     now = datetime.now(KST)
     days = read_archive()
     try:
-        changed = capture_slot(now, days, lambda: fetch_seoul_commerce_rows(requests, load_secret('seoul')))
+        changed = False if publish_only else capture_slot(now, days, lambda: fetch_seoul_commerce_rows(requests, load_secret('seoul')))
     except (SourceUnavailable, requests.RequestException, ValueError):
         changed = False
         print('Seoul target-time source unavailable; no later-time substitution')
     if changed:
-        ARCHIVE.write_text(json.dumps({'schemaVersion': 1, 'days': days}, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+        save_archive(days)
     data = json.loads(CACHE.read_text(encoding='utf-8'))
     entry = card_metadata('seoulcommerce', render_previous_day(now, days))
     entry.update(refreshStatus='previous_day_two_slots', checkedAtKst=now.isoformat())
@@ -104,10 +170,19 @@ def main():
     data['generatedAtKst'] = now.isoformat()
     CACHE.write_text(json.dumps(data, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     print('Seoul previous-day display ready:', entry['ready'], '| captured target slot:', changed)
-    target_hour = now.hour if now.hour in (12, 18) and now.minute <= 20 else None
-    return target_hour is None or valid_snapshot(days.get(now.date().isoformat(), {}).get(str(target_hour)), now.date().isoformat(), target_hour)
+    target_hour = active_hour(now)
+    return publish_only or target_hour is None or valid_snapshot(days.get(now.date().isoformat(), {}).get(str(target_hour)), now.date().isoformat(), target_hour)
 
 
 if __name__ == '__main__':
-    if not main():
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--watch-hour', type=int, choices=(12, 18))
+    parser.add_argument('--merge')
+    parser.add_argument('--publish-only', action='store_true')
+    args = parser.parse_args()
+    if args.merge:
+        save_archive(merge_archive(read_archive(), read_archive(args.merge)))
+    success = watch_slot(args.watch_hour) if args.watch_hour else main(publish_only=args.publish_only)
+    if not success:
         raise SystemExit('Seoul target slot missing; no substitute source was saved')

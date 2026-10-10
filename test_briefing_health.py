@@ -41,6 +41,19 @@ class HealthTests(unittest.TestCase):
             text = Path(f'.github/workflows/{name}.yml').read_text(encoding='utf-8')
             self.assertIn('briefing_health.py --url', text)
 
+    def test_seoul_previous_day_is_accepted_only_when_both_slots_exist(self):
+        from production_data_cards import card_metadata
+        body = '📍 서울 주요 상권\n기준일: 2026-10-05 (전날 · KST)\n🕛 전날 정오 기준\n🌆 전날 오후 6시 기준\n'+'관찰 자료입니다. '*30
+        page = self.page()
+        start = page.index('id="ta-seoulcommerce">')+len('id="ta-seoulcommerce">')
+        end = page.index('</textarea>',start)
+        page = page[:start]+body+page[end:]
+        row = inspect(page,datetime(2026,10,6,9,tzinfo=KST))[19]
+        self.assertEqual(row['status'],'ok')
+        page = page.replace('관찰 자료입니다.','미수집',1)
+        row = inspect(page,datetime(2026,10,6,9,tzinfo=KST))[19]
+        self.assertEqual(row['status'],'failed')
+
 
 if __name__ == '__main__':
     unittest.main()

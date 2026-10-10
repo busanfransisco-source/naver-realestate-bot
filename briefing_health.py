@@ -66,7 +66,7 @@ def inspect(page, now=None):
         elif key == 'transactions':
             due = 7
         elif key == 'seoulcommerce':
-            due = 19
+            due = 8
         elif key == 'cryptofear':
             due = 10
         elif key == 'wikiinterest':
@@ -77,8 +77,9 @@ def inspect(page, now=None):
             try:
                 source = datetime.fromisoformat(meta['sourceDate']).date()
                 age = (today - source).days
-                allowed = 3 if key == 'wikiinterest' else 1 if key == 'cryptofear' else 0
-                if age < 0 or age > allowed:
+                previous_seoul = key == 'seoulcommerce' and '(전날 · KST)' in text
+                allowed = 3 if key == 'wikiinterest' else 1 if key == 'cryptofear' or previous_seoul else 0
+                if age < 0 or age > allowed or previous_seoul and (age != 1 or not meta['ready']):
                     issues.append('source date outside allowed window')
             except (TypeError, ValueError):
                 issues.append('missing source clock')

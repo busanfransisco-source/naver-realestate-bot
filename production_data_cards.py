@@ -196,6 +196,11 @@ if __name__ == '__main__':
         if 'seoulcommerce' in selected:
             from seoul_previous_day import main as update_seoul
             seoul_ok = update_seoul()
+            if args.require_fresh:
+                from seoul_previous_day import active_hour, read_archive, valid_snapshot
+                stamp = datetime.now(KST)
+                hour = active_hour(stamp)
+                seoul_ok = hour is not None and valid_snapshot(read_archive().get(stamp.date().isoformat(), {}).get(str(hour)), stamp.date().isoformat(), hour)
             selected = tuple(key for key in selected if key != 'seoulcommerce')
         result = collect(only=selected) if selected else json.loads(CACHE.read_text(encoding='utf-8'))
         if args.require_fresh and (not seoul_ok or not refresh_succeeded(result, selected)):
