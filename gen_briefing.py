@@ -338,6 +338,8 @@ def build_html(*, new_data_contents=None):
         )
     )
     for number, key, label, content in rendered_sections:
+        if key == 'seoulcommerce' and '(오늘 임시 배포 · KST)' in content:
+            label = '📍 서울 주요 상권 · 오늘 임시 배포'
         content_json = json.dumps(content, ensure_ascii=False)
         content_escaped = html.escape(content)
         source_credit = ('<p style="font-size:12px;color:#666">출처: <a href="https://data.seoul.go.kr/dataList/OA-22385/A/1/datasetView.do">서울 열린데이터광장</a> · 신한카드</p>' if key == 'seoulcommerce' else '')

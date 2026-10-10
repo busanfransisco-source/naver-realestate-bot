@@ -21,6 +21,14 @@ def card_metadata(key, body):
     """Derive expiry from the source clock, never the regeneration clock."""
     result = {'body': body, 'ready': False, 'sourceDate': None,
               'sourceWindow': None, 'expiresAtKst': None}
+    temporary = re.search(r'기준일: (2026-10-10) \(오늘 임시 배포 · KST\)', body) if key == 'seoulcommerce' else None
+    if temporary:
+        day = datetime.fromisoformat(temporary[1]).replace(tzinfo=KST)
+        clocks = re.findall(r'원자료 시각: '+temporary[1]+r' (\d{2}:\d{2}~\d{2}:\d{2})',body)
+        result.update(sourceDate=temporary[1], sourceWindow=temporary[1]+' '+ ' / '.join(clocks),
+                      expiresAtKst=(day+timedelta(days=1)).isoformat(),
+                      ready=bool(clocks) and '미수집' not in body and '자동공유 비활성' not in body)
+        return result
     previous_day = re.search(r'기준일: (\d{4}-\d{2}-\d{2}) \(전날 · KST\)', body) if key == 'seoulcommerce' else None
     if previous_day:
         day = datetime.fromisoformat(previous_day[1]).replace(tzinfo=KST)
@@ -67,6 +75,8 @@ def valid_card(key, entry, now):
             return False
         source_day = datetime.fromisoformat(entry['sourceDate']).date()
         if key == 'seoulcommerce':
+            if '(오늘 임시 배포 · KST)' in entry['body']:
+                return source_day == now.astimezone(KST).date()
             if '기준일:' in entry['body'] and '(전날 · KST)' in entry['body']:
                 return source_day == now.astimezone(KST).date()-timedelta(days=1)
             source = expiry - timedelta(minutes=30)
@@ -93,7 +103,7 @@ def stored_seoul_snapshot(entry, now):
 
 def daily_seoul_snapshot(entry, now):
     """A verified first snapshot stays fixed and distributable on its KST date."""
-    if isinstance(entry, dict) and '(전날 · KST)' in entry.get('body', ''):
+    if isinstance(entry, dict) and any(mode in entry.get('body', '') for mode in ('(전날 · KST)', '(오늘 임시 배포 · KST)')):
         return valid_card('seoulcommerce', entry, now)
     return (stored_seoul_snapshot(entry, now)
             and entry.get('sourceDate') == now.astimezone(KST).date().isoformat())

@@ -7,6 +7,7 @@ from pathlib import Path
 KST = timezone(timedelta(hours=9))
 ARCHIVE = Path(__file__).with_name('seoul-time-snapshots.json')
 SLOTS = ((12, '🕛 전날 정오 기준'), (18, '🌆 전날 오후 6시 기준'))
+TODAY_EXCEPTION = '2026-10-10'
 
 
 def read_archive(path=ARCHIVE):
@@ -36,23 +37,35 @@ def valid_snapshot(snapshot, day, hour):
 
 
 def render_previous_day(now, days):
-    day = (now.astimezone(KST).date()-timedelta(days=1)).isoformat()
-    lines = ['📍 서울 주요 상권', f'기준일: {day} (전날 · KST)']
+    today = now.astimezone(KST).date()
+    temporary = today.isoformat() == TODAY_EXCEPTION
+    day = (today if temporary else today-timedelta(days=1)).isoformat()
+    mode = '오늘 임시 배포' if temporary else '전날'
+    lines = ['📍 서울 주요 상권', f'기준일: {day} ({mode} · KST)']
     complete = True
+    available = 0
     for hour, title in SLOTS:
-        lines.extend(['', title, ''])
         snapshot = days.get(day, {}).get(str(hour))
+        if temporary and not valid_snapshot(snapshot, day, hour):
+            continue
+        if temporary:
+            title = title.replace('전날 ', '')
+        lines.extend(['', title, ''])
         if not valid_snapshot(snapshot, day, hour):
             complete = False
             lines.append('해당 시간대 보관 자료 없음 · 미수집')
         else:
+            available += 1
             target = datetime.fromisoformat(day).replace(hour=hour, tzinfo=KST)
             if not (target-timedelta(minutes=30) <= datetime.fromisoformat(snapshot['sourceMinKst'])
                     <= datetime.fromisoformat(snapshot['sourceMaxKst']) <= target+timedelta(minutes=20)):
                 lines.append('🔄 기준시각 자료 누락 · 가장 가까운 시간대의 대체 자료입니다.\n')
             lines.append(snapshot['body'])
+    if temporary:
+        lines.extend(['', '※ 오늘은 확보된 당일 자료로 임시 배포합니다. 내일부터 전날 정오·오후 6시 기준으로 제공합니다.'])
+        complete = available > 0
     lines.extend(['', '읽는 법: 최근 4주 같은 요일·시간대 대비 신한카드 내국인 소비 상태입니다.',
-                  '', '활용: 전날 점심·저녁 시간대에 평소보다 소비가 활발했던 상권과 업종을 함께 살펴보세요.'])
+                  '', '활용: 실제 원자료 시각을 확인하고 소비가 활발했던 상권과 업종을 함께 살펴보세요.'])
     if not complete:
         lines.extend(['', '자동공유 비활성 · 두 시간대 자료 확보 후 공유 가능합니다.'])
     return '\n'.join(lines)

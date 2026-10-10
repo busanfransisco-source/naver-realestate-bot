@@ -6,6 +6,27 @@ from production_data_cards import card_metadata, valid_card
 
 
 class PreviousDayTests(unittest.TestCase):
+    def setUp(self):
+        # Existing historical fixtures test the default previous-day policy.
+        self.exception_patch = patch('seoul_previous_day.TODAY_EXCEPTION', '2099-01-01')
+        self.exception_patch.start()
+        self.addCleanup(self.exception_patch.stop)
+
+    def test_one_day_exception_shares_available_today_then_reverts(self):
+        days = {}
+        now = datetime(2026,10,10,11,tzinfo=KST)
+        capture_slot(now,days,lambda:self.rows(now))
+        with patch('seoul_previous_day.TODAY_EXCEPTION','2026-10-10'):
+            body = render_previous_day(now,days)
+            self.assertIn('2026-10-10 (오늘 임시 배포 · KST)',body)
+            self.assertNotIn('자동공유 비활성',body)
+            entry = card_metadata('seoulcommerce',body)
+            self.assertTrue(valid_card('seoulcommerce',entry,now))
+            self.assertFalse(valid_card('seoulcommerce',entry,now+timedelta(days=1)))
+            tomorrow = render_previous_day(now+timedelta(days=1),days)
+            self.assertIn('2026-10-10 (전날 · KST)',tomorrow)
+            self.assertNotIn('오늘 임시 배포',tomorrow)
+
     def rows(self, now):
         return [{'area': f'장소{i}', 'observed_at_kst': now.replace(tzinfo=None),
                  'relative_level': '보통', 'industries': []} for i in range(82)]
