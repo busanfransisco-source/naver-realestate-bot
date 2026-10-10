@@ -1,5 +1,11 @@
 🤖 26년 10월 10일 토요일 AI 뉴스
 
+"6~12개월 내 터진다"…주요 AI 기업, 최악의 AI 재난 시나리오 가동
+https://www.aitimes.com/news/articleView.html?idxno=216112
+
+타입세이프, '제브' 출시 3주 만에 대규모 투자 유치...기업가치 10조 등극
+https://www.aitimes.com/news/articleView.html?idxno=216111
+
 구글, '제미나이 4 아르곤' 후속 '카본' 테스트 중…"오퍼스 5.5 수준"
 https://www.aitimes.com/news/articleView.html?idxno=216109
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216101
 
 "모델 학대도 금지"...앤트로픽, '클로드' 오용 막기 위해 사용 정책 개정
 https://www.aitimes.com/news/articleView.html?idxno=216100
-
-아마존, 안드로이드 태블릿 첫 출시…프리미엄 시장 도전
-https://www.aitimes.com/news/articleView.html?idxno=216099
-
-오픈AI, 연간 매출 추정치 27조 하향…빅테크 주가 일제히 요동
-https://www.aitimes.com/news/articleView.html?idxno=216098
