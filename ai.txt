@@ -1,5 +1,11 @@
 🤖 26년 10월 10일 토요일 AI 뉴스
 
+[내면 지도 그리기] 37 Inner Mapping: 나를 찾는 지도
+https://www.aitimes.com/news/articleView.html?idxno=216116
+
+[AI카툰] Bob, Senior IT guy - 밥, 마운자로효과보면…
+https://www.aitimes.com/news/articleView.html?idxno=216114
+
 "6~12개월 내 터진다"…주요 AI 기업, 최악의 AI 재난 시나리오 가동
 https://www.aitimes.com/news/articleView.html?idxno=216112
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216103
 
 트럼프, 빅테크에 훈장 수여·주식 매수...이면엔 ‘비자 규제·안전 압박’
 https://www.aitimes.com/news/articleView.html?idxno=216102
-
-"오픈소스 취약점 AI가 잡는다"...앤트로픽, 무료 보안 검사 도구 공개
-https://www.aitimes.com/news/articleView.html?idxno=216101
-
-"모델 학대도 금지"...앤트로픽, '클로드' 오용 막기 위해 사용 정책 개정
-https://www.aitimes.com/news/articleView.html?idxno=216100
