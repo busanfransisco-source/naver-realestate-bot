@@ -1,5 +1,8 @@
 🤖 26년 10월 10일 토요일 AI 뉴스
 
+엔비디아, AI 추론 칩 d-매트릭스에 투자 계획…GPU 중심 생태계 확장
+https://www.aitimes.com/news/articleView.html?idxno=216122
+
 백악관, AI 기업 '보안 사고' 보고 의무화...앤트로픽 침해 사건이 계기
 https://www.aitimes.com/news/articleView.html?idxno=216120
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216112
 
 타입세이프, '제브' 출시 3주 만에 대규모 투자 유치...기업가치 10조 등극
 https://www.aitimes.com/news/articleView.html?idxno=216111
-
-물리 법칙 실시간 예측하는 월드 모델 '오딧세이-3' 공개..."벤치마크 최고 기록"
-https://www.aitimes.com/news/articleView.html?idxno=216110
