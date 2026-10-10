@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-10-11 01:12:32",
+  "updated_at_kst": "2026-10-11 03:55:32",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 11일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "집 짓던 건설사가 연어를?…GS건설이 10만마리 키우는 방법[짤막영상]",
+      "url": "https://n.news.naver.com/mnews/article/003/0014244587"
+    },
     {
       "title": "당장 10억이 어디 있나요…요즘 사람들 청약통장 깨는 이유 있었다",
       "url": "https://n.news.naver.com/mnews/article/011/0004669881"
@@ -38,10 +42,6 @@
     {
       "title": "DL이앤씨 부천 발전소 현장서 타워크레인 무게추 덮쳐… 노동자 1명 숨져",
       "url": "https://n.news.naver.com/mnews/article/022/0004165506"
-    },
-    {
-      "title": "'반디클' vs '디에이치 반포124', 아파트명 변경 '갑론을박'",
-      "url": "https://n.news.naver.com/mnews/article/018/0006385409"
     }
   ]
 }
