@@ -27,13 +27,14 @@ class PreviousDayTests(unittest.TestCase):
         self.assertTrue(valid_card('seoulcommerce', entry, tomorrow))
         self.assertFalse(valid_card('seoulcommerce', entry, tomorrow+timedelta(days=1)))
 
-    def test_late_job_and_later_source_cannot_fake_noon(self):
+    def test_late_job_uses_explicit_nearby_fallback(self):
         days = {}
-        self.assertFalse(capture_slot(datetime(2026,10,9,13,tzinfo=KST), days, lambda: self.fail()))
-        with self.assertRaises(ValueError):
-            capture_slot(datetime(2026,10,9,12,15,tzinfo=KST), days,
-                         lambda: self.rows(datetime(2026,10,9,12,10)))
-        self.assertEqual(days, {})
+        now = datetime(2026,10,9,13,tzinfo=KST)
+        self.assertTrue(capture_slot(now, days, lambda: self.rows(now)))
+        body = render_previous_day(datetime(2026,10,10,9,tzinfo=KST),days)
+        self.assertIn('대체 자료',body)
+        self.assertIn('13:00~13:00',body)
+        self.assertFalse(capture_slot(datetime(2026,10,9,23,tzinfo=KST), days, lambda: self.fail()))
 
     def test_missing_slot_and_date_never_substitute(self):
         now = datetime(2026,10,9,12,5,tzinfo=KST)
@@ -53,11 +54,28 @@ class PreviousDayTests(unittest.TestCase):
             self.assertTrue(watch_slot(12, clock=lambda: current[0], sleeper=sleep,
                                       fetch_rows=lambda: self.rows(current[0])))
         self.assertGreater(len(saved), 1)
-        self.assertTrue(saved[-1].startswith('2026-10-09T12:00'))
+        self.assertTrue(saved[-1].startswith('2026-10-09T12:'))
 
-    def test_late_runner_fails_without_calling_api(self):
-        self.assertFalse(watch_slot(12, clock=lambda: datetime(2026,10,9,13,tzinfo=KST),
-                                    fetch_rows=lambda: self.fail('late source must not replace noon')))
+    def test_late_runner_saves_fallback_instead_of_skipping_api(self):
+        now = datetime(2026,10,9,13,tzinfo=KST)
+        with patch('seoul_previous_day.read_archive',return_value={}), patch('seoul_previous_day.save_archive') as save:
+            self.assertTrue(watch_slot(12,clock=lambda:now,fetch_rows=lambda:self.rows(now)))
+        save.assert_called_once()
+
+    def test_distant_sample_does_not_replace_a_closer_one(self):
+        days = {}
+        now = datetime(2026,10,9,12,10,tzinfo=KST)
+        capture_slot(now,days,lambda:self.rows(now))
+        later = now.replace(hour=14)
+        self.assertFalse(capture_slot(later,days,lambda:self.rows(later)))
+        self.assertIn('12:10~12:10',days['2026-10-09']['12']['body'])
+
+    def test_evening_1910_is_automatically_accepted(self):
+        now = datetime(2026,10,9,19,10,tzinfo=KST)
+        days = {}
+        self.assertTrue(capture_slot(now,days,lambda:self.rows(now)))
+        self.assertIn('18',days['2026-10-09'])
+        self.assertIn('대체 자료',render_previous_day(now+timedelta(days=1),days))
 
     def test_artifact_merge_preserves_other_slot_and_newer_sample(self):
         days = {}

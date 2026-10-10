@@ -11,6 +11,8 @@ on:
     # KST crypto09:15 / wiki10:15. Seoul uses its independent early-start collector.
     - cron: '15 0 * * *'
     - cron: '15 1 * * *'
+    # PC-independent catch-up samples. Actual source clocks remain visible.
+    - cron: '17,47 0-12 * * *'
 permissions:
   contents: write
 concurrency:
