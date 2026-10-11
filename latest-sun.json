@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-10-11 20:53:16",
+  "updated_at_kst": "2026-10-11 22:54:57",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 11일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "[단독] \"청년이 마리모냐\"…'2.6평' 초미니 집에 살라는 LH",
+      "url": "https://n.news.naver.com/mnews/article/015/0005341272"
+    },
+    {
+      "title": "“서울에도 10억 아래 집 있다더라”…수요 몰리자 이 동네 집값 ‘들썩’",
+      "url": "https://n.news.naver.com/mnews/article/011/0004670057"
+    },
     {
       "title": "李대통령 “지난 3년 수도권 주택 인허가 공백…공급 조만간 정상화”",
       "url": "https://n.news.naver.com/mnews/article/666/0000126901"
@@ -34,14 +42,6 @@
     {
       "title": "'넘사벽'된 서울 소형… 동작 26억 뚫고 성북도 16억 눈앞",
       "url": "https://n.news.naver.com/mnews/article/014/0005587443"
-    },
-    {
-      "title": "\"구조 손질\" \"재산권 완화\"… 해법 갈린 여야 정비사업 속도전",
-      "url": "https://n.news.naver.com/mnews/article/014/0005587442"
-    },
-    {
-      "title": "용산전자상가, AI·ICT 신사업 거점으로…이달 첫 삽",
-      "url": "https://n.news.naver.com/mnews/article/119/0003141475"
     }
   ]
 }
