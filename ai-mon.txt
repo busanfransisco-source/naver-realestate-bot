@@ -1,31 +1,31 @@
-🤖 26년 10월 5일 월요일 AI 뉴스
+🤖 26년 10월 12일 월요일 AI 뉴스
 
-클로드, 18개 분야 36편 논문 원고 작성… 앤트로픽이 조명한 AI 과학 연구
-https://www.aitimes.com/news/articleView.html?idxno=215979
+앤트로픽, '클로드 스타트업' 무료 혜택 일시 중단…신청 폭증에 전면 재검토
+https://www.aitimes.com/news/articleView.html?idxno=216136
 
-앤트로픽, 10월6일까지 '음성 인터뷰어' 가동…대화록 공개·음성 학습 수집 결합
-https://www.aitimes.com/news/articleView.html?idxno=215978
+“AI와 직장 동료처럼 대화하라”…클로드 코드 개발자의 프롬프트 조언
+https://www.aitimes.com/news/articleView.html?idxno=216135
 
-뉴럴링크, 5만시간 뇌 데이터 사전학습…BCI도 '파운데이션 모델' 시대 열렸다
-https://www.aitimes.com/news/articleView.html?idxno=215977
+우크라이나, 얀덱스 데이터센터 잇단 공격…디지털 인프라가 새 표적으로
+https://www.aitimes.com/news/articleView.html?idxno=216134
 
-구글, 'AI 프로' 국내 한정 40% 할인...연간 구독권 프로모션 진행
-https://www.aitimes.com/news/articleView.html?idxno=215976
+앤트로픽, 내부 AI 평가서 실시간 인터넷 차단…“안전장치 검증 때까지”
+https://www.aitimes.com/news/articleView.html?idxno=216133
 
-'인간 vs 로봇' 케이지 파이트, 캘리포니아서 ‘중단 명령’ 받았다
-https://www.aitimes.com/news/articleView.html?idxno=215975
+할리우드, AI 불안 속 저커버그·머스크·알트먼 영화 잇따라 선보여
+https://www.aitimes.com/news/articleView.html?idxno=216132
 
-KAIST, 데이터 변화해도 검색 정확도 유지하는 ‘CONDA’ 기술 개발
-https://www.aitimes.com/news/articleView.html?idxno=215974
+아레나, 2700억 투자 유치…AI 안전성 평가 '정렬 지수' 도입
+https://www.aitimes.com/news/articleView.html?idxno=216131
 
-a16z "미국 가구 2.2%만 AI 유료 구독…기술이 경기 순환 핵심 주도"
-https://www.aitimes.com/news/articleView.html?idxno=215973
+얀 르쿤의 월드 모델 'H-제파', 단·장기 계획 분리로 로봇 경로 계획 성공률 73% 달성
+https://www.aitimes.com/news/articleView.html?idxno=216129
 
-AI가 쏟아낸 '엉터리 제보'에... 구글, 오픈소스 버그 바운티 일시 중단
-https://www.aitimes.com/news/articleView.html?idxno=215972
+저커버그, 경쟁 제품 압박에 안전 우려에도 ‘뮤즈’ 출시 강행
+https://www.aitimes.com/news/articleView.html?idxno=216128
 
-브로드컴, 앤트로픽에 80조 대출 보증…칩 판매 위해 금융 지원
-https://www.aitimes.com/news/articleView.html?idxno=215971
+중국 AI 모델 안전성 평가 공개율 3.6%...출시 전 공개는 고작 1.1%
+https://www.aitimes.com/news/articleView.html?idxno=216127
 
-"지기 싫어서 남의 코드 복사"…아스트라, 스타크래프트 벤치마크서 꼼수
-https://www.aitimes.com/news/articleView.html?idxno=215970
+나델라 “AI에도 비상 브레이크 필요”...인간 통제·독립 감사 강조
+https://www.aitimes.com/news/articleView.html?idxno=216126
