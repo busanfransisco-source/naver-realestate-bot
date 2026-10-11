@@ -1,5 +1,11 @@
 🤖 26년 10월 11일 일요일 AI 뉴스
 
+앤트로픽, 내부 AI 평가서 실시간 인터넷 차단…“안전장치 검증 때까지”
+https://www.aitimes.com/news/articleView.html?idxno=216133
+
+할리우드, AI 불안 속 저커버그·머스크·알트먼 영화 잇따라 선보여
+https://www.aitimes.com/news/articleView.html?idxno=216132
+
 아레나, 2700억 투자 유치…AI 안전성 평가 '정렬 지수' 도입
 https://www.aitimes.com/news/articleView.html?idxno=216131
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216124
 
 [기고] 한국딥러닝 "기업 4곳 중 3곳이 AI 데이터에 투자…이제 ‘AI-레디’만으론 부족"
 https://www.aitimes.com/news/articleView.html?idxno=216123
-
-엔비디아, AI 추론 칩 d-매트릭스에 투자 계획…GPU 중심 생태계 확장
-https://www.aitimes.com/news/articleView.html?idxno=216122
-
-백악관, AI 기업 '보안 사고' 보고 의무화...앤트로픽 침해 사건이 계기
-https://www.aitimes.com/news/articleView.html?idxno=216120
