@@ -1,5 +1,8 @@
 🤖 26년 10월 11일 일요일 AI 뉴스
 
+저커버그, 경쟁 제품 압박에 안전 우려에도 ‘뮤즈’ 출시 강행
+https://www.aitimes.com/news/articleView.html?idxno=216128
+
 앤트로픽, 자체 음성 모델 개발하나…클로드 웹에 ‘보이스’ 메뉴 포착
 https://www.aitimes.com/news/articleView.html?idxno=216124
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216114
 
 테슬라, 유럽 승인 위해 'FSD' 명칭 떼고 '보조 주행'으로 교체
 https://www.aitimes.com/news/articleView.html?idxno=216113
-
-"6~12개월 내 터진다"…주요 AI 기업, 최악의 AI 재난 시나리오 가동
-https://www.aitimes.com/news/articleView.html?idxno=216112
