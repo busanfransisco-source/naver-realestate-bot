@@ -1,5 +1,14 @@
 🤖 26년 10월 11일 일요일 AI 뉴스
 
+앤트로픽, '클로드 스타트업' 무료 혜택 일시 중단…신청 폭증에 전면 재검토
+https://www.aitimes.com/news/articleView.html?idxno=216136
+
+“AI와 직장 동료처럼 대화하라”…클로드 코드 개발자의 프롬프트 조언
+https://www.aitimes.com/news/articleView.html?idxno=216135
+
+우크라이나, 얀덱스 데이터센터 잇단 공격…디지털 인프라가 새 표적으로
+https://www.aitimes.com/news/articleView.html?idxno=216134
+
 앤트로픽, 내부 AI 평가서 실시간 인터넷 차단…“안전장치 검증 때까지”
 https://www.aitimes.com/news/articleView.html?idxno=216133
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216127
 
 나델라 “AI에도 비상 브레이크 필요”...인간 통제·독립 감사 강조
 https://www.aitimes.com/news/articleView.html?idxno=216126
-
-엔비디아, 미국 오픈소스 대표 리플렉션 AI 인수·투자 확대 논의
-https://www.aitimes.com/news/articleView.html?idxno=216125
-
-앤트로픽, 자체 음성 모델 개발하나…클로드 웹에 ‘보이스’ 메뉴 포착
-https://www.aitimes.com/news/articleView.html?idxno=216124
-
-[기고] 한국딥러닝 "기업 4곳 중 3곳이 AI 데이터에 투자…이제 ‘AI-레디’만으론 부족"
-https://www.aitimes.com/news/articleView.html?idxno=216123
