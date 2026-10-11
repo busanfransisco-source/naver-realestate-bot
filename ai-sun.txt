@@ -1,5 +1,8 @@
 🤖 26년 10월 11일 일요일 AI 뉴스
 
+앤트로픽, 자체 음성 모델 개발하나…클로드 웹에 ‘보이스’ 메뉴 포착
+https://www.aitimes.com/news/articleView.html?idxno=216124
+
 엔비디아, AI 추론 칩 d-매트릭스에 투자 계획…GPU 중심 생태계 확장
 https://www.aitimes.com/news/articleView.html?idxno=216122
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216113
 
 "6~12개월 내 터진다"…주요 AI 기업, 최악의 AI 재난 시나리오 가동
 https://www.aitimes.com/news/articleView.html?idxno=216112
-
-타입세이프, '제브' 출시 3주 만에 대규모 투자 유치...기업가치 10조 등극
-https://www.aitimes.com/news/articleView.html?idxno=216111
