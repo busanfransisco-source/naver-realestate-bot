@@ -32,6 +32,9 @@ def card_metadata(key, body):
     previous_day = re.search(r'기준일: (\d{4}-\d{2}-\d{2}) \(전날 · KST\)', body) if key == 'seoulcommerce' else None
     if previous_day:
         day = datetime.fromisoformat(previous_day[1]).replace(tzinfo=KST)
+        display = re.search(r'^📅 (\d{4})년 (\d{1,2})월 (\d{1,2})일 브리핑$', body, re.M)
+        if display and datetime(*(int(part) for part in display.groups()), tzinfo=KST) != day+timedelta(days=1):
+            return result
         result.update(sourceDate=previous_day[1], sourceWindow=previous_day[1]+' 12:00 / 18:00',
                       expiresAtKst=(day+timedelta(days=2)).isoformat(),
                       ready='미수집' not in body and '자동공유 비활성' not in body

@@ -41,12 +41,15 @@ class PreviousDayTests(unittest.TestCase):
             self.assertTrue(valid_snapshot(days['2026-10-09'][str(hour)], '2026-10-09', hour))
         tomorrow = datetime(2026, 10, 10, 9, tzinfo=KST)
         body = render_previous_day(tomorrow, days)
+        self.assertTrue(body.startswith('📍 서울 주요 상권\n📅 2026년 10월 10일 브리핑\n원자료 기준일: 2026-10-09'))
         self.assertIn('2026-10-09 (전날 · KST)', body)
         self.assertIn('전날 정오 기준', body)
         self.assertIn('전날 오후 6시 기준', body)
         entry = card_metadata('seoulcommerce', body)
         self.assertTrue(valid_card('seoulcommerce', entry, tomorrow))
         self.assertFalse(valid_card('seoulcommerce', entry, tomorrow+timedelta(days=1)))
+        wrong_title = body.replace('📅 2026년 10월 10일', '📅 2026년 10월 9일')
+        self.assertFalse(card_metadata('seoulcommerce', wrong_title)['ready'])
 
     def test_late_job_uses_explicit_nearby_fallback(self):
         days = {}

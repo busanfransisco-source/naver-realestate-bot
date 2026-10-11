@@ -41,7 +41,9 @@ def render_previous_day(now, days):
     temporary = today.isoformat() == TODAY_EXCEPTION
     day = (today if temporary else today-timedelta(days=1)).isoformat()
     mode = '오늘 임시 배포' if temporary else '전날'
-    lines = ['📍 서울 주요 상권', f'기준일: {day} ({mode} · KST)']
+    lines = ['📍 서울 주요 상권',
+             f'📅 {today.year}년 {today.month}월 {today.day}일 브리핑',
+             f'원자료 기준일: {day} ({mode} · KST)']
     complete = True
     available = 0
     for hour, title in SLOTS:
