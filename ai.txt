@@ -1,5 +1,11 @@
 🤖 26년 10월 11일 일요일 AI 뉴스
 
+아레나, 2700억 투자 유치…AI 안전성 평가 '정렬 지수' 도입
+https://www.aitimes.com/news/articleView.html?idxno=216131
+
+얀 르쿤의 월드 모델 'H-제파', 단·장기 계획 분리로 로봇 경로 계획 성공률 73% 달성
+https://www.aitimes.com/news/articleView.html?idxno=216129
+
 저커버그, 경쟁 제품 압박에 안전 우려에도 ‘뮤즈’ 출시 강행
 https://www.aitimes.com/news/articleView.html?idxno=216128
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216122
 
 백악관, AI 기업 '보안 사고' 보고 의무화...앤트로픽 침해 사건이 계기
 https://www.aitimes.com/news/articleView.html?idxno=216120
-
-[AI 이슈트렌드] 대통령 지지율 제자리 속 은행권 해킹·누리호 발사·북한 도발 주목
-https://www.aitimes.com/news/articleView.html?idxno=216119
-
-메타 인수 무산된 마누스, 6700억 투자 유치로 독립 경영 가속
-https://www.aitimes.com/news/articleView.html?idxno=216118
