@@ -3,8 +3,20 @@
 저커버그, 경쟁 제품 압박에 안전 우려에도 ‘뮤즈’ 출시 강행
 https://www.aitimes.com/news/articleView.html?idxno=216128
 
+중국 AI 모델 안전성 평가 공개율 3.6%...출시 전 공개는 고작 1.1%
+https://www.aitimes.com/news/articleView.html?idxno=216127
+
+나델라 “AI에도 비상 브레이크 필요”...인간 통제·독립 감사 강조
+https://www.aitimes.com/news/articleView.html?idxno=216126
+
+엔비디아, 미국 오픈소스 대표 리플렉션 AI 인수·투자 확대 논의
+https://www.aitimes.com/news/articleView.html?idxno=216125
+
 앤트로픽, 자체 음성 모델 개발하나…클로드 웹에 ‘보이스’ 메뉴 포착
 https://www.aitimes.com/news/articleView.html?idxno=216124
+
+[기고] 한국딥러닝 "기업 4곳 중 3곳이 AI 데이터에 투자…이제 ‘AI-레디’만으론 부족"
+https://www.aitimes.com/news/articleView.html?idxno=216123
 
 엔비디아, AI 추론 칩 d-매트릭스에 투자 계획…GPU 중심 생태계 확장
 https://www.aitimes.com/news/articleView.html?idxno=216122
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216119
 
 메타 인수 무산된 마누스, 6700억 투자 유치로 독립 경영 가속
 https://www.aitimes.com/news/articleView.html?idxno=216118
-
-앤트로픽 AI, 경찰 미제사건 제보 사이트에 '허위 제보' 소동
-https://www.aitimes.com/news/articleView.html?idxno=216117
-
-[내면 지도 그리기] 37 Inner Mapping: 나를 찾는 지도
-https://www.aitimes.com/news/articleView.html?idxno=216116
-
-[AI카툰] Bob, Senior IT guy - 밥, 마운자로 효과 보면…
-https://www.aitimes.com/news/articleView.html?idxno=216114
-
-테슬라, 유럽 승인 위해 'FSD' 명칭 떼고 '보조 주행'으로 교체
-https://www.aitimes.com/news/articleView.html?idxno=216113
