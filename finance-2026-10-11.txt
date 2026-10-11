@@ -1,5 +1,26 @@
 🏦 26년 10월 11일 일요일 금융 뉴스
 
+은행 가계대출 10명 중 6명 변동금리…1년 새 4.3%p 증가
+https://n.news.naver.com/mnews/article/374/0000537103
+
+AI 해킹 2주 전 금융보안원 '경고'했다…수법·대응도 설명
+https://n.news.naver.com/mnews/article/374/0000537102
+
+[단독]기은, IT예산 15% 보안에…15년 무사고 위해 전용 GPU 도입
+https://n.news.naver.com/mnews/article/277/0005826718
+
+“결국 빚 안 갚은 사람만 신났나”…부실채권 소각에 성실 채무자 ‘허탈’ [금융가 톺아보기]
+https://n.news.naver.com/mnews/article/009/0005746636
+
+현대百서 얼굴로 결제하면 반값…토스 페이스페이 첫선
+https://n.news.naver.com/mnews/article/011/0004669906
+
+동네 은행, 10년 새 1700곳 사라졌다…‘9시 점포’ 해법 될까?
+https://n.news.naver.com/mnews/article/243/0000104062
+
+금융권 훑고 다닌 'AI 해킹'…"더 큰 피해 올 수도"[K금융의 보안 민낯④]
+https://n.news.naver.com/mnews/article/003/0014244695
+
 NH농협은행, 기업금융 사업추진 결의대회 개최…4대 중점 과제 선정
 https://n.news.naver.com/mnews/article/030/0003473756
 
@@ -8,24 +29,3 @@ https://n.news.naver.com/mnews/article/029/0003052284
 
 한은·국책은행 해킹 시도 올 100만건 돌파… ‘역대 최대’
 https://n.news.naver.com/mnews/article/029/0003052282
-
-전통시장 10%·수도권 골목 5%…‘온누리상품권’ 할인구조 개편
-https://n.news.naver.com/mnews/article/662/0000105831
-
-한국서 태어난 코인은 왜 해외로 떠났나
-https://n.news.naver.com/mnews/article/119/0003141360
-
-은행 문 30분 늦게 열면?…'직원 웃고 고객은 불편' 사실일까
-https://n.news.naver.com/mnews/article/243/0000104059
-
-줄줄이 털렸는데 책임은 누가?…금융사 배상책임 커지나[K금융의 보안 민낯③]
-https://n.news.naver.com/mnews/article/003/0014244662
-
-[단독]'1조원' 넘은 캄코시티…12억 회수 그친 예보, 다시 속도내나
-https://n.news.naver.com/mnews/article/008/0005424416
-
-“내년엔 1200원대도 가능”…‘반도체 달러’ 덕에 원화 강세 계속될까
-https://n.news.naver.com/mnews/article/009/0005746621
-
-증권사 중소·벤처 자금 1조9천억 중 70%가 수도권 집중
-https://n.news.naver.com/mnews/article/088/0001033416
