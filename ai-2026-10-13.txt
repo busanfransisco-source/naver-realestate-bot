@@ -1,0 +1,31 @@
+🤖 26년 10월 13일 화요일 AI 뉴스
+
+게임·배달 기업까지 가세…중국 AI 모델 경쟁, 다시 격화
+https://www.aitimes.com/news/articleView.html?idxno=216174
+
+Ai2, MoE 학습 효율 2.7배 높인 오픈소스 프레임워크 '올모 코어 3' 공개
+https://www.aitimes.com/news/articleView.html?idxno=216173
+
+[게시판] KT '모두의 AI' 연내 출시 앞두고 중간 점검 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=216172
+
+"말 한마디로 작동하는 3D 기계 그려"...클로드 코드용 '아나토미' 공개
+https://www.aitimes.com/news/articleView.html?idxno=216170
+
+'데이터센터=수익'…IPO 앞둔 앤트로픽이 인프라에 사활 건 이유
+https://www.aitimes.com/news/articleView.html?idxno=216168
+
+오르카라우터, 100만 토큰 컨텍스트 지원 사이버 보안 모델 공개
+https://www.aitimes.com/news/articleView.html?idxno=216167
+
+포스코DX, AI 스타트업 인핸스에 20억 투자..."전사 AX 속도 낸다"
+https://www.aitimes.com/news/articleView.html?idxno=216166
+
+AI가 인간 상담사를 대체하기 어려운 이유...“말로 하는 위로에는 한계”
+https://www.aitimes.com/news/articleView.html?idxno=216165
+
+국감서 "AI 캐릭터 챗봇, 청소년 보호 구멍" 지적...규제 급물살 타나
+https://www.aitimes.com/news/articleView.html?idxno=216164
+
+사카나 AI, LLM 기반 동료 검토 시스템으로 논문 핵심 주장 오류 73% 적발
+https://www.aitimes.com/news/articleView.html?idxno=216163
