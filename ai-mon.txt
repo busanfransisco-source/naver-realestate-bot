@@ -1,5 +1,8 @@
 🤖 26년 10월 12일 월요일 AI 뉴스
 
+[AI리더의 서가] 핸즈온 머신러닝 with 사이킷런. 파이토치
+https://www.aitimes.com/news/articleView.html?idxno=216139
+
 앤트로픽, '클로드 스타트업' 무료 혜택 일시 중단…신청 폭증에 재검토
 https://www.aitimes.com/news/articleView.html?idxno=216136
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216128
 
 중국 AI 모델 안전성 평가 공개율 3.6%...출시 전 공개는 고작 1.1%
 https://www.aitimes.com/news/articleView.html?idxno=216127
-
-나델라 “AI에도 비상 브레이크 필요”...인간 통제·독립 감사 강조
-https://www.aitimes.com/news/articleView.html?idxno=216126
