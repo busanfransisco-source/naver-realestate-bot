@@ -1,31 +1,31 @@
 🤖 26년 10월 12일 월요일 AI 뉴스
 
+“클로드가 의식을 가졌다고?”…앤트로픽 ‘AI 신비주의’에 맹비난
+https://www.aitimes.com/news/articleView.html?idxno=216160
+
+네이버클라우드, 베트남 FPT와 아태 지역 AI 팩토리 사업 확대
+https://www.aitimes.com/news/articleView.html?idxno=216156
+
+퀄컴 "AI 기업들, 100B 온디바이스 모델 구동할 칩 요구"
+https://www.aitimes.com/news/articleView.html?idxno=216155
+
+미국, 영국의 AI 모델 사전 안전 테스트 허용...트럼프 행정부 입장 번복
+https://www.aitimes.com/news/articleView.html?idxno=216153
+
+임직원 채용·교육에 'AI 활용역량 평가체계' 도입 확대
+https://www.aitimes.com/news/articleView.html?idxno=216152
+
+아마존, AI 인프라 강화 위해 데카르트 9조 인수 협상 중
+https://www.aitimes.com/news/articleView.html?idxno=216151
+
+AI로 복제한 어도비 무료 대안 '아트크래프트' 등장…저작권 논란
+https://www.aitimes.com/news/articleView.html?idxno=216149
+
+호주, ‘태양광 주택 3억가구’ 글로벌 선언 지지…2030년까지 두 배로
+https://www.aitimes.com/news/articleView.html?idxno=216142
+
+EU, 태양광 사이버보안 강화 논의…고위험 공급업체 제한 권고
+https://www.aitimes.com/news/articleView.html?idxno=216140
+
 [AI리더의 서가] 핸즈온 머신러닝 with 사이킷런. 파이토치
 https://www.aitimes.com/news/articleView.html?idxno=216139
-
-앤트로픽, '클로드 스타트업' 무료 혜택 일시 중단…신청 폭증에 재검토
-https://www.aitimes.com/news/articleView.html?idxno=216136
-
-“AI와 직장 동료처럼 대화하라”…클로드 코드 개발자의 프롬프트 조언
-https://www.aitimes.com/news/articleView.html?idxno=216135
-
-우크라이나, 얀덱스 데이터센터 잇단 공격…디지털 인프라가 새 표적으로
-https://www.aitimes.com/news/articleView.html?idxno=216134
-
-앤트로픽, 내부 AI 평가서 실시간 인터넷 차단…“안전장치 검증 때까지”
-https://www.aitimes.com/news/articleView.html?idxno=216133
-
-할리우드, AI 불안 속 저커버그·머스크·알트먼 영화 잇따라 선보여
-https://www.aitimes.com/news/articleView.html?idxno=216132
-
-아레나, 2700억 투자 유치…AI 안전성 평가 '정렬 지수' 도입
-https://www.aitimes.com/news/articleView.html?idxno=216131
-
-얀 르쿤의 월드 모델 'H-제파', 단·장기 계획 분리로 로봇 경로 계획 성공률 73% 달성
-https://www.aitimes.com/news/articleView.html?idxno=216129
-
-저커버그, 경쟁 제품 압박에 안전 우려에도 ‘뮤즈’ 출시 강행
-https://www.aitimes.com/news/articleView.html?idxno=216128
-
-중국 AI 모델 안전성 평가 공개율 3.6%...출시 전 공개는 고작 1.1%
-https://www.aitimes.com/news/articleView.html?idxno=216127
