@@ -1,5 +1,8 @@
 🤖 26년 10월 13일 화요일 AI 뉴스
 
+MS, 자체 AI 칩 대규모 배치 선언...차세대 '마이아 300' 공개
+https://www.aitimes.com/news/articleView.html?idxno=216182
+
 메타, 자체 최고 모델 ‘뮤즈 원더’ 출시로 프런티어 경쟁 합류
 https://www.aitimes.com/news/articleView.html?idxno=216176
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216166
 
 AI가 인간 상담사를 대체하기 어려운 이유...“말로 하는 위로에는 한계”
 https://www.aitimes.com/news/articleView.html?idxno=216165
-
-국감서 "AI 캐릭터 챗봇, 청소년 보호 구멍" 지적...규제 급물살 타나
-https://www.aitimes.com/news/articleView.html?idxno=216164
