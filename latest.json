@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-10-13 20:53:18",
+  "updated_at_kst": "2026-10-13 23:53:17",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 13일 화요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "이미 망가진 땅이니 아파트 짓자?…주택정책에 망가지는 ‘그린벨트’",
+      "url": "https://n.news.naver.com/mnews/article/032/0003476125"
+    },
     {
       "title": "집값이 버텨도 내려도, 양극화는 커질 수 있다[정준호의 부동산과 사회경제]",
       "url": "https://n.news.naver.com/mnews/article/032/0003476071"
@@ -38,10 +42,6 @@
     {
       "title": "\"살수록 가치 쌓이는 공간\" 호반써밋 브랜드 새단장",
       "url": "https://n.news.naver.com/mnews/article/014/0005588656"
-    },
-    {
-      "title": "지방도 더블역세권이 대세 '집값 껑충'",
-      "url": "https://n.news.naver.com/mnews/article/014/0005588655"
     }
   ]
 }
