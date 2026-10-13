@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-10-13 11:44:09",
+  "updated_at_kst": "2026-10-13 11:53:17",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 13일 화요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "KCC건설, 김대식 교수 초청…'AGI 시대' 미래 경쟁력 모색",
+      "url": "https://n.news.naver.com/mnews/article/014/0005588352"
+    },
+    {
+      "title": "코레일은 4조2교대, 자회사는 3조2교대…인력 증원도 불발",
+      "url": "https://n.news.naver.com/mnews/article/029/0003052766"
+    },
     {
       "title": "서울 조합장들, 정비권한 이양 비판…“사업지연에 난개발만 심화” [부동산360]",
       "url": "https://n.news.naver.com/mnews/article/016/0002708627"
@@ -34,14 +42,6 @@
     {
       "title": "세차·커뮤니티 예약·반려동물 관리도 모바일로...\"스마트 플랫폼 경쟁\"",
       "url": "https://n.news.naver.com/mnews/article/014/0005588338"
-    },
-    {
-      "title": "“영어 이름 질렸다”…강남·목동서 뜨는 ‘숫자 네이밍’",
-      "url": "https://n.news.naver.com/mnews/article/029/0003052759"
-    },
-    {
-      "title": "경실련 \"그린벨트, 9년간 위법행위 3만건…해제보다 관리가 우선\"",
-      "url": "https://n.news.naver.com/mnews/article/003/0014249391"
     }
   ]
 }
