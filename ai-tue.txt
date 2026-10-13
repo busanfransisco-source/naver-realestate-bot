@@ -1,7 +1,25 @@
 🤖 26년 10월 13일 화요일 AI 뉴스
 
+비드래프트, NPU 가속 소프트웨어 ‘VKORE’ 개발… 추론·학습 동시 구현
+https://www.aitimes.com/news/articleView.html?idxno=216203
+
+AI 업무 플랫폼 '팔레트 에이전트' 글로벌 출시…"기획부터 앱 제작까지 통합 지원"
+https://www.aitimes.com/news/articleView.html?idxno=216199
+
+"요금 왜 올랐어?"...통신사 앱 속 AI가 답변에서 납부까지 원스톱 지원
+https://www.aitimes.com/news/articleView.html?idxno=216195
+
+삼성·LG, KES 2026서 AI 가전·데이터센터·로봇 출격...생활·산업 속 AI 기술 뽐내
+https://www.aitimes.com/news/articleView.html?idxno=216192
+
 카르파시가 진단한 AI 활용 격차..."날카로운 깔때기 형태로 벌어져"
 https://www.aitimes.com/news/articleView.html?idxno=216191
+
+머스크, 공화당에 3700억 원 기부… 2026년 중간선거 최대 기부자 부상
+https://www.aitimes.com/news/articleView.html?idxno=216189
+
+IMF "AI는 고용 시장의 '느린 쓰나미'…아시아 고령화 해법 될 수 있어"
+https://www.aitimes.com/news/articleView.html?idxno=216184
 
 MS, 자체 AI 칩 대규모 배치 선언...차세대 '마이아 300' 공개
 https://www.aitimes.com/news/articleView.html?idxno=216182
@@ -11,21 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216176
 
 게임·배달 기업까지 가세…중국 AI 모델 경쟁, 다시 격화
 https://www.aitimes.com/news/articleView.html?idxno=216174
-
-Ai2, MoE 학습 효율 2.7배 높인 오픈소스 프레임워크 '올모 코어 3' 공개
-https://www.aitimes.com/news/articleView.html?idxno=216173
-
-[게시판] KT '모두의 AI' 연내 출시 앞두고 중간 점검 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=216172
-
-"말 한마디로 3D 기계 그려내"...클로드 코드용 '아나토미' 공개
-https://www.aitimes.com/news/articleView.html?idxno=216170
-
-'데이터센터=수익'…IPO 앞둔 앤트로픽이 인프라에 사활 건 이유
-https://www.aitimes.com/news/articleView.html?idxno=216168
-
-오르카라우터, 100만 토큰 컨텍스트 지원 사이버 보안 모델 공개
-https://www.aitimes.com/news/articleView.html?idxno=216167
-
-포스코DX, AI 스타트업 인핸스에 20억 투자..."전사 AX 속도 낸다"
-https://www.aitimes.com/news/articleView.html?idxno=216166
