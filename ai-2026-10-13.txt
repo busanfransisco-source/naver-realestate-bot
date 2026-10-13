@@ -12,7 +12,7 @@ https://www.aitimes.com/news/articleView.html?idxno=216173
 [게시판] KT '모두의 AI' 연내 출시 앞두고 중간 점검 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=216172
 
-"말 한마디로 작동하는 3D 기계 그려"...클로드 코드용 '아나토미' 공개
+"말 한마디로 3D 기계 그려내"...클로드 코드용 '아나토미' 공개
 https://www.aitimes.com/news/articleView.html?idxno=216170
 
 '데이터센터=수익'…IPO 앞둔 앤트로픽이 인프라에 사활 건 이유
