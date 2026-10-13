@@ -1,31 +1,31 @@
-🤖 26년 10월 7일 수요일 AI 뉴스
+🤖 26년 10월 14일 수요일 AI 뉴스
 
-[게시판] SKT, 독파모 'A.X K2'로 순우리말 선정·글꼴 제작 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=216043
+멜론 수확량 높이는 핵심 유전자, AI가 4분 만에 찾아냈다
+https://www.aitimes.com/news/articleView.html?idxno=216217
 
-AMD, 연내 국내 'AI 연구센터' 설립...정부와 메가프로젝트 협력 추진
-https://www.aitimes.com/news/articleView.html?idxno=216042
+[게시판] 델 테크놀로지스, IBK기업은행에 데이터 복원 솔루션 공급 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=216216
 
-"AI가 대신 전화 건다"…구글 제미나이, 개인 통화 대행 정황 포착
-https://www.aitimes.com/news/articleView.html?idxno=216041
+"책 데이터도 '토큰 단위'로 산다"...멘탯, AI 학습 도서 검색 서비스 출시
+https://www.aitimes.com/news/articleView.html?idxno=216215
 
-앤트로픽, 구글 워크스페이스 연동...문서 안에서 '클로드' 직접 호출
-https://www.aitimes.com/news/articleView.html?idxno=216040
+의사결정 모델도 멀티모달로 진화… vLLM·클라우드플레어 오픈소스 모델 공개
+https://www.aitimes.com/news/articleView.html?idxno=216213
 
-하크, '스마트폰 대체' AI 에이전트 공개...2027년 전용 기기 출시
-https://www.aitimes.com/news/articleView.html?idxno=216039
+의사결정 모델 '제브' 표절 논란..."1년 전 연구 베꼈다"
+https://www.aitimes.com/news/articleView.html?idxno=216211
 
-구글, AI 데이터센터 전력 확보 위해 3.6GW 규모 원전 계약 체결
-https://www.aitimes.com/news/articleView.html?idxno=216038
+"돈보다 GPU 우선"... 미 VC 업계, 스타트업 인프라 확보 경쟁 재점화
+https://www.aitimes.com/news/articleView.html?idxno=216210
 
-호주 청문회 출석한 오픈AI·앤트로픽 "에이전트 사고 신고 의무화 찬성"
-https://www.aitimes.com/news/articleView.html?idxno=216035
+MS '코파일럿' 기업 평가 반등…변화 주도한 라만나, 오피스 수장으로
+https://www.aitimes.com/news/articleView.html?idxno=216208
 
-아모데이 지난해 보수 240억...'대형 기술 기업 CEO 중 중간 수준'
-https://www.aitimes.com/news/articleView.html?idxno=216034
+인텔·브로드컴 CEO "AI 최대 걸림돌은 전력·칩 아닌 자본"
+https://www.aitimes.com/news/articleView.html?idxno=216207
 
-스튜어트 러셀의 경고 "AI 정렬은 불가능…모방 학습과 RLHF의 한계"
-https://www.aitimes.com/news/articleView.html?idxno=216033
+5000만 사용자 국민 메신저 카톡, AI 에이전트 허브로 진화 조준
+https://www.aitimes.com/news/articleView.html?idxno=216206
 
-"결정 피로 줄인다"…오픈AI, 코덱스 2일차 업데이트로 ‘오토리뷰’ 전면 무료화
-https://www.aitimes.com/news/articleView.html?idxno=216032
+MS, 코드로 영상 속 물리법칙 정밀 제어하는 '코드 비디오 모델' 공개
+https://www.aitimes.com/news/articleView.html?idxno=216205
