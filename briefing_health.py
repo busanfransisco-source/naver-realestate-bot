@@ -109,6 +109,13 @@ def inspect(page, now=None):
                 issues.append(f'missing required item: {token}')
         if key in ('books',) and len(re.findall(r'^\d+\.', text, re.M)) < 10:
             issues.append('top 10 incomplete')
+        if key == 'books':
+            from yes24_books import digest_info, valid_period
+            book_info = digest_info(text)
+            if not book_info:
+                issues.append('missing YES24 weekly source or period')
+            elif not valid_period(book_info[1], book_info[2], today):
+                issues.append('YES24 source week is stale')
         if key == 'metalcoin' and len(re.findall(r'^\S+ [\d,]+(?:\.\d+)?원', text.split('🪙')[-1], re.M)) < 10:
             issues.append('coin top 10 incomplete')
         if key in ('realestate', 'world', 'finance', 'ai') and text.count('https://') < 2:

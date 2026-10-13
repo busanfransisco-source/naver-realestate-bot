@@ -44,6 +44,9 @@ def read_section_text(prefix, weekday):
     if prefix == 'trend':
         from neonet_trend import load_digest
         return load_digest()
+    if prefix == 'books':
+        from yes24_books import load_digest
+        return load_digest()
     current = read_text(f"{prefix}-{weekday}.txt")
     if not has_fetch_failure(current):
         return current
