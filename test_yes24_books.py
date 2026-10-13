@@ -78,6 +78,8 @@ class Yes24BooksTests(unittest.TestCase):
         self.assertTrue(text.startswith('26년 10월 13일 화요일 주간 베스트셀러'))
         self.assertIn('집계 기간: 2026-10-05 ~ 2026-10-11', text)
         self.assertIn('온라인·매장', text)
+        self.assertNotIn('http', text)
+        self.assertIn('출처: YES24 주간 베스트', text)
         self.assertEqual(books.digest_info(text),
                          (self.now.date(), self.ranking['start'], self.ranking['end']))
 
@@ -117,6 +119,13 @@ class Yes24BooksTests(unittest.TestCase):
             (directory / 'books.txt').write_text('알라딘\n' + '\n'.join(f'{i}. 책' for i in range(1, 11)), encoding='utf-8')
             self.assertIn('가져오지 못했습니다', books.load_digest(directory, self.now.date()))
         self.assertIsNone(books.digest_info(books.render(self.ranking, self.now).replace('10. ', '11. ')))
+
+    def test_cached_footer_link_is_removed_without_changing_dates_or_ranks(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            directory = Path(tmp)
+            current = books.render(self.ranking, self.now).strip()
+            (directory / 'books.txt').write_text(current + '\n' + books.URL, encoding='utf-8')
+            self.assertEqual(books.load_digest(directory, self.now.date()), current)
 
     def test_health_gate_checks_source_and_stale_week(self):
         from test_briefing_health import HealthTests

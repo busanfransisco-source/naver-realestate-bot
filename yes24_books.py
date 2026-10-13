@@ -75,7 +75,7 @@ def render(ranking, now):
         f"📅 집계 기간: {ranking['start'].isoformat()} ~ {ranking['end'].isoformat()}",
         '국내도서 종합 · 온라인·매장 판매 기준', '',
         *[f'{i}. {title}' for i, title in enumerate(ranking['books'], 1)],
-        '', '출처: YES24 주간 베스트', URL, '',
+        '', '출처: YES24 주간 베스트', '',
     ])
 
 
@@ -84,7 +84,7 @@ def digest_info(text):
     head = re.match(r'(\d{2})년 (\d{1,2})월 (\d{1,2})일', text)
     period = PERIOD_RE.search(text)
     ranks = re.findall(r'^(\d+)\.\s+(.+)$', text, re.M)
-    if (not head or not period or SOURCE_LABEL not in text or URL not in text
+    if (not head or not period or SOURCE_LABEL not in text
             or [int(n) for n, _ in ranks] != list(range(1, 11))):
         return None
     try:
@@ -111,7 +111,8 @@ def load_digest(directory=Path('.'), today=None):
         if info and info[0] <= today:
             candidates.append((info[0], info[2], text))
     if candidates:
-        return max(candidates, key=lambda item: item[:2])[2]
+        # Older verified files can still contain the retired footer link.
+        return max(candidates, key=lambda item: item[:2])[2].replace('\n' + URL, '').strip()
     return '(YES24 주간 베스트셀러를 가져오지 못했습니다)'
 
 
