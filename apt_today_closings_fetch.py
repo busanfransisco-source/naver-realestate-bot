@@ -29,7 +29,7 @@ def fetch_page_html():
     try:
         from curl_cffi import requests
 
-        response = requests.get(SOURCE_URL, impersonate="chrome", timeout=90)
+        response = requests.get(SOURCE_URL, impersonate="chrome", timeout=30)
         response.raise_for_status()
         payload = response.text
         if "todaySummary" in payload:
@@ -44,11 +44,11 @@ def fetch_page_html():
         headers={
             "User-Agent": "Mozilla/5.0 naver-realestate-bot/1.0",
             "X-Return-Format": "html",
-            "X-Timeout": "60",
+            "X-Timeout": "20",
         },
     )
     try:
-        with urllib.request.urlopen(request, timeout=90) as response:
+        with urllib.request.urlopen(request, timeout=30) as response:
             payload = response.read().decode("utf-8")
         if "todaySummary" in payload:
             return payload

@@ -62,6 +62,7 @@ jobs:
         run: |
           python gen_briefing.py
           python briefing_health.py --repair || echo "Incomplete cards will fail the public gate"
+          git add transactions.txt transactions-*.txt transactions-state.json
           git add shortnews*.txt world*.txt finance*.txt ai*.txt weather*.txt fortune*.txt realestate*.txt latest*.json subs*.txt trend*.txt neonet-trend-cache.json fuelfx*.txt metalcoin*.txt books*.txt fx-cache.json fuel-cache.json
           git add briefing.html
           git diff --cached --quiet && echo "No briefing changes" || git commit -m "Update briefing.html"

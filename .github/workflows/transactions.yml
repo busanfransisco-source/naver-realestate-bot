@@ -7,6 +7,8 @@ on:
     - cron: "10 21 * * *"
     - cron: "10 22 * * *"
     - cron: "10 23 * * *"
+    # 09:35~17:35 KST: retry missing dawn data even when other briefings are delayed.
+    - cron: "35 0-8 * * *"
 permissions:
   contents: write
 concurrency:
@@ -31,9 +33,16 @@ jobs:
       - name: Collect nationwide official transactions
         shell: bash
         run: |
+          # Preserve a verified daily source, or recover the complete 05:00 batch.
+          if python ensure_transactions_daily.py; then
+            exit 0
+          fi
           for attempt in 1 2; do
             if python realestate_transactions_fetch.py; then
-              exit 0
+              if python ensure_transactions_daily.py --check-only; then
+                exit 0
+              fi
+              echo "Collector returned without a completed today source; retrying"
             fi
             if [ "$attempt" = "2" ]; then
               echo "Collection failed twice; no fabricated zero published."
@@ -77,6 +86,7 @@ jobs:
           name: transaction-source
       - name: Persist source before rendering pages
         run: |
+          python ensure_transactions_daily.py --check-only
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add transactions.txt transactions-*.txt transactions-state.json

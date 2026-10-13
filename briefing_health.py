@@ -26,6 +26,7 @@ REPAIR = {
     'metalcoin': 'market_fetch.py', 'books': 'market_fetch.py',
     'realestate': 'naver_realestate_fetch.py', 'world': 'world_news_fetch.py',
     'finance': 'finance_news_fetch.py', 'ai': 'ai_news_fetch.py',
+    'transactions': 'ensure_transactions_daily.py',
 }
 
 

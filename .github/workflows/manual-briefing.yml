@@ -50,6 +50,11 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      # Recover in this very run, not by asynchronously dispatching a different job.
+      # A skipped/delayed dawn schedule is also repaired by manual and daytime runs.
+      - name: Backstop nationwide transaction refresh
+        run: python ensure_transactions_daily.py || echo "Fresh transactions unavailable; health repair and next run will retry"
+
       - name: Fetch weather
         run: python weather_fetch.py || echo "weather failed; per-card recovery will retry"
 
@@ -73,21 +78,6 @@ jobs:
 
       - name: Fetch AI news
         run: python ai_news_fetch.py || echo "AI news failed"
-
-      # 전용 실거래 예약 작업이 GitHub 스케줄러에서 누락되더라도,
-      # 정상적으로 자주 실행되는 브리핑 작업이 아침 세 차례 다시 호출한다.
-      # 실거래 작업 자체의 concurrency가 중복 실행을 순서대로 처리한다.
-      - name: Backstop nationwide transaction refresh
-        if: >-
-          github.event_name == 'schedule' &&
-          (github.event.schedule == '25 20 * * *' ||
-           github.event.schedule == '25 21 * * *' ||
-           github.event.schedule == '25 22 * * *')
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: >-
-          gh workflow run transactions.yml --ref main ||
-          echo "transaction backstop dispatch failed; dedicated schedule will retry"
 
       - name: Fetch market info
         run: python market_fetch.py || echo "market failed"
