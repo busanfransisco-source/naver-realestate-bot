@@ -1,14 +1,18 @@
 {
-  "updated_at_kst": "2026-10-14 20:53:30",
+  "updated_at_kst": "2026-10-14 21:49:15",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 14일 수요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "LH전세 ‘소년소녀 가정’ 절반가량 쫓겨날 위기",
+      "url": "https://n.news.naver.com/mnews/article/032/0003476355"
+    },
     {
       "title": "9개월 만에 1억 넘게 올랐다…자고 나면 집값 오르는 ‘이 동네’ 환호성",
       "url": "https://n.news.naver.com/mnews/article/011/0004671351"
     },
     {
-      "title": "농지 매입신청 60% 막혔다…일부 지역 처리에만 2년넘게 걸릴듯",
+      "title": "농지 전수조사 불만에 매입한다는데…‘매입 대기’ 면적 여의도 11배",
       "url": "https://n.news.naver.com/mnews/article/020/0003755000"
     },
     {
@@ -36,12 +40,8 @@
       "url": "https://n.news.naver.com/mnews/article/422/0000915655"
     },
     {
-      "title": "10·15 부동산 규제 1년… 시장 평가는 ‘48.9점’ [10·15 대책 1년]",
+      "title": "10·15 부동산 규제 1년… 시장 평가는 '48.9점' [10·15 대책 1년]",
       "url": "https://n.news.naver.com/mnews/article/014/0005589348"
-    },
-    {
-      "title": "위험한 철도터널 천장 점검, 로봇에 맡긴다",
-      "url": "https://n.news.naver.com/mnews/article/014/0005589343"
     }
   ]
 }
