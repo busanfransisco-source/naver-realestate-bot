@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-10-15 08:18:53",
+  "updated_at_kst": "2026-10-15 08:31:05",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 15일 목요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "\"시공은 민간이 하는데, 자재는 '관급' 쓰라니…\"",
+      "url": "https://n.news.naver.com/mnews/article/648/0000051610"
+    },
     {
       "title": "중개사무소 한곳에서 일어난 보증사고가 57건, 153억… HUG가 다 물어줬다",
       "url": "https://n.news.naver.com/mnews/article/366/0001198035"
@@ -38,10 +42,6 @@
     {
       "title": "[각자도생 제이알리츠]채권자는 \"안전장치부터\" 주주는 \"리츠 소멸\"…제이알리츠 수정안 논란",
       "url": "https://n.news.naver.com/mnews/article/277/0005828649"
-    },
-    {
-      "title": "'내 돈 5% 이하' PF 사업장 70%…PF 구조개혁 헛바퀴",
-      "url": "https://n.news.naver.com/mnews/article/374/0000537874"
     }
   ]
 }
