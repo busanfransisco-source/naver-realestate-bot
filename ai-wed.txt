@@ -1,31 +1,31 @@
 🤖 26년 10월 14일 수요일 AI 뉴스
 
+앤트로픽 차기 모델 ‘페이블 5.5’ 흔적 포착..."이번 주 출시 예상"
+https://www.aitimes.com/news/articleView.html?idxno=216251
+
+LG CNS, 일본 통신사 KDDI와 동남아 에이전틱·피지컬 AI 시장 공조
+https://www.aitimes.com/news/articleView.html?idxno=216238
+
+캐릭터닷AI, 파산 신청...디즈니에 270억 자산 매각 추진
+https://www.aitimes.com/news/articleView.html?idxno=216237
+
 CXMT 메모리 신기술 발표에 글로벌 반도체 증시 휘청..."실효성은 의문"
 https://www.aitimes.com/news/articleView.html?idxno=216234
 
+KT, 최대 800Gbps 대역폭 지원 초고속·초저지연 'AI 전용회선' 선봬
+https://www.aitimes.com/news/articleView.html?idxno=216231
+
+인디애나주, 구글 데이터센터용 390MW 태양광·ESS 구축 계획 승인
+https://www.aitimes.com/news/articleView.html?idxno=216227
+
+“AI가 배터리 신소재 골라준다”...포지큐브, 에너지 소재 추천 플랫폼 개발
+https://www.aitimes.com/news/articleView.html?idxno=216225
+
+브라질, 태양광 중심 분산형 발전 확대…2036년 92GW 전망
+https://www.aitimes.com/news/articleView.html?idxno=216223
+
+호주, 태양광 건설로봇에 291억 지원…패널 설치·말뚝 시공 자동화
+https://www.aitimes.com/news/articleView.html?idxno=216222
+
 구글, ‘제미나이 4 아르곤’ 본격 상용화…실무 성과·제품 생태계로 승부
 https://www.aitimes.com/news/articleView.html?idxno=216220
-
-스타트업 '유연한', 글로벌 지원사업 선정…AI 기반 프로그램 운영 플랫폼 개발 박차
-https://www.aitimes.com/news/articleView.html?idxno=216218
-
-멜론 수확량 높이는 핵심 유전자, AI가 4분 만에 찾아냈다
-https://www.aitimes.com/news/articleView.html?idxno=216217
-
-[게시판] 델 테크놀로지스, IBK기업은행에 데이터 복원 솔루션 공급 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=216216
-
-"책 데이터도 '토큰 단위'로 산다"...멘탯, AI 학습 도서 검색 서비스 출시
-https://www.aitimes.com/news/articleView.html?idxno=216215
-
-의사결정 모델도 멀티모달로 진화… vLLM·클라우드플레어 모델 공개
-https://www.aitimes.com/news/articleView.html?idxno=216213
-
-의사결정 모델 '제브' 표절 논란..."1년 전 연구 베꼈다"
-https://www.aitimes.com/news/articleView.html?idxno=216211
-
-"돈보다 GPU 우선"... 미 VC 업계, 스타트업 인프라 확보 경쟁 재점화
-https://www.aitimes.com/news/articleView.html?idxno=216210
-
-MS '코파일럿' 기업 평가 반등…변화 주도한 라만나, 오피스 수장으로
-https://www.aitimes.com/news/articleView.html?idxno=216208
