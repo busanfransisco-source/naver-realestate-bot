@@ -1,5 +1,11 @@
 🤖 26년 10월 14일 수요일 AI 뉴스
 
+[게시판] 롯데이노베이트, CMC그룹과 베트남 데이터센터 사업 확장 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=216266
+
+Arm, 퀄컴과의 라이선스 계약 위반 소송서 패소...손해배상금은 2달러에 불과
+https://www.aitimes.com/news/articleView.html?idxno=216263
+
 엔비디아, 유럽 AI 생태계 공략 본격화…프랑스 스타트업 4곳 지분 인수
 https://www.aitimes.com/news/articleView.html?idxno=216261
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216255
 
 에픽게임즈, 'AI 우선' 제작 체계 도입..."수작업 더 이상 없어"
 https://www.aitimes.com/news/articleView.html?idxno=216254
-
-힌튼·벤지오 등 석학 400명, AI 사이버 위협 감독할 국제기구 설립 촉구
-https://www.aitimes.com/news/articleView.html?idxno=216252
-
-앤트로픽 차기 모델 ‘페이블 5.5’ 흔적 포착..."이번 주 출시 예상"
-https://www.aitimes.com/news/articleView.html?idxno=216251
