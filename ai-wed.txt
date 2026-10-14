@@ -1,31 +1,31 @@
 🤖 26년 10월 14일 수요일 AI 뉴스
 
+엔비디아, 유럽 AI 생태계 공략 본격화…프랑스 스타트업 4곳 지분 인수
+https://www.aitimes.com/news/articleView.html?idxno=216261
+
+Z.ai, 법률 특화 모델 'GLM-리걸' 출시...벤치마크서 '페이블 5' 제치고 1위
+https://www.aitimes.com/news/articleView.html?idxno=216260
+
+구글, AI '바이브 코딩' 앱 비공개 실행 기능 도입…"개발자 등록 필요 없어"
+https://www.aitimes.com/news/articleView.html?idxno=216259
+
+스페이스XSI, X·그록·커서 통합한 월 구독 패키지 출시
+https://www.aitimes.com/news/articleView.html?idxno=216258
+
+MS, 애저 사업부 경영진에 '20% 비용 절감' 지시..."호황에도 투자비 부담"
+https://www.aitimes.com/news/articleView.html?idxno=216257
+
+오픈AI, 사이버보안 강화 위해 전문 스타트업 인수 추진
+https://www.aitimes.com/news/articleView.html?idxno=216256
+
+앤트로픽, 국방부 '공급망 위험' 지정 불복…항소법원에 재심 청구
+https://www.aitimes.com/news/articleView.html?idxno=216255
+
+에픽게임즈, 'AI 우선' 제작 체계 도입..."수작업 더 이상 없어"
+https://www.aitimes.com/news/articleView.html?idxno=216254
+
+힌튼·벤지오 등 석학 400명, AI 사이버 위협 감독할 국제기구 설립 촉구
+https://www.aitimes.com/news/articleView.html?idxno=216252
+
 앤트로픽 차기 모델 ‘페이블 5.5’ 흔적 포착..."이번 주 출시 예상"
 https://www.aitimes.com/news/articleView.html?idxno=216251
-
-LG CNS, 일본 통신사 KDDI와 동남아 에이전틱·피지컬 AI 시장 공조
-https://www.aitimes.com/news/articleView.html?idxno=216238
-
-캐릭터닷AI, 파산 신청...디즈니에 270억 자산 매각 추진
-https://www.aitimes.com/news/articleView.html?idxno=216237
-
-CXMT 메모리 신기술 발표에 글로벌 반도체 증시 휘청..."실효성은 의문"
-https://www.aitimes.com/news/articleView.html?idxno=216234
-
-KT, 최대 800Gbps 대역폭 지원 초고속·초저지연 'AI 전용회선' 선봬
-https://www.aitimes.com/news/articleView.html?idxno=216231
-
-인디애나주, 구글 데이터센터용 390MW 태양광·ESS 구축 계획 승인
-https://www.aitimes.com/news/articleView.html?idxno=216227
-
-“AI가 배터리 신소재 골라준다”...포지큐브, 에너지 소재 추천 플랫폼 개발
-https://www.aitimes.com/news/articleView.html?idxno=216225
-
-브라질, 태양광 중심 분산형 발전 확대…2036년 92GW 전망
-https://www.aitimes.com/news/articleView.html?idxno=216223
-
-호주, 태양광 건설로봇에 291억 지원…패널 설치·말뚝 시공 자동화
-https://www.aitimes.com/news/articleView.html?idxno=216222
-
-구글, ‘제미나이 4 아르곤’ 본격 상용화…실무 성과·제품 생태계로 승부
-https://www.aitimes.com/news/articleView.html?idxno=216220
