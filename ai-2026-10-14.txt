@@ -1,7 +1,13 @@
 🤖 26년 10월 14일 수요일 AI 뉴스
 
+CXMT 메모리 신기술 발표에 글로벌 반도체 증시 휘청..."실효성은 의문"
+https://www.aitimes.com/news/articleView.html?idxno=216234
+
 구글, ‘제미나이 4 아르곤’ 본격 상용화…실무 성과·제품 생태계로 승부
 https://www.aitimes.com/news/articleView.html?idxno=216220
+
+스타트업 '유연한', 글로벌 지원사업 선정…AI 기반 프로그램 운영 플랫폼 개발 박차
+https://www.aitimes.com/news/articleView.html?idxno=216218
 
 멜론 수확량 높이는 핵심 유전자, AI가 4분 만에 찾아냈다
 https://www.aitimes.com/news/articleView.html?idxno=216217
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216210
 
 MS '코파일럿' 기업 평가 반등…변화 주도한 라만나, 오피스 수장으로
 https://www.aitimes.com/news/articleView.html?idxno=216208
-
-인텔·브로드컴 CEO "AI 최대 걸림돌은 전력·칩 아닌 자본"
-https://www.aitimes.com/news/articleView.html?idxno=216207
-
-5000만 사용자 국민 메신저 카톡, AI 에이전트 허브로 진화 조준
-https://www.aitimes.com/news/articleView.html?idxno=216206
