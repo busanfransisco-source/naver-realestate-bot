@@ -107,6 +107,10 @@ def inspect(page, now=None):
         for token in required:
             if token not in text or re.search(re.escape(token) + r'[^\n]*(?:확인 불가|수집 실패)', text):
                 issues.append(f'missing required item: {token}')
+        if key == 'shortnews':
+            from daum_news_fetch import polite_news_body
+            if not polite_news_body(text):
+                issues.append('quick news explanations must use polite endings')
         if key in ('books',) and len(re.findall(r'^\d+\.', text, re.M)) < 10:
             issues.append('top 10 incomplete')
         if key == 'books':

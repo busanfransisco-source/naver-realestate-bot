@@ -12,6 +12,71 @@ def article(*paragraphs):
 
 
 class NewsSummaryTests(unittest.TestCase):
+    def test_narrative_endings_are_formal_polite(self):
+        examples = {
+            '정부가 계획을 발표했다.': '정부가 계획을 발표했습니다.',
+            '수요가 늘고 있다.': '수요가 늘고 있습니다.',
+            '이번 조사는 첫 사례다.': '이번 조사는 첫 사례입니다.',
+            '이번 조치의 목표는 안정적인 공급 확보다.': '이번 조치의 목표는 안정적인 공급 확보입니다.',
+            '첫 번째 목표다.': '첫 번째 목표입니다.',
+            '작년의 2배다.': '작년의 2배입니다.',
+            '현재 지수는 6,163.11이다.': '현재 지수는 6,163.11입니다.',
+            '조사는 이번이 처음이다.': '조사는 이번이 처음입니다.',
+            '금리가 오른다.': '금리가 오릅니다.',
+            '정부가 계획을 추진한다.': '정부가 계획을 추진합니다.',
+            '이달부터 적용된다.': '이달부터 적용됩니다.',
+            '거래량이 많다.': '거래량이 많습니다.',
+            '시장에서는 거래를 주목받는다.': '시장에서는 거래를 주목받습니다.',
+            '정부가 지원에 나선다.': '정부가 지원에 나섭니다.',
+            '공무원이 근무지를 옮긴다.': '공무원이 근무지를 옮깁니다.',
+            '새 규정은 적용하지 않는다.': '새 규정은 적용하지 않습니다.',
+            '기관은 일정을 알린다.': '기관은 일정을 알립니다.',
+        }
+        for original, expected in examples.items():
+            with self.subTest(original=original):
+                self.assertEqual(news.polite_summary(original), expected)
+
+    def test_existing_polite_endings_are_idempotent(self):
+        for text in ('정부가 계획을 발표했습니다.', '주택 공급을 늘립니다.',
+                     '부담이 커졌는데요.', '추가 확인이 필요할까요?'):
+            self.assertEqual(news.polite_summary(text), text)
+
+    def test_quotes_and_decimal_numbers_stay_verbatim(self):
+        text = '국세청장은 "편법 증여를 철저히 조사하겠다. 원칙대로 대응하겠다"고 밝혔다. 성장률은 3.3%로 전망했다.'
+        result = news.polite_summary(text)
+        self.assertEqual(result, '국세청장은 "편법 증여를 철저히 조사하겠다. 원칙대로 대응하겠다"고 밝혔습니다. 성장률은 3.3%로 전망했습니다.')
+        for opening, closing in (("'", "'"), ('‘', '’'), ('“', '”')):
+            original = f'국세청장은 {opening}편법 증여를 조사하겠다. 원칙대로 대응하겠다{closing}고 밝혔다.'
+            self.assertEqual(news.polite_summary(original), original.replace('밝혔다.', '밝혔습니다.'))
+
+    def test_polite_conversion_respects_expanded_character_limit(self):
+        first = '정부가 주택 공급 계획을 발표했다.'
+        second = '사업은 다음 달부터 시작한다.'
+        result = news.polite_summary(first + ' ' + second, max_chars=25)
+        self.assertEqual(result, '정부가 주택 공급 계획을 발표했습니다.')
+        self.assertLessEqual(len(result), 25)
+
+    def test_article_summary_converts_extracted_lead(self):
+        with patch.object(news, 'get') as get:
+            get.return_value.text = article('정부가 올해 주택 공급 계획의 세부 추진 일정을 공개했다.')
+            self.assertEqual(news.article_summary('https://v.daum.net/v/123'),
+                             '정부가 올해 주택 공급 계획의 세부 추진 일정을 공개했습니다.')
+
+    def test_news_body_gate_ignores_verbatim_quote_section(self):
+        body = '🔥 (톱뉴스) 정부가 계획을 발표했습니다.\n\n[오늘의 명언]\n좋은 뱃사공은 잔잔한 바다에서 나오지 않는다. -속담'
+        self.assertTrue(news.polite_news_body(body))
+        self.assertFalse(news.polite_news_body(body.replace('발표했습니다.', '발표했다.')))
+        self.assertFalse(news.polite_news_body(body + '\n👥 (사회) '))
+
+    def test_saved_digest_keeps_date_quotes_indicators_and_blank_lines(self):
+        text = '26년 10월 14일 수요일 오늘의 퀵뉴스⚡\n\n🔥 (톱뉴스) 정부가 "부담을 낮추겠다"고 밝혔다.\n\n[오늘의 명언]\n잔잔한 바다에서는 좋은 뱃사공이 만들어지지 않는다. -영국 속담\n\n[주요 경제 지표]\n  - 나스닥 : 27,204.38\n'
+        self.assertEqual(news.polite_digest(text), text.replace('밝혔다.', '밝혔습니다.'))
+        self.assertEqual(news.polite_digest(news.polite_digest(text)), news.polite_digest(text))
+
+    def test_failed_style_conversion_cannot_silently_remove_a_news_item(self):
+        with self.assertRaises(ValueError):
+            news.polite_digest('🔥 (톱뉴스) 단어나 문장 조각뿐입니다만')
+
     def test_byline_is_removed_without_losing_subject(self):
         html = article('[서울=연합뉴스] 홍길동 기자 = 국세청이 부동산 편법 증여에 대한 조사를 강화하기로 했다.',
                        '임 청장은 국정감사에서 특수관계자 간 저가 거래를 살피겠다고 밝혔다.')

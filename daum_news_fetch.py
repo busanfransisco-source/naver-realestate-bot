@@ -15,6 +15,7 @@ import re
 import sys
 import time
 from difflib import SequenceMatcher
+from functools import lru_cache
 from datetime import datetime, timezone, timedelta
 from urllib.parse import unquote, urlparse
 
@@ -119,11 +120,13 @@ def clean_paragraph(text):
 def complete_sentences(text):
     """소수점은 유지하고, 큰따옴표 안의 마침표에서는 문장을 끊지 않는다."""
     sentences, start, quote = [], 0, None
-    pairs = {'“': '”', '「': '」', '『': '』', '"': '"'}
+    pairs = {'“': '”', '‘': '’', '「': '」', '『': '』', '"': '"', "'": "'"}
     for index, char in enumerate(text):
         if quote and char == quote:
             quote = None
-        elif not quote and char in pairs:
+        elif (not quote and char in pairs
+              and not (char == "'" and 0 < index < len(text)-1
+                       and text[index-1].isalnum() and text[index+1].isalnum())):
             quote = pairs[char]
         if char not in '.!?' or quote:
             continue
@@ -135,6 +138,73 @@ def complete_sentences(text):
         start = index + 1
     # 불완전한 꼬리 문장은 내보내지 않는다.
     return sentences
+
+
+@lru_cache(maxsize=1)
+def korean_inflector():
+    from kiwipiepy import Kiwi
+    return Kiwi(num_workers=1)
+
+
+@lru_cache(maxsize=1024)
+def polite_sentence(sentence):
+    """Change only the narrator's final ending; quoted speech stays verbatim."""
+    match = re.search(r'([가-힣]+)([.!?])$', sentence)
+    if not match:
+        return ''
+    word, punctuation = match.groups()
+    if word.endswith(('요', '죠')) or (
+            word.endswith('니다') and len(word) >= 3
+            and (ord(word[-3]) - 0xAC00) % 28 == 17):
+        return sentence
+    if word.endswith('다'):
+        # Distinguish verbs from omitted copulas: 사례다 -> 사례입니다,
+        # not 사롑니다. Recompose only the final word, never the whole article.
+        kiwi = korean_inflector()
+        tokens = kiwi.tokenize(word)
+        if not tokens or tokens[-1].tag != 'EF':
+            return ''
+        replacement = kiwi.join([(t.form, t.tag, False) for t in tokens[:-1]]
+                                + [('습니다', 'EF', False)])
+    elif word.endswith(('까', '나')):
+        replacement = word + '요'
+    else:
+        return ''  # Unknown fragments are not exported as a polite summary.
+    return sentence[:match.start()] + replacement + punctuation
+
+
+def polite_summary(text, max_sentences=2, max_chars=280, max_words=25):
+    """Keep complete sentences and enforce limits after the ending expands."""
+    result = []
+    for sentence in complete_sentences(text):
+        converted = polite_sentence(sentence)
+        if not converted:
+            break
+        candidate = ' '.join(result + [converted])
+        if len(candidate) > max_chars or len(candidate.split()) > max_words:
+            break
+        result.append(converted)
+        if len(result) >= max_sentences:
+            break
+    return ' '.join(result)
+
+
+def polite_news_body(text):
+    """Check only news explanations, not headings, figures, or verbatim quotes."""
+    summaries = re.findall(r'^\S+ \((?:톱뉴스|정치|경제|사회|국제|날씨)\) (.*)$', text, re.M)
+    return bool(summaries) and all(summary and polite_summary(summary) == summary for summary in summaries)
+
+
+def polite_digest(text):
+    """Reformat saved news only; keep its dates, quotes, indicators and spacing."""
+    def replace(match):
+        converted = polite_summary(match[2])
+        if not converted:
+            raise ValueError('뉴스 문장의 높임말 변환을 확인할 수 없습니다.')
+        return match[1] + converted
+    return re.sub(
+        r'^(\S+ \((?:톱뉴스|정치|경제|사회|국제|날씨)\) )(.+)$',
+        replace, text, flags=re.M)
 
 
 def summary_from_html(html, max_sentences=2, max_chars=280, max_words=25):
@@ -187,7 +257,8 @@ def summary_from_html(html, max_sentences=2, max_chars=280, max_words=25):
 def article_summary(url, max_sentences=2, max_chars=280):
     """새 사실을 생성하지 않고, 독립적으로 읽히는 완결된 리드를 추출."""
     resp = get(url)
-    return summary_from_html(resp.text, max_sentences, max_chars)
+    return polite_summary(summary_from_html(resp.text, max_sentences, max_chars),
+                          max_sentences, max_chars)
 
 
 def duplicate_summary(summary, accepted):
@@ -358,6 +429,9 @@ def main():
     lines = [header, ""]
     if news_items:
         for emoji, label, summary in news_items:
+            summary = polite_summary(summary)
+            if not summary:
+                continue
             lines.append(f"{emoji} ({label}) {summary}")
             lines.append("")
     else:
@@ -386,4 +460,15 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    if '--polite-existing' in sys.argv:
+        from pathlib import Path
+        day = WEEKDAY_EN[datetime.now(KST).weekday()]
+        for name in ('shortnews.txt', f'shortnews-{day}.txt'):
+            path = Path(name)
+            original = path.read_text(encoding='utf-8')
+            updated = polite_digest(original)
+            if not polite_news_body(updated):
+                raise SystemExit(f'높임말 검증 실패; 파일 보존: {name}')
+            path.write_text(updated, encoding='utf-8')
+    else:
+        main()

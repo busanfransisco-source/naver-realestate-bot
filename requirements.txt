@@ -1,3 +1,4 @@
 requests
 beautifulsoup4
 curl_cffi
+kiwipiepy==0.24.0
