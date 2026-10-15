@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-10-16 07:28:22",
+  "updated_at_kst": "2026-10-16 07:45:51",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 16일 금요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "\"서울 집주인들 비상\"…부동산 경매 44% 급증, 집값도 흔들리나",
+      "url": "https://n.news.naver.com/mnews/article/003/0014257306"
+    },
+    {
+      "title": "사옥·지분 내다파는 바이오기업…'자금 확보' 안간힘",
+      "url": "https://n.news.naver.com/mnews/article/648/0000051643"
+    },
     {
       "title": "세종 집값 상승 기대 커졌다…매매심리 전국 2위·전세심리 1위",
       "url": "https://n.news.naver.com/mnews/article/011/0004671863"
@@ -34,14 +42,6 @@
     {
       "title": "세종에 이 기업들도?…삼성전기 8조 투자 이어, SK 반도체 소재기업도 공장 확장 추진",
       "url": "https://n.news.naver.com/mnews/article/021/0002825518"
-    },
-    {
-      "title": "서울 오피스텔 월세 1% 넘게 뛰었는데 매매는 제자리",
-      "url": "https://n.news.naver.com/mnews/article/011/0004671847"
-    },
-    {
-      "title": "[르포]DMC 홍보관도, 랜드마크도…상암 땅 안 팔리는 이유",
-      "url": "https://n.news.naver.com/mnews/article/648/0000051638"
     }
   ]
 }
