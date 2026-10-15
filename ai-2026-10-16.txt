@@ -1,5 +1,8 @@
 🤖 26년 10월 16일 금요일 AI 뉴스
 
+메타, ‘뮤즈 스파크 오픈’ 공개…맥 2대로 구동·미국 최고 성능 내세워
+https://www.aitimes.com/news/articleView.html?idxno=216309
+
 미국 8개 주, 오픈AI 상대 집단 소송...“챗GPT가 자해·폭력 부추겨”
 https://www.aitimes.com/news/articleView.html?idxno=216306
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216298
 
 스페이스XSI, 최고 성능 '그록 보이스 3.0' 공개..."실무 전화 해결률 1위"
 https://www.aitimes.com/news/articleView.html?idxno=216297
-
-오픈AI, 인프라 책임자 또 교체…데이터센터 직접 확보 속도
-https://www.aitimes.com/news/articleView.html?idxno=216296
