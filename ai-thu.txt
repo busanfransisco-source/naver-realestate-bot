@@ -3,6 +3,12 @@
 미국 8개 주, 오픈AI 상대 집단 소송...“챗GPT가 자해·폭력 부추겨”
 https://www.aitimes.com/news/articleView.html?idxno=216306
 
+'멜론 1위 이수만 걸그룹' A2O 라이트, AI 아바타로 만난다
+https://www.aitimes.com/news/articleView.html?idxno=216305
+
+딥시크 저비용 기술, 정보 위치에 따라 성능 요동치는 '위상 민감도' 노출
+https://www.aitimes.com/news/articleView.html?idxno=216303
+
 챗GPT로 만든 곰 사진에 실제 수색까지…러시아서 가짜 이미지 유포자 벌금
 https://www.aitimes.com/news/articleView.html?idxno=216302
 
@@ -12,6 +18,9 @@ https://www.aitimes.com/news/articleView.html?idxno=216301
 30만달러 사후 학습으로 ‘페이블 5’ 넘었다…‘울트라마린 1 플래시’ 공개
 https://www.aitimes.com/news/articleView.html?idxno=216300
 
+리퀴드 AI, 플래그십 모델 'LFM2.5-24B-A2B' 공개..."온디바이스 에이전트 겨냥"
+https://www.aitimes.com/news/articleView.html?idxno=216299
+
 [게시판] 오픈AI 코리아, '데브데이 익스체인지: 서울' 개최 등
 https://www.aitimes.com/news/articleView.html?idxno=216298
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216296
 
 오픈AI·앤트로픽 "통제 어려운 중국 오픈 모델, 사이버 보안에 구멍" 경고
 https://www.aitimes.com/news/articleView.html?idxno=216295
-
-앤트로픽, IPO 로드쇼 시작…매출 45% 늘었지만 투자자 기대 밑돌아
-https://www.aitimes.com/news/articleView.html?idxno=216294
-
-허사비스 "AI 에이전트 해킹, 시스템 보안 강화 촉구하는 조기 경고"
-https://www.aitimes.com/news/articleView.html?idxno=216292
-
-베슬AI, 올해 매출 50배 급증...2조 규모 GPU 대출 추진
-https://www.aitimes.com/news/articleView.html?idxno=216289
