@@ -1,5 +1,8 @@
 🤖 26년 10월 15일 목요일 AI 뉴스
 
+에이수스, ‘에이전트 컴퓨터’ 국내 시장 확대...개인용 AI PC부터 기업용 에이전틱 AI까지
+https://www.aitimes.com/news/articleView.html?idxno=216267
+
 [게시판] 롯데이노베이트, CMC그룹과 베트남 데이터센터 사업 확장 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=216266
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216256
 
 앤트로픽, 국방부 '공급망 위험' 지정 불복…항소법원에 재심 청구
 https://www.aitimes.com/news/articleView.html?idxno=216255
-
-에픽게임즈, 'AI 우선' 제작 체계 도입..."수작업 더 이상 없어"
-https://www.aitimes.com/news/articleView.html?idxno=216254
