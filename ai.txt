@@ -1,5 +1,11 @@
 🤖 26년 10월 15일 목요일 AI 뉴스
 
+VNTG·한국MS, 제조 현장 AI 전환 실행 체계 공동 구축
+https://www.aitimes.com/news/articleView.html?idxno=216281
+
+비드래프트, 추론 전용 NPU로 언어모델 사전학습 성공…GPU 의존도 낮춘다
+https://www.aitimes.com/news/articleView.html?idxno=216272
+
 에이수스, ‘에이전트 컴퓨터’ 국내 시장 확대...개인용 AI PC부터 기업용 에이전틱 AI까지
 https://www.aitimes.com/news/articleView.html?idxno=216267
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216258
 
 MS, 애저 사업부 경영진에 '20% 비용 절감' 지시..."호황에도 투자비 부담"
 https://www.aitimes.com/news/articleView.html?idxno=216257
-
-오픈AI, 사이버보안 강화 위해 전문 스타트업 인수 추진
-https://www.aitimes.com/news/articleView.html?idxno=216256
-
-앤트로픽, 국방부 '공급망 위험' 지정 불복…항소법원에 재심 청구
-https://www.aitimes.com/news/articleView.html?idxno=216255
