@@ -1,31 +1,31 @@
 🤖 26년 10월 15일 목요일 AI 뉴스
 
+오픈AI, 인프라 책임자 또 교체…데이터센터 직접 확보 속도
+https://www.aitimes.com/news/articleView.html?idxno=216296
+
+앤트로픽, IPO 로드쇼 시작…매출 45% 늘었지만 투자자 기대 밑돌아
+https://www.aitimes.com/news/articleView.html?idxno=216294
+
+대규모 잠수함 계약까지 따낸 안두릴, 기업가치 120조로 껑충
+https://www.aitimes.com/news/articleView.html?idxno=216288
+
+애플, 12월 중국서 AI 첫선…알리바바·바이두 손잡고 1년 반 만에 진입
+https://www.aitimes.com/news/articleView.html?idxno=216283
+
+젠슨 황 "무책임한 AI 개발사엔 칩 공급 중단할 수 있어"
+https://www.aitimes.com/news/articleView.html?idxno=216282
+
 VNTG·한국MS, 제조 현장 AI 전환 실행 체계 공동 구축
 https://www.aitimes.com/news/articleView.html?idxno=216281
+
+오픈AI 도청 혐의 엔지니어, 사우디행 포착..."도주 우려 있었다"
+https://www.aitimes.com/news/articleView.html?idxno=216277
+
+"애플도 우리 기밀 빼돌렸다"...오픈AI, 맞소송 예고
+https://www.aitimes.com/news/articleView.html?idxno=216276
 
 비드래프트, 추론 전용 NPU로 언어모델 사전학습 성공…GPU 의존도 낮춘다
 https://www.aitimes.com/news/articleView.html?idxno=216272
 
 에이수스, ‘에이전트 컴퓨터’ 국내 시장 확대...개인용 AI PC부터 기업용 에이전틱 AI까지
 https://www.aitimes.com/news/articleView.html?idxno=216267
-
-[게시판] 롯데이노베이트, CMC그룹과 베트남 데이터센터 사업 확장 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=216266
-
-Arm, 퀄컴과의 라이선스 계약 위반 소송서 패소...손해배상금은 2달러에 불과
-https://www.aitimes.com/news/articleView.html?idxno=216263
-
-엔비디아, 유럽 AI 생태계 공략 본격화…프랑스 스타트업 4곳 지분 인수
-https://www.aitimes.com/news/articleView.html?idxno=216261
-
-Z.ai, 법률 특화 모델 'GLM-리걸' 출시...벤치마크서 '페이블 5' 제치고 1위
-https://www.aitimes.com/news/articleView.html?idxno=216260
-
-구글, AI '바이브 코딩' 앱 비공개 실행 기능 도입…"개발자 등록 필요 없어"
-https://www.aitimes.com/news/articleView.html?idxno=216259
-
-스페이스XSI, X·그록·커서 통합한 월 구독 패키지 출시
-https://www.aitimes.com/news/articleView.html?idxno=216258
-
-MS, 애저 사업부 경영진에 '20% 비용 절감' 지시..."호황에도 투자비 부담"
-https://www.aitimes.com/news/articleView.html?idxno=216257
