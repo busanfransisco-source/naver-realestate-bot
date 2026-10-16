@@ -1,5 +1,20 @@
 🤖 26년 10월 16일 금요일 AI 뉴스
 
+"GLM-5.3, 스스로 안전성 테스트 속여...'정렬 위장' 가능성" 경고
+https://www.aitimes.com/news/articleView.html?idxno=216334
+
+앤트로픽, 첫 투자자 설명회 뒤 IPO 기대 하향…“몸값 2조→1.5조 논의”
+https://www.aitimes.com/news/articleView.html?idxno=216328
+
+FTC, 오픈AI·앤트로픽에 소환장 발부…"AI 안전사고·소비자 피해 조사"
+https://www.aitimes.com/news/articleView.html?idxno=216326
+
+"한국어 억양 더 자연스럽게"...오픈AI, '챗GPT 보이스' 업데이트
+https://www.aitimes.com/news/articleView.html?idxno=216324
+
+엔비디아, 기업용 에이전트 겨냥 120B ‘네모트론 3.5 슈퍼 VL’ 오픈 공개
+https://www.aitimes.com/news/articleView.html?idxno=216322
+
 스마일샤크, AWS 데이터 컴피턴시 애널리틱스 부문 획득…"데이터 환경 현대화 역량 입증"
 https://www.aitimes.com/news/articleView.html?idxno=216320
 
@@ -14,18 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216305
 
 딥시크 저비용 기술, 정보 위치에 따라 성능 요동치는 '위상 민감도' 노출
 https://www.aitimes.com/news/articleView.html?idxno=216303
-
-챗GPT로 만든 곰 사진에 실제 수색까지…러시아서 가짜 이미지 유포자 벌금
-https://www.aitimes.com/news/articleView.html?idxno=216302
-
-MS, 2~6주 날씨 예보 공백 메우는 새로운 AI 프레임워크 공개
-https://www.aitimes.com/news/articleView.html?idxno=216301
-
-30만달러 사후 학습으로 ‘페이블 5’ 넘었다…‘울트라마린 1 플래시’ 공개
-https://www.aitimes.com/news/articleView.html?idxno=216300
-
-리퀴드 AI, 플래그십 모델 'LFM2.5-24B-A2B' 공개..."온디바이스 에이전트 겨냥"
-https://www.aitimes.com/news/articleView.html?idxno=216299
-
-[게시판] 오픈AI 코리아, '데브데이 익스체인지: 서울' 개최 등
-https://www.aitimes.com/news/articleView.html?idxno=216298
