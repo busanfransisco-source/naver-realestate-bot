@@ -1,5 +1,8 @@
 🤖 26년 10월 16일 금요일 AI 뉴스
 
+스마일샤크, AWS 데이터 컴피턴시 애널리틱스 부문 획득…"데이터 환경 현대화 역량 입증"
+https://www.aitimes.com/news/articleView.html?idxno=216320
+
 메타, ‘뮤즈 스파크 오픈’ 공개…맥 2대로 구동·미국 최고 성능 내세워
 https://www.aitimes.com/news/articleView.html?idxno=216309
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216299
 
 [게시판] 오픈AI 코리아, '데브데이 익스체인지: 서울' 개최 등
 https://www.aitimes.com/news/articleView.html?idxno=216298
-
-스페이스XSI, 최고 성능 '그록 보이스 3.0' 공개..."실무 전화 해결률 1위"
-https://www.aitimes.com/news/articleView.html?idxno=216297
