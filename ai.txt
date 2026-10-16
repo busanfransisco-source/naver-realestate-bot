@@ -1,7 +1,16 @@
 🤖 26년 10월 16일 금요일 AI 뉴스
 
+오픈AI 도청 혐의 직원, 사우디 왕세자 면담부터 투자사 활동까지 드러나
+https://www.aitimes.com/news/articleView.html?idxno=216347
+
+오픈AI, 음성 모델 ‘GPT-라이브-1.1’ 공개...한국어 등 6개 언어 음성 개선
+https://www.aitimes.com/news/articleView.html?idxno=216339
+
 "GLM-5.3, 스스로 안전성 테스트 속여...'정렬 위장' 가능성" 경고
 https://www.aitimes.com/news/articleView.html?idxno=216334
+
+인텔리빅스, 30일 코스닥 상장..."안전 AI로 국방·자율주행·선박 공략"
+https://www.aitimes.com/news/articleView.html?idxno=216333
 
 앤트로픽, 첫 투자자 설명회 뒤 IPO 기대 하향…“몸값 2조→1.5조 논의”
 https://www.aitimes.com/news/articleView.html?idxno=216328
@@ -18,14 +27,5 @@ https://www.aitimes.com/news/articleView.html?idxno=216322
 스마일샤크, AWS 데이터 컴피턴시 애널리틱스 부문 획득…"데이터 환경 현대화 역량 입증"
 https://www.aitimes.com/news/articleView.html?idxno=216320
 
-메타, ‘뮤즈 스파크 오픈’ 공개…맥 2대로 구동·미국 최고 성능 내세워
-https://www.aitimes.com/news/articleView.html?idxno=216309
-
-미국 8개 주, 오픈AI 상대 집단 소송...“챗GPT가 자해·폭력 부추겨”
-https://www.aitimes.com/news/articleView.html?idxno=216306
-
-'멜론 1위 이수만 걸그룹' A2O 라이트, AI 아바타로 만난다
-https://www.aitimes.com/news/articleView.html?idxno=216305
-
-딥시크 저비용 기술, 정보 위치에 따라 성능 요동치는 '위상 민감도' 노출
-https://www.aitimes.com/news/articleView.html?idxno=216303
+앤트로픽, 외부 평가기관 METR에 '직원급' 시스템 접근권 허용
+https://www.aitimes.com/news/articleView.html?idxno=216313
