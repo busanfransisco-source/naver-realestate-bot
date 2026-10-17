@@ -1,10 +1,16 @@
 🤖 26년 10월 17일 토요일 AI 뉴스
 
+[AI 이슈트렌드] 삼전 최대 실적에도 코스피 붕괴…쿠팡 먹통·인천 흉기난동 등 주목
+https://www.aitimes.com/news/articleView.html?idxno=216363
+
 애플 첫 폴더블 ‘아이폰 듀오’ 예판 대란…배송 최대 3개월 지연
 https://www.aitimes.com/news/articleView.html?idxno=216362
 
 중국, 첨단 모델 등 23가지 AI 기술 수출 통제 추진…오픈소스·API는 예외
 https://www.aitimes.com/news/articleView.html?idxno=216361
+
+오픈AI, 크롬용 '챗GPT' 확장 기능 강화..."열린 탭 분석하고 직접 제어"
+https://www.aitimes.com/news/articleView.html?idxno=216360
 
 인도에서도 AI 에이전트 무단 침입 발생…"개발사가 피해 기업에 보고"
 https://www.aitimes.com/news/articleView.html?idxno=216359
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216355
 
 G7, AI 금융 사이버 공격 막는다…실전 모의훈련 승인
 https://www.aitimes.com/news/articleView.html?idxno=216354
-
-앤트로픽, 신용등급 ‘투자적격’까지 한 단계…돈 빌리기 쉬워지나
-https://www.aitimes.com/news/articleView.html?idxno=216353
-
-앤트로픽, 미 의회에 자체 AI 안전 법안 제안…"정부 개입 제한·일부 주법 대체"
-https://www.aitimes.com/news/articleView.html?idxno=216352
