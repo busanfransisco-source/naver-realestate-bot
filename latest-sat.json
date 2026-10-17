@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-10-17 16:41:40",
+  "updated_at_kst": "2026-10-17 17:53:23",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 17일 토요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "'핫플' 성수에 새 랜드마크…삼표 부지 'SGL' 개발 시동",
+      "url": "https://n.news.naver.com/mnews/article/648/0000051680"
+    },
     {
       "title": "\"무주택자 '생존 매수'하는 시대 온다\"…전문가 경고 들어보니",
       "url": "https://n.news.naver.com/mnews/article/015/0005343568"
@@ -38,10 +42,6 @@
     {
       "title": "동탄1신도시 19년 만의 새 아파트 '아크메르 동탄' 견본주택 북적[르포]",
       "url": "https://n.news.naver.com/mnews/article/003/0014259517"
-    },
-    {
-      "title": "내 집이 재개발 대상인데 사업을 원치 않는다면[똑똑한부동산]",
-      "url": "https://n.news.naver.com/mnews/article/018/0006390028"
     }
   ]
 }
