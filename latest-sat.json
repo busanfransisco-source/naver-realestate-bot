@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-10-17 09:39:15",
+  "updated_at_kst": "2026-10-17 09:49:51",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 17일 토요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "경찰, 인천 흉기 난동범 최충락 주거지 압수수색",
+      "url": "https://n.news.naver.com/mnews/article/366/0001198541"
+    },
+    {
+      "title": "양수역 인접 ‘쌍용 더 플래티넘 한강’, 교통·교육·자연환경 갖춘 입지 눈길",
+      "url": "https://n.news.naver.com/mnews/article/016/0002710596"
+    },
     {
       "title": "옛 성남 KT부지…'힐스테이트 성남메트로블' 20일 청약 접수",
       "url": "https://n.news.naver.com/mnews/article/003/0014259463"
@@ -34,14 +42,6 @@
     {
       "title": "발코니 규제 완화에 중대형 오피스텔 주목…‘옥정중앙역 디에트르Ⅱ’ 19일 청약",
       "url": "https://n.news.naver.com/mnews/article/241/0003535726"
-    },
-    {
-      "title": "[민선9기 서울] 김경대 용산구청장 \"공간디자인 통해 매력도시로\"",
-      "url": "https://n.news.naver.com/mnews/article/001/0016382516"
-    },
-    {
-      "title": "동탄·영통 넘어 분당까지 아파트 매수↑…‘반도체 벨트’ 확대",
-      "url": "https://n.news.naver.com/mnews/article/021/0002825776"
     }
   ]
 }
