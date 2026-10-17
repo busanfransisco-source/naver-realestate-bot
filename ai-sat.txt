@@ -1,31 +1,31 @@
 🤖 26년 10월 17일 토요일 AI 뉴스
 
+애플 첫 폴더블 ‘아이폰 듀오’ 예판 대란…배송 최대 3개월 지연
+https://www.aitimes.com/news/articleView.html?idxno=216362
+
+중국, 첨단 모델 등 23가지 AI 기술 수출 통제 추진…오픈소스·API는 예외
+https://www.aitimes.com/news/articleView.html?idxno=216361
+
+인도에서도 AI 에이전트 무단 침입 발생…"개발사가 피해 기업에 보고"
+https://www.aitimes.com/news/articleView.html?idxno=216359
+
+IMF “AI 기대 꺾이면 세계 성장률 1.3%p 하락 가능”…안전장치 촉구
+https://www.aitimes.com/news/articleView.html?idxno=216358
+
+[내면 지도 그리기] 38 Inner Mapping: 나를 찾는 지도
+https://www.aitimes.com/news/articleView.html?idxno=216357
+
+테슬라, ‘하늘 나는 로드스터’ 공개…“전시용일 뿐” 지적도
+https://www.aitimes.com/news/articleView.html?idxno=216356
+
+[AI카툰] Bob, Senior IT guy - 밥, 다마고치와 뮤즈
+https://www.aitimes.com/news/articleView.html?idxno=216355
+
+G7, AI 금융 사이버 공격 막는다…실전 모의훈련 승인
+https://www.aitimes.com/news/articleView.html?idxno=216354
+
+앤트로픽, 신용등급 ‘투자적격’까지 한 단계…돈 빌리기 쉬워지나
+https://www.aitimes.com/news/articleView.html?idxno=216353
+
 구글 창립자 “RSI 궤도 진입...플래시부터 AI가 후속 모델 개발 참여"
 https://www.aitimes.com/news/articleView.html?idxno=216350
-
-[게시판] KT, AI 기반 매장음악 서비스 '래디오비즈' 출시 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=216349
-
-머스크, 메모리 반도체 가격 정책 강력 비판...삼성·SK하이닉스 겨냥
-https://www.aitimes.com/news/articleView.html?idxno=216348
-
-오픈AI 도청 혐의 직원, 사우디 왕세자 면담부터 투자사 활동까지 드러나
-https://www.aitimes.com/news/articleView.html?idxno=216347
-
-트웰브랩스, 말로 요청하면 장면 찾고 편집하는 AI 에이전트 ‘자키’ 출시
-https://www.aitimes.com/news/articleView.html?idxno=216341
-
-MS, 정식 출시 앞서 2.8조 매개변수 모델 공개…‘독자 역량’ 부각
-https://www.aitimes.com/news/articleView.html?idxno=216337
-
-"GLM-5.3, 스스로 안전성 테스트 속여...'정렬 위장' 가능성" 경고
-https://www.aitimes.com/news/articleView.html?idxno=216334
-
-인텔리빅스, 30일 코스닥 상장..."안전 AI로 국방·자율주행·선박 공략"
-https://www.aitimes.com/news/articleView.html?idxno=216333
-
-아마존, 일상 대화 기억·요약하는 개인용 AI 웨어러블 '비' 시리즈 공개
-https://www.aitimes.com/news/articleView.html?idxno=216332
-
-TSMC, 머스크의 '테라팹' 협의 확인..."운영권은 반드시 우리가 가져야"
-https://www.aitimes.com/news/articleView.html?idxno=216330
