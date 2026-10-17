@@ -1,0 +1,31 @@
+🤖 26년 10월 18일 일요일 AI 뉴스
+
+[AI 모델 신작] BFL ‘플럭스 3 이미지 클라인’ 등 5종
+https://www.aitimes.com/news/articleView.html?idxno=216368
+
+AI 코딩도 LLM만으론 부족…레플릿, ‘결정론적 시뮬레이터’로 검증
+https://www.aitimes.com/news/articleView.html?idxno=216367
+
+오픈AI 도청 사건에 드러난 AI 첩보전…기업들은 이미 ‘스파이 경계’
+https://www.aitimes.com/news/articleView.html?idxno=216366
+
+GPT-6 아스트라, 미공개 물리 문제 98% 해결…전문가 오류도 발견
+https://www.aitimes.com/news/articleView.html?idxno=216365
+
+전 오픈AI 연구원 “AI 내부 읽을 수 있다” 주장…기대·반론 엇갈려
+https://www.aitimes.com/news/articleView.html?idxno=216364
+
+[AI 이슈트렌드] 삼전 최대 실적에도 코스피 붕괴…쿠팡 먹통·인천 흉기난동 등 주목
+https://www.aitimes.com/news/articleView.html?idxno=216363
+
+애플 첫 폴더블 ‘아이폰 듀오’ 예판 대란…배송 최대 3개월 지연
+https://www.aitimes.com/news/articleView.html?idxno=216362
+
+중국, 첨단 AI 모델 등 23가지 기술 수출 통제…오픈소스·API는 예외
+https://www.aitimes.com/news/articleView.html?idxno=216361
+
+오픈AI, 크롬용 '챗GPT' 확장 기능 강화..."열린 탭 분석하고 직접 제어"
+https://www.aitimes.com/news/articleView.html?idxno=216360
+
+인도에서도 AI 에이전트 무단 침입 발생…"개발사가 피해 기업에 보고"
+https://www.aitimes.com/news/articleView.html?idxno=216359

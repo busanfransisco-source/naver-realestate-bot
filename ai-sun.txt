@@ -1,31 +1,31 @@
-🤖 26년 10월 11일 일요일 AI 뉴스
+🤖 26년 10월 18일 일요일 AI 뉴스
 
-앤트로픽, '클로드 스타트업' 무료 혜택 일시 중단…신청 폭증에 전면 재검토
-https://www.aitimes.com/news/articleView.html?idxno=216136
+[AI 모델 신작] BFL ‘플럭스 3 이미지 클라인’ 등 5종
+https://www.aitimes.com/news/articleView.html?idxno=216368
 
-“AI와 직장 동료처럼 대화하라”…클로드 코드 개발자의 프롬프트 조언
-https://www.aitimes.com/news/articleView.html?idxno=216135
+AI 코딩도 LLM만으론 부족…레플릿, ‘결정론적 시뮬레이터’로 검증
+https://www.aitimes.com/news/articleView.html?idxno=216367
 
-우크라이나, 얀덱스 데이터센터 잇단 공격…디지털 인프라가 새 표적으로
-https://www.aitimes.com/news/articleView.html?idxno=216134
+오픈AI 도청 사건에 드러난 AI 첩보전…기업들은 이미 ‘스파이 경계’
+https://www.aitimes.com/news/articleView.html?idxno=216366
 
-앤트로픽, 내부 AI 평가서 실시간 인터넷 차단…“안전장치 검증 때까지”
-https://www.aitimes.com/news/articleView.html?idxno=216133
+GPT-6 아스트라, 미공개 물리 문제 98% 해결…전문가 오류도 발견
+https://www.aitimes.com/news/articleView.html?idxno=216365
 
-할리우드, AI 불안 속 저커버그·머스크·알트먼 영화 잇따라 선보여
-https://www.aitimes.com/news/articleView.html?idxno=216132
+전 오픈AI 연구원 “AI 내부 읽을 수 있다” 주장…기대·반론 엇갈려
+https://www.aitimes.com/news/articleView.html?idxno=216364
 
-아레나, 2700억 투자 유치…AI 안전성 평가 '정렬 지수' 도입
-https://www.aitimes.com/news/articleView.html?idxno=216131
+[AI 이슈트렌드] 삼전 최대 실적에도 코스피 붕괴…쿠팡 먹통·인천 흉기난동 등 주목
+https://www.aitimes.com/news/articleView.html?idxno=216363
 
-얀 르쿤의 월드 모델 'H-제파', 단·장기 계획 분리로 로봇 경로 계획 성공률 73% 달성
-https://www.aitimes.com/news/articleView.html?idxno=216129
+애플 첫 폴더블 ‘아이폰 듀오’ 예판 대란…배송 최대 3개월 지연
+https://www.aitimes.com/news/articleView.html?idxno=216362
 
-저커버그, 경쟁 제품 압박에 안전 우려에도 ‘뮤즈’ 출시 강행
-https://www.aitimes.com/news/articleView.html?idxno=216128
+중국, 첨단 AI 모델 등 23가지 기술 수출 통제…오픈소스·API는 예외
+https://www.aitimes.com/news/articleView.html?idxno=216361
 
-중국 AI 모델 안전성 평가 공개율 3.6%...출시 전 공개는 고작 1.1%
-https://www.aitimes.com/news/articleView.html?idxno=216127
+오픈AI, 크롬용 '챗GPT' 확장 기능 강화..."열린 탭 분석하고 직접 제어"
+https://www.aitimes.com/news/articleView.html?idxno=216360
 
-나델라 “AI에도 비상 브레이크 필요”...인간 통제·독립 감사 강조
-https://www.aitimes.com/news/articleView.html?idxno=216126
+인도에서도 AI 에이전트 무단 침입 발생…"개발사가 피해 기업에 보고"
+https://www.aitimes.com/news/articleView.html?idxno=216359
