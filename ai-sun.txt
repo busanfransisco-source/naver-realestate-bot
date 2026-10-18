@@ -3,11 +3,20 @@
 앤트로픽, 캐나다 첫 데이터센터 계약…일본서도 건설 협상 막바지
 https://www.aitimes.com/news/articleView.html?idxno=216378
 
+오픈AI 도청 혐의 직원, 보석 신청…“사우디행 편도 항공권, 도주 목적 아냐”
+https://www.aitimes.com/news/articleView.html?idxno=216377
+
 앤트로픽 ‘미소스 5’, 양자회로 설계 개선…53시간 만에 새 계산법 발견
 https://www.aitimes.com/news/articleView.html?idxno=216376
 
+구글, 양자컴퓨터 핵심 오류 40분의 1로 줄여…실용화 걸림돌 해결 실마리
+https://www.aitimes.com/news/articleView.html?idxno=216374
+
 미국 은행들, 메타 ‘뮤즈’ 계좌 접근 차단…“AI가 옮긴 돈, 누가 책임지나”
 https://www.aitimes.com/news/articleView.html?idxno=216373
+
+메타, 언론사 콘텐츠 AI 학습 논란에 약관 수정…자동 수집 권한은 유지
+https://www.aitimes.com/news/articleView.html?idxno=216372
 
 딥시크, 코딩 성능 높인 ‘V4.1 플래시’ 업데이트…검색 API도 공개
 https://www.aitimes.com/news/articleView.html?idxno=216370
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216367
 
 오픈AI 도청 사건에 드러난 AI 첩보전…기업들은 이미 ‘스파이 경계’
 https://www.aitimes.com/news/articleView.html?idxno=216366
-
-GPT-6 아스트라, 미공개 물리 문제 98% 해결…전문가 오류도 발견
-https://www.aitimes.com/news/articleView.html?idxno=216365
-
-전 오픈AI 연구원 “AI 내부 읽을 수 있다” 주장…기대·반론 엇갈려
-https://www.aitimes.com/news/articleView.html?idxno=216364
-
-[AI 이슈트렌드] 삼전 최대 실적에도 코스피 붕괴…쿠팡 먹통·인천 흉기난동 등 주목
-https://www.aitimes.com/news/articleView.html?idxno=216363
