@@ -1,5 +1,17 @@
 🤖 26년 10월 18일 일요일 AI 뉴스
 
+앤트로픽, 캐나다 첫 데이터센터 계약…일본서도 건설 협상 막바지
+https://www.aitimes.com/news/articleView.html?idxno=216378
+
+앤트로픽 ‘미소스 5’, 양자회로 설계 개선…53시간 만에 새 계산법 발견
+https://www.aitimes.com/news/articleView.html?idxno=216376
+
+미국 은행들, 메타 ‘뮤즈’ 계좌 접근 차단…“AI가 옮긴 돈, 누가 책임지나”
+https://www.aitimes.com/news/articleView.html?idxno=216373
+
+딥시크, 코딩 성능 높인 ‘V4.1 플래시’ 업데이트…검색 API도 공개
+https://www.aitimes.com/news/articleView.html?idxno=216370
+
 [AI 모델 신작] BFL ‘플럭스 3 이미지 클라인’ 등 5종
 https://www.aitimes.com/news/articleView.html?idxno=216368
 
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216364
 
 [AI 이슈트렌드] 삼전 최대 실적에도 코스피 붕괴…쿠팡 먹통·인천 흉기난동 등 주목
 https://www.aitimes.com/news/articleView.html?idxno=216363
-
-애플 첫 폴더블 ‘아이폰 듀오’ 예판 대란…배송 최대 3개월 지연
-https://www.aitimes.com/news/articleView.html?idxno=216362
-
-중국, 첨단 AI 모델 등 23가지 기술 수출 통제…오픈소스·API는 예외
-https://www.aitimes.com/news/articleView.html?idxno=216361
-
-오픈AI, 크롬용 '챗GPT' 확장 기능 강화..."열린 탭 분석하고 직접 제어"
-https://www.aitimes.com/news/articleView.html?idxno=216360
-
-인도에서도 AI 에이전트 무단 침입 발생…"개발사가 피해 기업에 보고"
-https://www.aitimes.com/news/articleView.html?idxno=216359
