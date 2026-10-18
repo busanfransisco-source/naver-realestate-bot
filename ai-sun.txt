@@ -18,14 +18,14 @@ https://www.aitimes.com/news/articleView.html?idxno=216373
 메타, 언론사 콘텐츠 AI 학습 논란에 약관 수정…자동 수집 권한은 유지
 https://www.aitimes.com/news/articleView.html?idxno=216372
 
+리퀴드 AI, 제브 성능 앞선 멀티모달 의사결정 모델 ‘d1-울트라’ 공개
+https://www.aitimes.com/news/articleView.html?idxno=216371
+
 딥시크, 코딩 성능 높인 ‘V4.1 플래시’ 업데이트…검색 API도 공개
 https://www.aitimes.com/news/articleView.html?idxno=216370
 
+[AI 모델 신작] 영상 생성 ‘클링 4.0’·감정 조절 음성 ‘드라마 3’ 등 6종
+https://www.aitimes.com/news/articleView.html?idxno=216369
+
 [AI 모델 신작] BFL ‘플럭스 3 이미지 클라인’ 등 5종
 https://www.aitimes.com/news/articleView.html?idxno=216368
-
-AI 코딩도 LLM만으론 부족…레플릿, ‘결정론적 시뮬레이터’로 검증
-https://www.aitimes.com/news/articleView.html?idxno=216367
-
-오픈AI 도청 사건에 드러난 AI 첩보전…기업들은 이미 ‘스파이 경계’
-https://www.aitimes.com/news/articleView.html?idxno=216366
