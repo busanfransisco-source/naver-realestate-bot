@@ -1,5 +1,8 @@
 🤖 26년 10월 20일 화요일 AI 뉴스
 
+미국, 연방기관서 딥시크 퇴출…기반 기술 활용 외부 서비스도 포함
+https://www.aitimes.com/news/articleView.html?idxno=216417
+
 중국 CXMT, AI 수요에 흑자 전환 전망…주가는 6%대 하락
 https://www.aitimes.com/news/articleView.html?idxno=216415
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216405
 
 앤트로픽 ‘상위 5대 고객’ 레플릿도 오픈AI로…클로드 의존 줄여
 https://www.aitimes.com/news/articleView.html?idxno=216404
-
-엘로리안, 시각 추론 AI ‘글림프스’ 공개…일부 평가서 아스트라 앞서
-https://www.aitimes.com/news/articleView.html?idxno=216403
