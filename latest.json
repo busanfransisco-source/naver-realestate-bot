@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-10-20 07:40:40",
+  "updated_at_kst": "2026-10-20 07:56:41",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 20일 화요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "양천구, 우수 건축·공간 디자인 공모…내달 19일까지 접수",
+      "url": "https://n.news.naver.com/mnews/article/018/0006391898"
+    },
+    {
+      "title": "방학신동아1단지, 대신자산신탁이 재건축 시행…4099가구 탈바꿈",
+      "url": "https://n.news.naver.com/mnews/article/018/0006391892"
+    },
     {
       "title": "전세 찾으러 갔더니 매물표엔 ‘월세’만... 서울 아파트 임대차 51% 뒤집혔다",
       "url": "https://n.news.naver.com/mnews/article/022/0004168058"
@@ -34,14 +42,6 @@
     {
       "title": "“키즈카페 넘어 테마파크로”…노원구 ‘점프’, 공공형 놀이시설의 진화",
       "url": "https://n.news.naver.com/mnews/article/119/0003144499"
-    },
-    {
-      "title": "\"삼전닉스 성과급 등 상급지 이동 수요 20만명…역대급 '의자 뺏기' 시작\"",
-      "url": "https://n.news.naver.com/mnews/article/003/0014264362"
-    },
-    {
-      "title": "\"안 팔리는데 가격도 못 내린다\"…'진퇴양난' 지방 분양시장",
-      "url": "https://n.news.naver.com/mnews/article/648/0000051738"
     }
   ]
 }
