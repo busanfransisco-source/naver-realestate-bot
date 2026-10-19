@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-10-20 07:56:41",
+  "updated_at_kst": "2026-10-20 08:12:29",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 20일 화요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "현대엔지니어링, ‘힐스테이트 성남메트로블’ 20일 청약 접수 실시",
+      "url": "https://n.news.naver.com/mnews/article/018/0006391906"
+    },
     {
       "title": "양천구, 우수 건축·공간 디자인 공모…내달 19일까지 접수",
       "url": "https://n.news.naver.com/mnews/article/018/0006391898"
@@ -38,10 +42,6 @@
     {
       "title": "[데스크칼럼] 발표는 빠르고, 공사는 더디다",
       "url": "https://n.news.naver.com/mnews/article/421/0009237459"
-    },
-    {
-      "title": "“키즈카페 넘어 테마파크로”…노원구 ‘점프’, 공공형 놀이시설의 진화",
-      "url": "https://n.news.naver.com/mnews/article/119/0003144499"
     }
   ]
 }
