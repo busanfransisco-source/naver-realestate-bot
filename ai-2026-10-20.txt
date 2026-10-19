@@ -1,0 +1,31 @@
+🤖 26년 10월 20일 화요일 AI 뉴스
+
+중국 CXMT, AI 수요에 흑자 전환 전망…주가는 6%대 하락
+https://www.aitimes.com/news/articleView.html?idxno=216415
+
+텐센트, 챗봇마다 저장하던 AI 메모리 통합...클로드·챗GPT에서 공유
+https://www.aitimes.com/news/articleView.html?idxno=216413
+
+센드버드, 업스테이지와 기업용 AI 에이전트 영역서 협력
+https://www.aitimes.com/news/articleView.html?idxno=216412
+
+덴컴·서울대, AI 음성 치주 기록 교육 협력
+https://www.aitimes.com/news/articleView.html?idxno=216411
+
+구글, AI 성능 스스로 높이는 자기개선 프레임워크 ‘하네스²’ 공개
+https://www.aitimes.com/news/articleView.html?idxno=216410
+
+오픈AI, 잇단 경영진 이탈 뒤 인력 보강…스페이스X·메타서 영입
+https://www.aitimes.com/news/articleView.html?idxno=216409
+
+앤트로픽, 에이전트 협상 학습에 변호사 투입...“흥정할 때 지켜야 할 규칙은”
+https://www.aitimes.com/news/articleView.html?idxno=216406
+
+디즈니, 파산한 캐릭터닷AI 직원 대부분 채용...3년간 2600억 투입
+https://www.aitimes.com/news/articleView.html?idxno=216405
+
+앤트로픽 ‘상위 5대 고객’ 레플릿도 오픈AI로…클로드 의존 줄여
+https://www.aitimes.com/news/articleView.html?idxno=216404
+
+엘로리안, 시각 추론 AI ‘글림프스’ 공개…일부 평가서 아스트라 앞서
+https://www.aitimes.com/news/articleView.html?idxno=216403
