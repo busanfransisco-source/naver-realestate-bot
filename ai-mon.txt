@@ -1,31 +1,31 @@
 🤖 26년 10월 19일 월요일 AI 뉴스
 
-앤트로픽 클로드, 25년 된 암호 표준 미스터리 풀어…“30분도 안 걸렸다”
-https://www.aitimes.com/news/articleView.html?idxno=216380
+앤트로픽 ‘상위 5대 고객’ 레플릿도 오픈AI로…클로드 의존 줄여
+https://www.aitimes.com/news/articleView.html?idxno=216404
 
-'제미나이 4 아르곤', 역할 나눠 27시간 만에 마인크래프트 클리어
-https://www.aitimes.com/news/articleView.html?idxno=216379
+오픈AI, ‘GPT-라이브’에 의사 결정 API 연결..."말 끝나기 전 판단"
+https://www.aitimes.com/news/articleView.html?idxno=216402
 
-앤트로픽, 캐나다 첫 데이터센터 계약…일본서도 건설 협상 막바지
-https://www.aitimes.com/news/articleView.html?idxno=216378
+IPO 앞둔 엔스케일에 대형 악재…MS, 영국 데이터센터 계약 철수
+https://www.aitimes.com/news/articleView.html?idxno=216401
 
-오픈AI 도청 혐의 직원, 보석 신청…“사우디행 편도 항공권, 도주 목적 아냐”
-https://www.aitimes.com/news/articleView.html?idxno=216377
+마키나락스, 도면 AI 솔루션으로  제조업 AX 수요 견인 나서
+https://www.aitimes.com/news/articleView.html?idxno=216397
 
-앤트로픽 ‘미소스 5’, 양자회로 설계 개선…53시간 만에 새 계산법 발견
-https://www.aitimes.com/news/articleView.html?idxno=216376
+앤트로픽 ‘클로드’가 인스타그램 계정 정지 유발...메타 "봇 활동으로 오인"
+https://www.aitimes.com/news/articleView.html?idxno=216395
 
-오픈AI, ‘GPT-6 아스트라 프로’ 업그레이드...에이전트 병렬 실행 지원
-https://www.aitimes.com/news/articleView.html?idxno=216375
+과기정통부, 세계은행과 글로벌 AI·디지털 협력 위한 책임있는 AI 논의
+https://www.aitimes.com/news/articleView.html?idxno=216394
 
-구글, 양자컴퓨터 핵심 오류 40분의 1로 줄여…실용화 해결 실마리
-https://www.aitimes.com/news/articleView.html?idxno=216374
+앤트로픽, 지분 5% 공익기금에 출연...AI 일자리 충격 대응 추진
+https://www.aitimes.com/news/articleView.html?idxno=216393
 
-미국 은행들, 메타 ‘뮤즈’ 계좌 접근 차단…“AI가 옮긴 돈, 누가 책임지나”
-https://www.aitimes.com/news/articleView.html?idxno=216373
+"앤트로픽 ‘페이블 5.5’ 파트너에 제공"...개발 도구서 새 모델명 잇따라 포착
+https://www.aitimes.com/news/articleView.html?idxno=216390
 
-메타, 언론사 콘텐츠 AI 학습 논란에 약관 수정…자동 수집 권한은 유지
-https://www.aitimes.com/news/articleView.html?idxno=216372
+오픈AI, 이미지 모델 ‘오로라’ 3종 테스트 정황...‘GPT-이미지-3’로 추측
+https://www.aitimes.com/news/articleView.html?idxno=216388
 
-리퀴드 AI, 제브 성능 앞선 멀티모달 의사결정 모델 ‘d1-울트라’ 공개
-https://www.aitimes.com/news/articleView.html?idxno=216371
+미국 "인도·인도네시아·라오스 태양광 수입에 자국 산업 피해"…반덤핑·상계관세 부과
+https://www.aitimes.com/news/articleView.html?idxno=216385
