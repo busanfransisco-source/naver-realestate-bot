@@ -4,12 +4,13 @@ from unittest.mock import patch
 from pathlib import Path
 from briefing_health import inspect, KEYS, KST
 from validate_policy import validate
+from gen_briefing import SLOT_BY_KEY
 
 
 class HealthTests(unittest.TestCase):
     def page(self):
-        return ''.join(f'<section class="card" data-slot="{i}"><textarea id="ta-{k}">2026-10-06\n' +
-                       '자료 설명입니다. ' * 40 + '</textarea></section>' for i, k in enumerate(KEYS, 1))
+        return ''.join(f'<section class="card" data-slot="{SLOT_BY_KEY[k]}"><textarea id="ta-{k}">2026-10-06\n' +
+                       '자료 설명입니다. ' * 40 + '</textarea></section>' for k in KEYS)
 
     def test_all_30_checked_and_partial_gold_rejected(self):
         rows = inspect(self.page(), datetime(2026, 10, 6, 15, tzinfo=KST))

@@ -175,6 +175,12 @@ LIVE_KEYS = ([key for key, _, _ in SECTIONS if not key.startswith('analysis')]
              + [key for key, _ in NEW_DATA_SECTIONS]
              + [key for key, _, _ in SECTIONS if key.startswith('analysis')] + ['analysis7'])
 
+# The deployed sender verifies each old heading number against its stable ID.
+# Keep all 1..29 identities intact; new 30 is displayed beside weekly prices.
+SLOT_BY_KEY = {key: number for number, key in enumerate(
+    [key for key in LIVE_KEYS if key != 'supplydemand'], 1)}
+SLOT_BY_KEY['supplydemand'] = 30
+
 
 FIREBASE_CONFIG = {
     "apiKey": "AIzaSyBL3jjmzmNrYjqSc5jzt1F0kcaLLS55bEY",
@@ -320,7 +326,7 @@ def build_html(*, new_data_contents=None):
         if key.startswith("analysis"):
             content = read_policy_text(fname_prefix, now)
         core_sections.append((key, label, content))
-    # Derive all visible/actual numbers together; stable content IDs never change.
+    # Visible and machine-readable numbers agree without renumbering old IDs.
     ordered = [section for section in core_sections if not section[0].startswith('analysis')]
     ordered.extend(build_rotating_sections(now.date()))
     ordered.append(("transactions", "🏢 전국 신규 등록 실거래가", read_transactions_text(now.date())))
@@ -328,7 +334,7 @@ def build_html(*, new_data_contents=None):
         ordered.extend((key, label, new_data_contents[key]) for key, label in NEW_DATA_SECTIONS)
     ordered.extend(section for section in core_sections if section[0].startswith('analysis'))
     ordered.append(("analysis7", "📰 부동산 불장의 진실 정책분석", read_policy_text("analysis7", now)))
-    rendered_sections = [(number, *section) for number, section in enumerate(ordered, 1)]
+    rendered_sections = [(SLOT_BY_KEY[section[0]], *section) for section in ordered]
     for number, key, label, content in rendered_sections:
         if key == 'seoulcommerce' and '(오늘 임시 배포 · KST)' in content:
             label = '📍 서울 주요 상권 · 오늘 임시 배포'

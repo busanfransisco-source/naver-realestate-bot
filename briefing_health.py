@@ -14,7 +14,7 @@ from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
-from gen_briefing import KST, LIVE_KEYS, analysis_date, has_fetch_failure
+from gen_briefing import KST, LIVE_KEYS, SLOT_BY_KEY, analysis_date, has_fetch_failure
 
 KEYS = LIVE_KEYS
 REPAIR = {
@@ -51,7 +51,8 @@ def inspect(page, now=None):
     today = now.date()
     soup = BeautifulSoup(page, 'html.parser')
     results = []
-    for slot, key in enumerate(KEYS, 1):
+    for key in KEYS:
+        slot = SLOT_BY_KEY[key]
         nodes = soup.select(f'#ta-{key}')
         text = nodes[0].get_text().strip() if len(nodes) == 1 else ''
         issues = []

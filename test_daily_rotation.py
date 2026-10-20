@@ -115,14 +115,14 @@ class DailyRotationTests(unittest.TestCase):
         with patch.object(gen_briefing, 'read_section_text', return_value=''):
             page = gen_briefing.build_html()
         self.assertEqual(page.count('<section class="card"'), 27)
-        for number in range(14, 20):
+        for number in range(13, 19):
             self.assertIn(f'data-slot="{number}"', page)
-            self.assertIn(f'id="ta-daily{number + 5}"', page)
-        self.assertIn('data-slot="20"', page)
+            self.assertIn(f'id="ta-daily{number + 6}"', page)
+        self.assertIn('data-slot="19"', page)
         self.assertIn('id="ta-transactions"', page)
-        self.assertIn('data-slot="27"', page)
+        self.assertIn('data-slot="29"', page)
         self.assertIn('id="ta-analysis7"', page)
-        for number, key in enumerate(('analysis3', 'analysis4', 'analysis5', 'analysis2', 'analysis6', 'analysis1'), 21):
+        for number, key in enumerate(('analysis3', 'analysis4', 'analysis5', 'analysis2', 'analysis6', 'analysis1'), 23):
             self.assertIn(f'<h2>{number}. ', page)
             self.assertIn(f'data-slot="{number}"', page)
             self.assertIn(f'id="ta-{key}"', page)

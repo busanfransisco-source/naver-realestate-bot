@@ -18,12 +18,12 @@ class BriefingResilienceTests(unittest.TestCase):
         })
         self.assertEqual(preview.count('<section class="card"'), 30)
         self.assertNotIn('id="ta-kpxpower"', preview)
-        for number, (key, label) in enumerate(gen_briefing.NEW_DATA_SECTIONS, start=21):
+        for number, (key, label) in enumerate(gen_briefing.NEW_DATA_SECTIONS, start=20):
             self.assertIn(f'<h2>{number}. {label}</h2>', preview)
             self.assertIn(f'id="ta-{key}"', preview)
         for number, key in enumerate(
             ('analysis3', 'analysis4', 'analysis5', 'analysis2', 'analysis6', 'analysis1', 'analysis7'),
-            start=24,
+            start=23,
         ):
             self.assertIn(f'data-slot="{number}"', preview)
             self.assertIn(f'id="ta-{key}"', preview)
@@ -77,11 +77,11 @@ class BriefingResilienceTests(unittest.TestCase):
 
     def test_new_supply_box_numbers_match_display_order(self):
         generated = gen_briefing.build_html()
-        self.assertIn('<h2>6. ⚖️ 부동산 주간·월간 수급지수</h2>', generated)
-        self.assertIn('<h2>14. ⭕ 오늘의 부동산 OX</h2>', generated)
-        self.assertIn('<h2>19. 📦 이사 준비 한 가지</h2>', generated)
-        self.assertIn('<h2>20. 🏢 전국 신규 등록 실거래가</h2>', generated)
-        self.assertIn('<h2>27. 📰 부동산 불장의 진실 정책분석</h2>', generated)
+        self.assertIn('<h2>30. ⚖️ 부동산 주간·월간 수급지수</h2>', generated)
+        self.assertIn('<h2>13. ⭕ 오늘의 부동산 OX</h2>', generated)
+        self.assertIn('<h2>18. 📦 이사 준비 한 가지</h2>', generated)
+        self.assertIn('<h2>19. 🏢 전국 신규 등록 실거래가</h2>', generated)
+        self.assertIn('<h2>29. 📰 부동산 불장의 진실 정책분석</h2>', generated)
         self.assertIn('id="ta-analysis7"', generated)
 
     def test_market_workflows_commit_fuel_cache(self):

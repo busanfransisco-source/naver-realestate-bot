@@ -4,7 +4,7 @@ import json
 from datetime import datetime, date
 import requests
 from bs4 import BeautifulSoup
-from gen_briefing import KST, LIVE_KEYS
+from gen_briefing import KST, SLOT_BY_KEY
 from daily_rotation import CONTENT_DIR, build_rotating_sections, validate_packet
 
 def verify(page, today):
@@ -12,7 +12,7 @@ def verify(page, today):
     validate_packet(packet, today)
     soup = BeautifulSoup(page, 'html.parser')
     for key, label, expected in build_rotating_sections(today):
-        number = LIVE_KEYS.index(key) + 1
+        number = SLOT_BY_KEY[key]
         matches = soup.select('#ta-'+key)
         if len(matches) != 1 or matches[0].get_text() != expected:
             raise ValueError(f'Box {number}: public original manuscript mismatch')

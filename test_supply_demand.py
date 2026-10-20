@@ -218,17 +218,21 @@ class SupplyDemandTests(unittest.TestCase):
             path.write_text(json.dumps(malformed), encoding='utf-8')
             self.assertEqual(sd.load_digest(path, NOW), sd.PENDING)
 
-    def test_all_30_slots_are_sequential_ids_copy_bodies_exact(self):
+    def test_new_30_keeps_legacy_numbers_and_copy_bodies_exact(self):
         body = sd.format_digest(snapshot(), NOW)
         with patch('supply_demand.load_digest', return_value=body):
             page = gen_briefing.build_html(new_data_contents={k: label for k, label in gen_briefing.NEW_DATA_SECTIONS})
         soup = BeautifulSoup(page, 'html.parser')
         sections = soup.select('section.card')
-        self.assertEqual([s['data-slot'] for s in sections], [str(i) for i in range(1, 31)])
+        self.assertEqual([s['data-slot'] for s in sections], [str(gen_briefing.SLOT_BY_KEY[k]) for k in gen_briefing.LIVE_KEYS])
+        self.assertEqual(sorted(int(s['data-slot']) for s in sections), list(range(1, 31)))
         self.assertEqual([s.select_one('textarea')['id'][3:] for s in sections], gen_briefing.LIVE_KEYS)
         self.assertEqual(sections[5].select_one('textarea')['id'], 'ta-supplydemand')
+        self.assertEqual(sections[5]['data-slot'], '30')
         self.assertEqual(sections[19].select_one('textarea')['id'], 'ta-transactions')
         self.assertEqual(sections[29].select_one('textarea')['id'], 'ta-analysis7')
+        self.assertEqual(sections[19]['data-slot'], '19')
+        self.assertEqual(sections[29]['data-slot'], '29')
         self.assertEqual(soup.select_one('#ta-supplydemand').get_text(), body)
         copied = json.loads(re.search(r'window.__content_supplydemand = (.*?);</script>', page).group(1))
         self.assertEqual(copied, body)
@@ -244,6 +248,14 @@ class SupplyDemandTests(unittest.TestCase):
             row = next(r for r in inspect(page, NOW) if r['key'] == 'supplydemand')
             self.assertEqual(row['status'], 'failed')
         self.assertEqual(REPAIR['supplydemand'], 'supply_demand.py')
+
+    def test_legacy_sender_contract_numbers_stay_frozen(self):
+        legacy = ('fortune weather shortnews subs trend fuelfx metalcoin books realestate world finance ai '
+                  'daily19 daily20 daily21 daily22 daily23 daily24 transactions seoulcommerce cryptofear '
+                  'wikiinterest analysis3 analysis4 analysis5 analysis2 analysis6 analysis1 analysis7').split()
+        self.assertEqual({key: gen_briefing.SLOT_BY_KEY[key] for key in legacy},
+                         {key: number for number, key in enumerate(legacy, 1)})
+        self.assertEqual(gen_briefing.SLOT_BY_KEY['supplydemand'], 30)
 
     def test_existing_cloud_workflows_collect_and_persist_new_cache(self):
         for name in ('manual-briefing', 'naver-realestate', 'daily-data-cards'):
