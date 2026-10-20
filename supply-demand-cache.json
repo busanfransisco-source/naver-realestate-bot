@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "provider": "한국부동산원 R-ONE",
   "housingType": "아파트",
-  "checkedAtKst": "2026-10-21T06:02:29.868791+09:00",
+  "checkedAtKst": "2026-10-21T08:16:19.345678+09:00",
   "accessMode": "authenticated",
   "tableIds": {
     "weekly_sale": "T248163133074619",
