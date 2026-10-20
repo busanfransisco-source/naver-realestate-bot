@@ -1,10 +1,22 @@
 🤖 26년 10월 20일 화요일 AI 뉴스
 
+[게시판] NC AI, 바르코 3D·사운드 50% 할인 프로모션 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=216455
+
+엘리스그룹, AI 인프라 상장 랠리 가세.. 코어위브 악재 돌파할까
+https://www.aitimes.com/news/articleView.html?idxno=216452
+
 클로드 코드, 맥에 숨은 암호화폐 채굴 악성코드 포착...CPU 사용률 1175% 치솟아
 https://www.aitimes.com/news/articleView.html?idxno=216451
 
+스카이폴AI, CAD·BIM 3D 설계 자동화 월드모델 ‘스카이-001’ 공개
+https://www.aitimes.com/news/articleView.html?idxno=216450
+
 AI 에이전트가 뚫은 기업 100여곳…660만원으로 '해킹 대중화' 열려
 https://www.aitimes.com/news/articleView.html?idxno=216448
+
+플리토, 3분기 누적 창사이래 최대 실적 실현...영업이익률 50% 돌파
+https://www.aitimes.com/news/articleView.html?idxno=216447
 
 엔스케일, 앤트로픽과 추가 60조 규모 컴퓨팅 계약 협상…총 120조 육박
 https://www.aitimes.com/news/articleView.html?idxno=216446
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216442
 
 머스크 제친 코덱스 총괄 ‘티보’…‘리셋 잘해주는 고마운 남자’
 https://www.aitimes.com/news/articleView.html?idxno=216441
-
-KT, 아크릴과 의료기관 맞춤형 AX 사업 공조
-https://www.aitimes.com/news/articleView.html?idxno=216440
-
-딥시크, 플래그십 모델 사전학습에 화웨이 칩 본격 투입...국산 AI 자립 속도
-https://www.aitimes.com/news/articleView.html?idxno=216439
-
-미니맥스 ‘M3.1 플래시’, 업무 자동화 성능 높이고 비용 낮춰…환각은 숙제
-https://www.aitimes.com/news/articleView.html?idxno=216437
-
-MDS테크, 국내 휴머노이드 홈로봇 프로젝트에 엔비디아 AI 플랫폼 패키지 공급
-https://www.aitimes.com/news/articleView.html?idxno=216436
