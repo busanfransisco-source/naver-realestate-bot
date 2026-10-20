@@ -1,31 +1,31 @@
 🤖 26년 10월 20일 화요일 AI 뉴스
 
+엔스케일, 앤트로픽과 추가 60조 규모 컴퓨팅 계약 협상…총 120조 육박
+https://www.aitimes.com/news/articleView.html?idxno=216446
+
+머스크 제친 코덱스 총괄 ‘티보’…‘리셋 잘해주는 고마운 남자’
+https://www.aitimes.com/news/articleView.html?idxno=216441
+
+미니맥스 ‘M3.1 플래시’, 업무 자동화 성능 높이고 비용 낮춰…환각은 숙제
+https://www.aitimes.com/news/articleView.html?idxno=216437
+
+오픈AI 회의실 도청 전 직원, 사우디 왕실과 취업 논의...보석 신청은 기각
+https://www.aitimes.com/news/articleView.html?idxno=216430
+
+빅웨이브로보틱스, 로봇 AI 통합 개발 플랫폼 '하이퍼 파운드리' 공개
+https://www.aitimes.com/news/articleView.html?idxno=216427
+
+미국, 42개 주서 태양광 정책 조치 221건…전력 보상·계통연계 개편 집중
+https://www.aitimes.com/news/articleView.html?idxno=216426
+
+MS “AI 에이전트는 믿을 수 없는 내부자...24시간 감시하는 AI 필요”
+https://www.aitimes.com/news/articleView.html?idxno=216425
+
 앤트로픽, ‘숨은 의도 읽는’ 새 모델 준비...구글·오픈AI도 후속작 예고
 https://www.aitimes.com/news/articleView.html?idxno=216424
 
-머스크 “미국 모든 어린이에게 스페이스X 주식 1주씩”…14조원 규모
-https://www.aitimes.com/news/articleView.html?idxno=216418
+태양광발전소 유지보수 줄었더니…코로나19 기간 발전 성능 저하
+https://www.aitimes.com/news/articleView.html?idxno=216421
 
-미국, 연방기관서 딥시크 퇴출…기반 기술 활용 외부 서비스도 포함
-https://www.aitimes.com/news/articleView.html?idxno=216417
-
-중국 CXMT, AI 수요에 흑자 전환 전망…주가는 6%대 하락
-https://www.aitimes.com/news/articleView.html?idxno=216415
-
-텐센트, 챗봇마다 저장하던 AI 메모리 통합...클로드·챗GPT에서 공유
-https://www.aitimes.com/news/articleView.html?idxno=216413
-
-센드버드, 업스테이지와 기업용 AI 에이전트 영역서 협력
-https://www.aitimes.com/news/articleView.html?idxno=216412
-
-덴컴·서울대, AI 음성 치주 기록 교육 협력
-https://www.aitimes.com/news/articleView.html?idxno=216411
-
-구글, AI 성능 스스로 높이는 자기개선 프레임워크 ‘하네스²’ 공개
-https://www.aitimes.com/news/articleView.html?idxno=216410
-
-오픈AI, 잇단 경영진 이탈 뒤 인력 보강…스페이스X·메타서 영입
-https://www.aitimes.com/news/articleView.html?idxno=216409
-
-앤트로픽, 에이전트 협상 학습에 변호사 투입...“흥정할 때 지켜야 할 규칙은”
-https://www.aitimes.com/news/articleView.html?idxno=216406
+노르웨이, 콘센트형 태양광·배터리 허용 추진…2027년까지 제도 정비 제안
+https://www.aitimes.com/news/articleView.html?idxno=216420
