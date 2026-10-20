@@ -8,6 +8,8 @@ from pathlib import Path
 KST = timezone(timedelta(hours=9))
 KEYS = ('seoulcommerce', 'cryptofear', 'wikiinterest')
 CACHE = Path('data-cards.json')
+WIKI_DELAY_NOTICE = ('🕒 최근 확보 자료 · 원자료 갱신 지연\n'
+                     '자동공유 보류 · 아래 집계 마감일을 확인해 주세요.')
 
 
 def pending_body(key, reason=None):
@@ -112,6 +114,54 @@ def daily_seoul_snapshot(entry, now):
             and entry.get('sourceDate') == now.astimezone(KST).date().isoformat())
 
 
+def stored_wiki_snapshot(entry, now):
+    """A verified completed window stays readable, not automatically send-ready."""
+    if not isinstance(entry, dict):
+        return False
+    try:
+        body = entry['body']
+        if (not isinstance(body, str) or len(body) < 100
+                or not all(token in body for token in ('한국어 위키백과 문서 조회수',
+                                                       '비교 기간:', '순위 표시 기준:'))):
+            return False
+        derived = card_metadata('wikiinterest', body)
+        return (derived['ready'] and all(entry.get(field) == derived[field] for field in
+                    ('sourceDate', 'sourceWindow', 'expiresAtKst'))
+                and datetime.fromisoformat(derived['sourceDate']).date()
+                    < now.astimezone(timezone.utc).date())
+    except (KeyError, TypeError, ValueError):
+        return False
+
+
+def wiki_display_body(entry, now):
+    body = entry['body']
+    if valid_card('wikiinterest', entry, now) or WIKI_DELAY_NOTICE in body:
+        return body
+    title, _, rest = body.partition('\n')
+    return title + '\n\n' + WIKI_DELAY_NOTICE + '\n' + rest.lstrip('\n')
+
+
+def select_wiki_entry(incoming, previous, now, reason):
+    candidates = [entry for entry in (previous, incoming)
+                  if valid_card('wikiinterest', entry, now) or stored_wiki_snapshot(entry, now)]
+    if not candidates:
+        entry = card_metadata('wikiinterest', pending_body('wikiinterest', reason))
+        entry.update(refreshStatus='pending', checkedAtKst=now.isoformat(), failureReason=reason)
+        return entry
+    # A lagging response may not downgrade a newer saved source window.
+    chosen = max(candidates, key=lambda entry: entry['sourceDate'])
+    if incoming in candidates and incoming['sourceDate'] == chosen['sourceDate']:
+        chosen = incoming
+    entry = dict(chosen)
+    fresh = valid_card('wikiinterest', dict(entry, ready=True), now)
+    entry.update(ready=fresh, checkedAtKst=now.isoformat())
+    if chosen is incoming:
+        entry['collectedAtKst'] = now.isoformat()
+    entry['refreshStatus'] = ('collected' if chosen is incoming else 'retained_valid_source') if fresh else 'retained_expired_source'
+    entry['failureReason'] = (None if chosen is incoming else reason) if fresh else (reason or '원자료 집계 마감일 지연')
+    return entry
+
+
 def load_contents(path=CACHE, *, now=None):
     now = now or datetime.now(KST)
     try:
@@ -125,6 +175,8 @@ def load_contents(path=CACHE, *, now=None):
             or key == 'seoulcommerce' and stored_seoul_snapshot(cards.get(key), now))
             else pending_body(key, (cards.get(key) if isinstance(cards.get(key), dict) else {}).get('failureReason')
                               or '자료가 없거나 원자료 유효시간이 지났습니다') for key in KEYS}
+    if stored_wiki_snapshot(cards.get('wikiinterest'), now):
+        contents['wikiinterest'] = wiki_display_body(cards['wikiinterest'], now)
     from seoul_previous_day import ARCHIVE, read_archive, render_previous_day
     if Path(path).resolve() == CACHE.resolve() and ARCHIVE.exists():
         contents['seoulcommerce'] = render_previous_day(now, read_archive())
@@ -147,7 +199,8 @@ def collect(path=CACHE, *, only=None):
         previous = {}
     frozen = 'seoulcommerce' in selected and daily_seoul_snapshot(previous.get('seoulcommerce'), now)
     requested = tuple(key for key in selected if not (key == 'seoulcommerce' and frozen))
-    bodies = preview_contents(diagnostics=diagnostics, only=requested) if requested else {}
+    bodies = preview_contents(diagnostics=diagnostics, only=requested,
+                              allow_delayed_wiki='wikiinterest' in requested) if requested else {}
     now = datetime.now(KST)
     if frozen and not daily_seoul_snapshot(previous.get('seoulcommerce'), now):
         raise RuntimeError('수집 중 날짜 변경: 당일 고정본 재확인이 필요합니다')
@@ -164,6 +217,9 @@ def collect(path=CACHE, *, only=None):
         if key == 'seoulcommerce' and frozen:
             continue
         reason = diagnostics.get(key)
+        if key == 'wikiinterest':
+            entries[key] = select_wiki_entry(entry, previous.get(key), now, reason)
+            continue
         if not valid_card(key, entry, now):
             reason = reason or '원자료 기준일·시각 검증 실패 또는 유효시간 만료'
             if valid_card(key, previous.get(key), now):

@@ -45,7 +45,8 @@ def failure_reason(error):
     return '인증 또는 자료 형식 검증 실패'
 
 
-def preview_contents(session=requests, *, today_utc=None, diagnostics=None, only=None):
+def preview_contents(session=requests, *, today_utc=None, diagnostics=None, only=None,
+                     allow_delayed_wiki=False):
     today_utc = today_utc or datetime.now(timezone.utc).date()
     selected = set(only) if only is not None else {'seoulcommerce', 'cryptofear', 'wikiinterest'}
     if not selected or selected - {'seoulcommerce', 'cryptofear', 'wikiinterest'}:
@@ -61,7 +62,8 @@ def preview_contents(session=requests, *, today_utc=None, diagnostics=None, only
     def wiki():
         digest = fetch_wikimedia_digest(session, WIKI_TITLES, today=today_utc)
         match = re.search(r"집계 마감: (\d{4}-\d{2}-\d{2}) \(UTC\)", digest)
-        if not match or not 1 <= (today_utc - datetime.fromisoformat(match.group(1)).date()).days <= 3:
+        age = (today_utc - datetime.fromisoformat(match.group(1)).date()).days if match else -1
+        if age < 1 or (age > 3 and not allow_delayed_wiki):
             raise SourceUnavailable("공통 집계 마감일이 오래됐거나 미래입니다")
         return digest
 

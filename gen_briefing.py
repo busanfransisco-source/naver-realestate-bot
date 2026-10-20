@@ -348,9 +348,11 @@ def build_html(*, new_data_contents=None):
         source_credit = ('<p style="font-size:12px;color:#666">출처: <a href="https://data.seoul.go.kr/dataList/OA-22385/A/1/datasetView.do">서울 열린데이터광장</a> · 신한카드</p>' if key == 'seoulcommerce' else '')
         expiry_attribute = ''
         if key in {item[0] for item in NEW_DATA_SECTIONS}:
-            from production_data_cards import card_metadata
+            from production_data_cards import card_metadata, stored_wiki_snapshot
             metadata = card_metadata(key, content)
             expiry_attribute = f' data-data-card="true" data-expires="{metadata["expiresAtKst"] or ""}"'
+            if key == 'wikiinterest' and stored_wiki_snapshot(metadata, now):
+                expiry_attribute += ' data-preserve-source="true"'
             if key == 'seoulcommerce' and metadata['sourceDate']:
                 daily_end = datetime.fromisoformat(metadata['sourceDate']) + timedelta(days=2 if '(전날 · KST)' in content else 1)
                 expiry_attribute += f' data-daily-expires="{daily_end:%Y-%m-%d}T00:00:00+09:00"'
@@ -517,6 +519,18 @@ function refreshDataCardExpiry() {{
     if (!Number.isFinite(expiry) || Date.now() >= expiry) {{
       const ta = card.querySelector('textarea');
       const key = ta.id.slice(3);
+      if (key === 'wikiinterest' && card.dataset.preserveSource === 'true' && Number.isFinite(expiry)) {{
+        const notice = '🕒 최근 확보 자료 · 원자료 갱신 지연\\n자동공유 보류 · 아래 집계 마감일을 확인해 주세요.';
+        if (!ta.value.includes(notice)) {{
+          const split = ta.value.indexOf('\\n');
+          ta.value = ta.value.slice(0, split) + '\\n\\n' + notice + '\\n' + ta.value.slice(split + 1).replace(/^\\n+/, '');
+        }}
+        window['__content_' + key] = ta.value;
+        const button = card.querySelector('.copy-btn');
+        button.disabled = false;
+        button.textContent = '이전 자료 복사';
+        return;
+      }}
       if (key === 'seoulcommerce' && Number.isFinite(expiry) && !ta.value.includes('집계 대기')) {{
         const status = card.querySelector('.data-status');
         status.textContent = '';

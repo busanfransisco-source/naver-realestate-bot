@@ -87,6 +87,8 @@ jobs:
         env:
           RONE_KEY: ${{ secrets.RONE_KEY }}
 
+      - name: Backstop economic reading interest
+        run: python ensure_wiki_daily.py || echo "Wiki source delayed; dated previous content remains visible"
       - name: Backstop missing today Seoul snapshot during daytime
         run: python ensure_seoul_daily.py || echo "Seoul source still unavailable; dated snapshot retained"
         env:

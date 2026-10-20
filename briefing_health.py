@@ -9,7 +9,7 @@ import re
 import subprocess
 import sys
 import time
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import requests
@@ -27,6 +27,7 @@ REPAIR = {
     'realestate': 'naver_realestate_fetch.py', 'world': 'world_news_fetch.py',
     'finance': 'finance_news_fetch.py', 'ai': 'ai_news_fetch.py',
     'transactions': 'ensure_transactions_daily.py',
+    'wikiinterest': 'ensure_wiki_daily.py',
 }
 
 
@@ -55,6 +56,7 @@ def inspect(page, now=None):
         nodes = soup.select(f'#ta-{key}')
         text = nodes[0].get_text().strip() if len(nodes) == 1 else ''
         issues = []
+        delayed_wiki = False
         card = nodes[0].find_parent('section') if nodes else None
         if not card or str(card.get('data-slot')) != str(slot):
             issues.append('missing/duplicate/wrong slot')
@@ -73,14 +75,20 @@ def inspect(page, now=None):
         elif key == 'wikiinterest':
             due = 11
         if key in ('seoulcommerce', 'cryptofear', 'wikiinterest'):
-            from production_data_cards import card_metadata
+            from production_data_cards import card_metadata, stored_wiki_snapshot, WIKI_DELAY_NOTICE
             meta = card_metadata(key, text)
             try:
                 source = datetime.fromisoformat(meta['sourceDate']).date()
                 age = (today - source).days
+                if key == 'wikiinterest':
+                    age = (now.astimezone(timezone.utc).date() - source).days
                 previous_seoul = key == 'seoulcommerce' and '(전날 · KST)' in text
                 allowed = 3 if key == 'wikiinterest' else 1 if key == 'cryptofear' or previous_seoul else 0
-                if age < 0 or age > allowed or previous_seoul and (age != 1 or not meta['ready']):
+                delayed_wiki = (key == 'wikiinterest' and age > 3 and WIKI_DELAY_NOTICE in text
+                                and stored_wiki_snapshot(meta, now))
+                outside_window = age < 0 or age > allowed or key == 'wikiinterest' and age < 1
+                if ((outside_window and not delayed_wiki)
+                        or previous_seoul and (age != 1 or not meta['ready'])):
                     issues.append('source date outside allowed window')
             except (TypeError, ValueError):
                 issues.append('missing source clock')
@@ -124,7 +132,9 @@ def inspect(page, now=None):
             issues.append('coin top 10 incomplete')
         if key in ('realestate', 'world', 'finance', 'ai') and text.count('https://') < 2:
             issues.append('news links incomplete')
-        results.append(dict(slot=slot, key=key, status=('failed' if now.hour >= due else 'pending') if issues else 'ok',
+        results.append(dict(slot=slot, key=key, status=(('failed' if now.hour >= due else 'pending') if issues
+                                                       else 'delayed' if delayed_wiki else 'ok'),
+                            sourceDelayed=delayed_wiki,
                             issues=issues, sha256=hashlib.sha256(text.encode()).hexdigest()))
     if len(soup.select('section.card')) != 29:
         results[0]['status'] = 'failed'
