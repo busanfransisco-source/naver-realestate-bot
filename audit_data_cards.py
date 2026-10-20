@@ -8,6 +8,7 @@ from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 from production_data_cards import CACHE, KEYS, KST, load_contents, valid_card, daily_seoul_snapshot, stored_wiki_snapshot
+from gen_briefing import LIVE_KEYS
 
 BASE = 'https://busanfransisco-source.github.io/naver-realestate-bot/'
 
@@ -18,7 +19,7 @@ def assess(cache, page, public_cache, now):
     expected = load_contents(CACHE, now=now)
     result = {'checkedAtKst': now.isoformat(), 'expectedGeneratedAtKst': cache.get('generatedAtKst'),
               'publicGeneratedAtKst': public_cache.get('generatedAtKst'), 'cards': {}}
-    matched = len(soup.select('section.card')) == 29 and cache == public_cache
+    matched = len(soup.select('section.card')) == len(LIVE_KEYS) and cache == public_cache
     for key in KEYS:
         entry = cards.get(key, {})
         area = soup.select_one('#ta-' + key)

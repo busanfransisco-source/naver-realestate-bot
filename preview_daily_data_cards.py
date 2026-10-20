@@ -1,4 +1,4 @@
-"""Build a local 29-card preview; never replace the live 26-card briefing.
+"""Build a local 30-card preview; never replace the live briefing.
 
 All three cards use source dates and fail closed. Power is excluded.
 This script exports manual-share text but does not send messages.
@@ -88,7 +88,7 @@ def main():
     OUTPUT.parent.mkdir(exist_ok=True)
     contents = preview_contents()
     html = build_html(new_data_contents=contents)
-    rendered = "<!-- LOCAL PREVIEW ONLY: 29 CARDS, POWER EXCLUDED; DO NOT DEPLOY OR AUTO-SEND -->\n" + html
+    rendered = "<!-- LOCAL PREVIEW ONLY: 30 CARDS, POWER EXCLUDED; DO NOT DEPLOY OR AUTO-SEND -->\n" + html
     OUTPUT.write_text(rendered, encoding="utf-8")
     # Refresh the previously opened preview too, so it cannot retain the removed card.
     LEGACY_OUTPUT.write_text(rendered, encoding="utf-8")

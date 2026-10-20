@@ -14,11 +14,9 @@ from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
-from gen_briefing import KST, analysis_date, has_fetch_failure
+from gen_briefing import KST, LIVE_KEYS, analysis_date, has_fetch_failure
 
-KEYS = ('fortune weather shortnews subs trend fuelfx metalcoin books realestate world finance ai '
-        'daily19 daily20 daily21 daily22 daily23 daily24 transactions seoulcommerce cryptofear '
-        'wikiinterest analysis3 analysis4 analysis5 analysis2 analysis6 analysis1 analysis7').split()
+KEYS = LIVE_KEYS
 REPAIR = {
     'fortune': 'fortune_fetch.py', 'weather': 'weather_fetch.py',
     'shortnews': 'daum_news_fetch.py', 'subs': 'aptinfo_fetch.py',
@@ -28,6 +26,7 @@ REPAIR = {
     'finance': 'finance_news_fetch.py', 'ai': 'ai_news_fetch.py',
     'transactions': 'ensure_transactions_daily.py',
     'wikiinterest': 'ensure_wiki_daily.py',
+    'supplydemand': 'supply_demand.py',
 }
 
 
@@ -92,6 +91,12 @@ def inspect(page, now=None):
                     issues.append('source date outside allowed window')
             except (TypeError, ValueError):
                 issues.append('missing source clock')
+        elif key == 'supplydemand':
+            from supply_demand import read_snapshot, freshness_issues, load_digest
+            snapshot = read_snapshot()
+            issues.extend(freshness_issues(snapshot, now))
+            if text != load_digest(now=now):
+                issues.append('supply-demand body differs from validated cache')
         elif key == 'trend':
             # Weekly values may be unchanged; cache check age, not today's label.
             try:
@@ -136,9 +141,9 @@ def inspect(page, now=None):
                                                        else 'delayed' if delayed_wiki else 'ok'),
                             sourceDelayed=delayed_wiki,
                             issues=issues, sha256=hashlib.sha256(text.encode()).hexdigest()))
-    if len(soup.select('section.card')) != 29:
+    if len(soup.select('section.card')) != len(KEYS):
         results[0]['status'] = 'failed'
-        results[0]['issues'].append('page must contain exactly 29 cards')
+        results[0]['issues'].append(f'page must contain exactly {len(KEYS)} cards')
     return results
 
 
@@ -162,7 +167,7 @@ def main():
         rows = inspect(local.read_text(encoding='utf-8'))
     deployed = None
     if args.url:
-        # Actual public text must match all 29 local bodies, not just page HTTP 200.
+        # Actual public text must match all local bodies, not just page HTTP 200.
         for attempt in range(8):
             try:
                 response = requests.get(args.url, params={'health': time.time_ns()}, timeout=20)

@@ -11,11 +11,12 @@ class HealthTests(unittest.TestCase):
         return ''.join(f'<section class="card" data-slot="{i}"><textarea id="ta-{k}">2026-10-06\n' +
                        '자료 설명입니다. ' * 40 + '</textarea></section>' for i, k in enumerate(KEYS, 1))
 
-    def test_all_29_checked_and_partial_gold_rejected(self):
+    def test_all_30_checked_and_partial_gold_rejected(self):
         rows = inspect(self.page(), datetime(2026, 10, 6, 15, tzinfo=KST))
-        self.assertEqual(len(rows), 29)
-        self.assertEqual(rows[6]['status'], 'failed')
-        self.assertIn('missing required item: 국제 금', rows[6]['issues'])
+        self.assertEqual(len(rows), 30)
+        row = next(r for r in rows if r['key'] == 'metalcoin')
+        self.assertEqual(row['status'], 'failed')
+        self.assertIn('missing required item: 국제 금', row['issues'])
 
     def test_stale_analysis7_cannot_pass(self):
         page = self.page().replace('id="ta-analysis7">2026-10-06', 'id="ta-analysis7">2026-09-30')
@@ -25,15 +26,15 @@ class HealthTests(unittest.TestCase):
 
     def test_pending_before_collection_deadline(self):
         page = self.page().replace('id="ta-transactions">2026-10-06', 'id="ta-transactions">수집 중입니다')
-        self.assertEqual(inspect(page, datetime(2026, 10, 6, 6, tzinfo=KST))[18]['status'], 'pending')
+        self.assertEqual(inspect(page, datetime(2026, 10, 6, 6, tzinfo=KST))[KEYS.index('transactions')]['status'], 'pending')
 
     def test_missing_card_detected(self):
         rows = inspect(self.page().replace('ta-ai', 'ta-wrong'), datetime(2026, 10, 6, 15, tzinfo=KST))
-        self.assertIn('missing/duplicate/wrong slot', rows[11]['issues'])
+        self.assertIn('missing/duplicate/wrong slot', rows[KEYS.index('ai')]['issues'])
 
     def test_transaction_missing_is_failure_after_seven_not_noon(self):
         page = self.page().replace('id="ta-transactions">2026-10-06', 'id="ta-transactions">수집 중입니다')
-        row = inspect(page, datetime(2026, 10, 6, 7, 30, tzinfo=KST))[18]
+        row = inspect(page, datetime(2026, 10, 6, 7, 30, tzinfo=KST))[KEYS.index('transactions')]
         self.assertEqual(row['status'], 'failed')
 
     def test_workflows_gate_after_publish(self):
@@ -48,10 +49,10 @@ class HealthTests(unittest.TestCase):
         start = page.index('id="ta-seoulcommerce">')+len('id="ta-seoulcommerce">')
         end = page.index('</textarea>',start)
         page = page[:start]+body+page[end:]
-        row = inspect(page,datetime(2026,10,6,9,tzinfo=KST))[19]
+        row = inspect(page,datetime(2026,10,6,9,tzinfo=KST))[KEYS.index('seoulcommerce')]
         self.assertEqual(row['status'],'ok')
         page = page.replace('관찰 자료입니다.','미수집',1)
-        row = inspect(page,datetime(2026,10,6,9,tzinfo=KST))[19]
+        row = inspect(page,datetime(2026,10,6,9,tzinfo=KST))[KEYS.index('seoulcommerce')]
         self.assertEqual(row['status'],'failed')
 
 

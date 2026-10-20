@@ -15,7 +15,7 @@ class AuditTests(unittest.TestCase):
         cache = {'cards': entries, 'generatedAtKst': now.isoformat()}
         sections = [f'<section class="card" data-expires="{entry["expiresAtKst"]}"><textarea id="ta-seoulcommerce">{body}</textarea></section>']
         sections += [f'<section class="card"><textarea id="ta-{key}">{pending_body(key)}</textarea></section>' for key in KEYS[1:]]
-        sections += ['<section class="card"></section>'] * 26
+        sections += ['<section class="card"></section>'] * (len(audit.LIVE_KEYS) - len(KEYS))
         page = ''.join(sections) + '<script>refreshDataCardExpiry()</script>'
         expected = {key: pending_body(key) for key in KEYS}
         with patch.object(audit, 'load_contents', return_value=expected):

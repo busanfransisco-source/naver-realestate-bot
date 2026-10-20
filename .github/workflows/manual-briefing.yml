@@ -87,6 +87,11 @@ jobs:
         env:
           RONE_KEY: ${{ secrets.RONE_KEY }}
 
+      - name: Refresh apartment supply-demand indices
+        run: python supply_demand.py || echo "Supply-demand source unavailable; prior dated snapshot retained"
+        env:
+          RONE_KEY: ${{ secrets.RONE_KEY }}
+
       - name: Backstop economic reading interest
         run: python ensure_wiki_daily.py || echo "Wiki source delayed; dated previous content remains visible"
       - name: Backstop missing today Seoul snapshot during daytime
@@ -95,6 +100,8 @@ jobs:
           SEOUL_OPEN_DATA_KEY: ${{ secrets.SEOUL_OPEN_DATA_KEY }}
 
       - name: Regenerate pages and commit everything
+        env:
+          RONE_KEY: ${{ secrets.RONE_KEY }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -112,6 +119,7 @@ jobs:
           git add weather.txt weather-*.txt fortune.txt fortune-*.txt realestate.txt realestate-*.txt latest.json latest-*.json index.html hub.html briefing.html last-refresh.txt
           git add realestate-analysis-candidates.json || true
           git add data-cards.json seoul-time-snapshots.json
+          git add supply-demand-cache.json
           git commit -m "Manual briefing refresh" --allow-empty
           git pull --rebase origin main
           git push

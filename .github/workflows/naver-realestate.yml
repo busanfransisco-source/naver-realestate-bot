@@ -43,11 +43,17 @@ jobs:
         env:
           RONE_KEY: ${{ secrets.RONE_KEY }}
 
+      - name: Refresh apartment supply-demand indices
+        run: python supply_demand.py || echo "Supply-demand source unavailable; prior dated snapshot retained"
+        env:
+          RONE_KEY: ${{ secrets.RONE_KEY }}
+
       - name: Commit and push latest.json
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add latest.json latest-*.json realestate.txt realestate-*.txt
+          git add supply-demand-cache.json
           git add shortnews.txt shortnews-*.txt || true
           git add subs.txt subs-*.txt trend.txt trend-*.txt neonet-trend-cache.json || true
           git add fuelfx.txt fuelfx-*.txt metalcoin.txt metalcoin-*.txt books.txt books-*.txt fx-cache.json fuel-cache.json || true
@@ -59,10 +65,13 @@ jobs:
           git push
 
       - name: Generate briefing.html (원터치 복사 페이지)
+        env:
+          RONE_KEY: ${{ secrets.RONE_KEY }}
         run: |
           python gen_briefing.py
           python briefing_health.py --repair || echo "Incomplete cards will fail the public gate"
           git add data-cards.json
+          git add supply-demand-cache.json
           git add transactions.txt transactions-*.txt transactions-state.json
           git add shortnews*.txt world*.txt finance*.txt ai*.txt weather*.txt fortune*.txt realestate*.txt latest*.json subs*.txt trend*.txt neonet-trend-cache.json fuelfx*.txt metalcoin*.txt books*.txt fx-cache.json fuel-cache.json
           git add briefing.html

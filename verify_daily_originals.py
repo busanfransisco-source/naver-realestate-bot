@@ -1,17 +1,18 @@
-"""Read-only proof that public boxes 13..18 contain the dated original packet."""
+"""Read-only proof that stable daily IDs contain the dated original packet."""
 import argparse
 import json
 from datetime import datetime, date
 import requests
 from bs4 import BeautifulSoup
-from gen_briefing import KST
+from gen_briefing import KST, LIVE_KEYS
 from daily_rotation import CONTENT_DIR, build_rotating_sections, validate_packet
 
 def verify(page, today):
     packet = json.loads((CONTENT_DIR / (today.isoformat()+'.json')).read_text(encoding='utf-8'))
     validate_packet(packet, today)
     soup = BeautifulSoup(page, 'html.parser')
-    for number, (key, label, expected) in enumerate(build_rotating_sections(today), 13):
+    for key, label, expected in build_rotating_sections(today):
+        number = LIVE_KEYS.index(key) + 1
         matches = soup.select('#ta-'+key)
         if len(matches) != 1 or matches[0].get_text() != expected:
             raise ValueError(f'Box {number}: public original manuscript mismatch')
@@ -35,4 +36,4 @@ if __name__ == '__main__':
     response.raise_for_status()
     response.encoding = 'utf-8'
     verify(response.text, today)
-    print('PASS: public boxes 13..18 match six verified originals for '+today.isoformat())
+    print('PASS: public daily IDs match six verified originals for '+today.isoformat())

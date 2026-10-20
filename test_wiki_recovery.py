@@ -103,7 +103,7 @@ class WikiRecoveryTests(unittest.TestCase):
         entry = dict(self.old, ready=False)
         body = cards.wiki_display_body(entry, self.now)
         page = self.render(body)
-        row = inspect(page, self.now)[21]
+        row = next(r for r in inspect(page, self.now) if r['key'] == 'wikiinterest')
         self.assertEqual(row['status'], 'delayed')
         self.assertTrue(row['sourceDelayed'])
         self.assertFalse(row['issues'])

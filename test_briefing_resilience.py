@@ -11,19 +11,19 @@ import market_fetch
 
 
 class BriefingResilienceTests(unittest.TestCase):
-    def test_29_card_preview_keeps_policy_analyses_last(self):
+    def test_30_card_preview_keeps_policy_analyses_last(self):
         preview = gen_briefing.build_html(new_data_contents={
             key: f"{label}\n원자료 기준일: 2026-10-01"
             for key, label in gen_briefing.NEW_DATA_SECTIONS
         })
-        self.assertEqual(preview.count('<section class="card"'), 29)
+        self.assertEqual(preview.count('<section class="card"'), 30)
         self.assertNotIn('id="ta-kpxpower"', preview)
-        for number, (key, label) in enumerate(gen_briefing.NEW_DATA_SECTIONS, start=20):
+        for number, (key, label) in enumerate(gen_briefing.NEW_DATA_SECTIONS, start=21):
             self.assertIn(f'<h2>{number}. {label}</h2>', preview)
             self.assertIn(f'id="ta-{key}"', preview)
         for number, key in enumerate(
             ('analysis3', 'analysis4', 'analysis5', 'analysis2', 'analysis6', 'analysis1', 'analysis7'),
-            start=23,
+            start=24,
         ):
             self.assertIn(f'data-slot="{number}"', preview)
             self.assertIn(f'id="ta-{key}"', preview)
@@ -75,12 +75,13 @@ class BriefingResilienceTests(unittest.TestCase):
             finally:
                 os.chdir(previous)
 
-    def test_new_policy_box_is_appended_without_renumbering_existing_boxes(self):
+    def test_new_supply_box_numbers_match_display_order(self):
         generated = gen_briefing.build_html()
-        self.assertIn('<h2>13. ⭕ 오늘의 부동산 OX</h2>', generated)
-        self.assertIn('<h2>18. 📦 이사 준비 한 가지</h2>', generated)
-        self.assertIn('<h2>19. 🏢 전국 신규 등록 실거래가</h2>', generated)
-        self.assertIn('<h2>26. 📰 부동산 불장의 진실 정책분석</h2>', generated)
+        self.assertIn('<h2>6. ⚖️ 부동산 주간·월간 수급지수</h2>', generated)
+        self.assertIn('<h2>14. ⭕ 오늘의 부동산 OX</h2>', generated)
+        self.assertIn('<h2>19. 📦 이사 준비 한 가지</h2>', generated)
+        self.assertIn('<h2>20. 🏢 전국 신규 등록 실거래가</h2>', generated)
+        self.assertIn('<h2>27. 📰 부동산 불장의 진실 정책분석</h2>', generated)
         self.assertIn('id="ta-analysis7"', generated)
 
     def test_market_workflows_commit_fuel_cache(self):

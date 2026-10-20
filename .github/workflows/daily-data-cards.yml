@@ -1,4 +1,4 @@
-name: Refresh three daily data cards
+name: Refresh daily data cards and housing supply-demand
 on:
   workflow_dispatch:
     inputs:
@@ -6,7 +6,7 @@ on:
         description: Card to refresh
         type: choice
         default: seoulcommerce
-        options: [seoulcommerce, cryptofear, wikiinterest]
+        options: [seoulcommerce, cryptofear, wikiinterest, supplydemand]
   schedule:
     # KST crypto09:15 / wiki10:15. Seoul uses its independent early-start collector.
     - cron: '15 0 * * *'
@@ -31,6 +31,7 @@ jobs:
           python-version: '3.11'
       - run: pip install -r requirements.txt
       - name: Collect fresh source snapshots (no power calls)
+        if: inputs.card != 'supplydemand'
         id: collect
         continue-on-error: true
         run: |
@@ -48,21 +49,30 @@ jobs:
           REFRESH_CARD: ${{ inputs.card || (github.event.schedule == '15 0 * * *' && 'cryptofear') || (github.event.schedule == '15 1 * * *' && 'wikiinterest') || 'seoulcommerce' }}
           SEOUL_OPEN_DATA_KEY: ${{ secrets.SEOUL_OPEN_DATA_KEY }}
       - name: Backstop economic reading interest during daytime
+        if: inputs.card != 'supplydemand'
         run: python ensure_wiki_daily.py || echo "Wiki source delayed; dated previous content remains visible"
       - name: Backstop missing today Seoul snapshot during daytime
+        if: inputs.card != 'supplydemand'
         run: python ensure_seoul_daily.py || echo "Seoul source still unavailable; dated snapshot retained"
         env:
           SEOUL_OPEN_DATA_KEY: ${{ secrets.SEOUL_OPEN_DATA_KEY }}
-      - name: Publish cache and regenerate all 29 cards
+      - name: Refresh apartment supply-demand indices
+        id: supply
+        continue-on-error: true
+        run: python supply_demand.py ${{ inputs.card == 'supplydemand' && '--force' || '' }}
+        env:
+          RONE_KEY: ${{ secrets.RONE_KEY }}
+      - name: Publish caches and regenerate all 30 cards
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
           git add data-cards.json seoul-time-snapshots.json
-          git diff --cached --quiet || git commit -m 'Refresh three data card source snapshots'
+          git add supply-demand-cache.json
+          git diff --cached --quiet || git commit -m 'Refresh data-card and housing source snapshots'
           git pull --rebase origin main
           python gen_briefing.py
           git add briefing.html
-          git diff --cached --quiet || git commit -m 'Regenerate 29-card briefing from latest sources'
+          git diff --cached --quiet || git commit -m 'Regenerate 30-card briefing from latest sources'
           git push origin HEAD:main
       - name: Verify public deployment and remaining source lifetime
         run: python audit_data_cards.py
@@ -76,7 +86,7 @@ jobs:
           path: briefing-health.json
           retention-days: 7
       - name: Fail visibly when the requested source was not refreshed
-        if: steps.collect.outcome == 'failure'
+        if: steps.collect.outcome == 'failure' || (inputs.card == 'supplydemand' && steps.supply.outcome == 'failure')
         run: |
           echo 'Requested source was not refreshed. Prior dated snapshot was preserved, not reported as new data.'
           exit 1

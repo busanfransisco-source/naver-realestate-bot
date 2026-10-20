@@ -51,7 +51,7 @@ class ProductionDataCardsTests(unittest.TestCase):
             self.assertEqual(cards.load_contents(path, now=self.now)['seoulcommerce'], self.seoul)
             self.assertEqual(cards.load_contents(path, now=self.now + timedelta(hours=1))['seoulcommerce'], self.seoul)
 
-    def test_production_main_always_requests_29_cards(self):
+    def test_production_main_always_requests_all_data_cards(self):
         with patch('production_data_cards.load_contents', return_value={key: cards.pending_body(key) for key in cards.KEYS}), patch('gen_briefing.build_html', return_value='rendered') as build, patch('builtins.open', unittest.mock.mock_open()):
             gen_briefing.main()
         self.assertEqual(set(build.call_args.kwargs['new_data_contents']), set(cards.KEYS))

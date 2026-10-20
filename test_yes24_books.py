@@ -134,9 +134,9 @@ class Yes24BooksTests(unittest.TestCase):
         end = page.index('</textarea>', begin)
         text = books.render(self.ranking, self.now)
         page = page[:begin] + text + page[end:]
-        row = inspect(page, self.now)[7]
+        row = next(r for r in inspect(page, self.now) if r['key'] == 'books')
         self.assertEqual(row['status'], 'ok')
-        row = inspect(page, self.now + books.timedelta(days=8))[7]
+        row = next(r for r in inspect(page, self.now + books.timedelta(days=8)) if r['key'] == 'books')
         self.assertIn('YES24 source week is stale', row['issues'])
 
 
