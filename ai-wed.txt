@@ -1,31 +1,31 @@
-🤖 26년 10월 14일 수요일 AI 뉴스
+🤖 26년 10월 21일 수요일 AI 뉴스
 
-[게시판] 롯데이노베이트, CMC그룹과 베트남 데이터센터 사업 확장 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=216266
+[게시판] NC AI, 바르코 3D·사운드 50% 할인 프로모션 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=216455
 
-Arm, 퀄컴과의 라이선스 계약 위반 소송서 패소...손해배상금은 2달러에 불과
-https://www.aitimes.com/news/articleView.html?idxno=216263
+엘리스그룹, AI 인프라 상장 랠리 가세.. 코어위브 악재 돌파할까
+https://www.aitimes.com/news/articleView.html?idxno=216452
 
-엔비디아, 유럽 AI 생태계 공략 본격화…프랑스 스타트업 4곳 지분 인수
-https://www.aitimes.com/news/articleView.html?idxno=216261
+클로드 코드, 맥에 숨은 암호화폐 채굴 악성코드 포착...CPU 사용률 1175% 치솟아
+https://www.aitimes.com/news/articleView.html?idxno=216451
 
-Z.ai, 법률 특화 모델 'GLM-리걸' 출시...벤치마크서 '페이블 5' 제치고 1위
-https://www.aitimes.com/news/articleView.html?idxno=216260
+스카이폴AI, CAD·BIM 3D 설계 자동화 월드모델 ‘스카이-001’ 공개
+https://www.aitimes.com/news/articleView.html?idxno=216450
 
-구글, AI '바이브 코딩' 앱 비공개 실행 기능 도입…"개발자 등록 필요 없어"
-https://www.aitimes.com/news/articleView.html?idxno=216259
+AI 에이전트가 뚫은 기업 100여곳…660만원으로 '해킹 대중화' 열려
+https://www.aitimes.com/news/articleView.html?idxno=216448
 
-스페이스XSI, X·그록·커서 통합한 월 구독 패키지 출시
-https://www.aitimes.com/news/articleView.html?idxno=216258
+플리토, 3분기 누적 창사이래 최대 실적 실현...영업이익률 50% 돌파
+https://www.aitimes.com/news/articleView.html?idxno=216447
 
-MS, 애저 사업부 경영진에 '20% 비용 절감' 지시..."호황에도 투자비 부담"
-https://www.aitimes.com/news/articleView.html?idxno=216257
+엔스케일, 앤트로픽과 추가 60조 규모 컴퓨팅 계약 협상…총 120조 육박
+https://www.aitimes.com/news/articleView.html?idxno=216446
 
-오픈AI, 사이버보안 강화 위해 전문 스타트업 인수 추진
-https://www.aitimes.com/news/articleView.html?idxno=216256
+미 국방차관 "AI 기업 협조 안 하면 수출 통제 직접 가할 것"
+https://www.aitimes.com/news/articleView.html?idxno=216445
 
-앤트로픽, 국방부 '공급망 위험' 지정 불복…항소법원에 재심 청구
-https://www.aitimes.com/news/articleView.html?idxno=216255
+텐스토렌트, 8조 가치로 대규모 투자 유치..."인수 대신 독자 노선"
+https://www.aitimes.com/news/articleView.html?idxno=216444
 
-에픽게임즈, 'AI 우선' 제작 체계 도입..."수작업 더 이상 없어"
-https://www.aitimes.com/news/articleView.html?idxno=216254
+애플, 28일 신제품 행사서 첫 터치스크린 맥북 프로 공개
+https://www.aitimes.com/news/articleView.html?idxno=216442
