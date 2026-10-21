@@ -1,0 +1,105 @@
+name: Prepare 06-20 morning briefing in cloud
+on:
+  workflow_dispatch:
+    inputs:
+      allow_late_test:
+        description: Collect outside the dawn window for a no-message cloud test
+        type: boolean
+        default: false
+  schedule:
+    # KST 05:20, 05:45, 06:00, 06:10. External clock dispatch is the primary
+    # trigger; GitHub schedule remains a best-effort independent backup.
+    - cron: '20,45 20 * * *'
+    - cron: '0,10 21 * * *'
+permissions:
+  contents: write
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    concurrency:
+      group: morning-source-collection
+      cancel-in-progress: false
+    outputs:
+      eligible: ${{ steps.window.outputs.eligible }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Check actual KST deadline, not nominal cron time
+        id: window
+        env:
+          ALLOW_LATE: ${{ inputs.allow_late_test }}
+        run: |
+          python - <<'PY'
+          import os
+          from datetime import datetime, timedelta, timezone
+          now = datetime.now(timezone(timedelta(hours=9)))
+          eligible = os.environ.get('ALLOW_LATE') == 'true' or (5, 0) <= (now.hour, now.minute) <= (6, 15)
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as stream:
+              stream.write('eligible=' + str(eligible).lower() + '\n')
+          print('Morning collection eligible:', eligible, 'actual KST:', now.isoformat())
+          if not eligible:
+              print('Late automatic run skipped; do not relabel this as on-time preparation.')
+          PY
+      - uses: actions/setup-python@v5
+        if: steps.window.outputs.eligible == 'true'
+        with:
+          python-version: '3.11'
+      - name: Install collection dependencies
+        if: steps.window.outputs.eligible == 'true'
+        run: pip install -r requirements.txt
+      - name: Collect and validate only morning boxes 1 to 9
+        if: steps.window.outputs.eligible == 'true'
+        run: python morning_cloud_prepare.py --collect --output morning-briefing-ready.json --report tmp/morning-health.json
+      - name: Save validated publication bundle
+        if: steps.window.outputs.eligible == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: morning-ready-source
+          path: |
+            morning-briefing-ready.json
+            neonet-trend-cache.json
+          if-no-files-found: error
+          retention-days: 3
+      - name: Save preparation diagnostics
+        if: always() && steps.window.outputs.eligible == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: morning-preparation-health
+          path: tmp/morning-health.json
+          retention-days: 7
+  publish:
+    needs: collect
+    if: needs.collect.outputs.eligible == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    # Only publication shares the existing writer lock, not source collection.
+    concurrency:
+      group: manual-briefing
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: morning-ready-source
+          path: tmp/morning-ready-source
+      - name: Apply verified bundle to latest sources and publish website
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git pull --ff-only origin main
+          python publish_morning_ready.py --snapshot tmp/morning-ready-source/morning-briefing-ready.json --trend-cache tmp/morning-ready-source/neonet-trend-cache.json
+          python gen_briefing.py
+          git add morning-briefing-ready.json neonet-trend-cache.json briefing.html
+          git add fortune*.txt weather*.txt shortnews*.txt subs*.txt trend*.txt fuelfx*.txt metalcoin*.txt books*.txt realestate*.txt
+          git diff --cached --quiet || git commit -m 'Publish verified 06-20 cloud morning briefing'
+          git push origin HEAD:main
+      - name: Verify published morning source and page
+        run: python verify_morning_publication.py
