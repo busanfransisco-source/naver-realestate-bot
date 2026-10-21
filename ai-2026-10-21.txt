@@ -1,5 +1,8 @@
 🤖 26년 10월 21일 수요일 AI 뉴스
 
+얼굴 나이 측정 넘어 암 환자 생존 위험 예측…하버드 연구진, 사진 분석 AI 개발
+https://www.aitimes.com/news/articleView.html?idxno=216498
+
 시냅틱스, 구글 '코랄' 기반 엣지 AI 칩 공개...웨어러블·산업용 기기 겨냥
 https://www.aitimes.com/news/articleView.html?idxno=216493
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216481
 
 메타 '뮤즈', 출시 40일 만에 미국 다운로드 1000만건 돌파...역대 12번째 기록
 https://www.aitimes.com/news/articleView.html?idxno=216479
-
-스페인, 올리브밭에 3.65MWp 태양광…농사 유지하며 전력 생산 추진
-https://www.aitimes.com/news/articleView.html?idxno=216478
