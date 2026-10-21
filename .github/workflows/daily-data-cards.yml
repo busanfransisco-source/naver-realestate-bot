@@ -56,12 +56,10 @@ jobs:
         run: python ensure_seoul_daily.py || echo "Seoul source still unavailable; dated snapshot retained"
         env:
           SEOUL_OPEN_DATA_KEY: ${{ secrets.SEOUL_OPEN_DATA_KEY }}
-      - name: Refresh apartment supply-demand indices
+      - name: Refresh KB buying sentiment and jeonse supply-demand indices
         id: supply
         continue-on-error: true
         run: python supply_demand.py ${{ inputs.card == 'supplydemand' && '--force' || '' }}
-        env:
-          RONE_KEY: ${{ secrets.RONE_KEY }}
       - name: Publish caches and regenerate all 30 cards
         run: |
           git config user.name 'github-actions[bot]'

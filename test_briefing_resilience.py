@@ -77,7 +77,7 @@ class BriefingResilienceTests(unittest.TestCase):
 
     def test_new_supply_box_numbers_match_display_order(self):
         generated = gen_briefing.build_html()
-        self.assertIn('<h2>30. ⚖️ 부동산 주간·월간 수급지수</h2>', generated)
+        self.assertIn('<h2>30. ⚖️ KB부동산 매매·전세 시장심리</h2>', generated)
         self.assertIn('<h2>13. ⭕ 오늘의 부동산 OX</h2>', generated)
         self.assertIn('<h2>18. 📦 이사 준비 한 가지</h2>', generated)
         self.assertIn('<h2>19. 🏢 전국 신규 등록 실거래가</h2>', generated)
