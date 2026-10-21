@@ -170,13 +170,13 @@ NEW_DATA_SECTIONS = [
 ]
 
 # One stable-ID order for the renderer and health/deployment checks.
-LIVE_KEYS = ([key for key, _, _ in SECTIONS if not key.startswith('analysis')]
+LIVE_KEYS = ([key for key, _, _ in SECTIONS if not key.startswith('analysis') and key != 'supplydemand']
              + [f'daily{n}' for n in range(19, 25)] + ['transactions']
              + [key for key, _ in NEW_DATA_SECTIONS]
-             + [key for key, _, _ in SECTIONS if key.startswith('analysis')] + ['analysis7'])
+             + [key for key, _, _ in SECTIONS if key.startswith('analysis')] + ['analysis7', 'supplydemand'])
 
 # The deployed sender verifies each old heading number against its stable ID.
-# Keep all 1..29 identities intact; new 30 is displayed beside weekly prices.
+# Keep all 1..29 identities intact; new 30 follows 29 at the bottom.
 SLOT_BY_KEY = {key: number for number, key in enumerate(
     [key for key in LIVE_KEYS if key != 'supplydemand'], 1)}
 SLOT_BY_KEY['supplydemand'] = 30
@@ -334,6 +334,7 @@ def build_html(*, new_data_contents=None):
         ordered.extend((key, label, new_data_contents[key]) for key, label in NEW_DATA_SECTIONS)
     ordered.extend(section for section in core_sections if section[0].startswith('analysis'))
     ordered.append(("analysis7", "📰 부동산 불장의 진실 정책분석", read_policy_text("analysis7", now)))
+    ordered.sort(key=lambda section: SLOT_BY_KEY[section[0]])
     rendered_sections = [(SLOT_BY_KEY[section[0]], *section) for section in ordered]
     for number, key, label, content in rendered_sections:
         if key == 'seoulcommerce' and '(오늘 임시 배포 · KST)' in content:

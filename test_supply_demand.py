@@ -233,17 +233,24 @@ class SupplyDemandTests(unittest.TestCase):
         soup = BeautifulSoup(page, 'html.parser')
         sections = soup.select('section.card')
         self.assertEqual([s['data-slot'] for s in sections], [str(gen_briefing.SLOT_BY_KEY[k]) for k in gen_briefing.LIVE_KEYS])
-        self.assertEqual(sorted(int(s['data-slot']) for s in sections), list(range(1, 31)))
+        self.assertEqual([int(s['data-slot']) for s in sections], list(range(1, 31)))
         self.assertEqual([s.select_one('textarea')['id'][3:] for s in sections], gen_briefing.LIVE_KEYS)
-        self.assertEqual(sections[5].select_one('textarea')['id'], 'ta-supplydemand')
-        self.assertEqual(sections[5]['data-slot'], '30')
-        self.assertEqual(sections[19].select_one('textarea')['id'], 'ta-transactions')
-        self.assertEqual(sections[29].select_one('textarea')['id'], 'ta-analysis7')
-        self.assertEqual(sections[19]['data-slot'], '19')
-        self.assertEqual(sections[29]['data-slot'], '29')
+        self.assertEqual(sections[-1].select_one('textarea')['id'], 'ta-supplydemand')
+        self.assertEqual(sections[-1]['data-slot'], '30')
+        self.assertEqual(sections[18].select_one('textarea')['id'], 'ta-transactions')
+        self.assertEqual(sections[28].select_one('textarea')['id'], 'ta-analysis7')
+        self.assertEqual(sections[18]['data-slot'], '19')
+        self.assertEqual(sections[28]['data-slot'], '29')
         self.assertEqual(soup.select_one('#ta-supplydemand').get_text(), body)
         copied = json.loads(re.search(r'window.__content_supplydemand = (.*?);</script>', page).group(1))
         self.assertEqual(copied, body)
+
+    def test_supply_demand_stays_last_in_core_layout_too(self):
+        soup = BeautifulSoup(gen_briefing.build_html(), 'html.parser')
+        sections = soup.select('section.card')
+        self.assertEqual(sections[-1].select_one('textarea')['id'], 'ta-supplydemand')
+        numbers = [int(section['data-slot']) for section in sections]
+        self.assertEqual(numbers, sorted(numbers))
 
     def test_health_checks_source_and_actual_body(self):
         from briefing_health import inspect, REPAIR

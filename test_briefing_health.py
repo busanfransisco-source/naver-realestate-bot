@@ -21,7 +21,7 @@ class HealthTests(unittest.TestCase):
 
     def test_stale_analysis7_cannot_pass(self):
         page = self.page().replace('id="ta-analysis7">2026-10-06', 'id="ta-analysis7">2026-09-30')
-        row = inspect(page, datetime(2026, 10, 6, 15, tzinfo=KST))[-1]
+        row = next(row for row in inspect(page, datetime(2026, 10, 6, 15, tzinfo=KST)) if row['key'] == 'analysis7')
         self.assertEqual(row['status'], 'failed')
         self.assertIn('not today material', row['issues'])
 
