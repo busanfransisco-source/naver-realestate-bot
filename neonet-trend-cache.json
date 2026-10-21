@@ -1,99 +1,99 @@
 {
   "schemaVersion": 1,
   "sourceUrl": "https://www.neonet.co.kr/novo-rebank/view/market_price/RegionMarketPrice.neo",
-  "checkedAtKst": "2026-10-21T23:54:57.398463+09:00",
+  "checkedAtKst": "2026-10-22T00:56:52.548764+09:00",
   "data": {
     "national": {
-      "sale": "0.11",
-      "salePrice": 1889,
-      "jeonse": "0.15",
-      "jeonsePrice": 1057
+      "sale": "0.12",
+      "salePrice": 1891,
+      "jeonse": "0.14",
+      "jeonsePrice": 1059
     },
     "regions": [
       {
         "region": "서울특별시",
-        "sale": "0.11",
-        "jeonse": "0.21"
+        "sale": "0.07",
+        "jeonse": "0.13"
       },
       {
         "region": "신도시",
-        "sale": "0.07",
-        "jeonse": "0.07"
+        "sale": "0.22",
+        "jeonse": "0.10"
       },
       {
         "region": "경기도",
-        "sale": "0.23",
+        "sale": "0.32",
         "jeonse": "0.23"
       },
       {
         "region": "인천광역시",
-        "sale": "0.02",
-        "jeonse": "0.03"
+        "sale": "0.05",
+        "jeonse": "0.07"
       },
       {
         "region": "부산광역시",
-        "sale": "0.04",
-        "jeonse": "-0.04"
+        "sale": "-0.01",
+        "jeonse": "0.10"
       },
       {
         "region": "대구광역시",
-        "sale": "0.01",
-        "jeonse": "0.01"
+        "sale": "-0.07",
+        "jeonse": "0.02"
       },
       {
         "region": "전남광주통합특별시",
-        "sale": null,
+        "sale": "0.14",
         "jeonse": "0.09"
       },
       {
         "region": "대전광역시",
-        "sale": "0.07",
-        "jeonse": "0.02"
+        "sale": "-0.06",
+        "jeonse": "-0.02"
       },
       {
         "region": "울산광역시",
-        "sale": "0.09",
-        "jeonse": "0.01"
+        "sale": "0.44",
+        "jeonse": "0.57"
       },
       {
         "region": "세종특별자치시",
-        "sale": "-0.01",
-        "jeonse": "0.05"
+        "sale": "-0.02",
+        "jeonse": "0.16"
       },
       {
         "region": "경상남도",
-        "sale": null,
+        "sale": "0.02",
         "jeonse": "0.01"
       },
       {
         "region": "경상북도",
-        "sale": "-0.02",
-        "jeonse": "-0.03"
+        "sale": "0.03",
+        "jeonse": "0.05"
       },
       {
         "region": "전북도",
-        "sale": "0.08",
-        "jeonse": "0.10"
+        "sale": "-0.12",
+        "jeonse": "-0.14"
       },
       {
         "region": "충청남도",
-        "sale": "-0.06",
-        "jeonse": "0.17"
+        "sale": "0.07",
+        "jeonse": "0.36"
       },
       {
         "region": "충청북도",
-        "sale": "-0.07",
-        "jeonse": "-0.06"
+        "sale": "0.04",
+        "jeonse": "0.03"
       },
       {
         "region": "강원도",
-        "sale": null,
-        "jeonse": "-0.02"
+        "sale": "-0.04",
+        "jeonse": null
       },
       {
         "region": "제주특별자치도",
         "sale": null,
-        "jeonse": "-0.02"
+        "jeonse": null
       }
     ]
   }

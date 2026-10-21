@@ -1,0 +1,31 @@
+🤖 26년 10월 22일 목요일 AI 뉴스
+
+얼굴 나이 측정 넘어 암 환자 생존 위험 예측…하버드 연구진, 사진 분석 AI 개발
+https://www.aitimes.com/news/articleView.html?idxno=216498
+
+시냅틱스, 구글 '코랄' 기반 엣지 AI 칩 공개...웨어러블·산업용 기기 겨냥
+https://www.aitimes.com/news/articleView.html?idxno=216493
+
+“식물 전기 신호로 건강 상태 읽는다”…‘식물 AI’ 봄바딜 공개
+https://www.aitimes.com/news/articleView.html?idxno=216490
+
+[게시판] 플렉스, 한국MS와 기업용 AI 협력 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=216489
+
+fal, '시댄스 2.5'보다 22배 빠른 비디오 모델 '플럭스 3 맥스' 출시
+https://www.aitimes.com/news/articleView.html?idxno=216487
+
+오픈AI, 신약 개발 관리 플랫폼 '오케스트라 바이오' 인수
+https://www.aitimes.com/news/articleView.html?idxno=216485
+
+이스트소프트, 제주국제자유도시개발센터 ‘사내 생성 AI 언어모델 구축 사업’ 수주
+https://www.aitimes.com/news/articleView.html?idxno=216484
+
+인셉션, 최고 성능 dLLM '머큐리 3' 공개..."오픈AI·앤트로픽 맞먹어"
+https://www.aitimes.com/news/articleView.html?idxno=216483
+
+메타, '뮤즈' 학습한 데이터센터 공개…GPU 100만까지 늘린다
+https://www.aitimes.com/news/articleView.html?idxno=216481
+
+메타 '뮤즈', 출시 40일 만에 미국 다운로드 1000만건 돌파...역대 12번째 기록
+https://www.aitimes.com/news/articleView.html?idxno=216479
