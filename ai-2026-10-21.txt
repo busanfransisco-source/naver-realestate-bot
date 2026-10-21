@@ -1,5 +1,26 @@
 🤖 26년 10월 21일 수요일 AI 뉴스
 
+오픈AI, 앤트로픽 IPO 전 투자 유치 서둘러…"투자금 선점 나서"
+https://www.aitimes.com/news/articleView.html?idxno=216472
+
+AGI 선점해 경쟁사 GPU까지 파괴…알트먼 “끔찍한 시나리오”
+https://www.aitimes.com/news/articleView.html?idxno=216469
+
+셀렉트스타, 시스코와 AI 신뢰성 검증 협력 추진
+https://www.aitimes.com/news/articleView.html?idxno=216465
+
+"고객센터 응대부터 영업 전화까지"...채널톡, 음성 AI 상담 '보이스 알프' 출시
+https://www.aitimes.com/news/articleView.html?idxno=216464
+
+네이버 D2SF, 온디바이스 AI 스타트업 트레이스위브에 투자
+https://www.aitimes.com/news/articleView.html?idxno=216461
+
+머스크, 스페이스X·테슬라 합병 논의 첫 확인…양사 특별위원회 구성
+https://www.aitimes.com/news/articleView.html?idxno=216460
+
+컴퓨터 유즈 시대 AI의 '눈'...카카오, 비전 인코더 2종 오픈소스 공개
+https://www.aitimes.com/news/articleView.html?idxno=216459
+
 [게시판] NC AI, 바르코 3D·사운드 50% 할인 프로모션 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=216455
 
@@ -8,24 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216452
 
 클로드 코드, 맥에 숨은 암호화폐 채굴 악성코드 포착...CPU 사용률 1175% 치솟아
 https://www.aitimes.com/news/articleView.html?idxno=216451
-
-스카이폴AI, CAD·BIM 3D 설계 자동화 월드모델 ‘스카이-001’ 공개
-https://www.aitimes.com/news/articleView.html?idxno=216450
-
-AI 에이전트가 뚫은 기업 100여곳…660만원으로 '해킹 대중화' 열려
-https://www.aitimes.com/news/articleView.html?idxno=216448
-
-플리토, 3분기 누적 창사이래 최대 실적 실현...영업이익률 50% 돌파
-https://www.aitimes.com/news/articleView.html?idxno=216447
-
-엔스케일, 앤트로픽과 추가 60조 규모 컴퓨팅 계약 협상…총 120조 육박
-https://www.aitimes.com/news/articleView.html?idxno=216446
-
-미 국방차관 "AI 기업 협조 안 하면 수출 통제 직접 가할 것"
-https://www.aitimes.com/news/articleView.html?idxno=216445
-
-텐스토렌트, 8조 가치로 대규모 투자 유치..."인수 대신 독자 노선"
-https://www.aitimes.com/news/articleView.html?idxno=216444
-
-애플, 28일 신제품 행사서 첫 터치스크린 맥북 프로 공개
-https://www.aitimes.com/news/articleView.html?idxno=216442
