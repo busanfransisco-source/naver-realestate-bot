@@ -1,5 +1,11 @@
 🤖 26년 10월 22일 목요일 AI 뉴스
 
+오픈AI, 구글 클라우드서 최신 모델 판매…3대 클라우드 모두 진출
+https://www.aitimes.com/news/articleView.html?idxno=216500
+
+웹사이트 70% 쓰는 PHP서 AI가 결함 발견…각국 정부 사이트 중단
+https://www.aitimes.com/news/articleView.html?idxno=216499
+
 얼굴 나이 측정 넘어 암 환자 생존 위험 예측…하버드 연구진, 사진 분석 AI 개발
 https://www.aitimes.com/news/articleView.html?idxno=216498
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216484
 
 인셉션, 최고 성능 dLLM '머큐리 3' 공개..."오픈AI·앤트로픽 맞먹어"
 https://www.aitimes.com/news/articleView.html?idxno=216483
-
-메타, '뮤즈' 학습한 데이터센터 공개…GPU 100만까지 늘린다
-https://www.aitimes.com/news/articleView.html?idxno=216481
-
-메타 '뮤즈', 출시 40일 만에 미국 다운로드 1000만건 돌파...역대 12번째 기록
-https://www.aitimes.com/news/articleView.html?idxno=216479
