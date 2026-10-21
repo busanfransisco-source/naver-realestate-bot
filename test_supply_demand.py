@@ -164,6 +164,14 @@ class SupplyDemandTests(unittest.TestCase):
         self.assertEqual(sd.delta_text(-0.001), '0.01p 미만 하락')
         self.assertNotIn('-0.00', sd.delta_text(-0.001))
 
+    def test_reading_guide_contains_only_scale_baseline_and_units(self):
+        body = sd.format_digest(snapshot(), NOW)
+        guide = body.split('📖 읽는 법\n', 1)[1].split('\n\n출처:', 1)[0]
+        self.assertEqual(guide, '지수 범위: 0~200 · 기준: 100\n100 초과: 수요 우세\n'
+                               '100 미만: 공급 우세\n100: 수요·공급 균형\n증감 단위: 포인트(p)')
+        for removed in ('뜻은 아닙니다', '다릅니다', '가격 전망', '실제 입주물량'):
+            self.assertNotIn(removed, guide)
+
     def test_collection_retries_then_recovers(self):
         with tempfile.TemporaryDirectory() as temp, patch('supply_demand.time.sleep'):
             fetcher = Mock(side_effect=[ValueError('invalid'), snapshot()])

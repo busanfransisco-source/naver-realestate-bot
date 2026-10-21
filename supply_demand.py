@@ -216,9 +216,9 @@ def format_digest(snapshot, now):
         sale_line = value_line(snapshot, 'monthly_sale', region)
         jeonse_line = value_line(snapshot, 'monthly_jeonse', region).split(' ', 1)[1]
         lines += [sale_line.split(' ', 1)[0], '매매 ' + sale_line.split(' ', 1)[1] + ' · 전세 ' + jeonse_line, '']
-    lines += ['📖 읽는 법', '매수·매도 문의 등 수급 상황을 조사한 지표입니다.',
-              '100 아래에서 지수가 올라도 수요 우세로 전환됐다는 뜻은 아닙니다.',
-              '가격 변동률·실제 입주물량·가격 전망과는 다릅니다.', '',
+    lines += ['📖 읽는 법', '지수 범위: 0~200 · 기준: 100',
+              '100 초과: 수요 우세', '100 미만: 공급 우세', '100: 수요·공급 균형',
+              '증감 단위: 포인트(p)', '',
               '출처: 한국부동산원 R-ONE · 전국주택가격동향조사']
     return '\n'.join(lines)
 
