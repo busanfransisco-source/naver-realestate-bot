@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-10-23 07:29:27",
+  "updated_at_kst": "2026-10-23 07:51:05",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 23일 금요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "용산 산호아파트 재건축, 35층→47층으로 높인다",
+      "url": "https://n.news.naver.com/mnews/article/277/0005832382"
+    },
+    {
+      "title": "종로구 \"창신9·10구역 동의서 징구 위법…다시 받아라\"",
+      "url": "https://n.news.naver.com/mnews/article/277/0005832377"
+    },
     {
       "title": "“밀리면 또 1년”…분당 재건축 순번에 추진위 ‘촉각’",
       "url": "https://n.news.naver.com/mnews/article/119/0003145992"
@@ -34,14 +42,6 @@
     {
       "title": "집주인 된 미성년자 2배 가까이 늘었다…절반 이상이 '자기 자금'",
       "url": "https://n.news.naver.com/mnews/article/374/0000539358"
-    },
-    {
-      "title": "[오늘 부동산] \"집값 안정화\"라는데…서울 아파트값 89주 연속 상승",
-      "url": "https://n.news.naver.com/mnews/article/119/0003145977"
-    },
-    {
-      "title": "오늘 오세훈 2심 판결…서울 재건축·재개발 구역도 ‘긴장’",
-      "url": "https://n.news.naver.com/mnews/article/018/0006394290"
     }
   ]
 }
