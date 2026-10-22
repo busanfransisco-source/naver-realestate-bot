@@ -350,8 +350,17 @@ class SupplyDemandTests(unittest.TestCase):
         for title in ('주간 전세수급지수', '월간 전세수급지수'):
             self.assertIn(title, body)
         for region in sd.REGIONS:
-            self.assertEqual(sum(line.startswith(region + ' ') for line in body.splitlines()), 2)
+            self.assertEqual(sum(line.startswith(sd.REGION_EMOJI[region] + ' ' + region + ' ')
+                                 for line in body.splitlines()), 2)
         self.assertNotIn('아파트 · 한국부동산원', body)
+
+    def test_region_emoji_cover_all_regions_in_both_periods(self):
+        body = sd.format_digest(snapshot(), NOW)
+        self.assertEqual(set(sd.REGION_EMOJI), set(sd.REGIONS))
+        for region in sd.REGIONS:
+            prefix = sd.REGION_EMOJI[region] + ' ' + region + ' '
+            self.assertEqual(sum(line.startswith(prefix) for line in body.splitlines()), 2)
+            self.assertFalse(any(line.startswith(region + ' ') for line in body.splitlines()))
 
 
 if __name__ == '__main__':

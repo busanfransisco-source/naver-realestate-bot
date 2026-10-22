@@ -25,6 +25,13 @@ REGION_CODES = {
     '전북': '5200000000', '경북': '4700000000', '경남': '4800000000', '제주': '5000000000',
 }
 REGIONS = tuple(REGION_CODES)
+REGION_EMOJI = {
+    '전국': '🇰🇷', '수도권': '🏘️', '기타지방': '🗺️',
+    '서울': '🏙️', '경기': '🏘️', '인천': '🌉', '부산': '🌊',
+    '대구': '🍎', '광주': '🎨', '대전': '🔬', '울산': '🏭', '세종': '🏢',
+    '강원': '🏔️', '충북': '⛰️', '충남': '🌅', '전북': '🍚',
+    '경북': '🏛️', '경남': '⚓', '제주': '🍊',
+}
 PENDING = '🔑 KB부동산 전세수급지수\n\n집계 대기 · KB 원자료 확인 후 업데이트됩니다.'
 DELAY_NOTICE = '🕒 최근 확보 자료 · 원자료 또는 수집 갱신 지연\n아래 주간 기준일·월간 기준월을 확인해 주세요.'
 
@@ -185,7 +192,7 @@ def delta_text(delta):
 
 def value_line(snapshot, series, region):
     previous, current = snapshot['series'][series][region][-2:]
-    return f"{region} {current['value']:.2f} ({delta_text(current['value'] - previous['value'])})"
+    return f"{REGION_EMOJI[region]} {region} {current['value']:.2f} ({delta_text(current['value'] - previous['value'])})"
 
 
 def format_digest(snapshot, now):
