@@ -12,6 +12,9 @@ https://www.aitimes.com/news/articleView.html?idxno=216547
 [AI 모델 신작] 시계열 예측 ‘타임스트랄’·영상 효과음 ‘SFX 2.0’ 등 5종
 https://www.aitimes.com/news/articleView.html?idxno=216545
 
+미스트랄, 실시간 음성 에이전트 지원 '복스트랄 3' 제품군 공개
+https://www.aitimes.com/news/articleView.html?idxno=216544
+
 클로드·그록으로 무장한 해커들, 중남미 은행 400여곳 사이버 공격 자동화
 https://www.aitimes.com/news/articleView.html?idxno=216541
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216535
 
 [게시판] 모빌린트, LG전자와 휴머노이드용 NPU 플랫폼 개발 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=216533
-
-위플로, 드론 검사·정비용 AI 솔루션 '플로원 AI 스위트' 출시
-https://www.aitimes.com/news/articleView.html?idxno=216531
