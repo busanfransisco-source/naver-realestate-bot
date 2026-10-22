@@ -56,7 +56,7 @@ jobs:
         run: python ensure_seoul_daily.py || echo "Seoul source still unavailable; dated snapshot retained"
         env:
           SEOUL_OPEN_DATA_KEY: ${{ secrets.SEOUL_OPEN_DATA_KEY }}
-      - name: Refresh KB buying sentiment and jeonse supply-demand indices
+      - name: Refresh KB jeonse supply-demand indices
         id: supply
         continue-on-error: true
         run: python supply_demand.py ${{ inputs.card == 'supplydemand' && '--force' || '' }}

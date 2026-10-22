@@ -13,9 +13,7 @@ KST = timezone(timedelta(hours=9))
 BASE = 'https://data-api.kbland.kr/bfmstat/weekMnthlyHuseTrnd/maktTrnd'
 CACHE = Path('supply-demand-cache.json')
 TABLES = {
-    'weekly_sale': ('weekBuyAdvIdx', '02', '01', '매수우위지수', ('매도자많음', '비슷함', '매수자많음')),
     'weekly_jeonse': ('weekRentSupInx', '02', '03', '전세수급지수', ('공급충분', '공급적절', '공급부족')),
-    'monthly_sale': ('monthBuyAdvIdx', '01', '01', '매수우위지수', ('매도자많음', '비슷함', '매수자많음')),
     'monthly_jeonse': ('monthRentSupInx', '01', '03', '전세수급지수', ('공급충분', '공급적절', '공급부족')),
 }
 REGION_CODES = {
@@ -27,7 +25,7 @@ REGION_CODES = {
     '전북': '5200000000', '경북': '4700000000', '경남': '4800000000', '제주': '5000000000',
 }
 REGIONS = tuple(REGION_CODES)
-PENDING = '⚖️ KB부동산 매매·전세 시장심리\n\n집계 대기 · KB 원자료 확인 후 업데이트됩니다.'
+PENDING = '🔑 KB부동산 전세수급지수\n\n집계 대기 · KB 원자료 확인 후 업데이트됩니다.'
 DELAY_NOTICE = '🕒 최근 확보 자료 · 원자료 또는 수집 갱신 지연\n아래 주간 기준일·월간 기준월을 확인해 주세요.'
 
 
@@ -91,7 +89,7 @@ def fetch_snapshot(now, session=requests):
         response.raise_for_status()
         return name, parse_series(response.json(), name)
 
-    with ThreadPoolExecutor(max_workers=4) as pool:
+    with ThreadPoolExecutor(max_workers=2) as pool:
         results = dict(pool.map(query, TABLES))
     snapshot = {'schemaVersion': 2, 'providerId': 'kb', 'provider': 'KB부동산',
                 'housingType': '중개업소 시장동향 설문', 'checkedAtKst': now.isoformat(),
@@ -108,14 +106,19 @@ def valid_snapshot(snapshot, now):
         if (snapshot['schemaVersion'] != 2 or snapshot['providerId'] != 'kb'
                 or snapshot['provider'] != 'KB부동산' or snapshot['housingType'] != '중개업소 시장동향 설문'
                 or snapshot['accessMode'] != 'public_kb_datahub'
-                or snapshot['tableIds'] != {name: spec[0] for name, spec in TABLES.items()}
+                or any(snapshot['tableIds'].get(name) != spec[0] for name, spec in TABLES.items())
                 or snapshot['regionCodes'] != REGION_CODES
-                or set(snapshot['sourceUpdates']) != set(TABLES) or set(snapshot['series']) != set(TABLES)):
+                or not set(TABLES).issubset(snapshot['sourceUpdates'])
+                or not set(TABLES).issubset(snapshot['series'])
+                or any(set(snapshot[field]) - (set(TABLES) | {'weekly_sale', 'monthly_sale'})
+                       for field in ('tableIds', 'sourceUpdates', 'series'))):
             return False
         stamp = datetime.fromisoformat(snapshot['checkedAtKst'])
         if stamp.tzinfo is None or stamp > now + timedelta(minutes=5):
             return False
-        for name, entries in snapshot['series'].items():
+        # Read legacy four-series caches, but never depend on buying data.
+        for name in TABLES:
+            entries = snapshot['series'][name]
             if set(entries) != set(REGIONS):
                 return False
             periods_by_region = []
@@ -150,17 +153,13 @@ def valid_snapshot(snapshot, now):
                 periods_by_region.append(periods)
             if any(p != periods_by_region[0] for p in periods_by_region):
                 return False
-        for prefix in ('weekly', 'monthly'):
-            if [r['period'] for r in snapshot['series'][prefix + '_sale']['전국']] != [
-                    r['period'] for r in snapshot['series'][prefix + '_jeonse']['전국']]:
-                return False
         return True
     except (KeyError, TypeError, ValueError, OverflowError, AttributeError, IndexError):
         return False
 
 
 def source_period(snapshot, prefix):
-    return snapshot['series'][prefix + '_sale']['전국'][-1]['period']
+    return snapshot['series'][prefix + '_jeonse']['전국'][-1]['period']
 
 
 def freshness_issues(snapshot, now):
@@ -192,30 +191,28 @@ def value_line(snapshot, series, region):
 def format_digest(snapshot, now):
     weekly = source_period(snapshot, 'weekly')
     monthly = source_period(snapshot, 'monthly').split('-')
-    previous_week = snapshot['series']['weekly_sale']['전국'][-2]['period']
+    previous_week = snapshot['series']['weekly_jeonse']['전국'][-2]['period']
     weekly_compare = ('전주 대비' if date.fromisoformat(weekly)-date.fromisoformat(previous_week) == timedelta(days=7)
                       else f'직전 발표 기준일 {previous_week} 대비')
-    sale = snapshot['series']['weekly_sale']['전국'][-1]['value']
     jeonse = snapshot['series']['weekly_jeonse']['전국'][-1]['value']
-    lines = ['⚖️ KB부동산 매매·전세 시장심리', '공인중개사무소 시장동향 설문', '']
+    lines = ['🔑 KB부동산 전세수급지수', '공인중개사무소 시장동향 설문', '']
     if freshness_issues(snapshot, now):
         lines += [DELAY_NOTICE, '']
     lines += [f'📅 주간 기준일: {weekly}', f'🗓️ 월간 기준월: {monthly[0]}년 {int(monthly[1])}월', '',
-              f'💡 전국 주간: 매수우위 {sale:.2f} · 전세수급 {jeonse:.2f}', '']
-    for name, title in [('weekly_sale', '🏠 주간 매수우위지수'), ('weekly_jeonse', '🔑 주간 전세수급지수'),
-                        ('monthly_sale', '🏠 월간 매수우위지수'), ('monthly_jeonse', '🔑 월간 전세수급지수')]:
+              f'💡 전국 주간 전세수급지수: {jeonse:.2f}', '']
+    for name, title in [('weekly_jeonse', '🔑 주간 전세수급지수'),
+                        ('monthly_jeonse', '🗓️ 월간 전세수급지수')]:
         compare = weekly_compare if name.startswith('weekly') else '전월 대비'
         lines += [title, f'괄호는 {compare} · 단위: 포인트(p)', '']
         lines += [value_line(snapshot, name, region) for region in REGIONS]
         lines += ['']
     lines += ['📈 최근 4회 전국 주간 흐름']
-    for key, label in [('weekly_sale', '매수우위'), ('weekly_jeonse', '전세수급')]:
+    for key, label in [('weekly_jeonse', '전세수급')]:
         values = snapshot['series'][key]['전국'][-4:]
         lines.append(label + '  ' + ' → '.join(f"{r['period'][5:]} {r['value']:.2f}" for r in values))
     lines += ['', '📖 읽는 법', '지수 범위: 0~200 · 기준: 100',
-              '매수우위 100 초과: 매수자 많음 · 100 미만: 매도자 많음',
               '전세수급 100 초과: 공급부족 · 100 미만: 공급충분',
-              '100: 양쪽 응답 비중이 같음', '증감 단위: 포인트(p)', '', '출처: KB부동산 데이터허브']
+              '100: 공급부족·공급충분 응답 비중이 같음', '증감 단위: 포인트(p)', '', '출처: KB부동산 데이터허브']
     return '\n'.join(lines)
 
 

@@ -43,7 +43,7 @@ jobs:
         env:
           RONE_KEY: ${{ secrets.RONE_KEY }}
 
-      - name: Refresh KB buying sentiment and jeonse supply-demand indices
+      - name: Refresh KB jeonse supply-demand indices
         run: python supply_demand.py || echo "Supply-demand source unavailable; prior dated snapshot retained"
 
       - name: Commit and push latest.json

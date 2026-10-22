@@ -61,22 +61,42 @@ def fake_session(truncated=False):
 
 
 class SupplyDemandTests(unittest.TestCase):
-    def test_complete_four_series_validated(self):
+    def test_complete_two_jeonse_series_validated(self):
         self.assertTrue(sd.valid_snapshot(snapshot(), NOW))
         self.assertEqual(sd.freshness_issues(snapshot(), NOW), [])
 
+    def test_legacy_buying_fields_are_neither_required_nor_used(self):
+        original = snapshot()
+        legacy = copy.deepcopy(original)
+        for name in ('weekly_sale', 'monthly_sale'):
+            legacy['tableIds'][name] = 'unused legacy buying table'
+            legacy['sourceUpdates'][name] = 'not used'
+            legacy['series'][name] = {'broken': None}
+        self.assertTrue(sd.valid_snapshot(legacy, NOW))
+        self.assertEqual(sd.format_digest(original, NOW), sd.format_digest(legacy, NOW))
+        for body in (sd.format_digest(legacy, NOW), sd.PENDING):
+            for removed in ('매수', '매도', '매매'):
+                self.assertNotIn(removed, body)
+        self.assertEqual(set(sd.TABLES), {'weekly_jeonse', 'monthly_jeonse'})
+
+    def test_optional_buying_data_does_not_change_jeonse_validation(self):
+        value = snapshot()
+        value['series']['weekly_sale'] = {'서울': []}
+        del value['series']['weekly_jeonse']['서울']
+        self.assertFalse(sd.valid_snapshot(value, NOW))
+
     def test_missing_region_and_duplicate_period_rejected(self):
         value = snapshot()
-        del value['series']['weekly_sale']['서울']
+        del value['series']['weekly_jeonse']['서울']
         self.assertFalse(sd.valid_snapshot(value, NOW))
         value = snapshot()
-        value['series']['weekly_sale']['서울'].append(value['series']['weekly_sale']['서울'][-1])
+        value['series']['weekly_jeonse']['서울'].append(value['series']['weekly_jeonse']['서울'][-1])
         self.assertFalse(sd.valid_snapshot(value, NOW))
 
     def test_wrong_table_provider_type_and_bad_values_rejected(self):
         for bad in (-1, 201, float('nan'), float('inf'), True, '100'):
             value = snapshot()
-            value['series']['weekly_sale']['서울'][-1]['value'] = bad
+            value['series']['weekly_jeonse']['서울'][-1]['value'] = bad
             self.assertFalse(sd.valid_snapshot(value, NOW))
         for key, bad in [('provider', '한국부동산원 R-ONE'), ('providerId', 'rone'), ('schemaVersion', 1),
                          ('housingType', '아파트'), ('tableIds', {}), ('regionCodes', {})]:
@@ -91,7 +111,7 @@ class SupplyDemandTests(unittest.TestCase):
         value = snapshot()
         value['checkedAtKst'] = NOW.replace(tzinfo=None).isoformat()
         self.assertFalse(sd.valid_snapshot(value, NOW))
-        for name, period in [('weekly_sale', '2026-10-26'), ('monthly_sale', '2026-11')]:
+        for name, period in [('weekly_jeonse', '2026-10-26'), ('monthly_jeonse', '2026-11')]:
             value = snapshot()
             for values in value['series'][name].values():
                 values[-1]['period'] = period
@@ -99,7 +119,7 @@ class SupplyDemandTests(unittest.TestCase):
 
     def test_mismatched_region_or_sale_jeonse_period_rejected(self):
         value = snapshot()
-        value['series']['weekly_sale']['서울'] = value['series']['weekly_sale']['서울'][:-1]
+        value['series']['weekly_jeonse']['서울'] = value['series']['weekly_jeonse']['서울'][:-1]
         self.assertFalse(sd.valid_snapshot(value, NOW))
         value = snapshot()
         for values in value['series']['monthly_jeonse'].values():
@@ -107,7 +127,7 @@ class SupplyDemandTests(unittest.TestCase):
         self.assertFalse(sd.valid_snapshot(value, NOW))
 
     def test_missing_previous_week_or_month_not_mislabeled(self):
-        for name in ('weekly_sale', 'monthly_sale'):
+        for name in ('weekly_jeonse', 'monthly_jeonse'):
             value = snapshot()
             for values in value['series'][name].values():
                 values.pop(-2)
@@ -123,12 +143,12 @@ class SupplyDemandTests(unittest.TestCase):
         self.assertIn('2026-10-12', sd.format_digest(snapshot(), later))
         self.assertIn('2026년 9월', sd.format_digest(snapshot(), later))
 
-    def test_public_kb_fetch_is_four_complete_requests_without_credentials(self):
+    def test_public_kb_fetch_is_two_jeonse_requests_without_credentials(self):
         session = fake_session()
         value = sd.fetch_snapshot(NOW, session=session)
         self.assertTrue(sd.valid_snapshot(value, NOW))
         calls = session.get.call_args_list
-        self.assertEqual(len(calls), 4)
+        self.assertEqual(len(calls), 2)
         self.assertTrue(all(c.args[0] == sd.BASE and 'KEY' not in c.kwargs['params'] for c in calls))
         self.assertEqual(value['series'], snapshot()['series'])
 
@@ -137,7 +157,7 @@ class SupplyDemandTests(unittest.TestCase):
         value = sd.fetch_snapshot(NOW, session=session)
         self.assertEqual(value['series'], snapshot()['series'])
         actual = {(c.kwargs['params']['월간주간구분코드'], c.kwargs['params']['메뉴코드']) for c in session.get.call_args_list}
-        self.assertEqual(actual, {('01', '01'), ('01', '03'), ('02', '01'), ('02', '03')})
+        self.assertEqual(actual, {('01', '03'), ('02', '03')})
 
     def test_truncated_api_response_is_rejected(self):
         with self.assertRaises(ValueError):
@@ -164,9 +184,8 @@ class SupplyDemandTests(unittest.TestCase):
         body = sd.format_digest(snapshot(), NOW)
         guide = body.split('📖 읽는 법\n', 1)[1].split('\n\n출처:', 1)[0]
         self.assertEqual(guide, '지수 범위: 0~200 · 기준: 100\n'
-                               '매수우위 100 초과: 매수자 많음 · 100 미만: 매도자 많음\n'
                                '전세수급 100 초과: 공급부족 · 100 미만: 공급충분\n'
-                               '100: 양쪽 응답 비중이 같음\n증감 단위: 포인트(p)')
+                               '100: 공급부족·공급충분 응답 비중이 같음\n증감 단위: 포인트(p)')
         for removed in ('뜻은 아닙니다', '다릅니다', '가격 전망', '실제 입주물량'):
             self.assertNotIn(removed, guide)
 
@@ -206,7 +225,7 @@ class SupplyDemandTests(unittest.TestCase):
             value = snapshot()
             path.write_text(json.dumps(value), encoding='utf-8')
             older = copy.deepcopy(value)
-            for name in ('weekly_sale', 'weekly_jeonse'):
+            for name in ('weekly_jeonse',):
                 for rows in older['series'][name].values():
                     rows.pop()
                 older['sourceUpdates'][name] = older['series'][name]['전국'][-1]['period']
@@ -221,7 +240,7 @@ class SupplyDemandTests(unittest.TestCase):
                 path.write_text(json.dumps(value), encoding='utf-8')
                 self.assertEqual(sd.load_digest(path, NOW), sd.PENDING)
             malformed = snapshot()
-            malformed['series']['weekly_sale'] = list(sd.REGIONS)
+            malformed['series']['weekly_jeonse'] = list(sd.REGIONS)
             path.write_text(json.dumps(malformed), encoding='utf-8')
             self.assertEqual(sd.load_digest(path, NOW), sd.PENDING)
 
@@ -275,12 +294,12 @@ class SupplyDemandTests(unittest.TestCase):
         for name in ('manual-briefing', 'naver-realestate', 'daily-data-cards'):
             workflow = Path(f'.github/workflows/{name}.yml').read_text(encoding='utf-8')
             self.assertIn('python supply_demand.py', workflow)
-            step = workflow.split('- name: Refresh KB buying sentiment', 1)[1].split('- name:', 1)[0]
+            step = workflow.split('- name: Refresh KB jeonse', 1)[1].split('- name:', 1)[0]
             self.assertNotIn('RONE_KEY', step)
             self.assertIn('git add supply-demand-cache.json', workflow)
 
     def test_source_failure_status_and_partial_date_or_region_are_rejected(self):
-        payload = fake_session().get(sd.BASE, params={'월간주간구분코드': '02', '메뉴코드': '01'}, headers={}, timeout=1).json()
+        payload = fake_session().get(sd.BASE, params={'월간주간구분코드': '02', '메뉴코드': '03'}, headers={}, timeout=1).json()
         changes = []
         bad = copy.deepcopy(payload)
         bad['dataHeader']['resultCode'] = '10402'
@@ -299,7 +318,7 @@ class SupplyDemandTests(unittest.TestCase):
         changes.append(bad)
         for bad in changes:
             with self.assertRaises(ValueError):
-                sd.parse_series(bad, 'weekly_sale')
+                sd.parse_series(bad, 'weekly_jeonse')
 
     def test_response_shares_and_index_formula_are_verified_not_just_range(self):
         for parts in ([30, 50, 99], [30, 50, None], [True, 49, 21], [30, 40, 30]):
@@ -312,7 +331,7 @@ class SupplyDemandTests(unittest.TestCase):
 
     def test_holiday_skipped_week_is_labeled_previous_publication_not_previous_week(self):
         value = snapshot()
-        for name in ('weekly_sale', 'weekly_jeonse'):
+        for name in ('weekly_jeonse',):
             for rows in value['series'][name].values():
                 rows.pop(-2)
         self.assertTrue(sd.valid_snapshot(value, NOW))
@@ -326,12 +345,12 @@ class SupplyDemandTests(unittest.TestCase):
         second['checkedAtKst'] = (NOW + timedelta(hours=1)).isoformat()
         self.assertEqual(sd.format_digest(first, NOW), sd.format_digest(second, NOW + timedelta(hours=1)))
 
-    def test_all_four_indices_are_named_and_every_region_is_printed(self):
+    def test_only_two_jeonse_indices_and_every_region_are_printed(self):
         body = sd.format_digest(snapshot(), NOW)
-        for title in ('주간 매수우위지수', '주간 전세수급지수', '월간 매수우위지수', '월간 전세수급지수'):
+        for title in ('주간 전세수급지수', '월간 전세수급지수'):
             self.assertIn(title, body)
         for region in sd.REGIONS:
-            self.assertEqual(sum(line.startswith(region + ' ') for line in body.splitlines()), 4)
+            self.assertEqual(sum(line.startswith(region + ' ') for line in body.splitlines()), 2)
         self.assertNotIn('아파트 · 한국부동산원', body)
 
 

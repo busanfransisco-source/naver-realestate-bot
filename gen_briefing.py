@@ -147,7 +147,7 @@ SECTIONS = [
     ("shortnews", "⚡ 오늘의 퀵뉴스", "shortnews"),
     ("subs", "🏗️ 청약 소식", "subs"),
     ("trend", "📈 부동산 주간 시세동향", "trend"),
-    ("supplydemand", "⚖️ KB부동산 매매·전세 시장심리", "supplydemand"),
+    ("supplydemand", "🔑 KB부동산 전세수급지수", "supplydemand"),
     ("fuelfx", "⛽ 기름값·환율", "fuelfx"),
     ("metalcoin", "🥇 금·은·코인", "metalcoin"),
     ("books", "📚 주간 베스트셀러", "books"),
