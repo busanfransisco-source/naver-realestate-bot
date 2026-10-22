@@ -1,31 +1,31 @@
 🤖 26년 10월 22일 목요일 AI 뉴스
 
-오픈AI, 구글 클라우드서 최신 모델 판매…3대 클라우드 모두 진출
-https://www.aitimes.com/news/articleView.html?idxno=216500
+"OCR 커머스로 영역 확장"...한국딥러닝, SKT와 광고 제작 자동화 실증
+https://www.aitimes.com/news/articleView.html?idxno=216527
 
-웹사이트 70% 쓰는 PHP서 AI가 결함 발견…각국 정부 사이트 중단
-https://www.aitimes.com/news/articleView.html?idxno=216499
+KT클라우드, 50MW 규모 안산 AI 데이터센터 착공 추진
+https://www.aitimes.com/news/articleView.html?idxno=216526
 
-얼굴 나이 측정 넘어 암 환자 생존 위험 예측…하버드 연구진, 사진 분석 AI 개발
-https://www.aitimes.com/news/articleView.html?idxno=216498
+젠슨 황, 유럽에 "AI 소비국 넘어 자체 공장 구축" 촉구
+https://www.aitimes.com/news/articleView.html?idxno=216523
 
-시냅틱스, 구글 '코랄' 기반 엣지 AI 칩 공개...웨어러블·산업용 기기 겨냥
-https://www.aitimes.com/news/articleView.html?idxno=216493
+아모데이 “안전 기준 높이려면 선두에 있어야”…AI 개발 경쟁 지속 의지
+https://www.aitimes.com/news/articleView.html?idxno=216522
 
-“식물 전기 신호로 건강 상태 읽는다”…‘식물 AI’ 봄바딜 공개
-https://www.aitimes.com/news/articleView.html?idxno=216490
+메타, 개인정보 취급 '기만 행위'로 뉴멕시코주에서 33조 배상 명령 받아
+https://www.aitimes.com/news/articleView.html?idxno=216520
 
-[게시판] 플렉스, 한국MS와 기업용 AI 협력 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=216489
+메타, AI 자금 조달 위해 의결권 없는 신규 주식 발행 계획
+https://www.aitimes.com/news/articleView.html?idxno=216519
 
-fal, '시댄스 2.5'보다 22배 빠른 비디오 모델 '플럭스 3 맥스' 출시
-https://www.aitimes.com/news/articleView.html?idxno=216487
+메인라인, 문서 생성 에이전트 ‘AI 오피스’ 출시…채팅으로 PPT 제작
+https://www.aitimes.com/news/articleView.html?idxno=216518
 
-오픈AI, 신약 개발 관리 플랫폼 '오케스트라 바이오' 인수
-https://www.aitimes.com/news/articleView.html?idxno=216485
+"바닷물로 AI 데이터센터 식힌다"…데이터빈-남동발전, 해수 냉각 개발
+https://www.aitimes.com/news/articleView.html?idxno=216513
 
-이스트소프트, 제주국제자유도시개발센터 ‘사내 생성 AI 언어모델 구축 사업’ 수주
-https://www.aitimes.com/news/articleView.html?idxno=216484
+테슬라, 캘리포니아 공장서 옵티머스 휴머노이드 로봇 양산 돌입
+https://www.aitimes.com/news/articleView.html?idxno=216512
 
-인셉션, 최고 성능 dLLM '머큐리 3' 공개..."오픈AI·앤트로픽 맞먹어"
-https://www.aitimes.com/news/articleView.html?idxno=216483
+앤트로픽, 메타 '뮤즈' 대항마 AI 에이전트 '클로드 듀엣' 공개
+https://www.aitimes.com/news/articleView.html?idxno=216510
