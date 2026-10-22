@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-10-23 00:51:58",
+  "updated_at_kst": "2026-10-23 03:53:13",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 23일 금요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "[단독] 신청자 30만명 몰렸는데… LH 매입임대는 ‘텅텅’",
+      "url": "https://n.news.naver.com/mnews/article/005/0001880383"
+    },
     {
       "title": "‘월세 시대’가 1인 가구·전세 사기 때문? 현 정부 출범 1년 만에 비율 7%p 급등",
       "url": "https://n.news.naver.com/mnews/article/023/0004005446"
@@ -38,10 +42,6 @@
     {
       "title": "‘자취하기 겁난다. 방 한칸에 월 71만원’…‘월세 나라’된 서울, 한 달 새 5.2%↑",
       "url": "https://n.news.naver.com/mnews/article/021/0002827141"
-    },
-    {
-      "title": "아파트도 원룸도 품귀…세종 이주 앞두고 집 걱정",
-      "url": "https://n.news.naver.com/mnews/article/422/0000918480"
     }
   ]
 }
