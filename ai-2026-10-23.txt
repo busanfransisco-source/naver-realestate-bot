@@ -1,0 +1,31 @@
+🤖 26년 10월 23일 금요일 AI 뉴스
+
+학술 논문 읽고 코드 수정하는 자가 진화 에이전트 '스칼라이볼브' 등장
+https://www.aitimes.com/news/articleView.html?idxno=216552
+
+앤트로픽, 기업용 AI 보안 분석 도구 ‘클로드 시큐리티’ 출시
+https://www.aitimes.com/news/articleView.html?idxno=216549
+
+중국 빅테크, 엔비디아 그래픽카드 46조원 주문…첨단 AI 칩 막히자 대체품 확보
+https://www.aitimes.com/news/articleView.html?idxno=216548
+
+“느려진 TV, 클로드에게 맡겨볼까”…광고 덜고 속도 높이는 AI 활용법
+https://www.aitimes.com/news/articleView.html?idxno=216547
+
+[AI 모델 신작] 시계열 예측 ‘타임스트랄’·영상 효과음 ‘SFX 2.0’ 등 5종
+https://www.aitimes.com/news/articleView.html?idxno=216545
+
+미스트랄, 실시간 음성 에이전트 지원 '복스트랄 3' 제품군 공개
+https://www.aitimes.com/news/articleView.html?idxno=216544
+
+클로드·그록으로 무장한 해커들, 중남미 은행 400여곳 사이버 공격 자동화
+https://www.aitimes.com/news/articleView.html?idxno=216541
+
+오픈AI, 챗GPT 광고 서비스 26개국 추가... 전 세계 89개국으로 확대
+https://www.aitimes.com/news/articleView.html?idxno=216539
+
+세계 최대 월마트도 AI 에이전트 쇼핑 본격화…전용 플랫폼까지 공개
+https://www.aitimes.com/news/articleView.html?idxno=216536
+
+트럼프 "데이터센터 건설 기업, 지역사회에 '배당금' 지급해야"
+https://www.aitimes.com/news/articleView.html?idxno=216535
