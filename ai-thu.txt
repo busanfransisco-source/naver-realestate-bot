@@ -1,5 +1,8 @@
 🤖 26년 10월 22일 목요일 AI 뉴스
 
+학술 논문 읽고 코드 수정하는 자가 진화 에이전트 '스칼라이볼브' 등장
+https://www.aitimes.com/news/articleView.html?idxno=216552
+
 앤트로픽, 기업용 AI 보안 분석 도구 ‘클로드 시큐리티’ 출시
 https://www.aitimes.com/news/articleView.html?idxno=216549
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216536
 
 트럼프 "데이터센터 건설 기업, 지역사회에 '배당금' 지급해야"
 https://www.aitimes.com/news/articleView.html?idxno=216535
-
-[게시판] 모빌린트, LG전자와 휴머노이드용 NPU 플랫폼 개발 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=216533
