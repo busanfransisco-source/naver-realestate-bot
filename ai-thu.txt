@@ -1,31 +1,31 @@
 🤖 26년 10월 22일 목요일 AI 뉴스
 
-"OCR 커머스로 영역 확장"...한국딥러닝, SKT와 광고 제작 자동화 실증
-https://www.aitimes.com/news/articleView.html?idxno=216527
+앤트로픽, 기업용 AI 보안 분석 도구 ‘클로드 시큐리티’ 출시
+https://www.aitimes.com/news/articleView.html?idxno=216549
 
-KT클라우드, 50MW 규모 안산 AI 데이터센터 착공 추진
-https://www.aitimes.com/news/articleView.html?idxno=216526
+중국 빅테크, 엔비디아 그래픽카드 46조원 주문…첨단 AI 칩 막히자 대체품 확보
+https://www.aitimes.com/news/articleView.html?idxno=216548
 
-젠슨 황, 유럽에 "AI 소비국 넘어 자체 공장 구축" 촉구
-https://www.aitimes.com/news/articleView.html?idxno=216523
+“느려진 TV, 클로드에게 맡겨볼까”…광고 덜고 속도 높이는 AI 활용법
+https://www.aitimes.com/news/articleView.html?idxno=216547
 
-아모데이 “안전 기준 높이려면 선두에 있어야”…AI 개발 경쟁 지속 의지
-https://www.aitimes.com/news/articleView.html?idxno=216522
+[AI 모델 신작] 시계열 예측 ‘타임스트랄’·영상 효과음 ‘SFX 2.0’ 등 5종
+https://www.aitimes.com/news/articleView.html?idxno=216545
 
-메타, 개인정보 취급 '기만 행위'로 뉴멕시코주에서 33조 배상 명령 받아
-https://www.aitimes.com/news/articleView.html?idxno=216520
+클로드·그록으로 무장한 해커들, 중남미 은행 400여곳 사이버 공격 자동화
+https://www.aitimes.com/news/articleView.html?idxno=216541
 
-메타, AI 자금 조달 위해 의결권 없는 신규 주식 발행 계획
-https://www.aitimes.com/news/articleView.html?idxno=216519
+오픈AI, 챗GPT 광고 서비스 26개국 추가... 전 세계 89개국으로 확대
+https://www.aitimes.com/news/articleView.html?idxno=216539
 
-메인라인, 문서 생성 에이전트 ‘AI 오피스’ 출시…채팅으로 PPT 제작
-https://www.aitimes.com/news/articleView.html?idxno=216518
+세계 최대 월마트도 AI 에이전트 쇼핑 본격화…전용 플랫폼까지 공개
+https://www.aitimes.com/news/articleView.html?idxno=216536
 
-"바닷물로 AI 데이터센터 식힌다"…데이터빈-남동발전, 해수 냉각 개발
-https://www.aitimes.com/news/articleView.html?idxno=216513
+트럼프 "데이터센터 건설 기업, 지역사회에 '배당금' 지급해야"
+https://www.aitimes.com/news/articleView.html?idxno=216535
 
-테슬라, 캘리포니아 공장서 옵티머스 휴머노이드 로봇 양산 돌입
-https://www.aitimes.com/news/articleView.html?idxno=216512
+[게시판] 모빌린트, LG전자와 휴머노이드용 NPU 플랫폼 개발 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=216533
 
-앤트로픽, 메타 '뮤즈' 대항마 AI 에이전트 '클로드 듀엣' 공개
-https://www.aitimes.com/news/articleView.html?idxno=216510
+위플로, 드론 검사·정비용 AI 솔루션 '플로원 AI 스위트' 출시
+https://www.aitimes.com/news/articleView.html?idxno=216531
