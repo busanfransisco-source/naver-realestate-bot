@@ -1,13 +1,22 @@
 🤖 26년 10월 23일 금요일 AI 뉴스
 
+NC AI, '풀스택 피지컬 AI'로 산업 AX 공략… 제조·조선·국방으로 협력 확대
+https://www.aitimes.com/news/articleView.html?idxno=216602
+
 SK하이닉스, 미국 손자회사 솔리다임 IPO 검토 중단
 https://www.aitimes.com/news/articleView.html?idxno=216601
+
+우버, 업계 최초 전 직원 3만명에 '챗GPT 워크' 도입
+https://www.aitimes.com/news/articleView.html?idxno=216597
 
 인티그리트, 로봇 예측형 AI 특허 4건 등록…개방형 휴머노이드 플랫폼 개발 확대
 https://www.aitimes.com/news/articleView.html?idxno=216593
 
 일본 향하는 K-AI... 의료·법률부터 문서 전자화까지
 https://www.aitimes.com/news/articleView.html?idxno=216592
+
+AWS, GPU 관리 없이 맞춤형 AI 학습하는 새 기능 공개
+https://www.aitimes.com/news/articleView.html?idxno=216591
 
 바클레이즈, AI 도입 늘리며 5000명 감원…개발자 등 지원 부서에 집중
 https://www.aitimes.com/news/articleView.html?idxno=216590
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216580
 
 메타, 부채 위험 지표 사상 최고에 주가 7% 급락…AI 지출·현금 적자 부담
 https://www.aitimes.com/news/articleView.html?idxno=216578
-
-MS 의료 AI, 고난도 진단서 의사 두 배 정확도…실제 병원서 검증 나선다
-https://www.aitimes.com/news/articleView.html?idxno=216575
-
-테슬라, AI·로봇 투자 축소에 주가 하락…'미래 가치' 의구심
-https://www.aitimes.com/news/articleView.html?idxno=216574
-
-딥시크, IPO 앞두고 20조 대규모 투자 유치...상하이 증시 상장 가속
-https://www.aitimes.com/news/articleView.html?idxno=216571
