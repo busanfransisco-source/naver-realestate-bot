@@ -1,31 +1,31 @@
-🤖 26년 10월 17일 토요일 AI 뉴스
+🤖 26년 10월 24일 토요일 AI 뉴스
 
-[AI 모델 신작] BFL ‘플럭스 3 이미지 클라인’ 등 5종
-https://www.aitimes.com/news/articleView.html?idxno=216368
+NC AI, '풀스택 피지컬 AI'로 산업 AX 공략… 제조·조선·국방으로 협력 확대
+https://www.aitimes.com/news/articleView.html?idxno=216602
 
-AI 코딩도 LLM만으론 부족…레플릿, ‘결정론적 시뮬레이터’로 검증
-https://www.aitimes.com/news/articleView.html?idxno=216367
+SK하이닉스, 미국 손자회사 솔리다임 IPO 검토 중단
+https://www.aitimes.com/news/articleView.html?idxno=216601
 
-오픈AI 도청 사건에 드러난 AI 첩보전…기업들은 이미 ‘스파이 경계’
-https://www.aitimes.com/news/articleView.html?idxno=216366
+우버, 업계 최초 전 직원 3만명에 '챗GPT 워크' 도입
+https://www.aitimes.com/news/articleView.html?idxno=216597
 
-GPT-6 아스트라, 미공개 물리 문제 98% 해결…전문가 오류도 발견
-https://www.aitimes.com/news/articleView.html?idxno=216365
+유니트리, 흉기 막고 차량 들어 올리는 ‘수호 로봇’ 공개…자율 작동 여부는 미공개
+https://www.aitimes.com/news/articleView.html?idxno=216594
 
-전 오픈AI 연구원 “AI 내부 읽을 수 있다” 주장…기대·반론 엇갈려
-https://www.aitimes.com/news/articleView.html?idxno=216364
+인티그리트, 로봇 예측형 AI 특허 4건 등록…개방형 휴머노이드 플랫폼 개발 확대
+https://www.aitimes.com/news/articleView.html?idxno=216593
 
-[AI 이슈트렌드] 삼전 최대 실적에도 코스피 붕괴…쿠팡 먹통·인천 흉기난동 등 주목
-https://www.aitimes.com/news/articleView.html?idxno=216363
+일본 향하는 K-AI... 의료·법률부터 문서 전자화까지
+https://www.aitimes.com/news/articleView.html?idxno=216592
 
-애플 첫 폴더블 ‘아이폰 듀오’ 예판 대란…배송 최대 3개월 지연
-https://www.aitimes.com/news/articleView.html?idxno=216362
+AWS, GPU 관리 없이 맞춤형 AI 학습하는 새 기능 공개
+https://www.aitimes.com/news/articleView.html?idxno=216591
 
-중국, 첨단 AI 모델 등 23가지 기술 수출 통제…오픈소스·API는 예외
-https://www.aitimes.com/news/articleView.html?idxno=216361
+바클레이즈, AI 도입 늘리며 5000명 감원…개발자 등 지원 부서에 집중
+https://www.aitimes.com/news/articleView.html?idxno=216590
 
-오픈AI, 크롬용 '챗GPT' 확장 기능 강화..."열린 탭 분석하고 직접 제어"
-https://www.aitimes.com/news/articleView.html?idxno=216360
+캔바, 프론티어급 이미지 모델 '크래프트' 공개…디자인 아레나 4위 올라
+https://www.aitimes.com/news/articleView.html?idxno=216589
 
-인도에서도 AI 에이전트 무단 침입 발생…"개발사가 피해 기업에 보고"
-https://www.aitimes.com/news/articleView.html?idxno=216359
+“지난주 세차장으로 안내해”…구글, 차량용 '제미나이'에 개인화 기능 도입
+https://www.aitimes.com/news/articleView.html?idxno=216587

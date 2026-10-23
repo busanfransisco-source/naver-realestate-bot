@@ -1,0 +1,31 @@
+🤖 26년 10월 24일 토요일 AI 뉴스
+
+NC AI, '풀스택 피지컬 AI'로 산업 AX 공략… 제조·조선·국방으로 협력 확대
+https://www.aitimes.com/news/articleView.html?idxno=216602
+
+SK하이닉스, 미국 손자회사 솔리다임 IPO 검토 중단
+https://www.aitimes.com/news/articleView.html?idxno=216601
+
+우버, 업계 최초 전 직원 3만명에 '챗GPT 워크' 도입
+https://www.aitimes.com/news/articleView.html?idxno=216597
+
+유니트리, 흉기 막고 차량 들어 올리는 ‘수호 로봇’ 공개…자율 작동 여부는 미공개
+https://www.aitimes.com/news/articleView.html?idxno=216594
+
+인티그리트, 로봇 예측형 AI 특허 4건 등록…개방형 휴머노이드 플랫폼 개발 확대
+https://www.aitimes.com/news/articleView.html?idxno=216593
+
+일본 향하는 K-AI... 의료·법률부터 문서 전자화까지
+https://www.aitimes.com/news/articleView.html?idxno=216592
+
+AWS, GPU 관리 없이 맞춤형 AI 학습하는 새 기능 공개
+https://www.aitimes.com/news/articleView.html?idxno=216591
+
+바클레이즈, AI 도입 늘리며 5000명 감원…개발자 등 지원 부서에 집중
+https://www.aitimes.com/news/articleView.html?idxno=216590
+
+캔바, 프론티어급 이미지 모델 '크래프트' 공개…디자인 아레나 4위 올라
+https://www.aitimes.com/news/articleView.html?idxno=216589
+
+“지난주 세차장으로 안내해”…구글, 차량용 '제미나이'에 개인화 기능 도입
+https://www.aitimes.com/news/articleView.html?idxno=216587
