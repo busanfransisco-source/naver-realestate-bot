@@ -1,5 +1,26 @@
 🤖 26년 10월 23일 금요일 AI 뉴스
 
+[AI 모델 신작] 드림랩스·앤트그룹·일레븐랩스, 로봇·음성 AI 공개 등 8종
+https://www.aitimes.com/news/articleView.html?idxno=216580
+
+메타, 부채 위험 지표 사상 최고에 주가 7% 급락…AI 지출·현금 적자 부담
+https://www.aitimes.com/news/articleView.html?idxno=216578
+
+딥시크, IPO 앞두고 20조 대규모 투자 유치...상하이 증시 상장 가속
+https://www.aitimes.com/news/articleView.html?idxno=216571
+
+오픈AI, 투자 열기 주춤하자 목표 기업가치 200조 낮춰
+https://www.aitimes.com/news/articleView.html?idxno=216570
+
+"오픈AI 내부 모니터링 시스템 허점 대거 발견"...외부 평가서 드러나
+https://www.aitimes.com/news/articleView.html?idxno=216564
+
+에임인텔리전스, 오픈AI 연계 앱 보안 평가 서비스 출시
+https://www.aitimes.com/news/articleView.html?idxno=216562
+
+AI 에이전트도 '빨리빨리'...한국, 오픈AI '닷츠' 이용 세계 3위
+https://www.aitimes.com/news/articleView.html?idxno=216560
+
 학술 논문 읽고 코드 수정하는 자가 진화 에이전트 '스칼라이볼브' 등장
 https://www.aitimes.com/news/articleView.html?idxno=216552
 
@@ -8,24 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216549
 
 중국 빅테크, 엔비디아 그래픽카드 46조원 주문…첨단 AI 칩 막히자 대체품 확보
 https://www.aitimes.com/news/articleView.html?idxno=216548
-
-“느려진 TV, 클로드에게 맡겨볼까”…광고 덜고 속도 높이는 AI 활용법
-https://www.aitimes.com/news/articleView.html?idxno=216547
-
-[AI 모델 신작] 시계열 예측 ‘타임스트랄’·영상 효과음 ‘SFX 2.0’ 등 5종
-https://www.aitimes.com/news/articleView.html?idxno=216545
-
-미스트랄, 실시간 음성 에이전트 지원 '복스트랄 3' 제품군 공개
-https://www.aitimes.com/news/articleView.html?idxno=216544
-
-클로드·그록으로 무장한 해커들, 중남미 은행 400여곳 사이버 공격 자동화
-https://www.aitimes.com/news/articleView.html?idxno=216541
-
-오픈AI, 챗GPT 광고 서비스 26개국 추가... 전 세계 89개국으로 확대
-https://www.aitimes.com/news/articleView.html?idxno=216539
-
-세계 최대 월마트도 AI 에이전트 쇼핑 본격화…전용 플랫폼까지 공개
-https://www.aitimes.com/news/articleView.html?idxno=216536
-
-트럼프 "데이터센터 건설 기업, 지역사회에 '배당금' 지급해야"
-https://www.aitimes.com/news/articleView.html?idxno=216535
