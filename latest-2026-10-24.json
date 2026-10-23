@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-10-24 08:14:16",
+  "updated_at_kst": "2026-10-24 08:36:35",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 24일 토요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "\"집값 2035년까지 오른다…지금이라도 내집마련 해야\" 대학교수의 조언",
+      "url": "https://n.news.naver.com/mnews/article/003/0014275405"
+    },
+    {
+      "title": "올해 들어 집값도 전셋값도 10% 넘게 뛴 '노도강'",
+      "url": "https://n.news.naver.com/mnews/article/648/0000051898"
+    },
     {
       "title": "지방 미분양에 청약 수요 ‘뚝’…1순위 경쟁률 39개월 만에 최저",
       "url": "https://n.news.naver.com/mnews/article/119/0003146492"
@@ -34,14 +42,6 @@
     {
       "title": "서울시, 옛 성동구치소 부지에 ‘청소년 문화복합시설’ 조성",
       "url": "https://n.news.naver.com/mnews/article/016/0002713756"
-    },
-    {
-      "title": "\"강서 전셋값이면 내 집 마련\"…계양 첫 민간분양 '카이브 유보라'",
-      "url": "https://n.news.naver.com/mnews/article/421/0009247352"
-    },
-    {
-      "title": "같은 도시인데 집값 4배 차이…수도권 아파트 ‘중심화’ 심화",
-      "url": "https://n.news.naver.com/mnews/article/119/0003146485"
     }
   ]
 }
