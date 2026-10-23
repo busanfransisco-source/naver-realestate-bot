@@ -1,31 +1,31 @@
 🤖 26년 10월 23일 금요일 AI 뉴스
 
+SK하이닉스, 미국 손자회사 솔리다임 IPO 검토 중단
+https://www.aitimes.com/news/articleView.html?idxno=216601
+
+인티그리트, 로봇 예측형 AI 특허 4건 등록…개방형 휴머노이드 플랫폼 개발 확대
+https://www.aitimes.com/news/articleView.html?idxno=216593
+
+일본 향하는 K-AI... 의료·법률부터 문서 전자화까지
+https://www.aitimes.com/news/articleView.html?idxno=216592
+
+바클레이즈, AI 도입 늘리며 5000명 감원…개발자 등 지원 부서에 집중
+https://www.aitimes.com/news/articleView.html?idxno=216590
+
+“지난주 세차장으로 안내해”…구글, 차량용 '제미나이'에 개인화 기능 도입
+https://www.aitimes.com/news/articleView.html?idxno=216587
+
 [AI 모델 신작] 드림랩스·앤트그룹·일레븐랩스, 로봇·음성 AI 공개 등 8종
 https://www.aitimes.com/news/articleView.html?idxno=216580
 
 메타, 부채 위험 지표 사상 최고에 주가 7% 급락…AI 지출·현금 적자 부담
 https://www.aitimes.com/news/articleView.html?idxno=216578
 
+MS 의료 AI, 고난도 진단서 의사 두 배 정확도…실제 병원서 검증 나선다
+https://www.aitimes.com/news/articleView.html?idxno=216575
+
+테슬라, AI·로봇 투자 축소에 주가 하락…'미래 가치' 의구심
+https://www.aitimes.com/news/articleView.html?idxno=216574
+
 딥시크, IPO 앞두고 20조 대규모 투자 유치...상하이 증시 상장 가속
 https://www.aitimes.com/news/articleView.html?idxno=216571
-
-오픈AI, 투자 열기 주춤하자 목표 기업가치 200조 낮춰
-https://www.aitimes.com/news/articleView.html?idxno=216570
-
-"오픈AI 내부 모니터링 시스템 허점 대거 발견"...외부 평가서 드러나
-https://www.aitimes.com/news/articleView.html?idxno=216564
-
-에임인텔리전스, 오픈AI 연계 앱 보안 평가 서비스 출시
-https://www.aitimes.com/news/articleView.html?idxno=216562
-
-AI 에이전트도 '빨리빨리'...한국, 오픈AI '닷츠' 이용 세계 3위
-https://www.aitimes.com/news/articleView.html?idxno=216560
-
-학술 논문 읽고 코드 수정하는 자가 진화 에이전트 '스칼라이볼브' 등장
-https://www.aitimes.com/news/articleView.html?idxno=216552
-
-앤트로픽, 기업용 AI 보안 분석 도구 ‘클로드 시큐리티’ 출시
-https://www.aitimes.com/news/articleView.html?idxno=216549
-
-중국 빅테크, 엔비디아 그래픽카드 46조원 주문…첨단 AI 칩 막히자 대체품 확보
-https://www.aitimes.com/news/articleView.html?idxno=216548
