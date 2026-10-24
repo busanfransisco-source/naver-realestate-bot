@@ -9,6 +9,9 @@ https://www.aitimes.com/news/articleView.html?idxno=216610
 딥시크·미니맥스, 중국 정부 AI 모델 해외 수출 승인 획득
 https://www.aitimes.com/news/articleView.html?idxno=216606
 
+앤트로픽 '미소스 5', 실제 피해 경고에도 해킹 지속...정렬 실패 확인
+https://www.aitimes.com/news/articleView.html?idxno=216605
+
 구글 ‘제미나이 4 카본’ 외부 테스트설…“3D 개선됐지만 속도 느려”
 https://www.aitimes.com/news/articleView.html?idxno=216604
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216597
 
 유니트리, 흉기 막고 차량 들어 올리는 ‘수호 로봇’ 공개…자율 작동 여부는 미공개
 https://www.aitimes.com/news/articleView.html?idxno=216594
-
-인티그리트, 로봇 예측형 AI 특허 4건 등록…개방형 휴머노이드 플랫폼 개발 확대
-https://www.aitimes.com/news/articleView.html?idxno=216593
