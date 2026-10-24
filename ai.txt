@@ -9,7 +9,7 @@ https://www.aitimes.com/news/articleView.html?idxno=216617
 오픈AI 연구원 3명 해고, ‘순환 추론’ 유출 조사서 비롯…시그널 대화 쟁점
 https://www.aitimes.com/news/articleView.html?idxno=216616
 
-오픈AI, AI 보안 우회로 중단했던 모델 학습 재개…인터넷 차단 강화
+오픈AI, 보안 우회로 중단했던 첨단 모델 학습 재개…인터넷 차단 강화
 https://www.aitimes.com/news/articleView.html?idxno=216615
 
 SK “AI 데이터센터 5GW에 464조 필요”…글로벌 빅테크와 투자 협상
