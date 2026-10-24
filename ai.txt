@@ -1,10 +1,16 @@
 🤖 26년 10월 24일 토요일 AI 뉴스
 
+앤트로픽, 클로드로 오픈소스 123개 라이브러리 검증...수십 년 버그도 발견
+https://www.aitimes.com/news/articleView.html?idxno=216612
+
 [내면 지도 그리기] 39 Inner Mapping: 나를 찾는 지도
 https://www.aitimes.com/news/articleView.html?idxno=216611
 
 [AI카툰] Bob, Senior IT guy - 밥, 오랫동안 꿈꾸던 날라다니는 차
 https://www.aitimes.com/news/articleView.html?idxno=216610
+
+구글 클라우드, 에이전트 전용 '컴퓨팅 엔진' 출시…마이크로VM으로 보안 격리
+https://www.aitimes.com/news/articleView.html?idxno=216608
 
 구글, 터미널서 AI 에이전트 다루는 '제미나이 API CLI' 오픈소스 공개
 https://www.aitimes.com/news/articleView.html?idxno=216607
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216603
 
 NC AI, '풀스택 피지컬 AI'로 산업 AX 공략… 제조·조선·국방으로 협력 확대
 https://www.aitimes.com/news/articleView.html?idxno=216602
-
-SK하이닉스, 미국 손자회사 솔리다임 IPO 검토 중단
-https://www.aitimes.com/news/articleView.html?idxno=216601
-
-메타 '뮤즈' 아시아 첫발...네이버 "국내 도입 시 허용 여부 검토"
-https://www.aitimes.com/news/articleView.html?idxno=216600
