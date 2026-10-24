@@ -554,18 +554,26 @@ def fetch_wikimedia_history(session, title, start, end):
     return by_day
 
 
-def build_wikimedia_digest(histories, *, min_weekly_views=100):
-    """Compare two completed 7-day windows ending on a shared UTC day."""
+def build_wikimedia_digest(histories, *, min_weekly_views=100, end=None):
+    """Use the latest complete window; omit incomplete articles, never zero-fill."""
     if not histories:
         raise SourceUnavailable("비교할 위키백과 문서가 없습니다")
-    common = set.intersection(*(set(history) for history in histories.values()))
-    valid_days = [
-        day for day in common
-        if all(day - timedelta(days=offset) in common for offset in range(1, 14))
-    ]
+    requested_titles = set(histories)
+    # A hole in one article must not roll every other article back to an old day.
+    # Compare exactly the same included articles in both seven-day windows.
+    valid_days = {
+        day for history in histories.values() for day in history
+        if (end is None or day <= end)
+        and all(day - timedelta(days=offset) in history for offset in range(14))
+    }
     if not valid_days:
-        raise SourceUnavailable("모든 문서에 공통인 14일치 집계가 없습니다")
+        raise SourceUnavailable("연속 14일치 집계가 확보된 위키백과 문서가 없습니다")
     day = max(valid_days)
+    histories = {
+        title: history for title, history in histories.items()
+        if all(day - timedelta(days=offset) in history for offset in range(14))
+    }
+    excluded_titles = sorted(requested_titles - set(histories))
     ranked = []
     all_stats = {}
     for title, history in histories.items():
@@ -595,6 +603,13 @@ def build_wikimedia_digest(histories, *, min_weekly_views=100):
         f"{day - timedelta(days=13):%m/%d}~{day - timedelta(days=7):%m/%d} (UTC)",
         "",
     ]
+    if excluded_titles:
+        lines.extend([
+            f"📋 집계 대상 {len(histories)}/{len(requested_titles)}개 문서",
+            f"⚠️ 자료 누락·수집 실패로 제외 {len(excluded_titles)}개: " + " · ".join(excluded_titles),
+            "두 비교 기간 모두 같은 문서만 집계했습니다.",
+            "",
+        ])
     # Keep absolute changes next to percentages so a small denominator cannot
     # masquerade as broad interest. Low-base articles still enter totals, not ranks.
     absolute_change = total_recent - total_previous
@@ -709,8 +724,12 @@ def fetch_wikimedia_digest(session, titles, *, today=None):
     today = today or datetime.now(timezone.utc).date()
     end = today - timedelta(days=1)
     start = end - timedelta(days=20)
-    histories = {
-        title: fetch_wikimedia_history(session, title, start, end)
-        for title in titles
-    }
-    return build_wikimedia_digest(histories)
+    histories = {}
+    for title in titles:
+        try:
+            histories[title] = fetch_wikimedia_history(session, title, start, end)
+        except (requests.RequestException, SourceUnavailable, ValueError):
+            # Retain the failed title for coverage reporting, not as zero views.
+            # An exception URL may contain private details, so never print it.
+            histories[title] = {}
+    return build_wikimedia_digest(histories, end=end)

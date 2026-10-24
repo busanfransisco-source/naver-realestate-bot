@@ -267,14 +267,79 @@ class DailyDataCardSourceTests(unittest.TestCase):
         self.assertNotIn("부동산 14회", digest)
         self.assertIn("문서 조회수", digest)
 
-    def test_wikimedia_requires_common_complete_days(self):
+    def test_wikimedia_excludes_incomplete_article_without_blocking_latest(self):
         newest = date(2026, 9, 30)
         histories = {
             "금리": {newest - timedelta(days=i): 100 for i in range(14)},
             "부동산": {newest - timedelta(days=i): 100 for i in range(13)},
         }
-        with self.assertRaises(cards.SourceUnavailable):
-            cards.build_wikimedia_digest(histories)
+        digest = cards.build_wikimedia_digest(histories)
+        self.assertIn('2026-09-30 (UTC)', digest)
+        self.assertIn('선정 1개 문서 최근 7일 조회 합계 700회', digest)
+        self.assertIn('집계 대상 1/2개 문서', digest)
+        self.assertIn('제외 1개: 부동산', digest)
+        self.assertIn('증가율 순위 비교 대상 1/1개 문서', digest)
+
+    def test_wikimedia_internal_hole_does_not_roll_back_other_articles(self):
+        newest = date(2026, 10, 23)
+        full = {newest-timedelta(days=i): 10 for i in range(21)}
+        histories = {title: dict(full) for titles in cards.WIKIMEDIA_TOPICS.values() for title in titles}
+        histories['재건축'].pop(date(2026, 10, 18))
+        digest = cards.build_wikimedia_digest(histories)
+        self.assertIn('2026-10-23 (UTC)', digest)
+        self.assertIn('선정 17개 문서 최근 7일 조회 합계 1,190회', digest)
+        self.assertIn('집계 대상 17/18개 문서', digest)
+        self.assertIn('제외 1개: 재건축', digest)
+        self.assertIn('주택·세금 490회 (+0%) · 7개 문서', digest)
+        self.assertIn('조회 증가 0개 · 감소 0개 · 보합 17개 문서', digest)
+        # Once the real observation returns, the article rejoins automatically.
+        histories['재건축'][date(2026, 10, 18)] = 10
+        recovered = cards.build_wikimedia_digest(histories)
+        self.assertIn('선정 18개 문서 최근 7일 조회 합계 1,260회', recovered)
+        self.assertNotIn('제외', recovered)
+
+    def test_wikimedia_excludes_missing_previous_period_not_just_latest_day(self):
+        newest = date(2026, 10, 23)
+        full = {newest-timedelta(days=i): 20 for i in range(21)}
+        incomplete = dict(full)
+        incomplete.pop(newest-timedelta(days=10))
+        digest = cards.build_wikimedia_digest({'부동산': full, '재건축': incomplete})
+        self.assertIn('선정 1개 문서 최근 7일 조회 합계 140회', digest)
+        self.assertIn('전체 증감 +0회', digest)
+        self.assertIn('제외 1개: 재건축', digest)
+
+    def test_wikimedia_all_incomplete_fails_instead_of_inventing_zero(self):
+        newest = date(2026, 10, 23)
+        for histories in ({'부동산': {}}, {'부동산': {newest-timedelta(days=i): 10 for i in range(13)}}):
+            with self.subTest(histories=histories), self.assertRaises(cards.SourceUnavailable):
+                cards.build_wikimedia_digest(histories)
+
+    def test_wikimedia_keeps_real_zero_and_respects_completed_day_bound(self):
+        newest = date(2026, 10, 24)
+        histories = {'부동산': {newest-timedelta(days=i): 0 for i in range(21)}}
+        digest = cards.build_wikimedia_digest(histories, end=newest-timedelta(days=1))
+        self.assertIn('2026-10-23 (UTC)', digest)
+        self.assertIn('선정 1개 문서 최근 7일 조회 합계 0회', digest)
+        self.assertNotIn('제외', digest)
+
+    def test_wikimedia_fetch_failure_isolated_and_remaining_requests_continue(self):
+        newest = date(2026, 10, 23)
+        full = {newest-timedelta(days=i): 20 for i in range(14)}
+        for error in (cards.requests.Timeout('private URL'), cards.requests.HTTPError('private URL'),
+                      cards.SourceUnavailable('bad payload'), ValueError('bad value')):
+            with self.subTest(error=type(error).__name__), mock.patch.object(
+                    cards, 'fetch_wikimedia_history', side_effect=[full, error, full]) as fetch:
+                digest = cards.fetch_wikimedia_digest(mock.Mock(), ['부동산', '재건축', '코스피'],
+                                                      today=newest+timedelta(days=1))
+            self.assertEqual(fetch.call_count, 3)
+            self.assertIn('집계 대상 2/3개 문서', digest)
+            self.assertIn('제외 1개: 재건축', digest)
+            self.assertNotIn('private URL', digest)
+
+    def test_wikimedia_all_fetch_failures_remain_failure(self):
+        with mock.patch.object(cards, 'fetch_wikimedia_history', side_effect=cards.requests.Timeout()):
+            with self.assertRaises(cards.SourceUnavailable):
+                cards.fetch_wikimedia_digest(mock.Mock(), ['부동산', '재건축'], today=date(2026, 10, 24))
 
     def test_wikimedia_distinguishes_growth_rate_absolute_and_low_base(self):
         newest = date(2026, 10, 2)

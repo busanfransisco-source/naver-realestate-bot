@@ -92,6 +92,36 @@ class WikiRecoveryTests(unittest.TestCase):
         self.assertTrue(chosen['ready'])
         self.assertEqual(chosen['refreshStatus'], 'retained_valid_source')
 
+    def test_partial_latest_source_restores_cache_html_copy_and_health(self):
+        day = self.now.astimezone(timezone.utc).date()-timedelta(days=1)
+        full = {day-timedelta(days=i): 40 for i in range(21)}
+        missing = dict(full)
+        missing.pop(day-timedelta(days=5))
+        body = build_wikimedia_digest({'부동산': full, '재건축': missing}, end=day)
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp)/'cache.json'
+            path.write_text(json.dumps({'cards': {'wikiinterest': self.old}}), encoding='utf-8')
+            result = self.run_collection(path, body)
+            entry = result['cards']['wikiinterest']
+            self.assertTrue(entry['ready'])
+            self.assertTrue(cards.refresh_succeeded(result, ['wikiinterest'], self.now))
+            self.assertEqual(entry['sourceDate'], day.isoformat())
+            self.assertEqual(cards.load_contents(path, now=self.now)['wikiinterest'], body)
+            page = self.render(body)
+            from bs4 import BeautifulSoup
+            soup = BeautifulSoup(page, 'html.parser')
+            textarea = soup.select_one('#ta-wikiinterest')
+            self.assertEqual(textarea.get_text().strip(), body)
+            self.assertIn('제외 1개: 재건축', textarea.get_text())
+            button = textarea.find_parent('section').select_one('button.copy-btn')
+            self.assertEqual(button['onclick'], "copySection('wikiinterest', this)")
+            script = next(node.get_text() for node in soup.select('script')
+                          if node.get_text().startswith('window.__content_wikiinterest = '))
+            self.assertEqual(json.loads(script.partition(' = ')[2].rstrip(';')), body)
+            health = next(row for row in inspect(page, self.now) if row['key']=='wikiinterest')
+            self.assertEqual(health['status'], 'ok')
+            self.assertNotIn(cards.WIKI_DELAY_NOTICE, textarea.get_text())
+
     def test_corrupt_or_future_snapshot_is_not_used_for_display(self):
         for entry in (dict(self.old, expiresAtKst='2099-01-01T00:00:00+09:00'),
                       cards.card_metadata('wikiinterest', wiki_body(self.now.date())),
