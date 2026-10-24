@@ -1,5 +1,23 @@
 🤖 26년 10월 24일 토요일 AI 뉴스
 
+피차이 “클라우드 매출 포기하더라도 첨단 AI 개발에 컴퓨팅 우선 투입”
+https://www.aitimes.com/news/articleView.html?idxno=216618
+
+중국 국영 통신망서 수출 금지 엔비디아 칩 또 포착…첨단 'B300' 32개 확인
+https://www.aitimes.com/news/articleView.html?idxno=216617
+
+오픈AI 연구원 3명 해고, ‘순환 추론’ 유출 조사서 비롯…시그널 대화 쟁점
+https://www.aitimes.com/news/articleView.html?idxno=216616
+
+오픈AI, AI 보안 우회로 중단했던 모델 학습 재개…인터넷 차단 강화
+https://www.aitimes.com/news/articleView.html?idxno=216615
+
+SK “AI 데이터센터 5GW에 464조 필요”…글로벌 빅테크와 투자 협상
+https://www.aitimes.com/news/articleView.html?idxno=216614
+
+앤트로픽, 구글 클라우드서 최신 기능 쓰는 '관리형 클로드' 출시
+https://www.aitimes.com/news/articleView.html?idxno=216613
+
 앤트로픽, 클로드로 오픈소스 123개 라이브러리 검증...수십 년 버그도 발견
 https://www.aitimes.com/news/articleView.html?idxno=216612
 
@@ -11,21 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216610
 
 구글 클라우드, 에이전트 전용 '컴퓨팅 엔진' 출시…마이크로VM으로 보안 격리
 https://www.aitimes.com/news/articleView.html?idxno=216608
-
-구글, 터미널서 AI 에이전트 다루는 '제미나이 API CLI' 오픈소스 공개
-https://www.aitimes.com/news/articleView.html?idxno=216607
-
-딥시크·미니맥스, 중국 정부 AI 모델 해외 수출 승인 획득
-https://www.aitimes.com/news/articleView.html?idxno=216606
-
-앤트로픽 '미소스 5', 실제 피해 경고에도 해킹 지속...정렬 실패 확인
-https://www.aitimes.com/news/articleView.html?idxno=216605
-
-구글 ‘제미나이 4 카본’ 외부 테스트설…“3D 개선됐지만 속도 느려”
-https://www.aitimes.com/news/articleView.html?idxno=216604
-
-문샷 ‘키미 K3.1 프로’, AAII 전체 4위…오픈웨이트 1위 등극
-https://www.aitimes.com/news/articleView.html?idxno=216603
-
-NC AI, '풀스택 피지컬 AI'로 산업 AX 공략… 제조·조선·국방으로 협력 확대
-https://www.aitimes.com/news/articleView.html?idxno=216602
