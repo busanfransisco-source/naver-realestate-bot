@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-10-25 07:45:50",
+  "updated_at_kst": "2026-10-25 07:48:47",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 25일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "서울 새 아파트 공급 가뭄…'신축 희소성' 커진다",
+      "url": "https://n.news.naver.com/mnews/article/119/0003146647"
+    },
     {
       "title": "“아파트 관리비 비리 의심 7851곳”...점검·처분 ‘깜깜이’",
       "url": "https://n.news.naver.com/mnews/article/666/0000128948"
@@ -38,10 +42,6 @@
     {
       "title": "재건축 심의 지연 줄인다…서울시, 초기부터 현장 자문 강화한다",
       "url": "https://n.news.naver.com/mnews/article/421/0009247859"
-    },
-    {
-      "title": "[르포] “아들 신혼집 보러 왔어요”… 계양신도시 7억~8억원대 민간분양에 발길",
-      "url": "https://n.news.naver.com/mnews/article/366/0001200082"
     }
   ]
 }
