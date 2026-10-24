@@ -12,6 +12,9 @@ KST = timezone(timedelta(hours=9))
 DAYS = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
 DAYS_KR = ['월요일', '화요일', '수요일', '목요일', '금요일', '토요일', '일요일']
 SOURCE_LABEL = '📚 YES24 국내도서 주간 베스트 TOP 10'
+UNAVAILABLE_DIGEST = ('📚 YES24 주간 베스트셀러\n\n'
+                      '오늘 또는 어제 수집한 검증 자료를 가져오지 못했습니다.\n'
+                      '이번 아침 공유에서 제외합니다.')
 PERIOD_RE = re.compile(r'^📅 집계 기간: (\d{4}-\d{2}-\d{2}) ~ (\d{4}-\d{2}-\d{2})$', re.M)
 
 
@@ -122,7 +125,7 @@ def digest_info(text):
 
 
 def load_digest(directory=Path('.'), today=None):
-    """Use the newest still-valid sales week, never legacy or future-dated files."""
+    """Use a valid week collected today/yesterday, without relabelling its date."""
     today = today or datetime.now(KST).date()
     candidates = []
     for path in [directory / 'books.txt', *[directory / f'books-{d}.txt' for d in DAYS]]:
@@ -131,13 +134,14 @@ def load_digest(directory=Path('.'), today=None):
         except FileNotFoundError:
             continue
         info = digest_info(text)
-        if info and info[0] <= today and valid_period(info[1], info[2], today):
+        if (info and 0 <= (today-info[0]).days <= 1
+                and valid_period(info[1], info[2], today)):
             # A newer file check must not outrank a newer actual sales week.
             candidates.append((info[2], info[0], text))
     if candidates:
         # Older verified files can still contain the retired footer link.
         return max(candidates, key=lambda item: item[:2])[2].replace('\n' + URL, '').strip()
-    return '(YES24 주간 베스트셀러를 가져오지 못했습니다)'
+    return UNAVAILABLE_DIGEST
 
 
 def refresh(now=None, collector=None, directory=Path('.')):

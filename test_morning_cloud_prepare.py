@@ -140,6 +140,69 @@ class ContractTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 build_snapshot(bad,NOW,evidence=self.evidence)
 
+    def test_books_accept_only_original_today_or_yesterday_with_two_or_four_digit_year(self):
+        for header in ('26년 10월 21일', '26년 10월 20일', '2026년 10월 20일'):
+            bodies = self.bodies[:]
+            bodies[7] = bodies[7].replace('26년 10월 21일', header)
+            value = build_snapshot(bodies, NOW, evidence=self.evidence)
+            self.assertEqual(value['boxes'][7]['body'], bodies[7])
+        for header in ('26년 10월 19일', '26년 10월 22일', '026년 10월 20일'):
+            bodies = self.bodies[:]
+            bodies[7] = bodies[7].replace('26년 10월 21일', header)
+            with self.assertRaises(ValueError):
+                build_snapshot(bodies, NOW, evidence=self.evidence)
+
+    def test_explicit_books_omission_keeps_nine_slots_and_eight_valid_bodies(self):
+        bodies = self.bodies[:]
+        bodies[7] = ''
+        with self.assertRaises(ValueError):
+            build_snapshot(bodies, NOW, evidence=self.evidence)
+        value = build_snapshot(bodies, NOW, evidence=self.evidence, omit_books=True)
+        returned = validate_snapshot(value, NOW)
+        self.assertEqual(len(returned), 9)
+        self.assertEqual(returned[7], '')
+        self.assertEqual([box['number'] for box in value['boxes']], list(range(1, 10)))
+        self.assertEqual([box['key'] for box in value['boxes']], list(BOX_KEYS))
+        self.assertTrue(value['boxes'][7]['omitted'])
+        self.assertEqual(value['boxes'][7]['omissionReason'], 'source_unavailable')
+        self.assertNotIn('booksPeriodStart', value['evidence'])
+        self.assertNotIn('booksPeriodEnd', value['evidence'])
+        for other in range(9):
+            if other == 7:
+                continue
+            bad = bodies[:]
+            bad[other] = ''
+            with self.assertRaises(ValueError):
+                build_snapshot(bad, NOW, evidence=self.evidence, omit_books=True)
+
+    def test_books_omission_is_explicit_empty_hashed_and_cannot_move_slots(self):
+        with self.assertRaises(ValueError):
+            build_snapshot(self.bodies, NOW, evidence=self.evidence, omit_books=True)
+        bodies = self.bodies[:]
+        bodies[7] = ''
+        value = build_snapshot(bodies, NOW, evidence=self.evidence, omit_books=True)
+        for mutate in (lambda a:a['boxes'][7].update(omitted='true'),
+                       lambda a:a['boxes'][7].pop('omitted'),
+                       lambda a:a['boxes'][7].update(omissionReason='arbitrary'),
+                       lambda a:a['boxes'][7].update(sha256='bad'),
+                       lambda a:a['boxes'][7].update(body='stale text'),
+                       lambda a:a['boxes'][0].update(omitted=True, omissionReason='source_unavailable'),
+                       lambda a:a['boxes'][7].update(number=7, key='metalcoin')):
+            bad = copy.deepcopy(value)
+            mutate(bad)
+            with self.assertRaises(ValueError):
+                validate_snapshot(self.resign(bad), NOW)
+
+    def test_contract_imports_no_collector_or_network_modules(self):
+        import ast
+        import morning_briefing_contract as contract
+        tree = ast.parse(Path(contract.__file__).read_text(encoding='utf-8'))
+        names = [node.module for node in ast.walk(tree) if isinstance(node, ast.ImportFrom)]
+        names += [alias.name for node in ast.walk(tree) if isinstance(node, ast.Import)
+                  for alias in node.names]
+        self.assertFalse(any(name and name.split('.')[0] in ('requests','yes24_books','bs4','pathlib')
+                             for name in names))
+
     def test_explicit_verified_zero_subscriptions_allowed(self):
         bodies = self.bodies[:]
         bodies[3] = HEAD + '청약 소식\n\n🏗️ 청약 접수 단지 (전국, 2주 이내)\n\n(2주 이내 접수 예정인 단지가 없습니다)\n'
@@ -306,6 +369,46 @@ class PipelineTests(unittest.TestCase):
         self.assertIn('정상 수집 검증',(self.root/'metalcoin.txt').read_text(encoding='utf-8'))
         self.assertNotIn('fuelfx',report['websiteKeys'])
         self.assertIn('metalcoin',report['websiteKeys'])
+
+    def test_unavailable_books_only_is_omitted_and_eight_sources_are_ready(self):
+        self.run_prepare()
+        def runner(command, **kwargs):
+            result = self.runner(command, **kwargs)
+            if command[-1] == 'market_fetch.py':
+                for name in ('books.txt','books-wed.txt'):
+                    (self.root/name).write_text('수집 실패', encoding='utf-8')
+                # Remove the usable old copy too, so no verified week is left.
+                for name in ('books.txt','books-wed.txt'):
+                    original = fixture_sources()[0][7].replace('10월 21일', '10월 19일')
+                    (self.root/name).write_text(original, encoding='utf-8')
+            return result
+        # The backup also contains an out-of-policy (two-day-old) source.
+        old = fixture_sources()[0][7].replace('10월 21일', '10월 19일')
+        for name in ('books.txt','books-wed.txt'):
+            (self.root/name).write_text(old, encoding='utf-8')
+        report = self.run_prepare(collect=True, runner=runner)
+        self.assertEqual(report['status'], 'ok', report)
+        self.assertTrue(report['snapshotWritten'])
+        self.assertEqual(report['omittedKeys'], ['books'])
+        self.assertNotIn('books', report['websiteKeys'])
+        snapshot = json.loads(self.output.read_text(encoding='utf-8'))
+        self.assertEqual(validate_snapshot(snapshot, NOW)[7], '')
+        self.assertTrue(snapshot['boxes'][7]['omitted'])
+        self.assertNotIn('booksPeriodStart', snapshot['evidence'])
+        self.assertEqual((self.root/'books.txt').read_text(encoding='utf-8'), old)
+
+    def test_export_missing_books_can_be_ready_but_missing_other_source_cannot(self):
+        for name in ('books.txt','books-wed.txt'):
+            (self.root/name).write_text('자료 없음', encoding='utf-8')
+        report = self.run_prepare()
+        self.assertEqual(report['status'], 'ok')
+        self.assertEqual(report['omittedKeys'], ['books'])
+        previous = self.output.read_bytes()
+        (self.root/'weather-wed.txt').write_text('수집 실패', encoding='utf-8')
+        report = self.run_prepare()
+        self.assertNotEqual(report['status'], 'ok')
+        self.assertFalse(report['snapshotWritten'])
+        self.assertEqual(self.output.read_bytes(), previous)
 
     def test_timeout_and_sensitive_process_output_not_echoed(self):
         secret = 'test-secret-no-print'

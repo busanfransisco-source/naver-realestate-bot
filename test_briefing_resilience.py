@@ -153,10 +153,8 @@ class BriefingResilienceTests(unittest.TestCase):
                 )
                 Path("books-sun.txt").write_text("기존 정상 베스트셀러 10권", encoding="utf-8")
                 # A legacy/undated list must not be silently reused as YES24.
-                self.assertIn(
-                    "YES24 주간 베스트셀러를 가져오지 못했습니다",
-                    gen_briefing.read_section_text("books", "mon"),
-                )
+                from yes24_books import UNAVAILABLE_DIGEST
+                self.assertEqual(gen_briefing.read_section_text("books", "mon"), UNAVAILABLE_DIGEST)
             finally:
                 os.chdir(previous)
 

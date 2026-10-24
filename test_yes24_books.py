@@ -151,6 +151,37 @@ class Yes24BooksTests(unittest.TestCase):
             (directory/'books.txt').write_text(old, encoding='utf-8')
             self.assertIn('가져오지 못했습니다', books.load_digest(directory, date(2026, 10, 20)))
 
+    def test_only_today_or_yesterday_original_collection_is_available(self):
+        today = date(2026, 10, 15)
+        with tempfile.TemporaryDirectory() as tmp:
+            directory = Path(tmp)
+            path = directory/'books.txt'
+            for day in (13, 14, 15, 16):
+                original = books.render(self.ranking, datetime(2026, 10, day, 6, tzinfo=books.KST))
+                path.write_text(original, encoding='utf-8')
+                with self.subTest(original_collection_day=day):
+                    loaded = books.load_digest(directory, today)
+                    if day in (14, 15):
+                        self.assertEqual(loaded, original.strip())
+                    else:
+                        self.assertEqual(loaded, books.UNAVAILABLE_DIGEST)
+                    self.assertEqual(path.read_text(encoding='utf-8'), original)
+
+    def test_yesterday_check_does_not_extend_expired_sales_week(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            directory = Path(tmp)
+            original = books.render(self.ranking, datetime(2026, 10, 19, 6, tzinfo=books.KST))
+            (directory/'books.txt').write_text(original, encoding='utf-8')
+            self.assertEqual(books.load_digest(directory, date(2026, 10, 20)), books.UNAVAILABLE_DIGEST)
+
+    def test_missing_optional_books_clearly_excluded_without_fabricated_date(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            result = books.load_digest(Path(tmp), date(2026, 10, 25))
+        self.assertEqual(result, books.UNAVAILABLE_DIGEST)
+        self.assertIn('이번 아침 공유에서 제외', result)
+        self.assertNotIn('집계 기간:', result)
+        self.assertNotIn('10월 25일', result)
+
     def test_newer_sales_period_wins_over_later_check_of_older_week(self):
         today = date(2026, 10, 19)
         recent = books.parse_ranking(fixture(week='10월 12일 ~ 10월 18일'), today)

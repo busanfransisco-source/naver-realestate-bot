@@ -58,6 +58,17 @@ class PublicationTests(unittest.TestCase):
         self.assertEqual((self.root / 'fortune.txt').read_text(encoding='utf-8'), 'preserve')
         self.assertFalse((self.root / 'morning-briefing-ready.json').exists())
 
+    def test_explicit_optional_books_omission_preserves_original_and_verifies_eight(self):
+        bodies=self.bodies[:]; bodies[7]=''
+        evidence={key:value for key,value in self.evidence.items() if not key.startswith('books')}
+        self.snapshot=build_snapshot(bodies,NOW,evidence=evidence,omit_books=True)
+        self.save()
+        (self.root/'books.txt').write_text('keep original',encoding='utf-8')
+        self.assertTrue(apply_bundle(self.source,self.cache,root=self.root,now=NOW))
+        self.assertEqual((self.root/'books.txt').read_text(encoding='utf-8'),'keep original')
+        self.assertEqual((self.root/'realestate.txt').read_text(encoding='utf-8'),bodies[8])
+        self.assertEqual(verify_pair(self.snapshot,page(bodies),self.snapshot,NOW),self.snapshot['snapshotSha256'])
+
     def test_cache_body_must_match(self):
         self.trend['data']['national']['sale'] = '-0.99'
         self.save()

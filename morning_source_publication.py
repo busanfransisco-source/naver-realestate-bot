@@ -85,6 +85,11 @@ def build_publication(bodies, now, *, evidence, eligible_keys=None):
         boxes.append(dict(number=number, key=key, body=body,
                           sha256=body_sha256(body), checkedAtKst=now.isoformat(),
                           sourceMode=_source_mode(key, body, now)))
+    included = {box['key'] for box in boxes}
+    if 'books' not in included:
+        safe_evidence = {key: value for key, value in safe_evidence.items() if not key.startswith('books')}
+    if 'trend' not in included:
+        safe_evidence.pop('trendCheckedAtKst', None)
     artifact = dict(schemaVersion=1, kind=KIND, deliveryDateKst=now.date().isoformat(),
                     generatedAtKst=now.isoformat(),
                     expiresAtKst=datetime.combine(now.date()+timedelta(days=1), time(), KST).isoformat(),
@@ -190,7 +195,9 @@ def apply_collection(publication_path, trend_path=None, snapshot_path=None, *, r
     if snapshot_path is not None:
         snapshot = json.loads(Path(snapshot_path).read_text(encoding='utf-8'))
         bodies = validate_snapshot(snapshot, now)
-        if (len(boxes) != len(BOX_KEYS) or [box['body'] for box in boxes] != bodies
+        expected = {key: body for key, body in zip(BOX_KEYS, bodies) if body}
+        actual = {box['key']: box['body'] for box in boxes}
+        if (actual != expected
                 or snapshot['generatedAtKst'] != artifact['generatedAtKst']
                 or snapshot['evidence'] != artifact['evidence']):
             raise ValueError('strict ready and website sources differ')

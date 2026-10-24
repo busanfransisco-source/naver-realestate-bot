@@ -159,6 +159,23 @@ class MorningSourcePublicationTests(unittest.TestCase):
                 apply_collection(pub,snapshot_path=ready,root=root,now=NOW)
             self.assertFalse((root/'fortune.txt').exists())
 
+    def test_eight_source_artifact_and_explicit_omitted_snapshot_apply_together(self):
+        from morning_briefing_contract import build_snapshot
+        bodies=self.bodies[:];bodies[7]=''
+        evidence={key:value for key,value in self.evidence.items() if not key.startswith('books')}
+        artifact=build_publication(bodies,NOW,evidence=evidence)
+        snapshot=build_snapshot(bodies,NOW,evidence=evidence,omit_books=True)
+        self.assertEqual(len(artifact['boxes']),8)
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory)
+            pub=root/'pub.json';pub.write_text(json.dumps(artifact),encoding='utf-8')
+            ready=root/'ready.json';ready.write_text(json.dumps(snapshot),encoding='utf-8')
+            cache=root/'cache.json';cache.write_text(json.dumps(self.trend),encoding='utf-8')
+            result=apply_collection(pub,cache,ready,root=root,now=NOW)
+            self.assertEqual(result,dict(websiteApplied=True,readyApplied=True))
+            self.assertFalse((root/'books.txt').exists())
+            self.assertEqual((root/'realestate.txt').read_text(encoding='utf-8'),bodies[8])
+
     def test_public_network_verification_cache_busts_and_reads_only(self):
         artifact=self.build(eligible_keys=['weather','books'])
         html=page(artifact['boxes'])

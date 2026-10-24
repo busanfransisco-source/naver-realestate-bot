@@ -112,10 +112,16 @@ def _body_issues(key, body, today, evidence):
         if len(coins) != 10 or len(set(coins)) != 10 or '비트코인' not in coins:
             issues.append('metalcoin: ten distinct coins including bitcoin required')
     elif key == 'books':
-        from yes24_books import digest_info, valid_period
-        original = digest_info(body)
-        if not (original and original[0] <= today and valid_period(original[1], original[2], today)):
-            issues.append('books: verified weekly source period stale or future-dated')
+        # Pure validation is shared verbatim with the sender. Never import a
+        # network collector here or change an old source header to today's date.
+        try:
+            original_day = _body_date(key, body, today)
+            if (not re.match(r'(?:\d{2}|\d{4})년', body) or original_day is None
+                    or not 0 <= (today-original_day).days <= 1):
+                issues.append('books: original report date must be today or yesterday')
+        except ValueError:
+            original_day = None
+            issues.append('books: invalid original report date')
         ranks = re.findall(r'^(\d+)\.\s+(.+)$', body, re.M)
         if ([int(number) for number, _ in ranks] != list(range(1, 11))
                 or 'YES24 국내도서 주간 베스트 TOP 10' not in body):
@@ -123,6 +129,15 @@ def _body_issues(key, body, today, evidence):
         period = re.search(r'^📅 집계 기간: (\d{4}-\d{2}-\d{2}) ~ (\d{4}-\d{2}-\d{2})$', body, re.M)
         if not period or list(period.groups()) != [evidence.get('booksPeriodStart'), evidence.get('booksPeriodEnd')]:
             issues.append('books: body and source period differ')
+        if period:
+            try:
+                start, end = map(date.fromisoformat, period.groups())
+                if (start.weekday() != 0 or end-start != timedelta(days=6)
+                        or not 1 <= (today-end).days <= 8
+                        or original_day is None or not 1 <= (original_day-end).days <= 8):
+                    issues.append('books: verified weekly source period stale or future-dated')
+            except ValueError:
+                issues.append('books: invalid weekly source period')
     elif key == 'realestate':
         urls = re.findall(r'^https://\S+$', body, re.M)
         if len(set(urls)) < 2:
@@ -161,17 +176,20 @@ def snapshot_issues(snapshot, now):
             issues.append('weekly trend source check outside eight days')
     except ValueError as exc:
         issues.append(str(exc))
-    try:
-        start = date.fromisoformat(evidence.get('booksPeriodStart'))
-        end = date.fromisoformat(evidence.get('booksPeriodEnd'))
-        if start.weekday() != 0 or end - start != timedelta(days=6) or not 1 <= (today - end).days <= 8:
-            issues.append('YES24 weekly source period invalid or stale')
-    except (ValueError, TypeError):
-        issues.append('YES24 weekly source period missing')
     boxes = snapshot.get('boxes')
     if not isinstance(boxes, list) or len(boxes) != 9:
         issues.append('exactly nine morning boxes required')
         boxes = []
+    books_omitted = (len(boxes) == 9 and isinstance(boxes[7], dict)
+                     and boxes[7].get('omitted') is True)
+    if not books_omitted:
+        try:
+            start = date.fromisoformat(evidence.get('booksPeriodStart'))
+            end = date.fromisoformat(evidence.get('booksPeriodEnd'))
+            if start.weekday() != 0 or end-start != timedelta(days=6) or not 1 <= (today-end).days <= 8:
+                issues.append('YES24 weekly source period invalid or stale')
+        except (ValueError, TypeError):
+            issues.append('YES24 weekly source period missing')
     for number, (key, box) in enumerate(zip(BOX_KEYS, boxes), 1):
         if not isinstance(box, dict):
             issues.append(f'{key}: invalid box object')
@@ -179,7 +197,17 @@ def snapshot_issues(snapshot, now):
         if box.get('number') != number or isinstance(box.get('number'), bool) or box.get('key') != key:
             issues.append(f'{key}: box number or identity mismatch')
         body = box.get('body')
-        issues.extend(_body_issues(key, body, today, evidence))
+        omitted = box.get('omitted', False)
+        if type(omitted) is not bool:
+            issues.append(f'{key}: omitted flag must be boolean')
+        if omitted is True:
+            if (key != 'books' or number != 8 or body != ''
+                    or box.get('omissionReason') != 'source_unavailable'):
+                issues.append(f'{key}: only empty books slot eight may be omitted')
+        else:
+            if 'omissionReason' in box:
+                issues.append(f'{key}: omission reason without explicit omission')
+            issues.extend(_body_issues(key, body, today, evidence))
         if not isinstance(body, str) or box.get('sha256') != body_sha256(body):
             issues.append(f'{key}: body checksum mismatch')
         try:
@@ -204,24 +232,33 @@ def validate_snapshot(snapshot, now):
     return [box['body'] for box in snapshot['boxes']]
 
 
-def build_snapshot(bodies, now, *, evidence, checked_at=None):
-    """Construct and immediately revalidate a complete morning snapshot."""
+def build_snapshot(bodies, now, *, evidence, checked_at=None, omit_books=False):
+    """Build nine stable slots; only books may be explicitly omitted."""
     now = _aware(now, 'now')
     if not isinstance(bodies, list) or len(bodies) != 9:
         raise ValueError('exactly nine report bodies required')
     if not isinstance(evidence, dict) or checked_at is not None and not isinstance(checked_at, dict):
         raise ValueError('source evidence and checked_at must be objects')
+    if type(omit_books) is not bool or omit_books and bodies[7] != '':
+        raise ValueError('explicit books omission requires an empty slot eight')
     checks = checked_at or {}
     boxes = []
     for number, (key, body) in enumerate(zip(BOX_KEYS, bodies), 1):
         if not isinstance(body, str):
             raise ValueError(f'{key}: body must be text')
-        boxes.append(dict(number=number, key=key, body=body, sha256=body_sha256(body),
-                          checkedAtKst=checks.get(key, now.isoformat())))
+        box = dict(number=number, key=key, body=body, sha256=body_sha256(body),
+                   checkedAtKst=checks.get(key, now.isoformat()))
+        if key == 'books' and omit_books:
+            box.update(omitted=True, omissionReason='source_unavailable')
+        boxes.append(box)
+    retained_evidence = dict(evidence)
+    if omit_books:
+        for key in ('booksPeriodStart', 'booksPeriodEnd'):
+            retained_evidence.pop(key, None)
     snapshot = dict(schemaVersion=1, deliveryDateKst=now.date().isoformat(),
                     generatedAtKst=now.isoformat(),
                     expiresAtKst=datetime.combine(now.date() + timedelta(days=1), time(), KST).isoformat(),
-                    boxes=boxes, evidence=dict(evidence))
+                    boxes=boxes, evidence=retained_evidence)
     snapshot['snapshotSha256'] = snapshot_sha256(snapshot)
     validate_snapshot(snapshot, now)
     return snapshot

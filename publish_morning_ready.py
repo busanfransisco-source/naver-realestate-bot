@@ -32,6 +32,10 @@ def apply_bundle(snapshot_path, trend_path, *, root='.', now=None):
     weekday = ('mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun')[now.weekday()]
     payloads = {}
     for key, body in zip(BOX_KEYS, bodies):
+        if key == 'books' and not body:
+            # Explicit optional omission is not a blank source file. Preserve
+            # the last original source; the renderer enforces the one-day cap.
+            continue
         for name in (f'{key}.txt', f'{key}-{weekday}.txt'):
             payloads[name] = body
         if key in ('fortune', 'weather', 'realestate'):

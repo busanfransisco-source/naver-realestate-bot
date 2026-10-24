@@ -239,7 +239,11 @@ def prepare(root, output, report, *, collect=False, now=None, runner=None,
         order = {group[0]: index for index, group in enumerate(GROUPS)}
         groups.sort(key=lambda row: order[row['group']])
     finished = fixed_now or datetime.now(KST)
-    failed_groups = [group for group in groups if group['status'] != 'ok']
+    # Books alone is optional. Failures in every other source remain blocking
+    # for sender readiness, even when an older same-day raw file exists.
+    failed_groups = [group for group in groups if group['status'] != 'ok'
+                     and any(box['status'] == 'failed' and box['key'] != 'books'
+                             for box in group['boxes'])]
     diagnostics = dict(schemaVersion=1, checkedAtKst=finished.isoformat(),
                        mode='collect' if collect else 'export-only', groups=groups,
                        status='failed', snapshotWritten=False, websiteWritten=False)
@@ -248,6 +252,14 @@ def prepare(root, output, report, *, collect=False, now=None, runner=None,
     # the sender's strict nine-box ready contract with a partial snapshot.
     eligible_keys = ([box['key'] for group in groups for box in group['boxes']
                       if box['status'] != 'failed'] if collect else list(BOX_KEYS))
+    omit_books = ('books' not in eligible_keys
+                  or bool(_body_issues('books', bodies[7], finished.date(), evidence)))
+    if omit_books:
+        bodies[7] = ''
+        eligible_keys = [key for key in eligible_keys if key != 'books']
+        evidence = {key: value for key, value in evidence.items()
+                    if key not in ('booksPeriodStart', 'booksPeriodEnd')}
+    diagnostics['omittedKeys'] = ['books'] if omit_books else []
     from morning_source_publication import build_publication
     try:
         publication = build_publication(bodies, finished, evidence=evidence, eligible_keys=eligible_keys)
@@ -256,7 +268,7 @@ def prepare(root, output, report, *, collect=False, now=None, runner=None,
     except (ValueError, OSError, TypeError, KeyError):
         pass
     try:
-        snapshot = build_snapshot(bodies, finished, evidence=evidence)
+        snapshot = build_snapshot(bodies, finished, evidence=evidence, omit_books=omit_books)
         if failed_groups:
             diagnostics['reason'] = 'collector_groups_failed_previous_snapshot_preserved'
         else:

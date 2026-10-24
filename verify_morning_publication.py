@@ -20,6 +20,10 @@ def verify_pair(snapshot, html, expected, now):
         raise ValueError('public snapshot is older than the published bundle')
     soup = BeautifulSoup(html, 'html.parser')
     for number, key, body in zip(range(1, 10), BOX_KEYS, bodies):
+        if key == 'books' and not body:
+            # Its omission was explicitly hashed and validated above. Do not
+            # confuse the web's explanatory placeholder with a sendable block.
+            continue
         nodes = soup.select(f'textarea#ta-{key}')
         if len(nodes) != 1 or nodes[0].get_text().strip() != body.strip():
             raise ValueError(f'public morning body mismatch: {number}')

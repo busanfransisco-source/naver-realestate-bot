@@ -57,6 +57,8 @@ def inspect(page, now=None):
         text = nodes[0].get_text().strip() if len(nodes) == 1 else ''
         issues = []
         delayed_wiki = False
+        from yes24_books import UNAVAILABLE_DIGEST
+        optional_books_omitted = key == 'books' and text == UNAVAILABLE_DIGEST
         card = nodes[0].find_parent('section') if nodes else None
         if not card or str(card.get('data-slot')) != str(slot):
             issues.append('missing/duplicate/wrong slot')
@@ -141,7 +143,8 @@ def inspect(page, now=None):
             issues.append('coin top 10 incomplete')
         if key in ('realestate', 'world', 'finance', 'ai') and text.count('https://') < 2:
             issues.append('news links incomplete')
-        results.append(dict(slot=slot, key=key, status=(('failed' if now.hour >= due else 'pending') if issues
+        results.append(dict(slot=slot, key=key, status=('omitted' if optional_books_omitted else
+                                                       ('failed' if now.hour >= due else 'pending') if issues
                                                        else 'delayed' if delayed_wiki else 'ok'),
                             sourceDelayed=delayed_wiki,
                             issues=issues, sha256=hashlib.sha256(text.encode()).hexdigest()))

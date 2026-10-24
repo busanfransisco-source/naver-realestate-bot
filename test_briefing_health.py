@@ -42,6 +42,15 @@ class HealthTests(unittest.TestCase):
             if expected=='failed':
                 self.assertIn('YES24 report date is future',row['issues'])
 
+    def test_explicit_optional_book_notice_is_not_a_global_health_failure(self):
+        from yes24_books import UNAVAILABLE_DIGEST
+        page=self.page()
+        start=page.index('id="ta-books">')+len('id="ta-books">')
+        end=page.index('</textarea>',start)
+        page=page[:start]+UNAVAILABLE_DIGEST+page[end:]
+        row=inspect(page,datetime(2026,10,25,9,tzinfo=KST))[KEYS.index('books')]
+        self.assertEqual(row['status'],'omitted')
+
     def test_missing_card_detected(self):
         rows = inspect(self.page().replace('ta-ai', 'ta-wrong'), datetime(2026, 10, 6, 15, tzinfo=KST))
         self.assertIn('missing/duplicate/wrong slot', rows[KEYS.index('ai')]['issues'])
