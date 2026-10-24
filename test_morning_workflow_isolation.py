@@ -13,9 +13,10 @@ class MorningWorkflowIsolationTests(unittest.TestCase):
         self.assertIn('report.get(\'snapshotWritten\') is True',text)
         self.assertIn('validate_publication(',text)
         self.assertIn('validate_snapshot(',text)
-        self.assertIn('morning_source_publication.py --publication',text)
+        self.assertIn('from morning_source_publication import apply_collection',text)
         self.assertIn('morning_source_publication.py --verify',text)
-        self.assertIn('if [ "$MORNING_READY" = "true" ]; then',text)
+        self.assertIn("if os.environ['MORNING_READY']=='true' else None",text)
+        self.assertIn("if: steps.apply.outputs.ready_applied == 'true'",text)
         self.assertIn('Strict nine-box sender snapshot remains unchanged',text)
 
     def test_official_recovery_does_not_wait_for_morning_collection(self):
@@ -35,6 +36,11 @@ class MorningWorkflowIsolationTests(unittest.TestCase):
         upload=text.split('name: Save validated publication bundle',1)[1].split('      - name:',1)[0]
         self.assertIn('path: tmp/morning-publication/',upload)
         self.assertNotIn('path: |',upload)
+
+    def test_weekly_cache_artifact_is_optional_when_trend_is_not_selected(self):
+        text = Path('.github/workflows/morning-briefing.yml').read_text(encoding='utf-8')
+        self.assertIn("if any(box['key'] == 'trend' for box in boxes):",text)
+        self.assertIn('trend if trend.exists() else None',text)
 
 
 if __name__=='__main__':

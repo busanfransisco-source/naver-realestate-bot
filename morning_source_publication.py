@@ -179,6 +179,36 @@ def apply_publication(publication_path, trend_path=None, *, root='.', now=None):
     return True
 
 
+def apply_collection(publication_path, trend_path=None, snapshot_path=None, *, root='.', now=None):
+    """Use one freshness decision for website sources and the optional ready file."""
+    from morning_briefing_contract import validate_snapshot
+    from publish_morning_ready import apply_bundle
+    now = _aware(now or datetime.now(KST), 'now')
+    root = Path(root)
+    artifact = json.loads(Path(publication_path).read_text(encoding='utf-8'))
+    boxes = validate_publication(artifact, now)
+    if snapshot_path is not None:
+        snapshot = json.loads(Path(snapshot_path).read_text(encoding='utf-8'))
+        bodies = validate_snapshot(snapshot, now)
+        if (len(boxes) != len(BOX_KEYS) or [box['body'] for box in boxes] != bodies
+                or snapshot['generatedAtKst'] != artifact['generatedAtKst']
+                or snapshot['evidence'] != artifact['evidence']):
+            raise ValueError('strict ready and website sources differ')
+    ready = root/'morning-briefing-ready.json'
+    if ready.is_file():
+        try:
+            old = json.loads(ready.read_text(encoding='utf-8'))
+            validate_snapshot(old, now)
+            if _aware(old['generatedAtKst'], 'old ready') >= _aware(artifact['generatedAtKst'], 'generation'):
+                return dict(websiteApplied=False, readyApplied=False)
+        except (OSError, ValueError, KeyError, TypeError):
+            pass
+    changed = apply_publication(publication_path, trend_path, root=root, now=now)
+    ready_changed = bool(changed and snapshot_path is not None
+                         and apply_bundle(snapshot_path, trend_path, root=root, now=now))
+    return dict(websiteApplied=changed, readyApplied=ready_changed)
+
+
 def verify_publication_page(artifact, html, now):
     """Check each published source's textarea, displayed number and copy body."""
     boxes = validate_publication(artifact, now)

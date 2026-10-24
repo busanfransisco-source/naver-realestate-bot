@@ -71,10 +71,12 @@ jobs:
           publication = report.get('websiteWritten') is True
           ready = report.get('snapshotWritten') is True
           if publication:
-              validate_publication(json.loads(Path('morning-website-sources.json').read_text(encoding='utf-8')), datetime.now(KST))
+              source = json.loads(Path('morning-website-sources.json').read_text(encoding='utf-8'))
+              boxes = validate_publication(source, datetime.now(KST))
               target = Path('tmp/morning-publication'); target.mkdir(parents=True, exist_ok=True)
-              for name in ('morning-website-sources.json', 'neonet-trend-cache.json'):
-                  shutil.copyfile(name, target/name)
+              shutil.copyfile('morning-website-sources.json', target/'morning-website-sources.json')
+              if any(box['key'] == 'trend' for box in boxes):
+                  shutil.copyfile('neonet-trend-cache.json', target/'neonet-trend-cache.json')
               if ready:
                   validate_snapshot(json.loads(Path('morning-briefing-ready.json').read_text(encoding='utf-8')), datetime.now(KST))
                   shutil.copyfile('morning-briefing-ready.json', target/'morning-briefing-ready.json')
@@ -118,16 +120,25 @@ jobs:
           name: morning-ready-source
           path: tmp/morning-ready-source
       - name: Apply verified bundle to latest sources and publish website
+        id: apply
         env:
           MORNING_READY: ${{ needs.collect.outputs.ready }}
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
           git pull --ff-only origin main
-          python morning_source_publication.py --publication tmp/morning-ready-source/morning-website-sources.json --trend-cache tmp/morning-ready-source/neonet-trend-cache.json
-          if [ "$MORNING_READY" = "true" ]; then
-            python publish_morning_ready.py --snapshot tmp/morning-ready-source/morning-briefing-ready.json --trend-cache tmp/morning-ready-source/neonet-trend-cache.json
-          fi
+          python - <<'PY'
+          import os
+          from pathlib import Path
+          from morning_source_publication import apply_collection
+          root = Path('tmp/morning-ready-source')
+          trend = root/'neonet-trend-cache.json'
+          result = apply_collection(root/'morning-website-sources.json', trend if trend.exists() else None,
+                                    root/'morning-briefing-ready.json' if os.environ['MORNING_READY']=='true' else None)
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write('ready_applied='+str(result['readyApplied']).lower()+'\n')
+          print('Morning publication application:', result)
+          PY
           python gen_briefing.py
           git add morning-website-sources.json morning-briefing-ready.json neonet-trend-cache.json briefing.html
           git add fortune*.txt weather*.txt shortnews*.txt subs*.txt trend*.txt fuelfx*.txt metalcoin*.txt books*.txt realestate*.txt
@@ -136,7 +147,7 @@ jobs:
       - name: Verify published morning source and page
         run: python morning_source_publication.py --verify --publication tmp/morning-ready-source/morning-website-sources.json
       - name: Verify strict nine-box sender snapshot when complete
-        if: needs.collect.outputs.ready == 'true'
+        if: steps.apply.outputs.ready_applied == 'true'
         run: python verify_morning_publication.py
       - name: Report incomplete sender snapshot without blocking healthy website sources
         if: needs.collect.outputs.ready != 'true'

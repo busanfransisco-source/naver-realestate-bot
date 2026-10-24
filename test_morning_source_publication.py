@@ -8,7 +8,7 @@ import unittest
 
 from morning_briefing_contract import BOX_KEYS, validate_snapshot
 from morning_source_publication import (
-    OUTPUT, apply_publication, build_publication, publication_sha256,
+    OUTPUT, apply_collection, apply_publication, build_publication, publication_sha256,
     validate_publication, verify_publication, verify_publication_page,
 )
 from test_morning_cloud_prepare import NOW, fixture_sources
@@ -127,6 +127,37 @@ class MorningSourcePublicationTests(unittest.TestCase):
                     html.replace('window.__content_weather = ','window.__content_fortune = ')):
             with self.assertRaises(ValueError):
                 verify_publication_page(artifact,bad,NOW)
+
+    def test_older_full_snapshot_cannot_regress_newer_partial_website_sources(self):
+        from morning_briefing_contract import build_snapshot
+        old=self.build()
+        new=build_publication(self.bodies,NOW+timedelta(minutes=2),evidence=self.evidence,
+                              eligible_keys=[key for key in BOX_KEYS if key!='weather'])
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory)
+            pub=root/'older-publication.json'; pub.write_text(json.dumps(old),encoding='utf-8')
+            ready=root/'older-ready.json'
+            ready.write_text(json.dumps(build_snapshot(self.bodies,NOW,evidence=self.evidence)),encoding='utf-8')
+            cache=root/'cache.json'; cache.write_text(json.dumps(self.trend),encoding='utf-8')
+            (root/OUTPUT).write_text(json.dumps(new),encoding='utf-8')
+            (root/'fortune.txt').write_text('newer source must survive',encoding='utf-8')
+            result=apply_collection(pub,cache,ready,root=root,now=NOW+timedelta(minutes=3))
+            self.assertEqual(result,dict(websiteApplied=False,readyApplied=False))
+            self.assertEqual((root/'fortune.txt').read_text(encoding='utf-8'),'newer source must survive')
+            self.assertFalse((root/'morning-briefing-ready.json').exists())
+
+    def test_mismatched_strict_artifact_does_not_write_website_sources(self):
+        from morning_briefing_contract import build_snapshot
+        artifact=self.build()
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory)
+            pub=root/'pub.json'; pub.write_text(json.dumps(artifact),encoding='utf-8')
+            ready=root/'ready.json'
+            changed=self.bodies[:]; changed[0]+='\n다른 원고\n'
+            ready.write_text(json.dumps(build_snapshot(changed,NOW,evidence=self.evidence)),encoding='utf-8')
+            with self.assertRaises(ValueError):
+                apply_collection(pub,snapshot_path=ready,root=root,now=NOW)
+            self.assertFalse((root/'fortune.txt').exists())
 
     def test_public_network_verification_cache_busts_and_reads_only(self):
         artifact=self.build(eligible_keys=['weather','books'])
