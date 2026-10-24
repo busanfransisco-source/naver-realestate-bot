@@ -107,7 +107,7 @@ def inspect(page, now=None):
                     issues.append('weekly source not checked within 8 days')
             except (OSError, ValueError, TypeError):
                 issues.append('missing weekly source clock')
-        else:
+        elif key != 'books':
             try:
                 if content_date(key, text, today) != today:
                     issues.append('not today material')

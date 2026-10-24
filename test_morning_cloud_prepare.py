@@ -120,11 +120,25 @@ class ContractTests(unittest.TestCase):
             validate_snapshot(self.resign(value), NOW)
 
     def test_old_daily_report_not_relabelled(self):
-        for index in (0, 1, 2, 3, 5, 6, 7, 8):
+        for index in (0, 1, 2, 3, 5, 6, 8):
             bodies = self.bodies[:]
             bodies[index] = bodies[index].replace('10월 21일', '10월 20일')
             with self.assertRaises(ValueError):
                 build_snapshot(bodies, NOW, evidence=self.evidence)
+
+    def test_valid_weekly_books_preserve_original_date_without_blocking_daily_bundle(self):
+        bodies = self.bodies[:]
+        bodies[7] = bodies[7].replace('10월 21일', '10월 20일')
+        snapshot = build_snapshot(bodies, NOW, evidence=self.evidence)
+        self.assertEqual(validate_snapshot(snapshot,NOW)[7],bodies[7])
+        self.assertIn('26년 10월 20일',snapshot['boxes'][7]['body'])
+        self.assertEqual(snapshot['deliveryDateKst'],'2026-10-21')
+        for body in (bodies[7].replace('10월 20일','10월 22일'),
+                     bodies[7].replace('YES24','알라딘'),
+                     bodies[7].replace('10. 검증된 도서 제목 10','누락')):
+            bad=bodies[:]; bad[7]=body
+            with self.assertRaises(ValueError):
+                build_snapshot(bad,NOW,evidence=self.evidence)
 
     def test_explicit_verified_zero_subscriptions_allowed(self):
         bodies = self.bodies[:]
@@ -267,8 +281,8 @@ class PipelineTests(unittest.TestCase):
                     (self.root/name).write_text(bodies[BOX_KEYS.index(key)]+'\n',encoding='utf-8')
             return subprocess.CompletedProcess(command,0)
         report = self.run_prepare(collect=True, runner=maintenance_runner)
-        self.assertEqual(report['status'], 'partial')
-        self.assertFalse(report['snapshotWritten'])
+        self.assertEqual(report['status'], 'ok')
+        self.assertTrue(report['snapshotWritten'])
         self.assertEqual(len(report['websiteKeys']),9)
         market = next(group for group in report['groups'] if group['group']=='market')
         self.assertEqual(market['status'],'ok')

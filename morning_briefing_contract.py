@@ -66,7 +66,7 @@ def _body_issues(key, body, today, evidence):
         return [f'{key}: body missing or shorter than 80 characters']
     if FAILURE.search(body):
         issues.append(f'{key}: incomplete or cached-fallback marker')
-    if key != 'trend':
+    if key not in ('trend', 'books'):
         try:
             if _body_date(key, body, today) != today:
                 issues.append(f'{key}: report date is not today')
@@ -112,6 +112,10 @@ def _body_issues(key, body, today, evidence):
         if len(coins) != 10 or len(set(coins)) != 10 or '비트코인' not in coins:
             issues.append('metalcoin: ten distinct coins including bitcoin required')
     elif key == 'books':
+        from yes24_books import digest_info, valid_period
+        original = digest_info(body)
+        if not (original and original[0] <= today and valid_period(original[1], original[2], today)):
+            issues.append('books: verified weekly source period stale or future-dated')
         ranks = re.findall(r'^(\d+)\.\s+(.+)$', body, re.M)
         if ([int(number) for number, _ in ranks] != list(range(1, 11))
                 or 'YES24 국내도서 주간 베스트 TOP 10' not in body):
