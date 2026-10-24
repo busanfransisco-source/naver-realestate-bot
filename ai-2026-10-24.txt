@@ -6,6 +6,9 @@ https://www.aitimes.com/news/articleView.html?idxno=216611
 [AI카툰] Bob, Senior IT guy - 밥, 오랫동안 꿈꾸던 날라다니는 차
 https://www.aitimes.com/news/articleView.html?idxno=216610
 
+구글, 터미널서 AI 에이전트 다루는 '제미나이 API CLI' 오픈소스 공개
+https://www.aitimes.com/news/articleView.html?idxno=216607
+
 딥시크·미니맥스, 중국 정부 AI 모델 해외 수출 승인 획득
 https://www.aitimes.com/news/articleView.html?idxno=216606
 
@@ -24,8 +27,5 @@ https://www.aitimes.com/news/articleView.html?idxno=216602
 SK하이닉스, 미국 손자회사 솔리다임 IPO 검토 중단
 https://www.aitimes.com/news/articleView.html?idxno=216601
 
-우버, 업계 최초 전 직원 3만명에 '챗GPT 워크' 도입
-https://www.aitimes.com/news/articleView.html?idxno=216597
-
-유니트리, 흉기 막고 차량 들어 올리는 ‘수호 로봇’ 공개…자율 작동 여부는 미공개
-https://www.aitimes.com/news/articleView.html?idxno=216594
+메타 '뮤즈' 아시아 첫발...네이버 "국내 도입 시 허용 여부 검토"
+https://www.aitimes.com/news/articleView.html?idxno=216600
