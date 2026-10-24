@@ -2,6 +2,7 @@
 import re
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
+from urllib.parse import urlparse
 
 import requests
 from bs4 import BeautifulSoup
@@ -14,6 +15,15 @@ SOURCE_LABEL = '📚 YES24 국내도서 주간 베스트 TOP 10'
 PERIOD_RE = re.compile(r'^📅 집계 기간: (\d{4}-\d{2}-\d{2}) ~ (\d{4}-\d{2}-\d{2})$', re.M)
 
 
+class SourceMaintenance(ValueError):
+    """The official site returned its maintenance notice, not a ranking."""
+
+
+def _raise_maintenance():
+    # Do not echo response URLs, exception details or invented reopening times.
+    raise SourceMaintenance('YES24 공식 서비스 점검 중입니다. 기존 주간 집계 기간을 보존합니다.')
+
+
 def valid_period(start, end, today):
     # Read the selected source week, never infer it from the collection date.
     return (start.weekday() == 0 and end - start == timedelta(days=6)
@@ -22,6 +32,13 @@ def valid_period(start, end, today):
 
 def parse_ranking(html, today):
     soup = BeautifulSoup(html, 'html.parser')
+    text = soup.get_text(' ', strip=True)
+    if (not soup.select_one('#divTitle h3') and soup.title
+            and '서비스 이용에 대해 안내' in soup.title.get_text()
+            and re.search(r'서비스\s*점검\s*중', text)
+            and '사이트 중지' in text and '사이트 재오픈' in text
+            and re.search(r'\d{4}\.\d{1,2}\.\d{1,2}', text)):
+        _raise_maintenance()
     year_node = soup.select_one('#scope_year option[selected]')
     week_node = soup.select_one('#scope_week option[selected]')
     heading = soup.select_one('#divTitle h3')
@@ -65,6 +82,12 @@ def collect(today=None):
     response = requests.get(URL, headers={'User-Agent': 'Mozilla/5.0'}, timeout=25)
     response.raise_for_status()
     response.encoding = 'utf-8'
+    final_url = getattr(response, 'url', None)
+    if isinstance(final_url, str):
+        location = urlparse(final_url)
+        if (location.hostname in {'yes24.com', 'www.yes24.com', 'm.yes24.com'}
+                and location.path.lower() == '/notice.html'):
+            _raise_maintenance()
     return parse_ranking(response.text, today)
 
 
@@ -99,7 +122,7 @@ def digest_info(text):
 
 
 def load_digest(directory=Path('.'), today=None):
-    """Use the newest verified YES24 file, even if today's weekday file is legacy."""
+    """Use the newest still-valid sales week, never legacy or future-dated files."""
     today = today or datetime.now(KST).date()
     candidates = []
     for path in [directory / 'books.txt', *[directory / f'books-{d}.txt' for d in DAYS]]:
@@ -108,8 +131,9 @@ def load_digest(directory=Path('.'), today=None):
         except FileNotFoundError:
             continue
         info = digest_info(text)
-        if info and info[0] <= today:
-            candidates.append((info[0], info[2], text))
+        if info and info[0] <= today and valid_period(info[1], info[2], today):
+            # A newer file check must not outrank a newer actual sales week.
+            candidates.append((info[2], info[0], text))
     if candidates:
         # Older verified files can still contain the retired footer link.
         return max(candidates, key=lambda item: item[:2])[2].replace('\n' + URL, '').strip()

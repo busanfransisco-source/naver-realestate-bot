@@ -22,6 +22,8 @@ jobs:
       cancel-in-progress: false
     outputs:
       eligible: ${{ steps.window.outputs.eligible }}
+      publication: ${{ steps.stage.outputs.publication }}
+      ready: ${{ steps.stage.outputs.ready }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -50,16 +52,41 @@ jobs:
         if: steps.window.outputs.eligible == 'true'
         run: pip install -r requirements.txt
       - name: Collect and validate only morning boxes 1 to 9
+        id: prepare
         if: steps.window.outputs.eligible == 'true'
+        continue-on-error: true
         run: python morning_cloud_prepare.py --collect --output morning-briefing-ready.json --report tmp/morning-health.json
+      - name: Stage only independently validated source artifacts
+        id: stage
+        if: always() && steps.window.outputs.eligible == 'true'
+        run: |
+          python - <<'PY'
+          import json, os, shutil
+          from pathlib import Path
+          from datetime import datetime
+          from morning_briefing_contract import KST, validate_snapshot
+          from morning_source_publication import validate_publication
+          report_path = Path('tmp/morning-health.json')
+          report = json.loads(report_path.read_text(encoding='utf-8')) if report_path.exists() else {}
+          publication = report.get('websiteWritten') is True
+          ready = report.get('snapshotWritten') is True
+          if publication:
+              validate_publication(json.loads(Path('morning-website-sources.json').read_text(encoding='utf-8')), datetime.now(KST))
+              target = Path('tmp/morning-publication'); target.mkdir(parents=True, exist_ok=True)
+              for name in ('morning-website-sources.json', 'neonet-trend-cache.json'):
+                  shutil.copyfile(name, target/name)
+              if ready:
+                  validate_snapshot(json.loads(Path('morning-briefing-ready.json').read_text(encoding='utf-8')), datetime.now(KST))
+                  shutil.copyfile('morning-briefing-ready.json', target/'morning-briefing-ready.json')
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write('publication='+str(publication).lower()+'\nready='+str(ready).lower()+'\n')
+          PY
       - name: Save validated publication bundle
-        if: steps.window.outputs.eligible == 'true'
+        if: always() && steps.stage.outputs.publication == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: morning-ready-source
-          path: |
-            morning-briefing-ready.json
-            neonet-trend-cache.json
+          path: tmp/morning-publication/
           if-no-files-found: error
           retention-days: 3
       - name: Save preparation diagnostics
@@ -71,7 +98,7 @@ jobs:
           retention-days: 7
   publish:
     needs: collect
-    if: needs.collect.outputs.eligible == 'true'
+    if: always() && needs.collect.outputs.publication == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     # Only publication shares the existing writer lock, not source collection.
@@ -91,15 +118,33 @@ jobs:
           name: morning-ready-source
           path: tmp/morning-ready-source
       - name: Apply verified bundle to latest sources and publish website
+        env:
+          MORNING_READY: ${{ needs.collect.outputs.ready }}
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
           git pull --ff-only origin main
-          python publish_morning_ready.py --snapshot tmp/morning-ready-source/morning-briefing-ready.json --trend-cache tmp/morning-ready-source/neonet-trend-cache.json
+          python morning_source_publication.py --publication tmp/morning-ready-source/morning-website-sources.json --trend-cache tmp/morning-ready-source/neonet-trend-cache.json
+          if [ "$MORNING_READY" = "true" ]; then
+            python publish_morning_ready.py --snapshot tmp/morning-ready-source/morning-briefing-ready.json --trend-cache tmp/morning-ready-source/neonet-trend-cache.json
+          fi
           python gen_briefing.py
-          git add morning-briefing-ready.json neonet-trend-cache.json briefing.html
+          git add morning-website-sources.json morning-briefing-ready.json neonet-trend-cache.json briefing.html
           git add fortune*.txt weather*.txt shortnews*.txt subs*.txt trend*.txt fuelfx*.txt metalcoin*.txt books*.txt realestate*.txt
           git diff --cached --quiet || git commit -m 'Publish verified 06-20 cloud morning briefing'
           git push origin HEAD:main
       - name: Verify published morning source and page
+        run: python morning_source_publication.py --verify --publication tmp/morning-ready-source/morning-website-sources.json
+      - name: Verify strict nine-box sender snapshot when complete
+        if: needs.collect.outputs.ready == 'true'
         run: python verify_morning_publication.py
+      - name: Report incomplete sender snapshot without blocking healthy website sources
+        if: needs.collect.outputs.ready != 'true'
+        run: |
+          echo 'Healthy website sources were published. Strict nine-box sender snapshot remains unchanged.'
+          exit 1
+  transactions:
+    # Independent official recovery: never make the nine morning boxes wait for
+    # the nationwide scan, and retain the existing collection/publication locks.
+    uses: ./.github/workflows/transactions.yml
+    secrets: inherit

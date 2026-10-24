@@ -1,6 +1,10 @@
 import json
 import unittest
 from datetime import date
+from unittest.mock import Mock, patch
+from urllib.error import HTTPError
+
+import apt_today_closings_fetch as fetcher
 
 from apt_today_closings_fetch import (
     build_digest,
@@ -11,6 +15,65 @@ from apt_today_closings_fetch import (
 
 
 class AptTodayClosingsTests(unittest.TestCase):
+    def test_explicit_source_restriction_never_tries_reader(self):
+        for status in (403, 429):
+            with self.subTest(status=status), \
+                 patch('curl_cffi.requests.get', return_value=Mock(status_code=status)) as direct, \
+                 patch.object(fetcher.urllib.request, 'urlopen') as reader:
+                with self.assertRaises(fetcher.SourceBlocked) as caught:
+                    fetcher.fetch_page_html()
+                self.assertEqual(caught.exception.status_code, status)
+                direct.assert_called_once()
+                reader.assert_not_called()
+
+    def test_http_restriction_exception_never_tries_reader(self):
+        for status in (403, 429):
+            response_error = RuntimeError('restricted')
+            response_error.response = Mock(status_code=status)
+            errors = (HTTPError(fetcher.SOURCE_URL, status, 'restricted', {}, None), response_error)
+            for error in errors:
+                with self.subTest(status=status, error=type(error).__name__), \
+                     patch('curl_cffi.requests.get', side_effect=error), \
+                     patch.object(fetcher.urllib.request, 'urlopen') as reader:
+                    with self.assertRaises(fetcher.SourceBlocked) as caught:
+                        fetcher.fetch_page_html()
+                    self.assertEqual(caught.exception.status_code, status)
+                    reader.assert_not_called()
+
+    def test_checkpoint_body_is_not_treated_as_missing_data_or_retried(self):
+        response = Mock(status_code=200, text='<title>Vercel Security Checkpoint</title>')
+        with patch('curl_cffi.requests.get', return_value=response), \
+             patch.object(fetcher.urllib.request, 'urlopen') as reader:
+            with self.assertRaises(fetcher.SourceBlocked):
+                fetcher.fetch_page_html()
+            reader.assert_not_called()
+
+    def test_normal_source_response_is_returned_without_reader(self):
+        response = Mock(status_code=200, text='valid todaySummary payload')
+        with patch('curl_cffi.requests.get', return_value=response), \
+             patch.object(fetcher.urllib.request, 'urlopen') as reader:
+            self.assertEqual(fetcher.fetch_page_html(), response.text)
+            reader.assert_not_called()
+
+    def test_transient_network_failure_can_use_existing_reader(self):
+        reply = Mock()
+        reply.__enter__ = Mock(return_value=reply)
+        reply.__exit__ = Mock(return_value=None)
+        reply.read.return_value = b'valid todaySummary payload'
+        with patch('curl_cffi.requests.get', side_effect=TimeoutError('temporary timeout')), \
+             patch.object(fetcher.urllib.request, 'urlopen', return_value=reply) as reader:
+            self.assertEqual(fetcher.fetch_page_html(), 'valid todaySummary payload')
+            reader.assert_called_once()
+
+    def test_reader_rate_limit_is_reported_as_blocked(self):
+        error = HTTPError(fetcher.READER_URL, 429, 'restricted', {}, None)
+        with patch('curl_cffi.requests.get', side_effect=TimeoutError('temporary timeout')), \
+             patch.object(fetcher.urllib.request, 'urlopen', side_effect=error) as reader:
+            with self.assertRaises(fetcher.SourceBlocked) as caught:
+                fetcher.fetch_page_html()
+            self.assertEqual(caught.exception.status_code, 429)
+            reader.assert_called_once()
+
     def test_fallback_estimates_pyeong_type_only_when_source_supply_is_missing(self):
         transaction = {
             "danjiName": "전용59", "amount": 280000, "exclusiveArea": 59.97,

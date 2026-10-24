@@ -67,6 +67,19 @@ class TransactionRecoveryTests(unittest.TestCase):
             self.assertTrue(recovery.recover(TODAY, folder, fetch=fetch, sleeper=Mock()))
             self.assertEqual(fetch.call_count, 2)
 
+    def test_protection_response_stops_without_sleep_retry_or_output_mutation(self):
+        for status in (403, 429):
+            with self.subTest(status=status), tempfile.TemporaryDirectory() as folder:
+                path = Path(folder)/'transactions.txt'
+                path.write_text('previous verified source', encoding='utf-8')
+                fetch = Mock(side_effect=recovery.SourceBlocked(status))
+                sleep = Mock()
+                self.assertFalse(recovery.recover(TODAY, folder, fetch=fetch, sleeper=sleep))
+                fetch.assert_called_once()
+                sleep.assert_not_called()
+                self.assertEqual(path.read_text(encoding='utf-8'), 'previous verified source')
+                self.assertFalse((Path(folder)/'transactions-2026-10-13.txt').exists())
+
     def test_missing_counts_or_truncated_record_list_cannot_publish_false_zero(self):
         variants = [{k: v for k, v in source().items() if k != 'totalCount'},
                     {**source(), 'allTimeHighCount': 1},

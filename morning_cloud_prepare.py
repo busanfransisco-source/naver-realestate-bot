@@ -30,8 +30,8 @@ GROUPS = (
     ('realestate', 'naver_realestate_fetch.py', ('realestate',)),
 )
 CACHE_FILES = {
-    'subscriptions': ('neonet-trend-cache.json',),
-    'market': ('fuel-cache.json', 'fx-cache.json'),
+    'trend': ('neonet-trend-cache.json',),
+    'fuelfx': ('fuel-cache.json', 'fx-cache.json'),
 }
 
 
@@ -110,7 +110,7 @@ def _paths(root, group, now):
     if name == 'realestate':
         paths.update(Path(root) / filename for filename in (
             'latest.json', f'latest-{weekday}.json', f'latest-{now.date().isoformat()}.json'))
-    paths.update(Path(root) / filename for filename in CACHE_FILES.get(name, ()))
+    paths.update(Path(root) / filename for key in keys for filename in CACHE_FILES.get(key, ()))
     return paths
 
 
@@ -161,12 +161,12 @@ def _run_group(root, group, now, absolute_deadline, runner, fixed_clock=False):
     saved = _backup(_paths(root, group, now))
     # Successful script exit alone is insufficient: several old collectors
     # intentionally exit zero after writing a failure message or using cache.
-    expected = [Path(root) / f'{key}.txt' for key in keys]
-    if 'trend' in keys:
-        expected[expected.index(Path(root) / 'trend.txt')] = Path(root) / 'neonet-trend-cache.json'
-    before = {path: _mtime(path) for path in expected}
+    expected = {key: Path(root) / ('neonet-trend-cache.json' if key == 'trend' else f'{key}.txt')
+                for key in keys}
+    before = {key: _mtime(path) for key, path in expected.items()}
     reason = None
     issue_count = 0
+    boxes = []
     try:
         remaining = absolute_deadline - time.monotonic()
         if remaining <= 0:
@@ -176,26 +176,41 @@ def _run_group(root, group, now, absolute_deadline, runner, fixed_clock=False):
                             capture_output=True, timeout=min(180, remaining), check=False)
             if result.returncode:
                 reason = 'collector_exit_nonzero'
-            elif any(_mtime(path) is None or _mtime(path) == stamp for path, stamp in before.items()):
-                reason = 'collector_did_not_refresh_required_source'
             else:
                 # Other workers may be halfway through their own file writes.
-                # Validate only this group's owned sources until all finish.
+                # Validate and restore by box, not by multi-box collector.
                 checked_now = now if fixed_clock else datetime.now(KST)
                 bodies, evidence = read_sources(root, checked_now, only_keys=keys)
-                issues = _group_issues(keys, bodies, evidence, checked_now)
-                if issues:
-                    reason = 'source_validation_failed'
-                    issue_count = len(issues)
+                from morning_source_publication import source_issues
+                for key in keys:
+                    path = expected[key]
+                    changed = _mtime(path) is not None and _mtime(path) != before[key]
+                    issues = source_issues(key, bodies[BOX_KEYS.index(key)], evidence, checked_now)
+                    retained_weekly = key == 'books' and not changed and not issues
+                    box_reason = ('source_validation_failed' if issues else
+                                  'collector_did_not_refresh_required_source' if not changed and not retained_weekly
+                                  else None)
+                    if box_reason:
+                        paths = _paths(root, (name, script, (key,)), now)
+                        _restore({path: data for path, data in saved.items() if path in paths})
+                    boxes.append(dict(key=key, status='failed' if box_reason else
+                                      'retained_weekly' if retained_weekly else 'ok',
+                                      reason=box_reason, issueCount=len(issues)))
+                failed = [box for box in boxes if box['status'] == 'failed']
+                if failed:
+                    reason = failed[0]['reason']
+                    issue_count = sum(box['issueCount'] for box in failed)
     except subprocess.TimeoutExpired:
         reason = 'collector_timeout'
     except Exception:
         # Never echo subprocess output, request URLs, credentials or paths.
         reason = 'collector_exception'
-    if reason:
+    if reason and not boxes:
         _restore(saved)
-    return dict(group=name, status='failed' if reason else 'ok',
-                reason=reason, issueCount=issue_count)
+        boxes = [dict(key=key, status='failed', reason=reason, issueCount=0) for key in keys]
+    successful = any(box['status'] != 'failed' for box in boxes)
+    return dict(group=name, status=('partial' if successful else 'failed') if reason else 'ok',
+                reason=reason, issueCount=issue_count, boxes=boxes)
 
 
 def collection_allowed():
@@ -227,9 +242,20 @@ def prepare(root, output, report, *, collect=False, now=None, runner=None,
     failed_groups = [group for group in groups if group['status'] != 'ok']
     diagnostics = dict(schemaVersion=1, checkedAtKst=finished.isoformat(),
                        mode='collect' if collect else 'export-only', groups=groups,
-                       status='failed', snapshotWritten=False)
+                       status='failed', snapshotWritten=False, websiteWritten=False)
+    bodies, evidence = read_sources(root, finished)
+    # The website can publish independently verified boxes without replacing
+    # the sender's strict nine-box ready contract with a partial snapshot.
+    eligible_keys = ([box['key'] for group in groups for box in group['boxes']
+                      if box['status'] != 'failed'] if collect else list(BOX_KEYS))
+    from morning_source_publication import build_publication
     try:
-        bodies, evidence = read_sources(root, finished)
+        publication = build_publication(bodies, finished, evidence=evidence, eligible_keys=eligible_keys)
+        atomic_json(output.with_name('morning-website-sources.json'), publication)
+        diagnostics.update(websiteWritten=True, websiteKeys=[box['key'] for box in publication['boxes']])
+    except (ValueError, OSError, TypeError, KeyError):
+        pass
+    try:
         snapshot = build_snapshot(bodies, finished, evidence=evidence)
         if failed_groups:
             diagnostics['reason'] = 'collector_groups_failed_previous_snapshot_preserved'
@@ -239,6 +265,8 @@ def prepare(root, output, report, *, collect=False, now=None, runner=None,
                                snapshotSha256=snapshot['snapshotSha256'])
     except (ValueError, OSError, TypeError, KeyError):
         diagnostics['reason'] = 'incomplete_or_invalid_source_previous_snapshot_preserved'
+    if diagnostics['status'] != 'ok' and diagnostics['websiteWritten']:
+        diagnostics['status'] = 'partial'
     # Diagnostics contain only fixed group IDs/status codes, never report text.
     atomic_json(report, diagnostics)
     return diagnostics

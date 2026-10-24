@@ -6,7 +6,7 @@ from datetime import datetime
 from pathlib import Path
 
 from apt_today_closings_fetch import (
-    KST, WEEKDAY_EN, WEEKDAY_KR_SHORT, build_digest, fetch_page_html,
+    KST, WEEKDAY_EN, WEEKDAY_KR_SHORT, SourceBlocked, build_digest, fetch_page_html,
     parse_today_summary, summary_date,
 )
 
@@ -78,6 +78,10 @@ def recover(today, directory=Path('.'), fetch=fetch_page_html, sleeper=time.slee
             print('Recovered today transactions:', today, 'total', summary['totalCount'],
                   'record highs', summary['allTimeHighCount'])
             return True
+        except SourceBlocked as error:
+            print(f'Transaction source blocked (HTTP {error.status_code}); '
+                  'no immediate retry; use the official nationwide recovery workflow')
+            return False
         except Exception as error:
             print(f'Transaction recovery attempt {attempt+1}/2 failed: {type(error).__name__}: {error}')
             if attempt == 0:

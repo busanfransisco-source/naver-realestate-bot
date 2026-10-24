@@ -209,7 +209,10 @@ class PipelineTests(unittest.TestCase):
         self.run_prepare()
         before = self.output.read_bytes()
         (self.root / 'weather-wed.txt').write_text('수집 실패', encoding='utf-8')
-        self.assertEqual(self.run_prepare()['status'], 'failed')
+        report = self.run_prepare()
+        self.assertEqual(report['status'], 'partial')
+        self.assertTrue(report['websiteWritten'])
+        self.assertNotIn('weather', report['websiteKeys'])
         self.assertEqual(self.output.read_bytes(), before)
 
     def test_cloud_collection_six_groups_no_duplicate_book_fetch(self):
@@ -235,7 +238,7 @@ class PipelineTests(unittest.TestCase):
                     (self.root / name).write_text('오늘의 운세, 10월 21일\n수집 실패', encoding='utf-8')
             return result
         report = self.run_prepare(collect=True, runner=runner)
-        self.assertEqual(report['status'], 'failed')
+        self.assertEqual(report['status'], 'partial')
         self.assertEqual(report['groups'][0]['reason'], 'source_validation_failed')
         self.assertEqual((self.root / 'fortune.txt').read_bytes(), original)
         self.assertEqual(self.output.read_bytes(), previous)
@@ -243,9 +246,52 @@ class PipelineTests(unittest.TestCase):
     def test_zero_exit_without_written_source_is_not_success(self):
         runner = lambda command, **kwargs: subprocess.CompletedProcess(command, 0)
         report = self.run_prepare(collect=True, runner=runner)
-        self.assertEqual(report['status'], 'failed')
+        self.assertEqual(report['status'], 'partial')
+        self.assertFalse(report['snapshotWritten'])
+        self.assertEqual(report['websiteKeys'], ['books'])
         self.assertTrue(all(row['reason'] == 'collector_did_not_refresh_required_source'
                             for row in report['groups']))
+
+    def test_missing_books_write_keeps_market_daily_updates_and_weekly_cache(self):
+        original = fixture_sources()[0][7].replace('10월 21일', '10월 20일')
+        for name in ('books.txt', 'books-wed.txt'):
+            (self.root/name).write_text(original, encoding='utf-8')
+        # Rewriting the same bytes still counts as a write; emulate actual
+        # maintenance by leaving the cached book files entirely untouched.
+        def maintenance_runner(command, **kwargs):
+            if command[-1] != 'market_fetch.py':
+                return self.runner(command, **kwargs)
+            bodies = fixture_sources()[0]
+            for key in ('fuelfx','metalcoin'):
+                for name in (f'{key}.txt',f'{key}-wed.txt'):
+                    (self.root/name).write_text(bodies[BOX_KEYS.index(key)]+'\n',encoding='utf-8')
+            return subprocess.CompletedProcess(command,0)
+        report = self.run_prepare(collect=True, runner=maintenance_runner)
+        self.assertEqual(report['status'], 'partial')
+        self.assertFalse(report['snapshotWritten'])
+        self.assertEqual(len(report['websiteKeys']),9)
+        market = next(group for group in report['groups'] if group['group']=='market')
+        self.assertEqual(market['status'],'ok')
+        self.assertEqual(next(box for box in market['boxes'] if box['key']=='books')['status'],'retained_weekly')
+        self.assertEqual((self.root/'books.txt').read_text(encoding='utf-8'),original)
+
+    def test_one_market_box_failure_does_not_restore_other_healthy_market_boxes(self):
+        old = (self.root/'fuelfx.txt').read_bytes()
+        def runner(command, **kwargs):
+            result = self.runner(command, **kwargs)
+            if command[-1]=='market_fetch.py':
+                for name in ('fuelfx.txt','fuelfx-wed.txt'):
+                    (self.root/name).write_text('수집 실패',encoding='utf-8')
+                for name in ('metalcoin.txt','metalcoin-wed.txt'):
+                    with (self.root/name).open('a',encoding='utf-8') as handle:
+                        handle.write('\n정상 수집 검증\n')
+            return result
+        report = self.run_prepare(collect=True,runner=runner)
+        self.assertEqual(report['status'],'partial')
+        self.assertEqual((self.root/'fuelfx.txt').read_bytes(),old)
+        self.assertIn('정상 수집 검증',(self.root/'metalcoin.txt').read_text(encoding='utf-8'))
+        self.assertNotIn('fuelfx',report['websiteKeys'])
+        self.assertIn('metalcoin',report['websiteKeys'])
 
     def test_timeout_and_sensitive_process_output_not_echoed(self):
         secret = 'test-secret-no-print'

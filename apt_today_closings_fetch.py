@@ -21,6 +21,24 @@ SOURCE_URL = "https://apt.today/closings"
 READER_URL = "https://r.jina.ai/https://apt.today/closings"
 
 
+class SourceBlocked(RuntimeError):
+    """Explicit source restriction; do not retry or try another transport."""
+
+    def __init__(self, status_code):
+        self.status_code = status_code
+        super().__init__(f"실거래 원자료 서버 접근 제한 (HTTP {status_code})")
+
+
+def blocked_status(error):
+    """Recognize both urllib and requests-style HTTP exceptions safely."""
+    response = getattr(error, "response", None)
+    for status in (getattr(response, "status_code", None),
+                   getattr(error, "status_code", None), getattr(error, "code", None)):
+        if status in (403, 429):
+            return status
+    return None
+
+
 def fetch_page_html():
     errors = []
 
@@ -30,12 +48,23 @@ def fetch_page_html():
         from curl_cffi import requests
 
         response = requests.get(SOURCE_URL, impersonate="chrome", timeout=30)
+        if response.status_code in (403, 429):
+            raise SourceBlocked(response.status_code)
         response.raise_for_status()
         payload = response.text
+        if "vercel security checkpoint" in payload.lower():
+            raise SourceBlocked(403)
         if "todaySummary" in payload:
             return payload
         errors.append("원본 페이지에 todaySummary 없음")
+    except SourceBlocked:
+        # A protection response is not a transient parse failure. Respect it and
+        # let the existing official nationwide collector handle recovery.
+        raise
     except Exception as exc:
+        status = blocked_status(exc)
+        if status is not None:
+            raise SourceBlocked(status) from exc
         errors.append(f"원본 직접 수집 실패: {exc}")
 
     # 원본 직접 수집이 일시적으로 막힐 때만 Reader를 보조 경로로 사용한다.
@@ -54,6 +83,9 @@ def fetch_page_html():
             return payload
         errors.append("Reader 페이지에 todaySummary 없음")
     except Exception as exc:
+        status = blocked_status(exc)
+        if status is not None:
+            raise SourceBlocked(status) from exc
         errors.append(f"Reader 수집 실패: {exc}")
 
     raise RuntimeError("당일 실거래 집계를 읽지 못했습니다: " + " | ".join(errors))

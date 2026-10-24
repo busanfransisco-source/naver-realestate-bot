@@ -1,6 +1,7 @@
 name: Nationwide Transaction Refresh
 on:
   workflow_dispatch: {}
+  workflow_call: {}
   schedule:
     # 05:10~08:10 KST; GitHub scheduling can be delayed.
     - cron: "10 20 * * *"
