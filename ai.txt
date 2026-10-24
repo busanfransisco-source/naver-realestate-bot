@@ -1,5 +1,11 @@
 🤖 26년 10월 24일 토요일 AI 뉴스
 
+구글 ‘제미나이 4 카본’ 외부 테스트설…“3D 개선됐지만 속도 느려”
+https://www.aitimes.com/news/articleView.html?idxno=216604
+
+문샷 ‘키미 K3.1 프로’, AAII 전체 4위…오픈웨이트 1위 등극
+https://www.aitimes.com/news/articleView.html?idxno=216603
+
 NC AI, '풀스택 피지컬 AI'로 산업 AX 공략… 제조·조선·국방으로 협력 확대
 https://www.aitimes.com/news/articleView.html?idxno=216602
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216591
 
 바클레이즈, AI 도입 늘리며 5000명 감원…개발자 등 지원 부서에 집중
 https://www.aitimes.com/news/articleView.html?idxno=216590
-
-캔바, 프론티어급 이미지 모델 '크래프트' 공개…디자인 아레나 4위 올라
-https://www.aitimes.com/news/articleView.html?idxno=216589
-
-“지난주 세차장으로 안내해”…구글, 차량용 '제미나이'에 개인화 기능 도입
-https://www.aitimes.com/news/articleView.html?idxno=216587
