@@ -1,5 +1,14 @@
 🤖 26년 10월 24일 토요일 AI 뉴스
 
+[내면 지도 그리기] 39 Inner Mapping: 나를 찾는 지도
+https://www.aitimes.com/news/articleView.html?idxno=216611
+
+[AI카툰] Bob, Senior IT guy - 밥, 오랫동안 꿈꾸던 날라다니는 차
+https://www.aitimes.com/news/articleView.html?idxno=216610
+
+딥시크·미니맥스, 중국 정부 AI 모델 해외 수출 승인 획득
+https://www.aitimes.com/news/articleView.html?idxno=216606
+
 구글 ‘제미나이 4 카본’ 외부 테스트설…“3D 개선됐지만 속도 느려”
 https://www.aitimes.com/news/articleView.html?idxno=216604
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216594
 
 인티그리트, 로봇 예측형 AI 특허 4건 등록…개방형 휴머노이드 플랫폼 개발 확대
 https://www.aitimes.com/news/articleView.html?idxno=216593
-
-일본 향하는 K-AI... 의료·법률부터 문서 전자화까지
-https://www.aitimes.com/news/articleView.html?idxno=216592
-
-AWS, GPU 관리 없이 맞춤형 AI 학습하는 새 기능 공개
-https://www.aitimes.com/news/articleView.html?idxno=216591
-
-바클레이즈, AI 도입 늘리며 5000명 감원…개발자 등 지원 부서에 집중
-https://www.aitimes.com/news/articleView.html?idxno=216590
