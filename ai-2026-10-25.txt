@@ -1,0 +1,31 @@
+🤖 26년 10월 25일 일요일 AI 뉴스
+
+피차이 “클라우드 매출 포기하더라도 첨단 AI 개발에 컴퓨팅 우선 투입”
+https://www.aitimes.com/news/articleView.html?idxno=216618
+
+중국 국영 통신망서 수출 금지 엔비디아 칩 또 포착…첨단 'B300' 32개 확인
+https://www.aitimes.com/news/articleView.html?idxno=216617
+
+오픈AI 연구원 3명 해고, ‘순환 추론’ 유출 조사서 비롯…시그널 대화 쟁점
+https://www.aitimes.com/news/articleView.html?idxno=216616
+
+오픈AI, AI 보안 우회로 중단했던 모델 학습 재개…인터넷 차단 강화
+https://www.aitimes.com/news/articleView.html?idxno=216615
+
+SK “AI 데이터센터 5GW에 464조 필요”…글로벌 빅테크와 투자 협상
+https://www.aitimes.com/news/articleView.html?idxno=216614
+
+앤트로픽, 구글 클라우드서 최신 기능 쓰는 '관리형 클로드' 출시
+https://www.aitimes.com/news/articleView.html?idxno=216613
+
+앤트로픽, 클로드로 오픈소스 123개 라이브러리 검증...수십 년 버그도 발견
+https://www.aitimes.com/news/articleView.html?idxno=216612
+
+[내면 지도 그리기] 39 Inner Mapping: 나를 찾는 지도
+https://www.aitimes.com/news/articleView.html?idxno=216611
+
+[AI카툰] Bob, Senior IT guy - 밥, 오랫동안 꿈꾸던 날라다니는 차
+https://www.aitimes.com/news/articleView.html?idxno=216610
+
+구글 클라우드, 에이전트 전용 '컴퓨팅 엔진' 출시…마이크로VM으로 보안 격리
+https://www.aitimes.com/news/articleView.html?idxno=216608

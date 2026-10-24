@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-10-24 23:53:29",
+  "updated_at_kst": "2026-10-25 02:39:11",
   "source": "https://news.naver.com/breakingnews/section/101/260",
-  "headline": "26년 10월 24일 토요일 부동산 주요뉴스",
+  "headline": "26년 10월 25일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "강남3구는 하락했는데 도봉·강북은 2021년 전고점 돌파…89주 연속 상승 이어가",
+      "url": "https://n.news.naver.com/mnews/article/021/0002827537"
+    },
     {
       "title": "삼성물산, 반포푸르지오 리모델링 수주...'넥스트 리모델링' 첫 적용",
       "url": "https://n.news.naver.com/mnews/article/014/0005593839"
@@ -38,10 +42,6 @@
     {
       "title": "삼성물산, 반포푸르지오 리모델링 시공사 선정… 1250억원 규모",
       "url": "https://n.news.naver.com/mnews/article/366/0001200060"
-    },
-    {
-      "title": "청년층이 '집값 심리'에 더 민감…중장년층은 시장 지표 살핀다",
-      "url": "https://n.news.naver.com/mnews/article/003/0014275801"
     }
   ]
 }
