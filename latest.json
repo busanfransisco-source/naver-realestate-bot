@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-10-24 09:53:32",
+  "updated_at_kst": "2026-10-24 10:12:02",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 24일 토요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "해운대 '트리븐센텀' 1644가구 분양…전용 84㎡ 7억대",
+      "url": "https://n.news.naver.com/mnews/article/003/0014275543"
+    },
+    {
+      "title": "공무원 3000명 세종 오는데…2000가구 대단지 전세 매물 ‘0건’ [부동산360]",
+      "url": "https://n.news.naver.com/mnews/article/016/0002713792"
+    },
     {
       "title": "10월 마지막 주 분양 5,555가구…동탄·해운대 1순위 청약",
       "url": "https://n.news.naver.com/mnews/article/374/0000539574"
@@ -34,14 +42,6 @@
     {
       "title": "반얀트리 부산 해운대, ‘아너스’ 회원 모집… 글로벌 네트워크 혜택 제공",
       "url": "https://n.news.naver.com/mnews/article/032/0003478230"
-    },
-    {
-      "title": "\"집값 2035년까지 오른다…지금이라도 내집마련 해야\" 대학교수의 조언",
-      "url": "https://n.news.naver.com/mnews/article/003/0014275405"
-    },
-    {
-      "title": "올해 들어 집값도 전셋값도 10% 넘게 뛴 '노도강'",
-      "url": "https://n.news.naver.com/mnews/article/648/0000051898"
     }
   ]
 }
