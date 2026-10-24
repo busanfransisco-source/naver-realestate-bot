@@ -29,6 +29,19 @@ class HealthTests(unittest.TestCase):
         page = self.page().replace('id="ta-transactions">2026-10-06', 'id="ta-transactions">수집 중입니다')
         self.assertEqual(inspect(page, datetime(2026, 10, 6, 6, tzinfo=KST))[KEYS.index('transactions')]['status'], 'pending')
 
+    def test_weekly_books_use_source_period_but_reject_future_collection_date(self):
+        from test_morning_cloud_prepare import NOW, fixture_sources
+        body=fixture_sources()[0][7]
+        original=self.page()
+        start=original.index('id="ta-books">')+len('id="ta-books">')
+        end=original.index('</textarea>',start)
+        for day,expected in (('20','ok'),('22','failed')):
+            page=original[:start]+body.replace('10월 21일',f'10월 {day}일')+original[end:]
+            row=inspect(page,NOW.replace(hour=15))[KEYS.index('books')]
+            self.assertEqual(row['status'],expected,row['issues'])
+            if expected=='failed':
+                self.assertIn('YES24 report date is future',row['issues'])
+
     def test_missing_card_detected(self):
         rows = inspect(self.page().replace('ta-ai', 'ta-wrong'), datetime(2026, 10, 6, 15, tzinfo=KST))
         self.assertIn('missing/duplicate/wrong slot', rows[KEYS.index('ai')]['issues'])

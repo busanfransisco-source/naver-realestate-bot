@@ -132,8 +132,11 @@ def inspect(page, now=None):
             book_info = digest_info(text)
             if not book_info:
                 issues.append('missing YES24 weekly source or period')
-            elif not valid_period(book_info[1], book_info[2], today):
-                issues.append('YES24 source week is stale')
+            else:
+                if book_info[0] > today:
+                    issues.append('YES24 report date is future')
+                if not valid_period(book_info[1], book_info[2], today):
+                    issues.append('YES24 source week is stale')
         if key == 'metalcoin' and len(re.findall(r'^\S+ [\d,]+(?:\.\d+)?원', text.split('🪙')[-1], re.M)) < 10:
             issues.append('coin top 10 incomplete')
         if key in ('realestate', 'world', 'finance', 'ai') and text.count('https://') < 2:
