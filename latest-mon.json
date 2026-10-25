@@ -1,8 +1,20 @@
 {
-  "updated_at_kst": "2026-10-26 06:17:39",
+  "updated_at_kst": "2026-10-26 06:55:04",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 26일 월요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "서울 아파트 경매 낙찰률 21% 그쳤는데…낙찰가율은 10주 만에 최고[코주부]",
+      "url": "https://n.news.naver.com/mnews/article/011/0004675027"
+    },
+    {
+      "title": "서울 460억 이상 자산가 급증…비결은 부동산이 아니었다",
+      "url": "https://n.news.naver.com/mnews/article/003/0014277182"
+    },
+    {
+      "title": "하위 20% ‘239만원’ vs 상위 20% ‘6억9천341만원’… 집값 290배 격차",
+      "url": "https://n.news.naver.com/mnews/article/666/0000129072"
+    },
     {
       "title": "[오늘 부동산] 현대건설 이어 삼성물산도 도시정비 ‘10조 클럽’",
       "url": "https://n.news.naver.com/mnews/article/119/0003146772"
@@ -30,18 +42,6 @@
     {
       "title": "국회대로 홍익병원사거리 지하차도 31일 폐쇄…지상 7차로로 전환",
       "url": "https://n.news.naver.com/mnews/article/421/0009248804"
-    },
-    {
-      "title": "국회대로 상부 공원화사업 속도… 홍익병원 사거리 지하차도 31일 폐쇄",
-      "url": "https://n.news.naver.com/mnews/article/008/0005431373"
-    },
-    {
-      "title": "상하위 20% 집값 격차 290배로 상승…다주택 등 포함시 더 확대",
-      "url": "https://n.news.naver.com/mnews/article/001/0016399414"
-    },
-    {
-      "title": "KB \"10월 서울 아파트값 0.61% 올라…상승률 연내 최저\"",
-      "url": "https://n.news.naver.com/mnews/article/422/0000919404"
     }
   ]
 }

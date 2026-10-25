@@ -3,7 +3,7 @@
 가상 섬에 홀로 둔 AI, 스스로 놀이 만들고 개발자도 몰랐던 기술 발견
 https://www.aitimes.com/news/articleView.html?idxno=216631
 
-'클로드'가 그림에 숨긴 문장, '아스트라'가 풀었다…암호 규칙 없이 88% 해독
+'클로드'가 그림에 숨긴 문장, '아스트라'가 풀었다…88% 해독
 https://www.aitimes.com/news/articleView.html?idxno=216630
 
 [AI 모델 신작] 텐센트 월드 모델부터 잭 도시의 음성 AI까지 9종
