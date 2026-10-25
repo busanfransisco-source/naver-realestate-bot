@@ -170,16 +170,19 @@ def snapshot_issues(snapshot, now):
     if not isinstance(evidence, dict):
         evidence = {}
         issues.append('source evidence missing')
-    try:
-        trend_stamp = _aware(evidence.get('trendCheckedAtKst'), 'trend source check')
-        if not timedelta(0) <= now - trend_stamp <= timedelta(days=8):
-            issues.append('weekly trend source check outside eight days')
-    except ValueError as exc:
-        issues.append(str(exc))
     boxes = snapshot.get('boxes')
     if not isinstance(boxes, list) or len(boxes) != 9:
         issues.append('exactly nine morning boxes required')
         boxes = []
+    trend_omitted = (len(boxes) == 9 and isinstance(boxes[4], dict)
+                     and boxes[4].get('omitted') is True)
+    if not trend_omitted:
+        try:
+            trend_stamp = _aware(evidence.get('trendCheckedAtKst'), 'trend source check')
+            if not timedelta(0) <= now - trend_stamp <= timedelta(days=8):
+                issues.append('weekly trend source check outside eight days')
+        except ValueError as exc:
+            issues.append(str(exc))
     books_omitted = (len(boxes) == 9 and isinstance(boxes[7], dict)
                      and boxes[7].get('omitted') is True)
     if not books_omitted:
@@ -201,9 +204,8 @@ def snapshot_issues(snapshot, now):
         if type(omitted) is not bool:
             issues.append(f'{key}: omitted flag must be boolean')
         if omitted is True:
-            if (key != 'books' or number != 8 or body != ''
-                    or box.get('omissionReason') != 'source_unavailable'):
-                issues.append(f'{key}: only empty books slot eight may be omitted')
+            if body != '' or box.get('omissionReason') != 'source_unavailable':
+                issues.append(f'{key}: only an explicitly empty source slot may be omitted')
         else:
             if 'omissionReason' in box:
                 issues.append(f'{key}: omission reason without explicit omission')
@@ -216,6 +218,9 @@ def snapshot_issues(snapshot, now):
                 issues.append(f'{key}: check is future, stale or not today')
         except ValueError as exc:
             issues.append(str(exc))
+    if boxes and not any(isinstance(box, dict) and box.get('omitted') is not True
+                         for box in boxes):
+        issues.append('no available morning source boxes')
     try:
         if snapshot.get('snapshotSha256') != snapshot_sha256(snapshot):
             issues.append('snapshot checksum mismatch')
@@ -232,8 +237,8 @@ def validate_snapshot(snapshot, now):
     return [box['body'] for box in snapshot['boxes']]
 
 
-def build_snapshot(bodies, now, *, evidence, checked_at=None, omit_books=False):
-    """Build nine stable slots; only books may be explicitly omitted."""
+def build_snapshot(bodies, now, *, evidence, checked_at=None, omit_books=False, omitted_keys=()):
+    """Build nine stable slots; unavailable sources are explicitly empty."""
     now = _aware(now, 'now')
     if not isinstance(bodies, list) or len(bodies) != 9:
         raise ValueError('exactly nine report bodies required')
@@ -241,6 +246,13 @@ def build_snapshot(bodies, now, *, evidence, checked_at=None, omit_books=False):
         raise ValueError('source evidence and checked_at must be objects')
     if type(omit_books) is not bool or omit_books and bodies[7] != '':
         raise ValueError('explicit books omission requires an empty slot eight')
+    if not isinstance(omitted_keys, (list, tuple, set, frozenset)):
+        raise ValueError('omitted source keys must be a collection')
+    omitted = set(omitted_keys) | ({'books'} if omit_books else set())
+    if omitted - set(BOX_KEYS):
+        raise ValueError('unknown omitted source key')
+    if any(bodies[BOX_KEYS.index(key)] != '' for key in omitted):
+        raise ValueError('explicit source omission requires an empty source slot')
     checks = checked_at or {}
     boxes = []
     for number, (key, body) in enumerate(zip(BOX_KEYS, bodies), 1):
@@ -248,11 +260,13 @@ def build_snapshot(bodies, now, *, evidence, checked_at=None, omit_books=False):
             raise ValueError(f'{key}: body must be text')
         box = dict(number=number, key=key, body=body, sha256=body_sha256(body),
                    checkedAtKst=checks.get(key, now.isoformat()))
-        if key == 'books' and omit_books:
+        if key in omitted:
             box.update(omitted=True, omissionReason='source_unavailable')
         boxes.append(box)
     retained_evidence = dict(evidence)
-    if omit_books:
+    if 'trend' in omitted:
+        retained_evidence.pop('trendCheckedAtKst', None)
+    if 'books' in omitted:
         for key in ('booksPeriodStart', 'booksPeriodEnd'):
             retained_evidence.pop(key, None)
     snapshot = dict(schemaVersion=1, deliveryDateKst=now.date().isoformat(),
@@ -262,3 +276,55 @@ def build_snapshot(bodies, now, *, evidence, checked_at=None, omit_books=False):
     snapshot['snapshotSha256'] = snapshot_sha256(snapshot)
     validate_snapshot(snapshot, now)
     return snapshot
+
+
+def available_bodies(snapshot, now):
+    """Isolate individual source failures without trusting a broken envelope.
+
+    The original date, generation clock, identity order and signed payload must
+    still be intact. A stale/invalid source or its evidence affects its slot only.
+    This never rewrites a source body or promotes an earlier delivery date.
+    """
+    now = _aware(now, 'now')
+    if not isinstance(snapshot, dict):
+        raise ValueError('snapshot must be an object')
+    if snapshot.get('snapshotSha256') != snapshot_sha256(snapshot):
+        raise ValueError('snapshot checksum mismatch')
+    generated = _aware(snapshot.get('generatedAtKst'), 'generation')
+    boxes = snapshot.get('boxes')
+    if not isinstance(boxes, list) or len(boxes) != len(BOX_KEYS):
+        raise ValueError('exactly nine morning boxes required')
+    bodies, omitted, checks = [], [], {}
+    evidence = snapshot.get('evidence')
+    if not isinstance(evidence, dict):
+        raise ValueError('source evidence missing')
+    for number, (key, box) in enumerate(zip(BOX_KEYS, boxes), 1):
+        if (not isinstance(box, dict) or type(box.get('number')) is not int
+                or box.get('number') != number or box.get('key') != key):
+            raise ValueError('box number or identity mismatch')
+        body = box.get('body')
+        invalid = (not isinstance(body, str) or box.get('sha256') != body_sha256(body)
+                   or type(box.get('omitted', False)) is not bool
+                   or box.get('omitted') is True or 'omissionReason' in box)
+        if not invalid:
+            invalid = bool(_body_issues(key, body, now.date(), evidence))
+            try:
+                checked = _aware(box.get('checkedAtKst'), key + ' check')
+                invalid |= (checked.date() != now.date() or checked > generated
+                            or not timedelta(0) <= now-checked <= MAX_AGE)
+                if key == 'trend':
+                    trend = _aware(evidence.get('trendCheckedAtKst'), 'trend source check')
+                    invalid |= trend > generated or not timedelta(0) <= now-trend <= timedelta(days=8)
+            except ValueError:
+                invalid = True
+        bodies.append('' if invalid else body)
+        if invalid:
+            omitted.append(key)
+        checks[key] = snapshot.get('generatedAtKst') if invalid else box.get('checkedAtKst')
+    # Keep the ORIGINAL envelope; rehashing only records the explicit omissions.
+    filtered = dict(snapshot)
+    built = build_snapshot(bodies, generated,
+                           evidence=evidence, checked_at=checks, omitted_keys=omitted)
+    filtered['boxes'], filtered['evidence'] = built['boxes'], built['evidence']
+    filtered['snapshotSha256'] = snapshot_sha256(filtered)
+    return validate_snapshot(filtered, now)

@@ -17,7 +17,7 @@ class MorningWorkflowIsolationTests(unittest.TestCase):
         self.assertIn('morning_source_publication.py --verify',text)
         self.assertIn("if os.environ['MORNING_READY']=='true' else None",text)
         self.assertIn("if: steps.apply.outputs.ready_applied == 'true'",text)
-        self.assertIn('Strict nine-box sender snapshot remains unchanged',text)
+        self.assertIn('no validated sender snapshot was available',text)
 
     def test_official_recovery_does_not_wait_for_morning_collection(self):
         text = Path('.github/workflows/morning-briefing.yml').read_text(encoding='utf-8')

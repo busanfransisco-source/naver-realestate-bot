@@ -282,15 +282,16 @@ class PipelineTests(unittest.TestCase):
                                         'expiresAtKst', 'boxes', 'evidence', 'snapshotSha256'})
         self.assertEqual(validate_snapshot(snapshot, NOW), [body.strip() for body in fixture_sources()[0]])
 
-    def test_export_failure_preserves_previous_snapshot_bytes(self):
+    def test_export_failure_replaces_ready_with_only_that_slot_omitted(self):
         self.run_prepare()
         before = self.output.read_bytes()
         (self.root / 'weather-wed.txt').write_text('수집 실패', encoding='utf-8')
         report = self.run_prepare()
-        self.assertEqual(report['status'], 'partial')
+        self.assertEqual(report['status'], 'ok')
         self.assertTrue(report['websiteWritten'])
         self.assertNotIn('weather', report['websiteKeys'])
-        self.assertEqual(self.output.read_bytes(), before)
+        self.assertNotEqual(self.output.read_bytes(), before)
+        self.assertEqual(validate_snapshot(json.loads(self.output.read_text(encoding='utf-8')), NOW)[1], '')
 
     def test_cloud_collection_six_groups_no_duplicate_book_fetch(self):
         calls = []
@@ -304,7 +305,7 @@ class PipelineTests(unittest.TestCase):
         self.assertNotIn('yes24_books.py', calls)
         self.assertTrue(all(row['status'] == 'ok' for row in report['groups']))
 
-    def test_failed_raw_body_restored_and_previous_ready_preserved(self):
+    def test_failed_raw_body_restored_but_only_failed_slot_omitted_from_ready(self):
         self.run_prepare()
         previous = self.output.read_bytes()
         original = (self.root / 'fortune.txt').read_bytes()
@@ -315,16 +316,17 @@ class PipelineTests(unittest.TestCase):
                     (self.root / name).write_text('오늘의 운세, 10월 21일\n수집 실패', encoding='utf-8')
             return result
         report = self.run_prepare(collect=True, runner=runner)
-        self.assertEqual(report['status'], 'partial')
+        self.assertEqual(report['status'], 'ok')
         self.assertEqual(report['groups'][0]['reason'], 'source_validation_failed')
         self.assertEqual((self.root / 'fortune.txt').read_bytes(), original)
-        self.assertEqual(self.output.read_bytes(), previous)
+        self.assertNotEqual(self.output.read_bytes(), previous)
+        self.assertEqual(report['omittedKeys'], ['fortune'])
 
     def test_zero_exit_without_written_source_is_not_success(self):
         runner = lambda command, **kwargs: subprocess.CompletedProcess(command, 0)
         report = self.run_prepare(collect=True, runner=runner)
-        self.assertEqual(report['status'], 'partial')
-        self.assertFalse(report['snapshotWritten'])
+        self.assertEqual(report['status'], 'ok')
+        self.assertTrue(report['snapshotWritten'])
         self.assertEqual(report['websiteKeys'], ['books'])
         self.assertTrue(all(row['reason'] == 'collector_did_not_refresh_required_source'
                             for row in report['groups']))
@@ -364,7 +366,9 @@ class PipelineTests(unittest.TestCase):
                         handle.write('\n정상 수집 검증\n')
             return result
         report = self.run_prepare(collect=True,runner=runner)
-        self.assertEqual(report['status'],'partial')
+        self.assertEqual(report['status'],'ok')
+        self.assertTrue(report['snapshotWritten'])
+        self.assertEqual(report['omittedKeys'], ['fuelfx'])
         self.assertEqual((self.root/'fuelfx.txt').read_bytes(),old)
         self.assertIn('정상 수집 검증',(self.root/'metalcoin.txt').read_text(encoding='utf-8'))
         self.assertNotIn('fuelfx',report['websiteKeys'])
@@ -397,7 +401,7 @@ class PipelineTests(unittest.TestCase):
         self.assertNotIn('booksPeriodStart', snapshot['evidence'])
         self.assertEqual((self.root/'books.txt').read_text(encoding='utf-8'), old)
 
-    def test_export_missing_books_can_be_ready_but_missing_other_source_cannot(self):
+    def test_export_missing_books_and_weather_both_are_independently_omitted(self):
         for name in ('books.txt','books-wed.txt'):
             (self.root/name).write_text('자료 없음', encoding='utf-8')
         report = self.run_prepare()
@@ -406,16 +410,18 @@ class PipelineTests(unittest.TestCase):
         previous = self.output.read_bytes()
         (self.root/'weather-wed.txt').write_text('수집 실패', encoding='utf-8')
         report = self.run_prepare()
-        self.assertNotEqual(report['status'], 'ok')
-        self.assertFalse(report['snapshotWritten'])
-        self.assertEqual(self.output.read_bytes(), previous)
+        self.assertEqual(report['status'], 'ok')
+        self.assertTrue(report['snapshotWritten'])
+        self.assertNotEqual(self.output.read_bytes(), previous)
+        self.assertEqual(report['omittedKeys'], ['weather', 'books'])
 
     def test_timeout_and_sensitive_process_output_not_echoed(self):
         secret = 'test-secret-no-print'
         def runner(command, **kwargs):
             raise subprocess.TimeoutExpired(command, 1, output=secret.encode())
         report = self.run_prepare(collect=True, runner=runner)
-        self.assertEqual(report['status'], 'failed')
+        self.assertEqual(report['status'], 'ok')
+        self.assertEqual(report['websiteKeys'], ['books'])
         self.assertNotIn(secret, self.report.read_text(encoding='utf-8'))
         self.assertTrue(all(row['reason'] == 'collector_timeout' for row in report['groups']))
 

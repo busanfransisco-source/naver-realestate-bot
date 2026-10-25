@@ -146,13 +146,13 @@ jobs:
           git push origin HEAD:main
       - name: Verify published morning source and page
         run: python morning_source_publication.py --verify --publication tmp/morning-ready-source/morning-website-sources.json
-      - name: Verify strict nine-box sender snapshot when complete
+      - name: Verify sender snapshot with healthy sources and explicit omissions
         if: steps.apply.outputs.ready_applied == 'true'
         run: python verify_morning_publication.py
-      - name: Report incomplete sender snapshot without blocking healthy website sources
+      - name: Report missing sender snapshot without blocking healthy website sources
         if: needs.collect.outputs.ready != 'true'
         run: |
-          echo 'Healthy website sources were published. Strict nine-box sender snapshot remains unchanged.'
+          echo 'Healthy website sources were published, but no validated sender snapshot was available.'
           exit 1
   transactions:
     # Independent official recovery: never make the nine morning boxes wait for

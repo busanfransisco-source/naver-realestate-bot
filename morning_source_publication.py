@@ -1,7 +1,7 @@
 """Website-only morning source publication; never a sender-ready snapshot.
 
-The nine-box sender contract remains fail-closed. This separate artifact lets
-independently verified source bodies reach the website when another box fails.
+The sender keeps nine stable slots and omits unavailable sources individually.
+This artifact publishes the identical healthy subset to the website.
 """
 import argparse
 from datetime import datetime, time, timedelta

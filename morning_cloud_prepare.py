@@ -1,8 +1,8 @@
 """Prepare the morning snapshot on GitHub Linux, never on the delivery PC.
 
 The six independent existing collectors run with bounded concurrency. Ordinary
-source files remain the website inputs; only a fully validated nine-box bundle
-can replace the public ready snapshot. checkedAtKst means body revalidation,
+source files remain the website inputs; validated sources keep their nine stable
+slots while unavailable slots are explicitly omitted. checkedAtKst means body revalidation,
 not an invented observation time for weekly prices or a books sales period.
 """
 import argparse
@@ -176,38 +176,38 @@ def _run_group(root, group, now, absolute_deadline, runner, fixed_clock=False):
                             capture_output=True, timeout=min(180, remaining), check=False)
             if result.returncode:
                 reason = 'collector_exit_nonzero'
-            else:
-                # Other workers may be halfway through their own file writes.
-                # Validate and restore by box, not by multi-box collector.
-                checked_now = now if fixed_clock else datetime.now(KST)
-                bodies, evidence = read_sources(root, checked_now, only_keys=keys)
-                from morning_source_publication import source_issues
-                for key in keys:
-                    path = expected[key]
-                    changed = _mtime(path) is not None and _mtime(path) != before[key]
-                    issues = source_issues(key, bodies[BOX_KEYS.index(key)], evidence, checked_now)
-                    retained_weekly = key == 'books' and not changed and not issues
-                    box_reason = ('source_validation_failed' if issues else
-                                  'collector_did_not_refresh_required_source' if not changed and not retained_weekly
-                                  else None)
-                    if box_reason:
-                        paths = _paths(root, (name, script, (key,)), now)
-                        _restore({path: data for path, data in saved.items() if path in paths})
-                    boxes.append(dict(key=key, status='failed' if box_reason else
-                                      'retained_weekly' if retained_weekly else 'ok',
-                                      reason=box_reason, issueCount=len(issues)))
-                failed = [box for box in boxes if box['status'] == 'failed']
-                if failed:
-                    reason = failed[0]['reason']
-                    issue_count = sum(box['issueCount'] for box in failed)
     except subprocess.TimeoutExpired:
         reason = 'collector_timeout'
     except Exception:
         # Never echo subprocess output, request URLs, credentials or paths.
         reason = 'collector_exception'
-    if reason and not boxes:
+    # A multi-output process may have produced valid files before a later
+    # source failed, exited nonzero or timed out. Verify each output regardless.
+    try:
+        checked_now = now if fixed_clock else datetime.now(KST)
+        bodies, evidence = read_sources(root, checked_now, only_keys=keys)
+        from morning_source_publication import source_issues
+        for key in keys:
+            path = expected[key]
+            changed = _mtime(path) is not None and _mtime(path) != before[key]
+            issues = source_issues(key, bodies[BOX_KEYS.index(key)], evidence, checked_now)
+            retained_weekly = key == 'books' and not changed and not issues
+            box_reason = ('source_validation_failed' if issues else
+                          (reason or 'collector_did_not_refresh_required_source')
+                          if not changed and not retained_weekly else None)
+            if box_reason:
+                paths = _paths(root, (name, script, (key,)), now)
+                _restore({path: data for path, data in saved.items() if path in paths})
+            boxes.append(dict(key=key, status='failed' if box_reason else
+                              'retained_weekly' if retained_weekly else 'ok',
+                              reason=box_reason, issueCount=len(issues)))
+    except Exception:
         _restore(saved)
+        reason = reason or 'collector_exception'
         boxes = [dict(key=key, status='failed', reason=reason, issueCount=0) for key in keys]
+    failed = [box for box in boxes if box['status'] == 'failed']
+    reason = (reason or failed[0]['reason']) if failed else None
+    issue_count = sum(box['issueCount'] for box in failed)
     successful = any(box['status'] != 'failed' for box in boxes)
     return dict(group=name, status=('partial' if successful else 'failed') if reason else 'ok',
                 reason=reason, issueCount=issue_count, boxes=boxes)
@@ -239,28 +239,26 @@ def prepare(root, output, report, *, collect=False, now=None, runner=None,
         order = {group[0]: index for index, group in enumerate(GROUPS)}
         groups.sort(key=lambda row: order[row['group']])
     finished = fixed_now or datetime.now(KST)
-    # Books alone is optional. Failures in every other source remain blocking
-    # for sender readiness, even when an older same-day raw file exists.
-    failed_groups = [group for group in groups if group['status'] != 'ok'
-                     and any(box['status'] == 'failed' and box['key'] != 'books'
-                             for box in group['boxes'])]
     diagnostics = dict(schemaVersion=1, checkedAtKst=finished.isoformat(),
                        mode='collect' if collect else 'export-only', groups=groups,
                        status='failed', snapshotWritten=False, websiteWritten=False)
     bodies, evidence = read_sources(root, finished)
-    # The website can publish independently verified boxes without replacing
-    # the sender's strict nine-box ready contract with a partial snapshot.
+    # Every source is independent. Daily failures must not silently reuse a
+    # restored file; YES24 alone retains its approved today/yesterday exception.
     eligible_keys = ([box['key'] for group in groups for box in group['boxes']
                       if box['status'] != 'failed'] if collect else list(BOX_KEYS))
-    omit_books = ('books' not in eligible_keys
-                  or bool(_body_issues('books', bodies[7], finished.date(), evidence)))
-    if omit_books:
-        bodies[7] = ''
-        eligible_keys = [key for key in eligible_keys if key != 'books']
-        evidence = {key: value for key, value in evidence.items()
-                    if key not in ('booksPeriodStart', 'booksPeriodEnd')}
-    diagnostics['omittedKeys'] = ['books'] if omit_books else []
-    from morning_source_publication import build_publication
+    from morning_source_publication import build_publication, source_issues
+    omitted = [key for key in BOX_KEYS if key not in eligible_keys or
+               source_issues(key, bodies[BOX_KEYS.index(key)], evidence, finished)]
+    for key in omitted:
+        bodies[BOX_KEYS.index(key)] = ''
+    eligible_keys = [key for key in BOX_KEYS if key not in omitted]
+    if 'trend' in omitted:
+        evidence.pop('trendCheckedAtKst', None)
+    if 'books' in omitted:
+        evidence.pop('booksPeriodStart', None)
+        evidence.pop('booksPeriodEnd', None)
+    diagnostics['omittedKeys'] = omitted
     try:
         publication = build_publication(bodies, finished, evidence=evidence, eligible_keys=eligible_keys)
         atomic_json(output.with_name('morning-website-sources.json'), publication)
@@ -268,13 +266,10 @@ def prepare(root, output, report, *, collect=False, now=None, runner=None,
     except (ValueError, OSError, TypeError, KeyError):
         pass
     try:
-        snapshot = build_snapshot(bodies, finished, evidence=evidence, omit_books=omit_books)
-        if failed_groups:
-            diagnostics['reason'] = 'collector_groups_failed_previous_snapshot_preserved'
-        else:
-            atomic_json(output, snapshot)
-            diagnostics.update(status='ok', snapshotWritten=True,
-                               snapshotSha256=snapshot['snapshotSha256'])
+        snapshot = build_snapshot(bodies, finished, evidence=evidence, omitted_keys=omitted)
+        atomic_json(output, snapshot)
+        diagnostics.update(status='ok', snapshotWritten=True,
+                           snapshotSha256=snapshot['snapshotSha256'])
     except (ValueError, OSError, TypeError, KeyError):
         diagnostics['reason'] = 'incomplete_or_invalid_source_previous_snapshot_preserved'
     if diagnostics['status'] != 'ok' and diagnostics['websiteWritten']:
