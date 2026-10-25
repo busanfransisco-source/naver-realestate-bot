@@ -1,5 +1,14 @@
 🤖 26년 10월 25일 일요일 AI 뉴스
 
+가상 섬에 홀로 둔 AI, 스스로 놀이 만들고 개발자도 몰랐던 기술 발견
+https://www.aitimes.com/news/articleView.html?idxno=216631
+
+'클로드'가 그림에 숨긴 문장, '아스트라'가 풀었다…암호 규칙 없이 88% 해독
+https://www.aitimes.com/news/articleView.html?idxno=216630
+
+[AI 모델 신작] 텐센트 월드 모델부터 잭 도시의 음성 AI까지 9종
+https://www.aitimes.com/news/articleView.html?idxno=216628
+
 리퀴드 AI, 실시간 추론 엔진 ‘RIPL’ 출시...AI 응답 지연 50ms 미만 겨냥
 https://www.aitimes.com/news/articleView.html?idxno=216627
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216622
 
 오픈AI 회의실 도청 사태, 사우디 연루 '경제 간첩' 수사로 확대
 https://www.aitimes.com/news/articleView.html?idxno=216621
-
-아마존, AI 수요 폭증에 내년 컴퓨팅 용량 완판...2028년 예약도 몰려
-https://www.aitimes.com/news/articleView.html?idxno=216620
-
-애플 ‘아이폰 듀오’, 출시 첫날 품귀…예약 배송 내년 1월까지 밀려
-https://www.aitimes.com/news/articleView.html?idxno=216619
-
-피차이 “매출 포기하더라도 첨단 AI 개발에 컴퓨팅 우선 투입”
-https://www.aitimes.com/news/articleView.html?idxno=216618
