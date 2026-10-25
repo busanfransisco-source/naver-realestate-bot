@@ -3,7 +3,7 @@
 가상 섬에 홀로 둔 AI, 스스로 놀이 만들고 개발자도 몰랐던 기술 발견
 https://www.aitimes.com/news/articleView.html?idxno=216631
 
-'클로드'가 그림에 숨긴 문장, '아스트라'가 풀었다…암호 규칙 없이 88% 해독
+&apos;클로드&apos;가 그림에 숨긴 문장, &apos;아스트라&apos;가 풀었다…암호 규칙 없이 88% 해독
 https://www.aitimes.com/news/articleView.html?idxno=216630
 
 [AI 모델 신작] 텐센트 월드 모델부터 잭 도시의 음성 AI까지 9종
@@ -15,7 +15,7 @@ https://www.aitimes.com/news/articleView.html?idxno=216627
 젠슨 황 시연에 미니로봇 주문 급증…“올해 가장 많이 팔릴 수도”
 https://www.aitimes.com/news/articleView.html?idxno=216626
 
-엔비디아, 로컬 에이전트·로봇 겨냥 4GB 모델 '네모트론 3.5 볼트' 출시
+엔비디아, 로컬 에이전트·로봇 겨냥 4GB 모델 &apos;네모트론 3.5 볼트&apos; 출시
 https://www.aitimes.com/news/articleView.html?idxno=216625
 
 머스크 “에이전트로 통신 수요 1000배 증가”…기지국 8만곳 확보 추진
@@ -27,5 +27,5 @@ https://www.aitimes.com/news/articleView.html?idxno=216623
 미·우크라 신경전 끝에 스타링크 정상화…머스크는 “약관 위반” 주장
 https://www.aitimes.com/news/articleView.html?idxno=216622
 
-오픈AI 회의실 도청 사태, 사우디 연루 '경제 간첩' 수사로 확대
+오픈AI 회의실 도청 사태, 사우디 연루 &apos;경제 간첩&apos; 수사로 확대
 https://www.aitimes.com/news/articleView.html?idxno=216621
