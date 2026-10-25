@@ -1,7 +1,13 @@
 🤖 26년 10월 25일 일요일 AI 뉴스
 
+리퀴드 AI, 실시간 추론 엔진 ‘RIPL’ 출시...AI 응답 지연 50ms 미만 겨냥
+https://www.aitimes.com/news/articleView.html?idxno=216627
+
 젠슨 황 시연에 미니로봇 주문 급증…“올해 가장 많이 팔릴 수도”
 https://www.aitimes.com/news/articleView.html?idxno=216626
+
+엔비디아, 로컬 에이전트·로봇 겨냥 4GB 모델 '네모트론 3.5 볼트' 출시
+https://www.aitimes.com/news/articleView.html?idxno=216625
 
 머스크 “AI 에이전트로 통신 수요 1000배 증가”…기지국 8만곳 확보 추진
 https://www.aitimes.com/news/articleView.html?idxno=216624
@@ -12,6 +18,9 @@ https://www.aitimes.com/news/articleView.html?idxno=216623
 미·우크라 신경전 끝에 스타링크 정상화…머스크는 “약관 위반” 주장
 https://www.aitimes.com/news/articleView.html?idxno=216622
 
+오픈AI 회의실 도청 사태, 사우디 연루 '경제 간첩' 수사로 확대
+https://www.aitimes.com/news/articleView.html?idxno=216621
+
 애플 ‘아이폰 듀오’, 출시 첫날 품귀…예약 배송 내년 1월까지 밀려
 https://www.aitimes.com/news/articleView.html?idxno=216619
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216618
 
 중국 국영 통신망서 수출 금지 엔비디아 칩 또 포착…첨단 'B300' 32개 확인
 https://www.aitimes.com/news/articleView.html?idxno=216617
-
-오픈AI 연구원 3명 해고, ‘순환 추론’ 유출 조사서 비롯…시그널 대화 쟁점
-https://www.aitimes.com/news/articleView.html?idxno=216616
-
-오픈AI, 보안 우회로 중단했던 첨단 모델 학습 재개…인터넷 차단 강화
-https://www.aitimes.com/news/articleView.html?idxno=216615
-
-SK “AI 데이터센터 5GW에 464조 필요”…글로벌 빅테크와 투자 협상
-https://www.aitimes.com/news/articleView.html?idxno=216614
