@@ -106,7 +106,7 @@ class PartialMorningTests(unittest.TestCase):
                         return subprocess.CompletedProcess(command, 1)
                     return subprocess.CompletedProcess(command, 0)
                 ready = root/'morning-briefing-ready.json'
-                result = cloud.prepare(root, ready, root/'report.json', collect=True, now=NOW, runner=runner)
+                result = cloud.prepare(root, ready, root/'report.json', collect=True, now=NOW, runner=runner, retry_delays=())
                 self.assertTrue(result['snapshotWritten'])
                 self.assertEqual(result['omittedKeys'], ['metalcoin', 'books'])
                 blocks = contract.validate_snapshot(json.loads(ready.read_text(encoding='utf-8')), NOW)

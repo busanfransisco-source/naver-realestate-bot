@@ -256,6 +256,7 @@ class PipelineTests(unittest.TestCase):
         self.temporary.cleanup()
 
     def run_prepare(self, **kwargs):
+        kwargs.setdefault('retry_delays', ())
         return cloud.prepare(self.root, self.output, self.report, now=NOW, **kwargs)
 
     def runner(self, command, **kwargs):

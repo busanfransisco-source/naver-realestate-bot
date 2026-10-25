@@ -181,6 +181,7 @@ def _run_group(root, group, now, absolute_deadline, runner, fixed_clock=False):
     except Exception:
         # Never echo subprocess output, request URLs, credentials or paths.
         reason = 'collector_exception'
+    process_reason = reason
     # A multi-output process may have produced valid files before a later
     # source failed, exited nonzero or timed out. Verify each output regardless.
     try:
@@ -210,7 +211,26 @@ def _run_group(root, group, now, absolute_deadline, runner, fixed_clock=False):
     issue_count = sum(box['issueCount'] for box in failed)
     successful = any(box['status'] != 'failed' for box in boxes)
     return dict(group=name, status=('partial' if successful else 'failed') if reason else 'ok',
-                reason=reason, issueCount=issue_count, boxes=boxes)
+                reason=reason, processReason=process_reason, issueCount=issue_count, boxes=boxes)
+
+
+def _retry_group(root, previous, group, now, deadline, runner, fixed_clock):
+    """Retry failed outputs while preserving successful siblings byte-for-byte."""
+    name, script, keys = group
+    failed_keys = tuple(box['key'] for box in previous['boxes'] if box['status'] == 'failed')
+    protected_keys = tuple(key for key in keys if key not in failed_keys)
+    protected = _backup(_paths(root, (name, script, protected_keys), now)) if protected_keys else {}
+    try:
+        retried = _run_group(root, (name, script, failed_keys), now, deadline, runner, fixed_clock)
+    finally:
+        _restore(protected)
+    updates = {box['key']: box for box in retried['boxes']}
+    boxes = [updates.get(box['key'], box) for box in previous['boxes']]
+    failed = [box for box in boxes if box['status'] == 'failed']
+    return dict(group=name, status=('partial' if len(failed) < len(boxes) else 'failed') if failed else 'ok',
+                reason=failed[0]['reason'] if failed else None,
+                processReason=retried.get('processReason'),
+                issueCount=sum(box['issueCount'] for box in failed), boxes=boxes)
 
 
 def collection_allowed():
@@ -219,13 +239,16 @@ def collection_allowed():
 
 
 def prepare(root, output, report, *, collect=False, now=None, runner=None,
-            deadline_seconds=270, max_workers=3):
+            deadline_seconds=270, max_workers=3, retry_delays=(10, 20), sleeper=time.sleep):
     """Build the public bundle; injected runners are exclusively for tests."""
     root, output, report = map(Path, (root, output, report))
     if collect and runner is None and not collection_allowed():
         raise ValueError('live collection is allowed only on GitHub Linux runners')
     if max_workers < 1 or max_workers > 3 or not 0 < deadline_seconds <= 270:
         raise ValueError('collector concurrency/deadline outside approved bounds')
+    if (not isinstance(retry_delays, (list, tuple)) or len(retry_delays) > 2
+            or any(type(delay) not in (int, float) or not 0 <= delay <= 30 for delay in retry_delays)):
+        raise ValueError('retry delays outside approved bounds')
     fixed_now = now
     now = now or datetime.now(KST)
     groups = []
@@ -238,6 +261,27 @@ def prepare(root, output, report, *, collect=False, now=None, runner=None,
                 groups.append(future.result())
         order = {group[0]: index for index, group in enumerate(GROUPS)}
         groups.sort(key=lambda row: order[row['group']])
+        histories = {group['group']: [dict(group)] for group in groups}
+        for delay in retry_delays:
+            pending = [group for group in groups if any(box['status'] == 'failed' for box in group['boxes'])]
+            # Never let retries extend the original run's 270-second budget.
+            if not pending or deadline-time.monotonic() <= delay+15:
+                break
+            sleeper(delay)
+            definitions = {group[0]: group for group in GROUPS}
+            with ThreadPoolExecutor(max_workers=max_workers) as executor:
+                futures = [executor.submit(_retry_group, root, previous, definitions[previous['group']],
+                                           now, deadline, runner or subprocess.run, fixed_now is not None)
+                           for previous in pending]
+                updates = {}
+                for future in as_completed(futures):
+                    updated = future.result()
+                    updates[updated['group']] = updated
+                    histories[updated['group']].append(dict(updated))
+            groups = [updates.get(group['group'], group) for group in groups]
+        for group in groups:
+            group['attemptHistory'] = histories[group['group']]
+            group['attempts'] = len(histories[group['group']])
     finished = fixed_now or datetime.now(KST)
     diagnostics = dict(schemaVersion=1, checkedAtKst=finished.isoformat(),
                        mode='collect' if collect else 'export-only', groups=groups,
@@ -259,6 +303,9 @@ def prepare(root, output, report, *, collect=False, now=None, runner=None,
         evidence.pop('booksPeriodStart', None)
         evidence.pop('booksPeriodEnd', None)
     diagnostics['omittedKeys'] = omitted
+    diagnostics['hadErrors'] = any(attempt.get('reason') or attempt.get('processReason')
+                                  for group in groups for attempt in group.get('attemptHistory', [group]))
+    diagnostics['sourceHealth'] = 'degraded' if omitted else 'recovered' if diagnostics['hadErrors'] else 'ok'
     try:
         publication = build_publication(bodies, finished, evidence=evidence, eligible_keys=eligible_keys)
         atomic_json(output.with_name('morning-website-sources.json'), publication)

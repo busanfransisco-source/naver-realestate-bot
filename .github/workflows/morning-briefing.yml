@@ -98,6 +98,25 @@ jobs:
           name: morning-preparation-health
           path: tmp/morning-health.json
           retention-days: 7
+      - name: Surface collection errors independently from delivery readiness
+        if: always() && steps.window.outputs.eligible == 'true'
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          path = Path('tmp/morning-health.json')
+          report = json.loads(path.read_text(encoding='utf-8')) if path.exists() else {}
+          state = report.get('sourceHealth', 'unknown')
+          omitted = report.get('omittedKeys', [])
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
+              summary.write('## Morning collection health\n')
+              summary.write('Source health: '+state+'\n\n')
+              summary.write('Omitted source keys: '+(', '.join(omitted) or 'none')+'\n\n')
+              for group in report.get('groups', []):
+                  summary.write('- '+group['group']+': '+group['status']+'; attempts='+str(group.get('attempts',1))+'\n')
+          if omitted or report.get('hadErrors') or not report:
+              print('::warning::Morning collection health: '+state+'; see safe diagnostics artifact and retry history. Healthy sources still publish.')
+          PY
   publish:
     needs: collect
     if: always() && needs.collect.outputs.publication == 'true'
