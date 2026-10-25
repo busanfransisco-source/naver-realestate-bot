@@ -1,5 +1,8 @@
 🤖 26년 10월 25일 일요일 AI 뉴스
 
+애플 ‘아이폰 듀오’, 출시 첫날 품귀…예약 배송 내년 1월까지 밀려
+https://www.aitimes.com/news/articleView.html?idxno=216619
+
 피차이 “매출 포기하더라도 첨단 AI 개발에 컴퓨팅 우선 투입”
 https://www.aitimes.com/news/articleView.html?idxno=216618
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216611
 
 [AI카툰] Bob, Senior IT guy - 밥, 오랫동안 꿈꾸던 날라다니는 차
 https://www.aitimes.com/news/articleView.html?idxno=216610
-
-구글 클라우드, 에이전트 전용 '컴퓨팅 엔진' 출시…마이크로VM으로 보안 격리
-https://www.aitimes.com/news/articleView.html?idxno=216608
