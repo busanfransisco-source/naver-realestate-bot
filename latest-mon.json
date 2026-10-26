@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-10-26 17:46:28",
+  "updated_at_kst": "2026-10-26 17:53:28",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 26일 월요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "[로터리] 수도권 집중, 국토공간 재설계로 풀자",
+      "url": "https://n.news.naver.com/mnews/article/011/0004675312"
+    },
+    {
+      "title": "국회대로 지하화 본격화…31일부터 통행 중단",
+      "url": "https://n.news.naver.com/mnews/article/015/0005346672"
+    },
     {
       "title": "홍지선 국토장관 \"무안공항 사고 원인·책임 밝혀질 때까지 소임 다할 것\"",
       "url": "https://n.news.naver.com/mnews/article/014/0005594641"
@@ -34,14 +42,6 @@
     {
       "title": "스파크플러스, 선릉4호점 오픈…1인·소규모 오피스 수요 겨냥",
       "url": "https://n.news.naver.com/mnews/article/629/0000545691"
-    },
-    {
-      "title": "\"7억 더 내세요\"...재초환, 20년 만에 현실로",
-      "url": "https://n.news.naver.com/mnews/article/215/0001270518"
-    },
-    {
-      "title": "'에피트·아테라·카이브'…잘 나가는 중견사 신생브랜드",
-      "url": "https://n.news.naver.com/mnews/article/015/0005346625"
     }
   ]
 }
