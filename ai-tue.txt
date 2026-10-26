@@ -1,5 +1,8 @@
 🤖 26년 10월 27일 화요일 AI 뉴스
 
+오픈AI, ‘GPT-6.1 테라’ 출시…자동화 성능 높이고 가격  낮춰
+https://www.aitimes.com/news/articleView.html?idxno=216690
+
 앤트로픽, IPO 위험 공개…보안 사고부터 데이터센터 반발까지
 https://www.aitimes.com/news/articleView.html?idxno=216689
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216678
 
 메타, ‘뮤즈’ 기능 확대 속도…실시간 음성 대화에 아바타 공유도 준비
 https://www.aitimes.com/news/articleView.html?idxno=216677
-
-중국 AI 컴퓨팅 내년 두 배로…65%는 미국산 칩에 의존
-https://www.aitimes.com/news/articleView.html?idxno=216673

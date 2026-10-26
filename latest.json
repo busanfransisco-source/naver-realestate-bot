@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-10-27 07:55:32",
+  "updated_at_kst": "2026-10-27 08:11:05",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 27일 화요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "재건축·재개발 ‘물딱지’ 막는다…황희, 실수요자 조합원 지위 허용법 발의",
+      "url": "https://n.news.naver.com/mnews/article/009/0005754381"
+    },
+    {
+      "title": "‘포레나 인천학익’ 입주 진행… 교육·교통·생활 인프라 갖춘 562세대 단지",
+      "url": "https://n.news.naver.com/mnews/article/029/0003055404"
+    },
     {
       "title": "양천구, 서부트럭터미널 1.9조 개발 인허가…2027년 착공 추진",
       "url": "https://n.news.naver.com/mnews/article/018/0006396761"
@@ -34,14 +42,6 @@
     {
       "title": "\"올해 전월세 시장이 화양연화\"…2027년 전세 매물 기근 가속화 전망",
       "url": "https://n.news.naver.com/mnews/article/003/0014279922"
-    },
-    {
-      "title": "'AI 서버 아파트' 데이터센터, 건설 새 먹거리로 떴다",
-      "url": "https://n.news.naver.com/mnews/article/648/0000051952"
-    },
-    {
-      "title": "강남 집값 떨어져도…30억 넘보는 신축 분양권·입주권 ‘딴 세상’",
-      "url": "https://n.news.naver.com/mnews/article/119/0003147282"
     }
   ]
 }
