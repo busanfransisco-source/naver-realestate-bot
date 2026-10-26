@@ -1,31 +1,31 @@
 🤖 26년 10월 26일 월요일 AI 뉴스
 
-가상 섬에 홀로 둔 AI, 스스로 놀이 만들고 개발자도 몰랐던 기술 발견
-https://www.aitimes.com/news/articleView.html?idxno=216631
+문샷, 인플루언서에 “광고 표시 빼라” 지침 의혹…'키미' 신작 홍보 역풍
+https://www.aitimes.com/news/articleView.html?idxno=216657
 
-'클로드'가 그림에 숨긴 문장, '아스트라'가 풀었다…88% 해독
-https://www.aitimes.com/news/articleView.html?idxno=216630
+서울 AI 허브, AI 기업 스케일업 위한 '베이비유니콘센터' 조성 추진
+https://www.aitimes.com/news/articleView.html?idxno=216651
 
-[AI 모델 신작] 텐센트 월드 모델부터 잭 도시의 음성 AI까지 9종
-https://www.aitimes.com/news/articleView.html?idxno=216628
+플래티어, 사내 폐쇄망 대응 AI 테스트 관리 솔루션 ‘XGEN TMS’ 출시
+https://www.aitimes.com/news/articleView.html?idxno=216647
 
-리퀴드 AI, 실시간 추론 엔진 ‘RIPL’ 출시...AI 응답 지연 50ms 미만 겨냥
-https://www.aitimes.com/news/articleView.html?idxno=216627
+엔비디아, GPU당 연간 2000달러 SW 구독제 구상...생태계 '락인' 가속
+https://www.aitimes.com/news/articleView.html?idxno=216646
 
-젠슨 황 시연에 미니로봇 주문 급증…“올해 가장 많이 팔릴 수도”
-https://www.aitimes.com/news/articleView.html?idxno=216626
+금감원, AI로 불법사금융 신고 통합 분석...'몸통'까지 추적
+https://www.aitimes.com/news/articleView.html?idxno=216643
 
-엔비디아, 로컬 에이전트·로봇 겨냥 4GB 모델 '네모트론 3.5 볼트' 출시
-https://www.aitimes.com/news/articleView.html?idxno=216625
+오픈AI, 한국 스타트업 대상 '모델 마스터즈' 개최...11개사 참여
+https://www.aitimes.com/news/articleView.html?idxno=216642
 
-머스크 “에이전트로 통신 수요 1000배 증가”…기지국 8만곳 확보 추진
-https://www.aitimes.com/news/articleView.html?idxno=216624
+미국 주택용 태양광 가격 상승…배터리 결합 설비가 인상 주도
+https://www.aitimes.com/news/articleView.html?idxno=216641
 
-선거 후보 선택 강요하자...그록은 공화당, 오픈AI 모델은 민주당 선택
-https://www.aitimes.com/news/articleView.html?idxno=216623
+스페이스X, 53조 부채로 GPU 확보..."네오클라우드는 도산 위기"
+https://www.aitimes.com/news/articleView.html?idxno=216640
 
-미·우크라 신경전 끝에 스타링크 정상화…머스크는 “약관 위반” 주장
-https://www.aitimes.com/news/articleView.html?idxno=216622
+유럽 태양광·ESS 거래 플랫폼, 루마니아 진출…6.2MWp 사업 등록
+https://www.aitimes.com/news/articleView.html?idxno=216639
 
-오픈AI 회의실 도청 사태, 사우디 연루 '경제 간첩' 수사로 확대
-https://www.aitimes.com/news/articleView.html?idxno=216621
+클로드, 선거 앞두고 조지아주 유권자 데이터 무단 접근 논란
+https://www.aitimes.com/news/articleView.html?idxno=216638
