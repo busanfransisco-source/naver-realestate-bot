@@ -1,31 +1,31 @@
-🤖 26년 10월 20일 화요일 AI 뉴스
+🤖 26년 10월 27일 화요일 AI 뉴스
 
-[게시판] NC AI, 바르코 3D·사운드 50% 할인 프로모션 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=216455
+[게시판] 원티드랩, FDE 채용 박람회에 마키나락스·베슬AI 참여 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=216684
 
-엘리스그룹, AI 인프라 상장 랠리 가세.. 코어위브 악재 돌파할까
-https://www.aitimes.com/news/articleView.html?idxno=216452
+허깅페이스, DNA 읽고 질문에 답하는 ‘카본-X’ 공개…유전자 분석 비용 낮춘다
+https://www.aitimes.com/news/articleView.html?idxno=216683
 
-클로드 코드, 맥에 숨은 암호화폐 채굴 악성코드 포착...CPU 사용률 1175% 치솟아
-https://www.aitimes.com/news/articleView.html?idxno=216451
+로고 생성 넘어 SVG 편집 파일로...이디오그램, 벡터 AI로 디자인 실무 공략
+https://www.aitimes.com/news/articleView.html?idxno=216679
 
-스카이폴AI, CAD·BIM 3D 설계 자동화 월드모델 ‘스카이-001’ 공개
-https://www.aitimes.com/news/articleView.html?idxno=216450
+경북, 퓨리오사AI와 지역 AI 반도체 산업 생태계 조성 나서
+https://www.aitimes.com/news/articleView.html?idxno=216678
 
-AI 에이전트가 뚫은 기업 100여곳…660만원으로 '해킹 대중화' 열려
-https://www.aitimes.com/news/articleView.html?idxno=216448
+메타, ‘뮤즈’ 기능 확대 속도…실시간 음성 대화에 아바타 공유도 준비
+https://www.aitimes.com/news/articleView.html?idxno=216677
 
-플리토, 3분기 누적 창사이래 최대 실적 실현...영업이익률 50% 돌파
-https://www.aitimes.com/news/articleView.html?idxno=216447
+중국 AI 컴퓨팅 내년 두 배로…65%는 미국산 칩에 의존
+https://www.aitimes.com/news/articleView.html?idxno=216673
 
-엔스케일, 앤트로픽과 추가 60조 규모 컴퓨팅 계약 협상…총 120조 육박
-https://www.aitimes.com/news/articleView.html?idxno=216446
+RTX 30 그래픽카드 ‘잠금 해제’ 도구 등장…AI 이미지·영상 처리량 최대 60% 증가
+https://www.aitimes.com/news/articleView.html?idxno=216672
 
-미 국방차관 "AI 기업 협조 안 하면 수출 통제 직접 가할 것"
-https://www.aitimes.com/news/articleView.html?idxno=216445
+역전파 없는 AI 학습 실험, 열흘 만에 4000배 빨라져…1.76시간→1.6초
+https://www.aitimes.com/news/articleView.html?idxno=216671
 
-텐스토렌트, 8조 가치로 대규모 투자 유치..."인수 대신 독자 노선"
-https://www.aitimes.com/news/articleView.html?idxno=216444
+알트먼 “수학계, AI에 ‘우린 끝났다’ 절망하다 닷새 만에 수용”
+https://www.aitimes.com/news/articleView.html?idxno=216670
 
-애플, 28일 신제품 행사서 첫 터치스크린 맥북 프로 공개
-https://www.aitimes.com/news/articleView.html?idxno=216442
+제논, 기업용 AI 가드레일 솔루션 '젠가드' 출시
+https://www.aitimes.com/news/articleView.html?idxno=216665
