@@ -1,31 +1,31 @@
 🤖 26년 10월 27일 화요일 AI 뉴스
 
-[AI 이슈트렌드] 대남 방송 재개·소방 빨대 논란 속 역삼동 방화·프랑스 시위 관심
-https://www.aitimes.com/news/articleView.html?idxno=216685
+앤트로픽, 메타 '뮤즈' 대항마 AI 에이전트 '클로드 듀엣' 공개
+https://www.aitimes.com/news/articleView.html?idxno=216510
 
-[게시판] 원티드랩, FDE 채용 박람회에 마키나락스·베슬AI 참여 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=216684
+구글, 터미널서 AI 에이전트 다루는 '제미나이 API CLI' 오픈소스 공개
+https://www.aitimes.com/news/articleView.html?idxno=216607
 
-허깅페이스, DNA 읽고 질문에 답하는 ‘카본-X’ 공개…유전자 분석 비용 낮춘다
-https://www.aitimes.com/news/articleView.html?idxno=216683
+AGI 선점해 경쟁사 GPU까지 파괴…알트먼 “끔찍한 시나리오”
+https://www.aitimes.com/news/articleView.html?idxno=216469
 
-로고 생성 넘어 SVG 편집 파일로...이디오그램, 벡터 AI로 디자인 실무 공략
-https://www.aitimes.com/news/articleView.html?idxno=216679
+가상 섬에 홀로 둔 AI, 스스로 놀이 만들고 개발자도 몰랐던 기술 발견
+https://www.aitimes.com/news/articleView.html?idxno=216631
 
-경북, 퓨리오사AI와 지역 AI 반도체 산업 생태계 조성 나서
-https://www.aitimes.com/news/articleView.html?idxno=216678
+학술 논문 읽고 코드 수정하는 자가 진화 에이전트 '스칼라이볼브' 등장
+https://www.aitimes.com/news/articleView.html?idxno=216552
 
-메타, ‘뮤즈’ 기능 확대 속도…실시간 음성 대화에 아바타 공유도 준비
-https://www.aitimes.com/news/articleView.html?idxno=216677
+웹사이트 70% 쓰는 PHP서 AI가 결함 발견…각국 정부 사이트 중단
+https://www.aitimes.com/news/articleView.html?idxno=216499
 
-중국 AI 컴퓨팅 내년 두 배로…65%는 미국산 칩에 의존
-https://www.aitimes.com/news/articleView.html?idxno=216673
+머스크 “에이전트로 통신 수요 1000배 증가”…기지국 8만곳 확보 추진
+https://www.aitimes.com/news/articleView.html?idxno=216624
 
-RTX 30 그래픽카드 ‘잠금 해제’ 도구 등장…AI 이미지·영상 처리량 최대 60% 증가
-https://www.aitimes.com/news/articleView.html?idxno=216672
+젠슨 황 시연에 미니로봇 주문 급증…“올해 가장 많이 팔릴 수도”
+https://www.aitimes.com/news/articleView.html?idxno=216626
 
-역전파 없는 AI 학습 실험, 열흘 만에 4000배 빨라져…1.76시간→1.6초
-https://www.aitimes.com/news/articleView.html?idxno=216671
+멜론 3위 오른 AI 노래, 어떻게 만들었나…‘머무르’ 제작팀 인터뷰
+https://www.aitimes.com/news/articleView.html?idxno=216553
 
-알트먼 “수학계, AI에 ‘우린 끝났다’ 절망하다 닷새 만에 수용”
-https://www.aitimes.com/news/articleView.html?idxno=216670
+SK “AI 데이터센터 5GW에 464조 필요”…글로벌 빅테크와 투자 협상
+https://www.aitimes.com/news/articleView.html?idxno=216614
