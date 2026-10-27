@@ -1,5 +1,8 @@
 🤖 26년 10월 27일 화요일 AI 뉴스
 
+네이버, 브룩필드와 12조원 인프라 계약...엔비디아, 3대 주주로 등극
+https://www.aitimes.com/news/articleView.html?idxno=216729
+
 칩스앤미디어, AI SoC·로보틱스 신규 실적에 3분기 매출 ↑
 https://www.aitimes.com/news/articleView.html?idxno=216724
 
@@ -24,8 +27,5 @@ https://www.aitimes.com/news/articleView.html?idxno=216715
 애플, '시리 AI' 한국어 서비스 개시...iOS27.2 업데이트 배포
 https://www.aitimes.com/news/articleView.html?idxno=216713
 
-애플, OLED 아이패드 미니 공개…“AI 성능 최대 4.5배”
-https://www.aitimes.com/news/articleView.html?idxno=216710
-
-KT, AI 모델 500개 통합 ‘토큰팩토리’ 출시…토큰 최대 25% 절감
-https://www.aitimes.com/news/articleView.html?idxno=216709
+"성능은 그대로, 비용은 최대 3배"…에이전트 가로막는 '복잡한 하네스'
+https://www.aitimes.com/news/articleView.html?idxno=216712
