@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-10-28 01:29:58",
+  "updated_at_kst": "2026-10-28 04:41:12",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 28일 수요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "강남행 티켓 된 '해외건설 특공' 손본다",
+      "url": "https://n.news.naver.com/mnews/article/008/0005432589"
+    },
     {
       "title": "아파트에 오페라하우스?… 커뮤니티 경쟁 과열",
       "url": "https://n.news.naver.com/mnews/article/023/0004006284"
@@ -38,10 +42,6 @@
     {
       "title": "강북 전셋값마저 6억 넘어…강남보다 상승세 가팔랐다",
       "url": "https://n.news.naver.com/mnews/article/032/0003478920"
-    },
-    {
-      "title": "오세훈 \"구룡마을 화재, 가용 인력 총동원해 신속 진화\"",
-      "url": "https://n.news.naver.com/mnews/article/014/0005595401"
     }
   ]
 }
