@@ -1,5 +1,23 @@
 🤖 26년 10월 27일 화요일 AI 뉴스
 
+애플의 폴더블 '아이폰 듀오', 힌지 결함 문제로 초기부터 불만 제기
+https://www.aitimes.com/news/articleView.html?idxno=216707
+
+앤트로픽도 뚫렸다...캐서드럴, AI 에이전트로 12시간 만에 내부망 침투
+https://www.aitimes.com/news/articleView.html?idxno=216701
+
+MS, 비용 효율화·AI 투자 위해 전 세계 임직원 4분의 1 명예퇴직 시작
+https://www.aitimes.com/news/articleView.html?idxno=216700
+
+하이퍼엑셀, 삼성증권 출신 김준연 CFO 영입
+https://www.aitimes.com/news/articleView.html?idxno=216699
+
+래블업, 공모가 1만9000원 확정...11월3일 코스닥 데뷔
+https://www.aitimes.com/news/articleView.html?idxno=216696
+
+오픈AI, AI가 풀어낸 난제 학계와 검증…수학·물리학 등 연구 협력
+https://www.aitimes.com/news/articleView.html?idxno=216695
+
 오픈AI, ‘GPT-6.1 테라’ 출시…자동화 성능 높이고 가격  낮춰
 https://www.aitimes.com/news/articleView.html?idxno=216690
 
@@ -11,21 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216688
 
 앤트로픽, 상장 신청서 공개…11월 공모 절차 추진
 https://www.aitimes.com/news/articleView.html?idxno=216687
-
-[AI 이슈트렌드] 대남 방송 재개·소방 빨대 논란 속 역삼동 방화·프랑스 시위 관심
-https://www.aitimes.com/news/articleView.html?idxno=216685
-
-[게시판] 원티드랩, FDE 채용 박람회에 마키나락스·베슬AI 참여 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=216684
-
-허깅페이스, DNA 읽고 질문에 답하는 ‘카본-X’ 공개…유전자 분석 비용 낮춘다
-https://www.aitimes.com/news/articleView.html?idxno=216683
-
-로고 생성 넘어 SVG 편집 파일로...이디오그램, 벡터 AI로 디자인 실무 공략
-https://www.aitimes.com/news/articleView.html?idxno=216679
-
-경북, 퓨리오사AI와 지역 AI 반도체 산업 생태계 조성 나서
-https://www.aitimes.com/news/articleView.html?idxno=216678
-
-메타, ‘뮤즈’ 기능 확대 속도…실시간 음성 대화에 아바타 공유도 준비
-https://www.aitimes.com/news/articleView.html?idxno=216677
