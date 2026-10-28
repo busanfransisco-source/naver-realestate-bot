@@ -9,6 +9,9 @@ https://www.aitimes.com/news/articleView.html?idxno=216763
 [AI 모델 신작] 바이두, 100페이지 이상 문서 읽는 OCR 공개 등 6종
 https://www.aitimes.com/news/articleView.html?idxno=216762
 
+리퀴드 AI, 온디바이스 AI 모델 'LFM3' 공개...브라우저·음성·이미지 처리 지원
+https://www.aitimes.com/news/articleView.html?idxno=216761
+
 수천만 달러 GPU 노린다…고속도로 화물 운송망 덮친 첨단 범죄 기승
 https://www.aitimes.com/news/articleView.html?idxno=216760
 
@@ -24,8 +27,5 @@ https://www.aitimes.com/news/articleView.html?idxno=216756
 MS, 정교함 강화한 'MAI 이미지 2.7' 공개...AA 2위·아레나 3위 등극
 https://www.aitimes.com/news/articleView.html?idxno=216755
 
-챗GPT, 이제 애플 아이클라우드 메일·캘린더까지 연동
-https://www.aitimes.com/news/articleView.html?idxno=216753
-
-브라질, 재생에너지 기반 데이터센터 육성...룰라 "미·중 AI 의존 안 한다"
-https://www.aitimes.com/news/articleView.html?idxno=216749
+액시엄, 수학 사상 가장 긴 증명 '유한 단순군 분류' 기계 검증 완수
+https://www.aitimes.com/news/articleView.html?idxno=216754
