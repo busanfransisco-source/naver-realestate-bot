@@ -1,31 +1,31 @@
 🤖 26년 10월 28일 수요일 AI 뉴스
 
-중국 AI 거품 붕괴 가속…기술주 시총 640조 증발
-https://www.aitimes.com/news/articleView.html?idxno=216748
+안두릴·퀄컴, 미 국방·정부 겨냥 '미국산 노트북' 만든다
+https://www.aitimes.com/news/articleView.html?idxno=216764
 
-미 연방법원 "알리바바 로비 막지 마라"…국방부 조치에 제동
-https://www.aitimes.com/news/articleView.html?idxno=216745
+웹케시, 독파모 합류...금융 AI 에이전트에 K-엑사원 접목한다
+https://www.aitimes.com/news/articleView.html?idxno=216763
 
-플래티어, GS네오텍과 ‘에이전틱 AICC’ 공동 사업 추진
-https://www.aitimes.com/news/articleView.html?idxno=216744
+[AI 모델 신작] 바이두, 100페이지 이상 문서 읽는 OCR 공개 등 6종
+https://www.aitimes.com/news/articleView.html?idxno=216762
 
-메타, 33조 주식 공모에 주문 5배 폭주…자금 조달 규모 소폭 확대
-https://www.aitimes.com/news/articleView.html?idxno=216743
+수천만 달러 GPU 노린다…고속도로 화물 운송망 덮친 첨단 범죄 기승
+https://www.aitimes.com/news/articleView.html?idxno=216760
 
-"AI 부정행위 잡아라"...그렙, 스마트 안경 검사 솔루션 공급 확대
-https://www.aitimes.com/news/articleView.html?idxno=216737
+앤트로픽, 권한 물려줄 '비밀 후계자' 지정…상장 후에도 주주 통제
+https://www.aitimes.com/news/articleView.html?idxno=216758
 
-메타, AI 인프라 대규모 자금 조달…엔비디아 4조·AMD 1.3조 베팅
-https://www.aitimes.com/news/articleView.html?idxno=216736
+MS, 비용 효율 20% 높인 차세대 보안 모델 'MAI 사이버 1.1 플래시' 출시
+https://www.aitimes.com/news/articleView.html?idxno=216757
 
-애플, 'M6' 칩 탑재 아이맥·맥북 프로 공개...AI 성능 대폭 강화
-https://www.aitimes.com/news/articleView.html?idxno=216735
+오픈AI 이어 앤트로픽도 '난제' 반박…성능 경쟁, 과학적 발견으로 확대
+https://www.aitimes.com/news/articleView.html?idxno=216756
 
-"GPU 2장이면 4주 만에 AI 병원 딸깍!"...아크릴, 의료 AX 시장 공략
-https://www.aitimes.com/news/articleView.html?idxno=216734
+MS, 정교함 강화한 'MAI 이미지 2.7' 공개...AA 2위·아레나 3위 등극
+https://www.aitimes.com/news/articleView.html?idxno=216755
 
-LGU+, 한국이콜랩과 데이터센터 액체냉각 운영표준 개발
-https://www.aitimes.com/news/articleView.html?idxno=216733
+챗GPT, 이제 애플 아이클라우드 메일·캘린더까지 연동
+https://www.aitimes.com/news/articleView.html?idxno=216753
 
-"AI로 무료 건강점검 하세요!"...정부, 보건데이터 500만건 기반 AI 챗봇 서비스 가동
-https://www.aitimes.com/news/articleView.html?idxno=216732
+브라질, 재생에너지 기반 데이터센터 육성...룰라 "미·중 AI 의존 안 한다"
+https://www.aitimes.com/news/articleView.html?idxno=216749
