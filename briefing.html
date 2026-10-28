@@ -6,27 +6,101 @@
 <title>오늘의 브리핑</title>
 <style>
 * { box-sizing: border-box; }
-body { margin:0;padding:16px;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;background:#f4f4f5;color:#1a1a1a; }
-h1{font-size:18px;margin:4px 0 16px;text-align:center;color:#444;}
-.update-time{text-align:center;font-size:12px;color:#999;margin:-12px 0 16px;}
-.card{background:#fff;border-radius:14px;padding:14px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,0.08);}
-.card-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
-.card-head h2{font-size:17px;margin:0;}
-.copy-btn{font-size:15px;font-weight:600;padding:10px 20px;border:none;border-radius:10px;background:#3b82f6;color:#fff;cursor:pointer;min-width:76px;}
-.copy-btn.copied{background:#22c55e;}
-.preview{width:100%;height:130px;resize:vertical;font-size:13px;line-height:1.5;color:#555;border:1px solid #e5e5e5;border-radius:8px;padding:8px;background:#fafafa;white-space:pre-wrap;}
+body {
+  margin: 0;
+  padding: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  background: #f4f4f5;
+  color: #1a1a1a;
+}
+h1 {
+  font-size: 18px;
+  margin: 4px 0 16px;
+  text-align: center;
+  color: #444;
+}
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+.card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.card-head h2 {
+  font-size: 17px;
+  margin: 0;
+}
+.update-time {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  margin: -12px 0 16px;
+}
+.copy-btn {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #3b82f6;
+  color: #fff;
+  cursor: pointer;
+  min-width: 76px;
+}
+.copy-btn.copied {
+  background: #22c55e;
+}
+.preview {
+  width: 100%;
+  height: 130px;
+  resize: vertical;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #555;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 8px;
+  background: #fafafa;
+  white-space: pre-wrap;
+}
 </style>
 </head>
 <body>
-<h1>📅 2026년 10월 29일 목요일</h1>
-<p class="update-time">🕐 마지막 업데이트(백업 파이프라인): 10월 29일 06:29</p>
-
-<section class="card">
-<div class="card-head">
-<h2>1. 🔮 오늘의 운세</h2>
-<button class="copy-btn" onclick="copySection('fortune', this)">복사</button>
+<div id="auth-gate" style="position:fixed;inset:0;background:#f4f4f5;z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;">
+  <div style="background:#fff;border-radius:14px;padding:24px;max-width:340px;width:100%;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
+    <h2 style="margin:0 0 16px;font-size:18px;text-align:center;">🏠 오늘의 브리핑</h2>
+    <div id="gate-loading" style="text-align:center;color:#999;font-size:14px;">확인 중...</div>
+    <div id="gate-login" style="display:none;">
+      <input id="gate-email" type="email" placeholder="이메일" style="width:100%;padding:10px;margin-bottom:8px;border:1px solid #e5e5e5;border-radius:8px;font-size:14px;box-sizing:border-box;">
+      <input id="gate-password" type="password" placeholder="비밀번호" style="width:100%;padding:10px;margin-bottom:12px;border:1px solid #e5e5e5;border-radius:8px;font-size:14px;box-sizing:border-box;">
+      <div id="gate-error" style="color:#e11d48;font-size:12px;margin-bottom:8px;display:none;"></div>
+      <button id="gate-login-btn" style="width:100%;padding:10px;border:none;border-radius:8px;background:#3b82f6;color:#fff;font-size:14px;font-weight:600;margin-bottom:8px;">로그인</button>
+      <button id="gate-signup-btn" style="width:100%;padding:10px;border:1px solid #3b82f6;border-radius:8px;background:#fff;color:#3b82f6;font-size:14px;font-weight:600;">회원가입 신청</button>
+    </div>
+    <div id="gate-pending" style="display:none;text-align:center;">
+      <p style="font-size:14px;color:#555;line-height:1.6;">⏳ 승인 대기중입니다.<br>관리자 승인 후 이용하실 수 있어요.</p>
+      <button id="gate-logout-btn" style="margin-top:8px;padding:8px 16px;border:1px solid #ccc;border-radius:8px;background:#fff;color:#555;font-size:13px;">로그아웃</button>
+    </div>
+  </div>
 </div>
-<textarea id="ta-fortune" class="preview" readonly>오늘의 운세, 10월 29일
+
+<div id="main-content" style="display:none;">
+<h1>📅 2026년 10월 29일 목요일</h1>
+<p class="update-time">🕐 마지막 업데이트: 10월 29일 07:13</p>
+
+<section class="card" data-slot="1">
+  <div class="card-head">
+    <h2>1. 🔮 오늘의 운세</h2>
+    <button class="copy-btn" onclick="copySection('fortune', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-fortune" class="preview" readonly>오늘의 운세, 10월 29일
 
 〈쥐띠〉
 96, 84년생 충동적으로 움직이기 쉬우니 미리 계획을 잘 세워라. 72년생 사람을 소중히 대하라. 언제 어디서 마주칠지 모르고 어떤 모습으로 어떻게 다시 인연을 맺게 될지 모르는 것이다. 60년생 따스한 말이 무거운 어깨를 가볍게 한다. 48, 36년생 뜻밖의 일이 눈앞에 생긴다.
@@ -87,15 +161,17 @@ h1{font-size:18px;margin:4px 0 16px;text-align:center;color:#444;}
 95, 83년생 불가능하다고 생각했던 것도 이룰 수 있는 운세이니 용기를 내어보라. 71년생 드디어 마침표를 찍어야 할 때가 왔다. 문제 해결의 실마리가 될 만한 것을 찾게 될 것이다. 59년생 모르고 넘어갈 뻔한 일을 알게 된다. 47, 35년생 자신이 원하는 것을 정확하게 밝혀라.
 
 운세지수 88%. 금전 90 건강 85 애정 90</textarea>
-<script>window.__content_fortune = "오늘의 운세, 10월 29일\n\n〈쥐띠〉\n96, 84년생 충동적으로 움직이기 쉬우니 미리 계획을 잘 세워라. 72년생 사람을 소중히 대하라. 언제 어디서 마주칠지 모르고 어떤 모습으로 어떻게 다시 인연을 맺게 될지 모르는 것이다. 60년생 따스한 말이 무거운 어깨를 가볍게 한다. 48, 36년생 뜻밖의 일이 눈앞에 생긴다.\n\n운세지수 61%. 금전 55 건강 65 애정 60\n\n〈소띠〉\n97, 85년생 뭔가 삶의 활력소가 되어줄 만한 것이 필요한 시점이니 잘 찾아보라. 73년생 가까운 이들과 화합하게 된다. 친구나 선후배의 길잡이가 되어주면 좋겠다. 61년생 최고의 지혜와 판단력이 번뜩이는 날이다. 49, 37년생 의욕이 되살아난다. 시야가 넓어지고 여유도 생긴다.\n\n운세지수 92%. 금전 95 건강 90 애정 95\n\n〈범띠〉\n98, 86년생 느긋하게 지켜봐야 한다. 끝난 게 아니니 조금 미뤘다고 생각하라. 74년생 억지로 강행하는 것은 현명하지 못하다. 무리하면 헛수고가 된다. 62년생 잘못하다가는 남 좋은 일만 시키는 것같이 된다. 50, 38년생 축하해주어야 할 일이 유난히 많아서 지출이 늘어난다.\n\n운세지수 68%. 금전 65 건강 60 애정 70\n\n〈토끼띠〉\n99, 87년생 사소한 일에도 예민해지니 평소 가깝던 이들과도 서먹한 기류가 흐른다. 75년생 대화를 시도하지 않는 것이 좋다. 서로 감정이 격해져서 하지 말아야 할 말까지 하게 된다. 63년생 인간관계를 잘하기가 힘들다는 생각이 든다. 51, 39년생 지금은 시간을 벌면서 기다려야 한다.\n\n운세지수 43%. 금전 40 건강 45 애정 40\n\n〈용띠〉\n00, 88년생 에너지가 한 단계 상승한다. 오늘의 즐거운 만남이 내일의 행복이 되어줄 것이다. 76년생 어디를 가나 인기 만점이다. 몸과 마음이 바쁘고 분주하다. 64년생 안 맞는 옷은 과감하게 벗어 던져라. 맞는 옷으로 갈아입고 새 출발을 해야 할 때다. 52, 40년생 자신감을 회복하게 된다.\n\n운세지수 93%. 금전 95 건강 90 애정 95\n\n〈뱀띠〉\n01, 89년생 아직도 극복해야 할 과제가 많다는 현실에 직면하게 된다. 77년생 서둘러야 한다. 일을 제때 마무리하지 못해서 질책을 받을 수 있다. 65년생 그냥 잠시 스쳐 지나가는 바람이라 생각했는데 예상했던 것보다 영향이 크겠다. 53, 41년생 벼르고 벼르던 일이 결국은 터진다.\n\n운세지수 46%. 금전 45 건강 40 애정 50\n\n〈말띠〉\n02, 90년생 자신에 관한 관심이 부담스럽게 느껴진다. 78년생 너무 급하게 모든 것이 돌아가는 것 같다. 따라가기가 벅차고 숨이 차다. 66년생 평소보다 예민해진다. 별것도 아닌 말에 화부터 내게 된다. 54, 42년생 지갑을 열기 전에 정말 꼭 써야 할 곳인지 살펴보라.\n\n운세지수 36%. 금전 35 건강 35 애정 40\n\n〈양띠〉\n03, 91년생 짝이 있는 상대나 나이 차이가 너무 나는 등 걸림돌이 있는 사람에게 이끌리기 쉬울 때다. 79년생 사실대로 말하지 않고 자꾸 말을 돌리지 마라. 더 의심만 받는다. 67년생 권태감이 밀려오기 시작한다. 55, 43년생 지레짐작하기 쉽다. 상황을 다시 잘 살펴보아야 하겠다.\n\n운세지수 38%. 금전 35 건강 35 애정 40\n\n〈원숭이띠〉\n04, 92년생 진심으로 좋아하고 있다는 감정을 알아차리게 된다. 80년생 기대 이상의 기쁜 소식이 들려온다. 부부 사랑으로 즐겁고 따뜻한 하루다. 68년생 어색해도 고맙다는 말을 망설임 없이 먼저 꺼내 보라. 하는 일이 척척 풀린다. 56, 44년생 생각지도 않은 일에 좋은 결과가 나온다.\n\n운세지수 94%. 금전 95 건강 90 애정 95\n\n〈닭띠〉\n05, 93년생 자기 고집만 앞세우는 태도는 남에게 인정받기 힘들고 핀잔만 돌아온다. 81, 69년생 냉철한 이성으로 결정 내릴 시기다. 한 가지 목표에만 화력을 집중하라. 57년생 누구도 이길 수 없는 서로 간의 기 싸움으로 피곤해진다. 45, 33년생 인생의 부귀영화는 일장춘몽과 같이 허무하다.\n\n운세지수 38%. 금전 35 건강 35 애정 40\n\n〈개띠〉\n06, 94년생 순간의 상황이나 변화에 민감하게 반응하고 대처하라. 82, 70년생 이제라도 깨끗하게 마음을 접어야 한다. 더 가다가는 문제만 커진다. 58년생 도저히 이해할 수 없는 행동을 하는 사람 때문에 두통이 생긴다. 46, 34년생 말 한마디가 중요하니 불평불만을 드러내지 마라.\n\n운세지수 44%. 금전 45 건강 45 애정 40\n\n〈돼지띠〉\n95, 83년생 불가능하다고 생각했던 것도 이룰 수 있는 운세이니 용기를 내어보라. 71년생 드디어 마침표를 찍어야 할 때가 왔다. 문제 해결의 실마리가 될 만한 것을 찾게 될 것이다. 59년생 모르고 넘어갈 뻔한 일을 알게 된다. 47, 35년생 자신이 원하는 것을 정확하게 밝혀라.\n\n운세지수 88%. 금전 90 건강 85 애정 90";</script>
+
+  <script>window.__content_fortune = "오늘의 운세, 10월 29일\n\n〈쥐띠〉\n96, 84년생 충동적으로 움직이기 쉬우니 미리 계획을 잘 세워라. 72년생 사람을 소중히 대하라. 언제 어디서 마주칠지 모르고 어떤 모습으로 어떻게 다시 인연을 맺게 될지 모르는 것이다. 60년생 따스한 말이 무거운 어깨를 가볍게 한다. 48, 36년생 뜻밖의 일이 눈앞에 생긴다.\n\n운세지수 61%. 금전 55 건강 65 애정 60\n\n〈소띠〉\n97, 85년생 뭔가 삶의 활력소가 되어줄 만한 것이 필요한 시점이니 잘 찾아보라. 73년생 가까운 이들과 화합하게 된다. 친구나 선후배의 길잡이가 되어주면 좋겠다. 61년생 최고의 지혜와 판단력이 번뜩이는 날이다. 49, 37년생 의욕이 되살아난다. 시야가 넓어지고 여유도 생긴다.\n\n운세지수 92%. 금전 95 건강 90 애정 95\n\n〈범띠〉\n98, 86년생 느긋하게 지켜봐야 한다. 끝난 게 아니니 조금 미뤘다고 생각하라. 74년생 억지로 강행하는 것은 현명하지 못하다. 무리하면 헛수고가 된다. 62년생 잘못하다가는 남 좋은 일만 시키는 것같이 된다. 50, 38년생 축하해주어야 할 일이 유난히 많아서 지출이 늘어난다.\n\n운세지수 68%. 금전 65 건강 60 애정 70\n\n〈토끼띠〉\n99, 87년생 사소한 일에도 예민해지니 평소 가깝던 이들과도 서먹한 기류가 흐른다. 75년생 대화를 시도하지 않는 것이 좋다. 서로 감정이 격해져서 하지 말아야 할 말까지 하게 된다. 63년생 인간관계를 잘하기가 힘들다는 생각이 든다. 51, 39년생 지금은 시간을 벌면서 기다려야 한다.\n\n운세지수 43%. 금전 40 건강 45 애정 40\n\n〈용띠〉\n00, 88년생 에너지가 한 단계 상승한다. 오늘의 즐거운 만남이 내일의 행복이 되어줄 것이다. 76년생 어디를 가나 인기 만점이다. 몸과 마음이 바쁘고 분주하다. 64년생 안 맞는 옷은 과감하게 벗어 던져라. 맞는 옷으로 갈아입고 새 출발을 해야 할 때다. 52, 40년생 자신감을 회복하게 된다.\n\n운세지수 93%. 금전 95 건강 90 애정 95\n\n〈뱀띠〉\n01, 89년생 아직도 극복해야 할 과제가 많다는 현실에 직면하게 된다. 77년생 서둘러야 한다. 일을 제때 마무리하지 못해서 질책을 받을 수 있다. 65년생 그냥 잠시 스쳐 지나가는 바람이라 생각했는데 예상했던 것보다 영향이 크겠다. 53, 41년생 벼르고 벼르던 일이 결국은 터진다.\n\n운세지수 46%. 금전 45 건강 40 애정 50\n\n〈말띠〉\n02, 90년생 자신에 관한 관심이 부담스럽게 느껴진다. 78년생 너무 급하게 모든 것이 돌아가는 것 같다. 따라가기가 벅차고 숨이 차다. 66년생 평소보다 예민해진다. 별것도 아닌 말에 화부터 내게 된다. 54, 42년생 지갑을 열기 전에 정말 꼭 써야 할 곳인지 살펴보라.\n\n운세지수 36%. 금전 35 건강 35 애정 40\n\n〈양띠〉\n03, 91년생 짝이 있는 상대나 나이 차이가 너무 나는 등 걸림돌이 있는 사람에게 이끌리기 쉬울 때다. 79년생 사실대로 말하지 않고 자꾸 말을 돌리지 마라. 더 의심만 받는다. 67년생 권태감이 밀려오기 시작한다. 55, 43년생 지레짐작하기 쉽다. 상황을 다시 잘 살펴보아야 하겠다.\n\n운세지수 38%. 금전 35 건강 35 애정 40\n\n〈원숭이띠〉\n04, 92년생 진심으로 좋아하고 있다는 감정을 알아차리게 된다. 80년생 기대 이상의 기쁜 소식이 들려온다. 부부 사랑으로 즐겁고 따뜻한 하루다. 68년생 어색해도 고맙다는 말을 망설임 없이 먼저 꺼내 보라. 하는 일이 척척 풀린다. 56, 44년생 생각지도 않은 일에 좋은 결과가 나온다.\n\n운세지수 94%. 금전 95 건강 90 애정 95\n\n〈닭띠〉\n05, 93년생 자기 고집만 앞세우는 태도는 남에게 인정받기 힘들고 핀잔만 돌아온다. 81, 69년생 냉철한 이성으로 결정 내릴 시기다. 한 가지 목표에만 화력을 집중하라. 57년생 누구도 이길 수 없는 서로 간의 기 싸움으로 피곤해진다. 45, 33년생 인생의 부귀영화는 일장춘몽과 같이 허무하다.\n\n운세지수 38%. 금전 35 건강 35 애정 40\n\n〈개띠〉\n06, 94년생 순간의 상황이나 변화에 민감하게 반응하고 대처하라. 82, 70년생 이제라도 깨끗하게 마음을 접어야 한다. 더 가다가는 문제만 커진다. 58년생 도저히 이해할 수 없는 행동을 하는 사람 때문에 두통이 생긴다. 46, 34년생 말 한마디가 중요하니 불평불만을 드러내지 마라.\n\n운세지수 44%. 금전 45 건강 45 애정 40\n\n〈돼지띠〉\n95, 83년생 불가능하다고 생각했던 것도 이룰 수 있는 운세이니 용기를 내어보라. 71년생 드디어 마침표를 찍어야 할 때가 왔다. 문제 해결의 실마리가 될 만한 것을 찾게 될 것이다. 59년생 모르고 넘어갈 뻔한 일을 알게 된다. 47, 35년생 자신이 원하는 것을 정확하게 밝혀라.\n\n운세지수 88%. 금전 90 건강 85 애정 90";</script>
 </section>
 
-<section class="card">
-<div class="card-head">
-<h2>2. ☀️ 날씨</h2>
-<button class="copy-btn" onclick="copySection('weather', this)">복사</button>
-</div>
-<textarea id="ta-weather" class="preview" readonly>2026년 10월 29일 목요일
+<section class="card" data-slot="2">
+  <div class="card-head">
+    <h2>2. ☀️ 날씨</h2>
+    <button class="copy-btn" onclick="copySection('weather', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-weather" class="preview" readonly>2026년 10월 29일 목요일
 
 ❒ 지역별 날씨전망 ❒
 
@@ -114,54 +190,76 @@ h1{font-size:18px;margin:4px 0 16px;text-align:center;color:#444;}
 ✫울산(⛅)➠(⛅)  6℃ ~ 16℃
 ✫창원(⛅)➠(☁️)  6℃ ~ 13℃
 ✫제주(⛅)➠(☁️)  11℃ ~ 19℃</textarea>
-<script>window.__content_weather = "2026년 10월 29일 목요일\n\n❒ 지역별 날씨전망 ❒\n\n✫서울(☁️)➠(☁️)  5℃ ~ 11℃\n✫인천(☁️)➠(☁️)  4℃ ~ 11℃\n✫수원(⛅)➠(☁️)  1℃ ~ 10℃\n✫춘천(⛅)➠(🌤️)  2℃ ~ 12℃\n✫강릉(☁️)➠(🌤️)  5℃ ~ 16℃\n✫청주(☁️)➠(☁️)  4℃ ~ 11℃\n✫대전(☁️)➠(☁️)  4℃ ~ 11℃\n✫세종(⛅)➠(☁️)  4℃ ~ 10℃\n✫전주(⛅)➠(☁️)  4℃ ~ 13℃\n✫광주(🌤️)➠(☁️)  5℃ ~ 13℃\n✫대구(⛅)➠(⛅)  5℃ ~ 14℃\n✫부산(⛅)➠(☁️)  10℃ ~ 15℃\n✫울산(⛅)➠(⛅)  6℃ ~ 16℃\n✫창원(⛅)➠(☁️)  6℃ ~ 13℃\n✫제주(⛅)➠(☁️)  11℃ ~ 19℃";</script>
+
+  <script>window.__content_weather = "2026년 10월 29일 목요일\n\n❒ 지역별 날씨전망 ❒\n\n✫서울(☁️)➠(☁️)  5℃ ~ 11℃\n✫인천(☁️)➠(☁️)  4℃ ~ 11℃\n✫수원(⛅)➠(☁️)  1℃ ~ 10℃\n✫춘천(⛅)➠(🌤️)  2℃ ~ 12℃\n✫강릉(☁️)➠(🌤️)  5℃ ~ 16℃\n✫청주(☁️)➠(☁️)  4℃ ~ 11℃\n✫대전(☁️)➠(☁️)  4℃ ~ 11℃\n✫세종(⛅)➠(☁️)  4℃ ~ 10℃\n✫전주(⛅)➠(☁️)  4℃ ~ 13℃\n✫광주(🌤️)➠(☁️)  5℃ ~ 13℃\n✫대구(⛅)➠(⛅)  5℃ ~ 14℃\n✫부산(⛅)➠(☁️)  10℃ ~ 15℃\n✫울산(⛅)➠(⛅)  6℃ ~ 16℃\n✫창원(⛅)➠(☁️)  6℃ ~ 13℃\n✫제주(⛅)➠(☁️)  11℃ ~ 19℃";</script>
 </section>
 
-<section class="card">
-<div class="card-head">
-<h2>3. ⚡ 오늘의 퀵뉴스</h2>
-<button class="copy-btn" onclick="copySection('shortnews', this)">복사</button>
-</div>
-<textarea id="ta-shortnews" class="preview" readonly>26년 10월 29일 목요일 오늘의 퀵뉴스⚡
+<section class="card" data-slot="3">
+  <div class="card-head">
+    <h2>3. ⚡ 오늘의 퀵뉴스</h2>
+    <button class="copy-btn" onclick="copySection('shortnews', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-shortnews" class="preview" readonly>26년 10월 29일 목요일 오늘의 퀵뉴스⚡
 
-🏛️ (정치) 유시민, 李대통령에 “윤석열 자기 집 다 해체…똑같이 한다” 또 정면비판 [헤럴드경제=이원율 기자]노무현재단 이사장을 지낸 범여권 논객 유시민 작가는 “국정 수행 지지율이 낮으면 낮을수록 대통령이 원래 자기가 이루고자 한 바를 이루지 못할 가능성이 높아진다”며 “극단적인 경우 박근혜나 윤석열처럼 임기를 채우지 못하기도 한다”고 밝혔다. 유 작가는 유튜브 방송 ‘박시영 TV’에 출연해 이같이 말했다고 연합뉴스가 전했다. 유 작 헤럴드경제 6분 전
+🔥 (톱뉴스) 케빈 워시 미국 연방준비제도(Fed·연준) 의장은 내년부터 기준금리 결정을 위한 연방공개시장위원회(FOMC) 횟수를 줄이겠다고 28일(현지시간) 예고했습니다.
 
-🏛️ (정치) 당정, 가상자산 과세 '유예'로 가닥…김민석 "부작용·형평성 우려" 프레시안 23분 전
+🏛️ (정치) 더불어민주당이 조희대 대법원장의 권한 남용과 정치 개입 의혹에 대한 국정조사를 실시하기로 했지만 의미 있는 성과를 내기 위해서는 넘어야 할 산이 많습니다.
 
-🏛️ (정치) “무역협정 우려, 보호장치와 피해보전으로 풀어야” [차 한잔 나누며] 세계일보 23분 전
+🏛️ (정치) 네팔 출신 사마르 타파 씨(52)는 1994년 3월 외국인 산업연수생제도를 통해 한국에 왔습니다. 정부가 외국 인력을 노동자가 아닌 ‘산업연수생’ 신분으로 활용하기 위해 1993년 11월 도입한 제도입니다.
 
-💰 (경제) 은행 줄 세울 ‘포용금융 성적표’…정성평가 잣대는 ‘모호’ 금융당국이 은행의 포용금융 실적을 상대평가해 출연금과 과징금 등에 연계하기로 했지만 일부 정성평가 기준은 아직 구체화하지 않은 것으로 확인됐다. 평가 결과 공개에 따른 ‘평판 효과’까지 은행의 참여를 유도하는 수단으로 활용할 방침이어서 모호한 기준으로 은행을 줄 세워 포용금융 확대를 압박하는 것 아니냐는 우려가 나온다. 28일 금융권에 따르면 금융위원회 데일리안 7분 전
+🏛️ (정치) 한국의 우라늄 농축·사용후핵연료 재처리와 핵추진잠수함 도입 추진이 국제사회에서 ‘핵무장 잠재력 확보’를 위한 움직임으로 해석될 수 있다는 미국 핵 비확산 전문가들의 분석이 나왔습니다.
 
-💰 (경제) 구룡마을은 이주 문제, 서리풀·염창공원은 주민 반발…서울 주택공급 과제 산적 세계일보 25분 전
+💰 (경제) 금융권에서 인공지능(AI) 활용이 확대됨에 따라 해킹 및 사이버 보안에 대한 우려도 덩달아 커지고 있습니다.
 
-💰 (경제) ‘인앱결제’ 구글·애플에 637억 과징금… 빅테크 규제 칼 뺀 韓 [뉴스 투데이] 세계일보 26분 전
+💰 (경제) 금융당국이 단일종목 레버리지의 위험성을 경고받고도 상품 도입을 추진하면서 책임론이 이어지고 있습니다.
 
-💰 (경제) "미래기금에 지방재정 30.5조↓…교부세율 27.48% 돼야 보전" 뉴시스 26분 전
+💰 (경제) 반도체 수출이 차린 한국 경제의 잔칫상은 화려합니다. 앞으로 이런 잔칫상을 받아볼 수 있을지 걱정될 정도로 눈부십니다.
 
-💰 (경제) 정책은 중앙, 비용은 지방…공공서비스 흔드는 재정 불균형 쿠키뉴스 27분 전
+💰 (경제) 최근 사회관계망서비스(SNS) 스레드에 올라온 한 학부모의 글입니다.
 
-👥 (사회) 헷갈리는 대입제도…‘수시합격’하려면 창체·세특·행특 챙겨야 올해 고2 학생들이 응시하는 2028학년도 대학 입시에서 수시모집 비중은 80.8%에 달한다. 입시 전문가들은 학생부종합전형과 학생부교과전형 등 수시모집을 대학수학능력시험(수능) 못지않게 신경 써서 준비해야 대입 합격 가능성을 높일 수 있다고 조언한다. 29일 입시업체 진학사 등에 따르면 수시모집에서 중요하게 활용되는 자료는 ‘학생부’나 ‘생기부’ 등의 줄 서울경제 28분 전
+💰 (경제) 코로나19 이후 증가하던 혼인 건수가 올해 8월 감소세로 돌아서면서 최근 출생아 증가 흐름도 조만간 꺾일 수 있다는 우려가 제기됩니다.
 
-👥 (사회) 적자 보전 상한선 두고…소외 노선은 市가 직접 맡아야 이데일리 51분 전
+👥 (사회) 분양 안내, 대출 권유, 할인 행사까지 광고 문자는 기업에 유용한 영업수단입니다. 그러나 받는 사람이 원하지 않는다면 이야기는 달라집니다.
 
-👥 (사회) [국민의 기업] 장애인콜택시, 페달오조작 방지장치 달았더니 사고 33% ‘뚝’ 중앙일보 57분 전
+👥 (사회) 지난 27일 번동초 6학년 1반 교실에서 학생들이 디벗(서울의 교육용 태블릿PC)에 달린 카메라를 향해 된장과 고추장을 푼 숟가락을 내밀었습니다.
 
-👥 (사회) 마음 무너지는 청소년·청년들…위기 넘긴 뒤에도 치료 이어져야 [건강한겨레] 한겨레 1시간 전
+👥 (사회) 철문이 닫히는 소리가 복도 끝까지 길게 울렸습니다.
 
-👥 (사회) [단독] ‘이태원 참사’ 구조 시민·상인 10명 중 3명 피해자로 인정 못 받아 세계일보 1시간 전
+👥 (사회) 한국 사회는 지난 30여 년간 국내 인력난 해소를 위해 개발도상국 청년이 필요했습니다. 1993년 이들에게 ‘연수생’이라는 이름을 붙인 산업연수생제도를 도입하고, 1994년 5월 첫 연수생을 받아들였습니다.
 
-🌏 (국제) 출구조사 뒤집은 네타냐후…이스라엘 총선 승부 쥔 아랍계 19석 [헤럴드경제=서지연 기자] 베냐민 네타냐후 이스라엘 총리가 총선 개표에서 출구조사 결과를 뒤집고 선두로 올라섰지만, 집권 연장 여부는 여전히 불투명한 상황이다. 여야 모두 의회 과반 의석 확보에 실패할 것으로 전망되면서 19석을 차지할 것으로 예상되는 아랍계 정당들이 차기 정부 구성을 좌우할 핵심 변수로 떠올랐다. 28일(현지시간) AP통신에 따르면 이 헤럴드경제 방금 전
+👥 (사회) 인공지능(AI) 발전과 인구구조 변화, 기후위기는 일자리부터 돌봄까지 삶 전반을 재편하고 있습니다. 그런데 우리는 마주한 변화에 대해 얼마나 알고 있을까요?
 
-🌏 (국제) 스페인 고속철 충돌로 68명 사망…시스템 고장에도 운행 재개 헤럴드경제 9분 전</textarea>
-<script>window.__content_shortnews = "26년 10월 29일 목요일 오늘의 퀵뉴스⚡\n\n🏛️ (정치) 유시민, 李대통령에 “윤석열 자기 집 다 해체…똑같이 한다” 또 정면비판 [헤럴드경제=이원율 기자]노무현재단 이사장을 지낸 범여권 논객 유시민 작가는 “국정 수행 지지율이 낮으면 낮을수록 대통령이 원래 자기가 이루고자 한 바를 이루지 못할 가능성이 높아진다”며 “극단적인 경우 박근혜나 윤석열처럼 임기를 채우지 못하기도 한다”고 밝혔다. 유 작가는 유튜브 방송 ‘박시영 TV’에 출연해 이같이 말했다고 연합뉴스가 전했다. 유 작 헤럴드경제 6분 전\n\n🏛️ (정치) 당정, 가상자산 과세 '유예'로 가닥…김민석 \"부작용·형평성 우려\" 프레시안 23분 전\n\n🏛️ (정치) “무역협정 우려, 보호장치와 피해보전으로 풀어야” [차 한잔 나누며] 세계일보 23분 전\n\n💰 (경제) 은행 줄 세울 ‘포용금융 성적표’…정성평가 잣대는 ‘모호’ 금융당국이 은행의 포용금융 실적을 상대평가해 출연금과 과징금 등에 연계하기로 했지만 일부 정성평가 기준은 아직 구체화하지 않은 것으로 확인됐다. 평가 결과 공개에 따른 ‘평판 효과’까지 은행의 참여를 유도하는 수단으로 활용할 방침이어서 모호한 기준으로 은행을 줄 세워 포용금융 확대를 압박하는 것 아니냐는 우려가 나온다. 28일 금융권에 따르면 금융위원회 데일리안 7분 전\n\n💰 (경제) 구룡마을은 이주 문제, 서리풀·염창공원은 주민 반발…서울 주택공급 과제 산적 세계일보 25분 전\n\n💰 (경제) ‘인앱결제’ 구글·애플에 637억 과징금… 빅테크 규제 칼 뺀 韓 [뉴스 투데이] 세계일보 26분 전\n\n💰 (경제) \"미래기금에 지방재정 30.5조↓…교부세율 27.48% 돼야 보전\" 뉴시스 26분 전\n\n💰 (경제) 정책은 중앙, 비용은 지방…공공서비스 흔드는 재정 불균형 쿠키뉴스 27분 전\n\n👥 (사회) 헷갈리는 대입제도…‘수시합격’하려면 창체·세특·행특 챙겨야 올해 고2 학생들이 응시하는 2028학년도 대학 입시에서 수시모집 비중은 80.8%에 달한다. 입시 전문가들은 학생부종합전형과 학생부교과전형 등 수시모집을 대학수학능력시험(수능) 못지않게 신경 써서 준비해야 대입 합격 가능성을 높일 수 있다고 조언한다. 29일 입시업체 진학사 등에 따르면 수시모집에서 중요하게 활용되는 자료는 ‘학생부’나 ‘생기부’ 등의 줄 서울경제 28분 전\n\n👥 (사회) 적자 보전 상한선 두고…소외 노선은 市가 직접 맡아야 이데일리 51분 전\n\n👥 (사회) [국민의 기업] 장애인콜택시, 페달오조작 방지장치 달았더니 사고 33% ‘뚝’ 중앙일보 57분 전\n\n👥 (사회) 마음 무너지는 청소년·청년들…위기 넘긴 뒤에도 치료 이어져야 [건강한겨레] 한겨레 1시간 전\n\n👥 (사회) [단독] ‘이태원 참사’ 구조 시민·상인 10명 중 3명 피해자로 인정 못 받아 세계일보 1시간 전\n\n🌏 (국제) 출구조사 뒤집은 네타냐후…이스라엘 총선 승부 쥔 아랍계 19석 [헤럴드경제=서지연 기자] 베냐민 네타냐후 이스라엘 총리가 총선 개표에서 출구조사 결과를 뒤집고 선두로 올라섰지만, 집권 연장 여부는 여전히 불투명한 상황이다. 여야 모두 의회 과반 의석 확보에 실패할 것으로 전망되면서 19석을 차지할 것으로 예상되는 아랍계 정당들이 차기 정부 구성을 좌우할 핵심 변수로 떠올랐다. 28일(현지시간) AP통신에 따르면 이 헤럴드경제 방금 전\n\n🌏 (국제) 스페인 고속철 충돌로 68명 사망…시스템 고장에도 운행 재개 헤럴드경제 9분 전";</script>
+👥 (사회) 중앙노동위원회는 현대자동차가 공장·연구소에서 일하는 하청업체 소속 구내식당, 보안, 시설·미화 노동자들의 산업안전 관련 근로조건에 실질적 지배력이 있다고 봤습니다.
+
+👥 (사회) 혼인 증가와 출산 연령대 인구 확대 등의 영향으로 올해 8월 태어난 아이가 7년 만에 가장 많은 것으로 나타났습니다.
+
+👥 (사회) 강원지역 출생아 수가 15개월 연속 늘며 1981년 통계 작성 이래 최장 증가 기록을 세웠습니다. 올해 1~8월 출생아 증가율도 같은 기간 기준 역대 최고치를 기록했습니다.
+
+🌏 (국제) 브라질 대통령 선거에서 패배 뒤 잠적한 플라비우 보우소나루 상원의원이 미국에 도착해 자신이 정당한 대통령이라고 주장했습니다.
+
+🌏 (국제) 미국 경영대학원 과정의 올해 지원 건수가 25% 급감한 것으로 나타났습니다.
+
+[오늘의 명언]
+산다는 것 그것은 치열한 전투이다. -로맹 롤랑
+
+[주요 경제 지표]
+  - 나스닥 : 26,549.85
+  - 다우지수 : 52,475.10
+  - S&amp;P500 : 7,743.98
+  - GOLD(금) : 4,077.00
+  - 비트코인 : 108,959,000</textarea>
+
+  <script>window.__content_shortnews = "26년 10월 29일 목요일 오늘의 퀵뉴스⚡\n\n🔥 (톱뉴스) 케빈 워시 미국 연방준비제도(Fed·연준) 의장은 내년부터 기준금리 결정을 위한 연방공개시장위원회(FOMC) 횟수를 줄이겠다고 28일(현지시간) 예고했습니다.\n\n🏛️ (정치) 더불어민주당이 조희대 대법원장의 권한 남용과 정치 개입 의혹에 대한 국정조사를 실시하기로 했지만 의미 있는 성과를 내기 위해서는 넘어야 할 산이 많습니다.\n\n🏛️ (정치) 네팔 출신 사마르 타파 씨(52)는 1994년 3월 외국인 산업연수생제도를 통해 한국에 왔습니다. 정부가 외국 인력을 노동자가 아닌 ‘산업연수생’ 신분으로 활용하기 위해 1993년 11월 도입한 제도입니다.\n\n🏛️ (정치) 한국의 우라늄 농축·사용후핵연료 재처리와 핵추진잠수함 도입 추진이 국제사회에서 ‘핵무장 잠재력 확보’를 위한 움직임으로 해석될 수 있다는 미국 핵 비확산 전문가들의 분석이 나왔습니다.\n\n💰 (경제) 금융권에서 인공지능(AI) 활용이 확대됨에 따라 해킹 및 사이버 보안에 대한 우려도 덩달아 커지고 있습니다.\n\n💰 (경제) 금융당국이 단일종목 레버리지의 위험성을 경고받고도 상품 도입을 추진하면서 책임론이 이어지고 있습니다.\n\n💰 (경제) 반도체 수출이 차린 한국 경제의 잔칫상은 화려합니다. 앞으로 이런 잔칫상을 받아볼 수 있을지 걱정될 정도로 눈부십니다.\n\n💰 (경제) 최근 사회관계망서비스(SNS) 스레드에 올라온 한 학부모의 글입니다.\n\n💰 (경제) 코로나19 이후 증가하던 혼인 건수가 올해 8월 감소세로 돌아서면서 최근 출생아 증가 흐름도 조만간 꺾일 수 있다는 우려가 제기됩니다.\n\n👥 (사회) 분양 안내, 대출 권유, 할인 행사까지 광고 문자는 기업에 유용한 영업수단입니다. 그러나 받는 사람이 원하지 않는다면 이야기는 달라집니다.\n\n👥 (사회) 지난 27일 번동초 6학년 1반 교실에서 학생들이 디벗(서울의 교육용 태블릿PC)에 달린 카메라를 향해 된장과 고추장을 푼 숟가락을 내밀었습니다.\n\n👥 (사회) 철문이 닫히는 소리가 복도 끝까지 길게 울렸습니다.\n\n👥 (사회) 한국 사회는 지난 30여 년간 국내 인력난 해소를 위해 개발도상국 청년이 필요했습니다. 1993년 이들에게 ‘연수생’이라는 이름을 붙인 산업연수생제도를 도입하고, 1994년 5월 첫 연수생을 받아들였습니다.\n\n👥 (사회) 인공지능(AI) 발전과 인구구조 변화, 기후위기는 일자리부터 돌봄까지 삶 전반을 재편하고 있습니다. 그런데 우리는 마주한 변화에 대해 얼마나 알고 있을까요?\n\n👥 (사회) 중앙노동위원회는 현대자동차가 공장·연구소에서 일하는 하청업체 소속 구내식당, 보안, 시설·미화 노동자들의 산업안전 관련 근로조건에 실질적 지배력이 있다고 봤습니다.\n\n👥 (사회) 혼인 증가와 출산 연령대 인구 확대 등의 영향으로 올해 8월 태어난 아이가 7년 만에 가장 많은 것으로 나타났습니다.\n\n👥 (사회) 강원지역 출생아 수가 15개월 연속 늘며 1981년 통계 작성 이래 최장 증가 기록을 세웠습니다. 올해 1~8월 출생아 증가율도 같은 기간 기준 역대 최고치를 기록했습니다.\n\n🌏 (국제) 브라질 대통령 선거에서 패배 뒤 잠적한 플라비우 보우소나루 상원의원이 미국에 도착해 자신이 정당한 대통령이라고 주장했습니다.\n\n🌏 (국제) 미국 경영대학원 과정의 올해 지원 건수가 25% 급감한 것으로 나타났습니다.\n\n[오늘의 명언]\n산다는 것 그것은 치열한 전투이다. -로맹 롤랑\n\n[주요 경제 지표]\n  - 나스닥 : 26,549.85\n  - 다우지수 : 52,475.10\n  - S&P500 : 7,743.98\n  - GOLD(금) : 4,077.00\n  - 비트코인 : 108,959,000";</script>
 </section>
 
-<section class="card">
-<div class="card-head">
-<h2>4. 🏗️ 청약 소식</h2>
-<button class="copy-btn" onclick="copySection('subs', this)">복사</button>
-</div>
-<textarea id="ta-subs" class="preview" readonly>26년 10월 29일 목요일 청약 소식
+<section class="card" data-slot="4">
+  <div class="card-head">
+    <h2>4. 🏗️ 청약 소식</h2>
+    <button class="copy-btn" onclick="copySection('subs', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-subs" class="preview" readonly>26년 10월 29일 목요일 청약 소식
 
 🏗️ 청약 접수 단지 (전국, 2주 이내)
 
@@ -184,15 +282,17 @@ h1{font-size:18px;margin:4px 0 16px;text-align:center;color:#444;}
 [인천·민간] 청라 아크원 푸르지오 | 접수 11/2~11/4 | 발표 11/10
 
 [경기·민간] 엘리프 시흥 더프라임 | 접수 11/9~11/11 | 발표 11/17</textarea>
-<script>window.__content_subs = "26년 10월 29일 목요일 청약 소식\n\n🏗️ 청약 접수 단지 (전국, 2주 이내)\n\n[충북·민간] 신분평 에피트 더웨이시티 | 접수 10/27~10/29 | 발표 11/4 ◀ 접수중\n\n[경기·공공] 시흥거모지구 S-1블록 공공분양(본청약) | 접수 11/2~11/17 | 발표 11/26\n\n[경기·민간] GTX운정중앙역 시티프라디움 4단지(후속사업) | 접수 11/2~11/4 | 발표 11/11\n\n[경기·민간] GTX운정중앙역 시티프라디움 3단지(후속사업) | 접수 11/2~11/4 | 발표 11/10\n\n[경기·민간] 화성 향남 롯데캐슬 시그니처 | 접수 11/2~11/4 | 발표 11/10\n\n[서울·공공] 고덕강일지구 3단지 토지임대부(본청약) | 접수 11/2~11/6 | 발표 11/26\n\n[인천·민간] 계양신도시 카이브 유보라(AC4BL) | 접수 11/2~11/4 | 발표 11/11\n\n[인천·민간] 계양신도시 카이브 유보라(AC3BL) | 접수 11/2~11/4 | 발표 11/10\n\n[인천·민간] 청라 아크원 푸르지오 | 접수 11/2~11/4 | 발표 11/10\n\n[경기·민간] 엘리프 시흥 더프라임 | 접수 11/9~11/11 | 발표 11/17";</script>
+
+  <script>window.__content_subs = "26년 10월 29일 목요일 청약 소식\n\n🏗️ 청약 접수 단지 (전국, 2주 이내)\n\n[충북·민간] 신분평 에피트 더웨이시티 | 접수 10/27~10/29 | 발표 11/4 ◀ 접수중\n\n[경기·공공] 시흥거모지구 S-1블록 공공분양(본청약) | 접수 11/2~11/17 | 발표 11/26\n\n[경기·민간] GTX운정중앙역 시티프라디움 4단지(후속사업) | 접수 11/2~11/4 | 발표 11/11\n\n[경기·민간] GTX운정중앙역 시티프라디움 3단지(후속사업) | 접수 11/2~11/4 | 발표 11/10\n\n[경기·민간] 화성 향남 롯데캐슬 시그니처 | 접수 11/2~11/4 | 발표 11/10\n\n[서울·공공] 고덕강일지구 3단지 토지임대부(본청약) | 접수 11/2~11/6 | 발표 11/26\n\n[인천·민간] 계양신도시 카이브 유보라(AC4BL) | 접수 11/2~11/4 | 발표 11/11\n\n[인천·민간] 계양신도시 카이브 유보라(AC3BL) | 접수 11/2~11/4 | 발표 11/10\n\n[인천·민간] 청라 아크원 푸르지오 | 접수 11/2~11/4 | 발표 11/10\n\n[경기·민간] 엘리프 시흥 더프라임 | 접수 11/9~11/11 | 발표 11/17";</script>
 </section>
 
-<section class="card">
-<div class="card-head">
-<h2>5. 📈 부동산 주간 시세동향</h2>
-<button class="copy-btn" onclick="copySection('trend', this)">복사</button>
-</div>
-<textarea id="ta-trend" class="preview" readonly>📈 부동산 주간 시세동향
+<section class="card" data-slot="5">
+  <div class="card-head">
+    <h2>5. 📈 부동산 주간 시세동향</h2>
+    <button class="copy-btn" onclick="copySection('trend', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-trend" class="preview" readonly>📈 부동산 주간 시세동향
 전국 아파트 · 전주 대비
 
 🏠 전국 시세
@@ -231,15 +331,17 @@ h1{font-size:18px;margin:4px 0 16px;text-align:center;color:#444;}
 경북  -0.01%   전북  변동 없음
 충남  +0.07%   충북  +0.32%
 강원  +0.01%   제주  +0.02%</textarea>
-<script>window.__content_trend = "📈 부동산 주간 시세동향\n전국 아파트 · 전주 대비\n\n🏠 전국 시세\n\n매매가 +0.13%\n전세가 +0.18%\n\n3.3㎡당 매매가 1,894만원\n3.3㎡당 전세가 1,061만원\n\n📌 지역별 흐름 (17개 구분)\n\n매매 상승 14 · 하락 2 · 변동 없음 1\n전세 상승 14 · 하락 1 · 변동 없음 2\n\n🏘️ 지역별 매매가 변동률\n\n서울  +0.10%   신도시  +0.22%\n경기  +0.23%   인천  +0.05%\n부산  +0.11%   대구  +0.12%\n전남광주통합특별시  +1.30%\n대전  +1.04%   울산  +0.44%\n세종  +0.02%   경남  변동 없음\n경북  -0.04%   전북  +0.04%\n충남  +0.06%   충북  +0.03%\n강원  +0.02%   제주  -0.41%\n\n🔑 지역별 전세가 변동률\n\n서울  +0.28%   신도시  +0.22%\n경기  +0.19%   인천  +0.19%\n부산  +0.08%   대구  +0.07%\n전남광주통합특별시  +0.71%\n대전  +0.46%   울산  +0.40%\n세종  +0.15%   경남  변동 없음\n경북  -0.01%   전북  변동 없음\n충남  +0.07%   충북  +0.32%\n강원  +0.01%   제주  +0.02%";</script>
+
+  <script>window.__content_trend = "📈 부동산 주간 시세동향\n전국 아파트 · 전주 대비\n\n🏠 전국 시세\n\n매매가 +0.13%\n전세가 +0.18%\n\n3.3㎡당 매매가 1,894만원\n3.3㎡당 전세가 1,061만원\n\n📌 지역별 흐름 (17개 구분)\n\n매매 상승 14 · 하락 2 · 변동 없음 1\n전세 상승 14 · 하락 1 · 변동 없음 2\n\n🏘️ 지역별 매매가 변동률\n\n서울  +0.10%   신도시  +0.22%\n경기  +0.23%   인천  +0.05%\n부산  +0.11%   대구  +0.12%\n전남광주통합특별시  +1.30%\n대전  +1.04%   울산  +0.44%\n세종  +0.02%   경남  변동 없음\n경북  -0.04%   전북  +0.04%\n충남  +0.06%   충북  +0.03%\n강원  +0.02%   제주  -0.41%\n\n🔑 지역별 전세가 변동률\n\n서울  +0.28%   신도시  +0.22%\n경기  +0.19%   인천  +0.19%\n부산  +0.08%   대구  +0.07%\n전남광주통합특별시  +0.71%\n대전  +0.46%   울산  +0.40%\n세종  +0.15%   경남  변동 없음\n경북  -0.01%   전북  변동 없음\n충남  +0.07%   충북  +0.32%\n강원  +0.01%   제주  +0.02%";</script>
 </section>
 
-<section class="card">
-<div class="card-head">
-<h2>6. ⛽ 기름값·환율</h2>
-<button class="copy-btn" onclick="copySection('fuelfx', this)">복사</button>
-</div>
-<textarea id="ta-fuelfx" class="preview" readonly>26년 10월 29일 목요일 기름값·환율
+<section class="card" data-slot="6">
+  <div class="card-head">
+    <h2>6. ⛽ 기름값·환율</h2>
+    <button class="copy-btn" onclick="copySection('fuelfx', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-fuelfx" class="preview" readonly>26년 10월 29일 목요일 기름값·환율
 
 ⛽ 전국 평균 기름값 (오피넷 기준, 전일 대비)
 
@@ -258,15 +360,17 @@ h1{font-size:18px;margin:4px 0 16px;text-align:center;color:#444;}
 스위스 프랑 : 1,622.54원 (+1.27%)
 홍콩 달러 : 171.22원 (+1.14%)
 베트남 동(100) : 5.21원 (+1.17%)</textarea>
-<script>window.__content_fuelfx = "26년 10월 29일 목요일 기름값·환율\n\n⛽ 전국 평균 기름값 (오피넷 기준, 전일 대비)\n\n휘발유 1,855.48원/L (▼0.14)\n경유 1,841.69원/L (▼0.35)\n\n💱 주요국 환율 (매매기준율, 전일 대비)\n\n미국 달러 : 1,343.30원 (+1.15%)\n일본 엔(100) : 851.24원 (+1.24%)\n유럽 유로 : 1,498.32원 (+1.39%)\n중국 위안 : 201.66원 (+1.21%)\n영국 파운드 : 1,790.35원 (+1.32%)\n호주 달러 : 947.43원 (+1.52%)\n캐나다 달러 : 959.81원 (+1.53%)\n스위스 프랑 : 1,622.54원 (+1.27%)\n홍콩 달러 : 171.22원 (+1.14%)\n베트남 동(100) : 5.21원 (+1.17%)";</script>
+
+  <script>window.__content_fuelfx = "26년 10월 29일 목요일 기름값·환율\n\n⛽ 전국 평균 기름값 (오피넷 기준, 전일 대비)\n\n휘발유 1,855.48원/L (▼0.14)\n경유 1,841.69원/L (▼0.35)\n\n💱 주요국 환율 (매매기준율, 전일 대비)\n\n미국 달러 : 1,343.30원 (+1.15%)\n일본 엔(100) : 851.24원 (+1.24%)\n유럽 유로 : 1,498.32원 (+1.39%)\n중국 위안 : 201.66원 (+1.21%)\n영국 파운드 : 1,790.35원 (+1.32%)\n호주 달러 : 947.43원 (+1.52%)\n캐나다 달러 : 959.81원 (+1.53%)\n스위스 프랑 : 1,622.54원 (+1.27%)\n홍콩 달러 : 171.22원 (+1.14%)\n베트남 동(100) : 5.21원 (+1.17%)";</script>
 </section>
 
-<section class="card">
-<div class="card-head">
-<h2>7. 🥇 금·은·코인</h2>
-<button class="copy-btn" onclick="copySection('metalcoin', this)">복사</button>
-</div>
-<textarea id="ta-metalcoin" class="preview" readonly>26년 10월 29일 목요일 금·은·코인
+<section class="card" data-slot="7">
+  <div class="card-head">
+    <h2>7. 🥇 금·은·코인</h2>
+    <button class="copy-btn" onclick="copySection('metalcoin', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-metalcoin" class="preview" readonly>26년 10월 29일 목요일 금·은·코인
 
 🥇 금·은 시세 (전일 대비)
 
@@ -286,37 +390,45 @@ ZEC 1,747,332원 (+1.49%)
 하이퍼리퀴드 108,957원 (+1.18%)
 도지코인 108원 (+3.49%)
 XMR 804,698원 (+0.70%)</textarea>
-<script>window.__content_metalcoin = "26년 10월 29일 목요일 금·은·코인\n\n🥇 금·은 시세 (전일 대비)\n\n국제 금 선물 4,081.20달러/온스 (▲6.60) · 10/29 05:59 KST\n국내 금 174,735원/g (▲1,213) · 10/28 23:59 KST\n국제 은 54.04달러/온스\n\n🪙 코인 시가총액 상위 10 (24시간 등락)\n\n비트코인 109,077,421원 (+1.92%)\n이더리움 3,167,976원 (+1.96%)\n비앤비 1,014,788원 (+2.41%)\n리플 1,784원 (+1.96%)\n솔라나 137,640원 (+2.74%)\n트론 442원 (+0.63%)\nZEC 1,747,332원 (+1.49%)\n하이퍼리퀴드 108,957원 (+1.18%)\n도지코인 108원 (+3.49%)\nXMR 804,698원 (+0.70%)";</script>
+
+  <script>window.__content_metalcoin = "26년 10월 29일 목요일 금·은·코인\n\n🥇 금·은 시세 (전일 대비)\n\n국제 금 선물 4,081.20달러/온스 (▲6.60) · 10/29 05:59 KST\n국내 금 174,735원/g (▲1,213) · 10/28 23:59 KST\n국제 은 54.04달러/온스\n\n🪙 코인 시가총액 상위 10 (24시간 등락)\n\n비트코인 109,077,421원 (+1.92%)\n이더리움 3,167,976원 (+1.96%)\n비앤비 1,014,788원 (+2.41%)\n리플 1,784원 (+1.96%)\n솔라나 137,640원 (+2.74%)\n트론 442원 (+0.63%)\nZEC 1,747,332원 (+1.49%)\n하이퍼리퀴드 108,957원 (+1.18%)\n도지코인 108원 (+3.49%)\nXMR 804,698원 (+0.70%)";</script>
 </section>
 
-<section class="card">
-<div class="card-head">
-<h2>8. 📚 주간 베스트셀러</h2>
-<button class="copy-btn" onclick="copySection('books', this)">복사</button>
-</div>
-<textarea id="ta-books" class="preview" readonly>26년 10월 29일 목요일 주간 베스트셀러
+<section class="card" data-slot="8">
+  <div class="card-head">
+    <h2>8. 📚 주간 베스트셀러</h2>
+    <button class="copy-btn" onclick="copySection('books', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-books" class="preview" readonly>26년 10월 28일 수요일 주간 베스트셀러
 
-📚 알라딘 주간 베스트셀러 TOP 10
+📚 YES24 국내도서 주간 베스트 TOP 10
+📅 집계 기간: 2026-10-19 ~ 2026-10-25
+국내도서 종합 · 온라인·매장 판매 기준
 
 1. 가호
 2. 한국사 이상현상 연구원
-3. 빨강의 자서전
-4. 싯다르타
-5. 농부, 짠한 형
-6. 트렌드 코리아 2027
-7. 퍼플필
-8. 자연의 것들은 그저 자란다
-9. 원펀맨 One Punch Man 36
-10. 모순</textarea>
-<script>window.__content_books = "26년 10월 29일 목요일 주간 베스트셀러\n\n📚 알라딘 주간 베스트셀러 TOP 10\n\n1. 가호\n2. 한국사 이상현상 연구원\n3. 빨강의 자서전\n4. 싯다르타\n5. 농부, 짠한 형\n6. 트렌드 코리아 2027\n7. 퍼플필\n8. 자연의 것들은 그저 자란다\n9. 원펀맨 One Punch Man 36\n10. 모순";</script>
+3. 트렌드 코리아 2027
+4. 빨강의 자서전
+5. 싯다르타
+6. 모순
+7. 쇼펜하우어 인생수업 (30만 부 기념 개정증보판)
+8. 세네카, 오늘을 빼앗기고 있는 당신에게
+9. 돈, 뜨겁게 사랑하고 차갑게 다루어라
+10. 퍼플필
+
+출처: YES24 주간 베스트</textarea>
+
+  <script>window.__content_books = "26년 10월 28일 수요일 주간 베스트셀러\n\n📚 YES24 국내도서 주간 베스트 TOP 10\n📅 집계 기간: 2026-10-19 ~ 2026-10-25\n국내도서 종합 · 온라인·매장 판매 기준\n\n1. 가호\n2. 한국사 이상현상 연구원\n3. 트렌드 코리아 2027\n4. 빨강의 자서전\n5. 싯다르타\n6. 모순\n7. 쇼펜하우어 인생수업 (30만 부 기념 개정증보판)\n8. 세네카, 오늘을 빼앗기고 있는 당신에게\n9. 돈, 뜨겁게 사랑하고 차갑게 다루어라\n10. 퍼플필\n\n출처: YES24 주간 베스트";</script>
 </section>
 
-<section class="card">
-<div class="card-head">
-<h2>9. 🏠 부동산 뉴스</h2>
-<button class="copy-btn" onclick="copySection('realestate', this)">복사</button>
-</div>
-<textarea id="ta-realestate" class="preview" readonly>26년 10월 29일 목요일 부동산 주요뉴스
+<section class="card" data-slot="9">
+  <div class="card-head">
+    <h2>9. 🏠 부동산 뉴스</h2>
+    <button class="copy-btn" onclick="copySection('realestate', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-realestate" class="preview" readonly>26년 10월 29일 목요일 부동산 주요뉴스
 
 “돈 대줄 테니 차익 나누자”…대출 장벽이 부른 ‘사금융 복마전’
 https://n.news.naver.com/mnews/article/011/0004676334
@@ -330,7 +442,7 @@ https://n.news.naver.com/mnews/article/421/0009256688
 재초환 첫 부과 앞둔 반포현대…부담금 산정·부과 시한 모두 논란[코주부]
 https://n.news.naver.com/mnews/article/011/0004676332
 
-서울 공급 부족 우려에도…LH, 비축용 토지 매입 4년간 '0'
+서울 공급 부족 우려에도…LH, 비축용 토지 매입 4년간 &#x27;0&#x27;
 https://n.news.naver.com/mnews/article/001/0016407465
 
 대출 막히자 사금융으로…고가 재건축 번지는 ‘우회 거래’[집슐랭]
@@ -345,19 +457,21 @@ https://n.news.naver.com/mnews/article/016/0002715765
 300~700원 내던 토지대장·지적도 발급비…65세 이상 면제
 https://n.news.naver.com/mnews/article/003/0014285925
 
-"폐차 넘어 달리는 오프로드"…김천서 튜닝카 축제 열린다
+&quot;폐차 넘어 달리는 오프로드&quot;…김천서 튜닝카 축제 열린다
 https://n.news.naver.com/mnews/article/421/0009256659</textarea>
-<script>window.__content_realestate = "26년 10월 29일 목요일 부동산 주요뉴스\n\n“돈 대줄 테니 차익 나누자”…대출 장벽이 부른 ‘사금융 복마전’\nhttps://n.news.naver.com/mnews/article/011/0004676334\n\n[오늘 부동산] 위례선 트램, 개통일 내년으로 연기\nhttps://n.news.naver.com/mnews/article/119/0003148431\n\n방배13구역 공사비 485만→800만원대 중반…1년 갈등 끝 합의 가닥\nhttps://n.news.naver.com/mnews/article/421/0009256688\n\n재초환 첫 부과 앞둔 반포현대…부담금 산정·부과 시한 모두 논란[코주부]\nhttps://n.news.naver.com/mnews/article/011/0004676332\n\n서울 공급 부족 우려에도…LH, 비축용 토지 매입 4년간 '0'\nhttps://n.news.naver.com/mnews/article/001/0016407465\n\n대출 막히자 사금융으로…고가 재건축 번지는 ‘우회 거래’[집슐랭]\nhttps://n.news.naver.com/mnews/article/011/0004676330\n\n전세 갱신했더니 월세 생겼다… 매달 38만원 더 낸다\nhttps://n.news.naver.com/mnews/article/366/0001201066\n\n차 애호가들의 축제…‘코리아 튜닝카 페스티벌’ 열린다\nhttps://n.news.naver.com/mnews/article/016/0002715765\n\n300~700원 내던 토지대장·지적도 발급비…65세 이상 면제\nhttps://n.news.naver.com/mnews/article/003/0014285925\n\n\"폐차 넘어 달리는 오프로드\"…김천서 튜닝카 축제 열린다\nhttps://n.news.naver.com/mnews/article/421/0009256659";</script>
+
+  <script>window.__content_realestate = "26년 10월 29일 목요일 부동산 주요뉴스\n\n“돈 대줄 테니 차익 나누자”…대출 장벽이 부른 ‘사금융 복마전’\nhttps://n.news.naver.com/mnews/article/011/0004676334\n\n[오늘 부동산] 위례선 트램, 개통일 내년으로 연기\nhttps://n.news.naver.com/mnews/article/119/0003148431\n\n방배13구역 공사비 485만→800만원대 중반…1년 갈등 끝 합의 가닥\nhttps://n.news.naver.com/mnews/article/421/0009256688\n\n재초환 첫 부과 앞둔 반포현대…부담금 산정·부과 시한 모두 논란[코주부]\nhttps://n.news.naver.com/mnews/article/011/0004676332\n\n서울 공급 부족 우려에도…LH, 비축용 토지 매입 4년간 '0'\nhttps://n.news.naver.com/mnews/article/001/0016407465\n\n대출 막히자 사금융으로…고가 재건축 번지는 ‘우회 거래’[집슐랭]\nhttps://n.news.naver.com/mnews/article/011/0004676330\n\n전세 갱신했더니 월세 생겼다… 매달 38만원 더 낸다\nhttps://n.news.naver.com/mnews/article/366/0001201066\n\n차 애호가들의 축제…‘코리아 튜닝카 페스티벌’ 열린다\nhttps://n.news.naver.com/mnews/article/016/0002715765\n\n300~700원 내던 토지대장·지적도 발급비…65세 이상 면제\nhttps://n.news.naver.com/mnews/article/003/0014285925\n\n\"폐차 넘어 달리는 오프로드\"…김천서 튜닝카 축제 열린다\nhttps://n.news.naver.com/mnews/article/421/0009256659";</script>
 </section>
 
-<section class="card">
-<div class="card-head">
-<h2>10. 🌏 세계 뉴스</h2>
-<button class="copy-btn" onclick="copySection('world', this)">복사</button>
-</div>
-<textarea id="ta-world" class="preview" readonly>🌏 26년 10월 29일 목요일 세계 뉴스
+<section class="card" data-slot="10">
+  <div class="card-head">
+    <h2>10. 🌏 세계 뉴스</h2>
+    <button class="copy-btn" onclick="copySection('world', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-world" class="preview" readonly>🌏 26년 10월 29일 목요일 세계 뉴스
 
-'부재자 투표' 개표 남은 이스라엘 총선… 친네타냐후 과반 못 미쳐(종합)
+&#x27;부재자 투표&#x27; 개표 남은 이스라엘 총선… 친네타냐후 과반 못 미쳐(종합)
 https://n.news.naver.com/mnews/article/421/0009256633
 
 美 상원 7곳 초접전…개표 지연 가능성에 다수상 결정 불확실
@@ -366,13 +480,13 @@ https://n.news.naver.com/mnews/article/277/0005834892
 ‘마오쩌둥 모욕 논란’ 음바페, 하루만에 사과… 中 “신뢰 회복 쉽지 않아”
 https://n.news.naver.com/mnews/article/020/0003758291
 
-브라질 보우소나루, 출국 금지 뚫고 미국행…'트럼프 지원으로 입국'
+브라질 보우소나루, 출국 금지 뚫고 미국행…&#x27;트럼프 지원으로 입국&#x27;
 https://n.news.naver.com/mnews/article/437/0000517882
 
 스페인 중부서 고속열차 충돌로 최소 30명 사망…한국인 6명 경상
 https://n.news.naver.com/mnews/article/055/0001398866
 
-젤렌스키 "3자 회담, 다음 달 6~10일 내 열어야"…크렘린은 신중
+젤렌스키 &quot;3자 회담, 다음 달 6~10일 내 열어야&quot;…크렘린은 신중
 https://n.news.naver.com/mnews/article/422/0000920570
 
 연준, 美 중간선거 앞두고 기준금리 동결…‘12월 인상’ 시장 전망은 85%
@@ -386,15 +500,17 @@ https://n.news.naver.com/mnews/article/020/0003758548
 
 “인플레이션 여전히 높아”…워시, 추가 금리 인상 가능성 열어둬
 https://n.news.naver.com/mnews/article/366/0001201071</textarea>
-<script>window.__content_world = "🌏 26년 10월 29일 목요일 세계 뉴스\n\n'부재자 투표' 개표 남은 이스라엘 총선… 친네타냐후 과반 못 미쳐(종합)\nhttps://n.news.naver.com/mnews/article/421/0009256633\n\n美 상원 7곳 초접전…개표 지연 가능성에 다수상 결정 불확실\nhttps://n.news.naver.com/mnews/article/277/0005834892\n\n‘마오쩌둥 모욕 논란’ 음바페, 하루만에 사과… 中 “신뢰 회복 쉽지 않아”\nhttps://n.news.naver.com/mnews/article/020/0003758291\n\n브라질 보우소나루, 출국 금지 뚫고 미국행…'트럼프 지원으로 입국'\nhttps://n.news.naver.com/mnews/article/437/0000517882\n\n스페인 중부서 고속열차 충돌로 최소 30명 사망…한국인 6명 경상\nhttps://n.news.naver.com/mnews/article/055/0001398866\n\n젤렌스키 \"3자 회담, 다음 달 6~10일 내 열어야\"…크렘린은 신중\nhttps://n.news.naver.com/mnews/article/422/0000920570\n\n연준, 美 중간선거 앞두고 기준금리 동결…‘12월 인상’ 시장 전망은 85%\nhttps://n.news.naver.com/mnews/article/020/0003758574\n\n“로봇 개 산책 시키실 분” 이색 알바 떴다…깜짝 시급 얼마\nhttps://n.news.naver.com/mnews/article/025/0003561124\n\nAI가 흔든 부자 순위, ‘틱톡’ 장이밍 中 1위 복귀\nhttps://n.news.naver.com/mnews/article/020/0003758548\n\n“인플레이션 여전히 높아”…워시, 추가 금리 인상 가능성 열어둬\nhttps://n.news.naver.com/mnews/article/366/0001201071";</script>
+
+  <script>window.__content_world = "🌏 26년 10월 29일 목요일 세계 뉴스\n\n'부재자 투표' 개표 남은 이스라엘 총선… 친네타냐후 과반 못 미쳐(종합)\nhttps://n.news.naver.com/mnews/article/421/0009256633\n\n美 상원 7곳 초접전…개표 지연 가능성에 다수상 결정 불확실\nhttps://n.news.naver.com/mnews/article/277/0005834892\n\n‘마오쩌둥 모욕 논란’ 음바페, 하루만에 사과… 中 “신뢰 회복 쉽지 않아”\nhttps://n.news.naver.com/mnews/article/020/0003758291\n\n브라질 보우소나루, 출국 금지 뚫고 미국행…'트럼프 지원으로 입국'\nhttps://n.news.naver.com/mnews/article/437/0000517882\n\n스페인 중부서 고속열차 충돌로 최소 30명 사망…한국인 6명 경상\nhttps://n.news.naver.com/mnews/article/055/0001398866\n\n젤렌스키 \"3자 회담, 다음 달 6~10일 내 열어야\"…크렘린은 신중\nhttps://n.news.naver.com/mnews/article/422/0000920570\n\n연준, 美 중간선거 앞두고 기준금리 동결…‘12월 인상’ 시장 전망은 85%\nhttps://n.news.naver.com/mnews/article/020/0003758574\n\n“로봇 개 산책 시키실 분” 이색 알바 떴다…깜짝 시급 얼마\nhttps://n.news.naver.com/mnews/article/025/0003561124\n\nAI가 흔든 부자 순위, ‘틱톡’ 장이밍 中 1위 복귀\nhttps://n.news.naver.com/mnews/article/020/0003758548\n\n“인플레이션 여전히 높아”…워시, 추가 금리 인상 가능성 열어둬\nhttps://n.news.naver.com/mnews/article/366/0001201071";</script>
 </section>
 
-<section class="card">
-<div class="card-head">
-<h2>11. 🏦 금융 뉴스</h2>
-<button class="copy-btn" onclick="copySection('finance', this)">복사</button>
-</div>
-<textarea id="ta-finance" class="preview" readonly>🏦 26년 10월 29일 목요일 금융 뉴스
+<section class="card" data-slot="11">
+  <div class="card-head">
+    <h2>11. 🏦 금융 뉴스</h2>
+    <button class="copy-btn" onclick="copySection('finance', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-finance" class="preview" readonly>🏦 26년 10월 29일 목요일 금융 뉴스
 
 美 중간선거 결과에 쏠린 눈…금리·환율 영향은
 https://n.news.naver.com/mnews/article/119/0003148433
@@ -402,7 +518,7 @@ https://n.news.naver.com/mnews/article/119/0003148433
 은행 줄 세울 ‘포용금융 성적표’…정성평가 잣대는 ‘모호’
 https://n.news.naver.com/mnews/article/119/0003148432
 
-은행·보험·증권·가상자산까지 뚫렸는데…카드업계 아직 '무풍지대'
+은행·보험·증권·가상자산까지 뚫렸는데…카드업계 아직 &#x27;무풍지대&#x27;
 https://n.news.naver.com/mnews/article/421/0009256701
 
 월 165만명 쓰는 빗썸 뚫렸다...고객정보 유출 여부 ‘깜깜’
@@ -420,20 +536,22 @@ https://n.news.naver.com/mnews/article/018/0006398395
 금융지주 이사회 안건 99% 원안가결…이찬진 “경영진 자료에 의존 말라”
 https://n.news.naver.com/mnews/article/011/0004676329
 
-기업 체감 경기 4년여 만에 '긍정적'⋯제조업·비제조업 개선
+기업 체감 경기 4년여 만에 &#x27;긍정적&#x27;⋯제조업·비제조업 개선
 https://n.news.naver.com/mnews/article/031/0001070267
 
-기업심리 4년 1개월 만에 '최고치'…제조업·비제조업 동반 상승
+기업심리 4년 1개월 만에 &#x27;최고치&#x27;…제조업·비제조업 동반 상승
 https://n.news.naver.com/mnews/article/119/0003148427</textarea>
-<script>window.__content_finance = "🏦 26년 10월 29일 목요일 금융 뉴스\n\n美 중간선거 결과에 쏠린 눈…금리·환율 영향은\nhttps://n.news.naver.com/mnews/article/119/0003148433\n\n은행 줄 세울 ‘포용금융 성적표’…정성평가 잣대는 ‘모호’\nhttps://n.news.naver.com/mnews/article/119/0003148432\n\n은행·보험·증권·가상자산까지 뚫렸는데…카드업계 아직 '무풍지대'\nhttps://n.news.naver.com/mnews/article/421/0009256701\n\n월 165만명 쓰는 빗썸 뚫렸다...고객정보 유출 여부 ‘깜깜’\nhttps://n.news.naver.com/mnews/article/011/0004676333\n\n신한카드, 약 2년 만에 삼성카드 제치고 1위…연간 1위 수성은 과제\nhttps://n.news.naver.com/mnews/article/421/0009256684\n\n토스·카카오뱅크, 금융위원장 표창\nhttps://n.news.naver.com/mnews/article/022/0004170681\n\n“올해 3분기 등록 ABS 발행 12.5조…부동산 PF 급감에 전년비 5.7%↓”\nhttps://n.news.naver.com/mnews/article/018/0006398395\n\n금융지주 이사회 안건 99% 원안가결…이찬진 “경영진 자료에 의존 말라”\nhttps://n.news.naver.com/mnews/article/011/0004676329\n\n기업 체감 경기 4년여 만에 '긍정적'⋯제조업·비제조업 개선\nhttps://n.news.naver.com/mnews/article/031/0001070267\n\n기업심리 4년 1개월 만에 '최고치'…제조업·비제조업 동반 상승\nhttps://n.news.naver.com/mnews/article/119/0003148427";</script>
+
+  <script>window.__content_finance = "🏦 26년 10월 29일 목요일 금융 뉴스\n\n美 중간선거 결과에 쏠린 눈…금리·환율 영향은\nhttps://n.news.naver.com/mnews/article/119/0003148433\n\n은행 줄 세울 ‘포용금융 성적표’…정성평가 잣대는 ‘모호’\nhttps://n.news.naver.com/mnews/article/119/0003148432\n\n은행·보험·증권·가상자산까지 뚫렸는데…카드업계 아직 '무풍지대'\nhttps://n.news.naver.com/mnews/article/421/0009256701\n\n월 165만명 쓰는 빗썸 뚫렸다...고객정보 유출 여부 ‘깜깜’\nhttps://n.news.naver.com/mnews/article/011/0004676333\n\n신한카드, 약 2년 만에 삼성카드 제치고 1위…연간 1위 수성은 과제\nhttps://n.news.naver.com/mnews/article/421/0009256684\n\n토스·카카오뱅크, 금융위원장 표창\nhttps://n.news.naver.com/mnews/article/022/0004170681\n\n“올해 3분기 등록 ABS 발행 12.5조…부동산 PF 급감에 전년비 5.7%↓”\nhttps://n.news.naver.com/mnews/article/018/0006398395\n\n금융지주 이사회 안건 99% 원안가결…이찬진 “경영진 자료에 의존 말라”\nhttps://n.news.naver.com/mnews/article/011/0004676329\n\n기업 체감 경기 4년여 만에 '긍정적'⋯제조업·비제조업 개선\nhttps://n.news.naver.com/mnews/article/031/0001070267\n\n기업심리 4년 1개월 만에 '최고치'…제조업·비제조업 동반 상승\nhttps://n.news.naver.com/mnews/article/119/0003148427";</script>
 </section>
 
-<section class="card">
-<div class="card-head">
-<h2>12. 🤖 AI 뉴스</h2>
-<button class="copy-btn" onclick="copySection('ai', this)">복사</button>
-</div>
-<textarea id="ta-ai" class="preview" readonly>🤖 26년 10월 29일 목요일 AI 뉴스
+<section class="card" data-slot="12">
+  <div class="card-head">
+    <h2>12. 🤖 AI 뉴스</h2>
+    <button class="copy-btn" onclick="copySection('ai', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-ai" class="preview" readonly>🤖 26년 10월 29일 목요일 AI 뉴스
 
 가상 섬에 홀로 둔 AI, 스스로 놀이 만들고 개발자도 몰랐던 기술 발견
 https://www.aitimes.com/news/articleView.html?idxno=216631
@@ -444,7 +562,7 @@ https://www.aitimes.com/news/articleView.html?idxno=216670
 역전파 없는 AI 학습 실험, 열흘 만에 4000배 빨라져…1.76시간→1.6초
 https://www.aitimes.com/news/articleView.html?idxno=216671
 
-구글, 터미널서 AI 에이전트 다루는 '제미나이 API CLI' 오픈소스 공개
+구글, 터미널서 AI 에이전트 다루는 &#x27;제미나이 API CLI&#x27; 오픈소스 공개
 https://www.aitimes.com/news/articleView.html?idxno=216607
 
 멜론 3위 오른 AI 노래, 어떻게 만들었나…‘머무르’ 제작팀 인터뷰
@@ -462,387 +580,1367 @@ https://www.aitimes.com/news/articleView.html?idxno=216690
 젠슨 황 시연에 미니로봇 주문 급증…“올해 가장 많이 팔릴 수도”
 https://www.aitimes.com/news/articleView.html?idxno=216626
 
-구글, 음성·실시간 편집 갖춘 월드모델 '지니 4' 공개
+구글, 음성·실시간 편집 갖춘 월드모델 &#x27;지니 4&#x27; 공개
 https://www.aitimes.com/news/articleView.html?idxno=216731</textarea>
-<script>window.__content_ai = "🤖 26년 10월 29일 목요일 AI 뉴스\n\n가상 섬에 홀로 둔 AI, 스스로 놀이 만들고 개발자도 몰랐던 기술 발견\nhttps://www.aitimes.com/news/articleView.html?idxno=216631\n\n알트먼 “수학계, AI에 ‘우린 끝났다’ 절망하다 닷새 만에 수용”\nhttps://www.aitimes.com/news/articleView.html?idxno=216670\n\n역전파 없는 AI 학습 실험, 열흘 만에 4000배 빨라져…1.76시간→1.6초\nhttps://www.aitimes.com/news/articleView.html?idxno=216671\n\n구글, 터미널서 AI 에이전트 다루는 '제미나이 API CLI' 오픈소스 공개\nhttps://www.aitimes.com/news/articleView.html?idxno=216607\n\n멜론 3위 오른 AI 노래, 어떻게 만들었나…‘머무르’ 제작팀 인터뷰\nhttps://www.aitimes.com/news/articleView.html?idxno=216553\n\n앤트로픽도 뚫렸다...캐서드럴, 에이전트로 12시간 만에 내부망 침투\nhttps://www.aitimes.com/news/articleView.html?idxno=216701\n\n머스크 “에이전트로 통신 수요 1000배 증가”…기지국 8만곳 확보 추진\nhttps://www.aitimes.com/news/articleView.html?idxno=216624\n\n오픈AI, ‘GPT-6.1 테라’ 출시…자동화 성능 높이고 가격 낮춰\nhttps://www.aitimes.com/news/articleView.html?idxno=216690\n\n젠슨 황 시연에 미니로봇 주문 급증…“올해 가장 많이 팔릴 수도”\nhttps://www.aitimes.com/news/articleView.html?idxno=216626\n\n구글, 음성·실시간 편집 갖춘 월드모델 '지니 4' 공개\nhttps://www.aitimes.com/news/articleView.html?idxno=216731";</script>
+
+  <script>window.__content_ai = "🤖 26년 10월 29일 목요일 AI 뉴스\n\n가상 섬에 홀로 둔 AI, 스스로 놀이 만들고 개발자도 몰랐던 기술 발견\nhttps://www.aitimes.com/news/articleView.html?idxno=216631\n\n알트먼 “수학계, AI에 ‘우린 끝났다’ 절망하다 닷새 만에 수용”\nhttps://www.aitimes.com/news/articleView.html?idxno=216670\n\n역전파 없는 AI 학습 실험, 열흘 만에 4000배 빨라져…1.76시간→1.6초\nhttps://www.aitimes.com/news/articleView.html?idxno=216671\n\n구글, 터미널서 AI 에이전트 다루는 '제미나이 API CLI' 오픈소스 공개\nhttps://www.aitimes.com/news/articleView.html?idxno=216607\n\n멜론 3위 오른 AI 노래, 어떻게 만들었나…‘머무르’ 제작팀 인터뷰\nhttps://www.aitimes.com/news/articleView.html?idxno=216553\n\n앤트로픽도 뚫렸다...캐서드럴, 에이전트로 12시간 만에 내부망 침투\nhttps://www.aitimes.com/news/articleView.html?idxno=216701\n\n머스크 “에이전트로 통신 수요 1000배 증가”…기지국 8만곳 확보 추진\nhttps://www.aitimes.com/news/articleView.html?idxno=216624\n\n오픈AI, ‘GPT-6.1 테라’ 출시…자동화 성능 높이고 가격 낮춰\nhttps://www.aitimes.com/news/articleView.html?idxno=216690\n\n젠슨 황 시연에 미니로봇 주문 급증…“올해 가장 많이 팔릴 수도”\nhttps://www.aitimes.com/news/articleView.html?idxno=216626\n\n구글, 음성·실시간 편집 갖춘 월드모델 '지니 4' 공개\nhttps://www.aitimes.com/news/articleView.html?idxno=216731";</script>
 </section>
 
-<section class="card">
-<div class="card-head">
-<h2>13. 📰 엘리트 정책분석</h2>
-<button class="copy-btn" onclick="copySection('analysis3', this)">복사</button>
-</div>
-<textarea id="ta-analysis3" class="preview" readonly>엘리트 데이터룸
-2026.10.22
+<section class="card" data-slot="13">
+  <div class="card-head">
+    <h2>13. ⭕ 오늘의 부동산 OX</h2>
+    <button class="copy-btn" onclick="copySection('daily19', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-daily19" class="preview" readonly>⭕ 오늘의 부동산 OX
 
-공시가격 급등으로 재산세 부담도 증가
-https://n.news.naver.com/mnews/article/001/0016391585
+2026년 10월 29일
+
+방이 하나 더 많으면 누구에게나 더 좋은 집일까요?
+
+❌ 정답은 X입니다.
+
+방 하나가 더 있다는 사실과 그 방을 우리 가족이 유용하게 쓴다는 판단은 다릅니다.
+
+빈방을 유지할 가구와 개인 작업실이 필요한 가구는 같은 집에도 다른 가치를 매길 수 있습니다.
+
+🏠 방마다 사용할 사람과 용도를 한 줄씩 적어보세요.
+
+추가 방을 얻기 위해 거실이 줄어드는 가상의 두 평면이라면, 개인 공간의 이익과 함께 머무는 공간의 변화를 나누어 비교할 수 있습니다.
+
+여기서는 실제 매물이나 면적 수치를 가정하지 않으며 방 개수만으로 가격이 적정하다고 판정하지 않습니다.
+
+💡 쓰임을 정하지 못한 방은 ‘다용도’라는 이름으로 장점을 확정하지 마세요.
+
+나중에 필요할 수 있다는 기대는 현재 필요한 공간과 별도로 표시하세요.
+
+반대로 당장 사용자가 없더라도 구체적인 가족 계획이 있다면 후보에서 제외할 이유도 없습니다.
+
+핵심은 방의 개수를 가족의 현재 용도와 예상 용도로 각각 번역하는 것입니다.</textarea>
+
+  <script>window.__content_daily19 = "⭕ 오늘의 부동산 OX\n\n2026년 10월 29일\n\n방이 하나 더 많으면 누구에게나 더 좋은 집일까요?\n\n❌ 정답은 X입니다.\n\n방 하나가 더 있다는 사실과 그 방을 우리 가족이 유용하게 쓴다는 판단은 다릅니다.\n\n빈방을 유지할 가구와 개인 작업실이 필요한 가구는 같은 집에도 다른 가치를 매길 수 있습니다.\n\n🏠 방마다 사용할 사람과 용도를 한 줄씩 적어보세요.\n\n추가 방을 얻기 위해 거실이 줄어드는 가상의 두 평면이라면, 개인 공간의 이익과 함께 머무는 공간의 변화를 나누어 비교할 수 있습니다.\n\n여기서는 실제 매물이나 면적 수치를 가정하지 않으며 방 개수만으로 가격이 적정하다고 판정하지 않습니다.\n\n💡 쓰임을 정하지 못한 방은 ‘다용도’라는 이름으로 장점을 확정하지 마세요.\n\n나중에 필요할 수 있다는 기대는 현재 필요한 공간과 별도로 표시하세요.\n\n반대로 당장 사용자가 없더라도 구체적인 가족 계획이 있다면 후보에서 제외할 이유도 없습니다.\n\n핵심은 방의 개수를 가족의 현재 용도와 예상 용도로 각각 번역하는 것입니다.";</script>
+</section>
+
+<section class="card" data-slot="14">
+  <div class="card-head">
+    <h2>14. 🏠 집 보러 갈 때 한 가지</h2>
+    <button class="copy-btn" onclick="copySection('daily20', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-daily20" class="preview" readonly>🏠 집 보러 갈 때 한 가지
+
+2026년 10월 29일
+
+‘넓어 보였다’와 ‘넓었다’를 메모에서 구분하세요
+
+📝 집을 여러 곳 보고 나면 기억에는 넓고 깔끔했다는 인상만 남을 수 있습니다.
+
+오늘은 후보 메모에서 직접 관찰한 사실과 느낀 평가를 다른 칸에 적어보세요.
+
+🔎 ‘거실과 주방이 연결돼 있었다’는 구조 관찰이고 ‘개방적으로 느껴졌다’는 개인 평가입니다.
+
+두 문장을 모두 남겨도 되지만 같은 종류의 근거처럼 취급하지 마세요.
+
+한 집은 실물을 보고 다른 집은 사진만 보았다면 확인 방식도 적으세요.
+
+직접 보지 못한 방의 상태는 사진의 분위기로 채우지 않고 미확인으로 남깁니다.
+
+💡 다음 방문에서는 이전에 마음에 들었던 이유가 실제 구조였는지 장식의 인상이었는지 다시 비교하세요.
+
+느낌이 나쁘다는 이유만으로 관찰을 버릴 필요는 없으며, 수치가 없다고 느낌을 사실로 바꾸어서도 안 됩니다.
+
+‘관찰·평가·확인 방식’ 세 칸을 나누면 가족에게 왜 후보를 추천하는지 구체적으로 설명할 수 있습니다.</textarea>
+
+  <script>window.__content_daily20 = "🏠 집 보러 갈 때 한 가지\n\n2026년 10월 29일\n\n‘넓어 보였다’와 ‘넓었다’를 메모에서 구분하세요\n\n📝 집을 여러 곳 보고 나면 기억에는 넓고 깔끔했다는 인상만 남을 수 있습니다.\n\n오늘은 후보 메모에서 직접 관찰한 사실과 느낀 평가를 다른 칸에 적어보세요.\n\n🔎 ‘거실과 주방이 연결돼 있었다’는 구조 관찰이고 ‘개방적으로 느껴졌다’는 개인 평가입니다.\n\n두 문장을 모두 남겨도 되지만 같은 종류의 근거처럼 취급하지 마세요.\n\n한 집은 실물을 보고 다른 집은 사진만 보았다면 확인 방식도 적으세요.\n\n직접 보지 못한 방의 상태는 사진의 분위기로 채우지 않고 미확인으로 남깁니다.\n\n💡 다음 방문에서는 이전에 마음에 들었던 이유가 실제 구조였는지 장식의 인상이었는지 다시 비교하세요.\n\n느낌이 나쁘다는 이유만으로 관찰을 버릴 필요는 없으며, 수치가 없다고 느낌을 사실로 바꾸어서도 안 됩니다.\n\n‘관찰·평가·확인 방식’ 세 칸을 나누면 가족에게 왜 후보를 추천하는지 구체적으로 설명할 수 있습니다.";</script>
+</section>
+
+<section class="card" data-slot="15">
+  <div class="card-head">
+    <h2>15. 💬 부동산 광고 해석기</h2>
+    <button class="copy-btn" onclick="copySection('daily21', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-daily21" class="preview" readonly>💬 부동산 광고 해석기
+
+2026년 10월 29일
+
+‘깔끔하게 관리’에서 색상과 정리 상태를 나누세요
+
+🔎 흰 벽과 비어 있는 바닥 때문에 집이 깔끔하게 보일 수 있습니다.
+
+그러나 광고의 ‘깔끔한 관리’가 밝은 색상을 말하는지 물건이 적다는 뜻인지부터 구별해 보세요.
+
+🧾 설명을 들을 때 ‘어떤 관리 내용을 보고 하는 말입니까?’라고 물으세요.
+
+방문에서 확인한 정리 상태와 별도로 받은 관리 설명을 기록하세요.
+
+물건이 거의 없는 집과 현재 가족이 살고 있는 집을 같은 수준의 정돈 상태로 평가하면, 집 자체보다 거주 상황을 비교하게 될 수 있습니다.
+
+💡 사진에서 정리가 잘됐다는 평가는 그대로 남겨도 됩니다.
+
+다만 그것만으로 집 전체의 상태나 앞으로의 관리 부담을 확정하지 마세요.
+
+우리 물건을 들였을 때도 같은 인상이 유지될지는 별도 질문입니다.
+
+‘밝은 마감·적은 물건·확인된 관리 내용’을 분리해 적고 근거가 없는 관리 설명에는 확인 필요 표시를 남기세요.</textarea>
+
+  <script>window.__content_daily21 = "💬 부동산 광고 해석기\n\n2026년 10월 29일\n\n‘깔끔하게 관리’에서 색상과 정리 상태를 나누세요\n\n🔎 흰 벽과 비어 있는 바닥 때문에 집이 깔끔하게 보일 수 있습니다.\n\n그러나 광고의 ‘깔끔한 관리’가 밝은 색상을 말하는지 물건이 적다는 뜻인지부터 구별해 보세요.\n\n🧾 설명을 들을 때 ‘어떤 관리 내용을 보고 하는 말입니까?’라고 물으세요.\n\n방문에서 확인한 정리 상태와 별도로 받은 관리 설명을 기록하세요.\n\n물건이 거의 없는 집과 현재 가족이 살고 있는 집을 같은 수준의 정돈 상태로 평가하면, 집 자체보다 거주 상황을 비교하게 될 수 있습니다.\n\n💡 사진에서 정리가 잘됐다는 평가는 그대로 남겨도 됩니다.\n\n다만 그것만으로 집 전체의 상태나 앞으로의 관리 부담을 확정하지 마세요.\n\n우리 물건을 들였을 때도 같은 인상이 유지될지는 별도 질문입니다.\n\n‘밝은 마감·적은 물건·확인된 관리 내용’을 분리해 적고 근거가 없는 관리 설명에는 확인 필요 표시를 남기세요.";</script>
+</section>
+
+<section class="card" data-slot="16">
+  <div class="card-head">
+    <h2>16. 🧠 돈에 관한 착각</h2>
+    <button class="copy-btn" onclick="copySection('daily22', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-daily22" class="preview" readonly>🧠 돈에 관한 착각
+
+2026년 10월 29일
+
+가족 예산을 더한 금액이 공동 지출 한도일까요?
+
+🧮 가상의 두 사람이 이사 후 구매에 각각 40만원을 준비하면 합계는 80만원입니다.
+
+하지만 그중 각자 개인 물건에 쓰기로 한 돈이 15만원씩 있다면 공용 구매에 남는 금액은 50만원입니다.
+
+📝 총예산을 공용·개인·미정으로 먼저 나누어보세요.
+
+80만원이 있다는 이유로 70만원짜리 공용 물건을 정하면 개인 예산까지 쓰거나 합의를 다시 해야 합니다.
+
+이 계산은 예산 배정 예시이며 배송비, 조립비와 기존 물건을 처분하는 비용은 제외했습니다.
+
+💡 예산표에는 돈을 낸 사람뿐 아니라 쓸 목적도 적으세요.
+
+목적이 정해지지 않은 금액은 자동으로 공용 재원에 넣지 마세요.
+
+개인 예산을 줄여 공동 구매를 늘릴 수는 있지만 그 변경은 구매 전에 함께 정해야 합니다.
+
+합계액이 큰 것과 모든 항목에 자유롭게 쓸 수 있는 돈이 많은 것은 다른 상황입니다.</textarea>
+
+  <script>window.__content_daily22 = "🧠 돈에 관한 착각\n\n2026년 10월 29일\n\n가족 예산을 더한 금액이 공동 지출 한도일까요?\n\n🧮 가상의 두 사람이 이사 후 구매에 각각 40만원을 준비하면 합계는 80만원입니다.\n\n하지만 그중 각자 개인 물건에 쓰기로 한 돈이 15만원씩 있다면 공용 구매에 남는 금액은 50만원입니다.\n\n📝 총예산을 공용·개인·미정으로 먼저 나누어보세요.\n\n80만원이 있다는 이유로 70만원짜리 공용 물건을 정하면 개인 예산까지 쓰거나 합의를 다시 해야 합니다.\n\n이 계산은 예산 배정 예시이며 배송비, 조립비와 기존 물건을 처분하는 비용은 제외했습니다.\n\n💡 예산표에는 돈을 낸 사람뿐 아니라 쓸 목적도 적으세요.\n\n목적이 정해지지 않은 금액은 자동으로 공용 재원에 넣지 마세요.\n\n개인 예산을 줄여 공동 구매를 늘릴 수는 있지만 그 변경은 구매 전에 함께 정해야 합니다.\n\n합계액이 큰 것과 모든 항목에 자유롭게 쓸 수 있는 돈이 많은 것은 다른 상황입니다.";</script>
+</section>
+
+<section class="card" data-slot="17">
+  <div class="card-head">
+    <h2>17. 🛠️ 오늘의 집 관리</h2>
+    <button class="copy-btn" onclick="copySection('daily23', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-daily23" class="preview" readonly>🛠️ 오늘의 집 관리
+
+2026년 10월 29일
+
+집 정리 전후 사진은 같은 방향에서 비교해보세요
+
+📷 책상 위를 정리한 뒤 사진을 찍었다면 작업 전 사진과 같은 방향인지 확인해 보세요.
+
+한쪽은 전체 모습이고 다른 쪽은 가까운 일부라면 무엇이 바뀌었는지 나란히 비교하기 어렵습니다.
+
+📝 작업 전과 후에 같은 자리에서 같은 범위를 담고, 달라진 물건이나 배치를 짧게 적으세요.
+
+정리하지 않은 구역이 사진에서 빠졌다면 그 부분까지 완료한 것처럼 설명하지 마세요.
+
+처음 사진이 없다면 나중에 만든 모습을 작업 전이라고 재현하지 않고 비교 자료 없음으로 남기는 편이 정확합니다.
+
+💡 사진이 깔끔해졌다는 인상과 필요한 물건을 실제로 쓰기 편해졌다는 평가는 따로 적으세요.
+
+다른 가족이 물건을 찾을 수 있는지 직접 확인하면 보기 좋은 정리와 사용 결과를 구별할 수 있습니다.
+
+이는 집 안 정리의 변화를 관찰하는 기록이며 하자나 수리 완료를 증명하는 판단은 아닙니다.
+
+개인 서류와 가족의 사적인 모습은 사진에 담거나 외부에 공유하지 마세요.</textarea>
+
+  <script>window.__content_daily23 = "🛠️ 오늘의 집 관리\n\n2026년 10월 29일\n\n집 정리 전후 사진은 같은 방향에서 비교해보세요\n\n📷 책상 위를 정리한 뒤 사진을 찍었다면 작업 전 사진과 같은 방향인지 확인해 보세요.\n\n한쪽은 전체 모습이고 다른 쪽은 가까운 일부라면 무엇이 바뀌었는지 나란히 비교하기 어렵습니다.\n\n📝 작업 전과 후에 같은 자리에서 같은 범위를 담고, 달라진 물건이나 배치를 짧게 적으세요.\n\n정리하지 않은 구역이 사진에서 빠졌다면 그 부분까지 완료한 것처럼 설명하지 마세요.\n\n처음 사진이 없다면 나중에 만든 모습을 작업 전이라고 재현하지 않고 비교 자료 없음으로 남기는 편이 정확합니다.\n\n💡 사진이 깔끔해졌다는 인상과 필요한 물건을 실제로 쓰기 편해졌다는 평가는 따로 적으세요.\n\n다른 가족이 물건을 찾을 수 있는지 직접 확인하면 보기 좋은 정리와 사용 결과를 구별할 수 있습니다.\n\n이는 집 안 정리의 변화를 관찰하는 기록이며 하자나 수리 완료를 증명하는 판단은 아닙니다.\n\n개인 서류와 가족의 사적인 모습은 사진에 담거나 외부에 공유하지 마세요.";</script>
+</section>
+
+<section class="card" data-slot="18">
+  <div class="card-head">
+    <h2>18. 📦 이사 준비 한 가지</h2>
+    <button class="copy-btn" onclick="copySection('daily24', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-daily24" class="preview" readonly>📦 이사 준비 한 가지
+
+2026년 10월 29일
+
+포장 수량과 물건 수량은 서로 다른 목록입니다
+
+📦 큰 상자 하나에 담긴 작은 통 여섯 개를 ‘한 개’라고 적으면, 도착 후 물건이 모두 왔는지 목록으로 대조하기 어렵습니다.
+
+포장 수량과 내용물 수량을 따로 세어보세요.
+
+📝 운반 확인에는 ‘포장 상자 1개’, 내용 확인에는 ‘보관통 6개’처럼 단위를 붙이세요.
+
+작업자에게는 필요한 포장 단위를 전달하고 가족이 풀 때 볼 목록에는 내용 수량을 연결하세요.
+
+큰 가방 안에 작은 가방을 넣는 경우도 마찬가지로 바깥 포장과 안쪽 구성품을 구분할 수 있습니다.
+
+💡 상자 번호 옆에 연결되는 내용 목록 번호를 적으면 같은 물건을 두 번 셌는지 확인하기 쉽습니다.
+
+상자 개수가 맞는다는 사실만으로 안의 구성까지 전부 맞는다고 판단하지 마세요.
+
+도착 직후 포장 수량 확인과 개봉 후 내용 확인을 서로 다른 단계로 표시하세요.
+
+차이가 있으면 단위부터 맞춘 뒤 빠진 물건이 있는지 대조하셔야 합니다.</textarea>
+
+  <script>window.__content_daily24 = "📦 이사 준비 한 가지\n\n2026년 10월 29일\n\n포장 수량과 물건 수량은 서로 다른 목록입니다\n\n📦 큰 상자 하나에 담긴 작은 통 여섯 개를 ‘한 개’라고 적으면, 도착 후 물건이 모두 왔는지 목록으로 대조하기 어렵습니다.\n\n포장 수량과 내용물 수량을 따로 세어보세요.\n\n📝 운반 확인에는 ‘포장 상자 1개’, 내용 확인에는 ‘보관통 6개’처럼 단위를 붙이세요.\n\n작업자에게는 필요한 포장 단위를 전달하고 가족이 풀 때 볼 목록에는 내용 수량을 연결하세요.\n\n큰 가방 안에 작은 가방을 넣는 경우도 마찬가지로 바깥 포장과 안쪽 구성품을 구분할 수 있습니다.\n\n💡 상자 번호 옆에 연결되는 내용 목록 번호를 적으면 같은 물건을 두 번 셌는지 확인하기 쉽습니다.\n\n상자 개수가 맞는다는 사실만으로 안의 구성까지 전부 맞는다고 판단하지 마세요.\n\n도착 직후 포장 수량 확인과 개봉 후 내용 확인을 서로 다른 단계로 표시하세요.\n\n차이가 있으면 단위부터 맞춘 뒤 빠진 물건이 있는지 대조하셔야 합니다.";</script>
+</section>
+
+<section class="card" data-slot="19">
+  <div class="card-head">
+    <h2>19. 🏢 전국 신규 등록 실거래가</h2>
+    <button class="copy-btn" onclick="copySection('transactions', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-transactions" class="preview" readonly>10/29(목) 신규 등록 실거래가
+
+전국 1,601건 (🔥312)
+
+분양권/입주권 79건
+🚀 1억클럽 신고가 3건
+💎 1억클럽 11건
+
+※ 평형은 전용면적 기반 통상형 추정치(59㎡≈26평형, 84㎡≈34평형), 평당가는 전용면적 기준
+
+[지역별 실거래가]
+서울 166건 (🔥49)
+경기 511건 (🔥141)
+인천 88건 (🔥10)
+부산 109건 (🔥20)
+경남 118건 (🔥12)
+광주·전남 92건 (🔥13)
+경북 74건 (🔥10)
+대구 77건 (🔥12)
+충남 77건 (🔥12)
+전북 60건 (🔥8)
+충북 55건 (🔥5)
+강원 67건 (🔥6)
+대전 45건 (🔥6)
+울산 33건 (🔥6)
+제주 8건 (🔥0)
+세종 21건 (🔥2)
+
+[1억 클럽]
+강남구     신현대9차 약56평형 69억 1.5억/전용평
+송파구     아시아선수촌아파트 약39평형 41.8억 1.39억/전용평
+강남구     은마 약32평형 31.9억 1.37억/전용평
+용산구     한가람 약26평형 23.8억 1.31억/전용평
+서초구     방배그랑자이 약34평형 33.75억 1.31억/전용평
+송파구     잠실엘스 약34평형 33억 1.29억/전용평
+광진구     포제스한강 약34평형 29.7억 1.16억/전용평
+성동구     서울숲대림 약26평형 20.7억 신고가🚀 1.14억/전용평
+성동구     센트라스 약26평형 20억 신고가🚀 1.1억/전용평
+서초구     래미안서초스위트 약38평형 31.6억 신고가🚀 1.09억/전용평
+강동구     래미안솔베뉴 약26평형 18.7억 1.05억/전용평
+강남구     롯데캐슬프레미어 약46평형 38.5억 1.04억/전용평
+강남구     래미안 개포 루체하임 약46평형 38억 1.03억/전용평
+성남분당    이매촌(한신) 약22평형 15.4억 1.02억/전용평
+
+[주요 신고가]
+
+🏙️ 서울
+강동구     롯데캐슬퍼스트 약50평형 22.5억 신고가 5.6천/전용평
+송파구     미켈란호수가 약51평형 22.15억 신고가 5.4천/전용평
+용산구     효창파크푸르지오 약34평형 21.8억 신고가 8.5천/전용평
+영등포구    문래힐스테이트 약51평형 21억 신고가 5천/전용평
+송파구     송파파인타운3단지 약34평형 18.35억 신고가 7.1천/전용평
+강서구     마곡엠밸리5단지 약44평형 18.1억 신고가 5.2천/전용평
+송파구     송파파인타운10단지 약26평형 17.5억 신고가 9.6천/전용평
+강서구     강서힐스테이트 약34평형 16.95억 신고가 6.6천/전용평
+동작구     상도동래미안1차 약34평형 16.7억 신고가 6.5천/전용평
+광진구     자양우성7 약26평형 16.35억 신고가 9천/전용평
+광진구     한라아파트 약26평형 14.4억 신고가 7.9천/전용평
+마포구     상암월드컵파크3단지 약34평형 14.3억 신고가 5.6천/전용평
+영등포구    코오롱 약26평형 12.4억 신고가 6.8천/전용평
+서대문구    연희파크푸르지오 약26평형 11.65억 신고가 6.4천/전용평
+서대문구    홍제현대 약31평형 10.65억 신고가 4.7천/전용평
+성동구     중앙하이츠 약30평형 10.6억 신고가 4.9천/전용평
+성북구     길음뉴타운경남아너스빌 약34평형 10.5억 신고가 4.1천/전용평
+영등포구    경남아너스빌 약26평형 10.48억 신고가 5.8천/전용평
+구로구     항동중흥에스클래스베르데카운티 약34평형 9.9억 신고가 3.9천/전용평
+송파구     송파건원여미지아파트 약23평형 9.8억 신고가 6.3천/전용평
+동대문구    휘경미소지움 약34평형 9.4억 신고가 3.7천/전용평
+동대문구    동양2차 약34평형 9.1억 신고가 3.6천/전용평
+강동구     에이치비골드빌(103동) 약34평형 8.9억 신고가 3.5천/전용평
+강동구     파크프라자 약36평형 8.75억 신고가 3.2천/전용평
+노원구     상계주공6(고층) 약26평형 8.35억 신고가 4.7천/전용평
+노원구     현대(3차) 약34평형 8.3억 신고가 3.3천/전용평
+노원구     상계주공1(저층) 약34평형 7.9억 신고가 3.1천/전용평
+구로구     하버라인3단지 약26평형 7.82억 신고가 4.3천/전용평
+구로구     하버라인4단지 약26평형 7.77억 신고가 4.3천/전용평
+강북구     벽산라이브파크 약26평형 7.4억 신고가 4.1천/전용평
+구로구     한효 약27평형 7.22억 신고가 3.8천/전용평
+노원구     진로유통조합대림 약34평형 7.15억 신고가 2.8천/전용평
+광진구     중곡2단지 약25평형 7억 신고가 4.1천/전용평
+동대문구    동답한신 약20평형 6.75억 신고가 5천/전용평
+서대문구    극동 약34평형 6.35억 신고가 2.5천/전용평
+도봉구     창동주공18단지 약20평형 5.99억 신고가 4.3천/전용평
+관악구     그대家 약26평형 5.95억 신고가 3.3천/전용평
+구로구     한신 약20평형 5.8억 신고가 4.3천/전용평
+도봉구     금광포란재아파트 약26평형 5.65억 신고가 3.1천/전용평
+도봉구     현대1 약30평형 5.3억 신고가 2.5천/전용평
+도봉구     금호2 약29평형 5.1억 신고가 2.4천/전용평
+성북구     선경(127) 약26평형 4.95억 신고가 2.8천/전용평
+도봉구     우성아파트1 약30평형 4.9억 신고가 2.2천/전용평
+도봉구     창동주공4단지 약16평형 4.7억 신고가 4.3천/전용평
+구로구     극동 약24평형 4.5억 신고가 2.7천/전용평
+강북구     수유프리미어엠 약8평형 1.19억 신고가 2.1천/전용평
+
+🏘️ 경기
+수원영통    광교더리브 약34평형 16억 신고가 6.2천/전용평
+안양동안    평촌더샵센트럴시티 약34평형 15.8억 신고가 6.1천/전용평
+수원장안    화서역파크푸르지오 약34평형 15.4억 신고가 6천/전용평
+화성동탄    동탄역반도유보라아이비파크7.0 약31평형 14.9억 신고가 6.5천/전용평
+화성동탄    동탄역시범호반써밋 약34평형 14.7억 신고가 5.7천/전용평
+용인수지    진산마을삼성7차 약60평형 14.3억 신고가 2.9천/전용평
+수원영통    영흥숲푸르지오파크비엔 약45평형 14.2억 신고가 4천/전용평
+군포시     래미안하이어스 약64평형 13.7억 신고가 2.5천/전용평
+용인수지    동천마을현대홈타운2차 약34평형 12.8억 신고가 5천/전용평
+성남분당    매화마을공무원2 약28평형 12.6억 신고가 6.3천/전용평
+하남시     미사강변 센텀팰리스 약31평형 12.5억 신고가 5.5천/전용평
+하남시     미사강변 센텀팰리스 약31평형 12.45억 신고가 5.5천/전용평
+광명시     주공12 약34평형 11.9억 신고가 4.6천/전용평
+하남시     하남호반써밋에듀파크 약26평형 11.86억 신고가 6.5천/전용평
+수원영통    래미안영통마크원2단지 약38평형 11.6억 신고가 3.9천/전용평
+용인수지    한국 약27평형 11.4억 신고가 6.1천/전용평
+안양동안    평촌더샵아이파크 약26평형 11.38억 신고가 6.3천/전용평
+화성동탄    시범한빛마을한화꿈에그린 약34평형 11.2억 신고가 4.4천/전용평
+성남중원    e편한세상금빛그랑메종3단지 약26평형 11.15억 신고가 6.1천/전용평
+용인수지    동부센트레빌6단지 약55평형 10.96억 신고가 2.4천/전용평
+용인기흥    블루밍구성더센트럴 약34평형 10.8억 신고가 4.2천/전용평
+수원영통    살구골마을진덕서광성지동아 약40평형 10.7억 신고가 3.5천/전용평
+부천원미    진달래마을(대우) 약49평형 10.6억 신고가 2.7천/전용평
+수원영통    한양수자인 약34평형 10.3억 신고가 4천/전용평
+광명시     광명역세권휴먼시아5단지 약45평형 10억 신고가 2.8천/전용평
+용인수지    더리버하임 약34평형 10억 신고가 3.9천/전용평
+화성동탄    동탄역포레너스 약34평형 10억 신고가 3.9천/전용평
+성남분당    탑마을(주공) 약18평형 9.6억 신고가 7.6천/전용평
+하남시     하남한솔솔파크 약34평형 9.5억 신고가 3.7천/전용평
+구리시     갈매역아이파크 약34평형 9.48억 신고가 3.7천/전용평
+화성동탄    나루마을한화꿈에그린 약38평형 9.45억 신고가 3.2천/전용평
+광명시     주공12 약26평형 9.45억 신고가 5.3천/전용평
+하남시     벽산블루밍 약34평형 9.2억 신고가 3.6천/전용평
+화성동탄    롯데캐슬 약35평형 9.19억 신고가 3.5천/전용평
+수원영통    한양수자인 약26평형 9.15억 신고가 5천/전용평
+안양동안    샛별한양6(고층1109-6) 약22평형 9억 신고가 6천/전용평
+하남시     에코타운(A블럭) 약25평형 9억 신고가 5.2천/전용평
+화성동탄    중흥에스클래스에듀하이 약34평형 9억 신고가 3.6천/전용평
+수원영통    신나무실신명 약34평형 8.9억 신고가 3.5천/전용평
+하남시     하남힐즈파크푸르지오1단지 약26평형 8.9억 신고가 4.9천/전용평
+용인수지    벽산첼시빌2차 약50평형 8.88억 신고가 2.2천/전용평
+용인수지    동부 약26평형 8.8억 신고가 4.9천/전용평
+수원팔달    힐스테이트푸르지오수원 약26평형 8.7억 신고가 4.8천/전용평
+용인기흥    흥덕마을동원로얄듀크 약34평형 8.49억 신고가 3.3천/전용평
+의왕시     반도보라빌리지1 약34평형 8.46억 신고가 3.3천/전용평
+남양주시    별내별가람역 한라비발디 약34평형 8.2억 신고가 3.2천/전용평
+수원권선    수원모아미래도센트럴타운2단지 약34평형 8.17억 신고가 3.2천/전용평
+수원팔달    래미안노블클래스1단지 약34평형 8.15억 신고가 3.2천/전용평
+화성병점    에스케이뷰파크2차 약34평형 8억 신고가 3.1천/전용평
+화성동탄    동탄2신도시금강펜테리움센트럴파크Ⅰ 약34평형 7.95억 신고가 3.1천/전용평
+화성동탄    동탄숲속마을자연앤경남아너스빌(1115-0) 약34평형 7.8억 신고가 3.1천/전용평
+수원팔달    화서주공5단지 약22평형 7.6억 신고가 5천/전용평
+안산단원    힐스테이트중앙 약26평형 7.53억 신고가 4.1천/전용평
+고양덕양    고양삼송동원로얄듀크 약34평형 7.48억 신고가 2.9천/전용평
+구리시     주공4-2 약26평형 7.47억 신고가 4.1천/전용평
+광주시     이편한세상태재2단지 약31평형 7.3억 신고가 3.2천/전용평
+하남시     덕풍쌍용 약44평형 7.25억 신고가 2.1천/전용평
+수원장안    화서역 우방 센트럴파크 약26평형 7.2억 신고가 4천/전용평
+수원영통    청명마을(주공) 약26평형 7.18억 신고가 4천/전용평
+화성동탄    더레이크시티부영6단지 약26평형 7.17억 신고가 4천/전용평
+안양동안    무궁화건영캐스빌 약24평형 7.17억 신고가 4.4천/전용평
+구리시     엘에이치이스트힐 약26평형 7.15억 신고가 4천/전용평
+용인기흥    성산마을신영지웰 약40평형 7.1억 신고가 2.3천/전용평
+화성병점    에스케이뷰파크2차 약34평형 7.1억 신고가 2.8천/전용평
+화성동탄    동탄센트럴포레스트 약31평형 7억 신고가 3.1천/전용평
+군포시     의왕역센트럴시티(휴먼시아3단지) 약34평형 6.9억 신고가 2.7천/전용평
+화성동탄    자연앤데시앙 약26평형 6.65억 신고가 3.7천/전용평
+수원장안    꽃뫼마을장안 약26평형 6.5억 신고가 3.6천/전용평
+용인처인    힐스테이트몬테로이2단지 약34평형 6.45억 신고가 2.5천/전용평
+수원권선    매탄권선역리버파크 약26평형 6.4억 신고가 3.5천/전용평
+수원권선    센트라우스 약26평형 6.4억 신고가 3.5천/전용평
+화성병점    신영통현대4차 약49평형 6.4억 신고가 1.6천/전용평
+화성동탄    그린힐 반도유보라 아이비파크 10(1단지) 약34평형 6.3억 신고가 2.5천/전용평
+안양동안    대광로제비앙 약34평형 6.3억 신고가 2.5천/전용평
+화성동탄    동탄2신도시호반베르디움33단지 약34평형 6.3억 신고가 2.5천/전용평
+수원권선    센트라우스 약26평형 6.3억 신고가 3.5천/전용평
+수원권선    상록3단지 약26평형 6.2억 신고가 3.4천/전용평
+용인기흥    호수마을동보노빌리티 약34평형 6.2억 신고가 2.4천/전용평
+김포시     힐스테이트 리버시티 1단지 약34평형 6.2억 신고가 2.4천/전용평
+용인기흥    호수마을동보노빌리티 약34평형 6.1억 신고가 2.4천/전용평
+의정부시    고산수자인디에스티지아트포레 약33평형 6.08억 신고가 2.5천/전용평
+의정부시    탑석센트럴자이 약26평형 6.05억 신고가 3.3천/전용평
+군포시     주공(1단지) 약26평형 6억 신고가 3.3천/전용평
+남양주시    주공2 약34평형 6억 신고가 2.3천/전용평
+용인기흥    호수마을동보노빌리티 약34평형 6억 신고가 2.3천/전용평
+광주시     태전7지구C-14BL태전파크자이 약30평형 6억 신고가 2.7천/전용평
+군포시     금정동쌍용 약26평형 5.9억 신고가 3.3천/전용평
+안산단원    주공그린빌8 약31평형 5.75억 신고가 2.5천/전용평
+화성병점    병점역센트럴허브시티 약34평형 5.7억 신고가 2.2천/전용평
+김포시     강변마을 동부센트레빌 약34평형 5.65억 신고가 2.2천/전용평
+용인기흥    호수마을어울림 약34평형 5.5억 신고가 2.1천/전용평
+군포시     서해그랑블 약30평형 5.45억 신고가 2.6천/전용평
+성남중원    현성아름빌 약29평형 5.45억 신고가 2.6천/전용평
+용인기흥    대주피오레1단지 약49평형 5.4억 신고가 1.4천/전용평
+수원권선    호매실경남아너스빌 약34평형 5.4억 신고가 2.1천/전용평
+오산시     대동 약66평형 5.3억 신고가 953만/전용평
+수원장안    일성 약34평형 5.25억 신고가 2천/전용평
+고양일산서   하이파크시티일산파밀리에4단지 약49평형 5.25억 신고가 1.3천/전용평
+용인기흥    금화마을5단지주공그린빌 약26평형 5.2억 신고가 2.9천/전용평
+용인기흥    영통빌리지 약34평형 5.15억 신고가 2천/전용평
+김포시     힐스테이트 리버시티 1단지 약29평형 5.1억 신고가 2.4천/전용평
+화성만세    한양수자인디에스티지 약34평형 5억 신고가 1.9천/전용평
+용인기흥    동백역월드메르디앙아파트 약34평형 4.94억 신고가 1.9천/전용평
+의왕시     동부새롬 약26평형 4.9억 신고가 2.7천/전용평
+남양주시    평내마을금호어울림 약34평형 4.9억 신고가 1.9천/전용평
+남양주시    쌍용스윗닷홈리버 약26평형 4.7억 신고가 2.6천/전용평
+남양주시    진도 약26평형 4.65억 신고가 2.6천/전용평
+의정부시    삼익 약37평형 4.4억 신고가 1.6천/전용평
+수원권선    삼익2차 약34평형 4.4억 신고가 1.7천/전용평
+파주시     해솔마을7단지롯데캐슬 약26평형 4.38억 신고가 2.4천/전용평
+시흥시     청구1 약34평형 4.35억 신고가 1.7천/전용평
+남양주시    호평마을효성백년가약 약34평형 4.25억 신고가 1.7천/전용평
+군포시     충무주공(872) 약19평형 4억 신고가 3천/전용평
+의왕시     새천년미주 약26평형 3.95억 신고가 2.2천/전용평
+파주시     금촌주공7단지(1019-0) 약34평형 3.9억 신고가 1.5천/전용평
+수원권선    영조아름다운나날1단지 약34평형 3.85억 신고가 1.5천/전용평
+용인기흥    신창미션힐 약34평형 3.8억 신고가 1.5천/전용평
+양주시     은빛마을한양수자인 약39평형 3.75억 신고가 1.2천/전용평
+오산시     오산시티자이1차1단지 약26평형 3.73억 신고가 2.1천/전용평
+의정부시    민락노블랜드엔에이치에프 약31평형 3.65억 신고가 1.6천/전용평
+수원장안    꽃뫼노을마을한마루아파트 약18평형 3.25억 신고가 2.7천/전용평
+부천소사    보강센트럴빌(101동) 약28평형 3.25억 신고가 1.6천/전용평
+시흥시     예스라이프 약25평형 3.13억 신고가 1.8천/전용평
+부천원미    미리내마을(삼성) 약19평형 3.1억 신고가 2.4천/전용평
+남양주시    금정 약33평형 3.05억 신고가 1.2천/전용평
+남양주시    보미청광플러스원 약26평형 3.05억 신고가 1.7천/전용평
+용인기흥    유원휴하임 약18평형 2.8억 신고가 2.2천/전용평
+안양만안    정우 약23평형 2.68억 신고가 1.7천/전용평
+용인기흥    신동백동도센트리움 약15평형 2.65억 신고가 2.6천/전용평
+용인기흥    대우 약26평형 2.62억 신고가 1.4천/전용평
+부천원미    미리내마을(삼성) 약15평형 2.59억 신고가 2.6천/전용평
+김포시     전원마을(월드3차1단지) 약26평형 2.55억 신고가 1.4천/전용평
+안산상록    주공1 약18평형 2.4억 신고가 1.9천/전용평
+시흥시     영남1 약26평형 2.35억 신고가 1.3천/전용평
+의왕시     삼신8차 약22평형 2.1억 신고가 1.4천/전용평
+여주시     여주오드카운티 약26평형 2억 신고가 1.1천/전용평
+의정부시    극동 약21평형 1.9억 신고가 1.3천/전용평
+동두천시    에이스아파트(5차) 약34평형 1.55억 신고가 603만/전용평
+수원장안    수원로얄팰리스 약12평형 1.38억 신고가 1.7천/전용평
+수원팔달    익주 약14평형 1.34억 신고가 1.4천/전용평
+동두천시    에이스아파트(1차) 약26평형 8,000만 신고가 445만/전용평
+
+🌉 인천
+연수구     베르디움더퍼스트 약34평형 7.32억 신고가 2.9천/전용평
+계양구     힐스테이트자이계양 약26평형 6.66억 신고가 3.7천/전용평
+연수구     더샵송도마리나베이 약31평형 6.3억 신고가 2.8천/전용평
+제물포구    풍림아이원 약34평형 3.42억 신고가 1.3천/전용평
+연수구     승기마을,연수1차시영 약19평형 2억 신고가 1.5천/전용평
+강화군     강화2차세광엔리치빌 약29평형 1.66억 신고가 805만/전용평
+미추홀구    미도 약28평형 1.59억 신고가 793만/전용평
+남동구     담방마을 약20평형 1.45억 신고가 1천/전용평
+서해구     동진3 약17평형 1.08억 신고가 944만/전용평
+남동구     공작(3-73) 약17평형 8,300만 신고가 698만/전용평
+
+🌊 부산
+남구      대연롯데캐슬레전드1단지 약39평형 8.95억 신고가 2.9천/전용평
+해운대구    해운대힐스테이트위브 약48평형 8.9억 신고가 2.3천/전용평
+강서구     엘크루블루오션 약54평형 6.95억 신고가 1.6천/전용평
+남구      엘지메트로시티3 약47평형 6.8억 신고가 1.8천/전용평
+해운대구    센텀마티안 약29평형 6.7억 신고가 3.2천/전용평
+남구      엘지메트로시티4-1(201-214) 약48평형 6.5억 신고가 1.7천/전용평
+해운대구    메가센텀한화꿈에그린 약39평형 6.1억 신고가 2천/전용평
+해운대구    경동 약26평형 5.99억 신고가 3.4천/전용평
+부산진구    서면아이파크1단지 약26평형 5.99억 신고가 3.3천/전용평
+연제구     연산동일동미라주더스타 약32평형 5억 신고가 2.1천/전용평
+남구      오륙도에스케이뷰 약34평형 4.85억 신고가 1.9천/전용평
+연제구     현대타운 약34평형 3.42억 신고가 1.3천/전용평
+연제구     센텀수영강푸르지오 약26평형 3.4억 신고가 1.9천/전용평
+남구      삼한사랑채 약34평형 2.86억 신고가 1.1천/전용평
+영도구     동삼동한진로즈힐 약26평형 2억 신고가 1.1천/전용평
+영도구     오션블루 약18평형 1.94억 신고가 1.5천/전용평
+금정구     미화 약34평형 1.35억 신고가 529만/전용평
+사상구     백양그린 약22평형 1억 신고가 662만/전용평
+북구      금곡9단지주공 약17평형 7,800만 신고가 654만/전용평
+해운대구    광우파크맨션 약26평형 6,100만 신고가 334만/전용평
+
+⚓ 경남
+창원성산    롯데2단지 약25평형 6.5억 신고가 3.9천/전용평
+창원성산    창원가음한화꿈에그린 약26평형 6.27억 신고가 3.5천/전용평
+김해시     장유2차쌍용예가 약46평형 3.29억 신고가 891만/전용평
+진주시     동일스위트 약34평형 3.27억 신고가 1.3천/전용평
+김해시     젤미마을5단지푸르지오7차 약34평형 2.17억 신고가 844만/전용평
+창원마산회원  회원주공 약34평형 1.96억 신고가 764만/전용평
+김해시     갑오마을7단지부영10차 약26평형 1.48억 신고가 828만/전용평
+거제시     거제옥포도뮤토2단지 약34평형 1.35억 신고가 525만/전용평
+양산시     양산신도시뜰안채아파트 약18평형 1.2억 신고가 995만/전용평
+진주시     동신 약22평형 7,500만 신고가 499만/전용평
+사천시     원광이안애 약24평형 6,300만 신고가 375만/전용평
+거제시     장평성원(5동-8동) 약18평형 5,250만 신고가 437만/전용평
+
+🌾 광주·전남
+서구      금호쌍용 약46평형 6.75억 신고가 1.8천/전용평
+동구      무등산아이파크 약34평형 6.73억 신고가 2.6천/전용평
+북구      S-클래스더제니스 약32평형 6.23억 신고가 2.7천/전용평
+광산구     중흥에스-클래스2단지 약34평형 4.47억 신고가 1.7천/전용평
+남구      포스코더샵 약26평형 4.35억 신고가 2.4천/전용평
+북구      첨단자이1단지 약34평형 4.07억 신고가 1.6천/전용평
+나주시     이노시티애시앙1단지 약34평형 3.8억 신고가 1.5천/전용평
+무안군     근화베아채스위트 약34평형 3.5억 신고가 1.4천/전용평
+무안군     남악세영리첼 약34평형 3.05억 신고가 1.2천/전용평
+목포시     근화옥암베아채 약34평형 3.03억 신고가 1.2천/전용평
+순천시     금호 약34평형 2.3억 신고가 896만/전용평
+순천시     동성 약34평형 1.65억 신고가 642만/전용평
+여수시     국동주공 약26평형 1.14억 신고가 649만/전용평
+
+🏛️ 경북
+김천시     김천푸르지오더퍼스트 약34평형 4.84억 신고가 1.9천/전용평
+김천시     센트럴파크한신휴플러스 약34평형 4.38억 신고가 1.7천/전용평
+안동시     e편한세상안동강변 약32평형 4억 신고가 1.7천/전용평
+구미시     형곡금호어울림포레2차 약34평형 4억 신고가 1.6천/전용평
+경주시     황성주공1차 약21평형 1.85억 신고가 1.3천/전용평
+포항남     정림다채움아파트 약29평형 1.61억 신고가 796만/전용평
+경주시     동보자연뜰 약26평형 1.34억 신고가 745만/전용평
+안동시     우성 약34평형 1.19억 신고가 463만/전용평
+봉화군     명성장원 약26평형 1.12억 신고가 620만/전용평
+문경시     푸른숲 약26평형 1.05억 신고가 579만/전용평
+
+🍎 대구
+수성구     두산위브더제니스 약48평형 21억 신고가 5.4천/전용평
+수성구     만촌삼정그린코아에듀파크 약31평형 9.88억 신고가 4.3천/전용평
+수성구     캐슬골드파크4단지 약49평형 8.03억 신고가 2천/전용평
+북구      빌리브루센트 약43평형 7.79억 신고가 2.3천/전용평
+북구      빌리브루센트 약43평형 7.71억 신고가 2.2천/전용평
+중구      더샵리비테르2차 약34평형 6.88억 신고가 2.7천/전용평
+중구      청라힐스자이 약26평형 6.7억 신고가 3.7천/전용평
+남구      대봉교역금호어울림에듀리버 약26평형 4.07억 신고가 2.3천/전용평
+북구      센트럴파크대현 약31평형 3.7억 신고가 1.6천/전용평
+수성구     동서맨션 약45평형 2.78억 신고가 779만/전용평
+동구      안심효성타운 약34평형 1.71억 신고가 668만/전용평
+달서구     삼미타운 약26평형 1.45억 신고가 800만/전용평
+
+🌅 충남
+천안동남    신부 디 이스트 약31평형 3.7억 신고가 1.6천/전용평
+예산군     예산발연계룡리슈빌 약44평형 3.1억 신고가 883만/전용평
+당진시     한성필하우스 약31평형 2.5억 신고가 1.1천/전용평
+아산시     삼부르네상스 약46평형 2.49억 신고가 678만/전용평
+서산시     서산읍내현대 약34평형 2.4억 신고가 934만/전용평
+홍성군     한울마을모아엘가아파트 약34평형 2.4억 신고가 935만/전용평
+천안동남    산운마을부영사랑으로 약34평형 2.35억 신고가 914만/전용평
+아산시     한라비발디 약34평형 2.2억 신고가 858만/전용평
+천안서북    청호포도마을 약31평형 1.28억 신고가 562만/전용평
+보령시     명천주공4 약22평형 1.24억 신고가 820만/전용평
+천안서북    프라지움10차아파트 약17평형 1억 신고가 851만/전용평
+아산시     삼정하이츠 약31평형 9,500만 신고가 427만/전용평
+
+🍚 전북
+전주덕진    골드클래스 약34평형 6.2억 신고가 2.4천/전용평
+익산시     익산자이그랜드파크 약34평형 5.4억 신고가 2.1천/전용평
+남원시     남원오투그란데퍼스트시티 약45평형 4.45억 신고가 1.2천/전용평
+군산시     서희스타힐스 약34평형 2.15억 신고가 843만/전용평
+부안군     부안줄포블레스아파트 약34평형 2억 신고가 779만/전용평
+전주덕진    동아 약34평형 1.85억 신고가 720만/전용평
+군산시     주공3차 약22평형 8,600만 신고가 570만/전용평
+익산시     조공전원맨션 약34평형 7,000만 신고가 273만/전용평
+
+⛰️ 충북
+청주흥덕    신영지웰시티1차 약56평형 17.9억 신고가 3.9천/전용평
+청주흥덕    힐스테이트청주센트럴2차 약34평형 9.2억 신고가 3.6천/전용평
+청주서원    두산위브더제니스 약53평형 5.6억 신고가 1.3천/전용평
+청주청원    중앙하이츠빌 약54평형 4억 신고가 895만/전용평
+충주시     충주2차푸르지오 약31평형 3.75억 신고가 1.7천/전용평
+
+🏔️ 강원
+강릉시     강릉오션시티아이파크 약34평형 6.2억 신고가 2.4천/전용평
+홍천군     홍천오드카운티 약26평형 2.5억 신고가 1.4천/전용평
+강릉시     입암현대 약26평형 1.65억 신고가 912만/전용평
+강릉시     노암3한라 약26평형 1.57억 신고가 865만/전용평
+동해시     한양2차 약30평형 1.55억 신고가 705만/전용평
+강릉시     민락 약24평형 1.1억 신고가 663만/전용평
+
+🔬 대전
+유성구     베르디움 약34평형 8.9억 신고가 3.5천/전용평
+유성구     트리풀시티 약40평형 7.9억 신고가 2.6천/전용평
+유성구     한화꿈에그린3차 약34평형 6.3억 신고가 2.5천/전용평
+유성구     죽동대원칸타빌 약31평형 6.1억 신고가 2.7천/전용평
+동구      은어송마을1단지(풍림아이원) 약34평형 3.2억 신고가 1.2천/전용평
+중구      용두 약21평형 1.9억 신고가 1.3천/전용평
+
+🏭 울산
+중구      울산약사더샵 약34평형 7.43억 신고가 2.9천/전용평
+울주군     문수애시앙1단지 약34평형 4.62억 신고가 1.8천/전용평
+북구      울산신천엠코타운 약46평형 4.02억 신고가 1.1천/전용평
+북구      매곡푸르지오1차 약30평형 3억 신고가 1.4천/전용평
+남구      청구하이츠 약34평형 1.84억 신고가 719만/전용평
+울주군     한신 약26평형 1.4억 신고가 799만/전용평
+
+🏢 세종
+세종특별자치시  호려울마을 4단지 센트럴파크 약43평형 9.4억 신고가 2.8천/전용평
+세종특별자치시  새뜸마을1단지(메이저시티) 약34평형 7억 신고가 2.7천/전용평
+
+[눈에 띄는 거래]
+성남분당    한솔마을(6단지)(주공) 약17평형 11.3억 9.9천/전용평
+서초구     롯데캐슬갤럭시 약50평형 39억 9.7천/전용평
+송파구     래미안파크팰리스 약34평형 24.7억 9.6천/전용평</textarea>
+
+  <script>window.__content_transactions = "10/29(목) 신규 등록 실거래가\n\n전국 1,601건 (🔥312)\n\n분양권/입주권 79건\n🚀 1억클럽 신고가 3건\n💎 1억클럽 11건\n\n※ 평형은 전용면적 기반 통상형 추정치(59㎡≈26평형, 84㎡≈34평형), 평당가는 전용면적 기준\n\n[지역별 실거래가]\n서울 166건 (🔥49)\n경기 511건 (🔥141)\n인천 88건 (🔥10)\n부산 109건 (🔥20)\n경남 118건 (🔥12)\n광주·전남 92건 (🔥13)\n경북 74건 (🔥10)\n대구 77건 (🔥12)\n충남 77건 (🔥12)\n전북 60건 (🔥8)\n충북 55건 (🔥5)\n강원 67건 (🔥6)\n대전 45건 (🔥6)\n울산 33건 (🔥6)\n제주 8건 (🔥0)\n세종 21건 (🔥2)\n\n[1억 클럽]\n강남구     신현대9차 약56평형 69억 1.5억/전용평\n송파구     아시아선수촌아파트 약39평형 41.8억 1.39억/전용평\n강남구     은마 약32평형 31.9억 1.37억/전용평\n용산구     한가람 약26평형 23.8억 1.31억/전용평\n서초구     방배그랑자이 약34평형 33.75억 1.31억/전용평\n송파구     잠실엘스 약34평형 33억 1.29억/전용평\n광진구     포제스한강 약34평형 29.7억 1.16억/전용평\n성동구     서울숲대림 약26평형 20.7억 신고가🚀 1.14억/전용평\n성동구     센트라스 약26평형 20억 신고가🚀 1.1억/전용평\n서초구     래미안서초스위트 약38평형 31.6억 신고가🚀 1.09억/전용평\n강동구     래미안솔베뉴 약26평형 18.7억 1.05억/전용평\n강남구     롯데캐슬프레미어 약46평형 38.5억 1.04억/전용평\n강남구     래미안 개포 루체하임 약46평형 38억 1.03억/전용평\n성남분당    이매촌(한신) 약22평형 15.4억 1.02억/전용평\n\n[주요 신고가]\n\n🏙️ 서울\n강동구     롯데캐슬퍼스트 약50평형 22.5억 신고가 5.6천/전용평\n송파구     미켈란호수가 약51평형 22.15억 신고가 5.4천/전용평\n용산구     효창파크푸르지오 약34평형 21.8억 신고가 8.5천/전용평\n영등포구    문래힐스테이트 약51평형 21억 신고가 5천/전용평\n송파구     송파파인타운3단지 약34평형 18.35억 신고가 7.1천/전용평\n강서구     마곡엠밸리5단지 약44평형 18.1억 신고가 5.2천/전용평\n송파구     송파파인타운10단지 약26평형 17.5억 신고가 9.6천/전용평\n강서구     강서힐스테이트 약34평형 16.95억 신고가 6.6천/전용평\n동작구     상도동래미안1차 약34평형 16.7억 신고가 6.5천/전용평\n광진구     자양우성7 약26평형 16.35억 신고가 9천/전용평\n광진구     한라아파트 약26평형 14.4억 신고가 7.9천/전용평\n마포구     상암월드컵파크3단지 약34평형 14.3억 신고가 5.6천/전용평\n영등포구    코오롱 약26평형 12.4억 신고가 6.8천/전용평\n서대문구    연희파크푸르지오 약26평형 11.65억 신고가 6.4천/전용평\n서대문구    홍제현대 약31평형 10.65억 신고가 4.7천/전용평\n성동구     중앙하이츠 약30평형 10.6억 신고가 4.9천/전용평\n성북구     길음뉴타운경남아너스빌 약34평형 10.5억 신고가 4.1천/전용평\n영등포구    경남아너스빌 약26평형 10.48억 신고가 5.8천/전용평\n구로구     항동중흥에스클래스베르데카운티 약34평형 9.9억 신고가 3.9천/전용평\n송파구     송파건원여미지아파트 약23평형 9.8억 신고가 6.3천/전용평\n동대문구    휘경미소지움 약34평형 9.4억 신고가 3.7천/전용평\n동대문구    동양2차 약34평형 9.1억 신고가 3.6천/전용평\n강동구     에이치비골드빌(103동) 약34평형 8.9억 신고가 3.5천/전용평\n강동구     파크프라자 약36평형 8.75억 신고가 3.2천/전용평\n노원구     상계주공6(고층) 약26평형 8.35억 신고가 4.7천/전용평\n노원구     현대(3차) 약34평형 8.3억 신고가 3.3천/전용평\n노원구     상계주공1(저층) 약34평형 7.9억 신고가 3.1천/전용평\n구로구     하버라인3단지 약26평형 7.82억 신고가 4.3천/전용평\n구로구     하버라인4단지 약26평형 7.77억 신고가 4.3천/전용평\n강북구     벽산라이브파크 약26평형 7.4억 신고가 4.1천/전용평\n구로구     한효 약27평형 7.22억 신고가 3.8천/전용평\n노원구     진로유통조합대림 약34평형 7.15억 신고가 2.8천/전용평\n광진구     중곡2단지 약25평형 7억 신고가 4.1천/전용평\n동대문구    동답한신 약20평형 6.75억 신고가 5천/전용평\n서대문구    극동 약34평형 6.35억 신고가 2.5천/전용평\n도봉구     창동주공18단지 약20평형 5.99억 신고가 4.3천/전용평\n관악구     그대家 약26평형 5.95억 신고가 3.3천/전용평\n구로구     한신 약20평형 5.8억 신고가 4.3천/전용평\n도봉구     금광포란재아파트 약26평형 5.65억 신고가 3.1천/전용평\n도봉구     현대1 약30평형 5.3억 신고가 2.5천/전용평\n도봉구     금호2 약29평형 5.1억 신고가 2.4천/전용평\n성북구     선경(127) 약26평형 4.95억 신고가 2.8천/전용평\n도봉구     우성아파트1 약30평형 4.9억 신고가 2.2천/전용평\n도봉구     창동주공4단지 약16평형 4.7억 신고가 4.3천/전용평\n구로구     극동 약24평형 4.5억 신고가 2.7천/전용평\n강북구     수유프리미어엠 약8평형 1.19억 신고가 2.1천/전용평\n\n🏘️ 경기\n수원영통    광교더리브 약34평형 16억 신고가 6.2천/전용평\n안양동안    평촌더샵센트럴시티 약34평형 15.8억 신고가 6.1천/전용평\n수원장안    화서역파크푸르지오 약34평형 15.4억 신고가 6천/전용평\n화성동탄    동탄역반도유보라아이비파크7.0 약31평형 14.9억 신고가 6.5천/전용평\n화성동탄    동탄역시범호반써밋 약34평형 14.7억 신고가 5.7천/전용평\n용인수지    진산마을삼성7차 약60평형 14.3억 신고가 2.9천/전용평\n수원영통    영흥숲푸르지오파크비엔 약45평형 14.2억 신고가 4천/전용평\n군포시     래미안하이어스 약64평형 13.7억 신고가 2.5천/전용평\n용인수지    동천마을현대홈타운2차 약34평형 12.8억 신고가 5천/전용평\n성남분당    매화마을공무원2 약28평형 12.6억 신고가 6.3천/전용평\n하남시     미사강변 센텀팰리스 약31평형 12.5억 신고가 5.5천/전용평\n하남시     미사강변 센텀팰리스 약31평형 12.45억 신고가 5.5천/전용평\n광명시     주공12 약34평형 11.9억 신고가 4.6천/전용평\n하남시     하남호반써밋에듀파크 약26평형 11.86억 신고가 6.5천/전용평\n수원영통    래미안영통마크원2단지 약38평형 11.6억 신고가 3.9천/전용평\n용인수지    한국 약27평형 11.4억 신고가 6.1천/전용평\n안양동안    평촌더샵아이파크 약26평형 11.38억 신고가 6.3천/전용평\n화성동탄    시범한빛마을한화꿈에그린 약34평형 11.2억 신고가 4.4천/전용평\n성남중원    e편한세상금빛그랑메종3단지 약26평형 11.15억 신고가 6.1천/전용평\n용인수지    동부센트레빌6단지 약55평형 10.96억 신고가 2.4천/전용평\n용인기흥    블루밍구성더센트럴 약34평형 10.8억 신고가 4.2천/전용평\n수원영통    살구골마을진덕서광성지동아 약40평형 10.7억 신고가 3.5천/전용평\n부천원미    진달래마을(대우) 약49평형 10.6억 신고가 2.7천/전용평\n수원영통    한양수자인 약34평형 10.3억 신고가 4천/전용평\n광명시     광명역세권휴먼시아5단지 약45평형 10억 신고가 2.8천/전용평\n용인수지    더리버하임 약34평형 10억 신고가 3.9천/전용평\n화성동탄    동탄역포레너스 약34평형 10억 신고가 3.9천/전용평\n성남분당    탑마을(주공) 약18평형 9.6억 신고가 7.6천/전용평\n하남시     하남한솔솔파크 약34평형 9.5억 신고가 3.7천/전용평\n구리시     갈매역아이파크 약34평형 9.48억 신고가 3.7천/전용평\n화성동탄    나루마을한화꿈에그린 약38평형 9.45억 신고가 3.2천/전용평\n광명시     주공12 약26평형 9.45억 신고가 5.3천/전용평\n하남시     벽산블루밍 약34평형 9.2억 신고가 3.6천/전용평\n화성동탄    롯데캐슬 약35평형 9.19억 신고가 3.5천/전용평\n수원영통    한양수자인 약26평형 9.15억 신고가 5천/전용평\n안양동안    샛별한양6(고층1109-6) 약22평형 9억 신고가 6천/전용평\n하남시     에코타운(A블럭) 약25평형 9억 신고가 5.2천/전용평\n화성동탄    중흥에스클래스에듀하이 약34평형 9억 신고가 3.6천/전용평\n수원영통    신나무실신명 약34평형 8.9억 신고가 3.5천/전용평\n하남시     하남힐즈파크푸르지오1단지 약26평형 8.9억 신고가 4.9천/전용평\n용인수지    벽산첼시빌2차 약50평형 8.88억 신고가 2.2천/전용평\n용인수지    동부 약26평형 8.8억 신고가 4.9천/전용평\n수원팔달    힐스테이트푸르지오수원 약26평형 8.7억 신고가 4.8천/전용평\n용인기흥    흥덕마을동원로얄듀크 약34평형 8.49억 신고가 3.3천/전용평\n의왕시     반도보라빌리지1 약34평형 8.46억 신고가 3.3천/전용평\n남양주시    별내별가람역 한라비발디 약34평형 8.2억 신고가 3.2천/전용평\n수원권선    수원모아미래도센트럴타운2단지 약34평형 8.17억 신고가 3.2천/전용평\n수원팔달    래미안노블클래스1단지 약34평형 8.15억 신고가 3.2천/전용평\n화성병점    에스케이뷰파크2차 약34평형 8억 신고가 3.1천/전용평\n화성동탄    동탄2신도시금강펜테리움센트럴파크Ⅰ 약34평형 7.95억 신고가 3.1천/전용평\n화성동탄    동탄숲속마을자연앤경남아너스빌(1115-0) 약34평형 7.8억 신고가 3.1천/전용평\n수원팔달    화서주공5단지 약22평형 7.6억 신고가 5천/전용평\n안산단원    힐스테이트중앙 약26평형 7.53억 신고가 4.1천/전용평\n고양덕양    고양삼송동원로얄듀크 약34평형 7.48억 신고가 2.9천/전용평\n구리시     주공4-2 약26평형 7.47억 신고가 4.1천/전용평\n광주시     이편한세상태재2단지 약31평형 7.3억 신고가 3.2천/전용평\n하남시     덕풍쌍용 약44평형 7.25억 신고가 2.1천/전용평\n수원장안    화서역 우방 센트럴파크 약26평형 7.2억 신고가 4천/전용평\n수원영통    청명마을(주공) 약26평형 7.18억 신고가 4천/전용평\n화성동탄    더레이크시티부영6단지 약26평형 7.17억 신고가 4천/전용평\n안양동안    무궁화건영캐스빌 약24평형 7.17억 신고가 4.4천/전용평\n구리시     엘에이치이스트힐 약26평형 7.15억 신고가 4천/전용평\n용인기흥    성산마을신영지웰 약40평형 7.1억 신고가 2.3천/전용평\n화성병점    에스케이뷰파크2차 약34평형 7.1억 신고가 2.8천/전용평\n화성동탄    동탄센트럴포레스트 약31평형 7억 신고가 3.1천/전용평\n군포시     의왕역센트럴시티(휴먼시아3단지) 약34평형 6.9억 신고가 2.7천/전용평\n화성동탄    자연앤데시앙 약26평형 6.65억 신고가 3.7천/전용평\n수원장안    꽃뫼마을장안 약26평형 6.5억 신고가 3.6천/전용평\n용인처인    힐스테이트몬테로이2단지 약34평형 6.45억 신고가 2.5천/전용평\n수원권선    매탄권선역리버파크 약26평형 6.4억 신고가 3.5천/전용평\n수원권선    센트라우스 약26평형 6.4억 신고가 3.5천/전용평\n화성병점    신영통현대4차 약49평형 6.4억 신고가 1.6천/전용평\n화성동탄    그린힐 반도유보라 아이비파크 10(1단지) 약34평형 6.3억 신고가 2.5천/전용평\n안양동안    대광로제비앙 약34평형 6.3억 신고가 2.5천/전용평\n화성동탄    동탄2신도시호반베르디움33단지 약34평형 6.3억 신고가 2.5천/전용평\n수원권선    센트라우스 약26평형 6.3억 신고가 3.5천/전용평\n수원권선    상록3단지 약26평형 6.2억 신고가 3.4천/전용평\n용인기흥    호수마을동보노빌리티 약34평형 6.2억 신고가 2.4천/전용평\n김포시     힐스테이트 리버시티 1단지 약34평형 6.2억 신고가 2.4천/전용평\n용인기흥    호수마을동보노빌리티 약34평형 6.1억 신고가 2.4천/전용평\n의정부시    고산수자인디에스티지아트포레 약33평형 6.08억 신고가 2.5천/전용평\n의정부시    탑석센트럴자이 약26평형 6.05억 신고가 3.3천/전용평\n군포시     주공(1단지) 약26평형 6억 신고가 3.3천/전용평\n남양주시    주공2 약34평형 6억 신고가 2.3천/전용평\n용인기흥    호수마을동보노빌리티 약34평형 6억 신고가 2.3천/전용평\n광주시     태전7지구C-14BL태전파크자이 약30평형 6억 신고가 2.7천/전용평\n군포시     금정동쌍용 약26평형 5.9억 신고가 3.3천/전용평\n안산단원    주공그린빌8 약31평형 5.75억 신고가 2.5천/전용평\n화성병점    병점역센트럴허브시티 약34평형 5.7억 신고가 2.2천/전용평\n김포시     강변마을 동부센트레빌 약34평형 5.65억 신고가 2.2천/전용평\n용인기흥    호수마을어울림 약34평형 5.5억 신고가 2.1천/전용평\n군포시     서해그랑블 약30평형 5.45억 신고가 2.6천/전용평\n성남중원    현성아름빌 약29평형 5.45억 신고가 2.6천/전용평\n용인기흥    대주피오레1단지 약49평형 5.4억 신고가 1.4천/전용평\n수원권선    호매실경남아너스빌 약34평형 5.4억 신고가 2.1천/전용평\n오산시     대동 약66평형 5.3억 신고가 953만/전용평\n수원장안    일성 약34평형 5.25억 신고가 2천/전용평\n고양일산서   하이파크시티일산파밀리에4단지 약49평형 5.25억 신고가 1.3천/전용평\n용인기흥    금화마을5단지주공그린빌 약26평형 5.2억 신고가 2.9천/전용평\n용인기흥    영통빌리지 약34평형 5.15억 신고가 2천/전용평\n김포시     힐스테이트 리버시티 1단지 약29평형 5.1억 신고가 2.4천/전용평\n화성만세    한양수자인디에스티지 약34평형 5억 신고가 1.9천/전용평\n용인기흥    동백역월드메르디앙아파트 약34평형 4.94억 신고가 1.9천/전용평\n의왕시     동부새롬 약26평형 4.9억 신고가 2.7천/전용평\n남양주시    평내마을금호어울림 약34평형 4.9억 신고가 1.9천/전용평\n남양주시    쌍용스윗닷홈리버 약26평형 4.7억 신고가 2.6천/전용평\n남양주시    진도 약26평형 4.65억 신고가 2.6천/전용평\n의정부시    삼익 약37평형 4.4억 신고가 1.6천/전용평\n수원권선    삼익2차 약34평형 4.4억 신고가 1.7천/전용평\n파주시     해솔마을7단지롯데캐슬 약26평형 4.38억 신고가 2.4천/전용평\n시흥시     청구1 약34평형 4.35억 신고가 1.7천/전용평\n남양주시    호평마을효성백년가약 약34평형 4.25억 신고가 1.7천/전용평\n군포시     충무주공(872) 약19평형 4억 신고가 3천/전용평\n의왕시     새천년미주 약26평형 3.95억 신고가 2.2천/전용평\n파주시     금촌주공7단지(1019-0) 약34평형 3.9억 신고가 1.5천/전용평\n수원권선    영조아름다운나날1단지 약34평형 3.85억 신고가 1.5천/전용평\n용인기흥    신창미션힐 약34평형 3.8억 신고가 1.5천/전용평\n양주시     은빛마을한양수자인 약39평형 3.75억 신고가 1.2천/전용평\n오산시     오산시티자이1차1단지 약26평형 3.73억 신고가 2.1천/전용평\n의정부시    민락노블랜드엔에이치에프 약31평형 3.65억 신고가 1.6천/전용평\n수원장안    꽃뫼노을마을한마루아파트 약18평형 3.25억 신고가 2.7천/전용평\n부천소사    보강센트럴빌(101동) 약28평형 3.25억 신고가 1.6천/전용평\n시흥시     예스라이프 약25평형 3.13억 신고가 1.8천/전용평\n부천원미    미리내마을(삼성) 약19평형 3.1억 신고가 2.4천/전용평\n남양주시    금정 약33평형 3.05억 신고가 1.2천/전용평\n남양주시    보미청광플러스원 약26평형 3.05억 신고가 1.7천/전용평\n용인기흥    유원휴하임 약18평형 2.8억 신고가 2.2천/전용평\n안양만안    정우 약23평형 2.68억 신고가 1.7천/전용평\n용인기흥    신동백동도센트리움 약15평형 2.65억 신고가 2.6천/전용평\n용인기흥    대우 약26평형 2.62억 신고가 1.4천/전용평\n부천원미    미리내마을(삼성) 약15평형 2.59억 신고가 2.6천/전용평\n김포시     전원마을(월드3차1단지) 약26평형 2.55억 신고가 1.4천/전용평\n안산상록    주공1 약18평형 2.4억 신고가 1.9천/전용평\n시흥시     영남1 약26평형 2.35억 신고가 1.3천/전용평\n의왕시     삼신8차 약22평형 2.1억 신고가 1.4천/전용평\n여주시     여주오드카운티 약26평형 2억 신고가 1.1천/전용평\n의정부시    극동 약21평형 1.9억 신고가 1.3천/전용평\n동두천시    에이스아파트(5차) 약34평형 1.55억 신고가 603만/전용평\n수원장안    수원로얄팰리스 약12평형 1.38억 신고가 1.7천/전용평\n수원팔달    익주 약14평형 1.34억 신고가 1.4천/전용평\n동두천시    에이스아파트(1차) 약26평형 8,000만 신고가 445만/전용평\n\n🌉 인천\n연수구     베르디움더퍼스트 약34평형 7.32억 신고가 2.9천/전용평\n계양구     힐스테이트자이계양 약26평형 6.66억 신고가 3.7천/전용평\n연수구     더샵송도마리나베이 약31평형 6.3억 신고가 2.8천/전용평\n제물포구    풍림아이원 약34평형 3.42억 신고가 1.3천/전용평\n연수구     승기마을,연수1차시영 약19평형 2억 신고가 1.5천/전용평\n강화군     강화2차세광엔리치빌 약29평형 1.66억 신고가 805만/전용평\n미추홀구    미도 약28평형 1.59억 신고가 793만/전용평\n남동구     담방마을 약20평형 1.45억 신고가 1천/전용평\n서해구     동진3 약17평형 1.08억 신고가 944만/전용평\n남동구     공작(3-73) 약17평형 8,300만 신고가 698만/전용평\n\n🌊 부산\n남구      대연롯데캐슬레전드1단지 약39평형 8.95억 신고가 2.9천/전용평\n해운대구    해운대힐스테이트위브 약48평형 8.9억 신고가 2.3천/전용평\n강서구     엘크루블루오션 약54평형 6.95억 신고가 1.6천/전용평\n남구      엘지메트로시티3 약47평형 6.8억 신고가 1.8천/전용평\n해운대구    센텀마티안 약29평형 6.7억 신고가 3.2천/전용평\n남구      엘지메트로시티4-1(201-214) 약48평형 6.5억 신고가 1.7천/전용평\n해운대구    메가센텀한화꿈에그린 약39평형 6.1억 신고가 2천/전용평\n해운대구    경동 약26평형 5.99억 신고가 3.4천/전용평\n부산진구    서면아이파크1단지 약26평형 5.99억 신고가 3.3천/전용평\n연제구     연산동일동미라주더스타 약32평형 5억 신고가 2.1천/전용평\n남구      오륙도에스케이뷰 약34평형 4.85억 신고가 1.9천/전용평\n연제구     현대타운 약34평형 3.42억 신고가 1.3천/전용평\n연제구     센텀수영강푸르지오 약26평형 3.4억 신고가 1.9천/전용평\n남구      삼한사랑채 약34평형 2.86억 신고가 1.1천/전용평\n영도구     동삼동한진로즈힐 약26평형 2억 신고가 1.1천/전용평\n영도구     오션블루 약18평형 1.94억 신고가 1.5천/전용평\n금정구     미화 약34평형 1.35억 신고가 529만/전용평\n사상구     백양그린 약22평형 1억 신고가 662만/전용평\n북구      금곡9단지주공 약17평형 7,800만 신고가 654만/전용평\n해운대구    광우파크맨션 약26평형 6,100만 신고가 334만/전용평\n\n⚓ 경남\n창원성산    롯데2단지 약25평형 6.5억 신고가 3.9천/전용평\n창원성산    창원가음한화꿈에그린 약26평형 6.27억 신고가 3.5천/전용평\n김해시     장유2차쌍용예가 약46평형 3.29억 신고가 891만/전용평\n진주시     동일스위트 약34평형 3.27억 신고가 1.3천/전용평\n김해시     젤미마을5단지푸르지오7차 약34평형 2.17억 신고가 844만/전용평\n창원마산회원  회원주공 약34평형 1.96억 신고가 764만/전용평\n김해시     갑오마을7단지부영10차 약26평형 1.48억 신고가 828만/전용평\n거제시     거제옥포도뮤토2단지 약34평형 1.35억 신고가 525만/전용평\n양산시     양산신도시뜰안채아파트 약18평형 1.2억 신고가 995만/전용평\n진주시     동신 약22평형 7,500만 신고가 499만/전용평\n사천시     원광이안애 약24평형 6,300만 신고가 375만/전용평\n거제시     장평성원(5동-8동) 약18평형 5,250만 신고가 437만/전용평\n\n🌾 광주·전남\n서구      금호쌍용 약46평형 6.75억 신고가 1.8천/전용평\n동구      무등산아이파크 약34평형 6.73억 신고가 2.6천/전용평\n북구      S-클래스더제니스 약32평형 6.23억 신고가 2.7천/전용평\n광산구     중흥에스-클래스2단지 약34평형 4.47억 신고가 1.7천/전용평\n남구      포스코더샵 약26평형 4.35억 신고가 2.4천/전용평\n북구      첨단자이1단지 약34평형 4.07억 신고가 1.6천/전용평\n나주시     이노시티애시앙1단지 약34평형 3.8억 신고가 1.5천/전용평\n무안군     근화베아채스위트 약34평형 3.5억 신고가 1.4천/전용평\n무안군     남악세영리첼 약34평형 3.05억 신고가 1.2천/전용평\n목포시     근화옥암베아채 약34평형 3.03억 신고가 1.2천/전용평\n순천시     금호 약34평형 2.3억 신고가 896만/전용평\n순천시     동성 약34평형 1.65억 신고가 642만/전용평\n여수시     국동주공 약26평형 1.14억 신고가 649만/전용평\n\n🏛️ 경북\n김천시     김천푸르지오더퍼스트 약34평형 4.84억 신고가 1.9천/전용평\n김천시     센트럴파크한신휴플러스 약34평형 4.38억 신고가 1.7천/전용평\n안동시     e편한세상안동강변 약32평형 4억 신고가 1.7천/전용평\n구미시     형곡금호어울림포레2차 약34평형 4억 신고가 1.6천/전용평\n경주시     황성주공1차 약21평형 1.85억 신고가 1.3천/전용평\n포항남     정림다채움아파트 약29평형 1.61억 신고가 796만/전용평\n경주시     동보자연뜰 약26평형 1.34억 신고가 745만/전용평\n안동시     우성 약34평형 1.19억 신고가 463만/전용평\n봉화군     명성장원 약26평형 1.12억 신고가 620만/전용평\n문경시     푸른숲 약26평형 1.05억 신고가 579만/전용평\n\n🍎 대구\n수성구     두산위브더제니스 약48평형 21억 신고가 5.4천/전용평\n수성구     만촌삼정그린코아에듀파크 약31평형 9.88억 신고가 4.3천/전용평\n수성구     캐슬골드파크4단지 약49평형 8.03억 신고가 2천/전용평\n북구      빌리브루센트 약43평형 7.79억 신고가 2.3천/전용평\n북구      빌리브루센트 약43평형 7.71억 신고가 2.2천/전용평\n중구      더샵리비테르2차 약34평형 6.88억 신고가 2.7천/전용평\n중구      청라힐스자이 약26평형 6.7억 신고가 3.7천/전용평\n남구      대봉교역금호어울림에듀리버 약26평형 4.07억 신고가 2.3천/전용평\n북구      센트럴파크대현 약31평형 3.7억 신고가 1.6천/전용평\n수성구     동서맨션 약45평형 2.78억 신고가 779만/전용평\n동구      안심효성타운 약34평형 1.71억 신고가 668만/전용평\n달서구     삼미타운 약26평형 1.45억 신고가 800만/전용평\n\n🌅 충남\n천안동남    신부 디 이스트 약31평형 3.7억 신고가 1.6천/전용평\n예산군     예산발연계룡리슈빌 약44평형 3.1억 신고가 883만/전용평\n당진시     한성필하우스 약31평형 2.5억 신고가 1.1천/전용평\n아산시     삼부르네상스 약46평형 2.49억 신고가 678만/전용평\n서산시     서산읍내현대 약34평형 2.4억 신고가 934만/전용평\n홍성군     한울마을모아엘가아파트 약34평형 2.4억 신고가 935만/전용평\n천안동남    산운마을부영사랑으로 약34평형 2.35억 신고가 914만/전용평\n아산시     한라비발디 약34평형 2.2억 신고가 858만/전용평\n천안서북    청호포도마을 약31평형 1.28억 신고가 562만/전용평\n보령시     명천주공4 약22평형 1.24억 신고가 820만/전용평\n천안서북    프라지움10차아파트 약17평형 1억 신고가 851만/전용평\n아산시     삼정하이츠 약31평형 9,500만 신고가 427만/전용평\n\n🍚 전북\n전주덕진    골드클래스 약34평형 6.2억 신고가 2.4천/전용평\n익산시     익산자이그랜드파크 약34평형 5.4억 신고가 2.1천/전용평\n남원시     남원오투그란데퍼스트시티 약45평형 4.45억 신고가 1.2천/전용평\n군산시     서희스타힐스 약34평형 2.15억 신고가 843만/전용평\n부안군     부안줄포블레스아파트 약34평형 2억 신고가 779만/전용평\n전주덕진    동아 약34평형 1.85억 신고가 720만/전용평\n군산시     주공3차 약22평형 8,600만 신고가 570만/전용평\n익산시     조공전원맨션 약34평형 7,000만 신고가 273만/전용평\n\n⛰️ 충북\n청주흥덕    신영지웰시티1차 약56평형 17.9억 신고가 3.9천/전용평\n청주흥덕    힐스테이트청주센트럴2차 약34평형 9.2억 신고가 3.6천/전용평\n청주서원    두산위브더제니스 약53평형 5.6억 신고가 1.3천/전용평\n청주청원    중앙하이츠빌 약54평형 4억 신고가 895만/전용평\n충주시     충주2차푸르지오 약31평형 3.75억 신고가 1.7천/전용평\n\n🏔️ 강원\n강릉시     강릉오션시티아이파크 약34평형 6.2억 신고가 2.4천/전용평\n홍천군     홍천오드카운티 약26평형 2.5억 신고가 1.4천/전용평\n강릉시     입암현대 약26평형 1.65억 신고가 912만/전용평\n강릉시     노암3한라 약26평형 1.57억 신고가 865만/전용평\n동해시     한양2차 약30평형 1.55억 신고가 705만/전용평\n강릉시     민락 약24평형 1.1억 신고가 663만/전용평\n\n🔬 대전\n유성구     베르디움 약34평형 8.9억 신고가 3.5천/전용평\n유성구     트리풀시티 약40평형 7.9억 신고가 2.6천/전용평\n유성구     한화꿈에그린3차 약34평형 6.3억 신고가 2.5천/전용평\n유성구     죽동대원칸타빌 약31평형 6.1억 신고가 2.7천/전용평\n동구      은어송마을1단지(풍림아이원) 약34평형 3.2억 신고가 1.2천/전용평\n중구      용두 약21평형 1.9억 신고가 1.3천/전용평\n\n🏭 울산\n중구      울산약사더샵 약34평형 7.43억 신고가 2.9천/전용평\n울주군     문수애시앙1단지 약34평형 4.62억 신고가 1.8천/전용평\n북구      울산신천엠코타운 약46평형 4.02억 신고가 1.1천/전용평\n북구      매곡푸르지오1차 약30평형 3억 신고가 1.4천/전용평\n남구      청구하이츠 약34평형 1.84억 신고가 719만/전용평\n울주군     한신 약26평형 1.4억 신고가 799만/전용평\n\n🏢 세종\n세종특별자치시  호려울마을 4단지 센트럴파크 약43평형 9.4억 신고가 2.8천/전용평\n세종특별자치시  새뜸마을1단지(메이저시티) 약34평형 7억 신고가 2.7천/전용평\n\n[눈에 띄는 거래]\n성남분당    한솔마을(6단지)(주공) 약17평형 11.3억 9.9천/전용평\n서초구     롯데캐슬갤럭시 약50평형 39억 9.7천/전용평\n송파구     래미안파크팰리스 약34평형 24.7억 9.6천/전용평";</script>
+</section>
+
+<section class="card" data-slot="20" data-data-card="true" data-expires="2026-10-30T00:00:00+09:00" data-daily-expires="2026-10-30T00:00:00+09:00">
+  <div class="card-head">
+    <h2>20. 📍 서울 주요 상권 · 전날 정오 / 오후 6시</h2>
+    <button class="copy-btn" onclick="copySection('seoulcommerce', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-seoulcommerce" class="preview" readonly>📍 서울 주요 상권
+📅 2026년 10월 29일 브리핑
+원자료 기준일: 2026-10-28 (전날 · KST)
+
+🕛 전날 정오 기준
+
+원자료 시각: 2026-10-28 12:00~12:00 (KST)
+
+📊 한눈에 보는 상권 분위기
+
+자료가 확보된 82곳 중 58곳이 평소보다 소비가 활발합니다.
+
+🔴 분주 38곳 · 🟠 바쁨 20곳
+🟢 보통 18곳 · ⚪ 한산 6곳
+
+바쁨·분주 비중은 70.7%입니다.
+전체 82곳 중 82곳 반영 · 기준 시간대 자료가 없거나 수집되지 않은 0곳 제외
+
+🔥 평소보다 소비가 활발한 상권
+
+🔴 분주
+• DMC(디지털미디어시티)
+• 가로수길
+• 가산디지털단지역
+• 강남 MICE 관광특구
+• 강남역
+• 광장(전통)시장
+• 광화문·덕수궁
+• 교대역
+• 구로디지털단지역
+• 군자역
+• 김포공항
+• 남대문시장
+• 노량진
+• 대림역
+• 덕수궁길·정동길
+• 뚝섬역
+• 명동 관광특구
+• 보신각
+• 북창동 먹자골목
+• 서울식물원·마곡나루역
+• 서울역
+• 선릉역
+• 신논현역·논현역
+• 신림역
+• 신정네거리역
+• 신촌·이대역
+• 쌍문역
+• 양재역
+• 여의도
+• 역삼역
+• 인사동
+• 종로·청계 관광특구
+• 창동 신경제 중심지
+• 청량리 제기동 일대 전통시장
+• 충정로역
+• 합정역
+• 혜화역
+• 회기역
+
+🟠 바쁨
+• 건대입구역
+• 고덕역
+• 고속터미널역
+• 동대문 관광특구
+• 발산역
+• 북촌한옥마을
+• 사당역
+• 서촌
+• 성수카페거리
+• 수유역
+• 신촌 스타광장
+• 연신내역
+• 용리단길
+• 용산역
+• 잠실새내역
+• 장지역
+• 장한평역
+• 천호역
+• 총신대입구(이수)역
+• 홍대 관광특구
+위에 표시한 58곳의 원자료 기준시각은 모두 12:00입니다.
+
+🏪 소비가 활발한 업종 사례
+
+🔴 분주
+• DMC(디지털미디어시티) — 기타요식
+• DMC(디지털미디어시티) — 제과·커피·패스트푸드
+• DMC(디지털미디어시티) — 편의점
+
+🟠 바쁨
+• DMC(디지털미디어시티) — 일식·중식·양식
+
+위 업종 사례의 원자료 기준시각은 모두 12:00입니다.
+
+🌆 전날 오후 6시 기준
+
+원자료 시각: 2026-10-28 18:20~18:20 (KST)
+
+📊 한눈에 보는 상권 분위기
+
+자료가 확보된 80곳 중 42곳이 평소보다 소비가 활발합니다.
+
+🔴 분주 9곳 · 🟠 바쁨 33곳
+🟢 보통 34곳 · ⚪ 한산 4곳
+
+바쁨·분주 비중은 52.5%입니다.
+전체 82곳 중 80곳 반영 · 기준 시간대 자료가 없거나 수집되지 않은 2곳 제외
+
+🔥 평소보다 소비가 활발한 상권
+
+🔴 분주
+• 가산디지털단지역
+• 교대역
+• 군자역
+• 성신여대입구역
+• 신촌·이대역
+• 잠실새내역
+• 천호역
+• 합정역
+• 회기역
+
+🟠 바쁨
+• DMC(디지털미디어시티)
+• 강남역
+• 건대입구역
+• 광장(전통)시장
+• 광화문·덕수궁
+• 구로역
+• 덕수궁길·정동길
+• 동대문 관광특구
+• 명동 관광특구
+• 보신각
+• 북촌한옥마을
+• 사당역
+• 서울대입구역
+• 서울역
+• 서촌
+• 신촌 스타광장
+• 양재역
+• 여의도
+• 역삼역
+• 용산역
+• 익선동
+• 인사동
+• 잠실 관광특구
+• 잠실롯데타워·석촌호수
+• 장한평역
+• 종로·청계 관광특구
+• 창동 신경제 중심지
+• 청량리 제기동 일대 전통시장
+• 총신대입구(이수)역
+• 충정로역
+• 해방촌·경리단길
+• 혜화역
+• 홍대 관광특구
+위에 표시한 42곳의 원자료 기준시각은 모두 18:20입니다.
+
+🏪 소비가 활발한 업종 사례
+
+🟠 바쁨
+• DMC(디지털미디어시티) — 기타요식
+• DMC(디지털미디어시티) — 병원
+• DMC(디지털미디어시티) — 제과·커피·패스트푸드
+• DMC(디지털미디어시티) — 편의점
+
+위 업종 사례의 원자료 기준시각은 모두 18:20입니다.
+
+읽는 법: 최근 4주 같은 요일·시간대 대비 신한카드 내국인 소비 상태입니다.
+
+활용: 실제 원자료 시각을 확인하고 소비가 활발했던 상권과 업종을 함께 살펴보세요.</textarea>
+<p style="font-size:12px;color:#666">출처: <a href="https://data.seoul.go.kr/dataList/OA-22385/A/1/datasetView.do">서울 열린데이터광장</a> · 신한카드</p>
+  <script>window.__content_seoulcommerce = "📍 서울 주요 상권\n📅 2026년 10월 29일 브리핑\n원자료 기준일: 2026-10-28 (전날 · KST)\n\n🕛 전날 정오 기준\n\n원자료 시각: 2026-10-28 12:00~12:00 (KST)\n\n📊 한눈에 보는 상권 분위기\n\n자료가 확보된 82곳 중 58곳이 평소보다 소비가 활발합니다.\n\n🔴 분주 38곳 · 🟠 바쁨 20곳\n🟢 보통 18곳 · ⚪ 한산 6곳\n\n바쁨·분주 비중은 70.7%입니다.\n전체 82곳 중 82곳 반영 · 기준 시간대 자료가 없거나 수집되지 않은 0곳 제외\n\n🔥 평소보다 소비가 활발한 상권\n\n🔴 분주\n• DMC(디지털미디어시티)\n• 가로수길\n• 가산디지털단지역\n• 강남 MICE 관광특구\n• 강남역\n• 광장(전통)시장\n• 광화문·덕수궁\n• 교대역\n• 구로디지털단지역\n• 군자역\n• 김포공항\n• 남대문시장\n• 노량진\n• 대림역\n• 덕수궁길·정동길\n• 뚝섬역\n• 명동 관광특구\n• 보신각\n• 북창동 먹자골목\n• 서울식물원·마곡나루역\n• 서울역\n• 선릉역\n• 신논현역·논현역\n• 신림역\n• 신정네거리역\n• 신촌·이대역\n• 쌍문역\n• 양재역\n• 여의도\n• 역삼역\n• 인사동\n• 종로·청계 관광특구\n• 창동 신경제 중심지\n• 청량리 제기동 일대 전통시장\n• 충정로역\n• 합정역\n• 혜화역\n• 회기역\n\n🟠 바쁨\n• 건대입구역\n• 고덕역\n• 고속터미널역\n• 동대문 관광특구\n• 발산역\n• 북촌한옥마을\n• 사당역\n• 서촌\n• 성수카페거리\n• 수유역\n• 신촌 스타광장\n• 연신내역\n• 용리단길\n• 용산역\n• 잠실새내역\n• 장지역\n• 장한평역\n• 천호역\n• 총신대입구(이수)역\n• 홍대 관광특구\n위에 표시한 58곳의 원자료 기준시각은 모두 12:00입니다.\n\n🏪 소비가 활발한 업종 사례\n\n🔴 분주\n• DMC(디지털미디어시티) — 기타요식\n• DMC(디지털미디어시티) — 제과·커피·패스트푸드\n• DMC(디지털미디어시티) — 편의점\n\n🟠 바쁨\n• DMC(디지털미디어시티) — 일식·중식·양식\n\n위 업종 사례의 원자료 기준시각은 모두 12:00입니다.\n\n🌆 전날 오후 6시 기준\n\n원자료 시각: 2026-10-28 18:20~18:20 (KST)\n\n📊 한눈에 보는 상권 분위기\n\n자료가 확보된 80곳 중 42곳이 평소보다 소비가 활발합니다.\n\n🔴 분주 9곳 · 🟠 바쁨 33곳\n🟢 보통 34곳 · ⚪ 한산 4곳\n\n바쁨·분주 비중은 52.5%입니다.\n전체 82곳 중 80곳 반영 · 기준 시간대 자료가 없거나 수집되지 않은 2곳 제외\n\n🔥 평소보다 소비가 활발한 상권\n\n🔴 분주\n• 가산디지털단지역\n• 교대역\n• 군자역\n• 성신여대입구역\n• 신촌·이대역\n• 잠실새내역\n• 천호역\n• 합정역\n• 회기역\n\n🟠 바쁨\n• DMC(디지털미디어시티)\n• 강남역\n• 건대입구역\n• 광장(전통)시장\n• 광화문·덕수궁\n• 구로역\n• 덕수궁길·정동길\n• 동대문 관광특구\n• 명동 관광특구\n• 보신각\n• 북촌한옥마을\n• 사당역\n• 서울대입구역\n• 서울역\n• 서촌\n• 신촌 스타광장\n• 양재역\n• 여의도\n• 역삼역\n• 용산역\n• 익선동\n• 인사동\n• 잠실 관광특구\n• 잠실롯데타워·석촌호수\n• 장한평역\n• 종로·청계 관광특구\n• 창동 신경제 중심지\n• 청량리 제기동 일대 전통시장\n• 총신대입구(이수)역\n• 충정로역\n• 해방촌·경리단길\n• 혜화역\n• 홍대 관광특구\n위에 표시한 42곳의 원자료 기준시각은 모두 18:20입니다.\n\n🏪 소비가 활발한 업종 사례\n\n🟠 바쁨\n• DMC(디지털미디어시티) — 기타요식\n• DMC(디지털미디어시티) — 병원\n• DMC(디지털미디어시티) — 제과·커피·패스트푸드\n• DMC(디지털미디어시티) — 편의점\n\n위 업종 사례의 원자료 기준시각은 모두 18:20입니다.\n\n읽는 법: 최근 4주 같은 요일·시간대 대비 신한카드 내국인 소비 상태입니다.\n\n활용: 실제 원자료 시각을 확인하고 소비가 활발했던 상권과 업종을 함께 살펴보세요.";</script>
+</section>
+
+<section class="card" data-slot="21" data-data-card="true" data-expires="2026-10-30T09:00:00+09:00">
+  <div class="card-head">
+    <h2>21. 📊 비트코인 공포·탐욕 지수</h2>
+    <button class="copy-btn" onclick="copySection('cryptofear', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-cryptofear" class="preview" readonly>🪙 비트코인 공포·탐욕 지수
+📅 원자료 기준일: 2026-10-28 (UTC)
+
+🌡️ 현재 51/100 · 중립
+출처: Alternative.me (Crypto Fear &amp; Greed Index)
+
+📌 한눈에: 중립 51점, 전일 대비 +3점. 30일 평균보다 10.5점 낮습니다.
+
+📊 최근 흐름
+
+전일 48점 대비 +3점
+7일 전 63점 대비 -12점
+
+최근 7일 평균 53.1점 · 직전 7일 평균 57.3점
+최근 30일 평균 61.5점 · 최저 48점 / 최고 74점
+
+📍 최근 30일 속 현재 위치
+
+현재 위치: 최저~최고 구간의 12% 지점
+구간 위치는 최저·최고 사이 거리이며 관측일 순위나 확률이 아닙니다.
+
+30일 관측 비교 (현재일 포함)
+• 현재보다 낮은 날 3일
+• 같은 날 2일
+• 높은 날 25일
+
+🔎 심리 상태의 지속
+
+현재 &#x27;중립&#x27; 분류가 6일 연속입니다.
+
+💡 읽는 법
+
+0에 가까울수록 공포, 100에 가까울수록 탐욕입니다.
+
+⚠️ 비트코인 시장 심리 지표입니다. 주식시장 전체 심리나 가격 전망·매수 신호가 아닙니다.</textarea>
+
+  <script>window.__content_cryptofear = "🪙 비트코인 공포·탐욕 지수\n📅 원자료 기준일: 2026-10-28 (UTC)\n\n🌡️ 현재 51/100 · 중립\n출처: Alternative.me (Crypto Fear & Greed Index)\n\n📌 한눈에: 중립 51점, 전일 대비 +3점. 30일 평균보다 10.5점 낮습니다.\n\n📊 최근 흐름\n\n전일 48점 대비 +3점\n7일 전 63점 대비 -12점\n\n최근 7일 평균 53.1점 · 직전 7일 평균 57.3점\n최근 30일 평균 61.5점 · 최저 48점 / 최고 74점\n\n📍 최근 30일 속 현재 위치\n\n현재 위치: 최저~최고 구간의 12% 지점\n구간 위치는 최저·최고 사이 거리이며 관측일 순위나 확률이 아닙니다.\n\n30일 관측 비교 (현재일 포함)\n• 현재보다 낮은 날 3일\n• 같은 날 2일\n• 높은 날 25일\n\n🔎 심리 상태의 지속\n\n현재 '중립' 분류가 6일 연속입니다.\n\n💡 읽는 법\n\n0에 가까울수록 공포, 100에 가까울수록 탐욕입니다.\n\n⚠️ 비트코인 시장 심리 지표입니다. 주식시장 전체 심리나 가격 전망·매수 신호가 아닙니다.";</script>
+</section>
+
+<section class="card" data-slot="22" data-data-card="true" data-expires="2026-10-31T09:00:00+09:00" data-preserve-source="true">
+  <div class="card-head">
+    <h2>22. 📖 경제 주제 읽기 관심도</h2>
+    <button class="copy-btn" onclick="copySection('wikiinterest', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-wikiinterest" class="preview" readonly>📚 경제 주제 읽기 관심도
+📅 집계 마감: 2026-10-27 (UTC) · 한국어 위키백과 문서 조회수
+선정 17개 문서 최근 7일 조회 합계 1,817회 (직전 7일 대비 -16%)
+비교 기간: 10/21~10/27 vs 10/14~10/20 (UTC)
+
+📌 한눈에: 조회 증가율이 가장 큰 문서는 &#x27;환율&#x27;. 최근 7일 183회로 직전 139회보다 32% 늘었습니다.
+증가율 순위는 아래 최소 조회수 기준을 넘는 문서만 비교합니다.
+
+📋 집계 대상 17/18개 문서
+⚠️ 자료 누락·수집 실패로 제외 1개: 재건축
+두 비교 기간 모두 같은 문서만 집계했습니다.
+
+선정 문서 전체 증감 -346회 · 증가율 순위 비교 대상 5/17개 문서
+
+🗂️ 주제별 조회 합계
+
+주택·세금 462회 (-5%) · 7개 문서
+거시·금융 628회 (-22%) · 6개 문서
+시장·가상자산 727회 (-17%) · 4개 문서
+
+📊 이번 주 읽기 흐름
+
+조회 증가 5개 · 감소 11개 · 보합 1개 문서
+가장 많이 읽힌 묶음은 시장·가상자산 (727회, 전체의 40%)
+읽기 포인트: 선정 문서 전체 조회는 늘지 않았습니다. 개별 증가 문서는 전체 흐름과 나눠 읽으십시오.
+
+🏆 가장 많이 읽힌 문서
+
+1. 코스피 305회
+2. 비트코인 284회
+3. 부동산 205회
+
+📈 조회 증가가 두드러진 문서
+
+1. 환율 183회 (직전 7일 139회, +32%)
+2. 부동산 205회 (직전 7일 188회, +9%)
+
+🔎 조회 증가 횟수가 가장 큰 문서: 환율 +44회 (139→183회), 순위 비교 대상 중입니다.
+
+증가율 1위와 다를 수 있습니다.
+
+💡 &#x27;환율&#x27;에서 이어 읽을 점: 거시·금융 용어를 읽을 때는 지표의 정의와 발표 주기, 실제 최신 발표치를 따로 확인하십시오.
+
+📉 조회 감소가 두드러진 문서
+
+1. 국내총생산 178회 (직전 7일 251회, -29%)
+2. 코스피 305회 (직전 7일 375회, -19%)
+
+📏 순위 표시 기준: 최근 7일 100회 이상 · 직전 7일 50회 이상</textarea>
+
+  <script>window.__content_wikiinterest = "📚 경제 주제 읽기 관심도\n📅 집계 마감: 2026-10-27 (UTC) · 한국어 위키백과 문서 조회수\n선정 17개 문서 최근 7일 조회 합계 1,817회 (직전 7일 대비 -16%)\n비교 기간: 10/21~10/27 vs 10/14~10/20 (UTC)\n\n📌 한눈에: 조회 증가율이 가장 큰 문서는 '환율'. 최근 7일 183회로 직전 139회보다 32% 늘었습니다.\n증가율 순위는 아래 최소 조회수 기준을 넘는 문서만 비교합니다.\n\n📋 집계 대상 17/18개 문서\n⚠️ 자료 누락·수집 실패로 제외 1개: 재건축\n두 비교 기간 모두 같은 문서만 집계했습니다.\n\n선정 문서 전체 증감 -346회 · 증가율 순위 비교 대상 5/17개 문서\n\n🗂️ 주제별 조회 합계\n\n주택·세금 462회 (-5%) · 7개 문서\n거시·금융 628회 (-22%) · 6개 문서\n시장·가상자산 727회 (-17%) · 4개 문서\n\n📊 이번 주 읽기 흐름\n\n조회 증가 5개 · 감소 11개 · 보합 1개 문서\n가장 많이 읽힌 묶음은 시장·가상자산 (727회, 전체의 40%)\n읽기 포인트: 선정 문서 전체 조회는 늘지 않았습니다. 개별 증가 문서는 전체 흐름과 나눠 읽으십시오.\n\n🏆 가장 많이 읽힌 문서\n\n1. 코스피 305회\n2. 비트코인 284회\n3. 부동산 205회\n\n📈 조회 증가가 두드러진 문서\n\n1. 환율 183회 (직전 7일 139회, +32%)\n2. 부동산 205회 (직전 7일 188회, +9%)\n\n🔎 조회 증가 횟수가 가장 큰 문서: 환율 +44회 (139→183회), 순위 비교 대상 중입니다.\n\n증가율 1위와 다를 수 있습니다.\n\n💡 '환율'에서 이어 읽을 점: 거시·금융 용어를 읽을 때는 지표의 정의와 발표 주기, 실제 최신 발표치를 따로 확인하십시오.\n\n📉 조회 감소가 두드러진 문서\n\n1. 국내총생산 178회 (직전 7일 251회, -29%)\n2. 코스피 305회 (직전 7일 375회, -19%)\n\n📏 순위 표시 기준: 최근 7일 100회 이상 · 직전 7일 50회 이상";</script>
+</section>
+
+<section class="card" data-slot="23">
+  <div class="card-head">
+    <h2>23. 📰 엘리트 정책분석</h2>
+    <button class="copy-btn" onclick="copySection('analysis3', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-analysis3" class="preview" readonly>엘리트 데이터룸
+2026.10.29
+
+구룡마을 3,739가구 공급, 화재보다 이주 완료가 착공의 관건
+https://n.news.naver.com/mnews/article/005/0001881579
 
 📊 핵심 수치
 
-• 서울 아파트 재산세 3조원 초과
+• 계획 주택 3,739가구
 
-• 전년 대비 약 4,800억원 증가
+• 공공임대 2,798가구, 전체의 약 75%
 
-• 강남 3구 합계 약 1조6천억원
+• 기사 기준 잔여 이주 거부 140가구
 
-기사 수치는 서울시가 제출한 개인 부과 현황의 지역 합계입니다. 국토교통부의 2026년 공동주택 공시가격안은 전국 평균 9.16%, 강남 3구 24.7% 상승을 제시했습니다.
+3,739가구는 개발계획상 총량이고 2,798가구는 그 안의 공공임대 물량입니다. 실제 시장 공급으로 계산하려면 이주, 철거, 착공, 준공과 입주 단계가 각각 완료됐는지 확인해야 합니다.
 
-공시가격 상승은 과세표준을 높이지만 실제 세액에는 공정시장가액비율과 세부담상한이 개입합니다. 지역 총액, 가구당 평균과 개별 고지액을 구분해야 합니다.
+서울시의 2025년 발표는 2027년 착공·2029년 준공을 목표로 제시했지만, 이번 기사는 SH 설명을 토대로 2031년 준공을 전했습니다. 목표 시점이 다른 만큼 최신 공식 공정표 확인이 필요합니다.
 
-다음에 볼 숫자: 자치구별 과세 대상 주택 수, 주택당 중위 고지액과 1세대 1주택 특례 적용 비중을 확인해야 합니다.
+다음에 볼 숫자: 잔여 이주 가구 수, 명도소송 완료 건수, 착공일과 공정률을 확인해야 합니다.
 
 오픈채팅 엘리트 부동산 스터디</textarea>
-<script>window.__content_analysis3 = "엘리트 데이터룸\n2026.10.22\n\n공시가격 급등으로 재산세 부담도 증가\nhttps://n.news.naver.com/mnews/article/001/0016391585\n\n📊 핵심 수치\n\n• 서울 아파트 재산세 3조원 초과\n\n• 전년 대비 약 4,800억원 증가\n\n• 강남 3구 합계 약 1조6천억원\n\n기사 수치는 서울시가 제출한 개인 부과 현황의 지역 합계입니다. 국토교통부의 2026년 공동주택 공시가격안은 전국 평균 9.16%, 강남 3구 24.7% 상승을 제시했습니다.\n\n공시가격 상승은 과세표준을 높이지만 실제 세액에는 공정시장가액비율과 세부담상한이 개입합니다. 지역 총액, 가구당 평균과 개별 고지액을 구분해야 합니다.\n\n다음에 볼 숫자: 자치구별 과세 대상 주택 수, 주택당 중위 고지액과 1세대 1주택 특례 적용 비중을 확인해야 합니다.\n\n오픈채팅 엘리트 부동산 스터디";</script>
+
+  <script>window.__content_analysis3 = "엘리트 데이터룸\n2026.10.29\n\n구룡마을 3,739가구 공급, 화재보다 이주 완료가 착공의 관건\nhttps://n.news.naver.com/mnews/article/005/0001881579\n\n📊 핵심 수치\n\n• 계획 주택 3,739가구\n\n• 공공임대 2,798가구, 전체의 약 75%\n\n• 기사 기준 잔여 이주 거부 140가구\n\n3,739가구는 개발계획상 총량이고 2,798가구는 그 안의 공공임대 물량입니다. 실제 시장 공급으로 계산하려면 이주, 철거, 착공, 준공과 입주 단계가 각각 완료됐는지 확인해야 합니다.\n\n서울시의 2025년 발표는 2027년 착공·2029년 준공을 목표로 제시했지만, 이번 기사는 SH 설명을 토대로 2031년 준공을 전했습니다. 목표 시점이 다른 만큼 최신 공식 공정표 확인이 필요합니다.\n\n다음에 볼 숫자: 잔여 이주 가구 수, 명도소송 완료 건수, 착공일과 공정률을 확인해야 합니다.\n\n오픈채팅 엘리트 부동산 스터디";</script>
 </section>
 
-<section class="card">
-<div class="card-head">
-<h2>14. 📰 여러분의 부동산 정책분석</h2>
-<button class="copy-btn" onclick="copySection('analysis4', this)">복사</button>
-</div>
-<textarea id="ta-analysis4" class="preview" readonly>여러분의 부동산 조항노트
-2026년 10월 22일자
+<section class="card" data-slot="24">
+  <div class="card-head">
+    <h2>24. 📰 여러분의 부동산 정책분석</h2>
+    <button class="copy-btn" onclick="copySection('analysis4', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-analysis4" class="preview" readonly>여러분의 부동산 조항노트
+2026년 10월 29일자
 
-공시가격 급등으로 재산세 부담도 증가
-https://n.news.naver.com/mnews/article/001/0016391585
+구룡마을 3,739가구 공급, 화재보다 이주 완료가 착공의 관건
+https://n.news.naver.com/mnews/article/005/0001881579
 
 1. 사실관계
 
-기사에 따르면 올해 서울 아파트 재산세 개인 부과액이 처음 3조원을 넘었고 전년보다 약 4천800억원 증가했습니다.
+기사에 따르면 구룡마을은 3,739가구 규모로 계획됐고 이 중 2,798가구가 공공임대주택입니다. 전체 1,107가구 가운데 140가구가 아직 이주하지 않았다는 SH 설명도 보도됐습니다.
 
 2. 제도적 쟁점
 
-지방세법상 주택의 시가표준액은 공시가격을 기준으로 합니다. 실제 재산세는 공정시장가액비율, 과세표준 구간별 세율과 세부담상한 등을 적용해 산정합니다.
+공공 도시개발에서 사업시행자가 토지 소유권을 확보했더라도 점유 이전은 별도 절차입니다. 자진 이주가 이뤄지지 않으면 명도판결과 집행 절차가 필요하며, 화재 이재민 보호와 보상 형평성을 함께 고려해야 합니다.
 
 3. 실무 영향
 
-공시가격이 크게 오른 주택은 세부담상한 안에서도 고지액이 늘 수 있습니다. 공동소유, 1세대 1주택 여부와 보유 주택 수에 따라 적용 기준이 달라질 수 있습니다.
+명도 절차가 늦어지면 철거와 착공이 순차적으로 밀릴 수 있습니다. 다만 화재 발생만으로 일정 변경이 확정된 것은 아니며, 기사에서 SH는 현재 일정에 변동사항이 없다고 밝혔습니다.
 
 4. 실무 조언
 
-고지서의 시가표준액, 과세표준과 적용 세율을 확인하고 오류가 의심되면 관할 구청의 과세 근거를 요청해야 합니다. 단순 시세 상승률로 세액을 추정하면 안 됩니다.
+인근 매매나 임대차 판단에서는 계획 가구 수만 보지 말고 최신 고시, 사업시행자 공정표와 잔여 점유 현황을 확인해야 합니다. 보도된 목표 준공연도는 확정 입주일로 해석하면 안 됩니다.
 
 카카오톡 여러분의 부동산</textarea>
-<script>window.__content_analysis4 = "여러분의 부동산 조항노트\n2026년 10월 22일자\n\n공시가격 급등으로 재산세 부담도 증가\nhttps://n.news.naver.com/mnews/article/001/0016391585\n\n1. 사실관계\n\n기사에 따르면 올해 서울 아파트 재산세 개인 부과액이 처음 3조원을 넘었고 전년보다 약 4천800억원 증가했습니다.\n\n2. 제도적 쟁점\n\n지방세법상 주택의 시가표준액은 공시가격을 기준으로 합니다. 실제 재산세는 공정시장가액비율, 과세표준 구간별 세율과 세부담상한 등을 적용해 산정합니다.\n\n3. 실무 영향\n\n공시가격이 크게 오른 주택은 세부담상한 안에서도 고지액이 늘 수 있습니다. 공동소유, 1세대 1주택 여부와 보유 주택 수에 따라 적용 기준이 달라질 수 있습니다.\n\n4. 실무 조언\n\n고지서의 시가표준액, 과세표준과 적용 세율을 확인하고 오류가 의심되면 관할 구청의 과세 근거를 요청해야 합니다. 단순 시세 상승률로 세액을 추정하면 안 됩니다.\n\n카카오톡 여러분의 부동산";</script>
+
+  <script>window.__content_analysis4 = "여러분의 부동산 조항노트\n2026년 10월 29일자\n\n구룡마을 3,739가구 공급, 화재보다 이주 완료가 착공의 관건\nhttps://n.news.naver.com/mnews/article/005/0001881579\n\n1. 사실관계\n\n기사에 따르면 구룡마을은 3,739가구 규모로 계획됐고 이 중 2,798가구가 공공임대주택입니다. 전체 1,107가구 가운데 140가구가 아직 이주하지 않았다는 SH 설명도 보도됐습니다.\n\n2. 제도적 쟁점\n\n공공 도시개발에서 사업시행자가 토지 소유권을 확보했더라도 점유 이전은 별도 절차입니다. 자진 이주가 이뤄지지 않으면 명도판결과 집행 절차가 필요하며, 화재 이재민 보호와 보상 형평성을 함께 고려해야 합니다.\n\n3. 실무 영향\n\n명도 절차가 늦어지면 철거와 착공이 순차적으로 밀릴 수 있습니다. 다만 화재 발생만으로 일정 변경이 확정된 것은 아니며, 기사에서 SH는 현재 일정에 변동사항이 없다고 밝혔습니다.\n\n4. 실무 조언\n\n인근 매매나 임대차 판단에서는 계획 가구 수만 보지 말고 최신 고시, 사업시행자 공정표와 잔여 점유 현황을 확인해야 합니다. 보도된 목표 준공연도는 확정 입주일로 해석하면 안 됩니다.\n\n카카오톡 여러분의 부동산";</script>
 </section>
 
-<section class="card">
-<div class="card-head">
-<h2>15. 📰 월부길 정책분석</h2>
-<button class="copy-btn" onclick="copySection('analysis5', this)">복사</button>
-</div>
-<textarea id="ta-analysis5" class="preview" readonly>월급쟁이 부동산 브리핑
-2026년 10월 22일 목요일
+<section class="card" data-slot="25">
+  <div class="card-head">
+    <h2>25. 📰 월부길 정책분석</h2>
+    <button class="copy-btn" onclick="copySection('analysis5', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-analysis5" class="preview" readonly>월급쟁이 부동산 브리핑
+2026년 10월 29일 목요일
 
-공시가격 급등으로 재산세 부담도 증가
-https://n.news.naver.com/mnews/article/001/0016391585
+구룡마을 3,739가구 공급, 화재보다 이주 완료가 착공의 관건
+https://n.news.naver.com/mnews/article/005/0001881579
 
-서울 아파트 재산세가 3조원을 넘었다는 집계가 나왔습니다. 집값 상승은 자산가치뿐 아니라 매년 지출하는 보유비용도 바꿉니다.
+구룡마을에 3,739가구가 계획됐지만 아직 남은 가구의 이주와 명도 절차가 진행 중입니다. 계획 물량을 곧 입주 가능한 공급으로 계산하면 주거 계획의 시간표가 어긋날 수 있습니다.
 
-갈아타기를 고민한다면 매수가격만 비교하지 말고 재산세와 관리비, 대출이자를 연간 비용으로 합산해야 합니다. 특히 고가 구간으로 이동할 때는 공시가격과 과세표준을 따로 확인해야 합니다.
+개포동 일대 갈아타기를 고민한다면 개발 호재의 가치를 준공연도 하나로 계산하지 말아야 합니다. 이주 완료, 철거, 착공과 입주까지 단계별로 나눠 확인해야 합니다.
 
-실제 고지액은 1세대 1주택 여부와 세부담상한에 따라 달라집니다. 기사 속 지역 합계를 자신의 세금으로 나누어 적용하면 안 됩니다.
+전월세 거주자는 공사 시작 전후의 이주 수요와 주변 임대료를 별도로 살펴야 합니다. 사업 지연 가능성이 있다고 곧바로 임대료 상승이나 하락을 단정해서는 안 됩니다.
 
-오늘 챙길 것: 최근 고지서 두 장을 비교하고 목표 주택의 공시가격을 조회해 월별 보유비용으로 나눠 계산해야 합니다.
+오늘 챙길 것: 서울시 고시와 SH 최신 공정표에서 잔여 이주 현황, 실제 착공일과 준공 목표를 확인해야 합니다.
 
 [월부길] 월급쟁이 부동산 지름길</textarea>
-<script>window.__content_analysis5 = "월급쟁이 부동산 브리핑\n2026년 10월 22일 목요일\n\n공시가격 급등으로 재산세 부담도 증가\nhttps://n.news.naver.com/mnews/article/001/0016391585\n\n서울 아파트 재산세가 3조원을 넘었다는 집계가 나왔습니다. 집값 상승은 자산가치뿐 아니라 매년 지출하는 보유비용도 바꿉니다.\n\n갈아타기를 고민한다면 매수가격만 비교하지 말고 재산세와 관리비, 대출이자를 연간 비용으로 합산해야 합니다. 특히 고가 구간으로 이동할 때는 공시가격과 과세표준을 따로 확인해야 합니다.\n\n실제 고지액은 1세대 1주택 여부와 세부담상한에 따라 달라집니다. 기사 속 지역 합계를 자신의 세금으로 나누어 적용하면 안 됩니다.\n\n오늘 챙길 것: 최근 고지서 두 장을 비교하고 목표 주택의 공시가격을 조회해 월별 보유비용으로 나눠 계산해야 합니다.\n\n[월부길] 월급쟁이 부동산 지름길";</script>
+
+  <script>window.__content_analysis5 = "월급쟁이 부동산 브리핑\n2026년 10월 29일 목요일\n\n구룡마을 3,739가구 공급, 화재보다 이주 완료가 착공의 관건\nhttps://n.news.naver.com/mnews/article/005/0001881579\n\n구룡마을에 3,739가구가 계획됐지만 아직 남은 가구의 이주와 명도 절차가 진행 중입니다. 계획 물량을 곧 입주 가능한 공급으로 계산하면 주거 계획의 시간표가 어긋날 수 있습니다.\n\n개포동 일대 갈아타기를 고민한다면 개발 호재의 가치를 준공연도 하나로 계산하지 말아야 합니다. 이주 완료, 철거, 착공과 입주까지 단계별로 나눠 확인해야 합니다.\n\n전월세 거주자는 공사 시작 전후의 이주 수요와 주변 임대료를 별도로 살펴야 합니다. 사업 지연 가능성이 있다고 곧바로 임대료 상승이나 하락을 단정해서는 안 됩니다.\n\n오늘 챙길 것: 서울시 고시와 SH 최신 공정표에서 잔여 이주 현황, 실제 착공일과 준공 목표를 확인해야 합니다.\n\n[월부길] 월급쟁이 부동산 지름길";</script>
 </section>
 
-<section class="card">
-<div class="card-head">
-<h2>16. 📰 부알남 정책분석</h2>
-<button class="copy-btn" onclick="copySection('analysis2', this)">복사</button>
-</div>
-<textarea id="ta-analysis2" class="preview" readonly>부알남의 뉴스 논평 2026년 10월 22일
+<section class="card" data-slot="26">
+  <div class="card-head">
+    <h2>26. 📰 부알남 정책분석</h2>
+    <button class="copy-btn" onclick="copySection('analysis2', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-analysis2" class="preview" readonly>부알남의 뉴스 논평 2026년 10월 29일
 
-공시가격 급등으로 재산세 부담도 증가
-https://n.news.naver.com/mnews/article/001/0016391585
+구룡마을 3,739가구 공급, 화재보다 이주 완료가 착공의 관건
+https://n.news.naver.com/mnews/article/005/0001881579
 
-서울 아파트 재산세가 1년 새 약 4천800억원 늘어 3조원을 넘어섰다는 집계가 공개됐습니다. 강남 3구의 세액이 1조6천억원에 육박한 것은 공시가격 상승이 고가 주택 밀집 지역에 집중된 결과로 해석할 수 있습니다.
+강남권에 3,739가구를 조성하고 약 75%인 2,798가구를 공공임대로 공급하는 구룡마을 사업은 신규 공급과 주거 취약계층 보호를 함께 다루는 공공개발입니다.
 
-재산세는 공시가격에 세율을 바로 곱하는 세금이 아닙니다. 공정시장가액비율로 과세표준을 산정하고 세율, 1세대 1주택 특례와 세부담상한을 차례로 적용합니다.
+그러나 공급 효과는 계획 가구 수가 아니라 사업 단계로 판단해야 합니다. 기사에는 전체 1,107가구 가운데 140가구가 이주를 거부한 채 남아 있고, SH가 내년 상반기까지 명도소송을 마친 뒤 집행 절차를 밟는다는 설명이 담겼습니다.
 
-따라서 지역 합계 증가만으로 개별 가구의 부담을 추정하면 안 됩니다. 다주택 여부와 지분, 주택별 공시가격 구간에 따라 고지액의 변화 폭이 달라집니다.
+화재 수습과 임시거처 마련은 인도적 대응이 우선이지만, 보상 형평성과 추가 민원이 결합하면 착공 시점에도 영향을 줄 수 있습니다. 추가 보상만으로 해결하면 선례와 형평성 문제가 생기고, 강제집행만 앞세우면 갈등 비용이 커지는 구조입니다.
 
-오늘의 체크포인트: 보유 주택별 공시가격과 납세자 유형, 과세표준 구간을 기준으로 내년 보유비용을 다시 계산해야 합니다.
+오늘의 체크포인트: 계획 가구 수보다 이주율, 명도 절차의 실제 종료일과 최신 사업시행 일정을 기준으로 공급 시점을 판단해야 합니다.
 
 오픈카톡 [부알남] 부동산 알려주는 남자</textarea>
-<script>window.__content_analysis2 = "부알남의 뉴스 논평 2026년 10월 22일\n\n공시가격 급등으로 재산세 부담도 증가\nhttps://n.news.naver.com/mnews/article/001/0016391585\n\n서울 아파트 재산세가 1년 새 약 4천800억원 늘어 3조원을 넘어섰다는 집계가 공개됐습니다. 강남 3구의 세액이 1조6천억원에 육박한 것은 공시가격 상승이 고가 주택 밀집 지역에 집중된 결과로 해석할 수 있습니다.\n\n재산세는 공시가격에 세율을 바로 곱하는 세금이 아닙니다. 공정시장가액비율로 과세표준을 산정하고 세율, 1세대 1주택 특례와 세부담상한을 차례로 적용합니다.\n\n따라서 지역 합계 증가만으로 개별 가구의 부담을 추정하면 안 됩니다. 다주택 여부와 지분, 주택별 공시가격 구간에 따라 고지액의 변화 폭이 달라집니다.\n\n오늘의 체크포인트: 보유 주택별 공시가격과 납세자 유형, 과세표준 구간을 기준으로 내년 보유비용을 다시 계산해야 합니다.\n\n오픈카톡 [부알남] 부동산 알려주는 남자";</script>
+
+  <script>window.__content_analysis2 = "부알남의 뉴스 논평 2026년 10월 29일\n\n구룡마을 3,739가구 공급, 화재보다 이주 완료가 착공의 관건\nhttps://n.news.naver.com/mnews/article/005/0001881579\n\n강남권에 3,739가구를 조성하고 약 75%인 2,798가구를 공공임대로 공급하는 구룡마을 사업은 신규 공급과 주거 취약계층 보호를 함께 다루는 공공개발입니다.\n\n그러나 공급 효과는 계획 가구 수가 아니라 사업 단계로 판단해야 합니다. 기사에는 전체 1,107가구 가운데 140가구가 이주를 거부한 채 남아 있고, SH가 내년 상반기까지 명도소송을 마친 뒤 집행 절차를 밟는다는 설명이 담겼습니다.\n\n화재 수습과 임시거처 마련은 인도적 대응이 우선이지만, 보상 형평성과 추가 민원이 결합하면 착공 시점에도 영향을 줄 수 있습니다. 추가 보상만으로 해결하면 선례와 형평성 문제가 생기고, 강제집행만 앞세우면 갈등 비용이 커지는 구조입니다.\n\n오늘의 체크포인트: 계획 가구 수보다 이주율, 명도 절차의 실제 종료일과 최신 사업시행 일정을 기준으로 공급 시점을 판단해야 합니다.\n\n오픈카톡 [부알남] 부동산 알려주는 남자";</script>
 </section>
 
-<section class="card">
-<div class="card-head">
-<h2>17. 📰 부부투 정책분석</h2>
-<button class="copy-btn" onclick="copySection('analysis6', this)">복사</button>
-</div>
-<textarea id="ta-analysis6" class="preview" readonly>부부투 문답노트
-2026-10-22
+<section class="card" data-slot="27">
+  <div class="card-head">
+    <h2>27. 📰 부부투 정책분석</h2>
+    <button class="copy-btn" onclick="copySection('analysis6', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-analysis6" class="preview" readonly>부부투 문답노트
+2026-10-29
 
-공시가격 급등으로 재산세 부담도 증가
-https://n.news.naver.com/mnews/article/001/0016391585
+구룡마을 3,739가구 공급, 화재보다 이주 완료가 착공의 관건
+https://n.news.naver.com/mnews/article/005/0001881579
 
 Q. 무슨 일이 있었나?
 
-서울 아파트 재산세 개인 부과액이 전년보다 약 4천800억원 늘어 처음 3조원을 넘었다는 서울시 제출 자료가 공개됐습니다.
+화재가 발생한 구룡마을의 이재민 거처와 재개발 일정 문제가 함께 제기됐습니다. 사업은 3,739가구 규모이며 기사 기준 140가구가 아직 이주하지 않은 상태입니다.
 
 Q. 표면적 명분과 실제 구조는?
 
-재산세는 보유 자산 가치에 맞춰 지방재정을 부담하게 하는 세금입니다. 실제 구조는 공시가격을 출발점으로 과세표준과 구간별 세율, 특례와 상한을 적용하는 방식입니다.
+명분은 열악한 주거환경을 개선하고 강남권에 공공임대를 공급하는 것입니다. 실제 구조는 보상과 이주, 명도, 철거를 완료해야 착공할 수 있어 계획 승인과 실물 공급 사이에 긴 시차가 생깁니다.
 
 Q. 투자자·세입자에게 어떤 영향이 있나?
 
-소유자는 현금흐름과 보유수익률이 낮아질 수 있습니다. 세입자에게 세금이 자동 전가되는 것은 아니지만 임대인의 비용과 지역 수급이 갱신 조건에 영향을 줄 수 있습니다.
+인근 소유자는 개발 기대를 가격에 얼마나 반영할지 신중해야 합니다. 세입자는 공사와 이주 과정의 임대 수요 변화를 확인해야 하지만, 화재만으로 사업 지연이나 임대료 방향이 확정되지는 않습니다.
 
 Q. 오늘 뭘 체크해야 하나?
 
-개별 주택의 공시가격, 납세자 유형과 전년 고지액을 확인해야 합니다. 지역 합계만으로 매도나 임대료 방향을 단정하면 안 됩니다.
+잔여 이주 가구 수, 명도소송 진행 상황과 SH의 최신 착공·준공 일정을 확인해야 합니다. 계획 물량을 즉시 공급량으로 계산하면 안 됩니다.
 
 카카오톡 오픈채팅 [부부투] 부동산 부자들의 투자</textarea>
-<script>window.__content_analysis6 = "부부투 문답노트\n2026-10-22\n\n공시가격 급등으로 재산세 부담도 증가\nhttps://n.news.naver.com/mnews/article/001/0016391585\n\nQ. 무슨 일이 있었나?\n\n서울 아파트 재산세 개인 부과액이 전년보다 약 4천800억원 늘어 처음 3조원을 넘었다는 서울시 제출 자료가 공개됐습니다.\n\nQ. 표면적 명분과 실제 구조는?\n\n재산세는 보유 자산 가치에 맞춰 지방재정을 부담하게 하는 세금입니다. 실제 구조는 공시가격을 출발점으로 과세표준과 구간별 세율, 특례와 상한을 적용하는 방식입니다.\n\nQ. 투자자·세입자에게 어떤 영향이 있나?\n\n소유자는 현금흐름과 보유수익률이 낮아질 수 있습니다. 세입자에게 세금이 자동 전가되는 것은 아니지만 임대인의 비용과 지역 수급이 갱신 조건에 영향을 줄 수 있습니다.\n\nQ. 오늘 뭘 체크해야 하나?\n\n개별 주택의 공시가격, 납세자 유형과 전년 고지액을 확인해야 합니다. 지역 합계만으로 매도나 임대료 방향을 단정하면 안 됩니다.\n\n카카오톡 오픈채팅 [부부투] 부동산 부자들의 투자";</script>
+
+  <script>window.__content_analysis6 = "부부투 문답노트\n2026-10-29\n\n구룡마을 3,739가구 공급, 화재보다 이주 완료가 착공의 관건\nhttps://n.news.naver.com/mnews/article/005/0001881579\n\nQ. 무슨 일이 있었나?\n\n화재가 발생한 구룡마을의 이재민 거처와 재개발 일정 문제가 함께 제기됐습니다. 사업은 3,739가구 규모이며 기사 기준 140가구가 아직 이주하지 않은 상태입니다.\n\nQ. 표면적 명분과 실제 구조는?\n\n명분은 열악한 주거환경을 개선하고 강남권에 공공임대를 공급하는 것입니다. 실제 구조는 보상과 이주, 명도, 철거를 완료해야 착공할 수 있어 계획 승인과 실물 공급 사이에 긴 시차가 생깁니다.\n\nQ. 투자자·세입자에게 어떤 영향이 있나?\n\n인근 소유자는 개발 기대를 가격에 얼마나 반영할지 신중해야 합니다. 세입자는 공사와 이주 과정의 임대 수요 변화를 확인해야 하지만, 화재만으로 사업 지연이나 임대료 방향이 확정되지는 않습니다.\n\nQ. 오늘 뭘 체크해야 하나?\n\n잔여 이주 가구 수, 명도소송 진행 상황과 SH의 최신 착공·준공 일정을 확인해야 합니다. 계획 물량을 즉시 공급량으로 계산하면 안 됩니다.\n\n카카오톡 오픈채팅 [부부투] 부동산 부자들의 투자";</script>
 </section>
 
-<section class="card">
-<div class="card-head">
-<h2>18. 📰 비밀노트 정책 분석</h2>
-<button class="copy-btn" onclick="copySection('analysis1', this)">복사</button>
-</div>
-<textarea id="ta-analysis1" class="preview" readonly>프롭-페서가 말아주는 뉴스로 생각하기
-2026-10-22
+<section class="card" data-slot="28">
+  <div class="card-head">
+    <h2>28. 📰 비밀노트 정책 분석</h2>
+    <button class="copy-btn" onclick="copySection('analysis1', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-analysis1" class="preview" readonly>프롭-페서가 말아주는 뉴스로 생각하기
+2026-10-29
 
-공시가격 급등으로 재산세 부담도 증가
-https://n.news.naver.com/mnews/article/001/0016391585
+구룡마을 3,739가구 공급, 화재보다 이주 완료가 착공의 관건
+https://n.news.naver.com/mnews/article/005/0001881579
 
-서울 아파트 재산세가 처음 3조원을 넘었다는 집계는 가격 상승이 보유비용으로 전달되는 모습을 보여줍니다. 공시가격이 오르면 재산세 과세표준의 출발점이 높아지는 구조입니다.
+구룡마을 화재는 안전 문제를 다시 드러냈지만, 재개발 일정의 핵심 변수는 남은 가구의 이주와 명도 절차입니다. 기사에 따르면 계획 규모는 3,739가구이고 이 가운데 2,798가구가 공공임대주택입니다.
 
-다만 공시가격 상승률이 세액 상승률과 같지는 않습니다. 1세대 1주택 여부, 공정시장가액비율, 과세표준 구간과 세부담상한에 따라 실제 고지액은 달라집니다.
+서울시가 2025년 공개한 개발계획은 2027년 착공과 2029년 준공을 목표로 제시했습니다. 반면 이번 기사에서 SH는 내년 하반기 착공과 2031년 준공 일정을 설명해, 같은 사업도 기준 시점과 공정 범위에 따라 일정이 달라질 수 있음을 보여줍니다.
 
-집값이 올라도 현금소득이 함께 늘지 않은 가구에는 보유세가 현금흐름 압박이 됩니다. 따라서 시세차익과 매년 납부할 비용을 분리해 판단해야 합니다.
+공급 숫자는 계획 승인만으로 현실이 되지 않습니다. 이주, 철거, 착공과 준공을 차례로 통과해야 실제 입주 가능한 주택이 됩니다.
 
-오늘의 체크포인트: 지난해와 올해 공시가격, 과세표준과 실제 고지세액을 나란히 놓고 증가 원인을 확인해야 합니다.
+오늘의 체크포인트: 잔여 이주 가구 수, 명도소송 완료 여부와 SH가 공표하는 최신 착공·준공 기준을 함께 확인해야 합니다.
 
 옵챗 부동산 부자들의 비밀노트</textarea>
-<script>window.__content_analysis1 = "프롭-페서가 말아주는 뉴스로 생각하기\n2026-10-22\n\n공시가격 급등으로 재산세 부담도 증가\nhttps://n.news.naver.com/mnews/article/001/0016391585\n\n서울 아파트 재산세가 처음 3조원을 넘었다는 집계는 가격 상승이 보유비용으로 전달되는 모습을 보여줍니다. 공시가격이 오르면 재산세 과세표준의 출발점이 높아지는 구조입니다.\n\n다만 공시가격 상승률이 세액 상승률과 같지는 않습니다. 1세대 1주택 여부, 공정시장가액비율, 과세표준 구간과 세부담상한에 따라 실제 고지액은 달라집니다.\n\n집값이 올라도 현금소득이 함께 늘지 않은 가구에는 보유세가 현금흐름 압박이 됩니다. 따라서 시세차익과 매년 납부할 비용을 분리해 판단해야 합니다.\n\n오늘의 체크포인트: 지난해와 올해 공시가격, 과세표준과 실제 고지세액을 나란히 놓고 증가 원인을 확인해야 합니다.\n\n옵챗 부동산 부자들의 비밀노트";</script>
+
+  <script>window.__content_analysis1 = "프롭-페서가 말아주는 뉴스로 생각하기\n2026-10-29\n\n구룡마을 3,739가구 공급, 화재보다 이주 완료가 착공의 관건\nhttps://n.news.naver.com/mnews/article/005/0001881579\n\n구룡마을 화재는 안전 문제를 다시 드러냈지만, 재개발 일정의 핵심 변수는 남은 가구의 이주와 명도 절차입니다. 기사에 따르면 계획 규모는 3,739가구이고 이 가운데 2,798가구가 공공임대주택입니다.\n\n서울시가 2025년 공개한 개발계획은 2027년 착공과 2029년 준공을 목표로 제시했습니다. 반면 이번 기사에서 SH는 내년 하반기 착공과 2031년 준공 일정을 설명해, 같은 사업도 기준 시점과 공정 범위에 따라 일정이 달라질 수 있음을 보여줍니다.\n\n공급 숫자는 계획 승인만으로 현실이 되지 않습니다. 이주, 철거, 착공과 준공을 차례로 통과해야 실제 입주 가능한 주택이 됩니다.\n\n오늘의 체크포인트: 잔여 이주 가구 수, 명도소송 완료 여부와 SH가 공표하는 최신 착공·준공 기준을 함께 확인해야 합니다.\n\n옵챗 부동산 부자들의 비밀노트";</script>
 </section>
 
-<section class="card">
-<div class="card-head">
-<h2>19. 부동산 컨텐츠 1</h2>
-<button class="copy-btn" onclick="copySection('daily19', this)">복사</button>
+<section class="card" data-slot="29">
+  <div class="card-head">
+    <h2>29. 📰 부동산 불장의 진실 정책분석</h2>
+    <button class="copy-btn" onclick="copySection('analysis7', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-analysis7" class="preview" readonly>구룡마을 3,739가구 중 공공임대 2,798가구, 공급 시계는 잔여 140가구 이주에 달렸습니다
+
+부동산 불장의 진실 정책분석
+2026-10-29
+
+한 줄 판정: 구룡마을 화재가 재개발 지연을 확정한 것은 아니지만, 3,739가구의 계획 물량을 실제 공급으로 바꾸는 핵심 관문은 남은 140가구의 이주와 명도 절차입니다.
+
+당일 후보로 구룡마을 재개발, 세종 행정수도 입법, 임대차 분쟁상담, 대출규제 비판 기사를 비교했습니다. 세종 이전과 대출규제 기사는 입법·정치적 주장 비중이 높고, 임대차 상담 수치는 공개된 세부 원자료 확인이 제한돼 계획·공급 수치와 서울시 1차 자료를 대조할 수 있는 구룡마을을 선택했습니다.
+
+기사에 따르면 사업 규모는 3,739가구이며 2,798가구가 공공임대주택입니다. 전체 1,107가구 가운데 140가구가 이주를 거부한 채 남아 있고, SH는 내년 상반기까지 명도소송을 마친 뒤 집행 절차를 진행한다는 입장을 밝혔습니다.
+
+서울시가 2025년 12월 공개한 개발계획 변경 심의 자료도 총 3,739가구를 제시했습니다. 당시 발표는 2027년 착공과 2029년 준공을 목표로 했지만, 이번 기사는 SH 설명을 토대로 2027년 하반기 착공과 2031년 준공을 전했습니다.
+
+두 일정의 차이를 곧바로 확정 지연으로 단정할 수는 없습니다. 발표 시점과 준공 범위가 다를 수 있고, 최신 공식 고시나 공정표가 확인돼야 변경 여부를 판정할 수 있습니다.
+
+공급의 작동 경로는 개발계획 승인에서 보상과 이주, 명도, 철거, 착공, 준공과 입주로 이어집니다. 어느 한 단계가 늦어지면 3,739가구는 시장에서 사용할 수 있는 재고가 아니라 장래 계획에 머뭅니다.
+
+반대 해석도 필요합니다. SH는 기사에서 화재로 인한 일정 변동사항은 현재 없다고 밝혔고 토지 소유권과 보상 절차가 정리됐다고 설명했습니다. 따라서 화재 자체보다 잔여 점유 해소와 이재민 임시거처 마련이 실제 공정에 어떤 영향을 주는지를 봐야 합니다.
+
+인근 매수자는 준공연도 하나를 호재 가치로 환산하지 말고 최신 이주율과 착공 여부를 확인해야 합니다. 임차인은 이주·철거 전후의 주변 전월세 수요를 살피되, 계획 물량만으로 임대료 방향을 단정하지 않아야 합니다.
+
+원문 기사: https://n.news.naver.com/mnews/article/005/0001881579
+1차 근거: https://uri.seoul.go.kr/web/bbsPost/61/4915/detail.do?mid=1076</textarea>
+
+  <script>window.__content_analysis7 = "구룡마을 3,739가구 중 공공임대 2,798가구, 공급 시계는 잔여 140가구 이주에 달렸습니다\n\n부동산 불장의 진실 정책분석\n2026-10-29\n\n한 줄 판정: 구룡마을 화재가 재개발 지연을 확정한 것은 아니지만, 3,739가구의 계획 물량을 실제 공급으로 바꾸는 핵심 관문은 남은 140가구의 이주와 명도 절차입니다.\n\n당일 후보로 구룡마을 재개발, 세종 행정수도 입법, 임대차 분쟁상담, 대출규제 비판 기사를 비교했습니다. 세종 이전과 대출규제 기사는 입법·정치적 주장 비중이 높고, 임대차 상담 수치는 공개된 세부 원자료 확인이 제한돼 계획·공급 수치와 서울시 1차 자료를 대조할 수 있는 구룡마을을 선택했습니다.\n\n기사에 따르면 사업 규모는 3,739가구이며 2,798가구가 공공임대주택입니다. 전체 1,107가구 가운데 140가구가 이주를 거부한 채 남아 있고, SH는 내년 상반기까지 명도소송을 마친 뒤 집행 절차를 진행한다는 입장을 밝혔습니다.\n\n서울시가 2025년 12월 공개한 개발계획 변경 심의 자료도 총 3,739가구를 제시했습니다. 당시 발표는 2027년 착공과 2029년 준공을 목표로 했지만, 이번 기사는 SH 설명을 토대로 2027년 하반기 착공과 2031년 준공을 전했습니다.\n\n두 일정의 차이를 곧바로 확정 지연으로 단정할 수는 없습니다. 발표 시점과 준공 범위가 다를 수 있고, 최신 공식 고시나 공정표가 확인돼야 변경 여부를 판정할 수 있습니다.\n\n공급의 작동 경로는 개발계획 승인에서 보상과 이주, 명도, 철거, 착공, 준공과 입주로 이어집니다. 어느 한 단계가 늦어지면 3,739가구는 시장에서 사용할 수 있는 재고가 아니라 장래 계획에 머뭅니다.\n\n반대 해석도 필요합니다. SH는 기사에서 화재로 인한 일정 변동사항은 현재 없다고 밝혔고 토지 소유권과 보상 절차가 정리됐다고 설명했습니다. 따라서 화재 자체보다 잔여 점유 해소와 이재민 임시거처 마련이 실제 공정에 어떤 영향을 주는지를 봐야 합니다.\n\n인근 매수자는 준공연도 하나를 호재 가치로 환산하지 말고 최신 이주율과 착공 여부를 확인해야 합니다. 임차인은 이주·철거 전후의 주변 전월세 수요를 살피되, 계획 물량만으로 임대료 방향을 단정하지 않아야 합니다.\n\n원문 기사: https://n.news.naver.com/mnews/article/005/0001881579\n1차 근거: https://uri.seoul.go.kr/web/bbsPost/61/4915/detail.do?mid=1076";</script>
+</section>
+
+<section class="card" data-slot="30">
+  <div class="card-head">
+    <h2>30. 🔑 KB부동산 전세수급지수</h2>
+    <button class="copy-btn" onclick="copySection('supplydemand', this)">복사</button>
+  </div>
+  <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
+  <textarea id="ta-supplydemand" class="preview" readonly>🔑 KB부동산 전세수급지수
+공인중개사무소 시장동향 설문
+
+📅 주간 기준일: 2026-10-19
+🗓️ 월간 기준월: 2026년 10월
+
+💡 전국 주간 전세수급지수: 175.39
+
+🔑 주간 전세수급지수
+괄호는 전주 대비 · 단위: 포인트(p)
+
+🇰🇷 전국 175.39 (-0.53p)
+🏘️ 수도권 179.69 (+0.18p)
+🗺️ 기타지방 170.81 (-1.96p)
+🏙️ 서울 176.03 (-0.15p)
+🏘️ 경기 180.52 (+0.84p)
+🌉 인천 184.06 (-1.99p)
+🌊 부산 177.18 (-0.15p)
+🍎 대구 172.88 (+2.88p)
+🎨 광주 160.64 (-2.38p)
+🔬 대전 175.69 (-1.99p)
+🏭 울산 177.43 (-7.17p)
+🏢 세종 174.19 (+6.50p)
+🏔️ 강원 147.03 (-9.69p)
+⛰️ 충북 172.34 (-3.05p)
+🌅 충남 174.42 (+2.38p)
+🍚 전북 175.61 (-0.66p)
+🏛️ 경북 165.10 (-0.72p)
+⚓ 경남 177.02 (-3.19p)
+🍊 제주 165.38 (+20.87p)
+
+🗓️ 월간 전세수급지수
+괄호는 전월 대비 · 단위: 포인트(p)
+
+🇰🇷 전국 175.91 (+0.17p)
+🏘️ 수도권 179.51 (-0.89p)
+🗺️ 기타지방 172.77 (+1.17p)
+🏙️ 서울 176.18 (-1.39p)
+🏘️ 경기 179.69 (-0.75p)
+🌉 인천 186.05 (-0.43p)
+🌊 부산 177.33 (+0.95p)
+🍎 대구 170.00 (+2.31p)
+🎨 광주 163.02 (+2.60p)
+🔬 대전 177.68 (+0.84p)
+🏭 울산 184.60 (+2.17p)
+🏢 세종 167.69 (-12.00p)
+🏔️ 강원 156.72 (+4.81p)
+⛰️ 충북 175.39 (-4.33p)
+🌅 충남 172.04 (+2.04p)
+🍚 전북 176.27 (+0.27p)
+🏛️ 경북 165.82 (+4.04p)
+⚓ 경남 180.21 (+1.07p)
+🍊 제주 144.51 (-9.73p)
+
+📈 최근 4회 전국 주간 흐름
+전세수급  09-28 174.72 → 10-05 175.13 → 10-12 175.91 → 10-19 175.39
+
+📖 읽는 법
+지수 범위: 0~200 · 기준: 100
+전세수급 100 초과: 공급부족 · 100 미만: 공급충분
+100: 공급부족·공급충분 응답 비중이 같음
+증감 단위: 포인트(p)
+
+출처: KB부동산 데이터허브</textarea>
+
+  <script>window.__content_supplydemand = "🔑 KB부동산 전세수급지수\n공인중개사무소 시장동향 설문\n\n📅 주간 기준일: 2026-10-19\n🗓️ 월간 기준월: 2026년 10월\n\n💡 전국 주간 전세수급지수: 175.39\n\n🔑 주간 전세수급지수\n괄호는 전주 대비 · 단위: 포인트(p)\n\n🇰🇷 전국 175.39 (-0.53p)\n🏘️ 수도권 179.69 (+0.18p)\n🗺️ 기타지방 170.81 (-1.96p)\n🏙️ 서울 176.03 (-0.15p)\n🏘️ 경기 180.52 (+0.84p)\n🌉 인천 184.06 (-1.99p)\n🌊 부산 177.18 (-0.15p)\n🍎 대구 172.88 (+2.88p)\n🎨 광주 160.64 (-2.38p)\n🔬 대전 175.69 (-1.99p)\n🏭 울산 177.43 (-7.17p)\n🏢 세종 174.19 (+6.50p)\n🏔️ 강원 147.03 (-9.69p)\n⛰️ 충북 172.34 (-3.05p)\n🌅 충남 174.42 (+2.38p)\n🍚 전북 175.61 (-0.66p)\n🏛️ 경북 165.10 (-0.72p)\n⚓ 경남 177.02 (-3.19p)\n🍊 제주 165.38 (+20.87p)\n\n🗓️ 월간 전세수급지수\n괄호는 전월 대비 · 단위: 포인트(p)\n\n🇰🇷 전국 175.91 (+0.17p)\n🏘️ 수도권 179.51 (-0.89p)\n🗺️ 기타지방 172.77 (+1.17p)\n🏙️ 서울 176.18 (-1.39p)\n🏘️ 경기 179.69 (-0.75p)\n🌉 인천 186.05 (-0.43p)\n🌊 부산 177.33 (+0.95p)\n🍎 대구 170.00 (+2.31p)\n🎨 광주 163.02 (+2.60p)\n🔬 대전 177.68 (+0.84p)\n🏭 울산 184.60 (+2.17p)\n🏢 세종 167.69 (-12.00p)\n🏔️ 강원 156.72 (+4.81p)\n⛰️ 충북 175.39 (-4.33p)\n🌅 충남 172.04 (+2.04p)\n🍚 전북 176.27 (+0.27p)\n🏛️ 경북 165.82 (+4.04p)\n⚓ 경남 180.21 (+1.07p)\n🍊 제주 144.51 (-9.73p)\n\n📈 최근 4회 전국 주간 흐름\n전세수급  09-28 174.72 → 10-05 175.13 → 10-12 175.91 → 10-19 175.39\n\n📖 읽는 법\n지수 범위: 0~200 · 기준: 100\n전세수급 100 초과: 공급부족 · 100 미만: 공급충분\n100: 공급부족·공급충분 응답 비중이 같음\n증감 단위: 포인트(p)\n\n출처: KB부동산 데이터허브";</script>
+</section>
 </div>
-<textarea id="ta-daily19" class="preview" readonly>🏠 집 보러 갈 때 한 가지
-
-2026년 10월 29일
-
-소음은 창을 연 상태와 닫은 상태를 비교하세요
-
-창을 닫았을 때 조용한 집도 열면 대화가 끊길 만큼 차 소리가 들릴 수 있습니다.
-
-실제 생활에서 창을 열어둘 수 있는지 보세요.
-
-거실과 침실에서 설명을 잠깐 멈추고 소리를 들어보세요.
-
-같은 자리에 서서 창을 닫았을 때와 열었을 때를 비교하세요.
-
-도로 소리인지, 엘리베이터나 공동현관 문이 움직이는 소리인지 구분해 적으세요.
-
-방문 순간 조용했다는 사실은 밤이나 출근 시간의 소음까지 보장하지 않습니다.
-
-소음을 듣지 못한 것과 소음이 없는 것은 다릅니다.
-
-도로 쪽 침실을 쓸 가족이 있다면 그 방에서 먼저 확인하세요.
-
-늦게 귀가하는 가구라면 저녁 재방문을 잡아 주변 상가와 주차장 소리도 들어보세요.
-
-소음이 들리면 발생 위치와 시간을 중개인에게 전하고 반복되는지 물으세요.
-
-휴대전화 녹음은 기억을 남기는 자료로 쓰되, 그 기록만으로 법적 소음 기준을 넘었다고 판단하지 마세요.</textarea>
-<script>window.__content_daily19 = "🏠 집 보러 갈 때 한 가지\n\n2026년 10월 29일\n\n소음은 창을 연 상태와 닫은 상태를 비교하세요\n\n창을 닫았을 때 조용한 집도 열면 대화가 끊길 만큼 차 소리가 들릴 수 있습니다.\n\n실제 생활에서 창을 열어둘 수 있는지 보세요.\n\n거실과 침실에서 설명을 잠깐 멈추고 소리를 들어보세요.\n\n같은 자리에 서서 창을 닫았을 때와 열었을 때를 비교하세요.\n\n도로 소리인지, 엘리베이터나 공동현관 문이 움직이는 소리인지 구분해 적으세요.\n\n방문 순간 조용했다는 사실은 밤이나 출근 시간의 소음까지 보장하지 않습니다.\n\n소음을 듣지 못한 것과 소음이 없는 것은 다릅니다.\n\n도로 쪽 침실을 쓸 가족이 있다면 그 방에서 먼저 확인하세요.\n\n늦게 귀가하는 가구라면 저녁 재방문을 잡아 주변 상가와 주차장 소리도 들어보세요.\n\n소음이 들리면 발생 위치와 시간을 중개인에게 전하고 반복되는지 물으세요.\n\n휴대전화 녹음은 기억을 남기는 자료로 쓰되, 그 기록만으로 법적 소음 기준을 넘었다고 판단하지 마세요.";</script>
-</section>
-
-<section class="card">
-<div class="card-head">
-<h2>20. 부동산 컨텐츠 2</h2>
-<button class="copy-btn" onclick="copySection('daily20', this)">복사</button>
-</div>
-<textarea id="ta-daily20" class="preview" readonly>💬 부동산 광고 해석기
-
-2026년 10월 29일
-
-‘영구 조망’은 근거부터 확인하세요
-
-광고 문구: ‘영구 조망’.
-
-현재 앞이 트여 있다는 사실과 앞으로도 유지된다는 주장은 다릅니다.
-
-앞이 공터라 시야가 넓어도 그 땅의 향후 이용 계획을 확인하지 않았다면 계속 비어 있을 것이라고 말할 수 없습니다.
-
-산이나 공원이 보인다는 사진도 다른 동이나 더 높은 층에서 촬영했을 수 있습니다.
-
-광고 사진의 촬영 위치부터 물으세요.
-
-같은 단지라도 해당 집의 거실 창에서 보이는 범위는 다른 층의 홍보 사진과 다를 수 있습니다.
-
-해당 동·층에 직접 들어가 창밖을 찍고, 앞 토지의 위치를 지도에 표시하세요.
-
-‘앞으로도 가리지 않는다’는 설명에는 근거 자료와 발표일을 요청하세요.
-
-계획 자료를 받았다면 확정된 내용과 예상 설명을 구분하세요.
-
-근거가 없다면 비교표에 ‘현재 조망은 확인, 미래 유지 여부는 미확인’이라고 적으세요.
-
-확인되지 않은 전망을 확정 조건처럼 가격에 더하지 마세요.</textarea>
-<script>window.__content_daily20 = "💬 부동산 광고 해석기\n\n2026년 10월 29일\n\n‘영구 조망’은 근거부터 확인하세요\n\n광고 문구: ‘영구 조망’.\n\n현재 앞이 트여 있다는 사실과 앞으로도 유지된다는 주장은 다릅니다.\n\n앞이 공터라 시야가 넓어도 그 땅의 향후 이용 계획을 확인하지 않았다면 계속 비어 있을 것이라고 말할 수 없습니다.\n\n산이나 공원이 보인다는 사진도 다른 동이나 더 높은 층에서 촬영했을 수 있습니다.\n\n광고 사진의 촬영 위치부터 물으세요.\n\n같은 단지라도 해당 집의 거실 창에서 보이는 범위는 다른 층의 홍보 사진과 다를 수 있습니다.\n\n해당 동·층에 직접 들어가 창밖을 찍고, 앞 토지의 위치를 지도에 표시하세요.\n\n‘앞으로도 가리지 않는다’는 설명에는 근거 자료와 발표일을 요청하세요.\n\n계획 자료를 받았다면 확정된 내용과 예상 설명을 구분하세요.\n\n근거가 없다면 비교표에 ‘현재 조망은 확인, 미래 유지 여부는 미확인’이라고 적으세요.\n\n확인되지 않은 전망을 확정 조건처럼 가격에 더하지 마세요.";</script>
-</section>
-
-<section class="card">
-<div class="card-head">
-<h2>21. 부동산 컨텐츠 3</h2>
-<button class="copy-btn" onclick="copySection('daily21', this)">복사</button>
-</div>
-<textarea id="ta-daily21" class="preview" readonly>🧠 돈에 관한 착각
-
-2026년 10월 29일
-
-가격이 반으로 떨어지면 반만 오르면 회복할까요?
-
-50% 떨어진 뒤 50% 올라도 원금이 아닙니다.
-
-두 비율이 적용되는 금액이 다르기 때문입니다.
-
-100만원이 50% 하락하면 50만원입니다.
-
-그 50만원에서 50% 상승하면 75만원입니다.
-
-처음의 100만원으로 돌아가려면 50만원이 더 늘어야 하므로 필요한 상승률은 100%입니다.
-
-같은 방식으로 100만원이 20% 내려 80만원이 되면 원금 회복에는 25% 상승이 필요합니다.
-
-모두 수수료와 세금을 제외한 단순 계산입니다.
-
-손익을 볼 때는 퍼센트를 먼저 더하지 말고 처음 금액, 현재 금액, 차액을 적으세요.
-
-이후 상승률은 현재 금액을 기준으로 계산하세요.
-
-‘내린 만큼만 오르면 된다’고 생각하면 필요한 회복 폭을 작게 보게 됩니다.
-
-손실을 만회하려고 추가 지출을 정할 때도 회복 희망액과 추가로 감당할 손실액을 나누어 적으세요.
-
-과거 손실만으로 다음 선택의 수익이 정해지지는 않습니다.</textarea>
-<script>window.__content_daily21 = "🧠 돈에 관한 착각\n\n2026년 10월 29일\n\n가격이 반으로 떨어지면 반만 오르면 회복할까요?\n\n50% 떨어진 뒤 50% 올라도 원금이 아닙니다.\n\n두 비율이 적용되는 금액이 다르기 때문입니다.\n\n100만원이 50% 하락하면 50만원입니다.\n\n그 50만원에서 50% 상승하면 75만원입니다.\n\n처음의 100만원으로 돌아가려면 50만원이 더 늘어야 하므로 필요한 상승률은 100%입니다.\n\n같은 방식으로 100만원이 20% 내려 80만원이 되면 원금 회복에는 25% 상승이 필요합니다.\n\n모두 수수료와 세금을 제외한 단순 계산입니다.\n\n손익을 볼 때는 퍼센트를 먼저 더하지 말고 처음 금액, 현재 금액, 차액을 적으세요.\n\n이후 상승률은 현재 금액을 기준으로 계산하세요.\n\n‘내린 만큼만 오르면 된다’고 생각하면 필요한 회복 폭을 작게 보게 됩니다.\n\n손실을 만회하려고 추가 지출을 정할 때도 회복 희망액과 추가로 감당할 손실액을 나누어 적으세요.\n\n과거 손실만으로 다음 선택의 수익이 정해지지는 않습니다.";</script>
-</section>
-
-<section class="card">
-<div class="card-head">
-<h2>22. 부동산 컨텐츠 4</h2>
-<button class="copy-btn" onclick="copySection('daily22', this)">복사</button>
-</div>
-<textarea id="ta-daily22" class="preview" readonly>🛠️ 오늘의 집 관리
-
-2026년 10월 29일
-
-세탁기 문 주변도 청소 목록에 넣으세요
-
-세탁이 끝나도 문 고무패킹과 세제통에는 물과 찌꺼기가 남을 수 있습니다.
-
-눈에 보이는 부분부터 관리하세요.
-
-모델 설명서에서 사용 후 관리와 세척 가능한 부위를 찾으세요.
-
-안내대로 전원을 차단한 뒤 패킹 접힌 부분의 이물질을 닦고, 세제통은 분리 세척이 허용되는 경우에만 분리하세요.
-
-세제 양은 많이 넣기보다 제품과 세제의 권장량을 따르세요.
-
-내부 통 세척 방법과 사용할 수 있는 세척제도 모델별 안내가 기준입니다.
-
-청소 뒤에는 안내된 방법으로 습기를 말리되 어린이나 반려동물이 통 안에 들어가지 못하도록 접근을 막으세요.
-
-세탁기 문을 열어두는 행동만으로 관리가 끝났다고 생각하지 마세요.
-
-냄새나 누수가 반복되면 발생 시점과 젖는 위치를 기록해 서비스 담당자에게 전달하세요.
-
-외부 패널을 뜯거나 배관을 임의로 분리하지 말고 직접 관리 범위와 수리 범위를 나누세요.</textarea>
-<script>window.__content_daily22 = "🛠️ 오늘의 집 관리\n\n2026년 10월 29일\n\n세탁기 문 주변도 청소 목록에 넣으세요\n\n세탁이 끝나도 문 고무패킹과 세제통에는 물과 찌꺼기가 남을 수 있습니다.\n\n눈에 보이는 부분부터 관리하세요.\n\n모델 설명서에서 사용 후 관리와 세척 가능한 부위를 찾으세요.\n\n안내대로 전원을 차단한 뒤 패킹 접힌 부분의 이물질을 닦고, 세제통은 분리 세척이 허용되는 경우에만 분리하세요.\n\n세제 양은 많이 넣기보다 제품과 세제의 권장량을 따르세요.\n\n내부 통 세척 방법과 사용할 수 있는 세척제도 모델별 안내가 기준입니다.\n\n청소 뒤에는 안내된 방법으로 습기를 말리되 어린이나 반려동물이 통 안에 들어가지 못하도록 접근을 막으세요.\n\n세탁기 문을 열어두는 행동만으로 관리가 끝났다고 생각하지 마세요.\n\n냄새나 누수가 반복되면 발생 시점과 젖는 위치를 기록해 서비스 담당자에게 전달하세요.\n\n외부 패널을 뜯거나 배관을 임의로 분리하지 말고 직접 관리 범위와 수리 범위를 나누세요.";</script>
-</section>
-
-<section class="card">
-<div class="card-head">
-<h2>23. 부동산 컨텐츠 5</h2>
-<button class="copy-btn" onclick="copySection('daily23', this)">복사</button>
-</div>
-<textarea id="ta-daily23" class="preview" readonly>📦 이사 준비 한 가지
-
-2026년 10월 29일
-
-가전 이전 설치는 운반과 별도인지 물으세요
-
-이사업체가 가전을 옮겨준다는 말이 분리와 재설치까지 모두 포함한다는 뜻은 아닙니다.
-
-에어컨, 세탁기, 정수기처럼 연결 작업이 필요한 제품을 목록으로 만드세요.
-
-제품별로 누가 분리하고 누가 설치하는지, 설치 예약일은 언제인지 적으세요.
-
-설치업체에는 새집 주소와 모델명을 알려 필요한 연결 조건을 물으세요.
-
-기존 집에서 쓰던 배관이나 부품을 그대로 쓸 수 있는지는 제품과 현장 조건에 따라 달라질 수 있습니다.
-
-견적서에는 운반비, 분리비, 설치비, 현장 추가 비용의 기준을 나누어 적으세요.
-
-‘현장에서 결정’이라고만 되어 있다면 어떤 경우에 비용이 붙는지 먼저 물으세요.
-
-이삿짐 도착일과 설치일이 다르면 그 사이에 제품을 쓸 수 없다는 점도 생활 일정에 넣으세요.
-
-가스나 전기 연결을 임의로 분리하지 말고 해당 작업 담당자에게 맡기세요.
-
-예약 완료 문자와 담당 연락처는 첫날 가방에 보관하세요.</textarea>
-<script>window.__content_daily23 = "📦 이사 준비 한 가지\n\n2026년 10월 29일\n\n가전 이전 설치는 운반과 별도인지 물으세요\n\n이사업체가 가전을 옮겨준다는 말이 분리와 재설치까지 모두 포함한다는 뜻은 아닙니다.\n\n에어컨, 세탁기, 정수기처럼 연결 작업이 필요한 제품을 목록으로 만드세요.\n\n제품별로 누가 분리하고 누가 설치하는지, 설치 예약일은 언제인지 적으세요.\n\n설치업체에는 새집 주소와 모델명을 알려 필요한 연결 조건을 물으세요.\n\n기존 집에서 쓰던 배관이나 부품을 그대로 쓸 수 있는지는 제품과 현장 조건에 따라 달라질 수 있습니다.\n\n견적서에는 운반비, 분리비, 설치비, 현장 추가 비용의 기준을 나누어 적으세요.\n\n‘현장에서 결정’이라고만 되어 있다면 어떤 경우에 비용이 붙는지 먼저 물으세요.\n\n이삿짐 도착일과 설치일이 다르면 그 사이에 제품을 쓸 수 없다는 점도 생활 일정에 넣으세요.\n\n가스나 전기 연결을 임의로 분리하지 말고 해당 작업 담당자에게 맡기세요.\n\n예약 완료 문자와 담당 연락처는 첫날 가방에 보관하세요.";</script>
-</section>
-
-<section class="card">
-<div class="card-head">
-<h2>24. 부동산 컨텐츠 6</h2>
-<button class="copy-btn" onclick="copySection('daily24', this)">복사</button>
-</div>
-<textarea id="ta-daily24" class="preview" readonly>⭕ 오늘의 부동산 OX
-
-2026년 10월 29일
-
-역까지 직선거리와 걸어가는 거리는 같을까요?
-
-정답은 X입니다.
-
-지도에서 가까워 보여도 실제 보행 동선은 돌아갈 수 있습니다.
-
-집에서 역까지 직선으로 300m라도 사이에 담장이나 큰 도로가 있으면 횡단보도까지 우회해야 합니다.
-
-단지 출입구가 역 반대편이면 내부 이동도 추가됩니다.
-
-역 입구에 도착했다고 통근이 끝나는 것도 아닙니다.
-
-지하 승강장까지 내려가는 시간과 환승 통로를 걷는 시간은 지도상의 직선거리에 들어 있지 않습니다.
-
-집 현관에서 출발해 실제 탈 노선의 승강장까지 시간을 재세요.
-
-신호를 기다리는 동안에도 시계를 멈추지 마세요.
-
-유모차나 이동 보조기구를 쓰신다면 계단 대신 엘리베이터로 가는 길을 택해야 합니다.
-
-두 집을 비교할 때 출발점과 도착점을 똑같이 맞추세요.
-
-단지 정문부터 잰 집과 현관부터 잰 집을 비교하면 짧게 나온 쪽이 유리해집니다.</textarea>
-<script>window.__content_daily24 = "⭕ 오늘의 부동산 OX\n\n2026년 10월 29일\n\n역까지 직선거리와 걸어가는 거리는 같을까요?\n\n정답은 X입니다.\n\n지도에서 가까워 보여도 실제 보행 동선은 돌아갈 수 있습니다.\n\n집에서 역까지 직선으로 300m라도 사이에 담장이나 큰 도로가 있으면 횡단보도까지 우회해야 합니다.\n\n단지 출입구가 역 반대편이면 내부 이동도 추가됩니다.\n\n역 입구에 도착했다고 통근이 끝나는 것도 아닙니다.\n\n지하 승강장까지 내려가는 시간과 환승 통로를 걷는 시간은 지도상의 직선거리에 들어 있지 않습니다.\n\n집 현관에서 출발해 실제 탈 노선의 승강장까지 시간을 재세요.\n\n신호를 기다리는 동안에도 시계를 멈추지 마세요.\n\n유모차나 이동 보조기구를 쓰신다면 계단 대신 엘리베이터로 가는 길을 택해야 합니다.\n\n두 집을 비교할 때 출발점과 도착점을 똑같이 맞추세요.\n\n단지 정문부터 잰 집과 현관부터 잰 집을 비교하면 짧게 나온 쪽이 유리해집니다.";</script>
-</section>
 
 <script>
+// 홈 화면/사파리가 옛 사본을 보여줄 때: 페이지 날짜가 오늘과 다르면 캐시를 우회해 1회 다시 불러온다
 var BUILD_DATE = '2026-10-29';
-(function(){
-var d=new Date();
-var today = d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
-if(today!==BUILD_DATE && location.search.indexOf('r=')===-1){location.replace(location.pathname+'?r='+Date.now());}
+(function() {
+  var d = new Date();
+  var today = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  if (today !== BUILD_DATE && location.search.indexOf('r=') === -1) {
+    location.replace(location.pathname + '?r=' + Date.now());
+  }
 })();
-function markCopied(btn){var o=btn.textContent;btn.textContent='복사됨';btn.classList.add('copied');setTimeout(function(){btn.textContent=o;btn.classList.remove('copied');},1200);}
-function copySection(key,btn){var ta=document.getElementById('ta-'+key);var copied=false;try{ta.style.position='fixed';ta.style.top='0';ta.focus();ta.select();ta.setSelectionRange(0,ta.value.length);copied=document.execCommand('copy');}catch(e){copied=false;}if(copied){markCopied(btn);return;}var text=window['__content_'+key];if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){markCopied(btn);}).catch(function(){alert('복사에 실패했습니다.');});}else{alert('복사에 실패했습니다.');}}
+
+function markCopied(btn) {
+  const original = btn.textContent;
+  btn.textContent = '복사됨';
+  btn.classList.add('copied');
+  setTimeout(() => {
+    btn.textContent = original;
+    btn.classList.remove('copied');
+  }, 1200);
+}
+
+function copySection(key, btn) {
+  refreshDataCardExpiry();
+  if (btn.disabled) return;
+  // execCommand는 동기적으로 바로 결과가 나오고 권한 프롬프트로 멈추는 일이
+  // 없어서 이걸 기본으로 쓴다. navigator.clipboard는 일부 브라우저(특히
+  // 자동화/인앱 웹뷰 환경)에서 권한 대기 상태로 무한정 멈출 수 있어서
+  // 보조 수단으로만 쓴다.
+  const ta = document.getElementById('ta-' + key);
+  const previewValue = ta.value;
+  ta.value = window['__content_' + key] || previewValue;
+  let copied = false;
+  try {
+    ta.style.position = 'fixed';
+    ta.style.top = '0';
+    ta.focus();
+    ta.select();
+    ta.setSelectionRange(0, ta.value.length);
+    copied = document.execCommand('copy');
+  } catch (e) {
+    copied = false;
+  } finally {
+    ta.value = previewValue;
+  }
+
+  if (copied) {
+    markCopied(btn);
+    return;
+  }
+
+  const text = window['__content_' + key];
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(() => markCopied(btn)).catch(() => {
+      alert('복사에 실패했습니다. 아래 미리보기 텍스트를 직접 길게 눌러 복사해주세요.');
+    });
+  } else {
+    alert('복사에 실패했습니다. 아래 미리보기 텍스트를 직접 길게 눌러 복사해주세요.');
+  }
+}
+
+function refreshDataCardExpiry() {
+  document.querySelectorAll('[data-data-card]').forEach(card => {
+    const expiry = Date.parse(card.dataset.dailyExpires || card.dataset.expires);
+    if (!Number.isFinite(expiry) || Date.now() >= expiry) {
+      const ta = card.querySelector('textarea');
+      const key = ta.id.slice(3);
+      if (key === 'wikiinterest' && card.dataset.preserveSource === 'true' && Number.isFinite(expiry)) {
+        const notice = '🕒 최근 확보 자료 · 원자료 갱신 지연\n자동공유 보류 · 아래 집계 마감일을 확인해 주세요.';
+        if (!ta.value.includes(notice)) {
+          const split = ta.value.indexOf('\n');
+          ta.value = ta.value.slice(0, split) + '\n\n' + notice + '\n' + ta.value.slice(split + 1).replace(/^\n+/, '');
+        }
+        window['__content_' + key] = ta.value;
+        const button = card.querySelector('.copy-btn');
+        button.disabled = false;
+        button.textContent = '이전 자료 복사';
+        return;
+      }
+      if (key === 'seoulcommerce' && Number.isFinite(expiry) && !ta.value.includes('집계 대기')) {
+        const status = card.querySelector('.data-status');
+        status.textContent = '';
+        status.style.display = 'none';
+        window['__content_' + key] = ta.value;
+        const button = card.querySelector('.copy-btn');
+        button.disabled = false;
+        button.textContent = '이전 자료 복사';
+        return;
+      }
+      const pending = !Number.isFinite(expiry) && ta.value.includes('집계 대기')
+        ? ta.value
+        : '집계 대기 · 원자료 유효시간이 지났습니다.\n최신 원자료 검증 후 업데이트됩니다.\n자동공유 비활성';
+      ta.value = pending;
+      window['__content_' + key] = pending;
+      const button = card.querySelector('.copy-btn');
+      button.disabled = true;
+      button.textContent = '집계 대기';
+    }
+  });
+}
+refreshDataCardExpiry();
+setInterval(refreshDataCardExpiry, 15000);
 </script>
+
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+<script>
+(function() {
+  var firebaseConfig = {"apiKey": "AIzaSyBL3jjmzmNrYjqSc5jzt1F0kcaLLS55bEY", "authDomain": "naver-realestate-briefing.firebaseapp.com", "projectId": "naver-realestate-briefing", "storageBucket": "naver-realestate-briefing.firebasestorage.app", "messagingSenderId": "515367104622", "appId": "1:515367104622:web:c746a72e7fa0090663767f"};
+  firebase.initializeApp(firebaseConfig);
+  var auth = firebase.auth();
+  var db = firebase.firestore();
+
+  function show(id) {
+    ['gate-loading', 'gate-login', 'gate-pending'].forEach(function(x) {
+      document.getElementById(x).style.display = (x === id) ? 'block' : 'none';
+    });
+  }
+
+  function revealContent(isAdmin) {
+    document.getElementById('auth-gate').style.display = 'none';
+    document.getElementById('main-content').style.display = 'block';
+    var bar = document.createElement('div');
+    bar.style.cssText = 'position:fixed;top:0;left:0;right:0;background:#fff;border-bottom:1px solid #eee;padding:8px 16px;display:flex;justify-content:flex-end;gap:8px;z-index:100;font-size:12px;';
+    if (isAdmin) {
+      var a = document.createElement('a');
+      a.href = 'admin.html';
+      a.textContent = '🔑 관리자 승인 페이지';
+      a.style.cssText = 'color:#3b82f6;text-decoration:none;font-weight:600;';
+      bar.appendChild(a);
+    }
+    var out = document.createElement('button');
+    out.textContent = '로그아웃';
+    out.style.cssText = 'border:1px solid #ddd;border-radius:12px;background:#fff;padding:4px 10px;color:#888;';
+    out.onclick = function() { auth.signOut(); };
+    bar.appendChild(out);
+    document.body.insertBefore(bar, document.body.firstChild);
+    document.body.style.paddingTop = '40px';
+  }
+
+  auth.onAuthStateChanged(function(user) {
+    if (!user) { show('gate-login'); return; }
+    db.collection('users').doc(user.uid).get().then(function(doc) {
+      if (doc.exists && doc.data().approved === true) {
+        revealContent(doc.data().isAdmin === true);
+      } else {
+        show('gate-pending');
+      }
+    }).catch(function() { show('gate-pending'); });
+  });
+
+  document.getElementById('gate-login-btn').addEventListener('click', function() {
+    var email = document.getElementById('gate-email').value.trim();
+    var pw = document.getElementById('gate-password').value;
+    var err = document.getElementById('gate-error');
+    err.style.display = 'none';
+    auth.signInWithEmailAndPassword(email, pw).catch(function(e) {
+      err.textContent = '로그인 실패: 이메일 또는 비밀번호를 확인해주세요.';
+      err.style.display = 'block';
+    });
+  });
+
+  document.getElementById('gate-signup-btn').addEventListener('click', function() {
+    var email = document.getElementById('gate-email').value.trim();
+    var pw = document.getElementById('gate-password').value;
+    var err = document.getElementById('gate-error');
+    err.style.display = 'none';
+    if (!email || !pw || pw.length < 6) {
+      err.textContent = '이메일과 6자 이상 비밀번호를 입력해주세요.';
+      err.style.display = 'block';
+      return;
+    }
+    auth.createUserWithEmailAndPassword(email, pw).then(function(cred) {
+      return db.collection('users').doc(cred.user.uid).set({
+        email: email,
+        approved: false,
+        isAdmin: false,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp()
+      });
+    }).then(function() {
+      show('gate-pending');
+    }).catch(function(e) {
+      err.textContent = (e.code === 'auth/email-already-in-use') ? '이미 가입된 이메일입니다.' : ('가입 실패: ' + e.message);
+      err.style.display = 'block';
+    });
+  });
+
+  document.getElementById('gate-logout-btn').addEventListener('click', function() {
+    auth.signOut();
+  });
+})();
+</script>
+
 </body>
 </html>
