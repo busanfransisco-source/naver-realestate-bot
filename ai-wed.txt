@@ -1,5 +1,8 @@
 🤖 26년 10월 28일 수요일 AI 뉴스
 
+“앤트로픽, 내년 여름부터 AI가 AI 개발”…전문 평가업체 전망
+https://www.aitimes.com/news/articleView.html?idxno=216767
+
 안두릴·퀄컴, 미 국방·정부 겨냥 '미국산 노트북' 만든다
 https://www.aitimes.com/news/articleView.html?idxno=216764
 
@@ -21,11 +24,8 @@ https://www.aitimes.com/news/articleView.html?idxno=216758
 MS, 비용 효율 20% 높인 차세대 보안 모델 'MAI 사이버 1.1 플래시' 출시
 https://www.aitimes.com/news/articleView.html?idxno=216757
 
-오픈AI 이어 앤트로픽도 '난제' 반박…성능 경쟁, 과학적 발견으로 확대
+오픈AI 이어 앤트로픽도 '난제' 반박…성능 경쟁, 과학 발견으로 확대
 https://www.aitimes.com/news/articleView.html?idxno=216756
 
 MS, 정교함 강화한 'MAI 이미지 2.7' 공개...AA 2위·아레나 3위 등극
 https://www.aitimes.com/news/articleView.html?idxno=216755
-
-액시엄, 수학 사상 가장 긴 증명 '유한 단순군 분류' 기계 검증 완수
-https://www.aitimes.com/news/articleView.html?idxno=216754
