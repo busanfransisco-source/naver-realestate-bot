@@ -1,31 +1,31 @@
-🤖 26년 10월 22일 목요일 AI 뉴스
+🤖 26년 10월 29일 목요일 AI 뉴스
 
-학술 논문 읽고 코드 수정하는 자가 진화 에이전트 '스칼라이볼브' 등장
-https://www.aitimes.com/news/articleView.html?idxno=216552
+“앤트로픽, 내년 여름부터 AI가 AI 개발”…전문 평가업체 전망
+https://www.aitimes.com/news/articleView.html?idxno=216767
 
-앤트로픽, 기업용 AI 보안 분석 도구 ‘클로드 시큐리티’ 출시
-https://www.aitimes.com/news/articleView.html?idxno=216549
+안두릴·퀄컴, 미 국방·정부 겨냥 '미국산 노트북' 만든다
+https://www.aitimes.com/news/articleView.html?idxno=216764
 
-중국 빅테크, 엔비디아 그래픽카드 46조원 주문…첨단 AI 칩 막히자 대체품 확보
-https://www.aitimes.com/news/articleView.html?idxno=216548
+웹케시, 독파모 합류...금융 AI 에이전트에 K-엑사원 접목한다
+https://www.aitimes.com/news/articleView.html?idxno=216763
 
-“느려진 TV, 클로드에게 맡겨볼까”…광고 덜고 속도 높이는 AI 활용법
-https://www.aitimes.com/news/articleView.html?idxno=216547
+[AI 모델 신작] 바이두, 100페이지 이상 문서 읽는 OCR 공개 등 6종
+https://www.aitimes.com/news/articleView.html?idxno=216762
 
-[AI 모델 신작] 시계열 예측 ‘타임스트랄’·영상 효과음 ‘SFX 2.0’ 등 5종
-https://www.aitimes.com/news/articleView.html?idxno=216545
+리퀴드 AI, 온디바이스 AI 모델 'LFM3' 공개...브라우저·음성·이미지 처리 지원
+https://www.aitimes.com/news/articleView.html?idxno=216761
 
-미스트랄, 실시간 음성 에이전트 지원 '복스트랄 3' 제품군 공개
-https://www.aitimes.com/news/articleView.html?idxno=216544
+수천만 달러 GPU 노린다…고속도로 화물 운송망 덮친 첨단 범죄 기승
+https://www.aitimes.com/news/articleView.html?idxno=216760
 
-클로드·그록으로 무장한 해커들, 중남미 은행 400여곳 사이버 공격 자동화
-https://www.aitimes.com/news/articleView.html?idxno=216541
+앤트로픽, 권한 물려줄 '비밀 후계자' 지정…상장 후에도 주주 통제
+https://www.aitimes.com/news/articleView.html?idxno=216758
 
-오픈AI, 챗GPT 광고 서비스 26개국 추가... 전 세계 89개국으로 확대
-https://www.aitimes.com/news/articleView.html?idxno=216539
+MS, 비용 효율 20% 높인 차세대 보안 모델 'MAI 사이버 1.1 플래시' 출시
+https://www.aitimes.com/news/articleView.html?idxno=216757
 
-세계 최대 월마트도 AI 에이전트 쇼핑 본격화…전용 플랫폼까지 공개
-https://www.aitimes.com/news/articleView.html?idxno=216536
+오픈AI 이어 앤트로픽도 '난제' 반박…성능 경쟁, 과학 발견으로 확대
+https://www.aitimes.com/news/articleView.html?idxno=216756
 
-트럼프 "데이터센터 건설 기업, 지역사회에 '배당금' 지급해야"
-https://www.aitimes.com/news/articleView.html?idxno=216535
+MS, 정교함 강화한 'MAI 이미지 2.7' 공개...AA 2위·아레나 3위 등극
+https://www.aitimes.com/news/articleView.html?idxno=216755
