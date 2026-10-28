@@ -1,5 +1,8 @@
 🤖 26년 10월 28일 수요일 AI 뉴스
 
+구글, 음성·실시간 편집 갖춘 월드모델 '지니 4' 공개
+https://www.aitimes.com/news/articleView.html?idxno=216731
+
 네이버, 브룩필드와 12조원 인프라 계약...엔비디아, 3대 주주로 등극
 https://www.aitimes.com/news/articleView.html?idxno=216729
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216715
 
 애플, '시리 AI' 한국어 서비스 개시...iOS27.2 업데이트 배포
 https://www.aitimes.com/news/articleView.html?idxno=216713
-
-"성능은 그대로, 비용은 최대 3배"…에이전트 가로막는 '복잡한 하네스'
-https://www.aitimes.com/news/articleView.html?idxno=216712
