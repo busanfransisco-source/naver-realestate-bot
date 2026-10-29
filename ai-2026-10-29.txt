@@ -18,6 +18,9 @@ https://www.aitimes.com/news/articleView.html?idxno=216804
 오픈AI·앤트로픽, 미 중간선거 앞두고 AI 악용 감시 강화
 https://www.aitimes.com/news/articleView.html?idxno=216803
 
+AAII 평가 대폭 개편에 순위 변동…구글 1위·오픈AI 약진
+https://www.aitimes.com/news/articleView.html?idxno=216802
+
 중국, 2030년 LLM 세계 선두 전망…미국은 최첨단 모델 우위 유지
 https://www.aitimes.com/news/articleView.html?idxno=216800
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216799
 
 카카오, 개인 AI 에이전트용 임베딩 모델 2종 오픈 공개
 https://www.aitimes.com/news/articleView.html?idxno=216798
-
-CXMT, 수율 20%에도 HBM3E 생산 강행...SK하이닉스와 기술 격차 여전
-https://www.aitimes.com/news/articleView.html?idxno=216797
