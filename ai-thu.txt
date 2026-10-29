@@ -1,31 +1,31 @@
 🤖 26년 10월 29일 목요일 AI 뉴스
 
-애플, 16년 만에 터치스크린 맥북 출시…스티브 잡스의 원칙 뒤집었다
-https://www.aitimes.com/news/articleView.html?idxno=216769
+구글, 기업용 '제미나이 에이전트' 연내 일반인에게 제공…10억 이용자 겨냥
+https://www.aitimes.com/news/articleView.html?idxno=216787
 
-구글, 1년 만에 AI 성능 평가 1위 탈환…'제미나이 4 카본' 출시
-https://www.aitimes.com/news/articleView.html?idxno=216768
+세일즈포스 이어 오라클도 AI에 통합…기업용 소프트웨어 판도 변화
+https://www.aitimes.com/news/articleView.html?idxno=216783
 
-발스 AI “앤트로픽, 내년 여름 RSI에 도달”
-https://www.aitimes.com/news/articleView.html?idxno=216767
+한컴, ‘AI 팀' 노마디안으로 미국 SMB 공략...에이전트포스·뮤즈에 도전장
+https://www.aitimes.com/news/articleView.html?idxno=216782
 
-안두릴·퀄컴, 미 국방·정부 겨냥 '미국산 노트북' 만든다
-https://www.aitimes.com/news/articleView.html?idxno=216764
+삼성SDS, 3분기 매출 3조7725억원 두자릿수 성장세… 피지컬 AI 실증 본격화
+https://www.aitimes.com/news/articleView.html?idxno=216781
 
-웹케시, 독파모 합류...금융 AI 에이전트에 K-엑사원 접목한다
-https://www.aitimes.com/news/articleView.html?idxno=216763
+미 법무부, 엔비디아의 허깅페이스 인수 조사...AI 모델 유통망 장악 가능성 검토
+https://www.aitimes.com/news/articleView.html?idxno=216777
 
-[AI 모델 신작] 바이두, 100페이지 이상 문서 읽는 OCR 공개 등 6종
-https://www.aitimes.com/news/articleView.html?idxno=216762
+SK AX, AI 기반 역량진단 솔루션 ‘지핏 스튜디오’ 출시...AI 인재 선발 지원
+https://www.aitimes.com/news/articleView.html?idxno=216775
 
-리퀴드 AI, 온디바이스 AI 모델 'LFM3' 공개...브라우저·음성·이미지 처리 지원
-https://www.aitimes.com/news/articleView.html?idxno=216761
+구글, AI로 검색량 급증했지만 광고 매출은 둔화...주가 10% 급락
+https://www.aitimes.com/news/articleView.html?idxno=216774
 
-수천만달러 GPU 노린다…고속도로 화물 운송망 덮친 첨단 범죄 기승
-https://www.aitimes.com/news/articleView.html?idxno=216760
+MS, 10분기 연속 최대 매출...AI 투자 지연에 네오클라우드 주가 하락
+https://www.aitimes.com/news/articleView.html?idxno=216773
 
-앤트로픽, 권한 물려줄 '비밀 후계자' 지정…상장 후에도 주주 통제
-https://www.aitimes.com/news/articleView.html?idxno=216758
+삼성전자, 분기 영업익 100조 시대 열어...글로벌 테크기업 중 최초
+https://www.aitimes.com/news/articleView.html?idxno=216772
 
-MS, 비용 효율 20% 높인 차세대 보안 모델 'MAI 사이버 1.1 플래시' 출시
-https://www.aitimes.com/news/articleView.html?idxno=216757
+오픈AI, 구글 TPU 직접 구매 추진...엔비디아 의존도 줄인다
+https://www.aitimes.com/news/articleView.html?idxno=216771
