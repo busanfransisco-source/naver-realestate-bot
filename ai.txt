@@ -1,31 +1,31 @@
 🤖 26년 10월 30일 금요일 AI 뉴스
 
-알트먼 “수학계, AI에 ‘우린 끝났다’ 절망하다 닷새 만에 수용”
-https://www.aitimes.com/news/articleView.html?idxno=216670
+앤트로픽, '클로드' 자기 대화 감시 기술 도입…유해 사용 78% 탐지
+https://www.aitimes.com/news/articleView.html?idxno=216824
 
-가상 섬에 홀로 둔 AI, 스스로 놀이 만들고 개발자도 몰랐던 기술 발견
-https://www.aitimes.com/news/articleView.html?idxno=216631
+오픈AI, 프로·기업용 AI 사용량 최대 2배 확대…연속 업데이트 막바지
+https://www.aitimes.com/news/articleView.html?idxno=216823
 
-역전파 없는 AI 학습 실험, 열흘 만에 4000배 빨라져…1.76시간→1.6초
-https://www.aitimes.com/news/articleView.html?idxno=216671
+앤트로픽, 스페이스X 매출 34.5% 차지…미 정부 넘어 최대 고객
+https://www.aitimes.com/news/articleView.html?idxno=216822
 
-구글, 터미널서 AI 에이전트 다루는 '제미나이 API CLI' 오픈소스 공개
-https://www.aitimes.com/news/articleView.html?idxno=216607
+미스트랄, '라지 4' 가중치 공개로 정식 출시…유럽 사이버보안 시장 공략
+https://www.aitimes.com/news/articleView.html?idxno=216821
 
-멜론 3위 오른 AI 노래, 어떻게 만들었나…‘머무르’ 제작팀 인터뷰
-https://www.aitimes.com/news/articleView.html?idxno=216553
+딥시크·문샷 AI, 앤트로픽 방어 강화로 'GPT-6 아스트라' 집중 증류
+https://www.aitimes.com/news/articleView.html?idxno=216820
 
-구글, 1년 만에 AI 성능 평가 1위 탈환…'제미나이 4 카본' 출시
-https://www.aitimes.com/news/articleView.html?idxno=216768
+오픈AI, 에이전트 시대 맞춰 행동 원칙 개편…"인간 의도 이해가 핵심"
+https://www.aitimes.com/news/articleView.html?idxno=216819
 
-앤트로픽도 뚫렸다...캐서드럴, 에이전트로 12시간 만에 내부망 침투
-https://www.aitimes.com/news/articleView.html?idxno=216701
+미 정보당국 "젠슨 황과 접촉한 중국 사업가는 스파이"…엔비디아 반박
+https://www.aitimes.com/news/articleView.html?idxno=216818
 
-중국 AI 거품 붕괴 가속…기술주 시총 640조 증발
-https://www.aitimes.com/news/articleView.html?idxno=216748
+"챗GPT 조언 따라 간질약 줄이다 사망"…31세 여성 유족, 오픈AI 제소
+https://www.aitimes.com/news/articleView.html?idxno=216813
 
-머스크 “에이전트로 통신 수요 1000배 증가”…기지국 8만곳 확보 추진
-https://www.aitimes.com/news/articleView.html?idxno=216624
+푸틴 "머스크는 진정한 천재" 극찬...러시아판 스타링크 개발은 이제 첫걸음
+https://www.aitimes.com/news/articleView.html?idxno=216811
 
-구글, 음성·실시간 편집 갖춘 월드모델 '지니 4' 공개
-https://www.aitimes.com/news/articleView.html?idxno=216731
+앤트로픽, 계약서 검토·법률 조사 자동화하는 '클로드' 도구 출시
+https://www.aitimes.com/news/articleView.html?idxno=216808
