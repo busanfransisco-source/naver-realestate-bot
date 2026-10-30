@@ -1,5 +1,14 @@
 🤖 26년 10월 30일 금요일 AI 뉴스
 
+허깅페이스 오픈소스팀, 비드래프트 판단 AI 체험 데모 제작 기증
+https://www.aitimes.com/news/articleView.html?idxno=216833
+
+AI 신소재 나노포지에이아이, 146억 시드 투자 유치
+https://www.aitimes.com/news/articleView.html?idxno=216829
+
+한국딥러닝, AI로 IBK기업은행 보이스피싱 업무 자동화
+https://www.aitimes.com/news/articleView.html?idxno=216827
+
 앤트로픽, '클로드' 자기 대화 감시 기술 도입…유해 사용 78% 탐지
 https://www.aitimes.com/news/articleView.html?idxno=216824
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216819
 
 미 정보당국 "젠슨 황과 접촉한 중국 사업가는 스파이"…엔비디아 반박
 https://www.aitimes.com/news/articleView.html?idxno=216818
-
-"챗GPT 조언 따라 간질약 줄이다 사망"…31세 여성 유족, 오픈AI 제소
-https://www.aitimes.com/news/articleView.html?idxno=216813
-
-푸틴 "머스크는 진정한 천재" 극찬...러시아판 스타링크 개발은 이제 첫걸음
-https://www.aitimes.com/news/articleView.html?idxno=216811
-
-앤트로픽, 계약서 검토·법률 조사 자동화하는 '클로드' 도구 출시
-https://www.aitimes.com/news/articleView.html?idxno=216808
