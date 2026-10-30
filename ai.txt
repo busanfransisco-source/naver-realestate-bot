@@ -1,31 +1,31 @@
 🤖 26년 10월 31일 토요일 AI 뉴스
 
-알트먼 “수학계, AI에 ‘우린 끝났다’ 절망하다 닷새 만에 수용”
-https://www.aitimes.com/news/articleView.html?idxno=216670
+엔비디아, 네이버 3대 주주로…1.3조 다음 달 6일 납입
+https://www.aitimes.com/news/articleView.html?idxno=216835
 
-가상 섬에 홀로 둔 AI, 스스로 놀이 만들고 개발자도 몰랐던 기술 발견
-https://www.aitimes.com/news/articleView.html?idxno=216631
+허깅페이스 오픈소스팀, 비드래프트 판단 AI 체험 데모 제작 기증
+https://www.aitimes.com/news/articleView.html?idxno=216833
 
-역전파 없는 AI 학습 실험, 열흘 만에 4000배 빨라져…1.76시간→1.6초
-https://www.aitimes.com/news/articleView.html?idxno=216671
+LG CNS, 3분기 매출 1.7조원…AI·클라우드 성장 견인
+https://www.aitimes.com/news/articleView.html?idxno=216831
 
-구글, 1년 만에 AI 성능 평가 1위 탈환…'제미나이 4 카본' 출시
-https://www.aitimes.com/news/articleView.html?idxno=216768
+AI 신소재 나노포지에이아이, 146억 시드 투자 유치
+https://www.aitimes.com/news/articleView.html?idxno=216829
 
-멜론 3위 오른 AI 노래, 어떻게 만들었나…‘머무르’ 제작팀 인터뷰
-https://www.aitimes.com/news/articleView.html?idxno=216553
+한국딥러닝, AI로 IBK기업은행 보이스피싱 업무 자동화
+https://www.aitimes.com/news/articleView.html?idxno=216827
 
-중국 AI 거품 붕괴 가속…기술주 시총 640조 증발
-https://www.aitimes.com/news/articleView.html?idxno=216748
+앤트로픽, '클로드' 자기 대화 감시 기술 도입…유해 사용 78% 탐지
+https://www.aitimes.com/news/articleView.html?idxno=216824
 
-앤트로픽도 뚫렸다...캐서드럴, 에이전트로 12시간 만에 내부망 침투
-https://www.aitimes.com/news/articleView.html?idxno=216701
+오픈AI, 프로·기업용 AI 사용량 최대 2배 확대…연속 업데이트 막바지
+https://www.aitimes.com/news/articleView.html?idxno=216823
 
-구글, 음성·실시간 편집 갖춘 월드모델 '지니 4' 공개
-https://www.aitimes.com/news/articleView.html?idxno=216731
+앤트로픽, 스페이스X 매출 34.5% 차지…미 정부 넘어 최대 고객
+https://www.aitimes.com/news/articleView.html?idxno=216822
 
-머스크 “에이전트로 통신 수요 1000배 증가”…기지국 8만곳 확보 추진
-https://www.aitimes.com/news/articleView.html?idxno=216624
+미스트랄, '라지 4' 가중치 공개로 정식 출시…유럽 사이버보안 시장 공략
+https://www.aitimes.com/news/articleView.html?idxno=216821
 
-오픈AI, ‘GPT-6.1 테라’ 출시…자동화 성능 높이고 가격 낮춰
-https://www.aitimes.com/news/articleView.html?idxno=216690
+딥시크·문샷 AI, 앤트로픽 방어 강화로 'GPT-6 아스트라' 집중 증류
+https://www.aitimes.com/news/articleView.html?idxno=216820
