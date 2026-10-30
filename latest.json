@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-10-30 23:53:31",
+  "updated_at_kst": "2026-10-31 01:59:32",
   "source": "https://news.naver.com/breakingnews/section/101/260",
-  "headline": "26년 10월 30일 금요일 부동산 주요뉴스",
+  "headline": "26년 10월 31일 토요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "“대단지 개발로 김포 큰 활력” vs “이미 지옥철, 교통대책 먼저”",
+      "url": "https://n.news.naver.com/mnews/article/020/0003759062"
+    },
     {
       "title": "은마 아파트 '480억 지분' 한보 상속인에 이전 판결...서울시 \"재건축 지장 없어\"",
       "url": "https://n.news.naver.com/mnews/article/469/0000962767"
@@ -38,10 +42,6 @@
     {
       "title": "은마아파트 단지 내 795㎡, 정태수 상속인에…“재건축 사업 지장 없어” [부동산360]",
       "url": "https://n.news.naver.com/mnews/article/016/0002716880"
-    },
-    {
-      "title": "강남 은마 795㎡ 소유권 정태수 상속인에…\"재건축엔 지장 없어\"",
-      "url": "https://n.news.naver.com/mnews/article/001/0016412791"
     }
   ]
 }
