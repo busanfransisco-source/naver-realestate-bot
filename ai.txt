@@ -3,6 +3,9 @@
 허깅페이스 오픈소스팀, 비드래프트 판단 AI 체험 데모 제작 기증
 https://www.aitimes.com/news/articleView.html?idxno=216833
 
+LG CNS, 3분기 매출 1.7조원…AI·클라우드 성장 견인
+https://www.aitimes.com/news/articleView.html?idxno=216831
+
 AI 신소재 나노포지에이아이, 146억 시드 투자 유치
 https://www.aitimes.com/news/articleView.html?idxno=216829
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216820
 
 오픈AI, 에이전트 시대 맞춰 행동 원칙 개편…"인간 의도 이해가 핵심"
 https://www.aitimes.com/news/articleView.html?idxno=216819
-
-미 정보당국 "젠슨 황과 접촉한 중국 사업가는 스파이"…엔비디아 반박
-https://www.aitimes.com/news/articleView.html?idxno=216818
