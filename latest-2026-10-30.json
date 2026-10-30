@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-10-30 09:28:43",
+  "updated_at_kst": "2026-10-30 09:31:30",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 30일 금요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "HL디앤아이한라, ‘골프장 잔디 보수’ 자율주행 로봇 시연회 개최",
+      "url": "https://n.news.naver.com/mnews/article/016/0002716505"
+    },
+    {
+      "title": "GS건설, 3분기 매출 2조7442억…영업익 955억(1보)",
+      "url": "https://n.news.naver.com/mnews/article/421/0009260061"
+    },
     {
       "title": "유통 1번지가 주거 1번지로…대형마트·백화점 떠난 자리 새 아파트 흥행",
       "url": "https://n.news.naver.com/mnews/article/277/0005835668"
@@ -34,14 +42,6 @@
     {
       "title": "단풍 나들이 절정…서울→부산 6시간10분[주말·휴일 고속도로]",
       "url": "https://n.news.naver.com/mnews/article/003/0014289534"
-    },
-    {
-      "title": "고속도로 관제서버 4대 중 3대 낡아…고장·장애 90%가 노후 서버서 발생",
-      "url": "https://n.news.naver.com/mnews/article/003/0014289532"
-    },
-    {
-      "title": "11월 전국 3만5788가구 일반분양…10월의 3배 ‘큰 장’ 선다[부동산360]",
-      "url": "https://n.news.naver.com/mnews/article/016/0002716491"
     }
   ]
 }
