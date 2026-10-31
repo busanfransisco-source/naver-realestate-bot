@@ -1,14 +1,18 @@
 {
-  "updated_at_kst": "2026-10-31 17:53:29",
+  "updated_at_kst": "2026-10-31 18:30:19",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 31일 토요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "李 대통령 \"자산시장 정상화, 인내의 시간 지나는중\"…부동산 정책 불변",
+      "url": "https://n.news.naver.com/mnews/article/138/0002246794"
+    },
     {
       "title": "서울 집값 90주째 오르는데…李 “자산시장 정상화, 지금은 견디는 중”",
       "url": "https://n.news.naver.com/mnews/article/011/0004677316"
     },
     {
-      "title": "李 “‘자산시장 정상화’ 인내의 시간…국민주권정부는 합니다”",
+      "title": "李, ‘집값 하락’ 전망 공유하며…“자산시장 정상화 인내의 시간”",
       "url": "https://n.news.naver.com/mnews/article/020/0003759125"
     },
     {
@@ -38,10 +42,6 @@
     {
       "title": "[단독] 목동 한신청구 리모델링 시공사 선정 난항…조합, 11월 우협 선정 추진",
       "url": "https://n.news.naver.com/mnews/article/119/0003149674"
-    },
-    {
-      "title": "\"집 내놔도 안 팔려요\"…서울 아파트 매물 8만건 쌓였다",
-      "url": "https://n.news.naver.com/mnews/article/015/0005348757"
     }
   ]
 }
