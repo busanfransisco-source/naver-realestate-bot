@@ -1,5 +1,8 @@
 🤖 26년 10월 31일 토요일 AI 뉴스
 
+AI 거품 붕괴 조짐에 미 기술주 급락…10월 시총 2조달러 증발
+https://www.aitimes.com/news/articleView.html?idxno=216840
+
 엔비디아, 네이버 3대 주주로…1.3조 다음 달 6일 납입
 https://www.aitimes.com/news/articleView.html?idxno=216835
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216822
 
 미스트랄, '라지 4' 가중치 공개로 정식 출시…유럽 사이버보안 시장 공략
 https://www.aitimes.com/news/articleView.html?idxno=216821
-
-딥시크·문샷 AI, 앤트로픽 방어 강화로 'GPT-6 아스트라' 집중 증류
-https://www.aitimes.com/news/articleView.html?idxno=216820
