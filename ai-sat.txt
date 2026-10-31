@@ -1,5 +1,8 @@
 🤖 26년 10월 31일 토요일 AI 뉴스
 
+구글, AI 검색에 광고 수익성 타격…시총 5000억달러 증발
+https://www.aitimes.com/news/articleView.html?idxno=216843
+
 AI 거품 붕괴 조짐에 미 기술주 급락…10월 시총 2조달러 증발
 https://www.aitimes.com/news/articleView.html?idxno=216840
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216823
 
 앤트로픽, 스페이스X 매출 34.5% 차지…미 정부 넘어 최대 고객
 https://www.aitimes.com/news/articleView.html?idxno=216822
-
-미스트랄, '라지 4' 가중치 공개로 정식 출시…유럽 사이버보안 시장 공략
-https://www.aitimes.com/news/articleView.html?idxno=216821
