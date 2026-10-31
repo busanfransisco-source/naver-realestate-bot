@@ -1,31 +1,31 @@
-🤖 26년 10월 25일 일요일 AI 뉴스
+🤖 26년 11월 1일 일요일 AI 뉴스
 
-가상 섬에 홀로 둔 AI, 스스로 놀이 만들고 개발자도 몰랐던 기술 발견
-https://www.aitimes.com/news/articleView.html?idxno=216631
+머스크, 놀란에 맞서 AI판 '오디세이' 공개…평가 엇갈려
+https://www.aitimes.com/news/articleView.html?idxno=216851
 
-'클로드'가 그림에 숨긴 문장, '아스트라'가 풀었다…암호 규칙 없이 88% 해독
-https://www.aitimes.com/news/articleView.html?idxno=216630
+알트먼 "AI 수학 연구에 수억달러 투입…공개 안 한 성과도 많아"
+https://www.aitimes.com/news/articleView.html?idxno=216850
 
-[AI 모델 신작] 텐센트 월드 모델부터 잭 도시의 음성 AI까지 9종
-https://www.aitimes.com/news/articleView.html?idxno=216628
+독일 엔비전, 유기 분자로 양자 컴퓨팅 칩 개발…OLED 제조 기술 활용
+https://www.aitimes.com/news/articleView.html?idxno=216849
 
-리퀴드 AI, 실시간 추론 엔진 ‘RIPL’ 출시...AI 응답 지연 50ms 미만 겨냥
-https://www.aitimes.com/news/articleView.html?idxno=216627
+[AI 이슈트렌드] 미·이란 전쟁 위기 1위…코스피 급락·구룡마을 화재 주목
+https://www.aitimes.com/news/articleView.html?idxno=216848
 
-젠슨 황 시연에 미니로봇 주문 급증…“올해 가장 많이 팔릴 수도”
-https://www.aitimes.com/news/articleView.html?idxno=216626
+오픈AI, 청소년 챗GPT 무기 정보 제한...폭력 징후 땐 대화 중단
+https://www.aitimes.com/news/articleView.html?idxno=216847
 
-엔비디아, 로컬 에이전트·로봇 겨냥 4GB 모델 '네모트론 3.5 볼트' 출시
-https://www.aitimes.com/news/articleView.html?idxno=216625
+앤트로픽, '20배 사용량' 혼선에 요금제 개편…5시간 제한 폐지
+https://www.aitimes.com/news/articleView.html?idxno=216846
 
-머스크 “에이전트로 통신 수요 1000배 증가”…기지국 8만곳 확보 추진
-https://www.aitimes.com/news/articleView.html?idxno=216624
+구글, 제미나이 채팅에서 문서·PDF 직접 편집 기능 추가
+https://www.aitimes.com/news/articleView.html?idxno=216845
 
-선거 후보 선택 강요하자...그록은 공화당, 오픈AI 모델은 민주당 선택
-https://www.aitimes.com/news/articleView.html?idxno=216623
+중국 GPU, 엔비디아 H200과 성능 대등 주장…AI 추론서 일부 앞서
+https://www.aitimes.com/news/articleView.html?idxno=216844
 
-미·우크라 신경전 끝에 스타링크 정상화…머스크는 “약관 위반” 주장
-https://www.aitimes.com/news/articleView.html?idxno=216622
+구글, AI 검색에 광고 수익성 타격…시총 5000억달러 증발
+https://www.aitimes.com/news/articleView.html?idxno=216843
 
-오픈AI 회의실 도청 사태, 사우디 연루 '경제 간첩' 수사로 확대
-https://www.aitimes.com/news/articleView.html?idxno=216621
+[AI카툰] Bob, Senior IT guy - 밥, AI 수용 단계
+https://www.aitimes.com/news/articleView.html?idxno=216842
