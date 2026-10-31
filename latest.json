@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-10-31 22:34:04",
+  "updated_at_kst": "2026-10-31 23:53:26",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 10월 31일 토요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "“건물 외벽 빌려주고 돈 벌어볼까”…동대문·영등포도 ‘초대형 전광판’ 추진",
+      "url": "https://n.news.naver.com/mnews/article/009/0005757008"
+    },
     {
       "title": "[탐사보도 뉴스프리즘] 지금은 '월세 시대'…전세 부족에 부동산 시장 지각변동",
       "url": "https://n.news.naver.com/mnews/article/422/0000921579"
@@ -38,10 +42,6 @@
     {
       "title": "李대통령 \"자산시장 정상화, 지금은 견디는 중…국민주권정부는 한다\"",
       "url": "https://n.news.naver.com/mnews/article/421/0009262211"
-    },
-    {
-      "title": "“집값은 오르는데 집은 안 팔려”…서울 아파트 90주 상승 속 매물 8만건 육박",
-      "url": "https://n.news.naver.com/mnews/article/011/0004677304"
     }
   ]
 }
