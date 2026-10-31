@@ -15,6 +15,9 @@ https://www.aitimes.com/news/articleView.html?idxno=216840
 [내면 지도 그리기] 40 Inner Mapping: 나를 찾는 지도
 https://www.aitimes.com/news/articleView.html?idxno=216839
 
+엔비디아, 엔스케일 자금난에 지원 검토…앤트로픽 60조 데이터센터 신용 보증
+https://www.aitimes.com/news/articleView.html?idxno=216838
+
 엔비디아, 네이버 3대 주주로…1.3조 다음 달 6일 납입
 https://www.aitimes.com/news/articleView.html?idxno=216835
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216831
 
 AI 신소재 나노포지에이아이, 146억 시드 투자 유치
 https://www.aitimes.com/news/articleView.html?idxno=216829
-
-한국딥러닝, AI로 IBK기업은행 보이스피싱 업무 자동화
-https://www.aitimes.com/news/articleView.html?idxno=216827
