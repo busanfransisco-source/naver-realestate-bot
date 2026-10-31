@@ -1,10 +1,22 @@
 🤖 26년 10월 31일 토요일 AI 뉴스
 
+독일 엔비전, 유기 분자로 양자 컴퓨팅 칩 개발…OLED 제조 기술 활용
+https://www.aitimes.com/news/articleView.html?idxno=216849
+
 [AI 이슈트렌드] 미·이란 전쟁 위기 1위…코스피 급락·구룡마을 화재 주목
 https://www.aitimes.com/news/articleView.html?idxno=216848
 
+오픈AI, 청소년 챗GPT 무기 정보 제한...폭력 징후 땐 대화 중단
+https://www.aitimes.com/news/articleView.html?idxno=216847
+
 앤트로픽, '20배 사용량' 혼선에 요금제 개편…5시간 제한 폐지
 https://www.aitimes.com/news/articleView.html?idxno=216846
+
+구글, 제미나이 채팅에서 문서·PDF 직접 편집 기능 추가
+https://www.aitimes.com/news/articleView.html?idxno=216845
+
+중국 GPU, 엔비디아 H200과 성능 대등 주장…AI 추론서 일부 앞서
+https://www.aitimes.com/news/articleView.html?idxno=216844
 
 구글, AI 검색에 광고 수익성 타격…시총 5000억달러 증발
 https://www.aitimes.com/news/articleView.html?idxno=216843
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216840
 
 [내면 지도 그리기] 40 Inner Mapping: 나를 찾는 지도
 https://www.aitimes.com/news/articleView.html?idxno=216839
-
-엔비디아, 엔스케일 자금난에 지원 검토…앤트로픽 60조 데이터센터 신용 보증
-https://www.aitimes.com/news/articleView.html?idxno=216838
-
-엔비디아, 네이버 3대 주주로…1.3조 다음 달 6일 납입
-https://www.aitimes.com/news/articleView.html?idxno=216835
-
-허깅페이스 오픈소스팀, 비드래프트 판단 AI 체험 데모 제작 기증
-https://www.aitimes.com/news/articleView.html?idxno=216833
-
-LG CNS, 3분기 매출 1.7조원…AI·클라우드 성장 견인
-https://www.aitimes.com/news/articleView.html?idxno=216831
