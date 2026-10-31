@@ -1,5 +1,11 @@
 🤖 26년 10월 31일 토요일 AI 뉴스
 
+머스크, 놀란에 맞서 AI판 '오디세이' 공개…평가 엇갈려
+https://www.aitimes.com/news/articleView.html?idxno=216851
+
+알트먼 "AI 수학 연구에 수억달러 투입…공개 안 한 성과도 많아"
+https://www.aitimes.com/news/articleView.html?idxno=216850
+
 독일 엔비전, 유기 분자로 양자 컴퓨팅 칩 개발…OLED 제조 기술 활용
 https://www.aitimes.com/news/articleView.html?idxno=216849
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216843
 
 [AI카툰] Bob, Senior IT guy - 밥, AI 수용 단계
 https://www.aitimes.com/news/articleView.html?idxno=216842
-
-구글, 인터넷 없이 작동하는 '제미나이 라이브' 개발…온디바이스 AI 활용 전망
-https://www.aitimes.com/news/articleView.html?idxno=216841
-
-AI 거품 붕괴 조짐에 미 기술주 급락…10월 시총 2조달러 증발
-https://www.aitimes.com/news/articleView.html?idxno=216840
