@@ -1,10 +1,19 @@
 🤖 26년 10월 31일 토요일 AI 뉴스
 
+앤트로픽, '20배 사용량' 혼선에 요금제 개편…5시간 제한 폐지
+https://www.aitimes.com/news/articleView.html?idxno=216846
+
 구글, AI 검색에 광고 수익성 타격…시총 5000억달러 증발
 https://www.aitimes.com/news/articleView.html?idxno=216843
 
+[AI카툰] Bob, Senior IT guy - 밥, AI 수용 단계
+https://www.aitimes.com/news/articleView.html?idxno=216842
+
 AI 거품 붕괴 조짐에 미 기술주 급락…10월 시총 2조달러 증발
 https://www.aitimes.com/news/articleView.html?idxno=216840
+
+[내면 지도 그리기] 40 Inner Mapping: 나를 찾는 지도
+https://www.aitimes.com/news/articleView.html?idxno=216839
 
 엔비디아, 네이버 3대 주주로…1.3조 다음 달 6일 납입
 https://www.aitimes.com/news/articleView.html?idxno=216835
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216829
 
 한국딥러닝, AI로 IBK기업은행 보이스피싱 업무 자동화
 https://www.aitimes.com/news/articleView.html?idxno=216827
-
-앤트로픽, '클로드' 자기 대화 감시 기술 도입…유해 사용 78% 탐지
-https://www.aitimes.com/news/articleView.html?idxno=216824
-
-오픈AI, 프로·기업용 AI 사용량 최대 2배 확대…연속 업데이트 막바지
-https://www.aitimes.com/news/articleView.html?idxno=216823
-
-앤트로픽, 스페이스X 매출 34.5% 차지…미 정부 넘어 최대 고객
-https://www.aitimes.com/news/articleView.html?idxno=216822
