@@ -1,31 +1,31 @@
 🤖 26년 11월 1일 일요일 AI 뉴스
 
-알트먼 “수학계, AI에 ‘우린 끝났다’ 절망하다 닷새 만에 수용”
-https://www.aitimes.com/news/articleView.html?idxno=216670
+삼성 사장단 50명 만난 알트먼 "AI 활용 속도가 기업 경쟁력 결정"
+https://www.aitimes.com/news/articleView.html?idxno=216852
 
-역전파 없는 AI 학습 실험, 열흘 만에 4000배 빨라져…1.76시간→1.6초
-https://www.aitimes.com/news/articleView.html?idxno=216671
+머스크, 놀란에 맞서 AI판 '오디세이' 공개…평가 엇갈려
+https://www.aitimes.com/news/articleView.html?idxno=216851
 
-구글, 1년 만에 AI 성능 평가 1위 탈환…'제미나이 4 카본' 출시
-https://www.aitimes.com/news/articleView.html?idxno=216768
+알트먼 "AI 수학 연구에 수억달러 투입…공개 안 한 성과도 많아"
+https://www.aitimes.com/news/articleView.html?idxno=216850
 
-중국 AI 거품 붕괴 가속…기술주 시총 640조 증발
-https://www.aitimes.com/news/articleView.html?idxno=216748
+독일 엔비전, 유기 분자로 양자 컴퓨팅 칩 개발…OLED 제조 기술 활용
+https://www.aitimes.com/news/articleView.html?idxno=216849
 
-앤트로픽도 뚫렸다...캐서드럴, 에이전트로 12시간 만에 내부망 침투
-https://www.aitimes.com/news/articleView.html?idxno=216701
+[AI 이슈트렌드] 미·이란 전쟁 위기 1위…코스피 급락·구룡마을 화재 주목
+https://www.aitimes.com/news/articleView.html?idxno=216848
+
+오픈AI, 청소년 챗GPT 무기 정보 제한...폭력 징후 땐 대화 중단
+https://www.aitimes.com/news/articleView.html?idxno=216847
 
 앤트로픽, '20배 사용량' 혼선에 요금제 개편…5시간 제한 폐지
 https://www.aitimes.com/news/articleView.html?idxno=216846
 
-구글, 음성·실시간 편집 갖춘 월드모델 '지니 4' 공개
-https://www.aitimes.com/news/articleView.html?idxno=216731
+구글, 제미나이 채팅에서 문서·PDF 직접 편집 기능 추가
+https://www.aitimes.com/news/articleView.html?idxno=216845
 
-오픈AI, ‘GPT-6.1 테라’ 출시…자동화 성능 높이고 가격 낮춰
-https://www.aitimes.com/news/articleView.html?idxno=216690
+중국 GPU, 엔비디아 H200과 성능 대등 주장…AI 추론서 일부 앞서
+https://www.aitimes.com/news/articleView.html?idxno=216844
 
-구글, 기업용 '제미나이 에이전트' 연내 일반 이용자에 제공
-https://www.aitimes.com/news/articleView.html?idxno=216787
-
-RTX 30 그래픽카드 ‘잠금 해제’ 도구 등장…AI 이미지·영상 처리량 최대 60% 증가
-https://www.aitimes.com/news/articleView.html?idxno=216672
+구글, AI 검색에 광고 수익성 타격…시총 5000억달러 증발
+https://www.aitimes.com/news/articleView.html?idxno=216843
