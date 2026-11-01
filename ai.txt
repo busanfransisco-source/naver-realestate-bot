@@ -1,5 +1,11 @@
 🤖 26년 11월 1일 일요일 AI 뉴스
 
+"AI 뉴런 2개 조작했더니 인간 증오하는 악당으로"…내부 구조 해독 활발
+https://www.aitimes.com/news/articleView.html?idxno=216861
+
+앤트로픽 "AI가 안전 감시 피하는 학습 데이터 스스로 발견"
+https://www.aitimes.com/news/articleView.html?idxno=216859
+
 구글 "AI 경제 혁명, 똑똑한 모델보다 협력하는 에이전트가 이끈다"
 https://www.aitimes.com/news/articleView.html?idxno=216855
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216849
 
 [AI 이슈트렌드] 미·이란 전쟁 위기 1위…코스피 급락·구룡마을 화재 주목
 https://www.aitimes.com/news/articleView.html?idxno=216848
-
-오픈AI, 청소년 챗GPT 무기 정보 제한...폭력 징후 땐 대화 중단
-https://www.aitimes.com/news/articleView.html?idxno=216847
-
-앤트로픽, '20배 사용량' 혼선에 요금제 개편…5시간 제한 폐지
-https://www.aitimes.com/news/articleView.html?idxno=216846
