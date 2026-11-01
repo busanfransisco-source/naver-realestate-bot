@@ -1,5 +1,8 @@
 🤖 26년 11월 1일 일요일 AI 뉴스
 
+딥시크, 코딩 '슈퍼 에이전트' 공개…6개월 만에 추격 기반 구축
+https://www.aitimes.com/news/articleView.html?idxno=216865
+
 핀란드, 구글  데이터센터 환경 훼손 의혹 수사…나무 40만그루 벌채 논란
 https://www.aitimes.com/news/articleView.html?idxno=216864
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216857
 
 오픈AI, 투자 유치 300억달러에서 200억달러로 축소...기업가치도 하향
 https://www.aitimes.com/news/articleView.html?idxno=216856
-
-구글 "AI 경제 혁명, 똑똑한 모델보다 협력하는 에이전트가 이끈다"
-https://www.aitimes.com/news/articleView.html?idxno=216855
