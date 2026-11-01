@@ -1,5 +1,11 @@
 🤖 26년 11월 1일 일요일 AI 뉴스
 
+구글 "AI 경제 혁명, 똑똑한 모델보다 협력하는 에이전트가 이끈다"
+https://www.aitimes.com/news/articleView.html?idxno=216855
+
+블랙스톤 "앤트로픽, 상장 후에도 투자적격 등급 확보 어려워"
+https://www.aitimes.com/news/articleView.html?idxno=216854
+
 메타, AI 투자 부담에 신용등급 강등 경고…현금흐름 악화가 결정타
 https://www.aitimes.com/news/articleView.html?idxno=216853
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216847
 
 앤트로픽, '20배 사용량' 혼선에 요금제 개편…5시간 제한 폐지
 https://www.aitimes.com/news/articleView.html?idxno=216846
-
-구글, 제미나이 채팅에서 문서·PDF 직접 편집 기능 추가
-https://www.aitimes.com/news/articleView.html?idxno=216845
-
-중국 GPU, 엔비디아 H200과 성능 대등 주장…AI 추론서 일부 앞서
-https://www.aitimes.com/news/articleView.html?idxno=216844
