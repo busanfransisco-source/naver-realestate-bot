@@ -1,31 +1,31 @@
 🤖 26년 11월 2일 월요일 AI 뉴스
 
-알트먼 “수학계, AI에 ‘우린 끝났다’ 절망하다 닷새 만에 수용”
-https://www.aitimes.com/news/articleView.html?idxno=216670
+딥시크, 코딩 '슈퍼 에이전트' 공개…6개월 만에 추격 기반 구축
+https://www.aitimes.com/news/articleView.html?idxno=216865
 
-역전파 없는 AI 학습 실험, 열흘 만에 4000배 빨라져…1.76시간→1.6초
-https://www.aitimes.com/news/articleView.html?idxno=216671
+핀란드, 구글  데이터센터 환경 훼손 의혹 수사…나무 40만그루 벌채 논란
+https://www.aitimes.com/news/articleView.html?idxno=216864
 
-앤트로픽, '20배 사용량' 혼선에 요금제 개편…5시간 제한 폐지
-https://www.aitimes.com/news/articleView.html?idxno=216846
+구글, '제미나이 노트북'에 무료 교재 수백 권 추가...AI 학습 기능 확대
+https://www.aitimes.com/news/articleView.html?idxno=216863
 
-구글, 1년 만에 AI 성능 평가 1위 탈환…'제미나이 4 카본' 출시
-https://www.aitimes.com/news/articleView.html?idxno=216768
+앤트로픽, 클로드로 기존 게임 복제 금지…정상 작업까지 차단 논란
+https://www.aitimes.com/news/articleView.html?idxno=216862
 
-중국 AI 거품 붕괴 가속…기술주 시총 640조 증발
-https://www.aitimes.com/news/articleView.html?idxno=216748
+"AI 뉴런 2개 조작했더니 인간 증오하는 악당으로"…내부 구조 해독 활발
+https://www.aitimes.com/news/articleView.html?idxno=216861
 
-앤트로픽도 뚫렸다...캐서드럴, 에이전트로 12시간 만에 내부망 침투
-https://www.aitimes.com/news/articleView.html?idxno=216701
+MIT, AI 모델끼리 글 없이 소통하는 ‘스웜 텔레파시’ 개발
+https://www.aitimes.com/news/articleView.html?idxno=216860
 
-구글, 인터넷 없이 작동하는 '제미나이 라이브' 개발 중
-https://www.aitimes.com/news/articleView.html?idxno=216841
+앤트로픽 "AI가 안전 감시 피하는 학습 데이터 스스로 발견"
+https://www.aitimes.com/news/articleView.html?idxno=216859
 
-구글, 음성·실시간 편집 갖춘 월드모델 '지니 4' 공개
-https://www.aitimes.com/news/articleView.html?idxno=216731
+젠슨 황 주변 중국 스파이 의혹, 싱가포르·대만까지 번져
+https://www.aitimes.com/news/articleView.html?idxno=216858
 
-오픈AI, ‘GPT-6.1 테라’ 출시…자동화 성능 높이고 가격 낮춰
-https://www.aitimes.com/news/articleView.html?idxno=216690
+메타, 중국 푸리에와 휴머노이드 로봇 개발...가정용 시장 진출 추진
+https://www.aitimes.com/news/articleView.html?idxno=216857
 
-구글, 기업용 '제미나이 에이전트' 연내 일반 이용자에 제공
-https://www.aitimes.com/news/articleView.html?idxno=216787
+오픈AI, 투자 유치 300억달러에서 200억달러로 축소...기업가치도 하향
+https://www.aitimes.com/news/articleView.html?idxno=216856
