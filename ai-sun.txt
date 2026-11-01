@@ -1,5 +1,8 @@
 🤖 26년 11월 1일 일요일 AI 뉴스
 
+메타, AI 투자 부담에 신용등급 강등 경고…현금흐름 악화가 결정타
+https://www.aitimes.com/news/articleView.html?idxno=216853
+
 삼성 사장단 50명 만난 알트먼 "AI 활용 속도가 기업 경쟁력 결정"
 https://www.aitimes.com/news/articleView.html?idxno=216852
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216845
 
 중국 GPU, 엔비디아 H200과 성능 대등 주장…AI 추론서 일부 앞서
 https://www.aitimes.com/news/articleView.html?idxno=216844
-
-구글, AI 검색에 광고 수익성 타격…시총 5000억달러 증발
-https://www.aitimes.com/news/articleView.html?idxno=216843
