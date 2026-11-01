@@ -1,8 +1,20 @@
 {
-  "updated_at_kst": "2026-11-02 08:13:24",
+  "updated_at_kst": "2026-11-02 08:41:45",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 2일 월요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "인천시, 노후계획도시 정비예정구역 주민대표단 기준 마련",
+      "url": "https://n.news.naver.com/mnews/article/001/0016414711"
+    },
+    {
+      "title": "11월 아파트 4.4만가구 분양…서울 물량은 15%",
+      "url": "https://n.news.naver.com/mnews/article/018/0006401816"
+    },
+    {
+      "title": "양천구, 신정4동 922번지 재개발 추진…2천170세대 대단지로",
+      "url": "https://n.news.naver.com/mnews/article/001/0016414674"
+    },
     {
       "title": "양천구 신정4동 일대 싹 바뀐다…2170가구 재개발 추진",
       "url": "https://n.news.naver.com/mnews/article/018/0006401805"
@@ -30,18 +42,6 @@
     {
       "title": "15개월 협상 결렬된 체코 원전…새 시공사 확보도 난항 우려",
       "url": "https://n.news.naver.com/mnews/article/119/0003149897"
-    },
-    {
-      "title": "\"10년 뒤 집값 판도 달라진다\"…서울·경기 유망 지역 5곳은",
-      "url": "https://n.news.naver.com/mnews/article/003/0014293541"
-    },
-    {
-      "title": "\"결국 그들만의 리그\"…강남 집 절반은 강남 사람이 샀다 [시장톡]",
-      "url": "https://n.news.naver.com/mnews/article/015/0005349014"
-    },
-    {
-      "title": "[박순원의 정비록] “현대·삼성 빠져 좋아”… 목동11단지가 반색하는 이유",
-      "url": "https://n.news.naver.com/mnews/article/029/0003056482"
     }
   ]
 }
