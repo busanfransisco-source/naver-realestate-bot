@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-11-02 08:59:31",
+  "updated_at_kst": "2026-11-02 09:02:21",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 2일 월요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "산업단지 인접 주거단지 관심…GS건설 ‘음성자이 센트럴시티’ 공급",
+      "url": "https://n.news.naver.com/mnews/article/016/0002717369"
+    },
+    {
+      "title": "‘갓성비’에 상품은 하이엔드급 올라운더아파트 ‘화성 향남 롯데캐슬 시그니처’ 눈길",
+      "url": "https://n.news.naver.com/mnews/article/029/0003056494"
+    },
     {
       "title": "11월 분양시장 큰장 선다…전국 4.4만가구 분양 예정",
       "url": "https://n.news.naver.com/mnews/article/015/0005349054"
@@ -34,14 +42,6 @@
     {
       "title": "이달 분양시장 큰 장…디에이치반포124 등 4만4천여가구 분양",
       "url": "https://n.news.naver.com/mnews/article/001/0016414735"
-    },
-    {
-      "title": "층간소음 잡고 로봇이 쓰레기 수거…IPARK현산, 주거 기술 고도화",
-      "url": "https://n.news.naver.com/mnews/article/018/0006401836"
-    },
-    {
-      "title": "인천시, 노후계획도시 정비예정구역 주민대표단 기준 마련",
-      "url": "https://n.news.naver.com/mnews/article/001/0016414711"
     }
   ]
 }
