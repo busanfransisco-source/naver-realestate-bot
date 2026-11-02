@@ -1,31 +1,31 @@
 🤖 26년 11월 2일 월요일 AI 뉴스
 
+애플 CEO "AI를 위한 AI는 출시 안 해"…제품 중심 전략 고수
+https://www.aitimes.com/news/articleView.html?idxno=216900
+
+"AI 에이전트, 외계 신호 찾는 전파망원경 조종…초당 테라비트 분석"
+https://www.aitimes.com/news/articleView.html?idxno=216897
+
+미소스 5.5·GPT-6.2 아스트라 잇달아 포착…최첨단 모델 출시설
+https://www.aitimes.com/news/articleView.html?idxno=216894
+
+위밋모빌리티, AI 물류 솔루션 ‘루티’로 과학기술혁신대상 은상 수상
+https://www.aitimes.com/news/articleView.html?idxno=216892
+
+구글 "우주 데이터센터, 지구보다 구축 비용 최대 100배 비싸"
+https://www.aitimes.com/news/articleView.html?idxno=216889
+
+구글, '제미나이 4 카본' 공개 사흘 만에 개선판 포착…3D 성능 호평
+https://www.aitimes.com/news/articleView.html?idxno=216888
+
+LG CNS, 국내 최초 인도네시아에 30MW급 AIDC 구축
+https://www.aitimes.com/news/articleView.html?idxno=216887
+
+크래프톤, 사회적 지능 갖춘 로봇 AI ‘루디 0.2’ 공개..팔로알토 연구소 개소
+https://www.aitimes.com/news/articleView.html?idxno=216886
+
+딥브레인AI, 삼성화재에 보험설계사용 AI 실전 상담훈련 시스템 공급
+https://www.aitimes.com/news/articleView.html?idxno=216880
+
 딥시크, 코딩 '슈퍼 에이전트' 공개…6개월 만에 추격 기반 구축
 https://www.aitimes.com/news/articleView.html?idxno=216865
-
-핀란드, 구글  데이터센터 환경 훼손 의혹 수사…나무 40만그루 벌채 논란
-https://www.aitimes.com/news/articleView.html?idxno=216864
-
-구글, '제미나이 노트북'에 무료 교재 수백 권 추가...AI 학습 기능 확대
-https://www.aitimes.com/news/articleView.html?idxno=216863
-
-앤트로픽, 클로드로 기존 게임 복제 금지…정상 작업까지 차단 논란
-https://www.aitimes.com/news/articleView.html?idxno=216862
-
-"AI 뉴런 2개 조작했더니 인간 증오하는 악당으로"…내부 구조 해독 활발
-https://www.aitimes.com/news/articleView.html?idxno=216861
-
-MIT, AI 모델끼리 글 없이 소통하는 ‘스웜 텔레파시’ 개발
-https://www.aitimes.com/news/articleView.html?idxno=216860
-
-앤트로픽 "AI가 안전 감시 피하는 학습 데이터 스스로 발견"
-https://www.aitimes.com/news/articleView.html?idxno=216859
-
-젠슨 황 주변 중국 스파이 의혹, 싱가포르·대만까지 번져
-https://www.aitimes.com/news/articleView.html?idxno=216858
-
-메타, 중국 푸리에와 휴머노이드 로봇 개발...가정용 시장 진출 추진
-https://www.aitimes.com/news/articleView.html?idxno=216857
-
-오픈AI, 투자 유치 300억달러에서 200억달러로 축소...기업가치도 하향
-https://www.aitimes.com/news/articleView.html?idxno=216856
