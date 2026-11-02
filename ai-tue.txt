@@ -1,5 +1,11 @@
 🤖 26년 11월 3일 화요일 AI 뉴스
 
+에이수스, 에이전틱 AI를 위한 NVIDIA Vera CPU 기반 ‘XA P2N-E2’ 공개
+https://www.aitimes.com/news/articleView.html?idxno=216924
+
+119만 유튜버 긱블, 캐릭터 로봇 시장 출사표…“월 매출 10억 목표”
+https://www.aitimes.com/news/articleView.html?idxno=216922
+
 팔레트AI, 한국어 맥락 이해 앞세운 'K-AI' 선언…대국민 캠페인 시작
 https://www.aitimes.com/news/articleView.html?idxno=216920
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216914
 
 "빨간 하트 하나에 코딩 방식 바뀐다"…AI의 숨겨진 시각적 영향 확인
 https://www.aitimes.com/news/articleView.html?idxno=216913
-
-"코딩은 AI에 맡겨라"…프로톤, 개발 속도 압박에 보안 논란
-https://www.aitimes.com/news/articleView.html?idxno=216910
-
-앤트로픽, 코딩 다음은 신약 개발…IPO 앞두고 생명과학 투자 확대
-https://www.aitimes.com/news/articleView.html?idxno=216907
