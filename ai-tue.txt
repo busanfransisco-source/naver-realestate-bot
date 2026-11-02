@@ -1,31 +1,31 @@
 🤖 26년 11월 3일 화요일 AI 뉴스
 
-에이수스, 에이전틱 AI를 위한 NVIDIA Vera CPU 기반 ‘XA P2N-E2’ 공개
-https://www.aitimes.com/news/articleView.html?idxno=216924
+구글, 인터넷 없이 작동하는 '제미나이 라이브' 개발 중
+https://www.aitimes.com/news/articleView.html?idxno=216841
 
-119만 유튜버 긱블, 캐릭터 로봇 시장 출사표…“월 매출 10억 목표”
-https://www.aitimes.com/news/articleView.html?idxno=216922
+앤트로픽, '20배 사용량' 혼선에 요금제 개편…5시간 제한 폐지
+https://www.aitimes.com/news/articleView.html?idxno=216846
 
-팔레트AI, 한국어 맥락 이해 앞세운 'K-AI' 선언…대국민 캠페인 시작
-https://www.aitimes.com/news/articleView.html?idxno=216920
+구글, 1년 만에 AI 성능 평가 1위 탈환…'제미나이 4 카본' 출시
+https://www.aitimes.com/news/articleView.html?idxno=216768
 
-커서에서 '클로드 코드' 사칭 악성 프로그램 유포…최대 5000명 영향
-https://www.aitimes.com/news/articleView.html?idxno=216919
+중국 AI 거품 붕괴 가속…기술주 시총 640조 증발
+https://www.aitimes.com/news/articleView.html?idxno=216748
 
-시스코, 27세 엔지니어에게 AI 토큰 무제한 제공…2년 내 기존 코드 98% 재작성
-https://www.aitimes.com/news/articleView.html?idxno=216918
+구글, 음성·실시간 편집 갖춘 월드모델 '지니 4' 공개
+https://www.aitimes.com/news/articleView.html?idxno=216731
 
-[게시판] 네이버클라우드, 육군 군수사령부와 ‘실전용 AI 에이전트‘ 개발 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=216917
+구글, 기업용 '제미나이 에이전트' 연내 일반 이용자에 제공
+https://www.aitimes.com/news/articleView.html?idxno=216787
 
-"코딩 AI, 시키는 일은 잘하지만 숨은 요구는 놓쳐"…최고 모델도 45.5%
-https://www.aitimes.com/news/articleView.html?idxno=216916
+앤트로픽, 클로드로 기존 게임 복제 금지…정상 작업까지 차단 논란
+https://www.aitimes.com/news/articleView.html?idxno=216862
 
-MS, AI 코딩 비용 최대 31% 줄이는 도구 공개…작업 성공률은 유지
-https://www.aitimes.com/news/articleView.html?idxno=216915
+딥시크·문샷 AI, 앤트로픽 방어 강화로 'GPT-6 아스트라' 집중 증류
+https://www.aitimes.com/news/articleView.html?idxno=216820
 
-"AI를 통제하라"…국내 솔루션 기업, AI 가드레일 시장 잰걸음
-https://www.aitimes.com/news/articleView.html?idxno=216914
+오픈AI, 프로·기업용 AI 사용량 최대 2배 확대…연속 업데이트 막바지
+https://www.aitimes.com/news/articleView.html?idxno=216823
 
-"빨간 하트 하나에 코딩 방식 바뀐다"…AI의 숨겨진 시각적 영향 확인
-https://www.aitimes.com/news/articleView.html?idxno=216913
+[10월29일] 자신을 AI로 복제한 '특이점' 예언자…'또 다른 나'는 나와 같은 인물인가
+https://www.aitimes.com/news/articleView.html?idxno=216776
