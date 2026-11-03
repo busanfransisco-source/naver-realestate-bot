@@ -1,31 +1,31 @@
 🤖 26년 11월 4일 수요일 AI 뉴스
 
-구글, 인터넷 없이 작동하는 '제미나이 라이브' 개발 중
-https://www.aitimes.com/news/articleView.html?idxno=216841
+뤼튼·스캐터랩 양분한 AI 캐릭터챗 시장에 게임사 가세…경쟁 본격화
+https://www.aitimes.com/news/articleView.html?idxno=216970
 
-앤트로픽, '20배 사용량' 혼선에 요금제 개편…5시간 제한 폐지
-https://www.aitimes.com/news/articleView.html?idxno=216846
+엔비디아, 클라우드 고객에 중국 기업 서비스 비중 49% 이하 요구
+https://www.aitimes.com/news/articleView.html?idxno=216969
 
-구글, 1년 만에 AI 성능 평가 1위 탈환…'제미나이 4 카본' 출시
-https://www.aitimes.com/news/articleView.html?idxno=216768
+딥 프린시플, 일부 과학 평가서 GPT-6 아스트라 앞선 '하이드로젠' 공개
+https://www.aitimes.com/news/articleView.html?idxno=216967
 
-구글, 기업용 '제미나이 에이전트' 연내 일반 이용자에 제공
-https://www.aitimes.com/news/articleView.html?idxno=216787
+"AI 도시, 현실이 되다!”… 화성시, AI엑스포 'MARS 2026' 팡파르
+https://www.aitimes.com/news/articleView.html?idxno=216966
 
-"AI 50개 모아 문명 건설 시켰더니 관료주의에 빠져 실패"
-https://www.aitimes.com/news/articleView.html?idxno=216893
+[AI 모델 신작] 사람처럼 대화하는 '프리즘'부터 로봇 제어 AI까지 6종
+https://www.aitimes.com/news/articleView.html?idxno=216963
 
-앤트로픽, 클로드로 기존 게임 복제 금지…정상 작업까지 차단 논란
-https://www.aitimes.com/news/articleView.html?idxno=216862
+래블업, 상장 첫날 급등 후 급락…AI 인프라주 '호된 신고식'
+https://www.aitimes.com/news/articleView.html?idxno=216962
 
-딥시크, 코딩 '슈퍼 에이전트' 공개…6개월 만에 추격 기반 구축
-https://www.aitimes.com/news/articleView.html?idxno=216865
+메이투안, 중국산 칩으로 학습한 1.6조 매개변수 '롱캣-2.5' 공개
+https://www.aitimes.com/news/articleView.html?idxno=216961
 
-구글, '제미나이 4 카본' 공개 사흘 만에 개선판 포착…3D 성능 호평
-https://www.aitimes.com/news/articleView.html?idxno=216888
+스페이스X, 부스트모바일 인수 추진…미 통신 3사 거절에 우회로 모색
+https://www.aitimes.com/news/articleView.html?idxno=216959
 
-딥시크·문샷 AI, 앤트로픽 방어 강화로 'GPT-6 아스트라' 집중 증류
-https://www.aitimes.com/news/articleView.html?idxno=216820
+딥시크, 자연어로 AI 에이전트 기능 확장…플러그인 제작까지 자동화
+https://www.aitimes.com/news/articleView.html?idxno=216958
 
-오픈AI, 프로·기업용 AI 사용량 최대 2배 확대…연속 업데이트 막바지
-https://www.aitimes.com/news/articleView.html?idxno=216823
+카르파시, 유튜브 추천에 질려 AI로 대안 개발…"2시간 만에 완성"
+https://www.aitimes.com/news/articleView.html?idxno=216956
