@@ -1,5 +1,11 @@
 🤖 26년 11월 3일 화요일 AI 뉴스
 
+비드래프트, AI가 스스로 해제 못 하는 '킬스위치' 개발…보안 OS 공개
+https://www.aitimes.com/news/articleView.html?idxno=216938
+
+업스테이지 '솔라 프로 4', 범정부 행정망에 도입…공무원 모델 선택권 확대
+https://www.aitimes.com/news/articleView.html?idxno=216931
+
 에이수스, 에이전틱 AI를 위한 NVIDIA Vera CPU 기반 ‘XA P2N-E2’ 공개
 https://www.aitimes.com/news/articleView.html?idxno=216924
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216916
 
 MS, AI 코딩 비용 최대 31% 줄이는 도구 공개…작업 성공률은 유지
 https://www.aitimes.com/news/articleView.html?idxno=216915
-
-"AI를 통제하라"…국내 솔루션 기업, AI 가드레일 시장 잰걸음
-https://www.aitimes.com/news/articleView.html?idxno=216914
-
-"빨간 하트 하나에 코딩 방식 바뀐다"…AI의 숨겨진 시각적 영향 확인
-https://www.aitimes.com/news/articleView.html?idxno=216913
