@@ -1,31 +1,31 @@
-🤖 26년 10월 28일 수요일 AI 뉴스
+🤖 26년 11월 4일 수요일 AI 뉴스
 
-“앤트로픽, 내년 여름부터 AI가 AI 개발”…전문 평가업체 전망
-https://www.aitimes.com/news/articleView.html?idxno=216767
+뤼튼·스캐터랩 양분한 AI 캐릭터챗 시장에 게임사 가세…경쟁 본격화
+https://www.aitimes.com/news/articleView.html?idxno=216970
 
-안두릴·퀄컴, 미 국방·정부 겨냥 '미국산 노트북' 만든다
-https://www.aitimes.com/news/articleView.html?idxno=216764
+엔비디아, 클라우드 고객에 중국 기업 서비스 비중 49% 이하 요구
+https://www.aitimes.com/news/articleView.html?idxno=216969
 
-웹케시, 독파모 합류...금융 AI 에이전트에 K-엑사원 접목한다
-https://www.aitimes.com/news/articleView.html?idxno=216763
+딥 프린시플, 일부 과학 평가서 GPT-6 아스트라 앞선 '하이드로젠' 공개
+https://www.aitimes.com/news/articleView.html?idxno=216967
 
-[AI 모델 신작] 바이두, 100페이지 이상 문서 읽는 OCR 공개 등 6종
-https://www.aitimes.com/news/articleView.html?idxno=216762
+"AI 도시, 현실이 되다!”… 화성시, AI엑스포 'MARS 2026' 팡파르
+https://www.aitimes.com/news/articleView.html?idxno=216966
 
-리퀴드 AI, 온디바이스 AI 모델 'LFM3' 공개...브라우저·음성·이미지 처리 지원
-https://www.aitimes.com/news/articleView.html?idxno=216761
+[AI 모델 신작] 사람처럼 대화하는 '프리즘'부터 로봇 제어 AI까지 6종
+https://www.aitimes.com/news/articleView.html?idxno=216963
 
-수천만 달러 GPU 노린다…고속도로 화물 운송망 덮친 첨단 범죄 기승
-https://www.aitimes.com/news/articleView.html?idxno=216760
+래블업, 상장 첫날 급등 후 급락…AI 인프라주 '호된 신고식'
+https://www.aitimes.com/news/articleView.html?idxno=216962
 
-앤트로픽, 권한 물려줄 '비밀 후계자' 지정…상장 후에도 주주 통제
-https://www.aitimes.com/news/articleView.html?idxno=216758
+메이투안, 중국산 칩으로 학습한 1.6조 매개변수 '롱캣-2.5' 공개
+https://www.aitimes.com/news/articleView.html?idxno=216961
 
-MS, 비용 효율 20% 높인 차세대 보안 모델 'MAI 사이버 1.1 플래시' 출시
-https://www.aitimes.com/news/articleView.html?idxno=216757
+스페이스X, 부스트모바일 인수 추진…미 통신 3사 거절에 우회로 모색
+https://www.aitimes.com/news/articleView.html?idxno=216959
 
-오픈AI 이어 앤트로픽도 '난제' 반박…성능 경쟁, 과학 발견으로 확대
-https://www.aitimes.com/news/articleView.html?idxno=216756
+딥시크, 자연어로 AI 에이전트 기능 확장…플러그인 제작까지 자동화
+https://www.aitimes.com/news/articleView.html?idxno=216958
 
-MS, 정교함 강화한 'MAI 이미지 2.7' 공개...AA 2위·아레나 3위 등극
-https://www.aitimes.com/news/articleView.html?idxno=216755
+카르파시, 유튜브 추천에 질려 AI로 대안 개발…"2시간 만에 완성"
+https://www.aitimes.com/news/articleView.html?idxno=216956
