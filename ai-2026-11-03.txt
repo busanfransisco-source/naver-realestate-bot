@@ -1,5 +1,8 @@
 🤖 26년 11월 3일 화요일 AI 뉴스
 
+뤼튼·스캐터랩 양분한 AI 캐릭터챗 시장에 게임사 가세…경쟁 본격화
+https://www.aitimes.com/news/articleView.html?idxno=216970
+
 엔비디아, 클라우드 고객에 중국 기업 서비스 비중 49% 이하 요구
 https://www.aitimes.com/news/articleView.html?idxno=216969
 
@@ -24,8 +27,5 @@ https://www.aitimes.com/news/articleView.html?idxno=216959
 딥시크, 자연어로 AI 에이전트 기능 확장…플러그인 제작까지 자동화
 https://www.aitimes.com/news/articleView.html?idxno=216958
 
-SDT, AIDC '발열 해결사'  100kW 액침냉각 시스템 공개
-https://www.aitimes.com/news/articleView.html?idxno=216955
-
-네오사피엔스, 보이저엑스 ‘브루’에 AI 목소리 공급…한 달 만에 2000만자 돌파
-https://www.aitimes.com/news/articleView.html?idxno=216954
+카르파시, 유튜브 추천에 질려 AI로 대안 개발…"2시간 만에 완성"
+https://www.aitimes.com/news/articleView.html?idxno=216956
