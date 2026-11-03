@@ -6,6 +6,9 @@ https://www.aitimes.com/news/articleView.html?idxno=216938
 오픈AI, 12월부터 챗GPT·코덱스 사용량 통합…기존 앱 1월 종료
 https://www.aitimes.com/news/articleView.html?idxno=216934
 
+앤트로픽, 매출 급증에도 영업적자…AI 인프라 투자 부담
+https://www.aitimes.com/news/articleView.html?idxno=216932
+
 업스테이지 '솔라 프로 4', 범정부 행정망 도입…공무원 모델 선택권 확대
 https://www.aitimes.com/news/articleView.html?idxno=216931
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216918
 
 [게시판] 네이버클라우드, 육군 군수사령부와 ‘실전용 AI 에이전트‘ 개발 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=216917
-
-"코딩 AI, 시키는 일은 잘하지만 숨은 요구는 놓쳐"…최고 모델도 45.5%
-https://www.aitimes.com/news/articleView.html?idxno=216916
