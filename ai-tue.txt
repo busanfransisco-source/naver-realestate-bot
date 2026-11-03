@@ -1,5 +1,8 @@
 🤖 26년 11월 3일 화요일 AI 뉴스
 
+오픈AI, UAE 석유·정부·투자 업무에 AI 에이전트 도입…4건 협약
+https://www.aitimes.com/news/articleView.html?idxno=216939
+
 비드래프트, AI가 스스로 해제 못 하는 '킬스위치' 개발…보안 OS 공개
 https://www.aitimes.com/news/articleView.html?idxno=216938
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216919
 
 시스코, 27세 엔지니어에게 AI 토큰 무제한 제공…2년 내 기존 코드 98% 재작성
 https://www.aitimes.com/news/articleView.html?idxno=216918
-
-[게시판] 네이버클라우드, 육군 군수사령부와 ‘실전용 AI 에이전트‘ 개발 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=216917
