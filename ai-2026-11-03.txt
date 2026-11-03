@@ -3,7 +3,10 @@
 비드래프트, AI가 스스로 해제 못 하는 '킬스위치' 개발…보안 OS 공개
 https://www.aitimes.com/news/articleView.html?idxno=216938
 
-업스테이지 '솔라 프로 4', 범정부 행정망에 도입…공무원 모델 선택권 확대
+오픈AI, 12월부터 챗GPT·코덱스 사용량 통합…기존 앱 1월 종료
+https://www.aitimes.com/news/articleView.html?idxno=216934
+
+업스테이지 '솔라 프로 4', 범정부 행정망 도입…공무원 모델 선택권 확대
 https://www.aitimes.com/news/articleView.html?idxno=216931
 
 에이수스, 에이전틱 AI를 위한 NVIDIA Vera CPU 기반 ‘XA P2N-E2’ 공개
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216917
 
 "코딩 AI, 시키는 일은 잘하지만 숨은 요구는 놓쳐"…최고 모델도 45.5%
 https://www.aitimes.com/news/articleView.html?idxno=216916
-
-MS, AI 코딩 비용 최대 31% 줄이는 도구 공개…작업 성공률은 유지
-https://www.aitimes.com/news/articleView.html?idxno=216915
