@@ -1,5 +1,8 @@
 🤖 26년 11월 4일 수요일 AI 뉴스
 
+"AI에 일 맡길수록 감독 능력도 퇴화"…앤트로픽 엔지니어 경고
+https://www.aitimes.com/news/articleView.html?idxno=217019
+
 [게시판] 넘즈에이아이, 20억 프리시드 2차 투자 유치 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=217018
 
@@ -24,8 +27,5 @@ https://www.aitimes.com/news/articleView.html?idxno=217011
 에스엘즈, 실리콘밸리 VC 주관 스타트업 경연대회서 글로벌 결선 진출
 https://www.aitimes.com/news/articleView.html?idxno=217009
 
-"AI 현장 엔지니어 연봉 최대 19억원"...기업들 FDE 확보 총력
-https://www.aitimes.com/news/articleView.html?idxno=217007
-
-LG AI 컴플라이언스 에이전트 '엑사원 넥서스', 국가지식재산위원장상 수상
-https://www.aitimes.com/news/articleView.html?idxno=217006
+"AI 초장문 처리 속도 최대 35배 높인다"…자이프라, 새 어텐션 기술 공개
+https://www.aitimes.com/news/articleView.html?idxno=217008
