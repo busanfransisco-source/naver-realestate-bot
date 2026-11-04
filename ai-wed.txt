@@ -1,5 +1,8 @@
 🤖 26년 11월 4일 수요일 AI 뉴스
 
+충남 AI디지털배움터, 직장인 위한 생성 AI 야간교육 운영
+https://www.aitimes.com/news/articleView.html?idxno=216980
+
 뤼튼·스캐터랩 양분한 AI 캐릭터챗 시장에 게임사 가세…경쟁 본격화
 https://www.aitimes.com/news/articleView.html?idxno=216970
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=216959
 
 딥시크, 자연어로 AI 에이전트 기능 확장…플러그인 제작까지 자동화
 https://www.aitimes.com/news/articleView.html?idxno=216958
-
-카르파시, 유튜브 추천에 질려 AI로 대안 개발…"2시간 만에 완성"
-https://www.aitimes.com/news/articleView.html?idxno=216956
