@@ -1,31 +1,31 @@
 🤖 26년 11월 4일 수요일 AI 뉴스
 
+유럽 슈퍼마켓 냉장고 동시 해킹…미군 기지도 유사 공격 조사
+https://www.aitimes.com/news/articleView.html?idxno=216999
+
+리얼월드, 신임 COO에 김민정 전 한국IBM 컨설팅 대표 선임
+https://www.aitimes.com/news/articleView.html?idxno=216994
+
+SKT, 3분기 통신·AI 두 축 성장세 지속…AIDC 사업 본격화
+https://www.aitimes.com/news/articleView.html?idxno=216991
+
+LGU+, 3분기 영업익 전년 동기비 84% 증가…AIDC 성장 견인
+https://www.aitimes.com/news/articleView.html?idxno=216988
+
+애플, iOS 27.3 베타 공개...대화 기억하는 AI·시리 앱 제어 강화
+https://www.aitimes.com/news/articleView.html?idxno=216983
+
 충남 AI디지털배움터, 직장인 위한 생성 AI 야간교육 운영
 https://www.aitimes.com/news/articleView.html?idxno=216980
 
-뤼튼·스캐터랩 양분한 AI 캐릭터챗 시장에 게임사 가세…경쟁 본격화
-https://www.aitimes.com/news/articleView.html?idxno=216970
+AMD, 퓨리오사·망고부스트와 공조...내년 봄 이기종 AI 실증 인프라 구축
+https://www.aitimes.com/news/articleView.html?idxno=216979
 
-엔비디아, 클라우드 고객에 중국 기업 서비스 비중 49% 이하 요구
-https://www.aitimes.com/news/articleView.html?idxno=216969
+"저가 칩에 HBM 숨겨 중국으로"...삼성·SK 메모리 밀반입 수법 드러나
+https://www.aitimes.com/news/articleView.html?idxno=216978
 
-딥 프린시플, 일부 과학 평가서 GPT-6 아스트라 앞선 '하이드로젠' 공개
-https://www.aitimes.com/news/articleView.html?idxno=216967
+오픈AI "챗GPT 검색량, 구글의 20% 도달"...주간 사용자 12억명 돌파
+https://www.aitimes.com/news/articleView.html?idxno=216977
 
-"AI 도시, 현실이 되다!”… 화성시, AI엑스포 'MARS 2026' 팡파르
-https://www.aitimes.com/news/articleView.html?idxno=216966
-
-[AI 모델 신작] 사람처럼 대화하는 '프리즘'부터 로봇 제어 AI까지 6종
-https://www.aitimes.com/news/articleView.html?idxno=216963
-
-래블업, 상장 첫날 급등 후 급락…AI 인프라주 '호된 신고식'
-https://www.aitimes.com/news/articleView.html?idxno=216962
-
-메이투안, 중국산 칩으로 학습한 1.6조 매개변수 '롱캣-2.5' 공개
-https://www.aitimes.com/news/articleView.html?idxno=216961
-
-스페이스X, 부스트모바일 인수 추진…미 통신 3사 거절에 우회로 모색
-https://www.aitimes.com/news/articleView.html?idxno=216959
-
-딥시크, 자연어로 AI 에이전트 기능 확장…플러그인 제작까지 자동화
-https://www.aitimes.com/news/articleView.html?idxno=216958
+가정용 태양광·ESS, 그리드포밍 적용 시 주파수 변화율 66% 감소
+https://www.aitimes.com/news/articleView.html?idxno=216976
