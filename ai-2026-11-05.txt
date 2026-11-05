@@ -1,5 +1,23 @@
 🤖 26년 11월 5일 목요일 AI 뉴스
 
+알트먼, RAM 발언 역풍에 '램 알트먼'으로 이름까지 바꿔
+https://www.aitimes.com/news/articleView.html?idxno=217053
+
+AMD, 4분기 매출 23조 전망...창사 이후 처음 인텔 추월하나
+https://www.aitimes.com/news/articleView.html?idxno=217047
+
+카카오, 3분기 매출·영업익 증가...자사주 소각 조기 이행
+https://www.aitimes.com/news/articleView.html?idxno=217044
+
+KT·삼성전자, 시속 250km 고속철 '통신 끊김' AI로 잡는다
+https://www.aitimes.com/news/articleView.html?idxno=217041
+
+텐센트, 'Hy4'로 중국 AI 최상위권 진입 선언…사이버 공격 학습 제한
+https://www.aitimes.com/news/articleView.html?idxno=217039
+
+오픈AI, '이미지스 2.6' 공개…챗GPT서 움직이는 GIF 생성 지원
+https://www.aitimes.com/news/articleView.html?idxno=217038
+
 포티투마루, GPU 일체형 AX 솔루션 출시...SMB·공공 시장 조준
 https://www.aitimes.com/news/articleView.html?idxno=217037
 
@@ -11,21 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217024
 
 "머스크, 중간선거 최대 패자"…5억달러 후원 참패에 사업 차질 전망
 https://www.aitimes.com/news/articleView.html?idxno=217023
-
-"AI에 일 맡길수록 감독 능력도 퇴화"…앤트로픽 엔지니어 경고
-https://www.aitimes.com/news/articleView.html?idxno=217019
-
-[게시판] 넘즈에이아이, 20억 프리시드 2차 투자 유치 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=217018
-
-현대제철, 사내 생성 AI 통합 플랫폼 '스틸-X' 가동...전사 AX 페달링
-https://www.aitimes.com/news/articleView.html?idxno=217017
-
-중국 브레인코, 뇌 자극 '전자식 비만 치료제' 개발 중
-https://www.aitimes.com/news/articleView.html?idxno=217015
-
-EU 최고법원 법무관 "AI 기사 무단 요약은 저작권 침해"...구글 제미나이 소송 주목
-https://www.aitimes.com/news/articleView.html?idxno=217014
-
-에이티넘인베 투자기업 올거나이즈, 일본 증시 상장
-https://www.aitimes.com/news/articleView.html?idxno=217013
