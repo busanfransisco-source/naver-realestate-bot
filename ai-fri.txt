@@ -1,5 +1,8 @@
 🤖 26년 11월 6일 금요일 AI 뉴스
 
+오픈AI, 'GPT-6 사이버' 출시…취약점 공격 성공률 51% 향상
+https://www.aitimes.com/news/articleView.html?idxno=217074
+
 브록먼 “상반기 코딩 시장서 고전…'GPT-5.6 솔'로 반등 성공”
 https://www.aitimes.com/news/articleView.html?idxno=217070
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217062
 
 구글, AI 투자 확대 속 5개국으로 희망퇴직 확대...딥마인드는 제외
 https://www.aitimes.com/news/articleView.html?idxno=217061
-
-중국 최대 낸드 메모리 YMTC, 증시 급락·당국 규제로  IPO 보류
-https://www.aitimes.com/news/articleView.html?idxno=217060
