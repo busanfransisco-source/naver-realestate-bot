@@ -1,31 +1,31 @@
-🤖 26년 10월 30일 금요일 AI 뉴스
+🤖 26년 11월 6일 금요일 AI 뉴스
 
-엔비디아, 네이버 3대 주주로…1.3조 다음 달 6일 납입
-https://www.aitimes.com/news/articleView.html?idxno=216835
+브록먼 “상반기 코딩 시장서 고전…'GPT-5.6 솔'로 반등 성공”
+https://www.aitimes.com/news/articleView.html?idxno=217070
 
-허깅페이스 오픈소스팀, 비드래프트 판단 AI 체험 데모 제작 기증
-https://www.aitimes.com/news/articleView.html?idxno=216833
+[게시판] LG, 안전보건 컨퍼런스서 AI 활용 사례 15건 공유 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=217069
 
-LG CNS, 3분기 매출 1.7조원…AI·클라우드 성장 견인
-https://www.aitimes.com/news/articleView.html?idxno=216831
+'극저온 국산화' 크라이오에이치앤아이, '2026 딥테크 스타트업 챌린지' 대상 영예
+https://www.aitimes.com/news/articleView.html?idxno=217067
 
-AI 신소재 나노포지에이아이, 146억 시드 투자 유치
-https://www.aitimes.com/news/articleView.html?idxno=216829
+스페인, 태양광으로 18개월간 전력 도매비용 26조원 절감 추산
+https://www.aitimes.com/news/articleView.html?idxno=217066
 
-한국딥러닝, AI로 IBK기업은행 보이스피싱 업무 자동화
-https://www.aitimes.com/news/articleView.html?idxno=216827
+엔비디아 중국 고객사, 94조 규모 'RTX' 칩 주문에도 1%만 공급받아
+https://www.aitimes.com/news/articleView.html?idxno=217065
 
-앤트로픽, '클로드' 자기 대화 감시 기술 도입…유해 사용 78% 탐지
-https://www.aitimes.com/news/articleView.html?idxno=216824
+일본, 미국 AI 기업에 미공개 소프트웨어 취약점 정보 공유 요청
+https://www.aitimes.com/news/articleView.html?idxno=217064
 
-오픈AI, 프로·기업용 AI 사용량 최대 2배 확대…연속 업데이트 막바지
-https://www.aitimes.com/news/articleView.html?idxno=216823
+태양광 패널 과열 줄이는 냉각기술…실험서 최고온도 최대 32℃ 낮춰
+https://www.aitimes.com/news/articleView.html?idxno=217063
 
-앤트로픽, 스페이스X 매출 34.5% 차지…미 정부 넘어 최대 고객
-https://www.aitimes.com/news/articleView.html?idxno=216822
+과기정통부, AI반도체·양자AI 등 ICT 고급인재 양성센터 5곳 개소
+https://www.aitimes.com/news/articleView.html?idxno=217062
 
-미스트랄, '라지 4' 가중치 공개로 정식 출시…유럽 사이버보안 시장 공략
-https://www.aitimes.com/news/articleView.html?idxno=216821
+구글, AI 투자 확대 속 5개국으로 희망퇴직 확대...딥마인드는 제외
+https://www.aitimes.com/news/articleView.html?idxno=217061
 
-딥시크·문샷 AI, 앤트로픽 방어 강화로 'GPT-6 아스트라' 집중 증류
-https://www.aitimes.com/news/articleView.html?idxno=216820
+중국 최대 낸드 메모리 YMTC, 증시 급락·당국 규제로  IPO 보류
+https://www.aitimes.com/news/articleView.html?idxno=217060
