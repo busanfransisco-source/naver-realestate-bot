@@ -1,5 +1,11 @@
 🤖 26년 11월 5일 목요일 AI 뉴스
 
+포티투마루, GPU 일체형 AX 솔루션 출시...SMB·공공 시장 조준
+https://www.aitimes.com/news/articleView.html?idxno=217037
+
+웹케시, 생성 AI 연결 ‘경리나라 MCP’ 12월 출시
+https://www.aitimes.com/news/articleView.html?idxno=217027
+
 미 민주당 압승에 빅테크 주가 급등…'데이터센터 규제' 호재로 해석
 https://www.aitimes.com/news/articleView.html?idxno=217024
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217014
 
 에이티넘인베 투자기업 올거나이즈, 일본 증시 상장
 https://www.aitimes.com/news/articleView.html?idxno=217013
-
-"중국 AI 위협 과장됐나"…성능 격차 확대에 벤치마크 신뢰성 논쟁
-https://www.aitimes.com/news/articleView.html?idxno=217012
-
-"오픈AI, 수년간 내부 보안 취약점 경고 무시"...개발 속도 우선에 기밀 유출 위험
-https://www.aitimes.com/news/articleView.html?idxno=217011
