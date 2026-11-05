@@ -1,31 +1,31 @@
 🤖 26년 11월 5일 목요일 AI 뉴스
 
-구글, 인터넷 없이 작동하는 '제미나이 라이브' 개발 중
-https://www.aitimes.com/news/articleView.html?idxno=216841
+미 민주당 압승에 빅테크 주가 급등…'데이터센터 규제' 호재로 해석
+https://www.aitimes.com/news/articleView.html?idxno=217024
 
-앤트로픽, '20배 사용량' 혼선에 요금제 개편…5시간 제한 폐지
-https://www.aitimes.com/news/articleView.html?idxno=216846
+"머스크, 중간선거 최대 패자"…5억달러 후원 참패에 사업 차질 전망
+https://www.aitimes.com/news/articleView.html?idxno=217023
 
-"AI 50개 모아 문명 건설 시켰더니 관료주의에 빠져 실패"
-https://www.aitimes.com/news/articleView.html?idxno=216893
+"AI에 일 맡길수록 감독 능력도 퇴화"…앤트로픽 엔지니어 경고
+https://www.aitimes.com/news/articleView.html?idxno=217019
 
-오픈AI, 12월부터 챗GPT·코덱스 사용량 통합…기존 앱 1월 종료
-https://www.aitimes.com/news/articleView.html?idxno=216934
+[게시판] 넘즈에이아이, 20억 프리시드 2차 투자 유치 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=217018
 
-앤트로픽, 클로드로 기존 게임 복제 금지…정상 작업까지 차단 논란
-https://www.aitimes.com/news/articleView.html?idxno=216862
+현대제철, 사내 생성 AI 통합 플랫폼 '스틸-X' 가동...전사 AX 페달링
+https://www.aitimes.com/news/articleView.html?idxno=217017
 
-구글, '제미나이 4 카본' 공개 사흘 만에 개선판 포착…3D 성능 호평
-https://www.aitimes.com/news/articleView.html?idxno=216888
+중국 브레인코, 뇌 자극 '전자식 비만 치료제' 개발 중
+https://www.aitimes.com/news/articleView.html?idxno=217015
 
-딥시크, 코딩 '슈퍼 에이전트' 공개…6개월 만에 추격 기반 구축
-https://www.aitimes.com/news/articleView.html?idxno=216865
+EU 최고법원 법무관 "AI 기사 무단 요약은 저작권 침해"...구글 제미나이 소송 주목
+https://www.aitimes.com/news/articleView.html?idxno=217014
 
-딥시크·문샷 AI, 앤트로픽 방어 강화로 'GPT-6 아스트라' 집중 증류
-https://www.aitimes.com/news/articleView.html?idxno=216820
+에이티넘인베 투자기업 올거나이즈, 일본 증시 상장
+https://www.aitimes.com/news/articleView.html?idxno=217013
 
-오픈AI, 프로·기업용 AI 사용량 최대 2배 확대…연속 업데이트 막바지
-https://www.aitimes.com/news/articleView.html?idxno=216823
+"중국 AI 위협 과장됐나"…성능 격차 확대에 벤치마크 신뢰성 논쟁
+https://www.aitimes.com/news/articleView.html?idxno=217012
 
-미소스 5.5·GPT-6.2 아스트라 잇달아 포착…최첨단 모델 출시설
-https://www.aitimes.com/news/articleView.html?idxno=216894
+"오픈AI, 수년간 내부 보안 취약점 경고 무시"...개발 속도 우선에 기밀 유출 위험
+https://www.aitimes.com/news/articleView.html?idxno=217011
