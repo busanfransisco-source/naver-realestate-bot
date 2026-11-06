@@ -1,31 +1,31 @@
 🤖 26년 11월 6일 금요일 AI 뉴스
 
+[게시판] 리얼월드, 로봇 파운데이션 모델 ‘리얼덱스’ 시연 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=217113
+
+구글 출신 연구진, 65B 모델로 8배 큰 AI 코딩 성능 추월…개발비도 10분의 1
+https://www.aitimes.com/news/articleView.html?idxno=217107
+
+중국, 엔비디아 H200 수입 제한…60만개 홍콩에 발 묶여
+https://www.aitimes.com/news/articleView.html?idxno=217106
+
+구글, 15초 영상 생성 '제미나이 옴니 1.2' 출시…가격 30% 인하
+https://www.aitimes.com/news/articleView.html?idxno=217104
+
+문샷AI, 엔비디아 블랙웰 확보 위해 유럽으로 눈 돌려...8000개 GPU 임대 추진
+https://www.aitimes.com/news/articleView.html?idxno=217103
+
+"아내가 챗GPT로 남편 독살 계획"…오픈AI 피소
+https://www.aitimes.com/news/articleView.html?idxno=217102
+
+팔란티어, 신발 제조사 창신과 맞손…AI로 신발 제조 공정 혁신
+https://www.aitimes.com/news/articleView.html?idxno=217101
+
 구글, 13세 학생 자살 계획에 피소…학교 지급 노트북서 제미나이 사용
 https://www.aitimes.com/news/articleView.html?idxno=217100
 
 미 하원, 젠슨 황 의회 비공개 브리핑 요청...중국 여성 사업가와의 관계 조사
 https://www.aitimes.com/news/articleView.html?idxno=217099
 
-MS, 엔스케일 데이터센터 추가 임대 철회…AI 인프라 투자 재점검
-https://www.aitimes.com/news/articleView.html?idxno=217095
-
-중국, 소프트뱅크의 ABB 로봇 인수 불허...오픈AI 연계 데이터 유출 경계
-https://www.aitimes.com/news/articleView.html?idxno=217094
-
-메타 "중간선거 이후 미국 데이터센터 건설 어려워져"...해외 투자 검토
-https://www.aitimes.com/news/articleView.html?idxno=217093
-
-머스크의 스페이스X·테슬라 폭락...중간선거 후 시총 515조 증발 위기
-https://www.aitimes.com/news/articleView.html?idxno=217092
-
-비드래프트 '다윈', 수학·과학 추론 세계 2위 수준…구글·딥시크 앞서
-https://www.aitimes.com/news/articleView.html?idxno=217089
-
-식약처, 식품안전 정보 포털에 AI 기반 민원검색 서비스 도입
-https://www.aitimes.com/news/articleView.html?idxno=217085
-
-중간선거 여파·AI 투자 불안에 미 기술주 폭락...시총 4340조 증발
-https://www.aitimes.com/news/articleView.html?idxno=217082
-
-인텔리빅스, 비전 AI로 수소충전소 실시간 충전대기 정보 서비스 구현
-https://www.aitimes.com/news/articleView.html?idxno=217081
+애질리티, 미국 휴머노이드 기업 최초 나스닥 상장…수익성은 과제
+https://www.aitimes.com/news/articleView.html?idxno=217098
