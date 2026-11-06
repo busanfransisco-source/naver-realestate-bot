@@ -1,5 +1,8 @@
 🤖 26년 11월 6일 금요일 AI 뉴스
 
+비드래프트 '다윈', 수학·과학 추론 세계 2위 수준…구글·딥시크 앞서
+https://www.aitimes.com/news/articleView.html?idxno=217089
+
 오픈AI, 'GPT-6 사이버' 출시…취약점 공격 성공률 51% 향상
 https://www.aitimes.com/news/articleView.html?idxno=217074
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217063
 
 과기정통부, AI반도체·양자AI 등 ICT 고급인재 양성센터 5곳 개소
 https://www.aitimes.com/news/articleView.html?idxno=217062
-
-구글, AI 투자 확대 속 5개국으로 희망퇴직 확대...딥마인드는 제외
-https://www.aitimes.com/news/articleView.html?idxno=217061
