@@ -1,31 +1,31 @@
 🤖 26년 11월 7일 토요일 AI 뉴스
 
-앤트로픽, '클로드' 게임 복제 제한 완화…"비슷한 게임 만들 수 있어"
-https://www.aitimes.com/news/articleView.html?idxno=217115
+구글, 인터넷 없이 작동하는 '제미나이 라이브' 개발 중
+https://www.aitimes.com/news/articleView.html?idxno=216841
 
-[게시판] 리얼월드, 로봇 파운데이션 모델 ‘리얼덱스’ 시연 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=217113
+앤트로픽, '20배 사용량' 혼선에 요금제 개편…5시간 제한 폐지
+https://www.aitimes.com/news/articleView.html?idxno=216846
 
-구글 출신 연구진, 65B 모델로 8배 큰 AI 코딩 성능 추월…개발비도 10분의 1
-https://www.aitimes.com/news/articleView.html?idxno=217107
+"AI 50개 모아 문명 건설 시켰더니 관료주의에 빠져 실패"
+https://www.aitimes.com/news/articleView.html?idxno=216893
 
-중국, 엔비디아 H200 수입 제한…60만개 홍콩에 발 묶여
-https://www.aitimes.com/news/articleView.html?idxno=217106
+오픈AI, 12월부터 챗GPT·코덱스 사용량 통합…기존 앱 1월 종료
+https://www.aitimes.com/news/articleView.html?idxno=216934
 
-구글, 15초 영상 생성 '제미나이 옴니 1.2' 출시…가격 30% 인하
-https://www.aitimes.com/news/articleView.html?idxno=217104
+앤트로픽, 클로드로 기존 게임 복제 금지…정상 작업까지 차단 논란
+https://www.aitimes.com/news/articleView.html?idxno=216862
 
-문샷AI, 엔비디아 블랙웰 확보 위해 유럽으로 눈 돌려...8000개 GPU 임대 추진
-https://www.aitimes.com/news/articleView.html?idxno=217103
+구글, '제미나이 4 카본' 공개 사흘 만에 개선판 포착…3D 성능 호평
+https://www.aitimes.com/news/articleView.html?idxno=216888
 
-"아내가 챗GPT로 남편 독살 계획"…오픈AI 피소
-https://www.aitimes.com/news/articleView.html?idxno=217102
+"저가 칩에 HBM 숨겨 중국으로"...삼성·SK 메모리 밀반입 수법 드러나
+https://www.aitimes.com/news/articleView.html?idxno=216978
 
-팔란티어, 신발 제조사 창신과 맞손…AI로 신발 제조 공정 혁신
-https://www.aitimes.com/news/articleView.html?idxno=217101
+딥시크, 코딩 '슈퍼 에이전트' 공개…6개월 만에 추격 기반 구축
+https://www.aitimes.com/news/articleView.html?idxno=216865
 
-구글, 13세 학생 자살 계획에 피소…학교 지급 노트북서 제미나이 사용
-https://www.aitimes.com/news/articleView.html?idxno=217100
+미 민주당 압승에 빅테크 주가 급등…'데이터센터 규제' 호재로 해석
+https://www.aitimes.com/news/articleView.html?idxno=217024
 
-미 하원, 젠슨 황 의회 비공개 브리핑 요청...중국 여성 사업가와의 관계 조사
-https://www.aitimes.com/news/articleView.html?idxno=217099
+머스크 "그록 봇 운영 비용 감당 어려워"...AI 에이전트 사용량 제한
+https://www.aitimes.com/news/articleView.html?idxno=216942
