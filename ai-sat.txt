@@ -1,31 +1,31 @@
-🤖 26년 10월 31일 토요일 AI 뉴스
+🤖 26년 11월 7일 토요일 AI 뉴스
 
-머스크, 놀란에 맞서 AI판 '오디세이' 공개…평가 엇갈려
-https://www.aitimes.com/news/articleView.html?idxno=216851
+앤트로픽, '클로드' 게임 복제 제한 완화…"비슷한 게임 만들 수 있어"
+https://www.aitimes.com/news/articleView.html?idxno=217115
 
-알트먼 "AI 수학 연구에 수억달러 투입…공개 안 한 성과도 많아"
-https://www.aitimes.com/news/articleView.html?idxno=216850
+[게시판] 리얼월드, 로봇 파운데이션 모델 ‘리얼덱스’ 시연 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=217113
 
-독일 엔비전, 유기 분자로 양자 컴퓨팅 칩 개발…OLED 제조 기술 활용
-https://www.aitimes.com/news/articleView.html?idxno=216849
+구글 출신 연구진, 65B 모델로 8배 큰 AI 코딩 성능 추월…개발비도 10분의 1
+https://www.aitimes.com/news/articleView.html?idxno=217107
 
-[AI 이슈트렌드] 미·이란 전쟁 위기 1위…코스피 급락·구룡마을 화재 주목
-https://www.aitimes.com/news/articleView.html?idxno=216848
+중국, 엔비디아 H200 수입 제한…60만개 홍콩에 발 묶여
+https://www.aitimes.com/news/articleView.html?idxno=217106
 
-오픈AI, 청소년 챗GPT 무기 정보 제한...폭력 징후 땐 대화 중단
-https://www.aitimes.com/news/articleView.html?idxno=216847
+구글, 15초 영상 생성 '제미나이 옴니 1.2' 출시…가격 30% 인하
+https://www.aitimes.com/news/articleView.html?idxno=217104
 
-앤트로픽, '20배 사용량' 혼선에 요금제 개편…5시간 제한 폐지
-https://www.aitimes.com/news/articleView.html?idxno=216846
+문샷AI, 엔비디아 블랙웰 확보 위해 유럽으로 눈 돌려...8000개 GPU 임대 추진
+https://www.aitimes.com/news/articleView.html?idxno=217103
 
-구글, 제미나이 채팅에서 문서·PDF 직접 편집 기능 추가
-https://www.aitimes.com/news/articleView.html?idxno=216845
+"아내가 챗GPT로 남편 독살 계획"…오픈AI 피소
+https://www.aitimes.com/news/articleView.html?idxno=217102
 
-중국 GPU, 엔비디아 H200과 성능 대등 주장…AI 추론서 일부 앞서
-https://www.aitimes.com/news/articleView.html?idxno=216844
+팔란티어, 신발 제조사 창신과 맞손…AI로 신발 제조 공정 혁신
+https://www.aitimes.com/news/articleView.html?idxno=217101
 
-구글, AI 검색에 광고 수익성 타격…시총 5000억달러 증발
-https://www.aitimes.com/news/articleView.html?idxno=216843
+구글, 13세 학생 자살 계획에 피소…학교 지급 노트북서 제미나이 사용
+https://www.aitimes.com/news/articleView.html?idxno=217100
 
-[AI카툰] Bob, Senior IT guy - 밥, AI 수용 단계
-https://www.aitimes.com/news/articleView.html?idxno=216842
+미 하원, 젠슨 황 의회 비공개 브리핑 요청...중국 여성 사업가와의 관계 조사
+https://www.aitimes.com/news/articleView.html?idxno=217099
