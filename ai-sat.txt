@@ -6,6 +6,12 @@ https://www.aitimes.com/news/articleView.html?idxno=217122
 MS, 오라클 AI 서버 임대 계약 종료…구형 GPU 사양 안 맞아
 https://www.aitimes.com/news/articleView.html?idxno=217120
 
+오픈AI CFO "중간선거 결과와 관계없이 데이터센터 투자 계속할 것"
+https://www.aitimes.com/news/articleView.html?idxno=217119
+
+테슬라, 판매 부진 사이버트럭 접고 로보택시 역량 집중
+https://www.aitimes.com/news/articleView.html?idxno=217118
+
 앤트로픽, '클로드' 게임 복제 제한 완화…"비슷한 게임 만들 수 있어"
 https://www.aitimes.com/news/articleView.html?idxno=217115
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217104
 
 문샷AI, 엔비디아 블랙웰 확보 위해 유럽으로 눈 돌려...8000개 GPU 임대 추진
 https://www.aitimes.com/news/articleView.html?idxno=217103
-
-"아내가 챗GPT로 남편 독살 계획"…오픈AI 피소
-https://www.aitimes.com/news/articleView.html?idxno=217102
-
-팔란티어, 신발 제조사 창신과 맞손…AI로 신발 제조 공정 혁신
-https://www.aitimes.com/news/articleView.html?idxno=217101

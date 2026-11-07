@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-11-07 10:01:31",
+  "updated_at_kst": "2026-11-07 10:18:22",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 7일 토요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "\"계약서에 수리는 임차인이 한다고 써 놨는데요\"",
+      "url": "https://n.news.naver.com/mnews/article/015/0005351364"
+    },
+    {
+      "title": "[지분적립형 주택 돋보기]①집값 떨어진다면서요?",
+      "url": "https://n.news.naver.com/mnews/article/648/0000052385"
+    },
     {
       "title": "'청라 더리브 티아모 까사' 선착순 계약 진행...잔금유예 조건 적용",
       "url": "https://n.news.naver.com/mnews/article/119/0003152420"
@@ -34,14 +42,6 @@
     {
       "title": "“관리비 아끼고 생활은 편하게”…대단지 아파트 인기 이유는",
       "url": "https://n.news.naver.com/mnews/article/119/0003152409"
-    },
-    {
-      "title": "집값 하락 (강남3구만), 틀린 말은 아니지만",
-      "url": "https://n.news.naver.com/mnews/article/648/0000052382"
-    },
-    {
-      "title": "[분양캘린더] 11월 둘째 주 5215가구 청약…12곳 중 8곳 경기 집중",
-      "url": "https://n.news.naver.com/mnews/article/421/0009275608"
     }
   ]
 }
