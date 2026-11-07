@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-11-08 08:13:36",
+  "updated_at_kst": "2026-11-08 08:41:50",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 8일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "43억원에 산 빌라가 200억원…이종석, 부동산 안목 통했다",
+      "url": "https://n.news.naver.com/mnews/article/015/0005351436"
+    },
     {
       "title": "'LH 불참 비상' 반도체 배후도시 조성에 광주도시공사 참여",
       "url": "https://n.news.naver.com/mnews/article/001/0016428519"
@@ -38,10 +42,6 @@
     {
       "title": "[르포] '새집' 첫걸음 뗀 동자동 쪽방촌 마을잔치…떠난 180명 추모도",
       "url": "https://n.news.naver.com/mnews/article/001/0016428484"
-    },
-    {
-      "title": "[르포] 재초환 부담금 통지 앞둔 반포현대…조합원 '술렁'",
-      "url": "https://n.news.naver.com/mnews/article/421/0009276414"
     }
   ]
 }
