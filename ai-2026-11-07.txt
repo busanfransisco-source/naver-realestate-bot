@@ -1,5 +1,17 @@
 🤖 26년 11월 7일 토요일 AI 뉴스
 
+유럽 16개국서 데이터센터 반대 공동 행동…MS 건설 현장 난입
+https://www.aitimes.com/news/articleView.html?idxno=217126
+
+[내면 지도 그리기] 41 Inner Mapping: 나를 찾는 지도
+https://www.aitimes.com/news/articleView.html?idxno=217125
+
+[AI카툰] Bob, Senior IT guy - 밥, 결혼정보회사에서 알바
+https://www.aitimes.com/news/articleView.html?idxno=217124
+
+TSMC, 엔비디아 요청에 3D D램 검토…삼성·SK하이닉스와 경쟁하나
+https://www.aitimes.com/news/articleView.html?idxno=217123
+
 앤트로픽 IPO 예상 몸값 2조→1.1조달러…한 달 만에 45% 하락
 https://www.aitimes.com/news/articleView.html?idxno=217122
 
@@ -12,20 +24,8 @@ https://www.aitimes.com/news/articleView.html?idxno=217119
 테슬라, 판매 부진 사이버트럭 접고 로보택시 역량 집중
 https://www.aitimes.com/news/articleView.html?idxno=217118
 
+오픈AI, 15조 투자 유치…목표는 41조→27조로 축소
+https://www.aitimes.com/news/articleView.html?idxno=217117
+
 앤트로픽, '클로드' 게임 복제 제한 완화…"비슷한 게임 만들 수 있어"
 https://www.aitimes.com/news/articleView.html?idxno=217115
-
-[게시판] 리얼월드, 로봇 파운데이션 모델 ‘리얼덱스’ 시연 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=217113
-
-구글 출신 연구진, 65B 모델로 8배 큰 AI 코딩 성능 추월…개발비도 10분의 1
-https://www.aitimes.com/news/articleView.html?idxno=217107
-
-중국, 엔비디아 H200 수입 제한…60만개 홍콩에 발 묶여
-https://www.aitimes.com/news/articleView.html?idxno=217106
-
-구글, 15초 영상 생성 '제미나이 옴니 1.2' 출시…가격 30% 인하
-https://www.aitimes.com/news/articleView.html?idxno=217104
-
-문샷AI, 엔비디아 블랙웰 확보 위해 유럽으로 눈 돌려...8000개 GPU 임대 추진
-https://www.aitimes.com/news/articleView.html?idxno=217103
