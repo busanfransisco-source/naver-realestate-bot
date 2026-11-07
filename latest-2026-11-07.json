@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-11-07 11:07:40",
+  "updated_at_kst": "2026-11-07 11:25:12",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 7일 토요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "20억 낮춘 압구정 매물에도 매수 관망…외곽은 신고가 행진",
+      "url": "https://n.news.naver.com/mnews/article/011/0004679718"
+    },
     {
       "title": "강남 급매물 35억 ‘뚝’ 떨어졌는데…집값 3.5억 ‘껑충’ 뛰는 곳 보니",
       "url": "https://n.news.naver.com/mnews/article/009/0005760340"
@@ -38,10 +42,6 @@
     {
       "title": "\"계약서에 수리는 임차인이 한다고 써 놨는데요\"",
       "url": "https://n.news.naver.com/mnews/article/015/0005351364"
-    },
-    {
-      "title": "[지분적립형 주택 돋보기]①집값 떨어진다면서요?",
-      "url": "https://n.news.naver.com/mnews/article/648/0000052385"
     }
   ]
 }
