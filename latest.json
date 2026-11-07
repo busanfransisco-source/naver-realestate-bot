@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-11-07 23:53:21",
+  "updated_at_kst": "2026-11-08 01:48:42",
   "source": "https://news.naver.com/breakingnews/section/101/260",
-  "headline": "26년 11월 7일 토요일 부동산 주요뉴스",
+  "headline": "26년 11월 8일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "이종석, 43억에 산 한남동 빌라 10년새 200억…'630억 자산가'의 남다른 부동산 재테크",
+      "url": "https://n.news.naver.com/mnews/article/003/0014308184"
+    },
     {
       "title": "“앞날이 캄캄”…당첨 기쁨은 잠깐, 대출 금리에 한숨만",
       "url": "https://n.news.naver.com/mnews/article/009/0005760407"
@@ -38,10 +42,6 @@
     {
       "title": "“경매 물건도 살펴보라”는 대통령…아파트 ‘100점 만점’으로 따져보니",
       "url": "https://n.news.naver.com/mnews/article/009/0005760356"
-    },
-    {
-      "title": "“강남도 아닌데 월세가 300만원 속출”…노도강·금관구 집주인도 놀랄 판",
-      "url": "https://n.news.naver.com/mnews/article/009/0005760352"
     }
   ]
 }
