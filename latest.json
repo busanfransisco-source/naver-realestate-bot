@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-11-07 09:30:27",
+  "updated_at_kst": "2026-11-07 10:01:31",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 7일 토요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "'청라 더리브 티아모 까사' 선착순 계약 진행...잔금유예 조건 적용",
+      "url": "https://n.news.naver.com/mnews/article/119/0003152420"
+    },
+    {
+      "title": "견본주택 개관 전부터 ‘오픈런’… ‘의정부역 펠리스타워 양우내안애’ 발길 잇따라",
+      "url": "https://n.news.naver.com/mnews/article/029/0003057600"
+    },
     {
       "title": "“2억 빌려주고 근저당 잡았는데”…담보권이 취소되는 경우는? [DD집톡]",
       "url": "https://n.news.naver.com/mnews/article/138/0002247639"
@@ -34,14 +42,6 @@
     {
       "title": "[분양캘린더] 11월 둘째 주 5215가구 청약…12곳 중 8곳 경기 집중",
       "url": "https://n.news.naver.com/mnews/article/421/0009275608"
-    },
-    {
-      "title": "\"앞으로 5년간 서울 도심에 오피스 공급 쏟아진다\" [우동집 인터뷰]",
-      "url": "https://n.news.naver.com/mnews/article/215/0001271978"
-    },
-    {
-      "title": "들불처럼 번지는 반도체 벨트 집값 상승세…'키 맞추기' 확산",
-      "url": "https://n.news.naver.com/mnews/article/003/0014307521"
     }
   ]
 }

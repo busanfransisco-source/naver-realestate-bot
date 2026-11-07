@@ -1,5 +1,11 @@
 🤖 26년 11월 7일 토요일 AI 뉴스
 
+앤트로픽 IPO 예상 몸값 2조→1.1조달러…한 달 만에 45% 하락
+https://www.aitimes.com/news/articleView.html?idxno=217122
+
+MS, 오라클 AI 서버 임대 계약 종료…구형 GPU 사양 안 맞아
+https://www.aitimes.com/news/articleView.html?idxno=217120
+
 앤트로픽, '클로드' 게임 복제 제한 완화…"비슷한 게임 만들 수 있어"
 https://www.aitimes.com/news/articleView.html?idxno=217115
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217102
 
 팔란티어, 신발 제조사 창신과 맞손…AI로 신발 제조 공정 혁신
 https://www.aitimes.com/news/articleView.html?idxno=217101
-
-구글, 13세 학생 자살 계획에 피소…학교 지급 노트북서 제미나이 사용
-https://www.aitimes.com/news/articleView.html?idxno=217100
-
-미 하원, 젠슨 황 의회 비공개 브리핑 요청...중국 여성 사업가와의 관계 조사
-https://www.aitimes.com/news/articleView.html?idxno=217099
