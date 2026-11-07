@@ -1,5 +1,20 @@
 🤖 26년 11월 7일 토요일 AI 뉴스
 
+씽킹 머신스, 성능 대폭 높인 '잉클링 2' 공개…중국 오픈 모델에 도전
+https://www.aitimes.com/news/articleView.html?idxno=217132
+
+바이두, 딥시크 앞선 '어니 5.5' 베이스 모델 공개…한국·유럽 사용 제한
+https://www.aitimes.com/news/articleView.html?idxno=217131
+
+미 중간선거 후폭풍…민주당, 빅테크 대대적 조사·AI 규제 추진
+https://www.aitimes.com/news/articleView.html?idxno=217130
+
+[AI 이슈트렌드] 강호동 구속영장 1위…미 중간선거·바이낸스 해킹 뒤이어
+https://www.aitimes.com/news/articleView.html?idxno=217129
+
+메타, AI로 맞춤형 앱 만드는 '뮤즈 스페이스' 출시
+https://www.aitimes.com/news/articleView.html?idxno=217128
+
 유럽 16개국서 데이터센터 반대 공동 행동…MS 건설 현장 난입
 https://www.aitimes.com/news/articleView.html?idxno=217126
 
@@ -14,18 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217123
 
 앤트로픽 IPO 예상 몸값 2조→1.1조달러…한 달 만에 45% 하락
 https://www.aitimes.com/news/articleView.html?idxno=217122
-
-MS, 오라클 AI 서버 임대 계약 종료…구형 GPU 사양 안 맞아
-https://www.aitimes.com/news/articleView.html?idxno=217120
-
-오픈AI CFO "중간선거 결과와 관계없이 데이터센터 투자 계속할 것"
-https://www.aitimes.com/news/articleView.html?idxno=217119
-
-테슬라, 판매 부진 사이버트럭 접고 로보택시 역량 집중
-https://www.aitimes.com/news/articleView.html?idxno=217118
-
-오픈AI, 15조 투자 유치…목표는 41조→27조로 축소
-https://www.aitimes.com/news/articleView.html?idxno=217117
-
-앤트로픽, '클로드' 게임 복제 제한 완화…"비슷한 게임 만들 수 있어"
-https://www.aitimes.com/news/articleView.html?idxno=217115
