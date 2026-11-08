@@ -6,6 +6,9 @@ https://www.aitimes.com/news/articleView.html?idxno=217143
 오픈AI, '이미지 2.6' 프롬프트 가이드 공개…"바꿀 것과 유지할 것 구분하라"
 https://www.aitimes.com/news/articleView.html?idxno=217140
 
+엔비디아, 동남아 판매 칩 위치 추적 강화로 밀수 차단 나선다
+https://www.aitimes.com/news/articleView.html?idxno=217139
+
 소프트뱅크·ABB, 54억달러 로봇 인수 살리려 중국 사업부 분리 검토
 https://www.aitimes.com/news/articleView.html?idxno=217137
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217132
 
 바이두, 딥시크 앞선 '어니 5.5' 베이스 모델 공개…한국·유럽 사용 제한
 https://www.aitimes.com/news/articleView.html?idxno=217131
-
-미 중간선거 후폭풍…민주당, 빅테크 대대적 조사·AI 규제 추진
-https://www.aitimes.com/news/articleView.html?idxno=217130
