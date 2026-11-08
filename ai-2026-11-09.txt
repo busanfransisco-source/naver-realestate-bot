@@ -1,0 +1,31 @@
+🤖 26년 11월 9일 월요일 AI 뉴스
+
+과학자들은 AI를 어떻게 쓸까…앤트로픽 "데이터 분석 1위, 가설 생성 4%"
+https://www.aitimes.com/news/articleView.html?idxno=217147
+
+앤트그룹, '링 3.2 플래시' 공개…시각 이해 평가서 클로드 오퍼스 5 앞서
+https://www.aitimes.com/news/articleView.html?idxno=217146
+
+앤트로픽, 40년 미스터리 단백질 연구 돌파구…3D 구조 첫 규명
+https://www.aitimes.com/news/articleView.html?idxno=217145
+
+구글, 퀄컴 지분 7400억원 확보…AI 반도체 기업 인수로 주식 취득
+https://www.aitimes.com/news/articleView.html?idxno=217144
+
+독일 전문가 "AI에 안전한 직업 찾지 마라…미래 일자리 준비해야"
+https://www.aitimes.com/news/articleView.html?idxno=217143
+
+아마존, 앱 없이 문자로 쇼핑 끝낸다…AI '알렉사' 문자 쇼핑 서비스 출시
+https://www.aitimes.com/news/articleView.html?idxno=217142
+
+AWS, 여러 AI 에이전트 지휘하는 '키로 봇' 출시
+https://www.aitimes.com/news/articleView.html?idxno=217141
+
+오픈AI, '이미지 2.6' 프롬프트 가이드 공개…"바꿀 것과 유지할 것 구분하라"
+https://www.aitimes.com/news/articleView.html?idxno=217140
+
+엔비디아, 동남아 판매 칩 위치 추적 강화로 밀수 차단 나선다
+https://www.aitimes.com/news/articleView.html?idxno=217139
+
+오픈AI 도청 혐의 사우디 엔지니어, 법정서 무죄 주장
+https://www.aitimes.com/news/articleView.html?idxno=217138
