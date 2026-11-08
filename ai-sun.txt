@@ -1,5 +1,8 @@
 🤖 26년 11월 8일 일요일 AI 뉴스
 
+과학자들은 AI를 어떻게 쓸까…앤트로픽 "데이터 분석 1위, 가설 생성 4%"
+https://www.aitimes.com/news/articleView.html?idxno=217147
+
 앤트그룹, '링 3.2 플래시' 공개…시각 이해 평가서 클로드 오퍼스 5 앞서
 https://www.aitimes.com/news/articleView.html?idxno=217146
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217139
 
 오픈AI 도청 혐의 사우디 엔지니어, 법정서 무죄 주장
 https://www.aitimes.com/news/articleView.html?idxno=217138
-
-소프트뱅크·ABB, 54억달러 로봇 인수 살리려 중국 사업부 분리 검토
-https://www.aitimes.com/news/articleView.html?idxno=217137
