@@ -1,5 +1,14 @@
 🤖 26년 11월 8일 일요일 AI 뉴스
 
+소프트뱅크·ABB, 54억달러 로봇 인수 살리려 중국 사업부 분리 검토
+https://www.aitimes.com/news/articleView.html?idxno=217137
+
+TSMC, '3D D램' 개발설 사실상 부인…상용화도 먼 길
+https://www.aitimes.com/news/articleView.html?idxno=217136
+
+FT "미 정보당국, 젠슨 황 CEO와 중국 스파이 의심 인물 연인 관계로 판단"
+https://www.aitimes.com/news/articleView.html?idxno=217135
+
 오픈AI, '클로드 코드' 성공 주역 캣 우 영입…핵심 제품 총괄 맡아
 https://www.aitimes.com/news/articleView.html?idxno=217134
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217129
 
 메타, AI로 맞춤형 앱 만드는 '뮤즈 스페이스' 출시
 https://www.aitimes.com/news/articleView.html?idxno=217128
-
-유럽 16개국서 데이터센터 반대 공동 행동…MS 건설 현장 난입
-https://www.aitimes.com/news/articleView.html?idxno=217126
-
-[내면 지도 그리기] 41 Inner Mapping: 나를 찾는 지도
-https://www.aitimes.com/news/articleView.html?idxno=217125
-
-[AI카툰] Bob, Senior IT guy - 밥, 결혼정보회사에서 알바
-https://www.aitimes.com/news/articleView.html?idxno=217124
