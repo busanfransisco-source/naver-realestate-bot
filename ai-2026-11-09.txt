@@ -1,5 +1,8 @@
 🤖 26년 11월 9일 월요일 AI 뉴스
 
+젠슨 황 "아내에게 충실하지 못했다" 사과…엔비디아 "CEO직 유지"
+https://www.aitimes.com/news/articleView.html?idxno=217150
+
 과학자들은 AI를 어떻게 쓸까…앤트로픽 "데이터 분석 1위, 가설 생성 4%"
 https://www.aitimes.com/news/articleView.html?idxno=217147
 
@@ -21,11 +24,8 @@ https://www.aitimes.com/news/articleView.html?idxno=217142
 AWS, 여러 AI 에이전트 지휘하는 '키로 봇' 출시
 https://www.aitimes.com/news/articleView.html?idxno=217141
 
-오픈AI, '이미지 2.6' 프롬프트 가이드 공개…"바꿀 것과 유지할 것 구분하라"
+오픈AI, '이미지 2.6' 프롬프트 가이드 공개…"바꿀 것·유지할 것 구분"
 https://www.aitimes.com/news/articleView.html?idxno=217140
 
 엔비디아, 동남아 판매 칩 위치 추적 강화로 밀수 차단 나선다
 https://www.aitimes.com/news/articleView.html?idxno=217139
-
-오픈AI 도청 혐의 사우디 엔지니어, 법정서 무죄 주장
-https://www.aitimes.com/news/articleView.html?idxno=217138

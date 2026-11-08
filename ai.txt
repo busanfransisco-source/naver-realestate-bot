@@ -1,31 +1,31 @@
 🤖 26년 11월 9일 월요일 AI 뉴스
 
-오픈AI, 12월부터 챗GPT·코덱스 사용량 통합…기존 앱 1월 종료
-https://www.aitimes.com/news/articleView.html?idxno=216934
+젠슨 황 "아내에게 충실하지 못했다" 사과…엔비디아 "CEO직 유지"
+https://www.aitimes.com/news/articleView.html?idxno=217150
 
-"저가 칩에 HBM 숨겨 중국으로"...삼성·SK 메모리 밀반입 수법 드러나
-https://www.aitimes.com/news/articleView.html?idxno=216978
+과학자들은 AI를 어떻게 쓸까…앤트로픽 "데이터 분석 1위, 가설 생성 4%"
+https://www.aitimes.com/news/articleView.html?idxno=217147
 
-미 민주당 압승에 빅테크 주가 급등…'데이터센터 규제' 호재로 해석
-https://www.aitimes.com/news/articleView.html?idxno=217024
+앤트그룹, '링 3.2 플래시' 공개…시각 이해 평가서 클로드 오퍼스 5 앞서
+https://www.aitimes.com/news/articleView.html?idxno=217146
 
-머스크 "그록 봇 운영 비용 감당 어려워"...AI 에이전트 사용량 제한
-https://www.aitimes.com/news/articleView.html?idxno=216942
+앤트로픽, 40년 미스터리 단백질 연구 돌파구…3D 구조 첫 규명
+https://www.aitimes.com/news/articleView.html?idxno=217145
 
-TSMC, 엔비디아 요청에 3D D램 검토…삼성·SK하이닉스와 경쟁하나
-https://www.aitimes.com/news/articleView.html?idxno=217123
+구글, 퀄컴 지분 7400억원 확보…AI 반도체 기업 인수로 주식 취득
+https://www.aitimes.com/news/articleView.html?idxno=217144
 
-"AI에 일 맡길수록 감독 능력도 퇴화"…앤트로픽 엔지니어 경고
-https://www.aitimes.com/news/articleView.html?idxno=217019
+독일 전문가 "AI에 안전한 직업 찾지 마라…미래 일자리 준비해야"
+https://www.aitimes.com/news/articleView.html?idxno=217143
 
-오픈AI, 'GPT-6 사이버' 출시…취약점 공격 성공률 51% 향상
-https://www.aitimes.com/news/articleView.html?idxno=217074
+아마존, 앱 없이 문자로 쇼핑 끝낸다…AI '알렉사' 문자 쇼핑 서비스 출시
+https://www.aitimes.com/news/articleView.html?idxno=217142
 
-오픈AI, AI로 하드웨어 설계 일주일 만에 완료…실제 시제품 제작
-https://www.aitimes.com/news/articleView.html?idxno=216989
+AWS, 여러 AI 에이전트 지휘하는 '키로 봇' 출시
+https://www.aitimes.com/news/articleView.html?idxno=217141
 
-구글 출신 연구진, 65B 모델로 8배 큰 AI 코딩 성능 추월…개발비도 10분의 1
-https://www.aitimes.com/news/articleView.html?idxno=217107
+오픈AI, '이미지 2.6' 프롬프트 가이드 공개…"바꿀 것·유지할 것 구분"
+https://www.aitimes.com/news/articleView.html?idxno=217140
 
-엔비디아, 기업 데이터 이해하는 '오토 온톨로지' 공개…AI 정확도 높인다
-https://www.aitimes.com/news/articleView.html?idxno=217004
+엔비디아, 동남아 판매 칩 위치 추적 강화로 밀수 차단 나선다
+https://www.aitimes.com/news/articleView.html?idxno=217139
