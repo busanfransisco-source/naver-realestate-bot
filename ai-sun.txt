@@ -1,5 +1,8 @@
 🤖 26년 11월 8일 일요일 AI 뉴스
 
+오픈AI, '이미지 2.6' 프롬프트 가이드 공개…"바꿀 것과 유지할 것 구분하라"
+https://www.aitimes.com/news/articleView.html?idxno=217140
+
 소프트뱅크·ABB, 54억달러 로봇 인수 살리려 중국 사업부 분리 검토
 https://www.aitimes.com/news/articleView.html?idxno=217137
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217130
 
 [AI 이슈트렌드] 강호동 구속영장 1위…미 중간선거·바이낸스 해킹 뒤이어
 https://www.aitimes.com/news/articleView.html?idxno=217129
-
-메타, AI로 맞춤형 앱 만드는 '뮤즈 스페이스' 출시
-https://www.aitimes.com/news/articleView.html?idxno=217128

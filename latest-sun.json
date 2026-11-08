@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-11-08 09:49:16",
+  "updated_at_kst": "2026-11-08 09:55:58",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 8일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "서울보다 더 오른 경기 집값…경기남부 강세",
+      "url": "https://n.news.naver.com/mnews/article/422/0000923916"
+    },
+    {
+      "title": "평택캠 인접…한화포레나 지제역 견본주택 인파 '북적'",
+      "url": "https://n.news.naver.com/mnews/article/003/0014308405"
+    },
     {
       "title": "등기 수수료 인상 추진하자… 공인중개사협회 “열람·발급 무료화” 촉구",
       "url": "https://n.news.naver.com/mnews/article/366/0001203269"
@@ -34,14 +42,6 @@
     {
       "title": "광주송정역·금호타이어공장 일대 '반도체 관문도시' 조성",
       "url": "https://n.news.naver.com/mnews/article/001/0016428561"
-    },
-    {
-      "title": "“월세 100만원 올리면 건물값 3억 뛰는데”…한 층 비면 10억 손해? [DD집톡]",
-      "url": "https://n.news.naver.com/mnews/article/138/0002247656"
-    },
-    {
-      "title": "대통령도, 장관도, 시장도…뜨거운 '부동산 SNS'",
-      "url": "https://n.news.naver.com/mnews/article/648/0000052391"
     }
   ]
 }
