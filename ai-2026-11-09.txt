@@ -1,7 +1,19 @@
 🤖 26년 11월 9일 월요일 AI 뉴스
 
+브이엠에스 솔루션스, 제조 AI 전문기업 선정…생산계획 최적화 기술 확대
+https://www.aitimes.com/news/articleView.html?idxno=217164
+
+안랩, 하반기 두자릿수 모집 공채 실시...자회사 안랩클라우드메이트도 함께
+https://www.aitimes.com/news/articleView.html?idxno=217163
+
+히츠, KAIST AI-혁신신약연구단과 협약 체결...AI 플랫폼 활용 연구지원
+https://www.aitimes.com/news/articleView.html?idxno=217159
+
 젠슨 황 "아내에게 충실하지 못했다" 사과…엔비디아 "CEO직 유지"
 https://www.aitimes.com/news/articleView.html?idxno=217150
+
+구글, 사업 차질 빚은 크루소 AI 데이터센터 인수…170억달러 투자
+https://www.aitimes.com/news/articleView.html?idxno=217148
 
 과학자들은 AI를 어떻게 쓸까…앤트로픽 "데이터 분석 1위, 가설 생성 4%"
 https://www.aitimes.com/news/articleView.html?idxno=217147
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217144
 
 독일 전문가 "AI에 안전한 직업 찾지 마라…미래 일자리 준비해야"
 https://www.aitimes.com/news/articleView.html?idxno=217143
-
-아마존, 앱 없이 문자로 쇼핑 끝낸다…AI '알렉사' 문자 쇼핑 서비스 출시
-https://www.aitimes.com/news/articleView.html?idxno=217142
-
-AWS, 여러 AI 에이전트 지휘하는 '키로 봇' 출시
-https://www.aitimes.com/news/articleView.html?idxno=217141
-
-오픈AI, '이미지 2.6' 프롬프트 가이드 공개…"바꿀 것·유지할 것 구분"
-https://www.aitimes.com/news/articleView.html?idxno=217140
-
-엔비디아, 동남아 판매 칩 위치 추적 강화로 밀수 차단 나선다
-https://www.aitimes.com/news/articleView.html?idxno=217139
