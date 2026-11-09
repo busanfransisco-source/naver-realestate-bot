@@ -1,31 +1,31 @@
 🤖 26년 11월 9일 월요일 AI 뉴스
 
+오픈AI, 생명과학 AI 벤치마크 공개…GPT-6 아스트라 성능 23%P 향상
+https://www.aitimes.com/news/articleView.html?idxno=217167
+
+엔비디아 "LLM에 긴 문맥 꼭 필요하지 않아"…압축해도 성능 유지
+https://www.aitimes.com/news/articleView.html?idxno=217166
+
+"말로 설명하면 영상 완성"…딥브레인AI, 에이전트 탑재 AI스튜디오 5.0 공개
+https://www.aitimes.com/news/articleView.html?idxno=217165
+
 브이엠에스 솔루션스, 제조 AI 전문기업 선정…생산계획 최적화 기술 확대
 https://www.aitimes.com/news/articleView.html?idxno=217164
 
 안랩, 하반기 두자릿수 모집 공채 실시...자회사 안랩클라우드메이트도 함께
 https://www.aitimes.com/news/articleView.html?idxno=217163
 
+앤트로픽, AI가 잘못된 기억 스스로 수정하는 '드리밍' 기술 효과 입증
+https://www.aitimes.com/news/articleView.html?idxno=217161
+
+앤트로픽, 데이터센터 전력 확보에 4.6조 투입…가스 발전기 직접 구매
+https://www.aitimes.com/news/articleView.html?idxno=217160
+
 히츠, KAIST AI-혁신신약연구단과 협약 체결...AI 플랫폼 활용 연구지원
 https://www.aitimes.com/news/articleView.html?idxno=217159
 
-젠슨 황 "아내에게 충실하지 못했다" 사과…엔비디아 "CEO직 유지"
-https://www.aitimes.com/news/articleView.html?idxno=217150
+딥시크 하네스, 일일 사용자 154만명…미국 주도 AI 에이전트 시장 도전
+https://www.aitimes.com/news/articleView.html?idxno=217158
 
-구글, 사업 차질 빚은 크루소 AI 데이터센터 인수…170억달러 투자
-https://www.aitimes.com/news/articleView.html?idxno=217148
-
-과학자들은 AI를 어떻게 쓸까…앤트로픽 "데이터 분석 1위, 가설 생성 4%"
-https://www.aitimes.com/news/articleView.html?idxno=217147
-
-앤트그룹, '링 3.2 플래시' 공개…시각 이해 평가서 클로드 오퍼스 5 앞서
-https://www.aitimes.com/news/articleView.html?idxno=217146
-
-앤트로픽, 40년 미스터리 단백질 연구 돌파구…3D 구조 첫 규명
-https://www.aitimes.com/news/articleView.html?idxno=217145
-
-구글, 퀄컴 지분 7400억원 확보…AI 반도체 기업 인수로 주식 취득
-https://www.aitimes.com/news/articleView.html?idxno=217144
-
-독일 전문가 "AI에 안전한 직업 찾지 마라…미래 일자리 준비해야"
-https://www.aitimes.com/news/articleView.html?idxno=217143
+트럼프 "민주당과 AI 규제 협력할 의사 있어"…중간선거 패배 후 변화
+https://www.aitimes.com/news/articleView.html?idxno=217157
