@@ -1,0 +1,31 @@
+🤖 26년 11월 10일 화요일 AI 뉴스
+
+젠슨 황 논란에 엔비디아 침묵…정부 "GPU 공급 차질 없어"
+https://www.aitimes.com/news/articleView.html?idxno=217190
+
+엔비디아, 국내 AI 스타트업 3곳 투자 낙점...리얼월드·업스테이지·모티프
+https://www.aitimes.com/news/articleView.html?idxno=217188
+
+카카오모빌리티-엔비디아, 레벨4 자율주행 협력…기아 PBV 우선 적용
+https://www.aitimes.com/news/articleView.html?idxno=217187
+
+[게시판] 업스테이지, 시리즈C 2차 투자에 엔비디아 합류 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=217185
+
+AI 학습 데이터 0.1%만 조작해도 에이전트에 원격 코드 백도어 심을 수 있어
+https://www.aitimes.com/news/articleView.html?idxno=217183
+
+모티프, 엔비디아 투자로 독파모 후속작 ‘모티프 4’ 개발한다
+https://www.aitimes.com/news/articleView.html?idxno=217182
+
+누스 리서치, 중국 AI 모델의 정치 편향 답변 22%→0.9%로 줄여
+https://www.aitimes.com/news/articleView.html?idxno=217181
+
+LGU+, 서울대·KAIST·연세대와 '말투·맥락 이해하는 음성 AI' 개발
+https://www.aitimes.com/news/articleView.html?idxno=217180
+
+구글, 코딩 전 설계 오류 잡는 '코끼리-금붕어' 플러그인 공개
+https://www.aitimes.com/news/articleView.html?idxno=217179
+
+아마존, '아스트로' 실패 딛고 가정용 로봇 재도전…피지컬 AI 발전에 기대
+https://www.aitimes.com/news/articleView.html?idxno=217178
