@@ -1,12 +1,15 @@
 🤖 26년 11월 10일 화요일 AI 뉴스
 
+앤트로픽 '페이블 5.2', AI 성능 평가 1위 탈환…API 가격도 20% 인하
+https://www.aitimes.com/news/articleView.html?idxno=217196
+
 미 의회, 젠슨 황 조사 압박…중국 AI 칩 거래·정부 책임도 겨냥
 https://www.aitimes.com/news/articleView.html?idxno=217195
 
 엔비디아 주가 장중 8.8% 급락…주요 투자자들은 젠슨 황 잔류 지지
 https://www.aitimes.com/news/articleView.html?idxno=217194
 
-"젠슨 황 후계자 없다"…엔비디아 자녀들 영향력 확대에 승계 논란
+"젠슨 황 후계자 없다"…자녀들 영향력 확대에 승계 논란
 https://www.aitimes.com/news/articleView.html?idxno=217193
 
 젠슨 황 논란에 엔비디아 침묵…정부 "GPU 공급 차질 없어"
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217183
 
 모티프, 엔비디아 투자로 독파모 후속작 ‘모티프 4’ 개발한다
 https://www.aitimes.com/news/articleView.html?idxno=217182
-
-누스 리서치, 중국 AI 모델의 정치 편향 답변 22%→0.9%로 줄여
-https://www.aitimes.com/news/articleView.html?idxno=217181
