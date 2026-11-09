@@ -1,5 +1,14 @@
 🤖 26년 11월 10일 화요일 AI 뉴스
 
+미 의회, 젠슨 황 조사 압박…중국 AI 칩 거래·정부 책임도 겨냥
+https://www.aitimes.com/news/articleView.html?idxno=217195
+
+엔비디아 주가 장중 8.8% 급락…주요 투자자들은 젠슨 황 잔류 지지
+https://www.aitimes.com/news/articleView.html?idxno=217194
+
+"젠슨 황 후계자 없다"…엔비디아 자녀들 영향력 확대에 승계 논란
+https://www.aitimes.com/news/articleView.html?idxno=217193
+
 젠슨 황 논란에 엔비디아 침묵…정부 "GPU 공급 차질 없어"
 https://www.aitimes.com/news/articleView.html?idxno=217190
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217182
 
 누스 리서치, 중국 AI 모델의 정치 편향 답변 22%→0.9%로 줄여
 https://www.aitimes.com/news/articleView.html?idxno=217181
-
-LGU+, 서울대·KAIST·연세대와 '말투·맥락 이해하는 음성 AI' 개발
-https://www.aitimes.com/news/articleView.html?idxno=217180
-
-구글, 코딩 전 설계 오류 잡는 '코끼리-금붕어' 플러그인 공개
-https://www.aitimes.com/news/articleView.html?idxno=217179
-
-아마존, '아스트로' 실패 딛고 가정용 로봇 재도전…피지컬 AI 발전에 기대
-https://www.aitimes.com/news/articleView.html?idxno=217178
