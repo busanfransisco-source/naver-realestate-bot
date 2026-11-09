@@ -1,5 +1,26 @@
 🤖 26년 11월 9일 월요일 AI 뉴스
 
+모티프, 엔비디아 투자로 독파모 후속작 ‘모티프 4’ 개발한다
+https://www.aitimes.com/news/articleView.html?idxno=217182
+
+누스 리서치, 중국 AI 모델의 정치 편향 답변 22%→0.9%로 줄여
+https://www.aitimes.com/news/articleView.html?idxno=217181
+
+LGU+, 서울대·KAIST·연세대와 '말투·맥락 이해하는 음성 AI' 개발
+https://www.aitimes.com/news/articleView.html?idxno=217180
+
+아마존, '아스트로' 실패 딛고 가정용 로봇 재도전…피지컬 AI 발전에 기대
+https://www.aitimes.com/news/articleView.html?idxno=217178
+
+LG, 'K-엑사원 2.5' API 전면 무료 개방…개발자 진입 장벽 낮춘다
+https://www.aitimes.com/news/articleView.html?idxno=217175
+
+엔비디아·SK텔레콤·리벨리온, 이기종 AI 컴퓨팅 겨냥 3각 동맹
+https://www.aitimes.com/news/articleView.html?idxno=217170
+
+구글 AI, 구형 RSA 암호 약점 2건 발견…인수분해 비용 30배 낮출 알고리즘 개발
+https://www.aitimes.com/news/articleView.html?idxno=217169
+
 오픈AI, 생명과학 AI 벤치마크 공개…GPT-6 아스트라 성능 23%P 향상
 https://www.aitimes.com/news/articleView.html?idxno=217167
 
@@ -8,24 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217166
 
 "말로 설명하면 영상 완성"…딥브레인AI, 에이전트 탑재 AI스튜디오 5.0 공개
 https://www.aitimes.com/news/articleView.html?idxno=217165
-
-브이엠에스 솔루션스, 제조 AI 전문기업 선정…생산계획 최적화 기술 확대
-https://www.aitimes.com/news/articleView.html?idxno=217164
-
-안랩, 하반기 두자릿수 모집 공채 실시...자회사 안랩클라우드메이트도 함께
-https://www.aitimes.com/news/articleView.html?idxno=217163
-
-앤트로픽, AI가 잘못된 기억 스스로 수정하는 '드리밍' 기술 효과 입증
-https://www.aitimes.com/news/articleView.html?idxno=217161
-
-앤트로픽, 데이터센터 전력 확보에 4.6조 투입…가스 발전기 직접 구매
-https://www.aitimes.com/news/articleView.html?idxno=217160
-
-히츠, KAIST AI-혁신신약연구단과 협약 체결...AI 플랫폼 활용 연구지원
-https://www.aitimes.com/news/articleView.html?idxno=217159
-
-딥시크 하네스, 일일 사용자 154만명…미국 주도 AI 에이전트 시장 도전
-https://www.aitimes.com/news/articleView.html?idxno=217158
-
-트럼프 "민주당과 AI 규제 협력할 의사 있어"…중간선거 패배 후 변화
-https://www.aitimes.com/news/articleView.html?idxno=217157
