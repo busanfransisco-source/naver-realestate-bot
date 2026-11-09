@@ -1,31 +1,31 @@
 🤖 26년 11월 10일 화요일 AI 뉴스
 
-젠슨 황 논란에 엔비디아 침묵…정부 "GPU 공급 차질 없어"
-https://www.aitimes.com/news/articleView.html?idxno=217190
+"저가 칩에 HBM 숨겨 중국으로"...삼성·SK 메모리 밀반입 수법 드러나
+https://www.aitimes.com/news/articleView.html?idxno=216978
 
-엔비디아, 국내 AI 스타트업 3곳 투자 낙점...리얼월드·업스테이지·모티프
-https://www.aitimes.com/news/articleView.html?idxno=217188
+미 민주당 압승에 빅테크 주가 급등…'데이터센터 규제' 호재로 해석
+https://www.aitimes.com/news/articleView.html?idxno=217024
 
-카카오모빌리티-엔비디아, 레벨4 자율주행 협력…기아 PBV 우선 적용
-https://www.aitimes.com/news/articleView.html?idxno=217187
+TSMC, 엔비디아 요청에 3D D램 검토…삼성·SK하이닉스와 경쟁하나
+https://www.aitimes.com/news/articleView.html?idxno=217123
 
-[게시판] 업스테이지, 시리즈C 2차 투자에 엔비디아 합류 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=217185
+"AI에 일 맡길수록 감독 능력도 퇴화"…앤트로픽 엔지니어 경고
+https://www.aitimes.com/news/articleView.html?idxno=217019
 
-AI 학습 데이터 0.1%만 조작해도 에이전트에 원격 코드 백도어 심을 수 있어
-https://www.aitimes.com/news/articleView.html?idxno=217183
+오픈AI, 'GPT-6 사이버' 출시…취약점 공격 성공률 51% 향상
+https://www.aitimes.com/news/articleView.html?idxno=217074
 
-모티프, 엔비디아 투자로 독파모 후속작 ‘모티프 4’ 개발한다
-https://www.aitimes.com/news/articleView.html?idxno=217182
+구글 출신 연구진, 65B 모델로 8배 큰 AI 코딩 성능 추월…개발비도 10분의 1
+https://www.aitimes.com/news/articleView.html?idxno=217107
 
-누스 리서치, 중국 AI 모델의 정치 편향 답변 22%→0.9%로 줄여
-https://www.aitimes.com/news/articleView.html?idxno=217181
+오픈AI, AI로 하드웨어 설계 일주일 만에 완료…실제 시제품 제작
+https://www.aitimes.com/news/articleView.html?idxno=216989
 
-LGU+, 서울대·KAIST·연세대와 '말투·맥락 이해하는 음성 AI' 개발
-https://www.aitimes.com/news/articleView.html?idxno=217180
+엔비디아, 기업 데이터 이해하는 '오토 온톨로지' 공개…AI 정확도 높인다
+https://www.aitimes.com/news/articleView.html?idxno=217004
 
-구글, 코딩 전 설계 오류 잡는 '코끼리-금붕어' 플러그인 공개
-https://www.aitimes.com/news/articleView.html?idxno=217179
+삼성 첫 AI 안경 출시 임박…젠틀몬스터·워비파커, 12일 예약 시작
+https://www.aitimes.com/news/articleView.html?idxno=217133
 
-아마존, '아스트로' 실패 딛고 가정용 로봇 재도전…피지컬 AI 발전에 기대
-https://www.aitimes.com/news/articleView.html?idxno=217178
+구글, 퀄컴 지분 7400억원 확보…AI 반도체 기업 인수로 주식 취득
+https://www.aitimes.com/news/articleView.html?idxno=217144
