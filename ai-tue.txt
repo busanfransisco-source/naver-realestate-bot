@@ -3,6 +3,12 @@
 덴컴, 서부장애인치과병원에 AI 진료기록 시스템 공급…정식 운영
 https://www.aitimes.com/news/articleView.html?idxno=217208
 
+엔비디아·젠슨 황, 주주 집단소송 직면…스파이 의혹 관련 '허위 설명' 쟁점
+https://www.aitimes.com/news/articleView.html?idxno=217206
+
+딥엑스, 초저전력 AI 반도체 'DX-M2' 설계 완료...내년 하반기 양산 채비
+https://www.aitimes.com/news/articleView.html?idxno=217204
+
 앤트로픽 '페이블 5.2', AI 성능 평가 1위 탈환…API 가격도 20% 인하
 https://www.aitimes.com/news/articleView.html?idxno=217196
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217191
 
 젠슨 황 논란에 엔비디아 침묵…정부 "GPU 공급 차질 없어"
 https://www.aitimes.com/news/articleView.html?idxno=217190
-
-엔비디아, 국내 AI 스타트업 3곳 투자 낙점...리얼월드·업스테이지·모티프
-https://www.aitimes.com/news/articleView.html?idxno=217188
-
-카카오모빌리티-엔비디아, 레벨4 자율주행 협력…기아 PBV 우선 적용
-https://www.aitimes.com/news/articleView.html?idxno=217187
