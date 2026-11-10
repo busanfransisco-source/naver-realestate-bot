@@ -1,5 +1,11 @@
 🤖 26년 11월 10일 화요일 AI 뉴스
 
+오픈메이드컨설팅, AI 기반 SQL 자동 튜닝 솔루션 '쿼리메딕 2.0' 출시
+https://www.aitimes.com/news/articleView.html?idxno=217212
+
+미 의회, AI 데이터센터 건설 촉진법 심의…민주당 내부 반발
+https://www.aitimes.com/news/articleView.html?idxno=217210
+
 덴컴, 서부장애인치과병원에 AI 진료기록 시스템 공급…정식 운영
 https://www.aitimes.com/news/articleView.html?idxno=217208
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217194
 
 "젠슨 황 후계자 없다"…자녀들 영향력 확대에 승계 논란
 https://www.aitimes.com/news/articleView.html?idxno=217193
-
-아리아스튜디오, CES 2027 혁신상 수상…관객 참여형 AI 영화 기술 인정
-https://www.aitimes.com/news/articleView.html?idxno=217192
-
-[기고] AI가 정확할수록 불량이 쌓인다? 제조업이 놓친 '치명적 오류'
-https://www.aitimes.com/news/articleView.html?idxno=217191
