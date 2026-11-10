@@ -1,5 +1,8 @@
 🤖 26년 11월 10일 화요일 AI 뉴스
 
+덴컴, 서부장애인치과병원에 AI 진료기록 시스템 공급…정식 운영
+https://www.aitimes.com/news/articleView.html?idxno=217208
+
 앤트로픽 '페이블 5.2', AI 성능 평가 1위 탈환…API 가격도 20% 인하
 https://www.aitimes.com/news/articleView.html?idxno=217196
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217188
 
 카카오모빌리티-엔비디아, 레벨4 자율주행 협력…기아 PBV 우선 적용
 https://www.aitimes.com/news/articleView.html?idxno=217187
-
-[게시판] 업스테이지, 시리즈C 2차 투자에 엔비디아 합류 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=217185
