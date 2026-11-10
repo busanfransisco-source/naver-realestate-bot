@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-11-10 12:41:23",
+  "updated_at_kst": "2026-11-10 12:51:00",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 10일 화요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "[부고] 윤학선(중흥그룹 경영지원팀 상무)씨 빙모상",
+      "url": "https://n.news.naver.com/mnews/article/119/0003153381"
+    },
     {
       "title": "서초구, 재초환 폐지 2차 탄원서 국토부 전달...\"13일까지 회신 촉구\"",
       "url": "https://n.news.naver.com/mnews/article/014/0005602004"
@@ -12,7 +16,7 @@
       "url": "https://n.news.naver.com/mnews/article/421/0009280946"
     },
     {
-      "title": "이 대통령 '29억 분당 아파트' 매수자…남은 돈 어떻게 갚았나",
+      "title": "李 대통령 '29억 분당 아파트' 매수자…남은 돈 어떻게 갚았나",
       "url": "https://n.news.naver.com/mnews/article/018/0006407227"
     },
     {
@@ -38,10 +42,6 @@
     {
       "title": "자녀 있는데 혼인신고도 않고… 장인 위장전입시켜 가점 높여",
       "url": "https://n.news.naver.com/mnews/article/021/0002831698"
-    },
-    {
-      "title": "경기북부 국민평형 전셋값도 10억 육박",
-      "url": "https://n.news.naver.com/mnews/article/021/0002831697"
     }
   ]
 }
