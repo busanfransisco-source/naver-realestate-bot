@@ -1,10 +1,19 @@
 🤖 26년 11월 10일 화요일 AI 뉴스
 
+KT, 3분기 실적 주춤...B2B·AX로 반등 노려
+https://www.aitimes.com/news/articleView.html?idxno=217246
+
+클로드 페이블 5.2, 전자기기 3종 설계…회로 수정 없이 시제품 제작
+https://www.aitimes.com/news/articleView.html?idxno=217243
+
 오픈AI, AI 연구용 '킬 스위치' 공개…35초 내 출력 차단
 https://www.aitimes.com/news/articleView.html?idxno=217241
 
 바이두, AI 연구 자동화하는 '어니 이볼브' 공개…추론 속도 6배 개선
 https://www.aitimes.com/news/articleView.html?idxno=217240
+
+챗GPT, 주요 AI 챗봇 이용량 81% 차지…클로드 급성장에도 독주
+https://www.aitimes.com/news/articleView.html?idxno=217239
 
 [AI 모델 신작] 가상 세계 실시간 탐험부터 22MB 이미지 분석 AI까지 6종
 https://www.aitimes.com/news/articleView.html?idxno=217237
@@ -12,20 +21,11 @@ https://www.aitimes.com/news/articleView.html?idxno=217237
 소프트뱅크, 미국 AI 데이터센터 사업 재검토…중간선거 후 규제 부담
 https://www.aitimes.com/news/articleView.html?idxno=217235
 
+프랑스 "슈퍼마켓 냉장고 해킹 배후는 이란"…EU 추가 제재 추진
+https://www.aitimes.com/news/articleView.html?idxno=217234
+
 BMW, '챗GPT'로 차량 추천부터 시승 예약까지…AI 쇼핑 확대
 https://www.aitimes.com/news/articleView.html?idxno=217233
 
-클로드, 밤새 로봇 팔로 수채화 완성…물감도 직접 섞었다
-https://www.aitimes.com/news/articleView.html?idxno=217231
-
-[게시판] AWS, 의료 격차 해소에 5년간 1억달러 기술 지원 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=217227
-
-바이트댄스, 100회 수정해도 이미지 유지하는 '시드림 5.5' 공개
-https://www.aitimes.com/news/articleView.html?idxno=217225
-
-디즈니, 어도비와 전용 AI 모델 공동 개발…영화·테마파크로 확대
-https://www.aitimes.com/news/articleView.html?idxno=217221
-
-LGU+, 국내 통신사 최초 ‘자동차 사이버보안’ 국제표준 레벨3 인증
-https://www.aitimes.com/news/articleView.html?idxno=217219
+텐센트도 'AI 자기 개선' 연구 본격화…미국 이어 RSI 경쟁 가세
+https://www.aitimes.com/news/articleView.html?idxno=217232
