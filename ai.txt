@@ -12,6 +12,12 @@ https://www.aitimes.com/news/articleView.html?idxno=217194
 "젠슨 황 후계자 없다"…자녀들 영향력 확대에 승계 논란
 https://www.aitimes.com/news/articleView.html?idxno=217193
 
+아리아스튜디오, CES 2027 혁신상 수상…관객 참여형 AI 영화 기술 인정
+https://www.aitimes.com/news/articleView.html?idxno=217192
+
+[기고] AI가 정확할수록 불량이 쌓인다? 제조업이 놓친 '치명적 오류'
+https://www.aitimes.com/news/articleView.html?idxno=217191
+
 젠슨 황 논란에 엔비디아 침묵…정부 "GPU 공급 차질 없어"
 https://www.aitimes.com/news/articleView.html?idxno=217190
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217187
 
 [게시판] 업스테이지, 시리즈C 2차 투자에 엔비디아 합류 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=217185
-
-AI 학습 데이터 0.1%만 조작해도 에이전트에 원격 코드 백도어 심을 수 있어
-https://www.aitimes.com/news/articleView.html?idxno=217183
-
-모티프, 엔비디아 투자로 독파모 후속작 ‘모티프 4’ 개발한다
-https://www.aitimes.com/news/articleView.html?idxno=217182
