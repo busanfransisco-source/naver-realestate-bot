@@ -9,6 +9,9 @@ https://www.aitimes.com/news/articleView.html?idxno=217206
 딥엑스, 초저전력 AI 반도체 'DX-M2' 설계 완료...내년 하반기 양산 채비
 https://www.aitimes.com/news/articleView.html?idxno=217204
 
+트럼프 "FBI, 젠슨 황 사건 조사 중"…주요 AI 행사도 잇달아 불참
+https://www.aitimes.com/news/articleView.html?idxno=217203
+
 앤트로픽 '페이블 5.2', AI 성능 평가 1위 탈환…API 가격도 20% 인하
 https://www.aitimes.com/news/articleView.html?idxno=217196
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217192
 
 [기고] AI가 정확할수록 불량이 쌓인다? 제조업이 놓친 '치명적 오류'
 https://www.aitimes.com/news/articleView.html?idxno=217191
-
-젠슨 황 논란에 엔비디아 침묵…정부 "GPU 공급 차질 없어"
-https://www.aitimes.com/news/articleView.html?idxno=217190
