@@ -1,31 +1,31 @@
 🤖 26년 11월 10일 화요일 AI 뉴스
 
-크라우드웍스, 인핸스와 제조 암묵지 AI 전환 협력
-https://www.aitimes.com/news/articleView.html?idxno=217217
+오픈AI, AI 연구용 '킬 스위치' 공개…35초 내 출력 차단
+https://www.aitimes.com/news/articleView.html?idxno=217241
 
-앤트로픽, 93조 IPO 계획 전달 직후 철회…빅테크 35조 투자도 포함
-https://www.aitimes.com/news/articleView.html?idxno=217213
+바이두, AI 연구 자동화하는 '어니 이볼브' 공개…추론 속도 6배 개선
+https://www.aitimes.com/news/articleView.html?idxno=217240
 
-오픈메이드컨설팅, AI 기반 SQL 자동 튜닝 솔루션 '쿼리메딕 2.0' 출시
-https://www.aitimes.com/news/articleView.html?idxno=217212
+[AI 모델 신작] 가상 세계 실시간 탐험부터 22MB 이미지 분석 AI까지 6종
+https://www.aitimes.com/news/articleView.html?idxno=217237
 
-구글, AI 에이전트·보안 특화 TPU 2종 공개…엔비디아 추격
-https://www.aitimes.com/news/articleView.html?idxno=217211
+소프트뱅크, 미국 AI 데이터센터 사업 재검토…중간선거 후 규제 부담
+https://www.aitimes.com/news/articleView.html?idxno=217235
 
-미 의회, AI 데이터센터 건설 촉진법 심의…민주당 내부 반발
-https://www.aitimes.com/news/articleView.html?idxno=217210
+BMW, '챗GPT'로 차량 추천부터 시승 예약까지…AI 쇼핑 확대
+https://www.aitimes.com/news/articleView.html?idxno=217233
 
-'하이쿠' 성능에 비용은 3분의 1…메타, 에이전트용 '뮤즈 엠버' 출시
-https://www.aitimes.com/news/articleView.html?idxno=217209
+클로드, 밤새 로봇 팔로 수채화 완성…물감도 직접 섞었다
+https://www.aitimes.com/news/articleView.html?idxno=217231
 
-덴컴, 서부장애인치과병원에 AI 진료기록 시스템 공급…정식 운영
-https://www.aitimes.com/news/articleView.html?idxno=217208
+[게시판] AWS, 의료 격차 해소에 5년간 1억달러 기술 지원 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=217227
 
-엔비디아·젠슨 황, 주주 집단소송 직면…스파이 의혹 관련 '허위 설명' 쟁점
-https://www.aitimes.com/news/articleView.html?idxno=217206
+바이트댄스, 100회 수정해도 이미지 유지하는 '시드림 5.5' 공개
+https://www.aitimes.com/news/articleView.html?idxno=217225
 
-딥엑스, 초저전력 AI 반도체 'DX-M2' 설계 완료...내년 하반기 양산 채비
-https://www.aitimes.com/news/articleView.html?idxno=217204
+디즈니, 어도비와 전용 AI 모델 공동 개발…영화·테마파크로 확대
+https://www.aitimes.com/news/articleView.html?idxno=217221
 
-트럼프 "FBI, 젠슨 황 사건 조사 중"…주요 AI 행사도 잇달아 불참
-https://www.aitimes.com/news/articleView.html?idxno=217203
+LGU+, 국내 통신사 최초 ‘자동차 사이버보안’ 국제표준 레벨3 인증
+https://www.aitimes.com/news/articleView.html?idxno=217219
