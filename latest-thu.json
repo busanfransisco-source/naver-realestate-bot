@@ -1,8 +1,28 @@
 {
-  "updated_at_kst": "2026-11-12 00:03:45",
+  "updated_at_kst": "2026-11-12 03:38:08",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 12일 목요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "내달 말? 2029년?… 재초환 1호 ‘반포현대’ 부과 시점 놓고도 혼란",
+      "url": "https://n.news.naver.com/mnews/article/023/0004009153"
+    },
+    {
+      "title": "실현 안된 이익에 주먹구구 설계… “재초환 갈등 탓 재건축 멈출 판”",
+      "url": "https://n.news.naver.com/mnews/article/023/0004009152"
+    },
+    {
+      "title": "LH 창사 첫 총파업 가나… “공급·임대 업무 마비 우려”",
+      "url": "https://n.news.naver.com/mnews/article/005/0001884619"
+    },
+    {
+      "title": "등기부등본 열람 수수료 700→1100원 인상 “비용 부담, 서민에게 전가”… 5만명이 청원",
+      "url": "https://n.news.naver.com/mnews/article/023/0004009095"
+    },
+    {
+      "title": "4.6억 부담금 고지서…은퇴한 고령 주민 “나가란 말이냐”",
+      "url": "https://n.news.naver.com/mnews/article/025/0003564593"
+    },
     {
       "title": "주택 공급 시급한데…국토부·서울시, 도심 공공정비도 '엇박자'",
       "url": "https://n.news.naver.com/mnews/article/422/0000925246"
@@ -22,26 +42,6 @@
     {
       "title": "“규제 완화” “실거주 우대”…여당, 비거주 1주택 종부세 ‘갑론을박’",
       "url": "https://n.news.naver.com/mnews/article/032/0003482176"
-    },
-    {
-      "title": "서울시 \"국토부 '도심 공공주택 복합사업 지연' 서울시 탓 어불성설\"",
-      "url": "https://n.news.naver.com/mnews/article/018/0006408448"
-    },
-    {
-      "title": "GH 첫 지분적립형 주택 ‘광교 A17’…1순위 청약에 경쟁률 ‘100.5대 1’",
-      "url": "https://n.news.naver.com/mnews/article/666/0000131680"
-    },
-    {
-      "title": "홍지선 국토장관 “알박기 등 재개발 불법행위 전수조사 적극 협조”",
-      "url": "https://n.news.naver.com/mnews/article/366/0001204162"
-    },
-    {
-      "title": "서울시 \"도심복합사업 지연은 LH 신뢰 저하 탓\"…국토부에 반박",
-      "url": "https://n.news.naver.com/mnews/article/277/0005841398"
-    },
-    {
-      "title": "GH 첫 지분적립형 주택 1순위 경쟁률 '100:1'",
-      "url": "https://n.news.naver.com/mnews/article/422/0000925201"
     }
   ]
 }
