@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-11-11 09:06:24",
+  "updated_at_kst": "2026-11-11 09:18:59",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 11일 수요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "KIND, 아일랜드 에너지저장장치 공동 개발…국내 기업 유럽 진출 지원",
+      "url": "https://n.news.naver.com/mnews/article/014/0005602460"
+    },
     {
       "title": "건설수주 반등했지만 공사 현장 체감 경기는 여전히 냉랭, 왜?",
       "url": "https://n.news.naver.com/mnews/article/009/0005761955"
@@ -38,10 +42,6 @@
     {
       "title": "안철수 “집값 폭락한다면서 재초환은 왜?…재건축 사디즘 끝내야”",
       "url": "https://n.news.naver.com/mnews/article/009/0005761945"
-    },
-    {
-      "title": "라온건설, '중화역 라온프라이빗 센트로' 견본주택 13일 개관",
-      "url": "https://n.news.naver.com/mnews/article/277/0005840910"
     }
   ]
 }
