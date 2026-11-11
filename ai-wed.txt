@@ -1,31 +1,31 @@
 🤖 26년 11월 11일 수요일 AI 뉴스
 
-"편의점서 AI 아바타가 상품 추천"...이스트소프트, 세븐일레븐과 기술 검증
-https://www.aitimes.com/news/articleView.html?idxno=217267
+[게시판] 패스트캠퍼스·엔비디아 해커톤서 신약개발 AI 에이전트 우승 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=217295
 
-포톤엣지큐, 서울대 산학협력단과 전고체 냉각기술 연구 협력
-https://www.aitimes.com/news/articleView.html?idxno=217266
+문샷, 중국서 엔비디아 최신 AI 칩 임대 정황…금융 문서 확인
+https://www.aitimes.com/news/articleView.html?idxno=217294
 
-디 인포메이션 "젠슨 황 인맥으로 엔비디아 칩 75억달러 중국 공급"
-https://www.aitimes.com/news/articleView.html?idxno=217262
+소프트뱅크, AI 발전 설비 선주문에 5조 손실…분기 적자 9조
+https://www.aitimes.com/news/articleView.html?idxno=217292
 
-코어위브, 매출 168% 급증에도 부채 469억달러…투자 불안 여전
-https://www.aitimes.com/news/articleView.html?idxno=217261
+엔스케일, 350억달러 IPO 연기 검토…AI 데이터센터 투자 불안 여파
+https://www.aitimes.com/news/articleView.html?idxno=217290
 
-젠슨 황, 불륜 인정 1년 전부터 '성 스캔들 전문' PR 업체 고용
-https://www.aitimes.com/news/articleView.html?idxno=217260
+TSMC, 자체 칩 개발 나선 오픈AI·앤트로픽에 최대 1.3조원 투자
+https://www.aitimes.com/news/articleView.html?idxno=217289
 
-엔비디아, 젠슨 황 사건 조사 위해 뉴욕 유명 로펌 고용
-https://www.aitimes.com/news/articleView.html?idxno=217259
+중기부, 2030년까지 ‘AI 유니콘 20곳·데카콘 1곳' 키운다
+https://www.aitimes.com/news/articleView.html?idxno=217284
 
-엔비디아, CEO 스캔들에 AI 투자 불안 겹쳐…이틀간 시총 627조 증발
-https://www.aitimes.com/news/articleView.html?idxno=217258
+오픈AI, 오데시아 인수하며 여행 AI 서비스 개발 본격화
+https://www.aitimes.com/news/articleView.html?idxno=217282
 
-원프레딕트, CJ제일제당 공장 AI 팩토리 기술개발 사업 참여
-https://www.aitimes.com/news/articleView.html?idxno=217256
+메타, AI 에이전트 '뮤즈' 애플워치·웨어OS로 확대
+https://www.aitimes.com/news/articleView.html?idxno=217278
 
-KT, KAIST에 AI 메일 보안 서비스 제공
-https://www.aitimes.com/news/articleView.html?idxno=217252
+구글, AI로 암호 약점 발견 이어 시그널 보안 검증…650만줄 증명
+https://www.aitimes.com/news/articleView.html?idxno=217275
 
-정부, 피지컬 AI 신규 과제에 차세대 센서·액추에이터·이차전지 선정
-https://www.aitimes.com/news/articleView.html?idxno=217250
+어도비, '파이어플라이' 기능 대거 확대… 초·중급 크리에이터 시장 조준
+https://www.aitimes.com/news/articleView.html?idxno=217273
