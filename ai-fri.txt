@@ -1,31 +1,31 @@
-🤖 26년 11월 6일 금요일 AI 뉴스
+🤖 26년 11월 13일 금요일 AI 뉴스
 
-앤트로픽, '클로드' 게임 복제 제한 완화…"비슷한 게임 만들 수 있어"
-https://www.aitimes.com/news/articleView.html?idxno=217115
+구글-삼성, AI 안경 대전 참전...12월10일 출시
+https://www.aitimes.com/news/articleView.html?idxno=217346
 
-[게시판] 리얼월드, 로봇 파운데이션 모델 ‘리얼덱스’ 시연 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=217113
+미 제재 중국 군 관련 대학, 엔비디아 H200 구매…서버 임대로도 확보
+https://www.aitimes.com/news/articleView.html?idxno=217339
 
-구글 출신 연구진, 65B 모델로 8배 큰 AI 코딩 성능 추월…개발비도 10분의 1
-https://www.aitimes.com/news/articleView.html?idxno=217107
+[AI 모델 신작] 물리 세계 예측 'PAN 2'·1.6조 매개변수 '롱캣 2.5' 등
+https://www.aitimes.com/news/articleView.html?idxno=217338
 
-중국, 엔비디아 H200 수입 제한…60만개 홍콩에 발 묶여
-https://www.aitimes.com/news/articleView.html?idxno=217106
+바이트댄스, 오픈AI 추격에 최소 3년 전망…'뮤즈' 유사 AI 에이전트 준비
+https://www.aitimes.com/news/articleView.html?idxno=217337
 
-구글, 15초 영상 생성 '제미나이 옴니 1.2' 출시…가격 30% 인하
-https://www.aitimes.com/news/articleView.html?idxno=217104
+392조 충청권 메가프로젝트 첫 삽…삼성 온양캠퍼스, HBM 거점 탈바꿈
+https://www.aitimes.com/news/articleView.html?idxno=217336
 
-문샷AI, 엔비디아 블랙웰 확보 위해 유럽으로 눈 돌려...8000개 GPU 임대 추진
-https://www.aitimes.com/news/articleView.html?idxno=217103
+중국 AI주 급락 속 알리바바, 반도체 자회사 'T-헤드' 홍콩 상장 추진
+https://www.aitimes.com/news/articleView.html?idxno=217335
 
-"아내가 챗GPT로 남편 독살 계획"…오픈AI 피소
-https://www.aitimes.com/news/articleView.html?idxno=217102
+구글, 애플 카플레이에 '제미나이 라이브' 출시…챗GPT와 경쟁
+https://www.aitimes.com/news/articleView.html?idxno=217334
 
-팔란티어, 신발 제조사 창신과 맞손…AI로 신발 제조 공정 혁신
-https://www.aitimes.com/news/articleView.html?idxno=217101
+AI, 프리랜서 업무 41.3% 전문가 수준 수행…1년 전 2.5%서 급상승
+https://www.aitimes.com/news/articleView.html?idxno=217332
 
-구글, 13세 학생 자살 계획에 피소…학교 지급 노트북서 제미나이 사용
-https://www.aitimes.com/news/articleView.html?idxno=217100
+독일 헬싱, 팔란티어 맞설 군사용 AI 공개…수백개 에이전트로 표적 분석
+https://www.aitimes.com/news/articleView.html?idxno=217331
 
-미 하원, 젠슨 황 의회 비공개 브리핑 요청...중국 여성 사업가와의 관계 조사
-https://www.aitimes.com/news/articleView.html?idxno=217099
+영국 AI 칩 스타트업 프랙타일, 9.3조 가치로 1조 투자 유치
+https://www.aitimes.com/news/articleView.html?idxno=217330
