@@ -1,5 +1,11 @@
 🤖 26년 11월 12일 목요일 AI 뉴스
 
+엔비디아 이사회, 젠슨 황 해임 논의 착수…주가 시간외 8% 급락
+https://www.aitimes.com/news/articleView.html?idxno=217304
+
+코어위브 25% 급등에 AI 기술주 동반 반등…엔비디아도 상승 전환
+https://www.aitimes.com/news/articleView.html?idxno=217298
+
 '제미나이'가 기억하는 내 정보 한눈에 보여준다…수정·삭제도 가능
 https://www.aitimes.com/news/articleView.html?idxno=217297
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217284
 
 오픈AI, 오데시아 인수하며 여행 AI 서비스 개발 본격화
 https://www.aitimes.com/news/articleView.html?idxno=217282
-
-메타, AI 에이전트 '뮤즈' 애플워치·웨어OS로 확대
-https://www.aitimes.com/news/articleView.html?idxno=217278
-
-구글, AI로 암호 약점 발견 이어 시그널 보안 검증…650만줄 증명
-https://www.aitimes.com/news/articleView.html?idxno=217275
