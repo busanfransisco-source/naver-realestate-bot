@@ -1,7 +1,13 @@
 🤖 26년 11월 12일 목요일 AI 뉴스
 
+구글, 판단 전용 AI '제미나이 디시전 1' 출시...질문 1000개 동시 처리
+https://www.aitimes.com/news/articleView.html?idxno=217307
+
 엔비디아 이사회, 젠슨 황 해임 논의 착수…주가 시간외 8% 급락
 https://www.aitimes.com/news/articleView.html?idxno=217304
+
+미 공화당, 젠슨 황 의회 소환장 발부 추진…사임 요구까지 등장
+https://www.aitimes.com/news/articleView.html?idxno=217301
 
 코어위브 25% 급등에 AI 기술주 동반 반등…엔비디아도 상승 전환
 https://www.aitimes.com/news/articleView.html?idxno=217298
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217290
 
 TSMC, 자체 칩 개발 나선 오픈AI·앤트로픽에 최대 1.3조원 투자
 https://www.aitimes.com/news/articleView.html?idxno=217289
-
-중기부, 2030년까지 ‘AI 유니콘 20곳·데카콘 1곳' 키운다
-https://www.aitimes.com/news/articleView.html?idxno=217284
-
-오픈AI, 오데시아 인수하며 여행 AI 서비스 개발 본격화
-https://www.aitimes.com/news/articleView.html?idxno=217282
