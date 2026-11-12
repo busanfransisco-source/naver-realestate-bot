@@ -1,31 +1,31 @@
 🤖 26년 11월 12일 목요일 AI 뉴스
 
-네오사피엔스, 코바코 소상공인 광고 제작지원에 AI 목소리 공급
-https://www.aitimes.com/news/articleView.html?idxno=217319
+미 제재 중국 군 관련 대학, 엔비디아 H200 구매…서버 임대로도 확보
+https://www.aitimes.com/news/articleView.html?idxno=217339
 
-LG CNS, 국내외 대학 연구팀과 로보틱스·피지컬 AI 미래 모색
-https://www.aitimes.com/news/articleView.html?idxno=217317
+[AI 모델 신작] 물리 세계 예측 'PAN 2'·1.6조 매개변수 '롱캣 2.5' 등
+https://www.aitimes.com/news/articleView.html?idxno=217338
 
-노타, 2년 연속 하이퍼엑셀 LPU 최적화 맡는다
-https://www.aitimes.com/news/articleView.html?idxno=217316
+바이트댄스, 오픈AI 추격에 최소 3년 전망…'뮤즈' 유사 AI 에이전트 준비
+https://www.aitimes.com/news/articleView.html?idxno=217337
 
-알리바바, '큐원4' 첫 모델 공개…가중치·성능 평가 없이 프리뷰 출시
-https://www.aitimes.com/news/articleView.html?idxno=217313
+392조 충청권 메가프로젝트 첫 삽…삼성 온양, HBM 거점 탈바꿈
+https://www.aitimes.com/news/articleView.html?idxno=217336
 
-인포시즈, 서울대와 산업 도면 특화 AI모델 개발 나서
-https://www.aitimes.com/news/articleView.html?idxno=217311
+중국 AI주 급락 속 알리바바, 반도체 자회사 'T-헤드' 홍콩 상장 추진
+https://www.aitimes.com/news/articleView.html?idxno=217335
 
-구글, 차세대 경량 모델 '하이드로젠' 테스트…출시 임박 관측
-https://www.aitimes.com/news/articleView.html?idxno=217308
+구글, 애플 카플레이에 '제미나이 라이브' 출시…챗GPT와 경쟁
+https://www.aitimes.com/news/articleView.html?idxno=217334
 
-구글, 판단 전용 AI '제미나이 디시전 1' 출시...질문 1000개 동시 처리
-https://www.aitimes.com/news/articleView.html?idxno=217307
+AI, 실제 프리랜서 업무 41.3% 전문가 수준 수행…1년 전 2.5%서 대폭 상승
+https://www.aitimes.com/news/articleView.html?idxno=217332
 
-엔비디아 이사회, 젠슨 황 해임 논의 착수…주가 시간외 8% 급락
-https://www.aitimes.com/news/articleView.html?idxno=217304
+독일 헬싱, 팔란티어 맞설 군사용 AI 공개…수백개 에이전트로 표적 분석
+https://www.aitimes.com/news/articleView.html?idxno=217331
 
-네이버, AI 팩토리 2조원 첫 수주 확보…”10곳 이상과 추가 협상 중"
-https://www.aitimes.com/news/articleView.html?idxno=217303
+영국 AI 칩 스타트업 프랙타일, 9.3조 가치로 1조 투자 유치
+https://www.aitimes.com/news/articleView.html?idxno=217330
 
-미 공화당, 젠슨 황 의회 소환장 발부 추진…사임 요구까지 등장
-https://www.aitimes.com/news/articleView.html?idxno=217301
+앤트로픽 '미소스', 미국 전력망 보안에 활용…듀크에너지 등 도입 시험
+https://www.aitimes.com/news/articleView.html?idxno=217329
