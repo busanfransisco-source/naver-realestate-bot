@@ -1,31 +1,31 @@
 🤖 26년 11월 13일 금요일 AI 뉴스
 
-TSMC, 엔비디아 요청에 3D D램 검토…삼성·SK하이닉스와 경쟁하나
-https://www.aitimes.com/news/articleView.html?idxno=217123
+젠슨 황 떠난 엔비디아, '실질적 2인자' 크레스가 임시 CEO 맡아
+https://www.aitimes.com/news/articleView.html?idxno=217350
 
-구글, 코딩 전 설계 오류 잡는 '코끼리-금붕어' 플러그인 공개
-https://www.aitimes.com/news/articleView.html?idxno=217179
+젠슨 황 사임 후폭풍…백악관, 상무장관 경질 논의
+https://www.aitimes.com/news/articleView.html?idxno=217349
 
-삼성 첫 AI 안경 출시 임박…젠틀몬스터·워비파커, 12일 예약 시작
-https://www.aitimes.com/news/articleView.html?idxno=217133
+젠슨 황, 엔비디아 CEO 사임…주가 14% 급락·후임 선정 착수
+https://www.aitimes.com/news/articleView.html?idxno=217348
 
-구글, '제미나이 4 카본' 정식 출시…'페이블 5.2'의 4분의 1 가격
-https://www.aitimes.com/news/articleView.html?idxno=217249
+구글·삼성, AI 안경 시장 출사표… 12월10일 메타와 정식 격돌
+https://www.aitimes.com/news/articleView.html?idxno=217346
 
-구글, 퀄컴 지분 7400억원 확보…AI 반도체 기업 인수로 주식 취득
-https://www.aitimes.com/news/articleView.html?idxno=217144
+미 제재 중국 군 관련 대학, 엔비디아 H200 구매…서버 임대로도 확보
+https://www.aitimes.com/news/articleView.html?idxno=217339
 
-오픈AI, '클로드 코드' 성공 주역 캣 우 영입…핵심 제품 총괄 맡아
-https://www.aitimes.com/news/articleView.html?idxno=217134
+[AI 모델 신작] 물리 세계 예측 'PAN 2'·1.6조 매개변수 '롱캣 2.5' 등
+https://www.aitimes.com/news/articleView.html?idxno=217338
 
-앤트로픽 '페이블 5.2', AI 성능 평가 1위 탈환…API 가격도 20% 인하
-https://www.aitimes.com/news/articleView.html?idxno=217196
+바이트댄스, 오픈AI 추격에 최소 3년 전망…'뮤즈' 유사 AI 에이전트 준비
+https://www.aitimes.com/news/articleView.html?idxno=217337
 
-바이두, 딥시크 앞선 '어니 5.5' 베이스 모델 공개…한국·유럽 사용 제한
-https://www.aitimes.com/news/articleView.html?idxno=217131
+392조 충청권 메가프로젝트 첫 삽…삼성 온양캠퍼스, HBM 거점 탈바꿈
+https://www.aitimes.com/news/articleView.html?idxno=217336
 
-오픈AI, '이미지 2.6' 프롬프트 가이드 공개…"바꿀 것·유지할 것 구분"
-https://www.aitimes.com/news/articleView.html?idxno=217140
+중국 AI주 급락 속 알리바바, 반도체 자회사 'T-헤드' 홍콩 상장 추진
+https://www.aitimes.com/news/articleView.html?idxno=217335
 
-[11월6일] "AI에 AI 안전 맡겼더니 일하는 척만"…오픈AI도 원인 못 찾아
-https://www.aitimes.com/news/articleView.html?idxno=217091
+구글, 애플 카플레이에 '제미나이 라이브' 출시…챗GPT와 경쟁
+https://www.aitimes.com/news/articleView.html?idxno=217334
