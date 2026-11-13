@@ -1,31 +1,31 @@
 🤖 26년 11월 13일 금요일 AI 뉴스
 
+노타, 3분기 역대 최대 매출 달성…플랫폼·솔루션 동반 도약
+https://www.aitimes.com/news/articleView.html?idxno=217391
+
+엘리스그룹, 대한민국 인터넷대상 대통령상수상…AI 데이터센터 구축 공로
+https://www.aitimes.com/news/articleView.html?idxno=217386
+
+골드만삭스 "AI 투자, 2027년 말 연간 1865조원 규모…미국 경제성장 주도"
+https://www.aitimes.com/news/articleView.html?idxno=217382
+
+AMD, 양자컴퓨터 오류 수정에 GPU·SW 투입…엔비디아와 경쟁
+https://www.aitimes.com/news/articleView.html?idxno=217381
+
+AI 모델 바꾼 기업 70% "몇 주 이상 걸려"…앱 수정·검증이 걸림돌
+https://www.aitimes.com/news/articleView.html?idxno=217379
+
+중국, AI로 '1인 기업' 대량 육성…창업 문턱 낮췄지만 생존 경쟁도 치열
+https://www.aitimes.com/news/articleView.html?idxno=217378
+
+JP모건 "미 휴머노이드 2030년 최대 40만대"…유망 부품사로 국내 로보티즈 꼽아
+https://www.aitimes.com/news/articleView.html?idxno=217376
+
 앨리스 황, 중국 정보기관 포섭 의혹…딥시크·화웨이 사업 연관도 드러나
 https://www.aitimes.com/news/articleView.html?idxno=217375
 
 중국 광군제서 AI 쇼핑 급증…상품 검색부터 구매까지 지원
 https://www.aitimes.com/news/articleView.html?idxno=217374
 
-스페이스X, 100조 규모 AI 데이터센터 투자…애리조나에 6GW 추가
-https://www.aitimes.com/news/articleView.html?idxno=217371
-
-구글, 아시아서 5조 조달…AI 투자 위해 채권 발행 확대
-https://www.aitimes.com/news/articleView.html?idxno=217368
-
-LGU+, 카테나-X 통한 국내 제조기업 글로벌 공급망 진입 지원
-https://www.aitimes.com/news/articleView.html?idxno=217363
-
-마키나락스, 3분기 만에 지난해 연매출 실현...영업손실은 지속
-https://www.aitimes.com/news/articleView.html?idxno=217359
-
-중국, 젠슨 황 사태에 반발…"미국 기술 제재 구실 안 돼"
-https://www.aitimes.com/news/articleView.html?idxno=217358
-
-트럼프 "젠슨 황 후임은 팀 쿡"…엔비디아, 차기 CEO 물색 본격화
-https://www.aitimes.com/news/articleView.html?idxno=217353
-
-구글, '제미나이 4 하이드로젠' 출시…상위 모델 '아르곤' 성능 추월
-https://www.aitimes.com/news/articleView.html?idxno=217352
-
-미국, 중국의 해외 GPU 임대 규제 추진…중국 기업들 확보 서둘러
-https://www.aitimes.com/news/articleView.html?idxno=217351
+미 비영리단체 4곳, 오픈AI 등 5개사에 '최첨단 AI 개발 중단' 소송
+https://www.aitimes.com/news/articleView.html?idxno=217372
