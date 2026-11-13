@@ -1,5 +1,8 @@
 🤖 26년 11월 13일 금요일 AI 뉴스
 
+중국, 젠슨 황 사태에 반발…"미국 기술 제재 구실 안 돼"
+https://www.aitimes.com/news/articleView.html?idxno=217358
+
 트럼프 "젠슨 황 후임은 팀 쿡"…엔비디아, 차기 CEO 물색 본격화
 https://www.aitimes.com/news/articleView.html?idxno=217353
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217339
 
 [AI 모델 신작] 물리 세계 예측 'PAN 2'·1.6조 매개변수 '롱캣 2.5' 등
 https://www.aitimes.com/news/articleView.html?idxno=217338
-
-바이트댄스, 오픈AI 추격에 최소 3년 전망…'뮤즈' 유사 AI 에이전트 준비
-https://www.aitimes.com/news/articleView.html?idxno=217337
