@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-11-13 20:53:22",
+  "updated_at_kst": "2026-11-13 23:55:07",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 13일 금요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "\"서울 집값 하향안정\"…수도권 4.4만가구 입주",
+      "url": "https://n.news.naver.com/mnews/article/422/0000926009"
+    },
     {
       "title": "강남 집값 떨어져도 전셋값은 안 내리네…매매·전세 엇박자 왜? [부동산360]",
       "url": "https://n.news.naver.com/mnews/article/016/0002723300"
@@ -38,10 +42,6 @@
     {
       "title": "안산 '아르뮤제자이' 984가구",
       "url": "https://n.news.naver.com/mnews/article/015/0005353704"
-    },
-    {
-      "title": "양천·중랑 '모아주택' 5곳 2741가구",
-      "url": "https://n.news.naver.com/mnews/article/015/0005353703"
     }
   ]
 }
