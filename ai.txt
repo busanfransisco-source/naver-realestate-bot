@@ -1,5 +1,11 @@
 🤖 26년 11월 13일 금요일 AI 뉴스
 
+LGU+, 카테나-X 통한 국내 제조기업 글로벌 공급망 진입 지원
+https://www.aitimes.com/news/articleView.html?idxno=217363
+
+마키나락스, 3분기 만에 지난해 연매출 실현...영업손실은 지속
+https://www.aitimes.com/news/articleView.html?idxno=217359
+
 중국, 젠슨 황 사태에 반발…"미국 기술 제재 구실 안 돼"
 https://www.aitimes.com/news/articleView.html?idxno=217358
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217348
 
 구글·삼성, AI 안경 시장 출사표… 12월10일 메타와 정식 격돌
 https://www.aitimes.com/news/articleView.html?idxno=217346
-
-미 제재 중국 군 관련 대학, 엔비디아 H200 구매…서버 임대로도 확보
-https://www.aitimes.com/news/articleView.html?idxno=217339
-
-[AI 모델 신작] 물리 세계 예측 'PAN 2'·1.6조 매개변수 '롱캣 2.5' 등
-https://www.aitimes.com/news/articleView.html?idxno=217338
