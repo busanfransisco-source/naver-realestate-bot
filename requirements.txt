@@ -2,3 +2,4 @@ requests
 beautifulsoup4
 curl_cffi
 kiwipiepy==0.24.0
+PyYAML>=6.0,<7

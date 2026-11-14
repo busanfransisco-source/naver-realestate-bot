@@ -30,7 +30,8 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run weather fetch script
-        run: python weather_fetch.py || echo "날씨 수집 실패: 보존 예보와 실패 상태를 게시하고 최종 건강검사에서 보고합니다"
+        run: |
+          python weather_fetch.py || echo "날씨 수집 실패: 보존 예보와 실패 상태를 게시하고 최종 건강검사에서 보고합니다"
 
       - name: Commit and push weather.txt
         run: |

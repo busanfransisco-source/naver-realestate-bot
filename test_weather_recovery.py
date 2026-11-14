@@ -4,6 +4,7 @@ import os
 from pathlib import Path
 import tempfile
 import unittest
+import yaml
 from datetime import datetime, timedelta
 from unittest.mock import patch
 from bs4 import BeautifulSoup
@@ -119,8 +120,14 @@ class WeatherRecoveryTests(unittest.TestCase):
             workflow = (root / '.github/workflows' / (name + '.yml')).read_text()
             self.assertTrue('weather-*.txt' in workflow or 'weather*.txt' in workflow)
         workflow = (root / '.github/workflows/weather.yml').read_text()
-        self.assertIn('python weather_fetch.py || echo', workflow)
+        self.assertIn('run: |\n          python weather_fetch.py || echo', workflow)
+        self.assertNotIn('run: python weather_fetch.py || echo', workflow)
         self.assertIn('python briefing_health.py --url', workflow)
+        parsed = yaml.safe_load(workflow)
+        for step in parsed['jobs']['fetch']['steps']:
+            if 'run' in step:
+                self.assertIsInstance(step['run'], str)
+        self.assertIn('날씨 수집 실패:', parsed['jobs']['fetch']['steps'][3]['run'])
 
     def test_status_is_not_listed_as_forecast_in_index(self):
         import gen_index
