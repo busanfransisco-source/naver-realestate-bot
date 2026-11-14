@@ -73,7 +73,11 @@ def read_sources(root, now, only_keys=None):
         if key not in selected:
             continue
         specific = root / f'{key}-{weekday}.txt'
-        bodies[BOX_KEYS.index(key)] = _text(specific if specific.exists() else root / f'{key}.txt')
+        body = _text(specific if specific.exists() else root / f'{key}.txt')
+        if key == 'weather':
+            from weather_fetch import without_source_footer
+            body = without_source_footer(body)
+        bodies[BOX_KEYS.index(key)] = body
     # A weekly source has its own provenance clock. Never relabel this as daily.
     evidence = {}
     if 'trend' in selected:

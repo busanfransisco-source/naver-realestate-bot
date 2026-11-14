@@ -58,8 +58,14 @@ class WeatherRecoveryTests(unittest.TestCase):
         self.run_main(error=TimeoutError())
         self.assertEqual(self.run_main(payload=response()), 0)
         self.assertFalse(weather.load_report(NOW).startswith(weather.DELAY_NOTICE))
-        self.assertIn('출처: Open-Meteo · 예보 기준일: 2026-11-14', weather.load_report(NOW))
-        self.assertIn('실제 조회시각(KST): 2026-11-14T21:35:00+09:00', weather.load_report(NOW))
+        self.assertEqual(weather.load_report(NOW), report())
+        for name in ('weather.txt', 'weather-sat.txt', 'weather-2026-11-14.txt'):
+            saved = Path(name).read_text(encoding='utf-8')
+            self.assertNotIn('출처:', saved)
+            self.assertNotIn('실제 조회시각', saved)
+        status = json.loads(Path('weather-status.txt').read_text(encoding='utf-8'))
+        self.assertEqual(status['forecastDate'], '2026-11-14')
+        self.assertEqual(status['attemptedAtKst'], '2026-11-14T21:35:00+09:00')
 
     def test_bad_response_never_overwrites_valid_report(self):
         good = report()
@@ -85,12 +91,20 @@ class WeatherRecoveryTests(unittest.TestCase):
             self.assertEqual(gen_briefing.read_section_text('weather', 'sat', NOW), weather.UNAVAILABLE)
 
     def test_dated_today_wins_over_failed_aliases_legacy_bytes_unchanged(self):
-        legacy = report().split('\n\n출처:')[0]
-        Path('weather-2026-11-14.txt').write_text(legacy)
+        body = report()
+        legacy = (body + '\n\n출처: Open-Meteo · 예보 기준일: 2026-11-14'
+                  '\n실제 조회시각(KST): 2026-11-14T21:35:00+09:00')
+        dated = Path('weather-2026-11-14.txt')
+        dated.write_text(legacy, encoding='utf-8')
         Path('weather.txt').write_text('(날씨 데이터를 가져오지 못했습니다)')
         Path('weather-sat.txt').write_text(report(NOW-timedelta(days=7)))
-        self.assertEqual(weather.load_report(NOW), legacy)
-        self.assertNotIn('실제 조회시각', weather.load_report(NOW))
+        self.assertEqual(weather.load_report(NOW), body)
+        self.assertEqual(dated.read_text(encoding='utf-8'), legacy)
+        from morning_cloud_prepare import read_sources
+        from morning_briefing_contract import BOX_KEYS
+        Path('weather-sat.txt').write_text(legacy, encoding='utf-8')
+        bodies, _ = read_sources('.', NOW, only_keys=('weather',))
+        self.assertEqual(bodies[BOX_KEYS.index('weather')], body)
 
     def test_partial_or_duplicate_cities_rejected(self):
         for body in (report().replace('✫제주', '✫부산'), report().replace('✫제주(☁️)➠(☁️)  9℃ ~ 15℃', '')):

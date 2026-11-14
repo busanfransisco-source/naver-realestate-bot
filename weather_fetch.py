@@ -118,6 +118,16 @@ def valid_report(report, day):
     return True
 
 
+def without_source_footer(report):
+    """Remove the provenance footer from reports written by the previous collector."""
+    return re.sub(
+        r"\n\n출처: Open-Meteo · 예보 기준일: \d{4}-\d{2}-\d{2}"
+        r"\n실제 조회시각\(KST\): [^\n]+$",
+        "",
+        report,
+    )
+
+
 def load_report(now=None):
     now = now or datetime.now(KST)
     day = now.date()
@@ -133,7 +143,7 @@ def load_report(now=None):
                 failed = status.get("status") == "failed" and status.get("forecastDate") == day.isoformat()
             except (OSError, ValueError, AttributeError):
                 failed = False
-            # 성공 시 원문 안에 기록한 조회시각은 그대로 유지한다.
+            report = without_source_footer(report)
             return f"{DELAY_NOTICE}\n{report}" if failed else report
     return UNAVAILABLE
 
@@ -164,8 +174,6 @@ def build_report(now=None):
         am = code_to_emoji(most_common_code(codes[6:12]))
         pm = code_to_emoji(most_common_code(codes[12:18]))
         lines.append(f"✫{name}({am})➠({pm})  {round(tmin)}℃ ~ {round(tmax)}℃")
-    lines.extend(["", f"출처: Open-Meteo · 예보 기준일: {day}",
-                  f"실제 조회시각(KST): {now.isoformat(timespec='seconds')}"])
     return "\n".join(lines)
 
 
