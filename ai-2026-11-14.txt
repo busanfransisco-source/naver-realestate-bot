@@ -1,10 +1,16 @@
 🤖 26년 11월 14일 토요일 AI 뉴스
 
+[AI 이슈트렌드] 젠슨 황 퇴진 쇼크 속 트럼프 행보·앤트로픽 개인정보 유출 등 화제
+https://www.aitimes.com/news/articleView.html?idxno=217404
+
 젠슨 황, 사임 직전 "나는 쓰레기"…두 번째 불륜 보도가 결정타
 https://www.aitimes.com/news/articleView.html?idxno=217403
 
 아모데이 "컴퓨팅 수요 예측이 최대 경영 난제…과잉도 부족도 위험"
 https://www.aitimes.com/news/articleView.html?idxno=217401
+
+오픈AI, AI 에이전트가 대신 결제하는 '챗GPT 월렛' 출시
+https://www.aitimes.com/news/articleView.html?idxno=217400
 
 스페이스X, 영상 생성 AI '그록 이매진' 개발팀 대부분 해고...AI 코딩에 집중
 https://www.aitimes.com/news/articleView.html?idxno=217399
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217393
 
 노타, 3분기 역대 최대 매출 달성…플랫폼·솔루션 동반 도약
 https://www.aitimes.com/news/articleView.html?idxno=217391
-
-엘리스그룹, 대한민국 인터넷대상 대통령상수상…AI 데이터센터 구축 공로
-https://www.aitimes.com/news/articleView.html?idxno=217386
-
-골드만삭스 "AI 투자, 2027년 말 연간 1865조원 규모…미국 경제성장 주도"
-https://www.aitimes.com/news/articleView.html?idxno=217382
