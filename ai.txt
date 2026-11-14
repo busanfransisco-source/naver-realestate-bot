@@ -1,5 +1,11 @@
 🤖 26년 11월 14일 토요일 AI 뉴스
 
+젠슨 황, 사임 직전 "나는 쓰레기"…두 번째 불륜 보도가 결정타
+https://www.aitimes.com/news/articleView.html?idxno=217403
+
+아모데이 "컴퓨팅 수요 예측이 최대 경영 난제…과잉도 부족도 위험"
+https://www.aitimes.com/news/articleView.html?idxno=217401
+
 MS, 전 세계 서비스 장애 복구 진전..."원인은 네트워크 작업 오류"
 https://www.aitimes.com/news/articleView.html?idxno=217398
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217379
 
 중국, AI로 '1인 기업' 대량 육성…창업 문턱 낮췄지만 생존 경쟁도 치열
 https://www.aitimes.com/news/articleView.html?idxno=217378
-
-JP모건 "미 휴머노이드 2030년 40만대"…로보티즈 유망 부품사 선정
-https://www.aitimes.com/news/articleView.html?idxno=217376
-
-앨리스 황, 중국 정보기관 포섭 의혹…딥시크·화웨이 연관도 드러나
-https://www.aitimes.com/news/articleView.html?idxno=217375
