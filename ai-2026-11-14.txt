@@ -6,8 +6,14 @@ https://www.aitimes.com/news/articleView.html?idxno=217403
 아모데이 "컴퓨팅 수요 예측이 최대 경영 난제…과잉도 부족도 위험"
 https://www.aitimes.com/news/articleView.html?idxno=217401
 
+스페이스X, 영상 생성 AI '그록 이매진' 개발팀 대부분 해고...AI 코딩에 집중
+https://www.aitimes.com/news/articleView.html?idxno=217399
+
 MS, 전 세계 서비스 장애 복구 진전..."원인은 네트워크 작업 오류"
 https://www.aitimes.com/news/articleView.html?idxno=217398
+
+[AI카툰] Bob, Senior IT guy - 밥, 뮤지엄에 가다
+https://www.aitimes.com/news/articleView.html?idxno=217396
 
 MS 365 전 세계 장애…정부·기업 업무 차질에 챗GPT·클로드도 영향
 https://www.aitimes.com/news/articleView.html?idxno=217394
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217386
 
 골드만삭스 "AI 투자, 2027년 말 연간 1865조원 규모…미국 경제성장 주도"
 https://www.aitimes.com/news/articleView.html?idxno=217382
-
-AMD, 양자컴퓨터 오류 수정에 GPU·SW 투입…엔비디아와 경쟁
-https://www.aitimes.com/news/articleView.html?idxno=217381
-
-AI 모델 바꾼 기업 70% "몇 주 이상 걸려"…앱 수정·검증이 걸림돌
-https://www.aitimes.com/news/articleView.html?idxno=217379
