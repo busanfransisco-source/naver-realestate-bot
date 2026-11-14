@@ -1,5 +1,17 @@
 🤖 26년 11월 14일 토요일 AI 뉴스
 
+머스크, 젠슨 황 퇴진에 영화로 경의…앞서 "영입하면 영광"
+https://www.aitimes.com/news/articleView.html?idxno=217409
+
+엔비디아, 차기 CEO로 Arm 하스 접촉설…이사회 "공식 접촉 아직 없어"
+https://www.aitimes.com/news/articleView.html?idxno=217407
+
+젠슨 황 투자에 제동 걸었던 CFO가 후임으로…엔비디아 전략 바뀌나
+https://www.aitimes.com/news/articleView.html?idxno=217406
+
+말레이시아, 메가스피드 AI 칩 재수출 의혹 조사 착수
+https://www.aitimes.com/news/articleView.html?idxno=217405
+
 [AI 이슈트렌드] 젠슨 황 퇴진 쇼크 속 트럼프 행보·앤트로픽 개인정보 유출 등 화제
 https://www.aitimes.com/news/articleView.html?idxno=217404
 
@@ -15,17 +27,5 @@ https://www.aitimes.com/news/articleView.html?idxno=217401
 오픈AI, AI 에이전트가 대신 결제하는 '챗GPT 월렛' 출시
 https://www.aitimes.com/news/articleView.html?idxno=217400
 
-스페이스X, 영상 생성 AI '그록 이매진' 개발팀 대부분 해고...AI 코딩에 집중
+스페이스X, 영상 AI '그록 이매진' 개발팀 대부분 해고...AI 코딩에 집중
 https://www.aitimes.com/news/articleView.html?idxno=217399
-
-MS, 전 세계 서비스 장애 복구 진전..."원인은 네트워크 작업 오류"
-https://www.aitimes.com/news/articleView.html?idxno=217398
-
-딥시크·문샷 등 중국 4개사, 수출 통제 '블랙웰' 사용 흔적 발견
-https://www.aitimes.com/news/articleView.html?idxno=217397
-
-[AI카툰] Bob, Senior IT guy - 밥, 뮤지엄에 가다
-https://www.aitimes.com/news/articleView.html?idxno=217396
-
-MS 365 전 세계 장애…정부·기업 업무 차질에 챗GPT·클로드도 영향
-https://www.aitimes.com/news/articleView.html?idxno=217394
