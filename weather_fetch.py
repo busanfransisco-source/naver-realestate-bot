@@ -7,6 +7,10 @@ Open-Meteo(무료, API 키 불필요)에서 도시별 오전/오후 하늘상태
 """
 
 import sys
+import json
+import math
+import re
+from pathlib import Path
 import time
 from collections import Counter
 from datetime import datetime, timezone, timedelta
@@ -91,52 +95,101 @@ def fetch_all_cities():
     raise last_err
 
 
-def build_report():
-    now = datetime.now(KST)
-    weekday_kr = WEEKDAY_KR[now.weekday()]
-    date_line = f"{now.year}년 {now.month}월 {now.day}일 {weekday_kr}"
+UNAVAILABLE = "당일 날씨 자료를 확보하지 못했습니다. 갱신을 기다리고 있습니다."
+DELAY_NOTICE = "[날씨 갱신 지연 · 당일 마지막 정상 예보 유지 · 최신 조회 실패]"
+VALID_CODES = {0, 1, 2, 3, 45, 48, 51, 53, 55, 56, 57, 61, 63, 65,
+               66, 67, 71, 73, 75, 77, 80, 81, 82, 85, 86, 95, 96, 99}
 
-    lines = [date_line, "", "❒ 지역별 날씨전망 ❒", ""]
 
-    try:
-        results = fetch_all_cities()
-    except Exception as e:
-        lines.append(f"(날씨 데이터를 가져오지 못했습니다: {e})")
-        return "\n".join(lines)
+def valid_report(report, day):
+    """파일명/수정시각 대신 실제 본문 날짜와 15개 완성 행을 검사한다."""
+    header = f"{day.year}년 {day.month}월 {day.day}일 {WEEKDAY_KR[day.weekday()]}"
+    if not report.startswith(header + "\n") or "❒ 지역별 날씨전망 ❒" not in report:
+        return False
+    rows = [line for line in report.splitlines() if line.startswith("✫")]
+    if len(rows) != len(CITIES):
+        return False
+    icons = "|".join(re.escape(code_to_emoji(code)) for code in sorted(VALID_CODES))
+    for line, (name, _, _) in zip(rows, CITIES):
+        match = re.fullmatch(r"✫" + name + r"\((?:" + icons + r")\)➠\((?:" + icons
+                             + r")\)  (-?\d+)℃ ~ (-?\d+)℃", line)
+        if not match or not -90 <= int(match[1]) <= int(match[2]) <= 60:
+            return False
+    return True
 
-    # 도시가 1개면 dict 하나만, 여러 개면 리스트로 온다
-    if isinstance(results, dict):
-        results = [results]
 
-    for (name, _, _), data in zip(CITIES, results):
+def load_report(now=None):
+    now = now or datetime.now(KST)
+    day = now.date()
+    for path in (Path(f"weather-{day.isoformat()}.txt"),
+                 Path(f"weather-{WEEKDAY_EN[day.weekday()]}.txt"), Path("weather.txt")):
         try:
-            hourly_codes = data["hourly"]["weather_code"]
-            am_codes = hourly_codes[6:12]
-            pm_codes = hourly_codes[12:18]
-            am_emoji = code_to_emoji(most_common_code(am_codes))
-            pm_emoji = code_to_emoji(most_common_code(pm_codes))
-            tmax = round(data["daily"]["temperature_2m_max"][0])
-            tmin = round(data["daily"]["temperature_2m_min"][0])
-            lines.append(f"✫{name}({am_emoji})➠({pm_emoji})  {tmin}℃ ~ {tmax}℃")
-        except Exception as e:
-            lines.append(f"✫{name}(?)➠(?)  가져오기 실패: {e}")
+            report = path.read_text(encoding="utf-8").strip()
+        except OSError:
+            continue
+        if valid_report(report, day):
+            try:
+                status = json.loads(Path("weather-status.txt").read_text(encoding="utf-8"))
+                failed = status.get("status") == "failed" and status.get("forecastDate") == day.isoformat()
+            except (OSError, ValueError, AttributeError):
+                failed = False
+            # 성공 시 원문 안에 기록한 조회시각은 그대로 유지한다.
+            return f"{DELAY_NOTICE}\n{report}" if failed else report
+    return UNAVAILABLE
 
+
+def build_report(now=None):
+    now = now or datetime.now(KST)
+    day = now.date().isoformat()
+    results = fetch_all_cities()
+    if not isinstance(results, list) or len(results) != len(CITIES):
+        raise ValueError("15개 도시 응답이 필요합니다")
+    lines = [f"{now.year}년 {now.month}월 {now.day}일 {WEEKDAY_KR[now.weekday()]}",
+             "", "❒ 지역별 날씨전망 ❒", ""]
+    expected_hours = [f"{day}T{hour:02d}:00" for hour in range(24)]
+    for (name, _, _), data in zip(CITIES, results):
+        daily, hourly = data["daily"], data["hourly"]
+        if daily["time"] != [day] or hourly["time"] != expected_hours:
+            raise ValueError(f"{name}: 원자료 날짜/시간 불일치")
+        codes = hourly["weather_code"]
+        if len(codes) != 24 or any(type(code) is not int or code not in VALID_CODES for code in codes):
+            raise ValueError(f"{name}: 하늘상태 누락/오류")
+        temperatures = [daily[key] for key in ("temperature_2m_min", "temperature_2m_max")]
+        if any(len(values) != 1 or type(values[0]) not in (int, float)
+               or not math.isfinite(values[0]) for values in temperatures):
+            raise ValueError(f"{name}: 기온 누락/오류")
+        tmin, tmax = (values[0] for values in temperatures)
+        if not -90 <= tmin <= tmax <= 60:
+            raise ValueError(f"{name}: 기온 범위 오류")
+        am = code_to_emoji(most_common_code(codes[6:12]))
+        pm = code_to_emoji(most_common_code(codes[12:18]))
+        lines.append(f"✫{name}({am})➠({pm})  {round(tmin)}℃ ~ {round(tmax)}℃")
+    lines.extend(["", f"출처: Open-Meteo · 예보 기준일: {day}",
+                  f"실제 조회시각(KST): {now.isoformat(timespec='seconds')}"])
     return "\n".join(lines)
 
 
 def main():
-    report = build_report()
     now = datetime.now(KST)
-    today = now.strftime("%Y-%m-%d")
-    dated_file = f"weather-{today}.txt"
-    weekday_file = f"weather-{WEEKDAY_EN[now.weekday()]}.txt"
-    # 요일별 고정 파일명으로 저장: 매일 URL이 안 바뀌면서도(provenance 문제 없음),
-    # 같은 URL을 일주일에 한 번만 재사용하므로 캐시가 오래 굳어버리는 문제를 피한다.
-    for fname in ("weather.txt", dated_file, weekday_file):
-        with open(fname, "w", encoding="utf-8") as f:
-            f.write(report)
+    today = now.date().isoformat()
+    status = {"forecastDate": today, "attemptedAtKst": now.isoformat(timespec="seconds")}
+    try:
+        report = build_report(now)
+        if datetime.now(KST).date() != now.date() or not valid_report(report, now.date()):
+            raise ValueError("예보 날짜/본문 검증 실패")
+    except Exception as exc:
+        # 실패 원문은 정상 파일을 덮어쓰지 않는다. 재조회 성공으로 취급하지 않는다.
+        status.update(status="failed", errorType=type(exc).__name__)
+        Path("weather-status.txt").write_text(json.dumps(status, ensure_ascii=False) + "\n", encoding="utf-8")
+        print(f"날씨 조회 실패: {type(exc).__name__}; 기존 원자료 보존", file=sys.stderr)
+        return 1
+    for fname in ("weather.txt", f"weather-{today}.txt", f"weather-{WEEKDAY_EN[now.weekday()]}.txt"):
+        Path(fname).write_text(report, encoding="utf-8")
+    status.update(status="ok")
+    Path("weather-status.txt").write_text(json.dumps(status, ensure_ascii=False) + "\n", encoding="utf-8")
     print(report)
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

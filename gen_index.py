@@ -11,7 +11,7 @@ index.html 에 링크 목록을 만든다.
 import glob
 
 def main():
-    weather_files = sorted(glob.glob("weather-*.txt"), reverse=True)
+    weather_files = sorted((f for f in glob.glob("weather-*.txt") if f != "weather-status.txt"), reverse=True)
     news_files = sorted(glob.glob("latest-*.json"), reverse=True)
     fortune_files = sorted(glob.glob("fortune-*.txt"), reverse=True)
 

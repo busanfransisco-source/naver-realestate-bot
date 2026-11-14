@@ -123,6 +123,12 @@ def inspect(page, now=None):
         for token in required:
             if token not in text or re.search(re.escape(token) + r'[^\n]*(?:확인 불가|수집 실패)', text):
                 issues.append(f'missing required item: {token}')
+        if key == 'weather':
+            from weather_fetch import valid_report, DELAY_NOTICE
+            if not valid_report(text.removeprefix(DELAY_NOTICE + '\n'), today):
+                issues.append('weather: invalid date or incomplete fifteen-city forecast')
+            if text.startswith(DELAY_NOTICE):
+                issues.append('weather: latest collection failed; same-day forecast retained')
         if key == 'shortnews':
             from quicknews_sources import source_issues
             from kospi_quote import indicator_issues

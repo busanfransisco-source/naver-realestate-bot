@@ -39,8 +39,11 @@ def has_fetch_failure(content):
     return bool(FAILURE_PATTERN.search(content or ""))
 
 
-def read_section_text(prefix, weekday):
+def read_section_text(prefix, weekday, now=None):
     """실패 문구를 발행하지 않고, 직전 정상 파일이 있으면 그대로 유지한다."""
+    if prefix == 'weather':
+        from weather_fetch import load_report
+        return load_report(now)
     if prefix == 'trend':
         from neonet_trend import load_digest
         return load_digest()
@@ -322,7 +325,11 @@ def build_html(*, new_data_contents=None):
     section_blocks = []
     core_sections = []
     for key, label, fname_prefix in SECTIONS:
-        content = read_section_text(fname_prefix, weekday_en)
+        if key == 'weather':
+            from weather_fetch import load_report
+            content = load_report(now)
+        else:
+            content = read_section_text(fname_prefix, weekday_en)
         if key.startswith("analysis"):
             content = read_policy_text(fname_prefix, now)
         core_sections.append((key, label, content))
