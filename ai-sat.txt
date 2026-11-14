@@ -1,5 +1,11 @@
 🤖 26년 11월 14일 토요일 AI 뉴스
 
+미 재무장관, 메가스피드 제재 지연에 상무부 공개 비판…러트닉 경질론까지
+https://www.aitimes.com/news/articleView.html?idxno=217411
+
+엔비디아 직원들 "젠슨 황 복귀시켜라"…사내 게시물에 댓글 1600개
+https://www.aitimes.com/news/articleView.html?idxno=217410
+
 머스크, 젠슨 황 퇴진에 영화로 경의…앞서 "영입하면 영광"
 https://www.aitimes.com/news/articleView.html?idxno=217409
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217402
 
 아모데이 "컴퓨팅 수요 예측이 최대 경영 난제…과잉도 부족도 위험"
 https://www.aitimes.com/news/articleView.html?idxno=217401
-
-오픈AI, AI 에이전트가 대신 결제하는 '챗GPT 월렛' 출시
-https://www.aitimes.com/news/articleView.html?idxno=217400
-
-스페이스X, 영상 AI '그록 이매진' 개발팀 대부분 해고...AI 코딩에 집중
-https://www.aitimes.com/news/articleView.html?idxno=217399
