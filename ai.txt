@@ -1,31 +1,31 @@
 🤖 26년 11월 15일 일요일 AI 뉴스
 
-구글, 코딩 전 설계 오류 잡는 '코끼리-금붕어' 플러그인 공개
-https://www.aitimes.com/news/articleView.html?idxno=217179
+아마존, 전 세계 상품 정보 통합 추진…AI 쇼핑 주도권 지킨다
+https://www.aitimes.com/news/articleView.html?idxno=217412
 
-JP모건 "미 휴머노이드 2030년 40만대"…로보티즈 유망 부품사 선정
-https://www.aitimes.com/news/articleView.html?idxno=217376
+미 재무장관, 메가스피드 제재 지연에 상무부 공개 비판…러트닉 경질론까지
+https://www.aitimes.com/news/articleView.html?idxno=217411
 
-구글, '제미나이 4 하이드로젠' 출시…상위 모델 '아르곤' 성능 추월
-https://www.aitimes.com/news/articleView.html?idxno=217352
+엔비디아 직원들 "젠슨 황 복귀시켜라"…사내 게시물에 댓글 1600개
+https://www.aitimes.com/news/articleView.html?idxno=217410
 
-구글, '제미나이 4 카본' 정식 출시…'페이블 5.2'의 4분의 1 가격
-https://www.aitimes.com/news/articleView.html?idxno=217249
+머스크, 젠슨 황 퇴진에 영화로 경의…앞서 "영입하면 영광"
+https://www.aitimes.com/news/articleView.html?idxno=217409
 
-앤트로픽 '페이블 5.2', AI 성능 평가 1위 탈환…API 가격도 20% 인하
-https://www.aitimes.com/news/articleView.html?idxno=217196
+엔비디아, 차기 CEO로 Arm 하스 접촉설…이사회 "공식 접촉 아직 없어"
+https://www.aitimes.com/news/articleView.html?idxno=217407
 
-'페이블 5.2' 프롬프트 가이드 공개…"코드 맡기면 정리 5배 증가"
-https://www.aitimes.com/news/articleView.html?idxno=217271
+젠슨 황 투자에 제동 걸었던 CFO가 후임으로…엔비디아 전략 바뀌나
+https://www.aitimes.com/news/articleView.html?idxno=217406
 
-클로드 페이블 5.2, 전자기기 3종 설계…회로 수정 없이 시제품 제작
-https://www.aitimes.com/news/articleView.html?idxno=217243
+말레이시아, 메가스피드 AI 칩 재수출 의혹 조사 착수
+https://www.aitimes.com/news/articleView.html?idxno=217405
 
-앨리스 황, 중국 정보기관 포섭 의혹…딥시크·화웨이 연관도 드러나
-https://www.aitimes.com/news/articleView.html?idxno=217375
+[AI 이슈트렌드] 젠슨 황 퇴진 쇼크 속 트럼프 행보·앤트로픽 개인정보 유출 등 화제
+https://www.aitimes.com/news/articleView.html?idxno=217404
 
-LG, 'K-엑사원 2.5' API 전면 무료 개방…개발자 진입 장벽 낮춘다
-https://www.aitimes.com/news/articleView.html?idxno=217175
+젠슨 황, 사임 직전 "나는 쓰레기"…두 번째 불륜 보도가 결정타
+https://www.aitimes.com/news/articleView.html?idxno=217403
 
-앤트로픽, 클로드 오피스 출시…IPO 앞두고 MS·구글과 경쟁
-https://www.aitimes.com/news/articleView.html?idxno=217251
+앤트로픽 IPO, 중국·홍콩 투자자 공모주 배정 제한…미국 안보 규제 영향
+https://www.aitimes.com/news/articleView.html?idxno=217402
