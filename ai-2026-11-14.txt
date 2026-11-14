@@ -1,5 +1,8 @@
 🤖 26년 11월 14일 토요일 AI 뉴스
 
+MS, 전 세계 서비스 장애 복구 진전..."원인은 네트워크 작업 오류"
+https://www.aitimes.com/news/articleView.html?idxno=217398
+
 MS 365 전 세계 장애…정부·기업 업무 차질에 챗GPT·클로드도 영향
 https://www.aitimes.com/news/articleView.html?idxno=217394
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217376
 
 앨리스 황, 중국 정보기관 포섭 의혹…딥시크·화웨이 연관도 드러나
 https://www.aitimes.com/news/articleView.html?idxno=217375
-
-중국 광군제서 AI 쇼핑 급증…상품 검색부터 구매까지 지원
-https://www.aitimes.com/news/articleView.html?idxno=217374
