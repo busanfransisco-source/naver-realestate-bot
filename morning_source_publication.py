@@ -30,10 +30,14 @@ def publication_sha256(value):
     return hashlib.sha256(raw).hexdigest()
 
 
-def source_issues(key, body, evidence, now):
+def source_issues(key, body, evidence, now, *, require_quicknews=True):
     """Validate daily bodies strictly; retain only genuinely fresh weekly books."""
     now = _aware(now, 'now')
     issues = _body_issues(key, body, now.date(), evidence)
+    if require_quicknews and key == 'shortnews' and isinstance(body, str):
+        from quicknews_sources import source_issues
+        from kospi_quote import indicator_issues
+        issues.extend('shortnews: ' + issue for issue in source_issues(body) + indicator_issues(body, now=now))
     if key == 'books':
         from yes24_books import digest_info, valid_period
         info = digest_info(body) if isinstance(body, str) else None
@@ -128,7 +132,8 @@ def validate_publication(artifact, now):
             raise ValueError('source box identity or number invalid')
         numbers.append(number)
         body = box.get('body')
-        if (source_issues(key, body, evidence, now)
+        # The envelope schema also covers snapshots published before source links.
+        if (source_issues(key, body, evidence, now, require_quicknews=False)
                 or box.get('sha256') != body_sha256(body)
                 or box.get('sourceMode') != _source_mode(key, body, now)):
             raise ValueError('source body, checksum or weekly mode invalid')

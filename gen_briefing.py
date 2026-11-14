@@ -341,6 +341,11 @@ def build_html(*, new_data_contents=None):
             label = '📍 서울 주요 상권 · 오늘 임시 배포'
         content_json = json.dumps(content, ensure_ascii=False)
         content_escaped = html.escape(content)
+        preview_markup = f'<textarea id="ta-{key}" class="preview" readonly>{content_escaped}</textarea>'
+        if key == 'shortnews':
+            from quicknews_sources import render_preview
+            preview_markup = (f'<div id="preview-shortnews" class="preview quicknews-preview" role="region" aria-label="오늘의 퀵뉴스 본문">{render_preview(content)}</div>'
+                              f'<textarea id="ta-shortnews" class="copy-source" aria-hidden="true" tabindex="-1" readonly>{content_escaped}</textarea>')
         source_credit = ('<p style="font-size:12px;color:#666">출처: <a href="https://data.seoul.go.kr/dataList/OA-22385/A/1/datasetView.do">서울 열린데이터광장</a> · 신한카드</p>' if key == 'seoulcommerce' else '')
         expiry_attribute = ''
         if key in {item[0] for item in NEW_DATA_SECTIONS}:
@@ -359,7 +364,7 @@ def build_html(*, new_data_contents=None):
     <button class="copy-btn" onclick="copySection('{key}', this)">복사</button>
   </div>
   <p class="data-status" style="display:none;color:#a15c00;margin:0 0 8px;font-size:13px;font-weight:600" role="status"></p>
-  <textarea id="ta-{key}" class="preview" readonly>{content_escaped}</textarea>
+  {preview_markup}
 {source_credit}
   <script>window.__content_{key} = {content_json};</script>
 </section>""")
@@ -439,6 +444,9 @@ h1 {{
   background: #fafafa;
   white-space: pre-wrap;
 }}
+.quicknews-preview {{ height: 320px; overflow: auto; }}
+.news-source-link {{ color: #2563eb; text-decoration: underline; word-break: break-all; }}
+.copy-source {{ position: absolute; left: -10000px; width: 1px; height: 1px; opacity: 0; }}
 </style>
 </head>
 <body>
@@ -479,6 +487,7 @@ function copySection(key, btn) {{
   // 보조 수단으로만 쓴다.
   const ta = document.getElementById('ta-' + key);
   const previewValue = ta.value;
+  const previousStyle = ta.style.cssText;
   ta.value = window['__content_' + key] || previewValue;
   let copied = false;
   try {{
@@ -492,6 +501,7 @@ function copySection(key, btn) {{
     copied = false;
   }} finally {{
     ta.value = previewValue;
+    ta.style.cssText = previousStyle;
   }}
 
   if (copied) {{

@@ -124,6 +124,9 @@ def inspect(page, now=None):
             if token not in text or re.search(re.escape(token) + r'[^\n]*(?:확인 불가|수집 실패)', text):
                 issues.append(f'missing required item: {token}')
         if key == 'shortnews':
+            from quicknews_sources import source_issues
+            from kospi_quote import indicator_issues
+            issues.extend(source_issues(text) + indicator_issues(text, now=now))
             from daum_news_fetch import polite_news_body
             if not polite_news_body(text):
                 issues.append('quick news explanations must use polite endings')

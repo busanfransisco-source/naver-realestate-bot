@@ -264,7 +264,8 @@ def article_summary(url, max_sentences=2, max_chars=280):
 def duplicate_summary(summary, accepted):
     """같은 발표를 여러 매체·섹션이 되풀이하는 경우 한 번만 싣는다."""
     tokens = set(re.findall(r"[가-힣A-Za-z0-9]+", summary))
-    for _, _, previous in accepted:
+    for item in accepted:
+        previous = item[2]
         previous_tokens = set(re.findall(r"[가-힣A-Za-z0-9]+", previous))
         overlap = len(tokens & previous_tokens) / max(1, min(len(tokens), len(previous_tokens)))
         compact = re.sub(r"\s+", " ", summary)
@@ -278,7 +279,7 @@ def duplicate_summary(summary, accepted):
 
 
 def collect_news():
-    """섹션별 뉴스 아이템 수집. 반환: [(이모지, 라벨, 요약)], 사용된 링크 set"""
+    """섹션별 뉴스 아이템 수집. 반환: [(이모지, 라벨, 요약, 관측한 원문 URL)]"""
     items = []
     used = set()
 
@@ -307,7 +308,7 @@ def collect_news():
             summary = article_summary(href)
             if not summary:
                 continue
-            items.append(("🔥", "톱뉴스", summary))
+            items.append(("🔥", "톱뉴스", summary, href))
             used.add(href)
             break
         except Exception:
@@ -329,7 +330,7 @@ def collect_news():
                     summary = article_summary(href)
                     if not summary or duplicate_summary(summary, items):
                         continue
-                    weather_item = ("☀️", "날씨", summary)
+                    weather_item = ("☀️", "날씨", summary, href)
                     used.add(href)
                     continue
                 except Exception:
@@ -342,7 +343,7 @@ def collect_news():
                 summary = ""
             if not summary or duplicate_summary(summary, items + ([weather_item] if weather_item else [])):
                 continue
-            items.append((emoji, label, summary))
+            items.append((emoji, label, summary, href))
             used.add(href)
             count += 1
             time.sleep(0.2)
@@ -367,9 +368,11 @@ def fmt_num(v, decimals=2):
     return f"{v:,.{decimals}f}" if decimals else f"{int(round(v)):,}"
 
 
-def get_indicators():
-    """주요 경제 지표 수집. 실패한 항목은 건너뜀."""
-    rows = []
+def get_indicators(now=None):
+    """KOSPI keeps its real source clock; unavailable optional indices are skipped."""
+    from kospi_quote import fetch_quote, format_quote
+    now = now or datetime.now(KST)
+    rows = [("코스피", format_quote(fetch_quote(get, now), now))]
 
     def naver_index(code):
         resp = get(f"https://finance.naver.com/sise/sise_index.naver?code={code}")
@@ -377,7 +380,7 @@ def get_indicators():
         el = soup.select_one("#now_value")
         return float(el.get_text(strip=True).replace(",", ""))
 
-    for code, name in [("KOSPI", "코스피"), ("KOSDAQ", "코스닥"), ("KPI100", "코스피100")]:
+    for code, name in [("KOSDAQ", "코스닥"), ("KPI100", "코스피100")]:
         try:
             rows.append((name, fmt_num(naver_index(code))))
         except Exception:
@@ -428,11 +431,15 @@ def main():
 
     lines = [header, ""]
     if news_items:
-        for emoji, label, summary in news_items:
+        from quicknews_sources import source_line
+        for item in news_items:
+            emoji, label, summary = item[:3]
+            url = item[3] if len(item) > 3 else None
             summary = polite_summary(summary)
             if not summary:
                 continue
             lines.append(f"{emoji} ({label}) {summary}")
+            lines.append(source_line(url))
             lines.append("")
     else:
         lines.append("(오늘 뉴스 수집에 실패했습니다)")
@@ -444,7 +451,7 @@ def main():
         lines.append(quote)
         lines.append("")
 
-    indicators = get_indicators()
+    indicators = get_indicators(now=now)
     if indicators:
         lines.append("[주요 경제 지표]")
         for name, val in indicators:
