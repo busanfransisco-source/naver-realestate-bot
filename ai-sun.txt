@@ -1,5 +1,8 @@
 🤖 26년 11월 15일 일요일 AI 뉴스
 
+젠슨 황, 자신이 키운 생성 AI에 풍자당해…딥페이크 밈 수백만 조회
+https://www.aitimes.com/news/articleView.html?idxno=217422
+
 스페이스X, 스타십 첫 발사탑 포획 성공…1단 부스터 회수는 실패
 https://www.aitimes.com/news/articleView.html?idxno=217421
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217408
 
 엔비디아, 차기 CEO로 Arm 하스 접촉설…이사회 "공식 접촉 아직 없어"
 https://www.aitimes.com/news/articleView.html?idxno=217407
-
-젠슨 황 투자에 제동 걸었던 CFO가 후임으로…엔비디아 전략 바뀌나
-https://www.aitimes.com/news/articleView.html?idxno=217406
