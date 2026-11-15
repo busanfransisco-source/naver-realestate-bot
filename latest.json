@@ -1,8 +1,32 @@
 {
-  "updated_at_kst": "2026-11-15 10:21:17",
+  "updated_at_kst": "2026-11-15 11:01:29",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 15일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "광주 자율주행 실증도시, 30일 첫 차량 투입 목표…연말까지 120대",
+      "url": "https://n.news.naver.com/mnews/article/421/0009289492"
+    },
+    {
+      "title": "광주 자율주행 실증도시 이달 30일 첫 운행…연말까지 120대 투입",
+      "url": "https://n.news.naver.com/mnews/article/003/0014322710"
+    },
+    {
+      "title": "롯데 '청담 르엘' 조경, 대한민국 조경대상 국가유산청장상 받았다",
+      "url": "https://n.news.naver.com/mnews/article/421/0009289483"
+    },
+    {
+      "title": "롯데건설 ‘청담르엘’, 2026 대한민국 조경대상 수상",
+      "url": "https://n.news.naver.com/mnews/article/366/0001204822"
+    },
+    {
+      "title": "전월세 물가 1.4%↑, 3년10개월 만에 최대폭…월세는 12년10개월 만",
+      "url": "https://n.news.naver.com/mnews/article/003/0014322689"
+    },
+    {
+      "title": "강남 물량 가뭄에 대출 규제까지…서울 1순위 청약자 4년 만에 최저",
+      "url": "https://n.news.naver.com/mnews/article/023/0004009662"
+    },
     {
       "title": "LH, 건설업계 만나 공공주택 신속 공급 방안 논의",
       "url": "https://n.news.naver.com/mnews/article/366/0001204817"
@@ -18,30 +42,6 @@
     {
       "title": "롯데건설, '청담 르엘' 대한민국 조경대상 국가유산청장상 수상",
       "url": "https://n.news.naver.com/mnews/article/003/0014322625"
-    },
-    {
-      "title": "롯데건설 ‘청담 르엘’, 대한민국 조경대상 국가유산청장상 수상",
-      "url": "https://n.news.naver.com/mnews/article/018/0006409924"
-    },
-    {
-      "title": "강남 ‘로또 청약’ 줄자… 서울 1순위 청약 신청자 수 반토막",
-      "url": "https://n.news.naver.com/mnews/article/366/0001204808"
-    },
-    {
-      "title": "이성훈 LH 사장 “공공·민간 힘 모아 주택공급 새 물꼬 틀 것”",
-      "url": "https://n.news.naver.com/mnews/article/018/0006409906"
-    },
-    {
-      "title": "철거 앞둔 정릉골…박경리가 ‘토지’ 써내려간 가옥 보존한다",
-      "url": "https://n.news.naver.com/mnews/article/009/0005763785"
-    },
-    {
-      "title": "전월세 상승률 3년 10개월 만에 최고…대출금리도 올라 '이중고'",
-      "url": "https://n.news.naver.com/mnews/article/421/0009289413"
-    },
-    {
-      "title": "담양 전원주택단지 주차장 부지에 음식점 입점…주민 반발",
-      "url": "https://n.news.naver.com/mnews/article/001/0016442188"
     }
   ]
 }
