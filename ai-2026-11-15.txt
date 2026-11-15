@@ -1,5 +1,8 @@
 🤖 26년 11월 15일 일요일 AI 뉴스
 
+스페이스X, 스타십 첫 발사탑 포획 성공…1단 부스터 회수는 실패
+https://www.aitimes.com/news/articleView.html?idxno=217421
+
 MS, 전 세계 서비스 장애 완전 복구…팩스 부활에 밈까지 등장
 https://www.aitimes.com/news/articleView.html?idxno=217414
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217407
 
 젠슨 황 투자에 제동 걸었던 CFO가 후임으로…엔비디아 전략 바뀌나
 https://www.aitimes.com/news/articleView.html?idxno=217406
-
-말레이시아, 메가스피드 AI 칩 재수출 의혹 조사 착수
-https://www.aitimes.com/news/articleView.html?idxno=217405
