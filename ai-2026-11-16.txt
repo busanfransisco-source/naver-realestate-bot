@@ -1,5 +1,8 @@
 🤖 26년 11월 16일 월요일 AI 뉴스
 
+젠슨 황, 엔비디아 CEO 복귀 논의…측근들 백악관 설득 추진
+https://www.aitimes.com/news/articleView.html?idxno=217428
+
 세무사 시험 수석 합격자 "생성 AI로 부정행위" 자백
 https://www.aitimes.com/news/articleView.html?idxno=217426
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217417
 
 메타, 사용자 사진 무단 접근으로 이탈리아서 1.2조 벌금
 https://www.aitimes.com/news/articleView.html?idxno=217416
-
-구글, 제미나이에 '월렛' 연결…개인 소비 분석부터 저축 계획까지
-https://www.aitimes.com/news/articleView.html?idxno=217415
