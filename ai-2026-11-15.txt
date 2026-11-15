@@ -1,5 +1,14 @@
 🤖 26년 11월 15일 일요일 AI 뉴스
 
+세무사 시험 수석 합격자 "생성 AI로 부정행위" 자백
+https://www.aitimes.com/news/articleView.html?idxno=217426
+
+KT, 인천 남동산단에 AI기반 산업안전 솔루션 공급
+https://www.aitimes.com/news/articleView.html?idxno=217424
+
+[기고] 채점이 편한 시험은 AI에도 편하다
+https://www.aitimes.com/news/articleView.html?idxno=217423
+
 젠슨 황, 자신이 키운 생성 AI에 풍자당해…딥페이크 밈 수백만 조회
 https://www.aitimes.com/news/articleView.html?idxno=217422
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217416
 
 구글, 제미나이에 '월렛' 연결…개인 소비 분석부터 저축 계획까지
 https://www.aitimes.com/news/articleView.html?idxno=217415
-
-MS, 전 세계 서비스 장애 완전 복구…팩스 부활에 밈까지 등장
-https://www.aitimes.com/news/articleView.html?idxno=217414
-
-엔비디아 투자자들 "젠슨 황 복귀 검토해야"…머스크 등 거물 가세
-https://www.aitimes.com/news/articleView.html?idxno=217413
-
-아마존, 전 세계 상품 정보 통합 추진…AI 쇼핑 주도권 지킨다
-https://www.aitimes.com/news/articleView.html?idxno=217412
