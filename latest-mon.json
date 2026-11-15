@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-11-16 08:13:03",
+  "updated_at_kst": "2026-11-16 08:25:04",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 16일 월요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "서리풀1지구 주택 10채 중 8채 임대…주민 “내 집 마련 기회 줄어” 반발",
+      "url": "https://n.news.naver.com/mnews/article/032/0003482850"
+    },
+    {
+      "title": "롯데건설 ‘청담 르엘’, 조경대상 국가유산청장상 수상",
+      "url": "https://n.news.naver.com/mnews/article/016/0002723760"
+    },
     {
       "title": "한파·폭설 앞두고 건설현장 2900곳 안전점검…사망사고 건설사 특별점검",
       "url": "https://n.news.naver.com/mnews/article/014/0005604558"
@@ -34,14 +42,6 @@
     {
       "title": "\"국민평형이 67억원이라니\"…강남 부자들 몰리는 이유 [시장톡]",
       "url": "https://n.news.naver.com/mnews/article/015/0005354079"
-    },
-    {
-      "title": "[오늘 부동산] LH “도심복합사업 지연은 서울시 심의 탓”",
-      "url": "https://n.news.naver.com/mnews/article/119/0003155423"
-    },
-    {
-      "title": "퇴역 앞둔 KTX, 고속 화물열차로 변신하나…코레일 사업화 검토",
-      "url": "https://n.news.naver.com/mnews/article/421/0009290251"
     }
   ]
 }
