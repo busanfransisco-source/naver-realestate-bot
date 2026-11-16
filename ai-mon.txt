@@ -1,31 +1,31 @@
 🤖 26년 11월 16일 월요일 AI 뉴스
 
-트럼프, 시진핑 회담서 젠슨 황 의혹 거론 안 할 듯…희토류 협상 집중
-https://www.aitimes.com/news/articleView.html?idxno=217449
+수주잔고 100배 폭증… 국내 AI 인프라 업계, 3분기 실적 '약진'
+https://www.aitimes.com/news/articleView.html?idxno=217462
 
-포티넷코리아, 김종덕 신임 지사장 선임...20년만에 친정 복귀
-https://www.aitimes.com/news/articleView.html?idxno=217440
+AI 가수 '자니아 모네', 첫 AI 음악상 4관왕…'AI판 그래미' 시동
+https://www.aitimes.com/news/articleView.html?idxno=217461
 
-LGU+, 클라우드 기반 보안 플랫폼 'U+SASE' 출시
-https://www.aitimes.com/news/articleView.html?idxno=217439
+배우 없이 만든 중국 첫 AI 영화, 흥행 참패…3주간 3.6억원
+https://www.aitimes.com/news/articleView.html?idxno=217460
 
-애플, AI 안경 차별화 전략은 '시리 앱 제어'…기존 아이폰 앱 활용
-https://www.aitimes.com/news/articleView.html?idxno=217438
+전력난·주민 반발에 AI 데이터센터 바다로…파력 발전까지 추진
+https://www.aitimes.com/news/articleView.html?idxno=217459
 
-SKT, 효성중공업과 AI 데이터센터 전력 인프라 맞손
-https://www.aitimes.com/news/articleView.html?idxno=217437
+"챗GPT에 SNS 데이터 연동"...뉴엔AI, 소셜 분석 MCP 출시
+https://www.aitimes.com/news/articleView.html?idxno=217458
 
-메가스피드 "앨리스 황 지난해 퇴사"…중국 AI 칩 우회 공급 의혹도 부인
-https://www.aitimes.com/news/articleView.html?idxno=217436
+노타, 두베에 금융권 특화 AI 코딩 에이전트 기술 제공
+https://www.aitimes.com/news/articleView.html?idxno=217457
 
-미국·한국 등 9개국, 중국 견제 AI 공급망 보호 공동 선언
-https://www.aitimes.com/news/articleView.html?idxno=217435
+[게시판] 멋쟁이사자처럼 베트남에 '피지컬 AI 데이터랩' 개소 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=217456
 
-젠슨 황, 엔비디아 CEO 복귀 논의…측근들 백악관 설득 추진
-https://www.aitimes.com/news/articleView.html?idxno=217428
+네이버 카페에 AI 에이전트 도입...3개 카페서 베타 테스트 진행
+https://www.aitimes.com/news/articleView.html?idxno=217453
 
-세무사 시험 수석 합격자 "생성 AI로 부정행위" 자백
-https://www.aitimes.com/news/articleView.html?idxno=217426
+중국 에이스, AI 보컬 음악 생성 세계 1위…수노 제쳤다
+https://www.aitimes.com/news/articleView.html?idxno=217452
 
-KT, 인천 남동산단에 AI기반 산업안전 솔루션 공급
-https://www.aitimes.com/news/articleView.html?idxno=217424
+백악관 "AI 보안 사고 자진 신고하면 처벌 완화"
+https://www.aitimes.com/news/articleView.html?idxno=217450
