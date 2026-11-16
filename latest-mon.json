@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-11-16 09:28:47",
+  "updated_at_kst": "2026-11-16 09:31:31",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 16일 월요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "“고수는 조용할 때 산다?”…서울 아파트 ‘토허’ 신청 두 달 연속 올라",
+      "url": "https://n.news.naver.com/mnews/article/009/0005764163"
+    },
     {
       "title": "호반그룹, 아파트에 배송 로봇 기술 접목…배송·경비 현장 검증",
       "url": "https://n.news.naver.com/mnews/article/018/0006410287"
@@ -38,10 +42,6 @@
     {
       "title": "[단독] 이도에스테이트, 에비슨영과 손 잡고 국내외 상업용 부동산 시장 공략",
       "url": "https://n.news.naver.com/mnews/article/009/0005764157"
-    },
-    {
-      "title": "LH, 남양주왕숙·고양창릉 등 공공주택 9000가구 민참사업 공모",
-      "url": "https://n.news.naver.com/mnews/article/018/0006410272"
     }
   ]
 }
