@@ -1,31 +1,31 @@
-🤖 26년 11월 10일 화요일 AI 뉴스
+🤖 26년 11월 17일 화요일 AI 뉴스
 
-KT, 3분기 실적 주춤...B2B·AX로 반등 노려
-https://www.aitimes.com/news/articleView.html?idxno=217246
+알리바바 '큐원4 맥스' 정식 출시…성능 높이고 작업 비용 67% 절감
+https://www.aitimes.com/news/articleView.html?idxno=217466
 
-클로드 페이블 5.2, 전자기기 3종 설계…회로 수정 없이 시제품 제작
-https://www.aitimes.com/news/articleView.html?idxno=217243
+미국, 엔비디아·오픈AI 등 AI 기업 20여곳 '국가 대표기업' 지정 추진
+https://www.aitimes.com/news/articleView.html?idxno=217465
 
-오픈AI, AI 연구용 '킬 스위치' 공개…35초 내 출력 차단
-https://www.aitimes.com/news/articleView.html?idxno=217241
+영상 생성 AI, 1년 만에 판도 역전…중국 모델이 상위권 장악
+https://www.aitimes.com/news/articleView.html?idxno=217463
 
-바이두, AI 연구 자동화하는 '어니 이볼브' 공개…추론 속도 6배 개선
-https://www.aitimes.com/news/articleView.html?idxno=217240
+수주잔고 100배 폭증… 국내 AI 인프라 업계, 3분기 실적 '약진'
+https://www.aitimes.com/news/articleView.html?idxno=217462
 
-챗GPT, 주요 AI 챗봇 이용량 81% 차지…클로드 급성장에도 독주
-https://www.aitimes.com/news/articleView.html?idxno=217239
+AI 가수 '자니아 모네', 첫 AI 음악상 4관왕…'AI판 그래미' 시동
+https://www.aitimes.com/news/articleView.html?idxno=217461
 
-[AI 모델 신작] 가상 세계 실시간 탐험부터 22MB 이미지 분석 AI까지 6종
-https://www.aitimes.com/news/articleView.html?idxno=217237
+배우 없이 만든 중국 첫 AI 영화, 흥행 참패…3주간 3.6억원
+https://www.aitimes.com/news/articleView.html?idxno=217460
 
-소프트뱅크, 미국 AI 데이터센터 사업 재검토…중간선거 후 규제 부담
-https://www.aitimes.com/news/articleView.html?idxno=217235
+전력난·주민 반발에 AI 데이터센터 바다로…파력 발전까지 추진
+https://www.aitimes.com/news/articleView.html?idxno=217459
 
-프랑스 "슈퍼마켓 냉장고 해킹 배후는 이란"…EU 추가 제재 추진
-https://www.aitimes.com/news/articleView.html?idxno=217234
+"챗GPT에 SNS 데이터 연동"...뉴엔AI, 소셜 분석 MCP 출시
+https://www.aitimes.com/news/articleView.html?idxno=217458
 
-BMW, '챗GPT'로 차량 추천부터 시승 예약까지…AI 쇼핑 확대
-https://www.aitimes.com/news/articleView.html?idxno=217233
+노타, 두베에 금융권 특화 AI 코딩 에이전트 기술 제공
+https://www.aitimes.com/news/articleView.html?idxno=217457
 
-텐센트도 'AI 자기 개선' 연구 본격화…미국 이어 RSI 경쟁 가세
-https://www.aitimes.com/news/articleView.html?idxno=217232
+[게시판] 멋쟁이사자처럼 베트남에 '피지컬 AI 데이터랩' 개소 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=217456
