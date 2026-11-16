@@ -1,31 +1,31 @@
 🤖 26년 11월 17일 화요일 AI 뉴스
 
-트럼프, 젠슨 황 CEO 복귀 지지…엔비디아 이사회는 논의 안 해
-https://www.aitimes.com/news/articleView.html?idxno=217468
+JP모건 "미 휴머노이드 2030년 40만대"…로보티즈 유망 부품사 선정
+https://www.aitimes.com/news/articleView.html?idxno=217376
 
-미국, 중국의 해외 GPU 우회 이용 차단…새 수출 규제 발표
-https://www.aitimes.com/news/articleView.html?idxno=217467
+구글, '제미나이 4 하이드로젠' 출시…상위 모델 '아르곤' 성능 추월
+https://www.aitimes.com/news/articleView.html?idxno=217352
 
-알리바바 '큐원4 맥스' 정식 출시…성능 높이고 작업 비용 67% 절감
-https://www.aitimes.com/news/articleView.html?idxno=217466
+구글, '제미나이 4 카본' 정식 출시…'페이블 5.2'의 4분의 1 가격
+https://www.aitimes.com/news/articleView.html?idxno=217249
 
-미국, 엔비디아·오픈AI 등 AI 기업 20여곳 '국가 대표기업' 지정 추진
-https://www.aitimes.com/news/articleView.html?idxno=217465
+스페이스X, 영상 AI '그록 이매진' 개발팀 대부분 해고...AI 코딩에 집중
+https://www.aitimes.com/news/articleView.html?idxno=217399
 
-영상 생성 AI, 1년 만에 판도 역전…중국 모델이 상위권 장악
-https://www.aitimes.com/news/articleView.html?idxno=217463
+'페이블 5.2' 프롬프트 가이드 공개…"코드 맡기면 정리 5배 증가"
+https://www.aitimes.com/news/articleView.html?idxno=217271
 
-수주잔고 100배 폭증… 국내 AI 인프라 업계, 3분기 실적 '약진'
-https://www.aitimes.com/news/articleView.html?idxno=217462
+[기고] 채점이 편한 시험은 AI에도 편하다
+https://www.aitimes.com/news/articleView.html?idxno=217423
 
-AI 가수 '자니아 모네', 첫 AI 음악상 4관왕…'AI판 그래미' 시동
-https://www.aitimes.com/news/articleView.html?idxno=217461
+앨리스 황, 중국 정보기관 포섭 의혹…딥시크·화웨이 연관도 드러나
+https://www.aitimes.com/news/articleView.html?idxno=217375
 
-배우 없이 만든 중국 첫 AI 영화, 흥행 참패…3주간 3.6억원
-https://www.aitimes.com/news/articleView.html?idxno=217460
+앤트로픽, 클로드 오피스 출시…IPO 앞두고 MS·구글과 경쟁
+https://www.aitimes.com/news/articleView.html?idxno=217251
 
-전력난·주민 반발에 AI 데이터센터 바다로…파력 발전까지 추진
-https://www.aitimes.com/news/articleView.html?idxno=217459
+알리바바, '큐원4' 첫 모델 공개…가중치·성능 평가 없이 프리뷰 출시
+https://www.aitimes.com/news/articleView.html?idxno=217313
 
-"챗GPT에 SNS 데이터 연동"...뉴엔AI, 소셜 분석 MCP 출시
-https://www.aitimes.com/news/articleView.html?idxno=217458
+앤트로픽, 제조업용 '클로드' 출시…오픈AI와 산업별 AI 시장 경쟁 확대
+https://www.aitimes.com/news/articleView.html?idxno=217361
