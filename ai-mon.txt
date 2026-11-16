@@ -1,7 +1,16 @@
 🤖 26년 11월 16일 월요일 AI 뉴스
 
+트럼프, 시진핑 회담서 젠슨 황 의혹 거론 안 할 듯…희토류 협상 집중
+https://www.aitimes.com/news/articleView.html?idxno=217449
+
 포티넷코리아, 김종덕 신임 지사장 선임...20년만에 친정 복귀
 https://www.aitimes.com/news/articleView.html?idxno=217440
+
+LGU+, 클라우드 기반 보안 플랫폼 'U+SASE' 출시
+https://www.aitimes.com/news/articleView.html?idxno=217439
+
+애플, AI 안경 차별화 전략은 '시리 앱 제어'…기존 아이폰 앱 활용
+https://www.aitimes.com/news/articleView.html?idxno=217438
 
 SKT, 효성중공업과 AI 데이터센터 전력 인프라 맞손
 https://www.aitimes.com/news/articleView.html?idxno=217437
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217426
 
 KT, 인천 남동산단에 AI기반 산업안전 솔루션 공급
 https://www.aitimes.com/news/articleView.html?idxno=217424
-
-[기고] 채점이 편한 시험은 AI에도 편하다
-https://www.aitimes.com/news/articleView.html?idxno=217423
-
-젠슨 황, 자신이 키운 생성 AI에 풍자당해…딥페이크 밈 수백만 조회
-https://www.aitimes.com/news/articleView.html?idxno=217422
-
-스페이스X, 스타십 첫 발사탑 포획 성공…1단 부스터 회수는 실패
-https://www.aitimes.com/news/articleView.html?idxno=217421
