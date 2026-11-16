@@ -1,5 +1,11 @@
 🤖 26년 11월 17일 화요일 AI 뉴스
 
+트럼프, 젠슨 황 CEO 복귀 지지…엔비디아 이사회는 논의 안 해
+https://www.aitimes.com/news/articleView.html?idxno=217468
+
+미국, 중국의 해외 GPU 우회 이용 차단…새 수출 규제 발표
+https://www.aitimes.com/news/articleView.html?idxno=217467
+
 알리바바 '큐원4 맥스' 정식 출시…성능 높이고 작업 비용 67% 절감
 https://www.aitimes.com/news/articleView.html?idxno=217466
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217459
 
 "챗GPT에 SNS 데이터 연동"...뉴엔AI, 소셜 분석 MCP 출시
 https://www.aitimes.com/news/articleView.html?idxno=217458
-
-노타, 두베에 금융권 특화 AI 코딩 에이전트 기술 제공
-https://www.aitimes.com/news/articleView.html?idxno=217457
-
-[게시판] 멋쟁이사자처럼 베트남에 '피지컬 AI 데이터랩' 개소 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=217456
