@@ -1,5 +1,14 @@
 🤖 26년 11월 16일 월요일 AI 뉴스
 
+알리바바 '큐원4 맥스' 정식 출시…성능 높이고 작업 비용 67% 절감
+https://www.aitimes.com/news/articleView.html?idxno=217466
+
+미국, 엔비디아·오픈AI 등 AI 기업 20여곳 '국가 대표기업' 지정 추진
+https://www.aitimes.com/news/articleView.html?idxno=217465
+
+영상 생성 AI, 1년 만에 판도 역전…중국 모델이 상위권 장악
+https://www.aitimes.com/news/articleView.html?idxno=217463
+
 수주잔고 100배 폭증… 국내 AI 인프라 업계, 3분기 실적 '약진'
 https://www.aitimes.com/news/articleView.html?idxno=217462
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217457
 
 [게시판] 멋쟁이사자처럼 베트남에 '피지컬 AI 데이터랩' 개소 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=217456
-
-네이버 카페에 AI 에이전트 도입...3개 카페서 베타 테스트 진행
-https://www.aitimes.com/news/articleView.html?idxno=217453
-
-중국 에이스, AI 보컬 음악 생성 세계 1위…수노 제쳤다
-https://www.aitimes.com/news/articleView.html?idxno=217452
-
-백악관 "AI 보안 사고 자진 신고하면 처벌 완화"
-https://www.aitimes.com/news/articleView.html?idxno=217450
