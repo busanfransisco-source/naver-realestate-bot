@@ -10,8 +10,7 @@
  *  2) 먼저 GitHub의 last-refresh.txt 시간을 확인해서
  *     "GitHub Actions가 이미 오늘자로 갱신했는지" 체크
  *  3) 이미 최신이면 아무 것도 안 하고 바로 종료 (중복 방지, 할당량 절약)
- *  4) 오래됐으면(=GitHub Actions가 멈춘 상태로 판단) 직접 뉴스/시세를
- *     긁어와서 briefing.html을 새로 만들고 GitHub Contents API로 커밋
+ *  4) 오래됐으면 검증된 보완 자료를 기존 브리핑 카드와 원자료에 함께 반영
  *
  * 사용 전 설정 (Apps Script 편집기 > 프로젝트 설정 > 스크립트 속성):
  *   GITHUB_TOKEN   : GitHub Personal Access Token (본인이 직접 입력)
@@ -224,7 +223,17 @@ function fetchWeather_(now) {
     var name = CITIES[i][0];
     var d = data[i];
     try {
+      var expected = dateStamp_(now);
+      if (!d.daily || !d.hourly || !Array.isArray(d.daily.time) || d.daily.time.length !== 1 ||
+          d.daily.time[0] !== expected || !Array.isArray(d.hourly.time) || d.hourly.time.length !== 24 ||
+          d.hourly.time.some(function (stamp, hour) { return stamp !== expected + "T" + pad2_(hour) + ":00"; }))
+        throw new Error("Invalid source date or hours");
       var codes = d.hourly.weather_code;
+      if (!Array.isArray(codes) || codes.length !== 24 || codes.some(function (code) {
+        return ![0,1,2,3,45,48,51,53,55,56,57,61,63,65,66,67,71,73,75,77,80,81,82,85,86,95,96,99].includes(code);
+      }) || !Number.isFinite(d.daily.temperature_2m_max[0]) || !Number.isFinite(d.daily.temperature_2m_min[0]) ||
+          d.daily.temperature_2m_min[0] > d.daily.temperature_2m_max[0])
+        throw new Error("Invalid source weather");
       var am = codes.slice(6, 12), pm = codes.slice(12, 18);
       var amE = codeToEmoji_(mostCommon_(am)), pmE = codeToEmoji_(mostCommon_(pm));
       var tmax = Math.round(d.daily.temperature_2m_max[0]);
@@ -457,30 +466,121 @@ function fetchMarket_(now) {
   };
 }
 
-function fetchShortnews_(now) {
-  var weekday = WEEKDAY_KR[weekdayIdx_(now)];
-  var header = (now.getUTCFullYear() % 100) + "년 " + (now.getUTCMonth() + 1) + "월 " + now.getUTCDate() + "일 " + weekday + " 오늘의 퀵뉴스⚡";
-  var SECTIONS = [["politics", "정치", "🏛️", 3], ["economic", "경제", "💰", 5], ["society", "사회", "👥", 5], ["foreign", "국제", "🌏", 2]];
-  var lines = [header, ""];
-  var any = false;
-  SECTIONS.forEach(function (sec) {
-    var slug = sec[0], label = sec[1], emoji = sec[2], want = sec[3];
+var SHORTNEWS_URL = /^https:\/\/v\.daum\.net\/v\/[0-9]{10,20}$/;
+var SHORTNEWS_ROW = /^\S+ \((톱뉴스|정치|경제|사회|국제|날씨)\) (.+)$/;
+var KOSPI_ENDPOINTS = ["https://m.stock.naver.com/api/index/KOSPI/basic",
+                       "https://polling.finance.naver.com/api/realtime/domestic/index/KOSPI"];
+var WEATHER_DELAY = "[날씨 갱신 지연 · 당일 마지막 정상 예보 유지 · 최신 조회 실패]";
+
+function shortnewsHeader_(now) {
+  return (now.getUTCFullYear() % 100) + "년 " + (now.getUTCMonth() + 1) + "월 " +
+    now.getUTCDate() + "일 " + WEEKDAY_KR[weekdayIdx_(now)] + " 오늘의 퀵뉴스⚡";
+}
+
+function validKospiClock_(stamp, now, status) {
+  var age = now.getTime() - 32400000 - stamp.getTime();
+  var kst = new Date(stamp.getTime() + 32400000);
+  return Number.isFinite(age) && kst.getUTCDay() > 0 && kst.getUTCDay() < 6 &&
+    age >= 0 && age <= 7 * 86400000 &&
+    (status === "CLOSE" || (status === "OPEN" && dateStamp_(kst) === dateStamp_(now) && age <= 1800000));
+}
+
+function kospiLine_(now) {
+  for (var i = 0; i < KOSPI_ENDPOINTS.length; i++) {
     try {
-      var html = fetchText_("https://news.daum.net/" + slug);
-      var re = /<a[^>]+href="(https:\/\/v\.daum\.net\/v\/\d+)"[^>]*>([\s\S]*?)<\/a>/g;
-      var m, cnt = 0, seen = {};
-      while ((m = re.exec(html)) !== null && cnt < want) {
-        var title = stripTags_(m[2]);
-        if (!title || title.length < 10 || seen[m[1]]) continue;
-        seen[m[1]] = true;
-        lines.push(emoji + " (" + label + ") " + title);
-        lines.push("");
-        cnt++; any = true;
+      var row = JSON.parse(fetchText_(KOSPI_ENDPOINTS[i]));
+      if (Array.isArray(row.datas)) {
+        var matches = row.datas.filter(function (entry) { return entry && entry.itemCode === "KOSPI"; });
+        row = matches.length === 1 ? matches[0] : {};
       }
+      var value = String(row.closePriceRaw === undefined ? row.closePrice : row.closePriceRaw);
+      var exchange = row.stockExchangeType || row.exchange;
+      if (row.itemCode !== "KOSPI" || !exchange || exchange.zoneId !== "Asia/Seoul" ||
+          !/^(?:[0-9]+|[0-9]{1,3}(?:,[0-9]{3})+)(?:\.[0-9]+)?$/.test(value) ||
+          !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\+09:00$/.test(row.localTradedAt || "")) continue;
+      var price = Number(value.replace(/,/g, ""));
+      var status = row.marketStatus;
+      var stamp = new Date(row.localTradedAt);
+      if (!Number.isFinite(price) || price <= 0 || !validKospiClock_(stamp, now, status)) continue;
+      var kst = new Date(stamp.getTime() + 32400000);
+      if (!kst.toISOString().startsWith(row.localTradedAt.slice(0, 19))) continue;
+      var closed = status === "CLOSE";
+      var weekend = now.getUTCDay() === 0 || now.getUTCDay() === 6;
+      var fixed = price.toFixed(2).replace(/\B(?=(\d{3})+\.)/g, ",");
+      return "  - 코스피 : " + fixed + "pt (" + dateStamp_(kst) + (closed ? " 종가" : " 장중") +
+        " · 네이버 표시 " + pad2_(kst.getUTCHours()) + ":" + pad2_(kst.getUTCMinutes()) + " KST" +
+        (closed && weekend ? " · 주말 휴장" : "") + ")";
     } catch (e) {}
+  }
+  return "";
+}
+
+function quicknewsQuality_(content, now, allowUnverified) {
+  if (!content || hasFetchFailure_(content)) return 0;
+  var lines = content.trim().split(/\r?\n/);
+  if (lines[0] !== shortnewsHeader_(now)) return 0;
+  var quotes = lines.filter(function (line) { return /^\s*- 코스피 : /.test(line); });
+  var priced = quotes.length === 1 && quotes[0].match(/^\s*- 코스피 : ((?:\d+|\d{1,3}(?:,\d{3})+)\.\d{2})pt \((\d{4}-\d{2}-\d{2}) (종가|장중) · 네이버 표시 (\d{2}:\d{2}) KST( · 주말 휴장)?\)$/);
+  if (!lines.includes("[주요 경제 지표]") || quotes.length !== 1) return 0;
+  if (!priced && !(allowUnverified && quotes[0].trim() === "- 코스피 : 시세 확인 대기 (제공처 값·기준시각 미확인)")) return 0;
+  if (priced && !validQuicknewsQuote_(priced, now)) return 0;
+  var labels = {}, count = 0, seen = {};
+  for (var i = 0; i < lines.length; i++) {
+    var row = lines[i].match(SHORTNEWS_ROW);
+    if (!row) continue;
+    var url = lines[i + 1] || "";
+    if (allowUnverified && url === "원문 링크 미확인") {
+      labels[row[1]] = true; count++; continue;
+    }
+    if (!SHORTNEWS_URL.test(url) || seen[url]) return 0;
+    seen[url] = true; labels[row[1]] = true; count++;
+  }
+  return count >= 8 && ["정치", "경제", "사회", "국제"].every(function (label) { return labels[label]; }) ? count : 0;
+}
+
+function validQuicknewsQuote_(priced, now) {
+  var quoteClock = priced[2] + "T" + priced[4];
+  var quoteDate = new Date(quoteClock + ":00+09:00");
+  var weekend = now.getUTCDay() === 0 || now.getUTCDay() === 6;
+  var price = Number(priced[1].replace(/,/g, ""));
+  return Number.isFinite(price) && price > 0 &&
+    validKospiClock_(quoteDate, now, priced[3] === "종가" ? "CLOSE" : "OPEN") &&
+    new Date(quoteDate.getTime() + 32400000).toISOString().startsWith(quoteClock) &&
+    Boolean(priced[5]) === (weekend && priced[3] === "종가");
+}
+
+function fetchShortnews_(now) {
+  var sections = [[["politics"], "정치", "🏛️", 3], [["economic", "economy"], "경제", "💰", 5],
+                  [["society"], "사회", "👥", 5], [["foreign", "world"], "국제", "🌏", 2]];
+  var lines = [shortnewsHeader_(now), ""], seen = {};
+  var today = dateStamp_(now).replace(/-/g, "");
+  var yesterday = dateStamp_(new Date(now.getTime() - 86400000)).replace(/-/g, "");
+  sections.forEach(function (sec) {
+    var count = 0;
+    for (var i = 0; i < sec[0].length && count < sec[3]; i++) {
+      try {
+        var page = fetchText_("https://news.daum.net/" + sec[0][i]);
+        var re = /<a\b([^>]*\bhref=["'](https:\/\/v\.daum\.net\/v\/(20\d{6}\d{2,12}))["'][^>]*)>([\s\S]*?)<\/a>/g;
+        var m;
+        while (count < sec[3] && (m = re.exec(page)) !== null) {
+          if (seen[m[2]] || m[3].slice(0, 8) < yesterday || m[3].slice(0, 8) > today) continue;
+          var encoded = m[1].match(/\bdata-title=["']([^"']+)["']/);
+          var heading = m[4].match(/<(strong|h2|h3)\b[^>]*>([\s\S]*?)<\/\1>/i);
+          var title = encoded ? htmlUnescape_(decodeURIComponent(encoded[1])) :
+            (heading ? stripTags_(heading[2]) : "");
+          title = title.replace(/\s+/g, " ").trim();
+          if (title.length < 10) continue;
+          seen[m[2]] = true;
+          lines.push(sec[2] + " (" + sec[1] + ") " + title, m[2], "");
+          count++;
+        }
+      } catch (e) {}
+    }
   });
-  if (!any) { lines.push("(오늘 뉴스 수집에 실패했습니다)"); lines.push(""); }
-  return { prefix: "shortnews", content: lines.join("\n").trim() + "\n", ok: any };
+  var quote = kospiLine_(now);
+  if (quote) lines.push("[주요 경제 지표]", quote);
+  var content = lines.join("\n").trim() + "\n";
+  return quicknewsQuality_(content, now) ? content : "";
 }
 
 function ghConfig_() {
@@ -492,129 +592,83 @@ function ghConfig_() {
   };
 }
 
-function ghGetFile_(path) {
-  var cfg = ghConfig_();
-  var url = "https://api.github.com/repos/" + cfg.owner + "/" + cfg.repo + "/contents/" + encodeURIComponent(path);
-  var resp = UrlFetchApp.fetch(url, {
-    headers: { Authorization: "Bearer " + cfg.token, Accept: "application/vnd.github+json" },
-    muteHttpExceptions: true
-  });
-  if (resp.getResponseCode() !== 200) return null;
-  return JSON.parse(resp.getContentText());
-}
-
-function ghPutFile_(path, content, message) {
-  var cfg = ghConfig_();
-  var url = "https://api.github.com/repos/" + cfg.owner + "/" + cfg.repo + "/contents/" + encodeURIComponent(path);
-  var existing = ghGetFile_(path);
-  var payload = {
-    message: message,
-    content: Utilities.base64Encode(content, Utilities.Charset.UTF_8),
-    branch: "main"
+function ghRequest_(cfg, endpoint, method, payload) {
+  var options = {
+    method: method || "get", muteHttpExceptions: true,
+    headers: { Authorization: "Bearer " + cfg.token, Accept: "application/vnd.github+json" }
   };
-  if (existing && existing.sha) payload.sha = existing.sha;
-  var resp = UrlFetchApp.fetch(url, {
-    method: "put",
-    contentType: "application/json",
-    headers: { Authorization: "Bearer " + cfg.token, Accept: "application/vnd.github+json" },
-    payload: JSON.stringify(payload),
-    muteHttpExceptions: true
-  });
-  var code = resp.getResponseCode();
-  if (code !== 200 && code !== 201) {
-    throw new Error("GitHub commit 실패 (" + path + "): " + code + " " + resp.getContentText());
+  if (payload) {
+    options.contentType = "application/json";
+    options.payload = JSON.stringify(payload);
   }
+  var response = UrlFetchApp.fetch("https://api.github.com/repos/" + cfg.owner + "/" + cfg.repo + endpoint, options);
+  var code = response.getResponseCode();
+  if (method === undefined && code === 404 && endpoint.startsWith("/contents/")) return null;
+  if (code < 200 || code >= 300) throw new Error("GitHub " + (method || "get") + " HTTP " + code);
+  return JSON.parse(response.getContentText());
 }
 
-function ghGetTextFile_(path) {
-  var f = ghGetFile_(path);
-  if (!f || !f.content) return null;
-  return Utilities.newBlob(Utilities.base64Decode(f.content.replace(/\n/g, "")), "text/plain").getDataAsString("UTF-8");
+function ghGetTextFile_(path, ref, cfg) {
+  var entry = ghRequest_(cfg || ghConfig_(), "/contents/" + encodeURIComponent(path) +
+    "?ref=" + encodeURIComponent(ref || "main"));
+  if (!entry) return null;
+  if (entry.encoding !== "base64" || typeof entry.content !== "string") throw new Error("Unreadable GitHub file: " + path);
+  return Utilities.newBlob(Utilities.base64Decode(entry.content.replace(/\n/g, "")), "text/plain").getDataAsString("UTF-8");
+}
+
+function commitBackup_(cfg, base, changes, day) {
+  var parent = ghRequest_(cfg, "/git/commits/" + base);
+  var entries = Object.keys(changes).map(function (path) {
+    return {path: path, type: "blob", mode: "100644", content: changes[path]};
+  });
+  var tree = ghRequest_(cfg, "/git/trees", "post", {base_tree: parent.tree.sha, tree: entries});
+  var target = ghRequest_(cfg, "/git/commits", "post", {
+    message: "Backup pipeline refresh (Apps Script) " + day, tree: tree.sha, parents: [base]
+  });
+  // A regular, non-forced fast-forward rejects a concurrent main publication.
+  ghRequest_(cfg, "/git/refs/heads/main", "patch", {sha: target.sha, force: false});
 }
 
 function escapeHtml_(s) {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
-function buildBriefingHtml_(now, sections) {
-  var weekday = WEEKDAY_KR[weekdayIdx_(now)];
-  var dateLine = now.getUTCFullYear() + "년 " + (now.getUTCMonth() + 1) + "월 " + now.getUTCDate() + "일 " + weekday;
-  var hh = pad2_(now.getUTCHours()), mm = pad2_(now.getUTCMinutes());
-  var updateLine = (now.getUTCMonth() + 1) + "월 " + now.getUTCDate() + "일 " + hh + ":" + mm;
-  var buildDate = dateStamp_(now);
+function readCardBody_(page, key) {
+  var pattern = new RegExp('<textarea id="ta-' + key + '"[^>]*>([\\s\\S]*?)<\\/textarea>');
+  var match = page.match(pattern);
+  return match ? htmlUnescape_(match[1]).trim() : "";
+}
 
-  var order = [
-    ["fortune", "1. 🔮 오늘의 운세"], ["weather", "2. ☀️ 날씨"], ["shortnews", "3. ⚡ 오늘의 퀵뉴스"],
-    ["subs", "4. 🏗️ 청약 소식"], ["trend", "5. 📈 부동산 주간 시세동향"], ["fuelfx", "6. ⛽ 기름값·환율"],
-    ["metalcoin", "7. 🥇 금·은·코인"], ["books", "8. 📚 주간 베스트셀러"], ["realestate", "9. 🏠 부동산 뉴스"],
-    ["world", "10. 🌏 세계 뉴스"], ["finance", "11. 🏦 금융 뉴스"], ["ai", "12. 🤖 AI 뉴스"]
-  ];
-  var policyOrder = [
-    ["analysis3", "20. 📰 엘리트 정책분석"], ["analysis4", "21. 📰 여러분의 부동산 정책분석"],
-    ["analysis5", "22. 📰 월부길 정책분석"], ["analysis2", "23. 📰 부알남 정책분석"],
-    ["analysis6", "24. 📰 부부투 정책분석"], ["analysis1", "25. 📰 비밀노트 정책 분석"]
-  ];
-
-  // Same dated original manuscripts as Python; no old-story rotation.
-  var library = JSON.parse(ghGetTextFile_("daily-content-library.json"));
-  var manuscriptDay = now.getUTCFullYear() + '-' + ('0' + (now.getUTCMonth()+1)).slice(-2) + '-' + ('0'+now.getUTCDate()).slice(-2);
-  var manuscript = null;
-  try {
-    manuscript = JSON.parse(ghGetTextFile_('daily-content/' + manuscriptDay + '.json'));
-    if (manuscript.date !== manuscriptDay || manuscript.topics.length !== 6) manuscript = null;
-  } catch (error) { manuscript = null; }
-  for (var slot = 0; slot < 6; slot++) {
-    var topic = library.topics[slot];
-    var key = "daily" + (19 + slot);
-    var authored = manuscript && manuscript.topics[slot];
-    if (authored && authored.key === topic.key && authored.label === topic.label) {
-      sections[key] = [topic.label, now.getUTCFullYear() + "년 " + (now.getUTCMonth() + 1) + "월 " + now.getUTCDate() + "일"].concat(authored.entry).join("\n\n");
-    } else {
-      sections[key] = topic.label + '\n\n오늘의 새 원고가 아직 준비되지 않았습니다.\n\n이전 글을 오늘 자료처럼 반복하지 않습니다.';
-    }
-    order.push([key, (13 + slot) + ". " + topic.label]);
+function rebuildBackupCard_(page, key, content) {
+  var area = new RegExp('(<textarea id="ta-' + key + '"[^>]*>)[\\s\\S]*?(<\\/textarea>)','g');
+  var copy = new RegExp('(window\\.__content_' + key + ' = )"(?:\\\\.|[^"\\\\])*"(;)', 'g');
+  if ((page.match(area) || []).length !== 1 || (page.match(copy) || []).length !== 1)
+    throw new Error("Unexpected briefing card: " + key);
+  var body = content.trim();
+  page = page.replace(area, function (_, start, end) { return start + escapeHtml_(body) + end; });
+  page = page.replace(copy, function (_, start, end) {
+    return start + JSON.stringify(body).replace(/</g, "\\u003c") + end;
+  });
+  if (key === "shortnews") {
+    var preview = /(<div id="preview-shortnews"[^>]*>)[\s\S]*?(<\/div>)/g;
+    if ((page.match(preview) || []).length !== 1) throw new Error("Quick news link preview missing");
+    var display = body.split("\n").map(function (line) {
+      var escaped = escapeHtml_(line);
+      return SHORTNEWS_URL.test(line) ? '<a class="news-source-link" href="' + escaped +
+        '" target="_blank" rel="noopener noreferrer">' + escaped + '</a>' : escaped;
+    }).join("\n");
+    page = page.replace(preview, function (_, start, end) { return start + display + end; });
   }
+  return page;
+}
 
-  // Python 주 파이프라인과 동일하게 화면 순서와 실제 번호를 일치시킨다.
-  order.push(["transactions", "19. 🏢 전국 신규 등록 실거래가"]);
-  Array.prototype.push.apply(order, policyOrder);
-  order.push(["analysis7", "26. 📰 부동산 불장의 진실 정책분석"]);
-
-  var blocks = order.map(function (pair) {
-    var key = pair[0], label = pair[1];
-    var content = (sections[key] || "(데이터 없음)").replace(/\n+$/, "");
-    var escaped = escapeHtml_(content);
-    return '\n<section class="card">\n<div class="card-head">\n<h2>' + label + '</h2>\n' +
-      '<button class="copy-btn" onclick="copySection(\'' + key + '\', this)">복사</button>\n</div>\n' +
-      '<textarea id="ta-' + key + '" class="preview" readonly>' + escaped + '</textarea>\n' +
-      '<script>window.__content_' + key + ' = ' + JSON.stringify(content) + ';</script>\n</section>';
-  }).join("\n");
-
-  return '<!DOCTYPE html>\n<html lang="ko">\n<head>\n<meta charset="UTF-8">\n' +
-    '<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">\n' +
-    '<title>오늘의 브리핑</title>\n<style>\n* { box-sizing: border-box; }\nbody { margin:0;padding:16px;' +
-    'font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;' +
-    'background:#f4f4f5;color:#1a1a1a; }\nh1{font-size:18px;margin:4px 0 16px;text-align:center;color:#444;}\n' +
-    '.update-time{text-align:center;font-size:12px;color:#999;margin:-12px 0 16px;}\n' +
-    '.card{background:#fff;border-radius:14px;padding:14px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,0.08);}\n' +
-    '.card-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}\n' +
-    '.card-head h2{font-size:17px;margin:0;}\n' +
-    '.copy-btn{font-size:15px;font-weight:600;padding:10px 20px;border:none;border-radius:10px;background:#3b82f6;color:#fff;cursor:pointer;min-width:76px;}\n' +
-    '.copy-btn.copied{background:#22c55e;}\n' +
-    '.preview{width:100%;height:130px;resize:vertical;font-size:13px;line-height:1.5;color:#555;border:1px solid #e5e5e5;border-radius:8px;padding:8px;background:#fafafa;white-space:pre-wrap;}\n' +
-    '</style>\n</head>\n<body>\n<h1>📅 ' + dateLine + '</h1>\n' +
-    '<p class="update-time">🕐 마지막 업데이트(백업 파이프라인): ' + updateLine + '</p>\n' +
-    blocks + '\n\n<script>\nvar BUILD_DATE = \'' + buildDate + '\';\n(function(){\nvar d=new Date();\n' +
-    "var today = d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');\n" +
-    "if(today!==BUILD_DATE && location.search.indexOf('r=')===-1){location.replace(location.pathname+'?r='+Date.now());}\n" +
-    "})();\nfunction markCopied(btn){var o=btn.textContent;btn.textContent='복사됨';btn.classList.add('copied');" +
-    "setTimeout(function(){btn.textContent=o;btn.classList.remove('copied');},1200);}\n" +
-    "function copySection(key,btn){var ta=document.getElementById('ta-'+key);var copied=false;try{" +
-    "ta.style.position='fixed';ta.style.top='0';ta.focus();ta.select();ta.setSelectionRange(0,ta.value.length);" +
-    "copied=document.execCommand('copy');}catch(e){copied=false;}if(copied){markCopied(btn);return;}" +
-    "var text=window['__content_'+key];if(navigator.clipboard&&navigator.clipboard.writeText){" +
-    "navigator.clipboard.writeText(text).then(function(){markCopied(btn);}).catch(function(){" +
-    "alert('복사에 실패했습니다.');});}else{alert('복사에 실패했습니다.');}}\n</script>\n</body>\n</html>\n";
+function buildBriefingHtml_(now, sections, existing) {
+  var slots = existing.match(/<section class="card" data-slot="\d+"/g) || [];
+  if (slots.length !== 30 || new Set(slots).size !== 30 || !existing.includes('id="auth-gate"') ||
+      !existing.includes('id="preview-shortnews"')) throw new Error("Canonical briefing layout unavailable");
+  var page = existing;
+  Object.keys(sections).forEach(function (key) { page = rebuildBackupCard_(page, key, sections[key]); });
+  return page;
 }
 
 function isTodayAlreadyRefreshed_(now) {
@@ -641,92 +695,96 @@ function runBackupIfNeeded() {
   runBackupNow();
 }
 
+function sameDayWeather_(body, now) {
+  var header = now.getUTCFullYear() + "년 " + (now.getUTCMonth() + 1) + "월 " +
+    now.getUTCDate() + "일 " + WEEKDAY_KR[weekdayIdx_(now)];
+  body = (body || "").replace(/\r\n/g, "\n");
+  if (!body.startsWith(header + "\n") || !body.includes("❒ 지역별 날씨전망 ❒")) return "";
+  var rows = body.split(/\r?\n/).filter(function (line) { return line.startsWith("✫"); });
+  if (rows.length !== CITIES.length || !rows.every(function (line, i) {
+    var match = line.match(/^✫([^()]+)\([^()]+\)➠\([^()]+\)  (-?\d+)℃ ~ (-?\d+)℃$/);
+    return match && match[1] === CITIES[i][0] && Number(match[2]) >= -90 &&
+      Number(match[2]) <= Number(match[3]) && Number(match[3]) <= 60;
+  })) return "";
+  return [header, "", "❒ 지역별 날씨전망 ❒", ""].concat(rows).join("\n");
+}
+
 function runBackupNow() {
-  var now = nowKST_();
-  var weekday_en = WEEKDAY_EN[weekdayIdx_(now)];
-  var today = dateStamp_(now);
+  var now = nowKST_(), today = dateStamp_(now), weekday = WEEKDAY_EN[weekdayIdx_(now)];
+  var cfg = ghConfig_();
+  var base = ghRequest_(cfg, "/git/ref/heads/main").object.sha;
+  function read(path) { return ghGetTextFile_(path, base, cfg); }
+  var existing = read("briefing.html");
+  if (!existing) throw new Error("Canonical briefing page unavailable");
+  var results = {}, changes = {}, errors = [];
 
-  var results = {};
-  var errors = [];
-
-  // 실패한 새 데이터는 절대 저장하거나 발행하지 않는다. 이전 정상 파일만 사용한다.
-  function keepValidOrExisting(prefix, content, ok) {
-    if (ok !== false && !hasFetchFailure_(content)) {
-      results[prefix] = content;
-      return;
-    }
-    var existing = ghGetTextFile_(prefix + "-" + weekday_en + ".txt");
-    if (existing && !hasFetchFailure_(existing)) {
-      results[prefix] = existing;
-      errors.push(prefix + ": 새 수집 실패 - 직전 정상값 유지");
-      return;
-    }
-    errors.push(prefix + ": 새 수집 실패 - 발행 제외");
-  }
-
-  function safeRun(name, fn) {
-    try {
-      var r = fn();
-      keepValidOrExisting((r && r.prefix) || name, r && r.content, r && r.ok);
-      return r;
-    } catch (e) {
-      errors.push(name + ": " + e);
-      keepValidOrExisting(name, "", false);
-      return null;
+  function save(result) {
+    if (result && result.ok && !hasFetchFailure_(result.content)) {
+      var key = result.prefix;
+      results[key] = result.content;
+      changes[key + ".txt"] = result.content;
+      changes[key + "-" + weekday + ".txt"] = result.content;
     }
   }
 
-  safeRun("weather", function () { return fetchWeather_(now); });
-  safeRun("fortune", function () { return fetchFortune_(now); });
-  safeRun("realestate", function () { return fetchRealestateNews_(now); });
-  safeRun("shortnews", function () { return fetchShortnews_(now); });
-  safeRun("world", function () { return fetchWorldNews_(now); });
-  safeRun("finance", function () { return fetchFinanceNews_(now); });
-  safeRun("ai", function () { return fetchAiNews_(now); });
+  var status;
+  try { status = JSON.parse(read("weather-status.txt")); } catch (e) { status = null; }
+  var age = now.getTime() - 32400000 -
+    Date.parse(status && (status.failedAtKst || status.attemptedAtKst));
+  var deferred = status && status.status === "failed" && age >= 0 && age < 600000;
+  var storedWeather = read("weather-" + today + ".txt");
+  var lastWeather = sameDayWeather_(storedWeather, now) ||
+    sameDayWeather_(readCardBody_(existing, "weather").replace(WEATHER_DELAY + "\n", ""), now);
+  if (!deferred) {
+    var attempt = now.toISOString().replace("Z", "+09:00");
+    var forecast = fetchWeather_(now);
+    var validated = forecast.ok && sameDayWeather_(forecast.content, now);
+    var weatherStatus = {forecastDate: today, attemptedAtKst: attempt, status: validated ? "ok" : "failed"};
+    if (validated) {
+      save({prefix: "weather", content: validated, ok: true});
+      changes["weather-" + today + ".txt"] = validated;
+    } else {
+      weatherStatus.failedAtKst = nowKST_().toISOString().replace("Z", "+09:00");
+      weatherStatus.errorType = "BackupSourceUnavailable";
+    }
+    changes["weather-status.txt"] = JSON.stringify(weatherStatus) + "\n";
+  }
+  if (!results.weather) {
+    results.weather = lastWeather ? WEATHER_DELAY + "\n" + lastWeather :
+      "당일 날씨 자료를 확보하지 못했습니다. 갱신을 기다리고 있습니다.";
+  }
 
+  var quickFile = "shortnews-" + weekday + ".txt";
+  var currentQuick = readCardBody_(existing, "shortnews");
+  var savedQuick = read(quickFile);
+  var generalQuick = read("shortnews.txt");
+  // Prefer the canonical article summaries, including explicit unverified fields.
+  var candidates = [currentQuick, savedQuick, generalQuick];
+  var quick = candidates.find(function (candidate) { return quicknewsQuality_(candidate, now); }) ||
+    candidates.find(function (candidate) { return quicknewsQuality_(candidate, now, true); });
+  if (!quick) quick = fetchShortnews_(now);
+  if (quick) {
+    var cleaned = quick.trim();
+    if (currentQuick !== cleaned) results.shortnews = cleaned;
+    if (!savedQuick || savedQuick.trim() !== cleaned) changes[quickFile] = cleaned + "\n";
+    if (!generalQuick || generalQuick.trim() !== cleaned) changes["shortnews.txt"] = cleaned + "\n";
+  } else {
+    errors.push("shortnews: no verified article links and KOSPI");
+  }
+
+  [fetchFortune_, fetchRealestateNews_, fetchWorldNews_, fetchFinanceNews_, fetchAiNews_].forEach(function (fetcher) {
+    try { save(fetcher(now)); } catch (e) { errors.push(fetcher.name); }
+  });
   try {
     var market = fetchMarket_(now);
-    keepValidOrExisting("fuelfx", market.fuelfx.content, market.fuelfx.ok);
-    keepValidOrExisting("metalcoin", market.metalcoin.content, market.metalcoin.ok);
-    keepValidOrExisting("books", market.books.content, market.books.ok);
-  } catch (e) {
-    errors.push("market: " + e);
-    keepValidOrExisting("fuelfx", "", false);
-    keepValidOrExisting("metalcoin", "", false);
-    keepValidOrExisting("books", "", false);
-  }
+    [market.fuelfx, market.metalcoin, market.books].forEach(save);
+  } catch (e) { errors.push("market"); }
 
-  ["subs", "trend"].forEach(function (key) {
-    var existing = ghGetTextFile_(key + "-" + weekday_en + ".txt");
-    if (existing) results[key] = existing;
-  });
-
-  // 백업 경로가 페이지를 다시 만들어도 정책분석 7개 박스와 순번을 유지한다.
-  ["analysis3", "analysis4", "analysis5", "analysis2", "analysis6", "analysis1", "analysis7"].forEach(function (key) {
-    var existing = ghGetTextFile_(key + "-" + weekday_en + ".txt");
-    results[key] = existing || "(오늘의 분석이 아직 준비되지 않았습니다)";
-  });
-
-  var transactions = ghGetTextFile_("transactions-" + weekday_en + ".txt");
-  results.transactions = transactions || "(오늘의 실거래가가 아직 준비되지 않았습니다)";
-
-  var html = buildBriefingHtml_(now, results);
-
-  ghPutFile_("briefing.html", html, "Backup pipeline refresh (Apps Script) " + today);
-  ghPutFile_("last-refresh-backup.txt", now.toISOString(), "Backup pipeline timestamp " + today);
-
-  Object.keys(results).forEach(function (key) {
-    if (/^daily(19|20|21|22|23|24)$/.test(key)) return;
-    if (["subs", "trend", "transactions", "analysis3", "analysis4", "analysis5", "analysis2", "analysis6", "analysis1", "analysis7"].indexOf(key) !== -1) return;
-    try {
-      ghPutFile_(key + ".txt", results[key], "Backup pipeline data: " + key);
-      ghPutFile_(key + "-" + weekday_en + ".txt", results[key], "Backup pipeline data: " + key);
-    } catch (e) {
-      errors.push("commit " + key + ": " + e);
-    }
-  });
-
-  Logger.log("백업 파이프라인 완료. 에러: " + (errors.length ? errors.join(" | ") : "없음"));
+  var page = buildBriefingHtml_(now, results, existing);
+  if (page !== existing) changes["briefing.html"] = page;
+  changes["last-refresh-backup.txt"] = new Date().toISOString() + "\n";
+  commitBackup_(cfg, base, changes, today);
+  Logger.log("백업 파이프라인 완료. 확인 실패: " + (errors.length ? errors.join(" | ") : "없음"));
 }
 
 /**

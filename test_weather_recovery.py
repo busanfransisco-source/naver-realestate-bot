@@ -37,9 +37,9 @@ class WeatherRecoveryTests(unittest.TestCase):
         os.chdir(self.old)
         self.tmp.cleanup()
 
-    def run_main(self, payload=None, error=None):
-        with patch.object(weather, 'datetime') as clock, patch.object(weather, 'fetch_all_cities', return_value=payload, side_effect=error):
-            clock.now.return_value = NOW
+    def run_main(self, payload=None, error=None, now=NOW):
+        with patch.object(weather, 'datetime', wraps=datetime) as clock, patch.object(weather, 'fetch_all_cities', return_value=payload, side_effect=error):
+            clock.now.return_value = now
             return weather.main()
 
     def test_timeout_preserves_exact_bytes_and_mtimes_and_returns_failure(self):
@@ -56,16 +56,36 @@ class WeatherRecoveryTests(unittest.TestCase):
 
     def test_success_recovers_and_clears_delay_without_extra_requests(self):
         self.run_main(error=TimeoutError())
-        self.assertEqual(self.run_main(payload=response()), 0)
-        self.assertFalse(weather.load_report(NOW).startswith(weather.DELAY_NOTICE))
-        self.assertEqual(weather.load_report(NOW), report())
+        before = Path('weather-status.txt').read_bytes()
+        with patch.object(weather, 'datetime', wraps=datetime) as clock, patch.object(weather, 'fetch_all_cities') as fetch:
+            clock.now.return_value = NOW + timedelta(minutes=9, seconds=59)
+            self.assertEqual(weather.main(), 1)
+            fetch.assert_not_called()
+        self.assertEqual(Path('weather-status.txt').read_bytes(), before)
+        recovery = NOW + timedelta(minutes=10)
+        self.assertEqual(self.run_main(payload=response(), now=recovery), 0)
+        self.assertFalse(weather.load_report(recovery).startswith(weather.DELAY_NOTICE))
+        self.assertEqual(weather.load_report(recovery), report())
         for name in ('weather.txt', 'weather-sat.txt', 'weather-2026-11-14.txt'):
             saved = Path(name).read_text(encoding='utf-8')
             self.assertNotIn('출처:', saved)
             self.assertNotIn('실제 조회시각', saved)
         status = json.loads(Path('weather-status.txt').read_text(encoding='utf-8'))
         self.assertEqual(status['forecastDate'], '2026-11-14')
-        self.assertEqual(status['attemptedAtKst'], '2026-11-14T21:35:00+09:00')
+        self.assertEqual(status['attemptedAtKst'], '2026-11-14T21:45:00+09:00')
+
+    def test_cloud_publication_respects_actual_failure_time_and_newer_status(self):
+        first = dict(status='failed', forecastDate=NOW.date().isoformat(),
+                     attemptedAtKst=NOW.isoformat(), failedAtKst=(NOW + timedelta(seconds=30)).isoformat())
+        candidate = Path('artifact-status.txt')
+        candidate.write_text(json.dumps(first))
+        self.assertTrue(weather.merge_status(candidate, now=NOW + timedelta(minutes=1)))
+        self.assertTrue(weather.retry_deferred(NOW + timedelta(minutes=10)))
+        self.assertFalse(weather.retry_deferred(NOW + timedelta(minutes=10, seconds=30)))
+        recovery = NOW + timedelta(minutes=11)
+        self.assertEqual(self.run_main(payload=response(), now=recovery), 0)
+        self.assertFalse(weather.merge_status(candidate, now=recovery))
+        self.assertEqual(json.loads(weather.STATUS_PATH.read_text())['status'], 'ok')
 
     def test_bad_response_never_overwrites_valid_report(self):
         good = report()
@@ -78,10 +98,10 @@ class WeatherRecoveryTests(unittest.TestCase):
             elif change == 'order': data[0]['daily']['temperature_2m_min'] = [100]
             else: data[0]['daily']['temperature_2m_max'] = [float('nan')]
             mutations.append(data)
-        for data in mutations:
+        for index, data in enumerate(mutations):
             with self.subTest(data=data[0]):
                 Path('weather.txt').write_text(good)
-                self.assertEqual(self.run_main(payload=data), 1)
+                self.assertEqual(self.run_main(payload=data, now=NOW + index * weather.RETRY_COOLDOWN), 1)
                 self.assertEqual(Path('weather.txt').read_text(), good)
 
     def test_missing_today_never_reuses_prior_day_or_future(self):

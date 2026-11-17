@@ -172,8 +172,12 @@ def _run_group(root, group, now, absolute_deadline, runner, fixed_clock=False):
     issue_count = 0
     boxes = []
     try:
+        from weather_fetch import retry_deferred
         remaining = absolute_deadline - time.monotonic()
-        if remaining <= 0:
+        if name == 'weather' and retry_deferred(now if fixed_clock else datetime.now(KST),
+                                                Path(root) / 'weather-status.txt'):
+            reason = 'weather_retry_cooldown'
+        elif remaining <= 0:
             reason = 'global_deadline'
         else:
             result = runner([sys.executable, '-X', 'utf8', script], cwd=str(root),
@@ -197,7 +201,8 @@ def _run_group(root, group, now, absolute_deadline, runner, fixed_clock=False):
             changed = _mtime(path) is not None and _mtime(path) != before[key]
             issues = source_issues(key, bodies[BOX_KEYS.index(key)], evidence, checked_now)
             retained_weekly = key == 'books' and not changed and not issues
-            box_reason = ('source_validation_failed' if issues else
+            box_reason = (reason if reason == 'weather_retry_cooldown' else
+                          'source_validation_failed' if issues else
                           (reason or 'collector_did_not_refresh_required_source')
                           if not changed and not retained_weekly else None)
             if box_reason:
@@ -267,7 +272,12 @@ def prepare(root, output, report, *, collect=False, now=None, runner=None,
         groups.sort(key=lambda row: order[row['group']])
         histories = {group['group']: [dict(group)] for group in groups}
         for delay in retry_delays:
-            pending = [group for group in groups if any(box['status'] == 'failed' for box in group['boxes'])]
+            from weather_fetch import retry_deferred
+            check_time = fixed_now or datetime.now(KST)
+            pending = [group for group in groups
+                       if any(box['status'] == 'failed' for box in group['boxes'])
+                       and not (group['group'] == 'weather'
+                                and retry_deferred(check_time, root / 'weather-status.txt'))]
             # Never let retries extend the original run's 270-second budget.
             if not pending or deadline-time.monotonic() <= delay+15:
                 break

@@ -24,6 +24,7 @@ jobs:
       eligible: ${{ steps.window.outputs.eligible }}
       publication: ${{ steps.stage.outputs.publication }}
       ready: ${{ steps.stage.outputs.ready }}
+      weather_status: ${{ steps.stage.outputs.weather_status }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -61,7 +62,8 @@ jobs:
         if: always() && steps.window.outputs.eligible == 'true'
         run: |
           python - <<'PY'
-          import json, os, shutil
+          import json, os, shutil, subprocess
+          from weather_fetch import read_status
           from pathlib import Path
           from datetime import datetime
           from morning_briefing_contract import KST, validate_snapshot
@@ -70,6 +72,16 @@ jobs:
           report = json.loads(report_path.read_text(encoding='utf-8')) if report_path.exists() else {}
           publication = report.get('websiteWritten') is True
           ready = report.get('snapshotWritten') is True
+          weather_file = Path('weather-status.txt')
+          status = read_status(weather_file)
+          # Carry failure evidence even if no box can be published this run.
+          weather_changed = subprocess.check_output(
+              ['git', 'status', '--porcelain', '--', str(weather_file)], text=True).strip()
+          weather_status = bool(weather_changed and status
+                                and status[0]['forecastDate'] == datetime.now(KST).date().isoformat())
+          if weather_status:
+              target = Path('tmp/weather-status'); target.mkdir(parents=True, exist_ok=True)
+              shutil.copyfile(weather_file, target/'weather-status.txt')
           if publication:
               source = json.loads(Path('morning-website-sources.json').read_text(encoding='utf-8'))
               boxes = validate_publication(source, datetime.now(KST))
@@ -91,6 +103,14 @@ jobs:
           path: tmp/morning-publication/
           if-no-files-found: error
           retention-days: 3
+      - name: Save weather attempt state for publication
+        if: always() && steps.stage.outputs.weather_status == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: morning-weather-status
+          path: tmp/weather-status/weather-status.txt
+          if-no-files-found: error
+          retention-days: 1
       - name: Save preparation diagnostics
         if: always() && steps.window.outputs.eligible == 'true'
         uses: actions/upload-artifact@v4
@@ -119,7 +139,7 @@ jobs:
           PY
   publish:
     needs: collect
-    if: always() && needs.collect.outputs.publication == 'true'
+    if: always() && (needs.collect.outputs.publication == 'true' || needs.collect.outputs.weather_status == 'true')
     runs-on: ubuntu-latest
     timeout-minutes: 5
     # Only publication shares the existing writer lock, not source collection.
@@ -135,12 +155,19 @@ jobs:
           python-version: '3.11'
       - run: pip install -r requirements.txt
       - uses: actions/download-artifact@v4
+        if: needs.collect.outputs.publication == 'true'
         with:
           name: morning-ready-source
           path: tmp/morning-ready-source
+      - uses: actions/download-artifact@v4
+        if: needs.collect.outputs.weather_status == 'true'
+        with:
+          name: morning-weather-status
+          path: tmp/morning-weather-status
       - name: Apply verified bundle to latest sources and publish website
         id: apply
         env:
+          MORNING_PUBLICATION: ${{ needs.collect.outputs.publication }}
           MORNING_READY: ${{ needs.collect.outputs.ready }}
         run: |
           git config user.name 'github-actions[bot]'
@@ -150,20 +177,27 @@ jobs:
           import os
           from pathlib import Path
           from morning_source_publication import apply_collection
-          root = Path('tmp/morning-ready-source')
-          trend = root/'neonet-trend-cache.json'
-          result = apply_collection(root/'morning-website-sources.json', trend if trend.exists() else None,
-                                    root/'morning-briefing-ready.json' if os.environ['MORNING_READY']=='true' else None)
+          from weather_fetch import merge_status
+          result = dict(readyApplied=False)
+          if os.environ['MORNING_PUBLICATION'] == 'true':
+              root = Path('tmp/morning-ready-source')
+              trend = root/'neonet-trend-cache.json'
+              result = apply_collection(root/'morning-website-sources.json', trend if trend.exists() else None,
+                                        root/'morning-briefing-ready.json' if os.environ['MORNING_READY']=='true' else None)
+          merge_status(Path('tmp/morning-weather-status/weather-status.txt'))
           with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
               output.write('ready_applied='+str(result['readyApplied']).lower()+'\n')
           print('Morning publication application:', result)
           PY
-          python gen_briefing.py
+          if [ "$MORNING_PUBLICATION" = "true" ] || ! git diff --quiet -- weather-status.txt; then
+            python gen_briefing.py
+          fi
           git add morning-website-sources.json morning-briefing-ready.json neonet-trend-cache.json briefing.html
           git add fortune*.txt weather*.txt shortnews*.txt subs*.txt trend*.txt fuelfx*.txt metalcoin*.txt books*.txt realestate*.txt
           git diff --cached --quiet || git commit -m 'Publish verified 06-20 cloud morning briefing'
           git push origin HEAD:main
       - name: Verify published morning source and page
+        if: needs.collect.outputs.publication == 'true'
         run: python morning_source_publication.py --verify --publication tmp/morning-ready-source/morning-website-sources.json
       - name: Verify sender snapshot with healthy sources and explicit omissions
         if: steps.apply.outputs.ready_applied == 'true'

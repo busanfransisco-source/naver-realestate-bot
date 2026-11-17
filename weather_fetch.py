@@ -11,7 +11,6 @@ import json
 import math
 import re
 from pathlib import Path
-import time
 from collections import Counter
 from datetime import datetime, timezone, timedelta
 
@@ -83,20 +82,15 @@ def fetch_all_cities():
         "&timezone=Asia%2FSeoul&forecast_days=1"
     )
 
-    last_err = None
-    for attempt in range(3):
-        try:
-            resp = requests.get(url, timeout=30)
-            resp.raise_for_status()
-            return resp.json()
-        except Exception as e:
-            last_err = e
-            time.sleep(3)
-    raise last_err
+    resp = requests.get(url, timeout=30)
+    resp.raise_for_status()
+    return resp.json()
 
 
 UNAVAILABLE = "당일 날씨 자료를 확보하지 못했습니다. 갱신을 기다리고 있습니다."
 DELAY_NOTICE = "[날씨 갱신 지연 · 당일 마지막 정상 예보 유지 · 최신 조회 실패]"
+STATUS_PATH = Path("weather-status.txt")
+RETRY_COOLDOWN = timedelta(minutes=10)
 VALID_CODES = {0, 1, 2, 3, 45, 48, 51, 53, 55, 56, 57, 61, 63, 65,
                66, 67, 71, 73, 75, 77, 80, 81, 82, 85, 86, 95, 96, 99}
 
@@ -126,6 +120,37 @@ def without_source_footer(report):
         "",
         report,
     )
+
+
+def read_status(path=STATUS_PATH):
+    try:
+        status = json.loads(path.read_text(encoding="utf-8"))
+        attempt = datetime.fromisoformat(status["attemptedAtKst"])
+        finish = datetime.fromisoformat(status.get("failedAtKst", status["attemptedAtKst"]))
+        if (attempt.tzinfo is None or finish.tzinfo is None or finish < attempt
+                or attempt.astimezone(KST).date().isoformat() != status["forecastDate"]
+                or status["status"] not in ("ok", "failed")):
+            return None
+        return status, finish
+    except (OSError, ValueError, KeyError, TypeError):
+        return None
+
+
+def retry_deferred(now, path=STATUS_PATH):
+    record = read_status(path)
+    return bool(record and record[0]["status"] == "failed"
+                and timedelta(0) <= now - record[1] < RETRY_COOLDOWN)
+
+
+def merge_status(source, target=STATUS_PATH, now=None):
+    """Carry only valid, newer attempts into the existing shared publication lock."""
+    candidate = read_status(source)
+    current = read_status(target)
+    now = now or datetime.now(KST)
+    if candidate and candidate[1] <= now and (not current or candidate[1] > current[1]):
+        target.write_bytes(source.read_bytes())
+        return True
+    return False
 
 
 def load_report(now=None):
@@ -180,6 +205,9 @@ def build_report(now=None):
 def main():
     now = datetime.now(KST)
     today = now.date().isoformat()
+    if retry_deferred(now):
+        print("날씨 재조회 보류: 최근 실패 후 10분 이내", file=sys.stderr)
+        return 1
     status = {"forecastDate": today, "attemptedAtKst": now.isoformat(timespec="seconds")}
     try:
         report = build_report(now)
@@ -187,14 +215,15 @@ def main():
             raise ValueError("예보 날짜/본문 검증 실패")
     except Exception as exc:
         # 실패 원문은 정상 파일을 덮어쓰지 않는다. 재조회 성공으로 취급하지 않는다.
-        status.update(status="failed", errorType=type(exc).__name__)
-        Path("weather-status.txt").write_text(json.dumps(status, ensure_ascii=False) + "\n", encoding="utf-8")
+        status.update(status="failed", errorType=type(exc).__name__,
+                      failedAtKst=datetime.now(KST).isoformat(timespec="seconds"))
+        STATUS_PATH.write_text(json.dumps(status, ensure_ascii=False) + "\n", encoding="utf-8")
         print(f"날씨 조회 실패: {type(exc).__name__}; 기존 원자료 보존", file=sys.stderr)
         return 1
     for fname in ("weather.txt", f"weather-{today}.txt", f"weather-{WEEKDAY_EN[now.weekday()]}.txt"):
         Path(fname).write_text(report, encoding="utf-8")
     status.update(status="ok")
-    Path("weather-status.txt").write_text(json.dumps(status, ensure_ascii=False) + "\n", encoding="utf-8")
+    STATUS_PATH.write_text(json.dumps(status, ensure_ascii=False) + "\n", encoding="utf-8")
     print(report)
     return 0
 

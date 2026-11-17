@@ -8,7 +8,7 @@ class MorningWorkflowIsolationTests(unittest.TestCase):
         text = Path('.github/workflows/morning-briefing.yml').read_text(encoding='utf-8')
         collect = text.split('name: Collect and validate only morning boxes 1 to 9', 1)[1].split('      - name:',1)[0]
         self.assertIn('continue-on-error: true', collect)
-        self.assertIn("if: always() && needs.collect.outputs.publication == 'true'",text)
+        self.assertIn("if: always() && (needs.collect.outputs.publication == 'true' || needs.collect.outputs.weather_status == 'true')",text)
         self.assertIn('report.get(\'websiteWritten\') is True',text)
         self.assertIn('report.get(\'snapshotWritten\') is True',text)
         self.assertIn('validate_publication(',text)

@@ -172,8 +172,13 @@ def main():
     local = Path('briefing.html')
     rows = inspect(local.read_text(encoding='utf-8'))
     if args.repair:
+        from weather_fetch import retry_deferred
+
         scripts = sorted({REPAIR[r['key']] for r in rows if r['issues'] and r['key'] in REPAIR})
         for script in scripts:
+            if script == 'weather_fetch.py' and retry_deferred(datetime.now(KST)):
+                print('Weather retry deferred for ten minutes after the latest failure', flush=True)
+                continue
             print(f'Retry source group: {script}', flush=True)
             try:
                 subprocess.run([sys.executable, script], timeout=180, check=True)
