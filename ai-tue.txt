@@ -1,31 +1,31 @@
 🤖 26년 11월 17일 화요일 AI 뉴스
 
-MS 글로벌 서비스 장애 원인은 4개월 전 버그...서버 80% 이상 마비
-https://www.aitimes.com/news/articleView.html?idxno=217485
+애플, 건강 AI 연구용 앱 출시…미국서 20만명 모집
+https://www.aitimes.com/news/articleView.html?idxno=217504
 
-트럼프, 엔비디아 주식 최대 830억 보유 추정…중국 수출 허용에 이해충돌 논란
-https://www.aitimes.com/news/articleView.html?idxno=217483
+젠슨 황 딸, 직급 넘는 영향력 행사…아버지 퇴진 후 권한 조정 과제
+https://www.aitimes.com/news/articleView.html?idxno=217503
 
-최예진 교수, 엔비디아 등에서 1500억 유치…'자기개선 AI' 개발
-https://www.aitimes.com/news/articleView.html?idxno=217481
+오픈AI, 아동 성착취물 탐지 AI 공개...챗GPT 경고·24시간 이용 정지 기능도 도입
+https://www.aitimes.com/news/articleView.html?idxno=217501
 
-오픈AI, 외부 전문가에 내부 모델·학습 데이터 개방...AI 안전성 독립 검증
-https://www.aitimes.com/news/articleView.html?idxno=217479
+WSJ "앨리스 황 남편, 중국 정부 지원받아 13조 규모 데이터센터 사업 추진"
+https://www.aitimes.com/news/articleView.html?idxno=217500
 
-스캐터랩, 청소년 보호 강화…애플 다운로드 중단 대응?
-https://www.aitimes.com/news/articleView.html?idxno=217477
+내시경에 AI 접목한 메디인테크, 338억원 시리즈C 투자 유치
+https://www.aitimes.com/news/articleView.html?idxno=217498
 
-캘리포니아주, 오픈AI 상대 소송..."AI 에이전트 통제 실패 80건 넘어"
-https://www.aitimes.com/news/articleView.html?idxno=217476
+스마일샤크, AWS와 스타트업 AI 세미나 개최…에이전트 적용 사례 공유
+https://www.aitimes.com/news/articleView.html?idxno=217494
 
-알트먼 "젠슨 황 없이도 AI 산업 괜찮을 것"...복귀 지지는 유보
-https://www.aitimes.com/news/articleView.html?idxno=217473
+구글, 보안 패치 분석·공격코드 생성 자동화한 AI 해킹 도구 발견
+https://www.aitimes.com/news/articleView.html?idxno=217493
 
-트럼프, 젠슨 황 CEO 복귀 지지…엔비디아 이사회는 논의 안 해
-https://www.aitimes.com/news/articleView.html?idxno=217468
+미 연준, AI가 바꿀 경제 대비한다…의장·이사 잇달아 영향 점검
+https://www.aitimes.com/news/articleView.html?idxno=217490
 
-미국, 중국의 해외 GPU 우회 이용 차단…새 수출 규제 발표
-https://www.aitimes.com/news/articleView.html?idxno=217467
+업스테이지·코히어 '소버린 AI 동맹'…한국 넘어 아태 기업 AI 시장 정조준
+https://www.aitimes.com/news/articleView.html?idxno=217489
 
-알리바바 '큐원4 맥스' 정식 출시…성능 높이고 작업 비용 67% 절감
-https://www.aitimes.com/news/articleView.html?idxno=217466
+오픈AI, 'AI 내부 분석' 굿파이어 50억달러 인수 검토…무산 후 안전성 평가 협력
+https://www.aitimes.com/news/articleView.html?idxno=217488
