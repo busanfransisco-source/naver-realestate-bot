@@ -1,5 +1,11 @@
 🤖 26년 11월 17일 화요일 AI 뉴스
 
+MS 글로벌 서비스 장애 원인은 4개월 전 버그...서버 80% 이상 마비
+https://www.aitimes.com/news/articleView.html?idxno=217485
+
+트럼프, 엔비디아 주식 최대 830억 보유 추정…중국 수출 허용에 이해충돌 논란
+https://www.aitimes.com/news/articleView.html?idxno=217483
+
 최예진 교수, 엔비디아 등에서 1500억 유치…'자기개선 AI' 개발
 https://www.aitimes.com/news/articleView.html?idxno=217481
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217465
 
 영상 생성 AI, 1년 만에 판도 역전…중국 모델이 상위권 장악
 https://www.aitimes.com/news/articleView.html?idxno=217463
-
-수주잔고 100배 폭증… 국내 AI 인프라 업계, 3분기 실적 '약진'
-https://www.aitimes.com/news/articleView.html?idxno=217462
-
-AI 가수 '자니아 모네', 첫 AI 음악상 4관왕…'AI판 그래미' 시동
-https://www.aitimes.com/news/articleView.html?idxno=217461
