@@ -1,5 +1,14 @@
 🤖 26년 11월 18일 수요일 AI 뉴스
 
+오픈AI, 세계 2위 성능 'GPT-6.2 아스트라' 출시...API 20% 인하
+https://www.aitimes.com/news/articleView.html?idxno=217513
+
+젠슨 황 "이사회가 원하면 CEO 복귀"…엔비디아는 검토 안 해
+https://www.aitimes.com/news/articleView.html?idxno=217512
+
+MS, 'MAI 코드 2' 출시…앤트로픽급 코딩 성능에 비용은 5%
+https://www.aitimes.com/news/articleView.html?idxno=217511
+
 애플, 건강 AI 연구용 앱 출시…미국서 20만명 모집
 https://www.aitimes.com/news/articleView.html?idxno=217504
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217497
 
 스마일샤크, AWS와 스타트업 AI 세미나 개최…에이전트 적용 사례 공유
 https://www.aitimes.com/news/articleView.html?idxno=217494
-
-구글, 보안 패치 분석·공격코드 생성 자동화한 AI 해킹 도구 발견
-https://www.aitimes.com/news/articleView.html?idxno=217493
-
-메타, AI로 코드 오류 사전 차단...개인정보 관련 심각한 버그 74건 발견
-https://www.aitimes.com/news/articleView.html?idxno=217492
-
-MS 오피스서 '코파일럿' 압도적 우위…'클로드' 사용자는 10분의 1
-https://www.aitimes.com/news/articleView.html?idxno=217491
