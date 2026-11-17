@@ -1,14 +1,26 @@
 {
-  "updated_at_kst": "2026-11-17 20:53:55",
+  "updated_at_kst": "2026-11-17 23:53:58",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 17일 화요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "서울 내 집 마련에 연봉 11.7년치…소득 5분의 1이 임대료",
+      "url": "https://n.news.naver.com/mnews/article/422/0000927171"
+    },
+    {
+      "title": "세입자 월소득의 17%가 ‘집세’",
+      "url": "https://n.news.naver.com/mnews/article/032/0003483327"
+    },
+    {
+      "title": "세입자 '소득 대비 임대료 부담' 8년 만에 최고",
+      "url": "https://n.news.naver.com/mnews/article/422/0000927150"
+    },
     {
       "title": "아파트 리모델링 동의율, 내년부터 75%서 70%로 완화",
       "url": "https://n.news.naver.com/mnews/article/032/0003483278"
     },
     {
-      "title": "[정준호의 부동산과 사회경제]전세의 월세화 확산…어떤 ‘임대차 질서’ 만들 것인가",
+      "title": "전세의 월세화 확산…어떤 ‘임대차 질서’ 만들 것인가[정준호의 부동산과 사회경제]",
       "url": "https://n.news.naver.com/mnews/article/032/0003483273"
     },
     {
@@ -30,18 +42,6 @@
     {
       "title": "부동산원, 가격공시·문서 작성에 AI 에이전트 도입",
       "url": "https://n.news.naver.com/mnews/article/014/0005605741"
-    },
-    {
-      "title": "초역세권에 착한 분양가… 3040세대 실수요자 발길",
-      "url": "https://n.news.naver.com/mnews/article/014/0005605740"
-    },
-    {
-      "title": "3기 신도시 속속 분양… 연말 남양주왕숙 주목",
-      "url": "https://n.news.naver.com/mnews/article/014/0005605739"
-    },
-    {
-      "title": "'영끌'해도 안해도 부담…흔들리는 2030 내 집 공식",
-      "url": "https://n.news.naver.com/mnews/article/014/0005605738"
     }
   ]
 }
