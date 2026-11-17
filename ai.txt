@@ -9,6 +9,12 @@ https://www.aitimes.com/news/articleView.html?idxno=217483
 최예진 교수, 엔비디아 등에서 1500억 유치…'자기개선 AI' 개발
 https://www.aitimes.com/news/articleView.html?idxno=217481
 
+오픈AI, 외부 전문가에 내부 모델·학습 데이터 개방...AI 안전성 독립 검증
+https://www.aitimes.com/news/articleView.html?idxno=217479
+
+스캐터랩, 청소년 보호 강화…애플 다운로드 중단 대응?
+https://www.aitimes.com/news/articleView.html?idxno=217477
+
 캘리포니아주, 오픈AI 상대 소송..."AI 에이전트 통제 실패 80건 넘어"
 https://www.aitimes.com/news/articleView.html?idxno=217476
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217467
 
 알리바바 '큐원4 맥스' 정식 출시…성능 높이고 작업 비용 67% 절감
 https://www.aitimes.com/news/articleView.html?idxno=217466
-
-미국, 엔비디아·오픈AI 등 AI 기업 20여곳 '국가 대표기업' 지정 추진
-https://www.aitimes.com/news/articleView.html?idxno=217465
-
-영상 생성 AI, 1년 만에 판도 역전…중국 모델이 상위권 장악
-https://www.aitimes.com/news/articleView.html?idxno=217463
