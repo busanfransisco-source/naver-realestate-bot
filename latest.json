@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-11-17 12:15:32",
+  "updated_at_kst": "2026-11-17 12:19:42",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 17일 화요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "공동주택 리모델링 동의율 75→70% …사업 추진 속도↑",
+      "url": "https://n.news.naver.com/mnews/article/374/0000544211"
+    },
     {
       "title": "아파트 리모델링 주민 동의율 75%→70%로 낮춘다",
       "url": "https://n.news.naver.com/mnews/article/088/0001040728"
@@ -38,10 +42,6 @@
     {
       "title": "국내 10가구 중 4가구 \"소득 대비 집값 비싸다\"",
       "url": "https://n.news.naver.com/mnews/article/003/0014326993"
-    },
-    {
-      "title": "1억엔 넘은 일본 맨션값…日정부, 단기 전매에 최대 52% 과세 추진",
-      "url": "https://n.news.naver.com/mnews/article/003/0014326959"
     }
   ]
 }

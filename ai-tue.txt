@@ -1,5 +1,8 @@
 🤖 26년 11월 17일 화요일 AI 뉴스
 
+알트먼 "젠슨 황 없이도 AI 산업 괜찮을 것"...복귀 지지는 유보
+https://www.aitimes.com/news/articleView.html?idxno=217473
+
 트럼프, 젠슨 황 CEO 복귀 지지…엔비디아 이사회는 논의 안 해
 https://www.aitimes.com/news/articleView.html?idxno=217468
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217460
 
 전력난·주민 반발에 AI 데이터센터 바다로…파력 발전까지 추진
 https://www.aitimes.com/news/articleView.html?idxno=217459
-
-"챗GPT에 SNS 데이터 연동"...뉴엔AI, 소셜 분석 MCP 출시
-https://www.aitimes.com/news/articleView.html?idxno=217458
