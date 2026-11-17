@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-11-17 13:05:16",
+  "updated_at_kst": "2026-11-17 13:12:34",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 17일 화요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "국토연, 지역별 '국토건강지수' 공개…23일 정책 세미나",
+      "url": "https://n.news.naver.com/mnews/article/014/0005605464"
+    },
+    {
+      "title": "오세훈 \"재초환, 전면 재검토 해야…집값 상승 가능성 우려\"",
+      "url": "https://n.news.naver.com/mnews/article/421/0009293590"
+    },
     {
       "title": "오세훈 \"재초환 전면 재검토해야...제2의 종부세 논란 우려\"",
       "url": "https://n.news.naver.com/mnews/article/215/0001273005"
@@ -34,14 +42,6 @@
     {
       "title": "아파트 리모델링 주민 동의율 75%→70%로 낮춘다",
       "url": "https://n.news.naver.com/mnews/article/088/0001040728"
-    },
-    {
-      "title": "리모델링 주민 동의율 75%→70%…내년 1월부터 완화",
-      "url": "https://n.news.naver.com/mnews/article/421/0009293530"
-    },
-    {
-      "title": "국토부에 '공항안전관리단' 신설…항공교통관제, 항공교통본부로 일원화",
-      "url": "https://n.news.naver.com/mnews/article/421/0009293528"
     }
   ]
 }
