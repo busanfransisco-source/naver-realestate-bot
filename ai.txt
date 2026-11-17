@@ -1,5 +1,11 @@
 🤖 26년 11월 17일 화요일 AI 뉴스
 
+최예진 교수, 엔비디아 등에서 1500억 유치…'자기개선 AI' 개발
+https://www.aitimes.com/news/articleView.html?idxno=217481
+
+캘리포니아주, 오픈AI 상대 소송..."AI 에이전트 통제 실패 80건 넘어"
+https://www.aitimes.com/news/articleView.html?idxno=217476
+
 알트먼 "젠슨 황 없이도 AI 산업 괜찮을 것"...복귀 지지는 유보
 https://www.aitimes.com/news/articleView.html?idxno=217473
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217462
 
 AI 가수 '자니아 모네', 첫 AI 음악상 4관왕…'AI판 그래미' 시동
 https://www.aitimes.com/news/articleView.html?idxno=217461
-
-배우 없이 만든 중국 첫 AI 영화, 흥행 참패…3주간 3.6억원
-https://www.aitimes.com/news/articleView.html?idxno=217460
-
-전력난·주민 반발에 AI 데이터센터 바다로…파력 발전까지 추진
-https://www.aitimes.com/news/articleView.html?idxno=217459
