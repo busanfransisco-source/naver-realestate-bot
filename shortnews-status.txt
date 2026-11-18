@@ -1,1 +1,1 @@
-{"attemptedAtKst": "2026-11-19T06:00:59.764426+09:00", "status": "ok", "issues": []}
+{"attemptedAtKst": "2026-11-19T06:12:35.108395+09:00", "status": "failed", "issues": ["quicknews: insufficient news coverage", "quicknews: no valid news articles"], "preservedSha256": "325051a685a7141c164970fc185b47778f538fce462e7eca4e7a32cfb950a278"}
