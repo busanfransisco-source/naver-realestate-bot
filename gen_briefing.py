@@ -41,6 +41,9 @@ def has_fetch_failure(content):
 
 def read_section_text(prefix, weekday, now=None):
     """실패 문구를 발행하지 않고, 직전 정상 파일이 있으면 그대로 유지한다."""
+    if prefix == 'shortnews':
+        from quicknews_state import load_report
+        return load_report(now=now)
     if prefix == 'weather':
         from weather_fetch import load_report
         return load_report(now)

@@ -130,12 +130,14 @@ def inspect(page, now=None):
             if text.startswith(DELAY_NOTICE):
                 issues.append('weather: latest collection failed; same-day forecast retained')
         if key == 'shortnews':
-            from quicknews_sources import source_issues
+            from quicknews_state import body_issues, NOTICE, EMPTY
             from kospi_quote import indicator_issues
-            issues.extend(source_issues(text) + indicator_issues(text, now=now))
-            from daum_news_fetch import polite_news_body
-            if not polite_news_body(text):
-                issues.append('quick news explanations must use polite endings')
+            original = text.removeprefix(NOTICE + '\n')
+            issues.extend(body_issues(original))
+            if text.startswith(NOTICE) or text == EMPTY:
+                issues.append('quicknews: latest collection failed; original source date retained')
+            if original != EMPTY:
+                issues.extend(indicator_issues(original, now=now))
         if key in ('books',) and len(re.findall(r'^\d+\.', text, re.M)) < 10:
             issues.append('top 10 incomplete')
         if key == 'books':

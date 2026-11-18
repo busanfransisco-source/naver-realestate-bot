@@ -25,6 +25,7 @@ jobs:
       publication: ${{ steps.stage.outputs.publication }}
       ready: ${{ steps.stage.outputs.ready }}
       weather_status: ${{ steps.stage.outputs.weather_status }}
+      quicknews_status: ${{ steps.stage.outputs.quicknews_status }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -82,6 +83,11 @@ jobs:
           if weather_status:
               target = Path('tmp/weather-status'); target.mkdir(parents=True, exist_ok=True)
               shutil.copyfile(weather_file, target/'weather-status.txt')
+          quicknews_file = Path('shortnews-status.txt')
+          quicknews_status = quicknews_file.exists() and bool(subprocess.check_output(['git', 'status', '--porcelain', '--', str(quicknews_file)], text=True).strip())
+          if quicknews_status:
+              target = Path('tmp/quicknews-status'); target.mkdir(parents=True, exist_ok=True)
+              shutil.copyfile(quicknews_file, target/'shortnews-status.txt')
           if publication:
               source = json.loads(Path('morning-website-sources.json').read_text(encoding='utf-8'))
               boxes = validate_publication(source, datetime.now(KST))
@@ -93,6 +99,7 @@ jobs:
                   validate_snapshot(json.loads(Path('morning-briefing-ready.json').read_text(encoding='utf-8')), datetime.now(KST))
                   shutil.copyfile('morning-briefing-ready.json', target/'morning-briefing-ready.json')
           with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write('quicknews_status='+str(quicknews_status).lower()+'\n')
               output.write('publication='+str(publication).lower()+'\nready='+str(ready).lower()+'\n')
           PY
       - name: Save validated publication bundle
@@ -110,6 +117,13 @@ jobs:
           name: morning-weather-status
           path: tmp/weather-status/weather-status.txt
           if-no-files-found: error
+          retention-days: 1
+      - name: Save quicknews attempt state for publication
+        if: always() && steps.stage.outputs.quicknews_status == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: morning-quicknews-status
+          path: tmp/quicknews-status/shortnews-status.txt
           retention-days: 1
       - name: Save preparation diagnostics
         if: always() && steps.window.outputs.eligible == 'true'
@@ -139,7 +153,7 @@ jobs:
           PY
   publish:
     needs: collect
-    if: always() && (needs.collect.outputs.publication == 'true' || needs.collect.outputs.weather_status == 'true')
+    if: always() && (needs.collect.outputs.publication == 'true' || needs.collect.outputs.weather_status == 'true' || needs.collect.outputs.quicknews_status == 'true')
     runs-on: ubuntu-latest
     timeout-minutes: 5
     # Only publication shares the existing writer lock, not source collection.
@@ -164,6 +178,11 @@ jobs:
         with:
           name: morning-weather-status
           path: tmp/morning-weather-status
+      - uses: actions/download-artifact@v4
+        if: needs.collect.outputs.quicknews_status == 'true'
+        with:
+          name: morning-quicknews-status
+          path: tmp/morning-quicknews-status
       - name: Apply verified bundle to latest sources and publish website
         id: apply
         env:
@@ -178,6 +197,7 @@ jobs:
           from pathlib import Path
           from morning_source_publication import apply_collection
           from weather_fetch import merge_status
+          from quicknews_state import merge_status as merge_quicknews_status
           result = dict(readyApplied=False)
           if os.environ['MORNING_PUBLICATION'] == 'true':
               root = Path('tmp/morning-ready-source')
@@ -185,11 +205,12 @@ jobs:
               result = apply_collection(root/'morning-website-sources.json', trend if trend.exists() else None,
                                         root/'morning-briefing-ready.json' if os.environ['MORNING_READY']=='true' else None)
           merge_status(Path('tmp/morning-weather-status/weather-status.txt'))
+          merge_quicknews_status(Path('tmp/morning-quicknews-status/shortnews-status.txt'))
           with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
               output.write('ready_applied='+str(result['readyApplied']).lower()+'\n')
           print('Morning publication application:', result)
           PY
-          if [ "$MORNING_PUBLICATION" = "true" ] || ! git diff --quiet -- weather-status.txt; then
+          if [ "$MORNING_PUBLICATION" = "true" ] || [ -n "$(git status --porcelain -- weather-status.txt shortnews-status.txt)" ]; then
             python gen_briefing.py
           fi
           git add morning-website-sources.json morning-briefing-ready.json neonet-trend-cache.json briefing.html
