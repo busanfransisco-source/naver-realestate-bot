@@ -1,1 +1,1 @@
-{"forecastDate": "2026-11-18", "attemptedAtKst": "2026-11-18T11:39:44+09:00", "status": "failed", "errorType": "ReadTimeout", "failedAtKst": "2026-11-18T11:40:14+09:00"}
+{"forecastDate": "2026-11-18", "attemptedAtKst": "2026-11-18T11:53:25+09:00", "status": "ok"}

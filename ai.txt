@@ -1,8 +1,5 @@
 🤖 26년 11월 18일 수요일 AI 뉴스
 
-오픈AI, 세계 2위 성능 'GPT-6.2 아스트라' 출시...API 20% 인하
-https://www.aitimes.com/news/articleView.html?idxno=217513
-
 젠슨 황 "이사회가 원하면 CEO 복귀"…엔비디아는 검토 안 해
 https://www.aitimes.com/news/articleView.html?idxno=217512
 
@@ -21,11 +18,14 @@ https://www.aitimes.com/news/articleView.html?idxno=217501
 WSJ "앨리스 황 남편, 중국 정부 지원받아 13조 데이터센터 사업 추진"
 https://www.aitimes.com/news/articleView.html?idxno=217500
 
-내시경에 AI 접목한 메디인테크, 338억원 시리즈C 투자 유치
-https://www.aitimes.com/news/articleView.html?idxno=217498
-
 중국, 미국 AI ‘증류’ 산업화…자동 수집에 전문 인력까지 투입
 https://www.aitimes.com/news/articleView.html?idxno=217497
 
 스마일샤크, AWS와 스타트업 AI 세미나 개최…에이전트 적용 사례 공유
 https://www.aitimes.com/news/articleView.html?idxno=217494
+
+구글, 보안 패치 분석·공격코드 생성 자동화한 AI 해킹 도구 발견
+https://www.aitimes.com/news/articleView.html?idxno=217493
+
+메타, AI로 코드 오류 사전 차단...개인정보 관련 심각한 버그 74건 발견
+https://www.aitimes.com/news/articleView.html?idxno=217492

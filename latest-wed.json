@@ -1,14 +1,18 @@
 {
-  "updated_at_kst": "2026-11-18 11:41:38",
+  "updated_at_kst": "2026-11-18 11:53:27",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 18일 수요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "오세훈 \"국가유산청이 세운4구역 막으려 시행령 바꿔…행정농단\"",
+      "url": "https://n.news.naver.com/mnews/article/001/0016448810"
+    },
     {
       "title": "서울시, 개봉동·목2동·수유동·하월곡동에 모아타운 조성… 6319가구 공급",
       "url": "https://n.news.naver.com/mnews/article/366/0001205634"
     },
     {
-      "title": "이혜훈 ‘40억 로또’ 원펜타스, 계약 취소 수순…국토부, 조합에 계약 취소 요청",
+      "title": "이혜훈 ‘40억 로또’ 반포 아파트 날아갈 판…국토부, 조합에 계약 취소 요청",
       "url": "https://n.news.naver.com/mnews/article/032/0003483406"
     },
     {
@@ -38,10 +42,6 @@
     {
       "title": "효성중공업 ‘해링턴 플레이스 문래’ 20일 견본주택 개관",
       "url": "https://n.news.naver.com/mnews/article/016/0002725075"
-    },
-    {
-      "title": "대우건설, 이라크 신항만 침매터널 준공",
-      "url": "https://n.news.naver.com/mnews/article/277/0005844361"
     }
   ]
 }
