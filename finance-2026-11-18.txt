@@ -1,5 +1,26 @@
 🏦 26년 11월 18일 수요일 금융 뉴스
 
+기업은행, ‘IBK창공 데모데이’ 개최…엔비디아·SKT와 스타트업 협력 모색
+https://n.news.naver.com/mnews/article/119/0003156658
+
+KDI, 내년 3.9% 성장 전망…반도체 쏠림 경계
+https://n.news.naver.com/mnews/article/029/0003059840
+
+기업은행, 캐릭터 ‘기은센과 친구들’ 10여 년 만에 새 단장…3D 캐릭터로 변신
+https://n.news.naver.com/mnews/article/119/0003156654
+
+네이버페이, 기보·코드박스와 유망 기술기업 투자유치 지원
+https://n.news.naver.com/mnews/article/030/0003487018
+
+“결혼해야 한다” 55%…미혼여성은 29.9%만 동의
+https://n.news.naver.com/mnews/article/029/0003059837
+
+카카오뱅크, 금융 AI 논문 2편 국제 학술대회 채택
+https://n.news.naver.com/mnews/article/030/0003487017
+
+로그인 없이 기업 서버 뚫는다…자바 취약점 공격 시연까지
+https://n.news.naver.com/mnews/article/421/0009296022
+
 케이뱅크, 앱테크 '만보기' 서비스 출시
 https://n.news.naver.com/mnews/article/030/0003487016
 
@@ -8,24 +29,3 @@ https://n.news.naver.com/mnews/article/119/0003156639
 
 NHN KCP, AI 에이전트 스테이블코인 결제·정산 검증
 https://n.news.naver.com/mnews/article/030/0003487015
-
-전동킥보드로 들이받고 합의금 요구…교묘해진 자동차보험사기
-https://n.news.naver.com/mnews/article/119/0003156636
-
-전동킥보드로 고의사고 80여 차례…자동차보험사기 주의보
-https://n.news.naver.com/mnews/article/018/0006411753
-
-“합의부터 하지 마세요” 금감원, ‘자동차 보험사기’ 대응요령 발표
-https://n.news.naver.com/mnews/article/028/0002832755
-
-가계빚 2030조원 또 역대 최대…'빚투' 꺾여 증가폭은 1년 반 만에 최소
-https://n.news.naver.com/mnews/article/421/0009296015
-
-'빚투' 빠지자 가계빚 증가 6분기 만에 최소…카드 외상은 5조 급증
-https://n.news.naver.com/mnews/article/030/0003487014
-
-증시 한파에 '빚투·영끌' 주춤… 3분기 가계빚 증가폭 6개 분기만에 최소 기록
-https://n.news.naver.com/mnews/article/015/0005355228
-
-3분기 가계부채 9.8조 ↑⋯주택 거래 감소에 증가세 둔화
-https://n.news.naver.com/mnews/article/031/0001076116
