@@ -138,6 +138,7 @@ class RetentionTests(unittest.TestCase):
             def fail(*args,**kwargs): raise subprocess.TimeoutExpired(args[0],180)
             report=cloud.prepare(root,root/'ready.json',root/'report.json',collect=True,now=now,runner=fail,retry_delays=())
             publication=root/'morning-website-sources.json'
+            (target/'shortnews.txt').write_text(body)
             applied=apply_collection(publication,snapshot_path=root/'ready.json',root=target,now=now)
             self.assertTrue(applied['websiteApplied'])
             self.assertTrue(applied['readyApplied'])
@@ -156,5 +157,15 @@ class RetentionTests(unittest.TestCase):
             self.assertEqual(bodies[2],artifact['boxes'][0]['body'])
             self.assertEqual(bodies[2].count(cloud.RETAINED_NEWS_NOTICE),1)
             self.assertNotIn(NOTICE,bodies[2])
+            # A later retained artifact must not clobber a new collector's body,
+            # even when the new collector did not update the morning artifact.
+            newer = body.replace('소식을 확인했습니다.', '소식을 다시 확인했습니다.')
+            (target/'shortnews.txt').write_text(newer)
+            (target/'morning-briefing-ready.json').unlink()
+            (target/'morning-website-sources.json').unlink()
+            with self.assertRaisesRegex(ValueError, 'changed since collection'):
+                apply_collection(publication,snapshot_path=root/'ready.json',root=target,now=now)
+            self.assertEqual((target/'shortnews.txt').read_text(),newer)
+            self.assertFalse((target/'morning-briefing-ready.json').exists())
 
 if __name__ == '__main__': unittest.main()
