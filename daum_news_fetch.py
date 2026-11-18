@@ -7,8 +7,8 @@
 3. 오늘의 명언(quotes.txt에서 날짜 기준 순환) + 주요 경제 지표를 붙임
 4. shortnews-{요일}.txt / shortnews.txt 로 저장 (커밋은 워크플로우가 처리)
 
-어떤 단계가 실패해도 스크립트는 절대 죽지 않고, 모을 수 있는 것만 모아서
-반드시 결과 파일을 만든다.
+검증된 뉴스가 부족하면 기존 원고와 기준일을 보존하고 실패 상태를 기록한다.
+완성된 후보만 원고로 교체하며 실패는 비정상 종료로 알린다.
 """
 
 import re
@@ -459,11 +459,12 @@ def main():
 
     content = "\n".join(lines).strip() + "\n"
 
-    for fname in ("shortnews.txt", f"shortnews-{weekday_en}.txt"):
-        with open(fname, "w", encoding="utf-8") as f:
-            f.write(content)
-
-    print(f"shortnews 생성 완료: 뉴스 {len(news_items)}건, 지표 {len(indicators)}개")
+    from quicknews_state import commit_candidate
+    accepted = commit_candidate(content, now)
+    print(f"shortnews candidate: news {len(news_items)}, indicators {len(indicators)}, accepted {accepted}")
+    if not accepted:
+        print("QUICKNEWS_COLLECTION_FAILED: previous files and source dates preserved")
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":

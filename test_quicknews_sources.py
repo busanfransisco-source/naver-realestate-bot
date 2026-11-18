@@ -57,10 +57,10 @@ class SourceTests(TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             before = os.getcwd(); os.chdir(tmp)
             try:
-                with patch.object(news, 'collect_news', return_value=[('🔥', '톱뉴스', SUMMARY, URL)]), patch.object(news, 'todays_quote', return_value=None), patch.object(news, 'get_indicators', return_value=[]):
+                with patch.object(news, 'collect_news', return_value=[('🔥', label, SUMMARY, URL+str(i)) for i,label in enumerate(['정치','경제','사회','국제']*2)]), patch.object(news, 'todays_quote', return_value=None), patch.object(news, 'get_indicators', return_value=[]):
                     news.main()
                 body = Path('shortnews.txt').read_text()
-                self.assertIn(SUMMARY+'\n'+URL+'\n', body)
+                self.assertIn(SUMMARY+'\n'+URL+'0\n', body)
                 self.assertNotIn('원문:', body)
                 self.assertNotIn('광고', body)
             finally:
