@@ -29,6 +29,8 @@ GROUPS = (
     ('market', 'market_fetch.py', ('fuelfx', 'metalcoin', 'books')),
     ('realestate', 'naver_realestate_fetch.py', ('realestate',)),
 )
+RETAINED_NEWS_NOTICE = '[이번 갱신은 완료되지 않아 오늘 먼저 확보한 기사를 전합니다.]'
+
 CACHE_FILES = {
     'trend': ('neonet-trend-cache.json',),
     'fuelfx': ('fuel-cache.json', 'fx-cache.json'),
@@ -201,15 +203,35 @@ def _run_group(root, group, now, absolute_deadline, runner, fixed_clock=False):
             changed = _mtime(path) is not None and _mtime(path) != before[key]
             issues = source_issues(key, bodies[BOX_KEYS.index(key)], evidence, checked_now)
             retained_weekly = key == 'books' and not changed and not issues
+            retained_daily = False
+            if key == 'shortnews' and not changed and not issues:
+                from quicknews_state import body_issues
+                from quicknews_sources import URL
+                from daum_news_fetch import recent_article
+                body = bodies[BOX_KEYS.index(key)]
+                links = [line for line in body.splitlines() if URL.fullmatch(line)]
+                def valid_article_clock(url):
+                    stamp = re.fullmatch(r'https://v\.daum\.net/v/(20\d{12})\d{1,6}', url)
+                    if not stamp:
+                        return False
+                    try:
+                        article_time = datetime.strptime(stamp[1], '%Y%m%d%H%M%S').replace(tzinfo=KST)
+                        return article_time <= checked_now and recent_article(url, checked_now)
+                    except ValueError:
+                        return False
+                retained_daily = (not body_issues(body) and bool(links)
+                                  and len(set(links)) == len(links)
+                                  and all(valid_article_clock(url) for url in links))
             box_reason = (reason if reason == 'weather_retry_cooldown' else
                           'source_validation_failed' if issues else
                           (reason or 'collector_did_not_refresh_required_source')
-                          if not changed and not retained_weekly else None)
+                          if not changed and not (retained_weekly or retained_daily) else None)
             if box_reason:
                 paths = _paths(root, (name, script, (key,)), now)
                 _restore({path: data for path, data in saved.items() if path in paths})
             boxes.append(dict(key=key, status='failed' if box_reason else
-                              'retained_weekly' if retained_weekly else 'ok',
+                              'retained_weekly' if retained_weekly else
+                              'retained_daily' if retained_daily else 'ok',
                               reason=box_reason, issueCount=len(issues)))
     except Exception:
         _restore(saved)
@@ -219,7 +241,11 @@ def _run_group(root, group, now, absolute_deadline, runner, fixed_clock=False):
     reason = (reason or failed[0]['reason']) if failed else None
     issue_count = sum(box['issueCount'] for box in failed)
     successful = any(box['status'] != 'failed' for box in boxes)
-    return dict(group=name, status=('partial' if successful else 'failed') if reason else 'ok',
+    retained_news = any(box['status'] == 'retained_daily' for box in boxes)
+    if retained_news and not reason:
+        reason = process_reason or 'collector_did_not_refresh_required_source'
+    return dict(group=name, status=('retained' if retained_news and not failed else
+                                  ('partial' if successful else 'failed')) if reason else 'ok',
                 reason=reason, processReason=process_reason, issueCount=issue_count, boxes=boxes)
 
 
@@ -301,8 +327,15 @@ def prepare(root, output, report, *, collect=False, now=None, runner=None,
                        mode='collect' if collect else 'export-only', groups=groups,
                        status='failed', snapshotWritten=False, websiteWritten=False)
     bodies, evidence = read_sources(root, finished)
-    # Every source is independent. Daily failures must not silently reuse a
-    # restored file; YES24 alone retains its approved today/yesterday exception.
+    # Keep the same-day, fully revalidated news body visibly distinct from a
+    # fresh collection. Other daily failures still omit their slot.
+    retained = [box['key'] for group in groups for box in group['boxes']
+                if box['status'] == 'retained_daily']
+    for key in retained:
+        index = BOX_KEYS.index(key)
+        if RETAINED_NEWS_NOTICE not in bodies[index]:
+            bodies[index] += '\n\n' + RETAINED_NEWS_NOTICE
+    diagnostics['retainedKeys'] = retained
     eligible_keys = ([box['key'] for group in groups for box in group['boxes']
                       if box['status'] != 'failed'] if collect else list(BOX_KEYS))
     from morning_source_publication import build_publication, source_issues
@@ -319,7 +352,7 @@ def prepare(root, output, report, *, collect=False, now=None, runner=None,
     diagnostics['omittedKeys'] = omitted
     diagnostics['hadErrors'] = any(attempt.get('reason') or attempt.get('processReason')
                                   for group in groups for attempt in group.get('attemptHistory', [group]))
-    diagnostics['sourceHealth'] = 'degraded' if omitted else 'recovered' if diagnostics['hadErrors'] else 'ok'
+    diagnostics['sourceHealth'] = 'degraded' if omitted or retained else 'recovered' if diagnostics['hadErrors'] else 'ok'
     try:
         publication = build_publication(bodies, finished, evidence=evidence, eligible_keys=eligible_keys)
         atomic_json(output.with_name('morning-website-sources.json'), publication)

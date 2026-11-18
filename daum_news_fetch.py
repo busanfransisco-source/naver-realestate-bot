@@ -12,6 +12,8 @@
 """
 
 import re
+from collections import Counter
+from concurrent.futures import ThreadPoolExecutor
 import sys
 import time
 from difflib import SequenceMatcher
@@ -46,9 +48,31 @@ WEATHER_KEYWORDS = re.compile(r"폭염|한파|장마|태풍|폭우|폭설|호우
 ARTICLE_LINK_RE = re.compile(r"https://v\.daum\.net/v/\d+")
 
 
+# One bounded CLI collection budget, below the parent's 180-second limit.
+DEADLINE = None
+DIAGNOSTICS = Counter()
+
+
+class CollectionBudgetExpired(TimeoutError):
+    pass
+
+
 def get(url, timeout=12):
-    resp = requests.get(url, headers=HEADERS, timeout=timeout)
-    resp.raise_for_status()
+    if DEADLINE is not None:
+        remaining = DEADLINE - time.monotonic()
+        if remaining <= 0:
+            raise CollectionBudgetExpired()
+        timeout = min(timeout, remaining)
+    try:
+        resp = requests.get(url, headers=HEADERS, timeout=timeout)
+        resp.raise_for_status()
+    except requests.HTTPError as exc:
+        code = getattr(exc.response, 'status_code', None)
+        DIAGNOSTICS['http_' + str(code)] += 1
+        raise
+    except requests.RequestException as exc:
+        DIAGNOSTICS[type(exc).__name__] += 1
+        raise
     # 섹션 페이지의 text/html 응답에는 charset이 없는 경우가 있다.
     # requests의 기본 ISO-8859-1 해석으로 한글 제목이 깨지지 않게 한다.
     if urlparse(url).hostname in {"news.daum.net", "v.daum.net"}:
@@ -278,6 +302,29 @@ def duplicate_summary(summary, accepted):
     return False
 
 
+def candidate_summaries(candidates):
+    """Fetch at most four articles together; parse in source order on one thread.
+
+    Text ranking, Kiwi conversion and duplicate filtering remain deterministic.
+    No unbounded request queue and no article URL or response enters logs.
+    """
+    def fetch(candidate):
+        try:
+            return get(candidate[1]).text
+        except Exception:
+            return ''
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        for start in range(0, len(candidates), 4):
+            if DEADLINE is not None and time.monotonic() >= DEADLINE:
+                break
+            batch = candidates[start:start+4]
+            for (title, href), html in zip(batch, pool.map(fetch, batch)):
+                summary = polite_summary(summary_from_html(html)) if html else ''
+                if not summary:
+                    DIAGNOSTICS['empty_or_rejected_lead'] += 1
+                yield title, href, summary
+
+
 def collect_news():
     """섹션별 뉴스 아이템 수집. 반환: [(이모지, 라벨, 요약, 관측한 원문 URL)]"""
     items = []
@@ -317,36 +364,26 @@ def collect_news():
     weather_item = None
 
     for slugs, label, emoji, want in SECTIONS:
-        candidates = section_articles(slugs, want)
+        candidates = [(title, href) for title, href in section_articles(slugs, want)
+                      if href not in used and not OPINION_RE.search(title)]
         count = 0
-        for title, href in candidates:
-            if href in used:
+        for title, href, summary in candidate_summaries(candidates):
+            if not summary:
                 continue
-            if OPINION_RE.search(title):
-                continue
-            # 사회 섹션에서 날씨 기사는 따로 빼서 마지막 (날씨) 항목으로
             if label == "사회" and weather_item is None and WEATHER_KEYWORDS.search(title):
-                try:
-                    summary = article_summary(href)
-                    if not summary or duplicate_summary(summary, items):
-                        continue
+                if not duplicate_summary(summary, items):
                     weather_item = ("☀️", "날씨", summary, href)
                     used.add(href)
-                    continue
-                except Exception:
-                    pass
-            if count >= want:
                 continue
-            try:
-                summary = article_summary(href)
-            except Exception:
-                summary = ""
-            if not summary or duplicate_summary(summary, items + ([weather_item] if weather_item else [])):
+            if count >= want:
+                if label != "사회" or weather_item is not None:
+                    break
+                continue
+            if duplicate_summary(summary, items + ([weather_item] if weather_item else [])):
                 continue
             items.append((emoji, label, summary, href))
             used.add(href)
             count += 1
-            time.sleep(0.2)
 
     if weather_item:
         items.append(weather_item)
@@ -418,6 +455,9 @@ def get_indicators(now=None):
 
 
 def main():
+    global DEADLINE
+    DEADLINE = time.monotonic() + 150
+    DIAGNOSTICS.clear()
     now = datetime.now(KST)
     weekday_en = WEEKDAY_EN[now.weekday()]
     weekday_kr = WEEKDAY_KR[now.weekday()]
@@ -461,6 +501,7 @@ def main():
 
     from quicknews_state import commit_candidate
     accepted = commit_candidate(content, now)
+    print("quicknews diagnostics:", dict(DIAGNOSTICS), "budget_exhausted", time.monotonic() >= DEADLINE)
     print(f"shortnews candidate: news {len(news_items)}, indicators {len(indicators)}, accepted {accepted}")
     if not accepted:
         print("QUICKNEWS_COLLECTION_FAILED: previous files and source dates preserved")
