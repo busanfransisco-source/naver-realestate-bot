@@ -1,31 +1,31 @@
 🤖 26년 11월 18일 수요일 AI 뉴스
 
+퍼플렉시티, AI 에이전트 16개가 협업·상호 검증하는 기능 출시
+https://www.aitimes.com/news/articleView.html?idxno=217543
+
+중국 AI 기업들, 수출 규제 앞두고 모델의 사이버 공격 능력 축소
+https://www.aitimes.com/news/articleView.html?idxno=217541
+
+몬드리안AI, 서울대 공대에 프라이빗 AI 클라우드 플랫폼 공급...기존 시스템 윈백
+https://www.aitimes.com/news/articleView.html?idxno=217539
+
+미국 30여개 주, '캐릭터닷AI' 매각 심사 강화 요구…아동 대화 기록 쟁점
+https://www.aitimes.com/news/articleView.html?idxno=217538
+
+리퀴드 AI, 의사결정 모델 'd1.2' 출시…AA 평가 1위
+https://www.aitimes.com/news/articleView.html?idxno=217536
+
+초록소프트, 한국이엔씨와 AI 스마트팜 맞손...클린룸 기술에 AI 더해
+https://www.aitimes.com/news/articleView.html?idxno=217535
+
+사람처럼 손 쓰는 로봇 개발에 6600억 투자…제네시스 AI 기업가치 4.6조
+https://www.aitimes.com/news/articleView.html?idxno=217534
+
+엔비디아, 삼성전기·앰코 등 글로벌 공급망 파트너 협력 확대
+https://www.aitimes.com/news/articleView.html?idxno=217533
+
 MS, '코파일럿'에 상시 업무 수행 AI 도입…기업용 에이전트 관리도 강화
 https://www.aitimes.com/news/articleView.html?idxno=217532
 
-앤트로픽, IPO 공모가 80달러 이상으로 인상 검토…기관투자자 수요 몰려
-https://www.aitimes.com/news/articleView.html?idxno=217526
-
-미 SEC, 젠슨 황 사임 후 엔비디아 조사…투자자 공시 위반 여부 확인
-https://www.aitimes.com/news/articleView.html?idxno=217522
-
-중국, 미국 반도체 원격 접근 규제에 반발…“강행하면 보복 조치”
-https://www.aitimes.com/news/articleView.html?idxno=217521
-
-젠슨 황 딸, 메가스피드 의혹 대응 관여…엔비디아 가족 경영 논란
-https://www.aitimes.com/news/articleView.html?idxno=217518
-
-엔비디아 이사회, 젠슨 황 CEO 복귀 거부...후임자 물색 본격화
-https://www.aitimes.com/news/articleView.html?idxno=217517
-
-오픈AI, 세계 2위 성능 'GPT-6.2 아스트라' 출시...API 20% 인하
-https://www.aitimes.com/news/articleView.html?idxno=217513
-
-젠슨 황 "이사회가 원하면 CEO 복귀"…엔비디아는 검토 안 해
-https://www.aitimes.com/news/articleView.html?idxno=217512
-
-MS, 'MAI 코드 2' 출시…앤트로픽급 코딩 성능에 비용은 5%
-https://www.aitimes.com/news/articleView.html?idxno=217511
-
-애플, 건강 AI 연구용 앱 출시…미국서 20만명 모집
-https://www.aitimes.com/news/articleView.html?idxno=217504
+오픈AI, NATO에 사이버 보안 AI 공급…유럽 정부·기관으로 사업 확대
+https://www.aitimes.com/news/articleView.html?idxno=217529
