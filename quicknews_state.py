@@ -8,6 +8,7 @@ from pathlib import Path
 KST = timezone(timedelta(hours=9))
 STATUS = 'shortnews-status.txt'
 NOTICE = '[퀵뉴스 갱신 실패: 아래 원고는 표시된 원래 날짜의 자료입니다.]'
+RETAINED_NEWS_NOTICE = '[이번 갱신은 완료되지 않아 오늘 먼저 확보한 기사를 전합니다.]'
 EMPTY = '[퀵뉴스 수집 실패: 검증된 원고가 없습니다.]'
 ROWS = re.compile(r'^\S+ \((톱뉴스|정치|경제|사회|국제|날씨)\) (.+)$', re.M)
 
@@ -40,7 +41,7 @@ def atomic_text(path, text):
     tmp.replace(path)
 
 
-def commit_candidate(body, now, root=Path('.')):
+def commit_candidate(body, now, root=Path('.'), *, diagnostic_counts=None, budget_exhausted=False):
     root = Path(root)
     issues = body_issues(body)
     stamp = re.match(r'(\d{2,4})년 (\d{1,2})월 (\d{1,2})일', body)
@@ -52,6 +53,15 @@ def commit_candidate(body, now, root=Path('.')):
         except ValueError:
             issues.append('quicknews: invalid date')
     status = dict(attemptedAtKst=now.isoformat(), status='failed' if issues else 'ok', issues=issues)
+    if diagnostic_counts is not None:
+        allowed = {'Timeout', 'ConnectTimeout', 'ReadTimeout', 'ConnectionError',
+                   'SSLError', 'TooManyRedirects', 'RequestException',
+                   'empty_or_rejected_lead', 'article_parse_error'}
+        status['collectionDiagnostics'] = {
+            key: value for key, value in diagnostic_counts.items()
+            if isinstance(key, str) and (key in allowed or re.fullmatch(r'http_[1-5][0-9]{2}', key))
+            and type(value) is int and value >= 0}
+        status['budgetExhausted'] = budget_exhausted is True
     current = root/'shortnews.txt'
     if issues:
         status['preservedSha256'] = hashlib.sha256(current.read_bytes()).hexdigest() if current.exists() else None
@@ -97,6 +107,10 @@ def load_report(root=Path('.'), now=None):
         return EMPTY
     if source_day < now.date():
         return NOTICE+'\n'+body
+    # The morning publisher already carries a visible same-day retention notice.
+    # Do not add a second prefix that would diverge from the signed sender body.
+    if failed and body.endswith(RETAINED_NEWS_NOTICE):
+        return body
     return NOTICE+'\n'+body if failed else body
 
 

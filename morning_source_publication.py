@@ -153,6 +153,20 @@ def apply_publication(publication_path, trend_path=None, *, root='.', now=None):
     root = Path(root)
     artifact = json.loads(Path(publication_path).read_text(encoding='utf-8'))
     boxes = validate_publication(artifact, now)
+    # A retained artifact describes the exact source seen by its collecting run.
+    # Never let its later generation time overwrite a different source that
+    # another collector has successfully published in the meantime.
+    from quicknews_state import RETAINED_NEWS_NOTICE
+    for box in boxes:
+        if box['key'] == 'shortnews' and box['body'].endswith(RETAINED_NEWS_NOTICE):
+            def without_notice(body):
+                return body.removesuffix(RETAINED_NEWS_NOTICE).strip()
+            try:
+                current = (root/'shortnews.txt').read_text(encoding='utf-8').strip()
+            except (OSError, UnicodeError):
+                raise ValueError('retained quicknews source missing at publication') from None
+            if without_notice(current) != without_notice(box['body']):
+                raise ValueError('retained quicknews source changed since collection')
     payloads = {}
     if any(box['key'] == 'trend' for box in boxes):
         from neonet_trend import format_digest
