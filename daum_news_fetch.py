@@ -504,7 +504,8 @@ def main():
     content = "\n".join(lines).strip() + "\n"
 
     from quicknews_state import commit_candidate
-    accepted = commit_candidate(content, now)
+    accepted = commit_candidate(content, now, diagnostic_counts=dict(DIAGNOSTICS),
+                                budget_exhausted=time.monotonic() >= DEADLINE)
     print("quicknews diagnostics:", dict(DIAGNOSTICS), "budget_exhausted", time.monotonic() >= DEADLINE)
     print(f"shortnews candidate: news {len(news_items)}, indicators {len(indicators)}, accepted {accepted}")
     if not accepted:

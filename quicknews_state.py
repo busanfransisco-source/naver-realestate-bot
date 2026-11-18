@@ -41,7 +41,7 @@ def atomic_text(path, text):
     tmp.replace(path)
 
 
-def commit_candidate(body, now, root=Path('.')):
+def commit_candidate(body, now, root=Path('.'), *, diagnostic_counts=None, budget_exhausted=False):
     root = Path(root)
     issues = body_issues(body)
     stamp = re.match(r'(\d{2,4})년 (\d{1,2})월 (\d{1,2})일', body)
@@ -53,6 +53,15 @@ def commit_candidate(body, now, root=Path('.')):
         except ValueError:
             issues.append('quicknews: invalid date')
     status = dict(attemptedAtKst=now.isoformat(), status='failed' if issues else 'ok', issues=issues)
+    if diagnostic_counts is not None:
+        allowed = {'Timeout', 'ConnectTimeout', 'ReadTimeout', 'ConnectionError',
+                   'SSLError', 'TooManyRedirects', 'RequestException',
+                   'empty_or_rejected_lead', 'article_parse_error'}
+        status['collectionDiagnostics'] = {
+            key: value for key, value in diagnostic_counts.items()
+            if isinstance(key, str) and (key in allowed or re.fullmatch(r'http_[1-5][0-9]{2}', key))
+            and type(value) is int and value >= 0}
+        status['budgetExhausted'] = budget_exhausted is True
     current = root/'shortnews.txt'
     if issues:
         status['preservedSha256'] = hashlib.sha256(current.read_bytes()).hexdigest() if current.exists() else None

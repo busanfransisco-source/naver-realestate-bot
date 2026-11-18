@@ -73,6 +73,15 @@ class RetentionTests(unittest.TestCase):
             self.assertEqual((root/'shortnews.txt').read_bytes(), before)
             return report, snapshot
 
+    def test_diagnostics_persist_without_request_details(self):
+        from quicknews_state import commit_candidate, STATUS
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory)
+            commit_candidate('', NOW, root, diagnostic_counts={'http_503':2,'secret-url':5,'ReadTimeout':'private'},budget_exhausted=True)
+            status=json.loads((root/STATUS).read_text())
+            self.assertEqual(status['collectionDiagnostics'],{'http_503':2})
+            self.assertTrue(status['budgetExhausted'])
+
     def test_current_verified_news_retained_with_notice_not_fresh_success(self):
         report, snapshot = self.run_case()
         self.assertEqual(report['retainedKeys'], ['shortnews'])
