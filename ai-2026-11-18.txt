@@ -3,6 +3,9 @@
 퍼플렉시티, AI 에이전트 16개가 협업·상호 검증하는 기능 출시
 https://www.aitimes.com/news/articleView.html?idxno=217543
 
+오픈AI "사이버 보안, 코딩보다 큰 사업 될 것"…신성장 동력 육성
+https://www.aitimes.com/news/articleView.html?idxno=217542
+
 중국 AI 기업들, 수출 규제 앞두고 모델의 사이버 공격 능력 축소
 https://www.aitimes.com/news/articleView.html?idxno=217541
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217533
 
 MS, '코파일럿'에 상시 업무 수행 AI 도입…기업용 에이전트 관리도 강화
 https://www.aitimes.com/news/articleView.html?idxno=217532
-
-오픈AI, NATO에 사이버 보안 AI 공급…유럽 정부·기관으로 사업 확대
-https://www.aitimes.com/news/articleView.html?idxno=217529
