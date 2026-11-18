@@ -29,7 +29,7 @@ GROUPS = (
     ('market', 'market_fetch.py', ('fuelfx', 'metalcoin', 'books')),
     ('realestate', 'naver_realestate_fetch.py', ('realestate',)),
 )
-RETAINED_NEWS_NOTICE = '[이번 갱신은 완료되지 않아 오늘 먼저 확보한 기사를 전합니다.]'
+from quicknews_state import RETAINED_NEWS_NOTICE
 
 CACHE_FILES = {
     'trend': ('neonet-trend-cache.json',),
@@ -252,7 +252,8 @@ def _run_group(root, group, now, absolute_deadline, runner, fixed_clock=False):
 def _retry_group(root, previous, group, now, deadline, runner, fixed_clock):
     """Retry failed outputs while preserving successful siblings byte-for-byte."""
     name, script, keys = group
-    failed_keys = tuple(box['key'] for box in previous['boxes'] if box['status'] == 'failed')
+    failed_keys = tuple(box['key'] for box in previous['boxes']
+                        if box['status'] in ('failed', 'retained_daily'))
     protected_keys = tuple(key for key in keys if key not in failed_keys)
     protected = _backup(_paths(root, (name, script, protected_keys), now)) if protected_keys else {}
     try:
@@ -262,8 +263,10 @@ def _retry_group(root, previous, group, now, deadline, runner, fixed_clock):
     updates = {box['key']: box for box in retried['boxes']}
     boxes = [updates.get(box['key'], box) for box in previous['boxes']]
     failed = [box for box in boxes if box['status'] == 'failed']
-    return dict(group=name, status=('partial' if len(failed) < len(boxes) else 'failed') if failed else 'ok',
-                reason=failed[0]['reason'] if failed else None,
+    retained_news = any(box['status'] == 'retained_daily' for box in boxes)
+    return dict(group=name, status=(('partial' if len(failed) < len(boxes) else 'failed') if failed else
+                                   'retained' if retained_news else 'ok'),
+                reason=failed[0]['reason'] if failed else retried.get('reason') if retained_news else None,
                 processReason=retried.get('processReason'),
                 issueCount=sum(box['issueCount'] for box in failed), boxes=boxes)
 
@@ -301,7 +304,7 @@ def prepare(root, output, report, *, collect=False, now=None, runner=None,
             from weather_fetch import retry_deferred
             check_time = fixed_now or datetime.now(KST)
             pending = [group for group in groups
-                       if any(box['status'] == 'failed' for box in group['boxes'])
+                       if any(box['status'] in ('failed', 'retained_daily') for box in group['boxes'])
                        and not (group['group'] == 'weather'
                                 and retry_deferred(check_time, root / 'weather-status.txt'))]
             # Never let retries extend the original run's 270-second budget.

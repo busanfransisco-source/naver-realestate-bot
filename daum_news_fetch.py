@@ -319,7 +319,11 @@ def candidate_summaries(candidates):
                 break
             batch = candidates[start:start+4]
             for (title, href), html in zip(batch, pool.map(fetch, batch)):
-                summary = polite_summary(summary_from_html(html)) if html else ''
+                try:
+                    summary = polite_summary(summary_from_html(html)) if html else ''
+                except Exception:
+                    DIAGNOSTICS['article_parse_error'] += 1
+                    summary = ''
                 if not summary:
                     DIAGNOSTICS['empty_or_rejected_lead'] += 1
                 yield title, href, summary

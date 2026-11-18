@@ -8,6 +8,7 @@ from pathlib import Path
 KST = timezone(timedelta(hours=9))
 STATUS = 'shortnews-status.txt'
 NOTICE = '[퀵뉴스 갱신 실패: 아래 원고는 표시된 원래 날짜의 자료입니다.]'
+RETAINED_NEWS_NOTICE = '[이번 갱신은 완료되지 않아 오늘 먼저 확보한 기사를 전합니다.]'
 EMPTY = '[퀵뉴스 수집 실패: 검증된 원고가 없습니다.]'
 ROWS = re.compile(r'^\S+ \((톱뉴스|정치|경제|사회|국제|날씨)\) (.+)$', re.M)
 
@@ -97,6 +98,10 @@ def load_report(root=Path('.'), now=None):
         return EMPTY
     if source_day < now.date():
         return NOTICE+'\n'+body
+    # The morning publisher already carries a visible same-day retention notice.
+    # Do not add a second prefix that would diverge from the signed sender body.
+    if failed and body.endswith(RETAINED_NEWS_NOTICE):
+        return body
     return NOTICE+'\n'+body if failed else body
 
 

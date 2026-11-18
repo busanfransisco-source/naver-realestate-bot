@@ -49,6 +49,12 @@ class BudgetTests(unittest.TestCase):
         self.assertGreater(peak, 1)
         self.assertEqual(rows, [(str(i), str(i), str(i)) for i in range(10)])
 
+    def test_single_candidate_parse_error_does_not_abort_batch(self):
+        with patch.object(news, 'DEADLINE', None), patch.object(news, 'get') as get, patch.object(news, 'summary_from_html', side_effect=[ValueError('bad html'), 'good']), patch.object(news, 'polite_summary', side_effect=lambda text:text):
+            get.return_value.text='html'
+            result=list(news.candidate_summaries([('bad','1'),('good','2')]))
+        self.assertEqual(result,[('bad','1',''),('good','2','good')])
+
 class RetentionTests(unittest.TestCase):
     def run_case(self, mutate=lambda b:b):
         with tempfile.TemporaryDirectory() as directory:
@@ -82,5 +88,64 @@ class RetentionTests(unittest.TestCase):
             report, snapshot = self.run_case(mutate)
             self.assertIn('shortnews', report['omittedKeys'])
             self.assertTrue(snapshot['boxes'][2]['omitted'])
+
+    def test_retained_news_retries_and_can_recover(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory)
+            body=fixture_sources()[0][2]
+            import re
+            count=iter(range(8))
+            body=re.sub('원문 링크 미확인', lambda _:f'https://v.daum.net/v/20261021060000{next(count):03}',body)
+            for name in ('shortnews.txt','shortnews-wed.txt'): (root/name).write_text(body)
+            calls=0
+            def runner(command, **kwargs):
+                nonlocal calls
+                if command[-1]=='daum_news_fetch.py':
+                    calls+=1
+                    if calls==1: raise subprocess.TimeoutExpired(command,180)
+                    for name in ('shortnews.txt','shortnews-wed.txt'): (root/name).write_text(body)
+                return subprocess.CompletedProcess(command,0)
+            report=cloud.prepare(root,root/'ready.json',root/'report.json',collect=True,now=NOW,runner=runner,retry_delays=(0,),sleeper=lambda _:None)
+            self.assertEqual(calls,2)
+            self.assertEqual(report['retainedKeys'],[])
+            self.assertTrue(report['hadErrors'])
+            self.assertEqual(report['groups'][2]['boxes'][0]['status'],'ok')
+
+    def test_apply_render_and_signed_snapshot_share_retention_notice(self):
+        import os
+        from datetime import datetime
+        import gen_briefing
+        from quicknews_state import merge_status, NOTICE
+        from morning_source_publication import apply_collection, verify_publication_page
+        from morning_briefing_contract import validate_snapshot
+        with tempfile.TemporaryDirectory() as src, tempfile.TemporaryDirectory() as dst:
+            root,target=Path(src),Path(dst)
+            now=datetime.now(cloud.KST)
+            body=fixture_sources()[0][2].replace('26년 10월 21일',f'{now.year%100}년 {now.month}월 {now.day}일')
+            import re
+            count=iter(range(8))
+            body=re.sub('원문 링크 미확인',lambda _:f'https://v.daum.net/v/{now:%Y%m%d}000000{next(count):03}',body)
+            (root/'shortnews.txt').write_text(body)
+            def fail(*args,**kwargs): raise subprocess.TimeoutExpired(args[0],180)
+            report=cloud.prepare(root,root/'ready.json',root/'report.json',collect=True,now=now,runner=fail,retry_delays=())
+            publication=root/'morning-website-sources.json'
+            applied=apply_collection(publication,snapshot_path=root/'ready.json',root=target,now=now)
+            self.assertTrue(applied['websiteApplied'])
+            self.assertTrue(applied['readyApplied'])
+            status=root/'shortnews-status.txt'
+            status.write_text(json.dumps(dict(status='failed',attemptedAtKst=now.isoformat(),issues=['timeout'])))
+            self.assertTrue(merge_status(status,root=target,now=now))
+            previous=os.getcwd()
+            try:
+                os.chdir(target)
+                html=gen_briefing.build_html()
+            finally: os.chdir(previous)
+            artifact=json.loads(publication.read_text())
+            verify_publication_page(artifact,html,now)
+            snap=json.loads((target/'morning-briefing-ready.json').read_text())
+            bodies=validate_snapshot(snap,now)
+            self.assertEqual(bodies[2],artifact['boxes'][0]['body'])
+            self.assertEqual(bodies[2].count(cloud.RETAINED_NEWS_NOTICE),1)
+            self.assertNotIn(NOTICE,bodies[2])
 
 if __name__ == '__main__': unittest.main()
