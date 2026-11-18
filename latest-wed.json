@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-11-18 11:38:38",
+  "updated_at_kst": "2026-11-18 11:41:38",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 18일 수요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "서울시, 개봉동·목2동·수유동·하월곡동에 모아타운 조성… 6319가구 공급",
+      "url": "https://n.news.naver.com/mnews/article/366/0001205634"
+    },
+    {
+      "title": "이혜훈 ‘40억 로또’ 원펜타스, 계약 취소 수순…국토부, 조합에 계약 취소 요청",
+      "url": "https://n.news.naver.com/mnews/article/032/0003483406"
+    },
     {
       "title": "한국교통안전공단(TS), “택시운전자격시험에서 발생한 명의도용 사건에 대해 사과하고, 신분확인 절차 강화”",
       "url": "https://n.news.naver.com/mnews/article/021/0002833667"
@@ -34,14 +42,6 @@
     {
       "title": "대우건설, 이라크 신항만 침매터널 준공",
       "url": "https://n.news.naver.com/mnews/article/277/0005844361"
-    },
-    {
-      "title": "‘노도강’서 ‘마용성’ 가는데 5억 더 필요",
-      "url": "https://n.news.naver.com/mnews/article/016/0002725074"
-    },
-    {
-      "title": "명동 상가 임대료 세계 9위…1년 새 9%↑",
-      "url": "https://n.news.naver.com/mnews/article/018/0006411732"
     }
   ]
 }
