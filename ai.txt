@@ -1,5 +1,20 @@
 🤖 26년 11월 18일 수요일 AI 뉴스
 
+MS, '코파일럿'에 상시 업무 수행 AI 도입…기업용 에이전트 관리도 강화
+https://www.aitimes.com/news/articleView.html?idxno=217532
+
+앤트로픽, IPO 공모가 80달러 이상으로 인상 검토…기관투자자 수요 몰려
+https://www.aitimes.com/news/articleView.html?idxno=217526
+
+미 SEC, 젠슨 황 사임 후 엔비디아 조사…투자자 공시 위반 여부 확인
+https://www.aitimes.com/news/articleView.html?idxno=217522
+
+중국, 미국 반도체 원격 접근 규제에 반발…“강행하면 보복 조치”
+https://www.aitimes.com/news/articleView.html?idxno=217521
+
+젠슨 황 딸, 메가스피드 의혹 대응 관여…엔비디아 가족 경영 논란
+https://www.aitimes.com/news/articleView.html?idxno=217518
+
 엔비디아 이사회, 젠슨 황 CEO 복귀 거부...후임자 물색 본격화
 https://www.aitimes.com/news/articleView.html?idxno=217517
 
@@ -14,18 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217511
 
 애플, 건강 AI 연구용 앱 출시…미국서 20만명 모집
 https://www.aitimes.com/news/articleView.html?idxno=217504
-
-젠슨 황 딸, 직급 넘는 영향력 행사…아버지 퇴진 후 권한 조정 과제
-https://www.aitimes.com/news/articleView.html?idxno=217503
-
-오픈AI, 아동 성착취물 탐지 AI 공개...챗GPT 경고·24시간 이용 정지 기능도 도입
-https://www.aitimes.com/news/articleView.html?idxno=217501
-
-WSJ "앨리스 황 남편, 중국 정부 지원받아 13조 데이터센터 사업 추진"
-https://www.aitimes.com/news/articleView.html?idxno=217500
-
-내시경에 AI 접목한 메디인테크, 338억원 시리즈C 투자 유치
-https://www.aitimes.com/news/articleView.html?idxno=217498
-
-중국, 미국 AI ‘증류’ 산업화…자동 수집에 전문 인력까지 투입
-https://www.aitimes.com/news/articleView.html?idxno=217497
