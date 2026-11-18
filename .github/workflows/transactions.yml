@@ -19,19 +19,40 @@ jobs:
   collect:
     runs-on: ubuntu-latest
     timeout-minutes: 28
+    outputs:
+      eligible: ${{ steps.window.outputs.eligible }}
     steps:
+      - name: Defer before actual 05-00 KST source publication
+        id: window
+        run: |
+          python - <<'PYCODE'
+          import os
+          from datetime import datetime, timedelta, timezone
+          now = datetime.now(timezone(timedelta(hours=9)))
+          eligible = now.hour >= 5
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write('eligible='+str(eligible).lower()+'\n')
+          print('Transaction collection eligible:', eligible, 'actual KST:', now.isoformat())
+          if not eligible:
+              print('Deferred before 05:00 KST; no collection, source upload or publication.')
+          PYCODE
       - uses: actions/checkout@v4
+        if: steps.window.outputs.eligible == 'true'
         with:
           ref: main
       - uses: actions/setup-python@v5
+        if: steps.window.outputs.eligible == 'true'
         with:
           python-version: "3.11"
       - name: Install all collection and publication dependencies
+        if: steps.window.outputs.eligible == 'true'
         run: pip install -r requirements.txt
       - name: Preflight publication before expensive collection
+        if: steps.window.outputs.eligible == 'true'
         run: |
           python -c "import requests, bs4; import gen_briefing; from production_data_cards import load_contents; gen_briefing.build_html(new_data_contents=load_contents())"
       - name: Collect nationwide official transactions
+        if: steps.window.outputs.eligible == 'true'
         shell: bash
         run: |
           # Preserve a verified daily source, or recover the complete 05:00 batch.
@@ -54,7 +75,7 @@ jobs:
         env:
           MOLIT_API_KEY: ${{ secrets.MOLIT_API_KEY }}
       - name: Preserve collected source independently of publication
-        if: always()
+        if: always() && steps.window.outputs.eligible == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: transaction-source
@@ -67,6 +88,7 @@ jobs:
           if-no-files-found: error
   publish:
     needs: collect
+    if: needs.collect.outputs.eligible == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     concurrency:
