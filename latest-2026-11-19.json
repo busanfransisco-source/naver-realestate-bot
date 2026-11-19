@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-11-19 11:42:34",
+  "updated_at_kst": "2026-11-19 11:51:13",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 19일 목요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "\"베트남 외국인 아파트 매수자 둘 중 하나는 한국인\".. 외국인 전체의 48%로 1위",
+      "url": "https://n.news.naver.com/mnews/article/014/0005606760"
+    },
     {
       "title": "강남대로에 알짜땅 나왔다…신논현 트리플 역세권 부지 매각",
       "url": "https://n.news.naver.com/mnews/article/015/0005355769"
@@ -38,10 +42,6 @@
     {
       "title": "“나오면 세 자릿수 경쟁률”…올 연말 3기 신도시 2000가구 풀린다는데",
       "url": "https://n.news.naver.com/mnews/article/009/0005766085"
-    },
-    {
-      "title": "호반건설, 북항 재개발 수혜 기대…부산 ‘호반써밋 초량’ 분양",
-      "url": "https://n.news.naver.com/mnews/article/016/0002725661"
     }
   ]
 }
