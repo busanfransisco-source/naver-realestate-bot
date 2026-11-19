@@ -1,31 +1,31 @@
-🤖 26년 11월 13일 금요일 AI 뉴스
+🤖 26년 11월 20일 금요일 AI 뉴스
 
-MS 365 전 세계 장애…정부·기업 업무 차질에 챗GPT·클로드도 영향
-https://www.aitimes.com/news/articleView.html?idxno=217394
+LG그룹 2027년 임원인사, AIDC·로봇·피지컬AI 인재 곳곳 발탁
+https://www.aitimes.com/news/articleView.html?idxno=217593
 
-노타, 3분기 역대 최대 매출 달성…플랫폼·솔루션 동반 도약
-https://www.aitimes.com/news/articleView.html?idxno=217391
+구글 “AI 끄면 검색도 포기”…뉴욕·LA·시카고 교육구, 대체 검색 검토
+https://www.aitimes.com/news/articleView.html?idxno=217589
 
-엘리스그룹, 대한민국 인터넷대상 대통령상수상…AI 데이터센터 구축 공로
-https://www.aitimes.com/news/articleView.html?idxno=217386
+메타, 주주 소송에 신주 발행 보류…AI 투자금 조달 계획 차질
+https://www.aitimes.com/news/articleView.html?idxno=217588
 
-골드만삭스 "AI 투자, 2027년 말 연간 1865조원 규모…미국 경제성장 주도"
-https://www.aitimes.com/news/articleView.html?idxno=217382
+인텔, 첨단 '18A-P' 공정 첫 외부 고객 확보…고객명 비공개
+https://www.aitimes.com/news/articleView.html?idxno=217587
 
-AMD, 양자컴퓨터 오류 수정에 GPU·SW 투입…엔비디아와 경쟁
-https://www.aitimes.com/news/articleView.html?idxno=217381
+디 인포메이션 "엔비디아, 알리바바에 해외 GPU 임대 경로 연결"
+https://www.aitimes.com/news/articleView.html?idxno=217586
 
-AI 모델 바꾼 기업 70% "몇 주 이상 걸려"…앱 수정·검증이 걸림돌
-https://www.aitimes.com/news/articleView.html?idxno=217379
+허깅페이스, 코딩 에이전트 맞춤 어댑터 공개…'큐원' 고난도 평가 39%→65%
+https://www.aitimes.com/news/articleView.html?idxno=217584
 
-중국, AI로 '1인 기업' 대량 육성…창업 문턱 낮췄지만 생존 경쟁도 치열
-https://www.aitimes.com/news/articleView.html?idxno=217378
+AI타임스·영풍문고, ‘AI 시대, 믿고 읽을 책' 함께 고른다
+https://www.aitimes.com/news/articleView.html?idxno=217582
 
-JP모건 "미 휴머노이드 2030년 40만대"…로보티즈 유망 부품사 선정
-https://www.aitimes.com/news/articleView.html?idxno=217376
+챗GPT 음성 받아쓰기 기능 개선...실시간 텍스트 변환·10분 녹음 제한 폐지
+https://www.aitimes.com/news/articleView.html?idxno=217580
 
-앨리스 황, 중국 정보기관 포섭 의혹…딥시크·화웨이 연관도 드러나
-https://www.aitimes.com/news/articleView.html?idxno=217375
+엔비디아, ‘RTX 스파크’ 소형 데스크톱 글로벌 출시…국내 사전예약 시작
+https://www.aitimes.com/news/articleView.html?idxno=217579
 
-중국 광군제서 AI 쇼핑 급증…상품 검색부터 구매까지 지원
-https://www.aitimes.com/news/articleView.html?idxno=217374
+북한, AI 챗봇 '지혜의 샘' 공개…정치 질문 금지·해외 모델 활용 추정
+https://www.aitimes.com/news/articleView.html?idxno=217578
