@@ -1,1 +1,1 @@
-{"attemptedAtKst": "2026-11-20T05:45:49.997893+09:00", "status": "ok", "issues": [], "collectionDiagnostics": {"empty_or_rejected_lead": 10}, "budgetExhausted": false}
+{"attemptedAtKst": "2026-11-20T06:00:55.277971+09:00", "status": "ok", "issues": [], "collectionDiagnostics": {"empty_or_rejected_lead": 8}, "budgetExhausted": false}
