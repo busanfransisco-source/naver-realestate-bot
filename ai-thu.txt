@@ -1,5 +1,14 @@
 🤖 26년 11월 19일 목요일 AI 뉴스
 
+앤트로픽, 공모가 83달러 확정…기업가치 1.5조달러로 역대 최대 IPO
+https://www.aitimes.com/news/articleView.html?idxno=217560
+
+래블업, 상장 후 첫 성적표…3분기 누적 매출 48% ↑
+https://www.aitimes.com/news/articleView.html?idxno=217558
+
+구글 '지니 4' 일반에 제공…대화로 가상세계 만드는 AI 에이전트 도입
+https://www.aitimes.com/news/articleView.html?idxno=217556
+
 라온피플, GPU 서버 프리 VLM 기반 영상관제 솔루션 출시
 https://www.aitimes.com/news/articleView.html?idxno=217555
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217541
 
 몬드리안AI, 서울대 공대에 프라이빗 AI 클라우드 플랫폼 공급...기존 시스템 윈백
 https://www.aitimes.com/news/articleView.html?idxno=217539
-
-미국 30여개 주, '캐릭터닷AI' 매각 심사 강화 요구…아동 대화 기록 쟁점
-https://www.aitimes.com/news/articleView.html?idxno=217538
-
-리퀴드 AI, 의사결정 모델 'd1.2' 출시…AA 평가 1위
-https://www.aitimes.com/news/articleView.html?idxno=217536
-
-초록소프트, 한국이엔씨와 AI 스마트팜 맞손...클린룸 기술에 AI 더해
-https://www.aitimes.com/news/articleView.html?idxno=217535
