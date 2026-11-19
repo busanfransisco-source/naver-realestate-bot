@@ -1,5 +1,11 @@
 🤖 26년 11월 19일 목요일 AI 뉴스
 
+구글, 세계 3위 성능 '제미나이 4 네온' 출시…작업 비용 32% 절감
+https://www.aitimes.com/news/articleView.html?idxno=217546
+
+엔비디아, 첫 직원회의서 "앞으로 나아가자"…황 복귀 배제
+https://www.aitimes.com/news/articleView.html?idxno=217545
+
 퍼플렉시티, AI 에이전트 16개가 협업·상호 검증하는 기능 출시
 https://www.aitimes.com/news/articleView.html?idxno=217543
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217535
 
 사람처럼 손 쓰는 로봇 개발에 6600억 투자…제네시스 AI 기업가치 4.6조
 https://www.aitimes.com/news/articleView.html?idxno=217534
-
-엔비디아, 삼성전기·앰코 등 글로벌 공급망 파트너 협력 확대
-https://www.aitimes.com/news/articleView.html?idxno=217533
-
-MS, '코파일럿'에 상시 업무 수행 AI 도입…기업용 에이전트 관리도 강화
-https://www.aitimes.com/news/articleView.html?idxno=217532
