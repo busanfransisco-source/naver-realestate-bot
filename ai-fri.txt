@@ -1,5 +1,8 @@
 🤖 26년 11월 20일 금요일 AI 뉴스
 
+미국, 중국 반도체 수출 허가 강화…삼성·TSMC 일부 출하 중단
+https://www.aitimes.com/news/articleView.html?idxno=217595
+
 앤트로픽, 나스닥 상장 첫날 기업가치 2조달러…스페이스X 추월
 https://www.aitimes.com/news/articleView.html?idxno=217594
 
@@ -12,20 +15,17 @@ https://www.aitimes.com/news/articleView.html?idxno=217589
 메타, 주주 소송에 신주 발행 보류…AI 투자금 조달 계획 차질
 https://www.aitimes.com/news/articleView.html?idxno=217588
 
-인텔, 첨단 &apos;18A-P&apos; 공정 첫 외부 고객 확보…고객명 비공개
+인텔, 첨단 '18A-P' 공정 첫 외부 고객 확보…고객명 비공개
 https://www.aitimes.com/news/articleView.html?idxno=217587
 
 디 인포메이션 "엔비디아, 알리바바에 해외 GPU 임대 경로 연결"
 https://www.aitimes.com/news/articleView.html?idxno=217586
 
-허깅페이스, 코딩 에이전트 맞춤 어댑터 공개…&apos;큐원&apos; 고난도 평가 39%→65%
+허깅페이스, 코딩 에이전트 맞춤 어댑터 공개…'큐원' 고난도 평가 39%→65%
 https://www.aitimes.com/news/articleView.html?idxno=217584
 
-AI타임스·영풍문고, ‘AI 시대, 믿고 읽을 책&apos; 함께 고른다
+AI타임스·영풍문고, ‘AI 시대, 믿고 읽을 책' 함께 고른다
 https://www.aitimes.com/news/articleView.html?idxno=217582
 
 챗GPT 음성 받아쓰기 기능 개선...실시간 텍스트 변환·10분 녹음 제한 폐지
 https://www.aitimes.com/news/articleView.html?idxno=217580
-
-엔비디아, ‘RTX 스파크’ 소형 데스크톱 글로벌 출시…국내 사전예약 시작
-https://www.aitimes.com/news/articleView.html?idxno=217579
