@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-11-19 11:51:13",
+  "updated_at_kst": "2026-11-19 11:54:56",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 19일 목요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "경기 아파트 200만원 이상 월세, 지난해보다 40% 증가",
+      "url": "https://n.news.naver.com/mnews/article/021/0002833981"
+    },
+    {
+      "title": "\"월세는 그대로인데 건물값은 오를까\"…꼬마빌딩 가치 높이는 셈법",
+      "url": "https://n.news.naver.com/mnews/article/015/0005355770"
+    },
     {
       "title": "\"베트남 외국인 아파트 매수자 둘 중 하나는 한국인\".. 외국인 전체의 48%로 1위",
       "url": "https://n.news.naver.com/mnews/article/014/0005606760"
@@ -34,14 +42,6 @@
     {
       "title": "평촌 도심 한복판에 들어선 AI 헬스케어 호텔…'마티에 노블' 19일 그랜드 오픈",
       "url": "https://n.news.naver.com/mnews/article/014/0005606743"
-    },
-    {
-      "title": "조경대상 받은 ‘상주자이르네’, 중앙광장 ‘숲과 물의 정원’  으로 상품성 더해",
-      "url": "https://n.news.naver.com/mnews/article/029/0003060027"
-    },
-    {
-      "title": "“나오면 세 자릿수 경쟁률”…올 연말 3기 신도시 2000가구 풀린다는데",
-      "url": "https://n.news.naver.com/mnews/article/009/0005766085"
     }
   ]
 }
