@@ -1,31 +1,31 @@
 🤖 26년 11월 19일 목요일 AI 뉴스
 
-앤트로픽, 공모가 83달러 확정…기업가치 1.5조달러로 역대 최대 IPO
-https://www.aitimes.com/news/articleView.html?idxno=217560
+JP모건 "미 휴머노이드 2030년 40만대"…로보티즈 유망 부품사 선정
+https://www.aitimes.com/news/articleView.html?idxno=217376
 
-래블업, 상장 후 첫 성적표…3분기 누적 매출 48% ↑
-https://www.aitimes.com/news/articleView.html?idxno=217558
+구글, '제미나이 4 하이드로젠' 출시…상위 모델 '아르곤' 성능 추월
+https://www.aitimes.com/news/articleView.html?idxno=217352
 
-구글 '지니 4' 일반에 제공…대화로 가상세계 만드는 AI 에이전트 도입
-https://www.aitimes.com/news/articleView.html?idxno=217556
+스페이스X, 영상 AI '그록 이매진' 개발팀 대부분 해고...AI 코딩에 집중
+https://www.aitimes.com/news/articleView.html?idxno=217399
 
-라온피플, GPU 서버 프리 VLM 기반 영상관제 솔루션 출시
-https://www.aitimes.com/news/articleView.html?idxno=217555
+[기고] 채점이 편한 시험은 AI에도 편하다
+https://www.aitimes.com/news/articleView.html?idxno=217423
 
-구글, 세계 3위 성능 '제미나이 4 네온' 출시…작업 비용 32% 절감
+앨리스 황, 중국 정보기관 포섭 의혹…딥시크·화웨이 연관도 드러나
+https://www.aitimes.com/news/articleView.html?idxno=217375
+
+오픈AI, 세계 2위 성능 'GPT-6.2 아스트라' 출시...API 20% 인하
+https://www.aitimes.com/news/articleView.html?idxno=217513
+
+앤트로픽, 제조업용 '클로드' 출시…오픈AI와 산업별 AI 시장 경쟁 확대
+https://www.aitimes.com/news/articleView.html?idxno=217361
+
+중국 에이스, AI 보컬 음악 생성 세계 1위…수노 제쳤다
+https://www.aitimes.com/news/articleView.html?idxno=217452
+
+구글, 세계 3위 성능 '제미나이 4 네온' 출시…작업 비용 32% 절감
 https://www.aitimes.com/news/articleView.html?idxno=217546
 
-엔비디아, 첫 직원회의서 "앞으로 나아가자"…황 복귀 배제
-https://www.aitimes.com/news/articleView.html?idxno=217545
-
-퍼플렉시티, AI 에이전트 16개가 협업·상호 검증하는 기능 출시
-https://www.aitimes.com/news/articleView.html?idxno=217543
-
-오픈AI "사이버 보안, 코딩보다 큰 사업 될 것"…신성장 동력 육성
-https://www.aitimes.com/news/articleView.html?idxno=217542
-
-중국 AI 기업들, 수출 규제 앞두고 모델의 사이버 공격 능력 축소
-https://www.aitimes.com/news/articleView.html?idxno=217541
-
-몬드리안AI, 서울대 공대에 프라이빗 AI 클라우드 플랫폼 공급...기존 시스템 윈백
-https://www.aitimes.com/news/articleView.html?idxno=217539
+구글, 제미나이에 '월렛' 연결…개인 소비 분석부터 저축 계획까지
+https://www.aitimes.com/news/articleView.html?idxno=217415
