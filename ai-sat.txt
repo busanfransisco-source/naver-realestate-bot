@@ -1,31 +1,31 @@
-🤖 26년 11월 14일 토요일 AI 뉴스
+🤖 26년 11월 21일 토요일 AI 뉴스
 
-아마존, 전 세계 상품 정보 통합 추진…AI 쇼핑 주도권 지킨다
-https://www.aitimes.com/news/articleView.html?idxno=217412
+캘리포니아주, 엔비디아에 소환장...중국 기밀 유출·투자자 기만 조사
+https://www.aitimes.com/news/articleView.html?idxno=217637
 
-미 재무장관, 메가스피드 제재 지연에 상무부 공개 비판…러트닉 경질론까지
-https://www.aitimes.com/news/articleView.html?idxno=217411
+미 상무부, 중국군 연계 기업에 AI 칩 수출 허가...하원 자료 공개로 파장
+https://www.aitimes.com/news/articleView.html?idxno=217634
 
-엔비디아 직원들 "젠슨 황 복귀시켜라"…사내 게시물에 댓글 1600개
-https://www.aitimes.com/news/articleView.html?idxno=217410
+구글, AI 모델 이름에 원소 주기율표 활용...다음은 '헬륨'?
+https://www.aitimes.com/news/articleView.html?idxno=217633
 
-머스크, 젠슨 황 퇴진에 영화로 경의…앞서 "영입하면 영광"
-https://www.aitimes.com/news/articleView.html?idxno=217409
+오픈AI, 'GPT-6.2' 응답 늦게 받으면 API 요금 최대 40% 할인
+https://www.aitimes.com/news/articleView.html?idxno=217632
 
-엔비디아, 차기 CEO로 Arm 하스 접촉설…이사회 "공식 접촉 아직 없어"
-https://www.aitimes.com/news/articleView.html?idxno=217407
+[게시판] 셀렉트스타, 출판협회와 AI 학습용 출판데이터 공급 협력 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=217631
 
-젠슨 황 투자에 제동 걸었던 CFO가 후임으로…엔비디아 전략 바뀌나
-https://www.aitimes.com/news/articleView.html?idxno=217406
+정체불명 모델 '게슈탈트', 디자인 평가서 인간 전문가 제치고 1위
+https://www.aitimes.com/news/articleView.html?idxno=217630
 
-말레이시아, 메가스피드 AI 칩 재수출 의혹 조사 착수
-https://www.aitimes.com/news/articleView.html?idxno=217405
+메타, AI가 기억하는 방법도 스스로 개선...AI 자기개선 연구 잇따라
+https://www.aitimes.com/news/articleView.html?idxno=217629
 
-[AI 이슈트렌드] 젠슨 황 퇴진 쇼크 속 트럼프 행보·앤트로픽 개인정보 유출 등 화제
-https://www.aitimes.com/news/articleView.html?idxno=217404
+AI가 먼저 걸렀다…스팸 데이터 개방으로 대량 악성문자·스팸전화 수신 전 차단
+https://www.aitimes.com/news/articleView.html?idxno=217628
 
-젠슨 황, 사임 직전 "나는 쓰레기"…두 번째 불륜 보도가 결정타
-https://www.aitimes.com/news/articleView.html?idxno=217403
+뉴로퓨전, AI 미래 예측 벤치마크서 공동 1위...구글·오픈AI 앞서
+https://www.aitimes.com/news/articleView.html?idxno=217627
 
-앤트로픽 IPO, 중국·홍콩 투자자 공모주 배정 제한…미국 안보 규제 영향
-https://www.aitimes.com/news/articleView.html?idxno=217402
+오픈AI, 코덱스로 챗GPT 성능 문제 자동 진단·수정안 작성
+https://www.aitimes.com/news/articleView.html?idxno=217626

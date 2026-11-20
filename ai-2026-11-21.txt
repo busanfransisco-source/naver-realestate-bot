@@ -1,0 +1,31 @@
+🤖 26년 11월 21일 토요일 AI 뉴스
+
+캘리포니아주, 엔비디아에 소환장...중국 기밀 유출·투자자 기만 조사
+https://www.aitimes.com/news/articleView.html?idxno=217637
+
+미 상무부, 중국군 연계 기업에 AI 칩 수출 허가...하원 자료 공개로 파장
+https://www.aitimes.com/news/articleView.html?idxno=217634
+
+구글, AI 모델 이름에 원소 주기율표 활용...다음은 '헬륨'?
+https://www.aitimes.com/news/articleView.html?idxno=217633
+
+오픈AI, 'GPT-6.2' 응답 늦게 받으면 API 요금 최대 40% 할인
+https://www.aitimes.com/news/articleView.html?idxno=217632
+
+[게시판] 셀렉트스타, 출판협회와 AI 학습용 출판데이터 공급 협력 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=217631
+
+정체불명 모델 '게슈탈트', 디자인 평가서 인간 전문가 제치고 1위
+https://www.aitimes.com/news/articleView.html?idxno=217630
+
+메타, AI가 기억하는 방법도 스스로 개선...AI 자기개선 연구 잇따라
+https://www.aitimes.com/news/articleView.html?idxno=217629
+
+AI가 먼저 걸렀다…스팸 데이터 개방으로 대량 악성문자·스팸전화 수신 전 차단
+https://www.aitimes.com/news/articleView.html?idxno=217628
+
+뉴로퓨전, AI 미래 예측 벤치마크서 공동 1위...구글·오픈AI 앞서
+https://www.aitimes.com/news/articleView.html?idxno=217627
+
+오픈AI, 코덱스로 챗GPT 성능 문제 자동 진단·수정안 작성
+https://www.aitimes.com/news/articleView.html?idxno=217626
