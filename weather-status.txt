@@ -1,1 +1,1 @@
-{"forecastDate":"2026-11-21","attemptedAtKst":"2026-11-21T06:29:12.563+09:00","status":"failed","failedAtKst":"2026-11-21T06:29:14.822+09:00","errorType":"BackupSourceUnavailable"}
+{"forecastDate": "2026-11-21", "attemptedAtKst": "2026-11-21T06:59:21+09:00", "status": "ok"}
