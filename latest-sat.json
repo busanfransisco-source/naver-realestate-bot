@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-11-21 01:01:55",
+  "updated_at_kst": "2026-11-21 04:03:42",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 21일 토요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "단지 안에 아이스링크-풀빌라… “차별화 전략” vs “비용만 높여”",
+      "url": "https://n.news.naver.com/mnews/article/020/0003764115"
+    },
+    {
+      "title": "내년 부동산 공시가 현실화율 69%로 동결",
+      "url": "https://n.news.naver.com/mnews/article/020/0003764083"
+    },
     {
       "title": "겹겹이 쌓인 보유세 인상 압박에… 공시가 현실화율 동결",
       "url": "https://n.news.naver.com/mnews/article/023/0004010901"
@@ -34,14 +42,6 @@
     {
       "title": "국토부, 주택공시가 현실화율 ‘동결’…묶여도 집값 오른 곳 보유세는 오를 듯",
       "url": "https://n.news.naver.com/mnews/article/032/0003484079"
-    },
-    {
-      "title": "공시가격 현실화율 69% 동결…\"집값 오른 곳, 보유세 늘 수도\"",
-      "url": "https://n.news.naver.com/mnews/article/015/0005356508"
-    },
-    {
-      "title": "내년도 공시가격 현실화율 69%…5년 연속 동결",
-      "url": "https://n.news.naver.com/mnews/article/422/0000928323"
     }
   ]
 }
