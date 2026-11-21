@@ -1,2 +1,2 @@
-quicknews diagnostics: {'empty_or_rejected_lead': 9} budget_exhausted False
+quicknews diagnostics: {'empty_or_rejected_lead': 5} budget_exhausted False
 shortnews candidate: news 20, indicators 6, accepted True
