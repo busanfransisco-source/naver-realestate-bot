@@ -1,31 +1,31 @@
-🤖 26년 11월 15일 일요일 AI 뉴스
+🤖 26년 11월 22일 일요일 AI 뉴스
 
-세무사 시험 수석 합격자 "생성 AI로 부정행위" 자백
-https://www.aitimes.com/news/articleView.html?idxno=217426
+머스크의 우주 데이터센터, 첫 금융 장벽…채권단 "GPU 반입 제한"
+https://www.aitimes.com/news/articleView.html?idxno=217650
 
-KT, 인천 남동산단에 AI기반 산업안전 솔루션 공급
-https://www.aitimes.com/news/articleView.html?idxno=217424
+AI 작업 능력, 6개월 만에 16시간→40시간…"판단력 여전히 한계"
+https://www.aitimes.com/news/articleView.html?idxno=217649
 
-[기고] 채점이 편한 시험은 AI에도 편하다
-https://www.aitimes.com/news/articleView.html?idxno=217423
+구글, 제미나이 앱에 GIF 생성 기능 출시…오픈AI 이어 도입
+https://www.aitimes.com/news/articleView.html?idxno=217648
 
-젠슨 황, 자신이 키운 생성 AI에 풍자당해…딥페이크 밈 수백만 조회
-https://www.aitimes.com/news/articleView.html?idxno=217422
+유튜브, 미 교육청들과 '중독 소송' 4조원 합의 추진
+https://www.aitimes.com/news/articleView.html?idxno=217647
 
-스페이스X, 스타십 첫 발사탑 포획 성공…1단 부스터 회수는 실패
-https://www.aitimes.com/news/articleView.html?idxno=217421
+트럼프 "젠슨 황에 두 번째 기회 줘야"…CEO 복귀 재촉구
+https://www.aitimes.com/news/articleView.html?idxno=217646
 
-메타, 돈 대신 포인트 거는 예측 시장 앱 '테이크' 테스트 중
-https://www.aitimes.com/news/articleView.html?idxno=217420
+엔비디아, SEC 회계 조사에 주가 14% 폭락…시총 4위 추락
+https://www.aitimes.com/news/articleView.html?idxno=217645
 
-중국, 젠슨 황 사임·미국 규제 강화에 4조원대 AI 데이터센터 사업 위기
-https://www.aitimes.com/news/articleView.html?idxno=217419
+"젠슨 황, 20여년 전부터 직원들에게 폭언·위협"…불만 제기 이어져
+https://www.aitimes.com/news/articleView.html?idxno=217644
 
-테슬라, '사이버캡' 사전 주문 시작…월 40만원 안 내면 운행 불가
-https://www.aitimes.com/news/articleView.html?idxno=217417
+스페이스X, '커서'의 중국 AI 모델 퇴출 검토
+https://www.aitimes.com/news/articleView.html?idxno=217643
 
-메타, 사용자 사진 무단 접근으로 이탈리아서 1.2조 벌금
-https://www.aitimes.com/news/articleView.html?idxno=217416
+트럼프 "해외에 데이터센터 짓는 미국 기업에 막대한 세금 부과"
+https://www.aitimes.com/news/articleView.html?idxno=217642
 
-구글, 제미나이에 '월렛' 연결…개인 소비 분석부터 저축 계획까지
-https://www.aitimes.com/news/articleView.html?idxno=217415
+미 민주당, 엔비디아의 메가스피드 조사 개입 의혹 조사 착수
+https://www.aitimes.com/news/articleView.html?idxno=217641
