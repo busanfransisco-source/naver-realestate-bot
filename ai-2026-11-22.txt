@@ -1,5 +1,8 @@
 🤖 26년 11월 22일 일요일 AI 뉴스
 
+손정의, SK하이닉스 1조달러 인수 검토…월가에 자금 조달 타진
+https://www.aitimes.com/news/articleView.html?idxno=217653
+
 머스크의 우주 데이터센터, 첫 금융 장벽…채권단 "GPU 반입 제한"
 https://www.aitimes.com/news/articleView.html?idxno=217650
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217643
 
 트럼프 "해외에 데이터센터 짓는 미국 기업에 막대한 세금 부과"
 https://www.aitimes.com/news/articleView.html?idxno=217642
-
-미 민주당, 엔비디아의 메가스피드 조사 개입 의혹 조사 착수
-https://www.aitimes.com/news/articleView.html?idxno=217641
