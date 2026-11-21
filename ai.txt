@@ -1,5 +1,8 @@
 🤖 26년 11월 21일 토요일 AI 뉴스
 
+구글, 제미나이 앱에 GIF 생성 기능 출시…오픈AI 이어 도입
+https://www.aitimes.com/news/articleView.html?idxno=217648
+
 유튜브, 미 교육청들과 '중독 소송' 4조원 합의 추진
 https://www.aitimes.com/news/articleView.html?idxno=217647
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217640
 
 앤트로픽, 상장 이틀째 8.5% 급락...공모가까지 근접
 https://www.aitimes.com/news/articleView.html?idxno=217639
-
-앤트로픽 수학자 "클로드로 167년 난제 리만 가설 증명"...검증 착수
-https://www.aitimes.com/news/articleView.html?idxno=217638

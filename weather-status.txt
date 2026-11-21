@@ -1,1 +1,1 @@
-{"forecastDate": "2026-11-21", "attemptedAtKst": "2026-11-21T14:53:29+09:00", "status": "ok"}
+{"forecastDate": "2026-11-21", "attemptedAtKst": "2026-11-21T17:53:24+09:00", "status": "ok"}
