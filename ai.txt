@@ -1,7 +1,13 @@
 🤖 26년 11월 21일 토요일 AI 뉴스
 
+엔비디아, SEC 회계 조사에 주가 14% 폭락…시총 4위 추락
+https://www.aitimes.com/news/articleView.html?idxno=217645
+
 트럼프 "해외에 데이터센터 짓는 미국 기업에 막대한 세금 부과"
 https://www.aitimes.com/news/articleView.html?idxno=217642
+
+트럼프·시진핑, 군사 AI에 인간 통제 합의…주요 군사작전까지 적용
+https://www.aitimes.com/news/articleView.html?idxno=217640
 
 앤트로픽, 상장 이틀째 8.5% 급락...공모가까지 근접
 https://www.aitimes.com/news/articleView.html?idxno=217639
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217634
 
 구글, AI 모델 이름에 원소 주기율표 활용...다음은 '헬륨'?
 https://www.aitimes.com/news/articleView.html?idxno=217633
-
-오픈AI, 'GPT-6.2' 응답 늦게 받으면 API 요금 최대 40% 할인
-https://www.aitimes.com/news/articleView.html?idxno=217632
-
-[게시판] 셀렉트스타, 출판협회와 AI 학습용 출판데이터 공급 협력 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=217631
