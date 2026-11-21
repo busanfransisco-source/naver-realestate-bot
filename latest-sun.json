@@ -1,8 +1,20 @@
 {
-  "updated_at_kst": "2026-11-22 08:37:23",
+  "updated_at_kst": "2026-11-22 08:51:08",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 22일 일요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "[프리즘] 내년이면 총선 모드...집값·세제 여권 내부 온도차",
+      "url": "https://n.news.naver.com/mnews/article/422/0000928592"
+    },
+    {
+      "title": "[프리즘] \"일단 살고 보자\"…서울 밖으로 밀려나 집 사는 세입자들",
+      "url": "https://n.news.naver.com/mnews/article/422/0000928591"
+    },
+    {
+      "title": "[프리즘] 매물 쌓이는데 거래는 절벽…부동산 변곡점 올까",
+      "url": "https://n.news.naver.com/mnews/article/422/0000928590"
+    },
     {
       "title": "광주도시공사, 도심융합특구 예비사업시행자 지정",
       "url": "https://n.news.naver.com/mnews/article/001/0016456090"
@@ -30,18 +42,6 @@
     {
       "title": "수도권 재건축에 억대 재초환 부담금...1기 신도시도 영향권",
       "url": "https://n.news.naver.com/mnews/article/666/0000133155"
-    },
-    {
-      "title": "\"매매도 전세도 막히면 어디로 가나\"…향후 부동산 시장 판단 기준은",
-      "url": "https://n.news.naver.com/mnews/article/003/0014337647"
-    },
-    {
-      "title": "GS건설, 피지컬 AI로 고강도 작업 자동화…안전·원가 경쟁력 확보",
-      "url": "https://n.news.naver.com/mnews/article/421/0009303005"
-    },
-    {
-      "title": "1기 신도시의 반전…재건축·GTX 호재에 매매가 '쑥'",
-      "url": "https://n.news.naver.com/mnews/article/119/0003157954"
     }
   ]
 }
