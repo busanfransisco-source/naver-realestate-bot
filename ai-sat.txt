@@ -1,5 +1,8 @@
 🤖 26년 11월 21일 토요일 AI 뉴스
 
+트럼프 "해외에 데이터센터 짓는 미국 기업에 막대한 세금 부과"
+https://www.aitimes.com/news/articleView.html?idxno=217642
+
 앤트로픽, 상장 이틀째 8.5% 급락...공모가까지 근접
 https://www.aitimes.com/news/articleView.html?idxno=217639
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217630
 
 메타, AI가 기억하는 방법도 스스로 개선...AI 자기개선 연구 잇따라
 https://www.aitimes.com/news/articleView.html?idxno=217629
-
-AI가 먼저 걸렀다…스팸 데이터 개방으로 대량 악성문자·스팸전화 수신 전 차단
-https://www.aitimes.com/news/articleView.html?idxno=217628
