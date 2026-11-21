@@ -1,5 +1,11 @@
 🤖 26년 11월 21일 토요일 AI 뉴스
 
+앤트로픽, 상장 이틀째 8.5% 급락...공모가까지 근접
+https://www.aitimes.com/news/articleView.html?idxno=217639
+
+앤트로픽 수학자 "클로드로 167년 난제 리만 가설 증명"...검증 착수
+https://www.aitimes.com/news/articleView.html?idxno=217638
+
 캘리포니아주, 엔비디아에 소환장...중국 기밀 유출·투자자 기만 조사
 https://www.aitimes.com/news/articleView.html?idxno=217637
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217629
 
 AI가 먼저 걸렀다…스팸 데이터 개방으로 대량 악성문자·스팸전화 수신 전 차단
 https://www.aitimes.com/news/articleView.html?idxno=217628
-
-뉴로퓨전, AI 미래 예측 벤치마크서 공동 1위...구글·오픈AI 앞서
-https://www.aitimes.com/news/articleView.html?idxno=217627
-
-오픈AI, 코덱스로 챗GPT 성능 문제 자동 진단·수정안 작성
-https://www.aitimes.com/news/articleView.html?idxno=217626
