@@ -734,8 +734,10 @@ function runBackupNow() {
   var deferred = status && status.status === "failed" && age >= 0 && age < 600000;
   var storedWeather = read("weather-" + today + ".txt");
   var lastWeather = sameDayWeather_(storedWeather, now) ||
+    sameDayWeather_(read("weather-" + weekday + ".txt"), now) ||
+    sameDayWeather_(read("weather.txt"), now) ||
     sameDayWeather_(readCardBody_(existing, "weather").replace(WEATHER_DELAY + "\n", ""), now);
-  if (!deferred) {
+  if (!lastWeather && !deferred) {
     var attempt = now.toISOString().replace("Z", "+09:00");
     var forecast = fetchWeather_(now);
     var validated = forecast.ok && sameDayWeather_(forecast.content, now);
@@ -750,7 +752,7 @@ function runBackupNow() {
     changes["weather-status.txt"] = JSON.stringify(weatherStatus) + "\n";
   }
   if (!results.weather) {
-    results.weather = lastWeather ? WEATHER_DELAY + "\n" + lastWeather :
+    results.weather = lastWeather ||
       "당일 날씨 자료를 확보하지 못했습니다. 갱신을 기다리고 있습니다.";
   }
 

@@ -153,24 +153,25 @@ def merge_status(source, target=STATUS_PATH, now=None):
     return False
 
 
-def load_report(now=None):
+def saved_report(now=None, root=Path(".")):
+    """Use a verified same-day forecast for the rest of its KST calendar day."""
     now = now or datetime.now(KST)
-    day = now.date()
-    for path in (Path(f"weather-{day.isoformat()}.txt"),
-                 Path(f"weather-{WEEKDAY_EN[day.weekday()]}.txt"), Path("weather.txt")):
+    day = now.astimezone(KST).date()
+    root = Path(root)
+    for name in (f"weather-{day.isoformat()}.txt",
+                 f"weather-{WEEKDAY_EN[day.weekday()]}.txt", "weather.txt"):
         try:
-            report = path.read_text(encoding="utf-8").strip()
-        except OSError:
+            report = (root / name).read_text(encoding="utf-8").strip()
+        except (OSError, UnicodeError):
             continue
+        report = without_source_footer(report)
         if valid_report(report, day):
-            try:
-                status = json.loads(Path("weather-status.txt").read_text(encoding="utf-8"))
-                failed = status.get("status") == "failed" and status.get("forecastDate") == day.isoformat()
-            except (OSError, ValueError, AttributeError):
-                failed = False
-            report = without_source_footer(report)
-            return f"{DELAY_NOTICE}\n{report}" if failed else report
-    return UNAVAILABLE
+            return report
+    return ""
+
+
+def load_report(now=None):
+    return saved_report(now) or UNAVAILABLE
 
 
 def build_report(now=None):
@@ -205,6 +206,10 @@ def build_report(now=None):
 def main():
     now = datetime.now(KST)
     today = now.date().isoformat()
+    existing = saved_report(now)
+    if existing:
+        print(existing)
+        return 0
     if retry_deferred(now):
         print("날씨 재조회 보류: 최근 실패 후 10분 이내", file=sys.stderr)
         return 1

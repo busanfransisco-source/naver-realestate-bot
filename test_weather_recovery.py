@@ -42,17 +42,20 @@ class WeatherRecoveryTests(unittest.TestCase):
             clock.now.return_value = now
             return weather.main()
 
-    def test_timeout_preserves_exact_bytes_and_mtimes_and_returns_failure(self):
+    def test_saved_today_skips_fetch_even_after_a_later_failure(self):
         original = report()
         paths = [Path(p) for p in ('weather.txt', 'weather-sat.txt', 'weather-2026-11-14.txt')]
         for path in paths:
             path.write_text(original)
-        before = [(p.read_bytes(), p.stat().st_mtime_ns) for p in paths]
-        self.assertEqual(self.run_main(error=TimeoutError('timeout')), 1)
-        self.assertEqual(before, [(p.read_bytes(), p.stat().st_mtime_ns) for p in paths])
-        visible = weather.load_report(NOW)
-        self.assertEqual(visible, weather.DELAY_NOTICE + '\n' + original)
-        self.assertEqual(json.loads(Path('weather-status.txt').read_text())['status'], 'failed')
+        weather.STATUS_PATH.write_text(json.dumps(dict(status='failed', forecastDate=NOW.date().isoformat(),
+                                                       attemptedAtKst=NOW.isoformat())))
+        before = [(p.read_bytes(), p.stat().st_mtime_ns) for p in [*paths, weather.STATUS_PATH]]
+        with patch.object(weather, 'datetime', wraps=datetime) as clock, patch.object(weather, 'fetch_all_cities') as fetch:
+            clock.now.return_value = NOW
+            self.assertEqual(weather.main(), 0)
+            fetch.assert_not_called()
+        self.assertEqual(before, [(p.read_bytes(), p.stat().st_mtime_ns) for p in [*paths, weather.STATUS_PATH]])
+        self.assertEqual(weather.load_report(NOW), original)
 
     def test_success_recovers_and_clears_delay_without_extra_requests(self):
         self.run_main(error=TimeoutError())
@@ -88,7 +91,7 @@ class WeatherRecoveryTests(unittest.TestCase):
         self.assertEqual(json.loads(weather.STATUS_PATH.read_text())['status'], 'ok')
 
     def test_bad_response_never_overwrites_valid_report(self):
-        good = report()
+        good = report(NOW - timedelta(days=1))
         mutations = [response()[:-1], response(NOW.date()-timedelta(days=1))]
         for change in ('temperature', 'hours', 'null_code', 'order', 'nan'):
             data = copy.deepcopy(response())
@@ -126,11 +129,31 @@ class WeatherRecoveryTests(unittest.TestCase):
         bodies, _ = read_sources('.', NOW, only_keys=('weather',))
         self.assertEqual(bodies[BOX_KEYS.index('weather')], body)
 
+    def test_midnight_fetches_new_day_instead_of_reusing_yesterday(self):
+        Path('weather.txt').write_text(report(), encoding='utf-8')
+        Path('weather-sat.txt').write_text(report(), encoding='utf-8')
+        Path('weather-2026-11-14.txt').write_text(report(), encoding='utf-8')
+        tomorrow = NOW + timedelta(days=1)
+        self.assertEqual(self.run_main(payload=response(tomorrow.date()), now=tomorrow), 0)
+        self.assertTrue(weather.valid_report(weather.load_report(tomorrow), tomorrow.date()))
+
+    def test_cloud_reuses_valid_today_without_running_weather_group(self):
+        import time
+        from morning_cloud_prepare import _run_group
+        dated = Path('weather-2026-11-14.txt')
+        dated.write_text(report(), encoding='utf-8')
+        with patch('morning_cloud_prepare.subprocess.run') as runner:
+            group = _run_group(Path('.'), ('weather', 'weather_fetch.py', ('weather',)),
+                               NOW, time.monotonic() + 30, runner, fixed_clock=True)
+        runner.assert_not_called()
+        self.assertEqual(group['status'], 'ok')
+        self.assertEqual(group['boxes'][0]['status'], 'retained_weather')
+
     def test_partial_or_duplicate_cities_rejected(self):
         for body in (report().replace('✫제주', '✫부산'), report().replace('✫제주(☁️)➠(☁️)  9℃ ~ 15℃', '')):
             self.assertFalse(weather.valid_report(body, NOW.date()))
 
-    def test_html_copy_and_health_show_same_delay(self):
+    def test_html_copy_and_health_reuse_saved_today_without_delay(self):
         Path('weather.txt').write_text(report())
         self.run_main(error=TimeoutError())
         class FrozenDateTime(datetime):
@@ -143,10 +166,9 @@ class WeatherRecoveryTests(unittest.TestCase):
         body = soup.select_one('#ta-weather').get_text().strip()
         self.assertEqual(body, weather.load_report(NOW))
         self.assertEqual(len(soup.select('section.card')), 30)
-        self.assertIn(weather.DELAY_NOTICE, soup.select_one('#card2').get_text() if soup.select_one('#card2') else soup.select_one('#ta-weather').find_parent('section').get_text())
+        self.assertNotIn(weather.DELAY_NOTICE, body)
         row = next(r for r in briefing_health.inspect(page, NOW) if r['key'] == 'weather')
-        self.assertEqual(row['status'], 'failed')
-        self.assertIn('weather: latest collection failed; same-day forecast retained', row['issues'])
+        self.assertEqual(row['status'], 'ok')
 
     def test_status_file_uses_existing_commit_patterns(self):
         root = Path(__file__).resolve().parent

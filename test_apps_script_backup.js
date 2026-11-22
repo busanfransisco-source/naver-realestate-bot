@@ -79,7 +79,7 @@ test('backup uses observed links and dated KOSPI, and preserves the other slots 
   assert.equal((html.match(/<section class="card"/g) || []).length, 30);
 });
 
-test('complete primary quicknews wins and stored same-day weather survives a cooling period', () => {
+test('complete primary quicknews wins and same-day weather stops later collection', () => {
   const gas = loadScript();
   const primary = gas.fetchShortnews_(now).replace('검증용 기사 제목을 포함하는 원문', '검증된 기존 요약입니다.');
   const weather = '2026년 11월 17일 화요일\n\n❒ 지역별 날씨전망 ❒\n\n' +
@@ -96,7 +96,7 @@ test('complete primary quicknews wins and stored same-day weather survives a coo
   const changes = result();
   assert.equal(changes['shortnews-tue.txt'], undefined);
   assert.equal(changes['weather-2026-11-17.txt'], undefined);
-  assert.equal(gas.readCardBody_(changes['briefing.html'], 'weather'), gas.WEATHER_DELAY + '\n' + weather);
+  assert.equal(gas.readCardBody_(changes['briefing.html'] || files['briefing.html'], 'weather'), weather);
 });
 
 test('unverified fallback cannot replace the existing article body', () => {
@@ -127,4 +127,32 @@ test('backup publishes a single non-forced commit from its verified main revisio
   assert.equal(seen[1].payload.base_tree, 'base-tree');
   assert.equal(seen[1].payload.tree.length, 2);
   assert.equal(seen[3].payload.force, false);
+});
+
+test('valid same-day aliases also prevent another request after cooldown expires', () => {
+  const gas = loadScript();
+  const weather = '2026년 11월 17일 화요일\n\n❒ 지역별 날씨전망 ❒\n\n' +
+    gas.CITIES.map(city => '✫' + city[0] + '(☀️)➠(☀️)  7℃ ~ 15℃').join('\n');
+  const files = {
+    'briefing.html': page(gas),
+    'weather-tue.txt': weather,
+    'weather-status.txt': JSON.stringify({status: 'failed', failedAtKst: '2026-11-17T12:00:00+09:00'}),
+  };
+  const result = isolateBackup(gas, files);
+  gas.fetchWeather_ = () => assert.fail('same-day forecast already collected');
+  gas.runBackupNow();
+  assert.equal(gas.readCardBody_(result()['briefing.html'], 'weather'), weather);
+  assert.equal(result()['weather-status.txt'], undefined);
+});
+
+test('previous-day and partial weather allow collection and retain a failure state', () => {
+  const gas = loadScript();
+  const files = {'briefing.html': page(gas), 'weather.txt': '2026년 11월 16일 월요일\n이전 예보'};
+  const result = isolateBackup(gas, files);
+  let attempts = 0;
+  gas.fetchWeather_ = () => { attempts++; return {ok:false}; };
+  gas.runBackupNow();
+  assert.equal(attempts, 1);
+  assert.equal(JSON.parse(result()['weather-status.txt']).status, 'failed');
+  assert.match(gas.readCardBody_(result()['briefing.html'], 'weather'), /당일 날씨 자료를 확보하지 못했습니다/);
 });

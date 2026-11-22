@@ -287,7 +287,8 @@ class PipelineTests(unittest.TestCase):
     def test_export_failure_replaces_ready_with_only_that_slot_omitted(self):
         self.run_prepare()
         before = self.output.read_bytes()
-        (self.root / 'weather-wed.txt').write_text('수집 실패', encoding='utf-8')
+        for name in ('weather-wed.txt', 'weather.txt'):
+            (self.root / name).write_text('수집 실패', encoding='utf-8')
         report = self.run_prepare()
         self.assertEqual(report['status'], 'ok')
         self.assertTrue(report['websiteWritten'])
@@ -302,10 +303,11 @@ class PipelineTests(unittest.TestCase):
             return self.runner(command, **kwargs)
         report = self.run_prepare(collect=True, runner=runner)
         self.assertEqual(report['status'], 'ok', report)
-        self.assertEqual(len(calls), 6)
+        self.assertEqual(len(calls), 5)
+        self.assertNotIn('weather_fetch.py', calls)
         self.assertEqual(calls.count('market_fetch.py'), 1)
         self.assertNotIn('yes24_books.py', calls)
-        self.assertTrue(all(row['status'] == 'ok' for row in report['groups']))
+        self.assertTrue(all(row['status'] == 'ok' for row in report['groups'] if row['group'] != 'weather'))
 
     def test_failed_raw_body_restored_but_only_failed_slot_omitted_from_ready(self):
         self.run_prepare()
@@ -329,9 +331,9 @@ class PipelineTests(unittest.TestCase):
         report = self.run_prepare(collect=True, runner=runner)
         self.assertEqual(report['status'], 'ok')
         self.assertTrue(report['snapshotWritten'])
-        self.assertEqual(report['websiteKeys'], ['books'])
+        self.assertEqual(report['websiteKeys'], ['weather', 'books'])
         self.assertTrue(all(row['reason'] == 'collector_did_not_refresh_required_source'
-                            for row in report['groups']))
+                            for row in report['groups'] if row['group'] != 'weather'))
 
     def test_missing_books_write_keeps_market_daily_updates_and_weekly_cache(self):
         original = fixture_sources()[0][7].replace('10월 21일', '10월 20일')
@@ -410,7 +412,8 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(report['status'], 'ok')
         self.assertEqual(report['omittedKeys'], ['books'])
         previous = self.output.read_bytes()
-        (self.root/'weather-wed.txt').write_text('수집 실패', encoding='utf-8')
+        for name in ('weather-wed.txt', 'weather.txt'):
+            (self.root / name).write_text('수집 실패', encoding='utf-8')
         report = self.run_prepare()
         self.assertEqual(report['status'], 'ok')
         self.assertTrue(report['snapshotWritten'])
@@ -423,9 +426,9 @@ class PipelineTests(unittest.TestCase):
             raise subprocess.TimeoutExpired(command, 1, output=secret.encode())
         report = self.run_prepare(collect=True, runner=runner)
         self.assertEqual(report['status'], 'ok')
-        self.assertEqual(report['websiteKeys'], ['books'])
+        self.assertEqual(report['websiteKeys'], ['weather', 'books'])
         self.assertNotIn(secret, self.report.read_text(encoding='utf-8'))
-        self.assertTrue(all(row['reason'] == 'collector_timeout' for row in report['groups']))
+        self.assertTrue(all(row['reason'] == 'collector_timeout' for row in report['groups'] if row['group'] != 'weather'))
 
     def test_global_deadline_and_three_worker_limit(self):
         active = peak = 0

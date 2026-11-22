@@ -77,8 +77,8 @@ def read_sources(root, now, only_keys=None):
         specific = root / f'{key}-{weekday}.txt'
         body = _text(specific if specific.exists() else root / f'{key}.txt')
         if key == 'weather':
-            from weather_fetch import without_source_footer
-            body = without_source_footer(body)
+            from weather_fetch import saved_report, UNAVAILABLE
+            body = saved_report(now, root) or UNAVAILABLE
         bodies[BOX_KEYS.index(key)] = body
     # A weekly source has its own provenance clock. Never relabel this as daily.
     evidence = {}
@@ -174,9 +174,12 @@ def _run_group(root, group, now, absolute_deadline, runner, fixed_clock=False):
     issue_count = 0
     boxes = []
     try:
-        from weather_fetch import retry_deferred
+        from weather_fetch import retry_deferred, saved_report
+        retained_weather = name == "weather" and bool(saved_report(now if fixed_clock else datetime.now(KST), root))
         remaining = absolute_deadline - time.monotonic()
-        if name == 'weather' and retry_deferred(now if fixed_clock else datetime.now(KST),
+        if retained_weather:
+            pass
+        elif name == 'weather' and retry_deferred(now if fixed_clock else datetime.now(KST),
                                                 Path(root) / 'weather-status.txt'):
             reason = 'weather_retry_cooldown'
         elif remaining <= 0:
@@ -202,6 +205,7 @@ def _run_group(root, group, now, absolute_deadline, runner, fixed_clock=False):
             path = expected[key]
             changed = _mtime(path) is not None and _mtime(path) != before[key]
             issues = source_issues(key, bodies[BOX_KEYS.index(key)], evidence, checked_now)
+            retained_weather = key == 'weather' and not changed and not issues and bool(saved_report(checked_now, root))
             retained_weekly = key == 'books' and not changed and not issues
             retained_daily = False
             if key == 'shortnews' and not changed and not issues:
@@ -225,11 +229,12 @@ def _run_group(root, group, now, absolute_deadline, runner, fixed_clock=False):
             box_reason = (reason if reason == 'weather_retry_cooldown' else
                           'source_validation_failed' if issues else
                           (reason or 'collector_did_not_refresh_required_source')
-                          if not changed and not (retained_weekly or retained_daily) else None)
+                          if not changed and not (retained_weekly or retained_daily or retained_weather) else None)
             if box_reason:
                 paths = _paths(root, (name, script, (key,)), now)
                 _restore({path: data for path, data in saved.items() if path in paths})
             boxes.append(dict(key=key, status='failed' if box_reason else
+                              'retained_weather' if retained_weather else
                               'retained_weekly' if retained_weekly else
                               'retained_daily' if retained_daily else 'ok',
                               reason=box_reason, issueCount=len(issues)))

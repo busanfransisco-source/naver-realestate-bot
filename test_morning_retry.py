@@ -15,6 +15,8 @@ class MorningRetryTests(unittest.TestCase):
     def test_transient_failure_recovers_and_preserves_error_history(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory);write_sources(root)
+            for name in ('weather.txt', 'weather-wed.txt'):
+                (root/name).unlink()
             bodies, _, trend=fixture_sources()
             calls={group[1]:0 for group in cloud.GROUPS}
             def runner(command, **kwargs):
@@ -67,6 +69,8 @@ class MorningRetryTests(unittest.TestCase):
     def test_persistent_failure_is_omitted_after_three_attempts_without_blocking_healthy(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory);write_sources(root)
+            for name in ('weather.txt', 'weather-wed.txt'):
+                (root/name).unlink()
             bodies,_,trend=fixture_sources()
             calls=[]
             def runner(command,**kwargs):
@@ -98,7 +102,8 @@ class MorningRetryTests(unittest.TestCase):
                 return subprocess.CompletedProcess(command,1)
             report=cloud.prepare(root,root/'ready.json',root/'report.json',collect=True,now=NOW,
                                  runner=runner,sleeper=sleep,deadline_seconds=1)
-            self.assertEqual(len(calls),6)
+            self.assertEqual(len(calls),5)
+            self.assertNotIn('weather_fetch.py', calls)
             sleep.assert_not_called()
             self.assertTrue(report['hadErrors'])
 
