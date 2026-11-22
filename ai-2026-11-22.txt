@@ -1,5 +1,8 @@
 🤖 26년 11월 22일 일요일 AI 뉴스
 
+미국 AI 칩 규제에 중국 기업들 잇단 타격…WSJ "엔비디아 금단 현상"
+https://www.aitimes.com/news/articleView.html?idxno=217660
+
 챗GPT·클로드, 모바일 앱 나란히 개편…AI 에이전트 기능 전면에
 https://www.aitimes.com/news/articleView.html?idxno=217654
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217646
 
 엔비디아, SEC 회계 조사에 주가 14% 폭락…시총 4위 추락
 https://www.aitimes.com/news/articleView.html?idxno=217645
-
-"젠슨 황, 20여년 전부터 직원들에게 폭언·위협"…불만 제기 이어져
-https://www.aitimes.com/news/articleView.html?idxno=217644
