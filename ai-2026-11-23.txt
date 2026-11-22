@@ -1,5 +1,8 @@
 🤖 26년 11월 23일 월요일 AI 뉴스
 
+오픈AI "사전학습으로 AI 지능 급성장…RSI 대비해 개발 제한해야"
+https://www.aitimes.com/news/articleView.html?idxno=217665
+
 알트먼, 메타의 딥페이크 영상에 등장…메타 "정책 위반 아니다"
 https://www.aitimes.com/news/articleView.html?idxno=217664
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217657
 
 싱킹머신즈, 노트북서 구동하는 264억 매개변수 '잉클링 2 미니' 공개
 https://www.aitimes.com/news/articleView.html?idxno=217656
-
-오픈AI, 음성 모델 'GPT-라이브-1.1' 출시…대기 요금 60% 인하
-https://www.aitimes.com/news/articleView.html?idxno=217655
