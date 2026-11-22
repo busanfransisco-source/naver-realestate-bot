@@ -1,2 +1,3 @@
-quicknews diagnostics: {'empty_or_rejected_lead': 11} budget_exhausted False
-shortnews candidate: news 19, indicators 6, accepted True
+quicknews diagnostics: {'ConnectTimeout': 7} budget_exhausted False
+shortnews candidate: news 0, indicators 6, accepted False
+QUICKNEWS_COLLECTION_FAILED: previous files and source dates preserved
