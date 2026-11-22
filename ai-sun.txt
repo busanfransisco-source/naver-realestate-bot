@@ -1,5 +1,11 @@
 🤖 26년 11월 22일 일요일 AI 뉴스
 
+젠슨 황의 '악수 거래', 엔비디아 경영 위험으로…공급망 유지 시험대
+https://www.aitimes.com/news/articleView.html?idxno=217663
+
+[AI 이슈트렌드] 수능 AI 부정행위 논란 속 한덕수 판결 주목…앤트로픽 상장에도 기술주 약세
+https://www.aitimes.com/news/articleView.html?idxno=217662
+
 오라클 "오픈AI 데이터센터 계약 자금 확보 완료"…추가 조달 우려 반박
 https://www.aitimes.com/news/articleView.html?idxno=217661
 
@@ -12,6 +18,9 @@ https://www.aitimes.com/news/articleView.html?idxno=217659
 앨리스 황 칩 거래망 추적하니…중국 게임업체·캄보디아 범죄 조직 등장
 https://www.aitimes.com/news/articleView.html?idxno=217658
 
+오픈AI "AI가 연구 작업 절반 스스로 완료"…7개월 만에 성공률 2배
+https://www.aitimes.com/news/articleView.html?idxno=217657
+
 싱킹머신즈, 노트북서 구동하는 264억 매개변수 '잉클링 2 미니' 공개
 https://www.aitimes.com/news/articleView.html?idxno=217656
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217655
 
 챗GPT·클로드, 모바일 앱 나란히 개편…AI 에이전트 기능 전면에
 https://www.aitimes.com/news/articleView.html?idxno=217654
-
-손정의, SK하이닉스 1조달러 인수 검토…월가에 자금 조달 타진
-https://www.aitimes.com/news/articleView.html?idxno=217653
-
-LGU+ 조직개편..."AI 사업 성과 창출 가속"
-https://www.aitimes.com/news/articleView.html?idxno=217651
-
-머스크의 우주 데이터센터, 첫 금융 장벽…채권단 "GPU 반입 제한"
-https://www.aitimes.com/news/articleView.html?idxno=217650
