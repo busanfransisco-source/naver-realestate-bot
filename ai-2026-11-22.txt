@@ -1,5 +1,8 @@
 🤖 26년 11월 22일 일요일 AI 뉴스
 
+오라클 "오픈AI 데이터센터 계약 자금 확보 완료"…추가 조달 우려 반박
+https://www.aitimes.com/news/articleView.html?idxno=217661
+
 미국 AI 칩 규제에 중국 기업들 잇단 타격…WSJ "엔비디아 금단 현상"
 https://www.aitimes.com/news/articleView.html?idxno=217660
 
@@ -8,6 +11,12 @@ https://www.aitimes.com/news/articleView.html?idxno=217659
 
 앨리스 황 칩 거래망 추적하니…중국 게임업체·캄보디아 범죄 조직 등장
 https://www.aitimes.com/news/articleView.html?idxno=217658
+
+싱킹머신즈, 노트북서 구동하는 264억 매개변수 '잉클링 2 미니' 공개
+https://www.aitimes.com/news/articleView.html?idxno=217656
+
+오픈AI, 음성 모델 'GPT-라이브-1.1' 출시…대기 요금 60% 인하
+https://www.aitimes.com/news/articleView.html?idxno=217655
 
 챗GPT·클로드, 모바일 앱 나란히 개편…AI 에이전트 기능 전면에
 https://www.aitimes.com/news/articleView.html?idxno=217654
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217651
 
 머스크의 우주 데이터센터, 첫 금융 장벽…채권단 "GPU 반입 제한"
 https://www.aitimes.com/news/articleView.html?idxno=217650
-
-AI 작업 능력, 6개월 만에 16시간→40시간…"판단력 여전히 한계"
-https://www.aitimes.com/news/articleView.html?idxno=217649
-
-구글, 제미나이 앱에 GIF 생성 기능 출시…오픈AI 이어 도입
-https://www.aitimes.com/news/articleView.html?idxno=217648
-
-유튜브, 미 교육청들과 '중독 소송' 4조원 합의 추진
-https://www.aitimes.com/news/articleView.html?idxno=217647
