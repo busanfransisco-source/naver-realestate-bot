@@ -1,5 +1,8 @@
 🤖 26년 11월 23일 월요일 AI 뉴스
 
+비드래프트, AI 보안 커널 공개 검증…70명 참가해 공격 사례 245건 제출
+https://www.aitimes.com/news/articleView.html?idxno=217670
+
 오픈AI "사전학습으로 AI 지능 급성장…RSI 대비해 개발 제한해야"
 https://www.aitimes.com/news/articleView.html?idxno=217665
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217658
 
 오픈AI "AI가 연구 작업 절반 스스로 완료"…7개월 만에 성공률 2배
 https://www.aitimes.com/news/articleView.html?idxno=217657
-
-싱킹머신즈, 노트북서 구동하는 264억 매개변수 '잉클링 2 미니' 공개
-https://www.aitimes.com/news/articleView.html?idxno=217656
