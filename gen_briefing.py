@@ -44,6 +44,9 @@ def read_section_text(prefix, weekday, now=None):
     if prefix == 'shortnews':
         from quicknews_state import load_report
         return load_report(now=now)
+    if prefix == 'fortune':
+        from fortune_fetch import load_report
+        return load_report(now)
     if prefix == 'weather':
         from weather_fetch import load_report
         return load_report(now)

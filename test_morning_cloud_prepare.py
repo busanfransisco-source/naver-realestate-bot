@@ -303,14 +303,17 @@ class PipelineTests(unittest.TestCase):
             return self.runner(command, **kwargs)
         report = self.run_prepare(collect=True, runner=runner)
         self.assertEqual(report['status'], 'ok', report)
-        self.assertEqual(len(calls), 5)
+        self.assertEqual(len(calls), 4)
+        self.assertNotIn('fortune_fetch.py', calls)
         self.assertNotIn('weather_fetch.py', calls)
         self.assertEqual(calls.count('market_fetch.py'), 1)
         self.assertNotIn('yes24_books.py', calls)
-        self.assertTrue(all(row['status'] == 'ok' for row in report['groups'] if row['group'] != 'weather'))
+        self.assertTrue(all(row['status'] == 'ok' for row in report['groups'] if row['group'] not in ('weather', 'fortune')))
 
     def test_failed_raw_body_restored_but_only_failed_slot_omitted_from_ready(self):
         self.run_prepare()
+        for name in ('fortune.txt', 'fortune-wed.txt'):
+            (self.root / name).write_text('수집 실패', encoding='utf-8')
         previous = self.output.read_bytes()
         original = (self.root / 'fortune.txt').read_bytes()
         def runner(command, **kwargs):
@@ -331,9 +334,9 @@ class PipelineTests(unittest.TestCase):
         report = self.run_prepare(collect=True, runner=runner)
         self.assertEqual(report['status'], 'ok')
         self.assertTrue(report['snapshotWritten'])
-        self.assertEqual(report['websiteKeys'], ['weather', 'books'])
+        self.assertEqual(report['websiteKeys'], ['fortune', 'weather', 'books'])
         self.assertTrue(all(row['reason'] == 'collector_did_not_refresh_required_source'
-                            for row in report['groups'] if row['group'] != 'weather'))
+                            for row in report['groups'] if row['group'] not in ('weather', 'fortune')))
 
     def test_missing_books_write_keeps_market_daily_updates_and_weekly_cache(self):
         original = fixture_sources()[0][7].replace('10월 21일', '10월 20일')
@@ -426,9 +429,9 @@ class PipelineTests(unittest.TestCase):
             raise subprocess.TimeoutExpired(command, 1, output=secret.encode())
         report = self.run_prepare(collect=True, runner=runner)
         self.assertEqual(report['status'], 'ok')
-        self.assertEqual(report['websiteKeys'], ['weather', 'books'])
+        self.assertEqual(report['websiteKeys'], ['fortune', 'weather', 'books'])
         self.assertNotIn(secret, self.report.read_text(encoding='utf-8'))
-        self.assertTrue(all(row['reason'] == 'collector_timeout' for row in report['groups'] if row['group'] != 'weather'))
+        self.assertTrue(all(row['reason'] == 'collector_timeout' for row in report['groups'] if row['group'] not in ('weather', 'fortune')))
 
     def test_global_deadline_and_three_worker_limit(self):
         active = peak = 0

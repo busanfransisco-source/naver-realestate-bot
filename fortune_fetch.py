@@ -14,6 +14,7 @@ import re
 import sys
 from datetime import datetime, timezone, timedelta
 from urllib.parse import quote
+from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
@@ -32,6 +33,44 @@ HEADERS = {
 BASE = "https://askjiyun.com/"
 ANIMAL_HEADING_RE = re.compile(r"^〈[^〉]+띠〉$")
 SCORE_LINE_RE = re.compile(r"^운세지수\s*\d+%")
+ANIMALS = ("쥐", "소", "범", "토끼", "용", "뱀", "말", "양", "원숭이", "닭", "개", "돼지")
+FALLBACK_BASE = "https://www.news2day.co.kr"
+UNAVAILABLE = "당일 운세 자료를 확보하지 못했습니다. 갱신을 기다리고 있습니다."
+
+
+def valid_report(report, day):
+    from morning_briefing_contract import _body_issues
+    if _body_issues("fortune", report, day, {}):
+        return False
+    blocks = re.split(r"(?=^〈[^〉]+띠〉$)", report, flags=re.M)[1:]
+    if len(blocks) != len(ANIMALS):
+        return False
+    for block, animal in zip(blocks, ANIMALS):
+        match = re.fullmatch(
+            r"〈" + animal + r"띠〉\s*\n(.+?)\n\s*운세지수\s*(\d+)%\.\s*"
+            r"금전\s*(\d+)\s+건강\s*(\d+)\s+애정\s*(\d+)\s*",
+            block, re.S)
+        if not match or not match[1].strip() or any(not 0 <= int(value) <= 100 for value in match.groups()[1:]):
+            return False
+    return True
+
+
+def saved_report(now=None, root="."):
+    now = now or datetime.now(KST)
+    root = Path(root)
+    for name in (f"fortune-{now.date().isoformat()}.txt",
+                 f"fortune-{WEEKDAY_EN[now.weekday()]}.txt", "fortune.txt"):
+        try:
+            body = (root / name).read_text(encoding="utf-8").strip()
+        except (OSError, UnicodeError):
+            continue
+        if valid_report(body, now.date()):
+            return body
+    return ""
+
+
+def load_report(now=None, root="."):
+    return saved_report(now, root) or UNAVAILABLE
 
 
 def format_animal_blocks(lines):
@@ -92,15 +131,25 @@ def find_today_document_srl(month, day):
     return best_srl, title_needle
 
 
-def fetch_document_text(srl, title_needle):
+def fetch_document_text(srl, title_needle, now=None):
     url = f"{BASE}?mid=today&document_srl={srl}"
     resp = requests.get(url, headers=HEADERS, timeout=20)
     resp.raise_for_status()
     resp.encoding = "utf-8"
     soup = BeautifulSoup(resp.text, "html.parser")
 
+    article = soup.select_one(".xe_content")
+    if article is None or title_needle not in article.get_text(" ", strip=True):
+        raise ValueError("운세 원문 제목 또는 본문 불일치")
+    posted = soup.select_one('.date[title="등록일"] strong')
+    if posted is None:
+        raise ValueError("운세 원문 게시일 누락")
+    posted_day = datetime.strptime(posted.get_text(strip=True), "%Y.%m.%d").date()
+    if not 0 <= ((now or datetime.now(KST)).date() - posted_day).days <= 21:
+        raise ValueError("운세 원문 게시일이 오래되었거나 미래입니다")
+
     # 구분자를 넣지 않고(빈 문자열) 이어붙인다.
-    full_text = soup.get_text("")
+    full_text = article.get_text("")
     full_text = re.sub(r"[ \t]+", " ", full_text)
 
     # 이 사이트는 숫자/기호를 낱개 텍스트 노드로 쪼개서 서버가 내려주고,
@@ -135,7 +184,7 @@ def fetch_document_text(srl, title_needle):
     if start_idx != -1 and end_idx != -1 and end_idx > start_idx:
         body = full_text[start_idx:end_idx]
     else:
-        body = full_text
+        body = full_text[start_idx:] if start_idx != -1 else ""
 
     # "...받는다.운세지수" 처럼 마지막 문장 뒤 공백까지 같이 지워진 경우 복원
     body = re.sub(r"\.(운세지수)", r". \1", body)
@@ -152,37 +201,100 @@ def fetch_document_text(srl, title_needle):
     return lunar_line, body
 
 
-def build_report():
-    now = datetime.now(KST)
-    # 사용자 레퍼런스 포맷: "오늘의 운세, 7월 12일" + "[음력 5월 28일] 일진: 정해(丁亥)"
-    header_line1 = f"오늘의 운세, {now.month}월 {now.day}일"
+def fetch_syndicated_report(now):
+    """Read the same Ji-yun forecast from its independently hosted publisher."""
+    response = requests.get(
+        FALLBACK_BASE + "/rest/search",
+        params={"searchText": "지윤철학원", "searchType": "all",
+                "from": (now.date() - timedelta(days=1)).isoformat(),
+                "to": now.date().isoformat(), "page": 1, "sort": "date"},
+        headers=HEADERS, timeout=12)
+    response.raise_for_status()
+    title_day = f"{now.year}년 {now.month}월 {now.day}일"
+    data = response.json()
+    rows = data.get("list") if isinstance(data, dict) else None
+    if not isinstance(rows, list):
+        raise ValueError("예비 제공처 검색 응답 불일치")
+    candidates = []
+    for row in rows:
+        if not isinstance(row, dict) or not isinstance(row.get("title"), str):
+            continue
+        title = BeautifulSoup(row.get("title", ""), "html.parser").get_text(" ", strip=True)
+        if (f"[지윤철학원의 오늘의 운세] {title_day} " not in title
+                or not re.fullmatch(r"\d{14}", str(row.get("id", "")))):
+            continue
+        try:
+            released = datetime.fromisoformat(row["releaseDate"])
+        except (KeyError, TypeError, ValueError):
+            continue
+        if released.tzinfo is not None and released <= now:
+            candidates.append(row)
+    if not candidates:
+        raise ValueError("예비 제공처의 당일 운세 없음")
+    # This is the article URL mapping used by the publisher's own search page.
+    row = max(candidates, key=lambda entry: entry["releaseDate"])
+    response = requests.get(FALLBACK_BASE + "/article/" + row["id"], headers=HEADERS, timeout=12)
+    response.raise_for_status()
+    response.encoding = "utf-8"
+    soup = BeautifulSoup(response.text, "html.parser")
+    article = soup.select_one(".view_con")
+    if not soup.title or title_day not in soup.title.get_text() or article is None:
+        raise ValueError("예비 제공처 원문 날짜/본문 불일치")
+    text = article.get_text(" ", strip=True)
+    match = re.search(re.escape(title_day) + r"\s*[^()]*\(음력\s*(\d+)월\s*(\d+)일\)\s*일진:\s*(\S+)", text)
+    if not match:
+        raise ValueError("예비 제공처 원문 날짜/음력 누락")
+    lunar = f"[음력 {match[1]}월 {match[2]}일] 일진: {match[3]}"
+    lines = []
+    for paragraph in article.find_all("p"):
+        text = re.sub(r"\s+", " ", paragraph.get_text(" ", strip=True))
+        match = re.fullmatch(r"오늘의\s*(쥐|소|호랑이|범|토끼|용|뱀|말|양|원숭이|닭|개|돼지)\([^()]+\)띠 운세\s*->\s*(.+?)\s*(운세지수\s*\d+%.*)", text)
+        if match:
+            animal = "범" if match[1] == "호랑이" else match[1]
+            lines.extend([f"〈{animal}띠〉", match[2], match[3]])
+    return f"오늘의 운세, {now.month}월 {now.day}일\n{lunar}\n\n" + format_animal_blocks(lines)
 
+
+def build_report(now=None):
+    now = now or datetime.now(KST)
+    header = f"오늘의 운세, {now.month}월 {now.day}일"
     try:
-        srl, title_needle = find_today_document_srl(now.month, now.day)
-        if not srl:
-            return header_line1 + "\n\n(오늘 날짜의 운세 글을 아직 찾지 못했습니다.)"
-        lunar_line, body = fetch_document_text(srl, title_needle)
-        if not body:
-            return header_line1 + "\n\n(오늘 날짜의 운세 글을 찾았지만 본문을 추출하지 못했습니다.)"
-        header = header_line1 + ("\n" + lunar_line if lunar_line else "")
-        return header + "\n\n" + body
-    except Exception as e:
-        return header_line1 + f"\n\n(운세 데이터를 가져오지 못했습니다: {e})"
+        srl, title = find_today_document_srl(now.month, now.day)
+        if srl:
+            lunar, body = fetch_document_text(srl, title, now)
+            report = header + ("\n" + lunar if lunar else "") + "\n\n" + body
+            if valid_report(report, now.date()):
+                return report
+    except (requests.RequestException, ValueError, TypeError, KeyError):
+        pass
+    report = fetch_syndicated_report(now)
+    if not valid_report(report, now.date()):
+        raise ValueError("당일 12개 띠 운세 검증 실패")
+    return report
 
 
 def main():
-    report = build_report()
     now = datetime.now(KST)
-    today = now.strftime("%Y-%m-%d")
-    dated_file = f"fortune-{today}.txt"
-    weekday_file = f"fortune-{WEEKDAY_EN[now.weekday()]}.txt"
-    # 요일별 고정 파일명으로 저장: 매일 URL이 안 바뀌면서도(provenance 문제 없음),
-    # 같은 URL을 일주일에 한 번만 재사용하므로 캐시가 오래 굳어버리는 문제를 피한다.
-    for fname in ("fortune.txt", dated_file, weekday_file):
-        with open(fname, "w", encoding="utf-8") as f:
-            f.write(report)
+    existing = saved_report(now)
+    if existing:
+        print(existing)
+        return 0
+    try:
+        report = build_report(now)
+        if datetime.now(KST).date() != now.date() or not valid_report(report, now.date()):
+            raise ValueError("운세 수집 날짜/본문 불일치")
+    except (requests.RequestException, ValueError, TypeError, KeyError) as exc:
+        print(f"운세 수집 실패: {type(exc).__name__}; 기존 원자료 보존", file=sys.stderr)
+        return 1
+    for name in ("fortune.txt", f"fortune-{now.date().isoformat()}.txt",
+                 f"fortune-{WEEKDAY_EN[now.weekday()]}.txt"):
+        target = Path(name)
+        temporary = target.with_name(target.name + ".tmp")
+        temporary.write_text(report, encoding="utf-8")
+        temporary.replace(target)
     print(report)
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
