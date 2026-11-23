@@ -1,5 +1,8 @@
 🤖 26년 11월 24일 화요일 AI 뉴스
 
+황 복귀에 엔비디아 직원들 환호…머스크·알트먼도 환영
+https://www.aitimes.com/news/articleView.html?idxno=217711
+
 젠슨 황 복귀에 엔비디아 주가 31% 급등…AI 관련주 동반 반등
 https://www.aitimes.com/news/articleView.html?idxno=217709
 
@@ -15,7 +18,7 @@ https://www.aitimes.com/news/articleView.html?idxno=217706
 AI 에이전트가 CPU 아키텍처 직접 설계…전력 효율 4.59배 주장
 https://www.aitimes.com/news/articleView.html?idxno=217705
 
-뉴럴링크 뇌 칩 환자, 손가락 움직임 상상해 &apos;GTA 6&apos; 조작
+뉴럴링크 뇌 칩 환자, 손가락 움직임 상상해 'GTA 6' 조작
 https://www.aitimes.com/news/articleView.html?idxno=217704
 
 오픈AI 연구책임자 "AGI 달성까지 80% 진전…RSI는 25~50% 수준"
@@ -24,8 +27,5 @@ https://www.aitimes.com/news/articleView.html?idxno=217703
 "AI 컨텍스트 창만 키워선 오답 못 줄여"…정보 선별이 핵심
 https://www.aitimes.com/news/articleView.html?idxno=217701
 
-엔비디아, 차량에서 직접 추론하는 자율주행 모델 &apos;알파마요 2 엣지&apos; 공개
+엔비디아, 차량에서 직접 추론하는 자율주행 모델 '알파마요 2 엣지' 공개
 https://www.aitimes.com/news/articleView.html?idxno=217700
-
-머스크, AI 업계 자금난 재차 경고..."2027년 수천억달러 추가 필요"
-https://www.aitimes.com/news/articleView.html?idxno=217699
