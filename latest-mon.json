@@ -1,8 +1,24 @@
 {
-  "updated_at_kst": "2026-11-23 11:57:05",
+  "updated_at_kst": "2026-11-23 12:16:30",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 23일 월요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "유엔한국협회, 부영태평빌딩서 첫 대학생 토론대회",
+      "url": "https://n.news.naver.com/mnews/article/277/0005846424"
+    },
+    {
+      "title": "재초환·보유세 덮쳐… “정부-시장 집값 대결”",
+      "url": "https://n.news.naver.com/mnews/article/021/0002834800"
+    },
+    {
+      "title": "한국형 위성항법시스템, 제작 전 최종 설계 검토…2029년 첫 발사",
+      "url": "https://n.news.naver.com/mnews/article/421/0009304784"
+    },
+    {
+      "title": "세종 수자인 브랜드타운 공급… 2191가구 첫 선도지구 대단지",
+      "url": "https://n.news.naver.com/mnews/article/021/0002834775"
+    },
     {
       "title": "IPARK현산, 부산 수안1구역 재개발 수주…3천763억 규모",
       "url": "https://n.news.naver.com/mnews/article/001/0016458057"
@@ -26,22 +42,6 @@
     {
       "title": "IPARK현대산업개발, 부산 수안1구역 재개발 사업 수주",
       "url": "https://n.news.naver.com/mnews/article/018/0006414093"
-    },
-    {
-      "title": "‘건립 100년’ 서울도서관 리모델링…내일부터 설계공모",
-      "url": "https://n.news.naver.com/mnews/article/015/0005357010"
-    },
-    {
-      "title": "이형일 \"종부세 거주-비거주 차등 입장 그대로\"…이번주 조세소위서 논의",
-      "url": "https://n.news.naver.com/mnews/article/421/0009304704"
-    },
-    {
-      "title": "이형일 \"석유 최고가격제 내년에도 유지 필요…공적주택 119만 호 공급\"",
-      "url": "https://n.news.naver.com/mnews/article/421/0009304693"
-    },
-    {
-      "title": "한국건설경영협회, 건설기술연구 우수사례 18건 시상",
-      "url": "https://n.news.naver.com/mnews/article/016/0002727117"
     }
   ]
 }
