@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-11-23 21:12:40",
+  "updated_at_kst": "2026-11-23 23:53:48",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 23일 월요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "LH, 공공주택 4232가구 공모 일주일 만에 연기",
+      "url": "https://n.news.naver.com/mnews/article/277/0005846672"
+    },
     {
       "title": "문래 해링턴 플레이스 특별공급 경쟁률 5.3대 1…최고 분양가 18억",
       "url": "https://n.news.naver.com/mnews/article/421/0009305853"
@@ -38,10 +42,6 @@
     {
       "title": "\"재초환 폐지하라\" 분당 양지마을 조합원 수십명 피켓 든다",
       "url": "https://n.news.naver.com/mnews/article/014/0005608546"
-    },
-    {
-      "title": "목동8단지 수주 나선 대우건설 '써밋 디아보' 홍보관",
-      "url": "https://n.news.naver.com/mnews/article/014/0005608545"
     }
   ]
 }
