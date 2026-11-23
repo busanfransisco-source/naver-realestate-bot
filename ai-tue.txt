@@ -9,6 +9,9 @@ https://www.aitimes.com/news/articleView.html?idxno=217708
 젠슨 황, 사임 11일 만에 엔비디아 CEO 복귀…트럼프 직접 개입
 https://www.aitimes.com/news/articleView.html?idxno=217707
 
+[기고] AI가 리만 가설을 풀었다면 수학은 끝난 것인가
+https://www.aitimes.com/news/articleView.html?idxno=217706
+
 AI 에이전트가 CPU 아키텍처 직접 설계…전력 효율 4.59배 주장
 https://www.aitimes.com/news/articleView.html?idxno=217705
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217700
 
 머스크, AI 업계 자금난 재차 경고..."2027년 수천억달러 추가 필요"
 https://www.aitimes.com/news/articleView.html?idxno=217699
-
-구글 AI 검색에 애플·레딧도 영향…검색 광고 수익성 저하
-https://www.aitimes.com/news/articleView.html?idxno=217698
