@@ -1,1 +1,1 @@
-{"attemptedAtKst": "2026-11-23T10:16:29.927519+09:00", "status": "failed", "issues": ["quicknews: insufficient news coverage", "quicknews: no valid news articles"], "collectionDiagnostics": {"ConnectTimeout": 7}, "budgetExhausted": false, "preservedSha256": "712354d1f40b93e4025bb7a2a44ac3a549997f4b377ffb17d0e34b3436f08d37"}
+{"attemptedAtKst": "2026-11-23T10:20:19.713076+09:00", "status": "ok", "issues": [], "collectionDiagnostics": {"empty_or_rejected_lead": 13}, "budgetExhausted": false}
