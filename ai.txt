@@ -1,31 +1,31 @@
 🤖 26년 11월 23일 월요일 AI 뉴스
 
-AI 데이터센터 IPO 잇단 차질…데이원도 50억달러 미국 상장 보류
-https://www.aitimes.com/news/articleView.html?idxno=217688
+AI 에이전트가 CPU 아키텍처 직접 설계…전력 효율 4.59배 주장
+https://www.aitimes.com/news/articleView.html?idxno=217705
 
-래블업, 미국 시장 겨냥 현지 인사이트 엔터프라이즈와 맞손
-https://www.aitimes.com/news/articleView.html?idxno=217685
+뉴럴링크 뇌 칩 환자, 손가락 움직임 상상해 'GTA 6' 조작
+https://www.aitimes.com/news/articleView.html?idxno=217704
 
-중국 AI 열풍 급랭...5개월간 기술주 시총 2300조 증발
-https://www.aitimes.com/news/articleView.html?idxno=217683
+오픈AI 연구책임자 "AGI 달성까지 80% 진전…RSI는 25~50% 수준"
+https://www.aitimes.com/news/articleView.html?idxno=217703
 
-AI 안경 '몰래 촬영' 막는다…촬영 표시 탑재·사적 촬영 고지 의무화 법안 발의
-https://www.aitimes.com/news/articleView.html?idxno=217681
+"AI 컨텍스트 창만 키워선 오답 못 줄여"…정보 선별이 핵심
+https://www.aitimes.com/news/articleView.html?idxno=217701
 
-캘리포니아, 엔비디아 형사법 위반 가능성 조사...불법 수익 환수도 검토
-https://www.aitimes.com/news/articleView.html?idxno=217680
+엔비디아, 차량에서 직접 추론하는 자율주행 모델 '알파마요 2 엣지' 공개
+https://www.aitimes.com/news/articleView.html?idxno=217700
 
-앨리스 황 뒤 숨은 실세 기소...엔비디아 칩 중국 유출 거래망 주도
-https://www.aitimes.com/news/articleView.html?idxno=217678
+머스크, AI 업계 자금난 재차 경고..."2027년 수천억달러 추가 필요"
+https://www.aitimes.com/news/articleView.html?idxno=217699
 
-미 재무장관, 젠슨 황 복귀에 "수출 규제 위반 책임부터 확인해야"
-https://www.aitimes.com/news/articleView.html?idxno=217675
+구글 AI 검색에 애플·레딧도 영향…검색 광고 수익성 저하
+https://www.aitimes.com/news/articleView.html?idxno=217698
 
-비드래프트, AI 보안 커널 공개 검증…70명 참가해 공격 사례 245건 제출
-https://www.aitimes.com/news/articleView.html?idxno=217670
+오픈AI 이사 "1년 내 AI 재앙 위험 4%→10% 수준"…개발 중단 촉구
+https://www.aitimes.com/news/articleView.html?idxno=217696
 
-오픈AI "사전학습으로 AI 지능 급성장…RSI 대비해 개발 제한해야"
-https://www.aitimes.com/news/articleView.html?idxno=217665
+[게시판] AI 지팡이·노인용 로봇 등...LG CNS, 고교생 대상 AI 경연 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=217695
 
-알트먼, 메타의 딥페이크 영상에 등장…메타 "정책 위반 아니다"
-https://www.aitimes.com/news/articleView.html?idxno=217664
+'네온'이 3주 만에 '카본'을 추월한 이유…구글 "3개 세대 동시 개발"
+https://www.aitimes.com/news/articleView.html?idxno=217693

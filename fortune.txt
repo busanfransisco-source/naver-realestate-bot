@@ -1,3 +1,3 @@
 오늘의 운세, 11월 23일
 
-(운세 데이터를 가져오지 못했습니다: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+(운세 데이터를 가져오지 못했습니다: HTTPSConnectionPool(host='askjiyun.com', port=443): Max retries exceeded with url: /?mid=today&search_target=title&search_keyword=11%EC%9B%94%2023%EC%9D%BC (Caused by ConnectTimeoutError(<HTTPSConnection(host='askjiyun.com', port=443) at 0x78c1fab43150>, 'Connection to askjiyun.com timed out. (connect timeout=20)')))
