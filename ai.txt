@@ -1,5 +1,14 @@
 🤖 26년 11월 24일 화요일 AI 뉴스
 
+LGU+, 데이터독과 통화 에이전트 '익시오' 안정성 높인다
+https://www.aitimes.com/news/articleView.html?idxno=217719
+
+삼성전자, 2027 임원인사…반도체 인재 중용 ‘성과주의’ 재확인
+https://www.aitimes.com/news/articleView.html?idxno=217717
+
+한컴, 공공기관 HWP 문서 → HWPX 변환 지원
+https://www.aitimes.com/news/articleView.html?idxno=217716
+
 황 복귀에 엔비디아 직원들 환호…머스크·알트먼도 환영
 https://www.aitimes.com/news/articleView.html?idxno=217711
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217705
 
 뉴럴링크 뇌 칩 환자, 손가락 움직임 상상해 'GTA 6' 조작
 https://www.aitimes.com/news/articleView.html?idxno=217704
-
-오픈AI 연구책임자 "AGI 달성까지 80% 진전…RSI는 25~50% 수준"
-https://www.aitimes.com/news/articleView.html?idxno=217703
-
-"AI 컨텍스트 창만 키워선 오답 못 줄여"…정보 선별이 핵심
-https://www.aitimes.com/news/articleView.html?idxno=217701
-
-엔비디아, 차량에서 직접 추론하는 자율주행 모델 '알파마요 2 엣지' 공개
-https://www.aitimes.com/news/articleView.html?idxno=217700
