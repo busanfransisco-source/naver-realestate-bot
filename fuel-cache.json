@@ -1,15 +1,15 @@
 {
-  "updatedAt": "2026-11-24T13:31:09.119495+09:00",
+  "updatedAt": "2026-11-24T13:52:03.765533+09:00",
   "fuels": {
     "OIL_GSL": {
       "label": "휘발유",
-      "value": 1853.94,
-      "change": -0.24
+      "value": 1854.0,
+      "change": -0.18
     },
     "OIL_LO": {
       "label": "경유",
-      "value": 1840.71,
-      "change": -0.5
+      "value": 1841.01,
+      "change": -0.2
     }
   }
 }
