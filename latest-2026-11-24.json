@@ -1,8 +1,20 @@
 {
-  "updated_at_kst": "2026-11-24 14:23:58",
+  "updated_at_kst": "2026-11-24 14:36:13",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 24일 화요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "삼성물산은 미래사업·코오롱글로벌은 내실…새 수장 선임에 담긴 생존 전략은?",
+      "url": "https://n.news.naver.com/mnews/article/119/0003158863"
+    },
+    {
+      "title": "DL, 국내 ESG 평가 6년째 ‘A’… 글로벌 등급도 한 단계 상승",
+      "url": "https://n.news.naver.com/mnews/article/029/0003060844"
+    },
+    {
+      "title": "전국 아파트 청약 경쟁률, 7개월 만에 반등…청주 2개 단지에 청약 수요 86% 쏠려",
+      "url": "https://n.news.naver.com/mnews/article/029/0003060842"
+    },
     {
       "title": "추미애 \"접경지역 희생 보상해야\"…포천~철원 고속도로 '예타' 통과 호소",
       "url": "https://n.news.naver.com/mnews/article/003/0014342213"
@@ -30,18 +42,6 @@
     {
       "title": "집값 상승 기대 8개월만에 최대폭 하락",
       "url": "https://n.news.naver.com/mnews/article/001/0016460651"
-    },
-    {
-      "title": "집값 상승 기대 8개월만에 최대폭 하락",
-      "url": "https://n.news.naver.com/mnews/article/001/0016460650"
-    },
-    {
-      "title": "집값 상승 기대 8개월만에 최대폭 하락",
-      "url": "https://n.news.naver.com/mnews/article/001/0016460649"
-    },
-    {
-      "title": "집값 상승 기대 8개월만에 최대폭 하락",
-      "url": "https://n.news.naver.com/mnews/article/001/0016460648"
     }
   ]
 }
