@@ -1,31 +1,31 @@
 🤖 26년 11월 24일 화요일 AI 뉴스
 
-오픈AI, 챗GPT에 'GPT-6.2 솔' 탑재…지시 수행·이미지 이해 강화
-https://www.aitimes.com/news/articleView.html?idxno=217725
+삼성SDS, 임원 인사 AX 진용 재편…부사장 4명·상무 6명 승진
+https://www.aitimes.com/news/articleView.html?idxno=217750
 
-미국, 메가스피드 블랙리스트 등재…황 CEO 복귀 당일 AI 칩 공급 차단
-https://www.aitimes.com/news/articleView.html?idxno=217722
+젠슨 황 부활에 국내 AI 인프라 서비스 관련 주가도 반등
+https://www.aitimes.com/news/articleView.html?idxno=217749
 
-젠슨 황 복귀에 미 의회 초당적 반발…AI 칩 수출 규제 강화 요구
-https://www.aitimes.com/news/articleView.html?idxno=217721
+말레이시아, 미국 제재 기업 데이터센터 제한…싱가포르도 칩 우회 차단
+https://www.aitimes.com/news/articleView.html?idxno=217748
 
-LGU+, 데이터독과 통화 에이전트 '익시오' 안정성 높인다
-https://www.aitimes.com/news/articleView.html?idxno=217719
+고객 서비스 AI 기업 시에라, 17.5억달러 투자 유치…기업가치 두 배로
+https://www.aitimes.com/news/articleView.html?idxno=217747
 
-NYT "앨리스 황, 중국 정보기관과 1년 넘게 접촉"…정부 조사는 계속
-https://www.aitimes.com/news/articleView.html?idxno=217718
+멤텐서·엔비디아, 기억 내장 AI ‘멤T-1.0 프로’ 공개…과거 대화 재입력 줄인다
+https://www.aitimes.com/news/articleView.html?idxno=217746
 
-삼성전자, 2027 임원인사…반도체 인재 중용 ‘성과주의’ 재확인
-https://www.aitimes.com/news/articleView.html?idxno=217717
+[AI 모델 신작] 호요버스의 게임 AI·엔비디아의 확산언어모델 등 7종
+https://www.aitimes.com/news/articleView.html?idxno=217742
 
-한컴, 공공기관 HWP 문서 → HWPX 변환 지원
-https://www.aitimes.com/news/articleView.html?idxno=217716
+구글, AI 검색에 월렛·드라이브 연결…결제 내역·개인 문서까지 활용
+https://www.aitimes.com/news/articleView.html?idxno=217741
 
-황 복귀에 엔비디아 직원들 환호…머스크·알트먼도 환영
-https://www.aitimes.com/news/articleView.html?idxno=217711
+미 2개 주, 그록의 아동 성착취물 생성 문제로 스페이스X 제소
+https://www.aitimes.com/news/articleView.html?idxno=217740
 
-젠슨 황 복귀에 엔비디아 주가 31% 급등…AI 관련주 동반 반등
-https://www.aitimes.com/news/articleView.html?idxno=217709
+AI 탐지기 'GPT제로 5' 출시…"사람 글 오판 5만건당 1건"
+https://www.aitimes.com/news/articleView.html?idxno=217739
 
-젠슨 황 복귀 배경은…트럼프 개입·주가 폭락·후임자 난항
-https://www.aitimes.com/news/articleView.html?idxno=217708
+엔비디아 CEO 후보였던 르네 하스, Arm CEO 2033년까지 연임
+https://www.aitimes.com/news/articleView.html?idxno=217738
