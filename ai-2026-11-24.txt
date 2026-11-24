@@ -1,7 +1,19 @@
 🤖 26년 11월 24일 화요일 AI 뉴스
 
+오픈AI, 챗GPT에 'GPT-6.2 솔' 탑재…지시 수행·이미지 이해 강화
+https://www.aitimes.com/news/articleView.html?idxno=217725
+
+미국, 메가스피드 블랙리스트 등재…황 CEO 복귀 당일 AI 칩 공급 차단
+https://www.aitimes.com/news/articleView.html?idxno=217722
+
+젠슨 황 복귀에 미 의회 초당적 반발…AI 칩 수출 규제 강화 요구
+https://www.aitimes.com/news/articleView.html?idxno=217721
+
 LGU+, 데이터독과 통화 에이전트 '익시오' 안정성 높인다
 https://www.aitimes.com/news/articleView.html?idxno=217719
+
+NYT "앨리스 황, 중국 정보기관과 1년 넘게 접촉"…정부 조사는 계속
+https://www.aitimes.com/news/articleView.html?idxno=217718
 
 삼성전자, 2027 임원인사…반도체 인재 중용 ‘성과주의’ 재확인
 https://www.aitimes.com/news/articleView.html?idxno=217717
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217709
 
 젠슨 황 복귀 배경은…트럼프 개입·주가 폭락·후임자 난항
 https://www.aitimes.com/news/articleView.html?idxno=217708
-
-젠슨 황, 사임 11일 만에 엔비디아 CEO 복귀…트럼프 직접 개입
-https://www.aitimes.com/news/articleView.html?idxno=217707
-
-[기고] AI가 리만 가설을 풀었다면 수학은 끝난 것인가
-https://www.aitimes.com/news/articleView.html?idxno=217706
-
-AI 에이전트가 CPU 아키텍처 직접 설계…전력 효율 4.59배 주장
-https://www.aitimes.com/news/articleView.html?idxno=217705
-
-뉴럴링크 뇌 칩 환자, 손가락 움직임 상상해 'GTA 6' 조작
-https://www.aitimes.com/news/articleView.html?idxno=217704
