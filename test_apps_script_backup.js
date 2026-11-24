@@ -31,7 +31,7 @@ function loadScript() {
 function page(gas, shortnews = '이전 기사', weather = '이전 예보') {
   let html = '<div id="auth-gate"></div>' + Array.from({length: 30},
     (_, index) => '<section class="card" data-slot="' + (index + 1) + '"></section>').join('');
-  for (const [key, body] of Object.entries({shortnews, weather, transactions: '19번 보존'})) {
+  for (const [key, body] of Object.entries({shortnews, weather, fortune: 'old fortune', books: 'old books', transactions: '19번 보존'})) {
     html += '<textarea id="ta-' + key + '">' + gas.escapeHtml_(body) + '</textarea>';
     html += 'window.__content_' + key + ' = ' + JSON.stringify(body) + ';';
   }
@@ -155,4 +155,50 @@ test('previous-day and partial weather allow collection and retain a failure sta
   assert.equal(attempts, 1);
   assert.equal(JSON.parse(result()['weather-status.txt']).status, 'failed');
   assert.match(gas.readCardBody_(result()['briefing.html'], 'weather'), /당일 날씨 자료를 확보하지 못했습니다/);
+});
+
+test('backup keeps complete current fortune and restores previous-day YES24 over Aladin', () => {
+  const gas = loadScript();
+  const clock = new Date('2026-11-24T06:30:00Z');
+  const animals = ['쥐', '소', '범', '토끼', '용', '뱀', '말', '양', '원숭이', '닭', '개', '돼지'];
+  const fortune = '오늘의 운세, 11월 24일\n\n' +
+    animals.map(animal => '〈' + animal + '띠〉\n운세 본문\n운세지수 50%').join('\n\n');
+  const yes24 = [
+    '26년 11월 23일 월요일 주간 베스트셀러', '📚 YES24 국내도서 주간 베스트 TOP 10',
+    '📅 집계 기간: 2026-11-16 ~ 2026-11-22',
+    ...Array.from({length: 10}, (_, rank) => (rank + 1) + '. 검증용 도서 ' + (rank + 1)),
+  ].join('\n');
+  const aladin = '26년 11월 24일 화요일 주간 베스트셀러\n알라딘';
+  let html = page(gas);
+  html = gas.rebuildBackupCard_(html, 'books', aladin);
+  const result = isolateBackup(gas, {
+    'briefing.html': html, 'fortune-2026-11-24.txt': fortune,
+    'books-tue.txt': aladin, 'books-mon.txt': yes24,
+  });
+  gas.nowKST_ = () => clock;
+  gas.fetchFortune_ = () => assert.fail('valid same-day fortune should skip collection');
+  gas.fetchWeather_ = () => ({ok: false});
+  gas.fetchShortnews_ = () => '';
+  assert.ok(gas.validBooks_(yes24, clock));
+  assert.equal(gas.validBooks_(yes24, new Date('2026-11-25T06:30:00Z')), null);
+  gas.runBackupNow();
+  const changes = result();
+  assert.equal(gas.readCardBody_(changes['briefing.html'], 'books'), yes24);
+  assert.equal(gas.readCardBody_(changes['briefing.html'], 'fortune'), fortune);
+  assert.ok(changes['briefing.html'].includes('window.__content_books = ' + JSON.stringify(yes24)));
+  assert.equal(changes['books-tue.txt'], undefined);
+  assert.equal(changes['fortune-2026-11-24.txt'], undefined);
+});
+
+test('backup rejects partial fortune and omits invalid books', () => {
+  const gas = loadScript();
+  const result = isolateBackup(gas, {'briefing.html': page(gas)});
+  gas.fetchWeather_ = () => ({ok: false});
+  gas.fetchFortune_ = () => ({ok: true, content: '오늘의 운세, 11월 17일\n\n〈쥐띠〉\n운세지수 50%'});
+  gas.runBackupNow();
+  const changes = result();
+  assert.equal(changes['fortune.txt'], undefined);
+  assert.equal(gas.readCardBody_(changes['briefing.html'], 'fortune'), 'old fortune');
+  assert.match(gas.readCardBody_(changes['briefing.html'], 'books'), /유효한 YES24/);
+  assert.equal(changes['books.txt'], undefined);
 });

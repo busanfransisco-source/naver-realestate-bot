@@ -440,29 +440,9 @@ function fetchMarket_(now) {
   }
   var metalcoin = l2.join("\n").trim() + "\n";
 
-  var l3 = [dateHead + " 주간 베스트셀러", "", "📚 알라딘 주간 베스트셀러 TOP 10", ""];
-  try {
-    var aladinHtml = fetchText_("https://www.aladin.co.kr/shop/common/wbest.aspx?BestType=Bestseller&BranchType=1&CID=0");
-    var titles = [];
-    var boRe = /<a[^>]+class="bo3"[^>]*>([\s\S]*?)<\/a>/g, bm;
-    while ((bm = boRe.exec(aladinHtml)) !== null && titles.length < 10) {
-      var tt = stripTags_(bm[1]);
-      if (tt && titles.indexOf(tt) === -1) titles.push(tt);
-    }
-    if (titles.length) {
-      titles.forEach(function (tt, idx) { l3.push((idx + 1) + ". " + tt); });
-    } else {
-      l3.push("(베스트셀러를 가져오지 못했습니다)");
-    }
-  } catch (e) {
-    l3.push("(베스트셀러를 가져오지 못했습니다)");
-  }
-  var books = l3.join("\n").trim() + "\n";
-
   return {
     fuelfx: { prefix: "fuelfx", content: fuelfx, ok: !hasFetchFailure_(fuelfx) },
-    metalcoin: { prefix: "metalcoin", content: metalcoin, ok: metalRows.length > 0 && coinRows.length === 10 },
-    books: { prefix: "books", content: books, ok: !hasFetchFailure_(books) }
+    metalcoin: { prefix: "metalcoin", content: metalcoin, ok: metalRows.length > 0 && coinRows.length === 10 }
   };
 }
 
@@ -709,6 +689,35 @@ function sameDayWeather_(body, now) {
   return [header, "", "❒ 지역별 날씨전망 ❒", ""].concat(rows).join("\n");
 }
 
+function sameDayFortune_(body, now) {
+  body = (body || "").replace(/\r\n/g, "\n").trim();
+  var title = "오늘의 운세, " + (now.getUTCMonth() + 1) + "월 " + now.getUTCDate() + "일";
+  var animals = body.match(/^〈[^〉]+띠〉$/gm) || [];
+  var scores = body.match(/^운세지수[ \t]*\d+%/gm) || [];
+  return body.split("\n")[0] === title && animals.length === 12 &&
+    new Set(animals).size === 12 && scores.length === 12 && !hasFetchFailure_(body) ? body : "";
+}
+
+function validBooks_(body, now) {
+  body = (body || "").replace(/\r\n/g, "\n").trim();
+  var header = body.match(/^(\d{2})년 (\d{1,2})월 (\d{1,2})일 /);
+  var period = body.match(/^📅 집계 기간: (\d{4}-\d{2}-\d{2}) ~ (\d{4}-\d{2}-\d{2})$/m);
+  var ranks = Array.from(body.matchAll(/^(\d+)\.[ \t]+\S.*$/gm), function (row) { return row[1]; });
+  if (!header || !period || !body.includes("YES24 국내도서 주간 베스트 TOP 10") ||
+      hasFetchFailure_(body) || ranks.join(",") !== "1,2,3,4,5,6,7,8,9,10") return null;
+
+  var reportDate = "20" + header[1] + "-" + pad2_(Number(header[2])) + "-" + pad2_(Number(header[3]));
+  var yesterday = new Date(now.getTime() - 86400000);
+  if (reportDate !== dateStamp_(now) && reportDate !== dateStamp_(yesterday)) return null;
+  var start = new Date(period[1]), end = new Date(period[2]);
+  if (isNaN(start.getTime()) || isNaN(end.getTime()) || dateStamp_(start) !== period[1] ||
+      dateStamp_(end) !== period[2] || start.getUTCDay() !== 1 ||
+      end - start !== 6 * 86400000) return null;
+  var age = (Date.parse(reportDate) - end.getTime()) / 86400000;
+  var currentAge = (Date.parse(dateStamp_(now)) - end.getTime()) / 86400000;
+  return age >= 1 && age <= 8 && currentAge <= 8 ? {body: body, end: period[2], date: reportDate} : null;
+}
+
 function runBackupNow() {
   var now = nowKST_(), today = dateStamp_(now), weekday = WEEKDAY_EN[weekdayIdx_(now)];
   var cfg = ghConfig_();
@@ -774,12 +783,41 @@ function runBackupNow() {
     errors.push("shortnews: no verified article links and KOSPI");
   }
 
-  [fetchFortune_, fetchRealestateNews_, fetchWorldNews_, fetchFinanceNews_, fetchAiNews_].forEach(function (fetcher) {
+  var currentFortune = readCardBody_(existing, "fortune");
+  var fortune = sameDayFortune_(currentFortune, now) ||
+    sameDayFortune_(read("fortune-" + today + ".txt"), now) ||
+    sameDayFortune_(read("fortune-" + weekday + ".txt"), now) ||
+    sameDayFortune_(read("fortune.txt"), now);
+  if (!fortune) {
+    var fetchedFortune = fetchFortune_(now);
+    fortune = fetchedFortune && fetchedFortune.ok && sameDayFortune_(fetchedFortune.content, now);
+    if (fortune) {
+      save({prefix: "fortune", content: fortune, ok: true});
+      changes["fortune-" + today + ".txt"] = fortune;
+    }
+  }
+  if (fortune && fortune !== currentFortune) results.fortune = fortune;
+  if (!fortune) errors.push("fortune: no complete report for today");
+
+  var currentBooks = readCardBody_(existing, "books");
+  var previousWeekday = WEEKDAY_EN[(weekdayIdx_(now) + 6) % 7];
+  var books = [currentBooks, read("books-" + weekday + ".txt"),
+    read("books-" + previousWeekday + ".txt"), read("books.txt")]
+    .map(function (body) { return validBooks_(body, now); }).filter(Boolean)
+    .sort(function (a, b) { return b.end.localeCompare(a.end) || b.date.localeCompare(a.date); })[0];
+  if (books) {
+    if (books.body !== currentBooks) results.books = books.body;
+  } else if (currentBooks) {
+    results.books = "당일 또는 전일의 유효한 YES24 주간 집계 자료를 확보하지 못했습니다.";
+    errors.push("books: no valid YES24 report for today or yesterday");
+  }
+
+  [fetchRealestateNews_, fetchWorldNews_, fetchFinanceNews_, fetchAiNews_].forEach(function (fetcher) {
     try { save(fetcher(now)); } catch (e) { errors.push(fetcher.name); }
   });
   try {
     var market = fetchMarket_(now);
-    [market.fuelfx, market.metalcoin, market.books].forEach(save);
+    [market.fuelfx, market.metalcoin].forEach(save);
   } catch (e) { errors.push("market"); }
 
   var page = buildBriefingHtml_(now, results, existing);
