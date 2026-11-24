@@ -1,5 +1,8 @@
 🤖 26년 11월 24일 화요일 AI 뉴스
 
+내년 정부 AI 예산 1.6배 확대…풀스택 AX 수출 추진
+https://www.aitimes.com/news/articleView.html?idxno=217751
+
 삼성SDS, 임원 인사 AX 진용 재편…부사장 4명·상무 6명 승진
 https://www.aitimes.com/news/articleView.html?idxno=217750
 
@@ -15,6 +18,9 @@ https://www.aitimes.com/news/articleView.html?idxno=217747
 멤텐서·엔비디아, 기억 내장 AI ‘멤T-1.0 프로’ 공개…과거 대화 재입력 줄인다
 https://www.aitimes.com/news/articleView.html?idxno=217746
 
+[게시판] KT, 육군교육사령부와 AI 기반 지휘통제체계 고도화 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=217745
+
 [AI 모델 신작] 호요버스의 게임 AI·엔비디아의 확산언어모델 등 7종
 https://www.aitimes.com/news/articleView.html?idxno=217742
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217741
 
 미 2개 주, 그록의 아동 성착취물 생성 문제로 스페이스X 제소
 https://www.aitimes.com/news/articleView.html?idxno=217740
-
-AI 탐지기 'GPT제로 5' 출시…"사람 글 오판 5만건당 1건"
-https://www.aitimes.com/news/articleView.html?idxno=217739
-
-엔비디아 CEO 후보였던 르네 하스, Arm CEO 2033년까지 연임
-https://www.aitimes.com/news/articleView.html?idxno=217738
