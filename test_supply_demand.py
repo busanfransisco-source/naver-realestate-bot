@@ -61,6 +61,19 @@ def fake_session(truncated=False):
 
 
 class SupplyDemandTests(unittest.TestCase):
+    def test_requests_use_public_site_headers_for_both_source_tables(self):
+        session = fake_session()
+        original = session.get.side_effect
+        def get(url, params, headers, timeout):
+            self.assertEqual(headers['osType'], 'HUB')
+            self.assertEqual(headers['Referer'], 'https://data.kbland.kr/')
+            self.assertIn('Mozilla/5.0', headers['User-Agent'])
+            self.assertIn('application/json', headers['Accept'])
+            return original(url, params, headers, timeout)
+        session.get.side_effect = get
+        self.assertTrue(sd.valid_snapshot(sd.fetch_snapshot(NOW, session), NOW))
+        self.assertEqual(session.get.call_count, 2)
+
     def test_complete_two_jeonse_series_validated(self):
         self.assertTrue(sd.valid_snapshot(snapshot(), NOW))
         self.assertEqual(sd.freshness_issues(snapshot(), NOW), [])
@@ -293,9 +306,15 @@ class SupplyDemandTests(unittest.TestCase):
     def test_existing_cloud_workflows_collect_and_persist_new_cache(self):
         for name in ('manual-briefing', 'naver-realestate', 'daily-data-cards'):
             workflow = Path(f'.github/workflows/{name}.yml').read_text(encoding='utf-8')
-            self.assertIn('python supply_demand.py', workflow)
-            step = workflow.split('- name: Refresh KB jeonse', 1)[1].split('- name:', 1)[0]
-            self.assertNotIn('RONE_KEY', step)
+            if name == 'manual-briefing':
+                from collect_briefing import SCRIPTS, SECRET_OWNERS
+                self.assertIn('python collect_briefing.py', workflow)
+                self.assertIn('supply_demand.py', SCRIPTS)
+                self.assertNotEqual(SECRET_OWNERS['RONE_KEY'], 'supply_demand.py')
+            else:
+                self.assertIn('python supply_demand.py', workflow)
+                step = workflow.split('- name: Refresh KB jeonse', 1)[1].split('- name:', 1)[0]
+                self.assertNotIn('RONE_KEY', step)
             self.assertIn('git add supply-demand-cache.json', workflow)
 
     def test_source_failure_status_and_partial_date_or_region_are_rejected(self):

@@ -38,6 +38,15 @@ class FailureStateTests(unittest.TestCase):
         self.assertTrue(state.commit_candidate(body(),NOW,self.root))
         self.assertEqual(state.load_report(self.root, NOW),body().strip())
         self.assertEqual(json.loads((self.root/state.STATUS).read_text())['status'],'ok')
+    def test_crlf_display_matches_lf_without_rewriting_preserved_source(self):
+        source = self.root/'shortnews.txt'
+        raw = body().replace("\n", "\r\n").encode('utf8')
+        source.write_bytes(raw)
+        self.assertEqual(state.load_report(self.root, NOW), body().strip())
+        state.commit_candidate('', NOW, self.root)
+        self.assertEqual(state.load_report(self.root, NOW), state.NOTICE+'\n'+body().strip())
+        self.assertEqual(source.read_bytes(), raw)
+
     def test_stale_candidate_rejected(self):
         self.assertFalse(state.commit_candidate(body(17),NOW,self.root))
     def test_missing_link_rejected(self):

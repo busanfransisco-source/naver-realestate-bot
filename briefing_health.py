@@ -168,6 +168,8 @@ def inspect(page, now=None):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--repair', action='store_true')
+    parser.add_argument('--skip-collected', action='store_true',
+                        help='Do not rerun collectors already attempted by collect_briefing.py')
     parser.add_argument('--url')
     parser.add_argument('--report', default='briefing-health.json')
     args = parser.parse_args()
@@ -177,6 +179,9 @@ def main():
         from weather_fetch import retry_deferred
 
         scripts = sorted({REPAIR[r['key']] for r in rows if r['issues'] and r['key'] in REPAIR})
+        if args.skip_collected:
+            from collect_briefing import SCRIPTS
+            scripts = [script for script in scripts if script not in SCRIPTS]
         for script in scripts:
             if script == 'weather_fetch.py' and retry_deferred(datetime.now(KST)):
                 print('Weather retry deferred for ten minutes after the latest failure', flush=True)
@@ -186,7 +191,8 @@ def main():
                 subprocess.run([sys.executable, script], timeout=180, check=True)
             except (subprocess.SubprocessError, OSError):
                 print(f'Retry failed: {script}', flush=True)
-        subprocess.run([sys.executable, 'gen_briefing.py'], check=True)
+        if scripts or not args.skip_collected:
+            subprocess.run([sys.executable, 'gen_briefing.py'], check=True)
         rows = inspect(local.read_text(encoding='utf-8'))
     deployed = None
     if args.url:

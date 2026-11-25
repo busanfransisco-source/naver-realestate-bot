@@ -20,11 +20,12 @@ class TransactionScheduleTests(unittest.TestCase):
     def test_general_briefing_recovers_missing_transactions_in_every_run(self):
         workflow = Path(".github/workflows/manual-briefing.yml").read_text(encoding="utf-8")
         self.assertNotIn("Fetch nationwide apartment transactions", workflow)
-        self.assertIn("Backstop nationwide transaction refresh", workflow)
-        self.assertIn("python ensure_transactions_daily.py", workflow)
+        from collect_briefing import GROUPS, SCRIPTS
+        self.assertIn("python collect_briefing.py", workflow)
+        self.assertIn("ensure_transactions_daily.py", SCRIPTS)
         self.assertNotIn("gh workflow run transactions.yml", workflow)
-        self.assertLess(workflow.index('python ensure_transactions_daily.py'), workflow.index('Fetch weather'))
-        block = workflow.split('name: Backstop nationwide transaction refresh', 1)[1].split('      - name:', 1)[0]
+        self.assertEqual(GROUPS[0], ('transactions', ('ensure_transactions_daily.py',)))
+        block = workflow.split('name: Collect independent sources with bounded concurrency', 1)[1].split('      - name:', 1)[0]
         self.assertNotIn('if:', block)
         for hour in range(20, 23):
             self.assertIn(f"25 {hour} * * *", workflow)

@@ -46,55 +46,15 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: pip
 
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      # Recover in this very run, not by asynchronously dispatching a different job.
-      # A skipped/delayed dawn schedule is also repaired by manual and daytime runs.
-      - name: Backstop nationwide transaction refresh
-        run: python ensure_transactions_daily.py || echo "Fresh transactions unavailable; health repair and next run will retry"
-
-      - name: Fetch weather
-        run: python weather_fetch.py || echo "weather failed; per-card recovery will retry"
-
-      - name: Fetch fortune
-        run: python fortune_fetch.py || echo "fortune failed; per-card recovery will retry"
-
-      - name: Fetch realestate news
-        run: python naver_realestate_fetch.py || echo "realestate failed; per-card recovery will retry"
-
-      - name: Fetch realestate policy analysis candidates
-        run: python naver_realestate_analysis_fetch.py || echo "analysis candidates failed"
-
-      - name: Fetch daum short news
-        run: python daum_news_fetch.py > shortnews-debug.log 2>&1 || true; tail -20 shortnews-debug.log
-
-      - name: Fetch world news
-        run: python world_news_fetch.py || echo "world news failed"
-
-      - name: Fetch finance news
-        run: python finance_news_fetch.py || echo "finance news failed"
-
-      - name: Fetch AI news
-        run: python ai_news_fetch.py || echo "AI news failed"
-
-      - name: Fetch market info
-        run: python market_fetch.py || echo "market failed"
-
-      - name: Fetch aptinfo
-        run: python aptinfo_fetch.py || echo "aptinfo failed"
+      - name: Collect independent sources with bounded concurrency
+        run: python collect_briefing.py || echo "Some collectors failed; healthy sources remain available and the public gate will report omissions"
         env:
           RONE_KEY: ${{ secrets.RONE_KEY }}
-
-      - name: Refresh KB jeonse supply-demand indices
-        run: python supply_demand.py || echo "Supply-demand source unavailable; prior dated snapshot retained"
-
-      - name: Backstop economic reading interest
-        run: python ensure_wiki_daily.py || echo "Wiki source delayed; dated previous content remains visible"
-      - name: Backstop missing today Seoul snapshot during daytime
-        run: python ensure_seoul_daily.py || echo "Seoul source still unavailable; dated snapshot retained"
-        env:
           SEOUL_OPEN_DATA_KEY: ${{ secrets.SEOUL_OPEN_DATA_KEY }}
 
       - name: Regenerate pages and commit everything
@@ -105,7 +65,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           python gen_index.py
           python gen_briefing.py
-          python briefing_health.py --repair || echo "Some cards remain incomplete; final public gate will report failure"
+          python briefing_health.py --repair --skip-collected || echo "Some cards remain incomplete; final public gate will report failure"
           date -u +"%Y-%m-%dT%H:%M:%SZ" > last-refresh.txt
           git add shortnews.txt shortnews-*.txt shortnews-debug.log || true
           git add world.txt world-*.txt || true
@@ -114,12 +74,17 @@ jobs:
           git add subs.txt subs-*.txt trend.txt trend-*.txt neonet-trend-cache.json || true
           git add fuelfx.txt fuelfx-*.txt metalcoin.txt metalcoin-*.txt books.txt books-*.txt fx-cache.json fuel-cache.json || true
           git add transactions.txt transactions-*.txt transactions-state.json || true
-          git add weather.txt weather-*.txt fortune.txt fortune-*.txt realestate.txt realestate-*.txt latest.json latest-*.json index.html hub.html briefing.html last-refresh.txt
+          git add weather.txt weather-*.txt fortune.txt fortune-*.txt realestate.txt realestate-*.txt latest.json latest-*.json last-refresh.txt
           git add realestate-analysis-candidates.json || true
           git add data-cards.json seoul-time-snapshots.json
           git add supply-demand-cache.json
-          git commit -m "Manual briefing refresh" --allow-empty
+          git diff --cached --quiet || git commit -m "Manual briefing source refresh"
+          git restore --worktree -- index.html hub.html briefing.html
           git pull --rebase origin main
+          python gen_index.py
+          python gen_briefing.py
+          git add index.html hub.html briefing.html
+          git diff --cached --quiet || git commit -m "Manual briefing refresh"
           git push
 
       - name: Verify every published briefing card

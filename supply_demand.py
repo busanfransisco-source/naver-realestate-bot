@@ -12,6 +12,13 @@ import requests
 KST = timezone(timedelta(hours=9))
 BASE = 'https://data-api.kbland.kr/bfmstat/weekMnthlyHuseTrnd/maktTrnd'
 CACHE = Path('supply-demand-cache.json')
+HEADERS = {
+    'osType': 'HUB',
+    'Referer': 'https://data.kbland.kr/',
+    'Accept': 'application/json, text/plain, */*',
+    'User-Agent': ('Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
+                   'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'),
+}
 TABLES = {
     'weekly_jeonse': ('weekRentSupInx', '02', '03', '전세수급지수', ('공급충분', '공급적절', '공급부족')),
     'monthly_jeonse': ('monthRentSupInx', '01', '03', '전세수급지수', ('공급충분', '공급적절', '공급부족')),
@@ -92,7 +99,7 @@ def fetch_snapshot(now, session=requests):
     def query(name):
         _, cycle, menu, _, _ = TABLES[name]
         response = session.get(BASE, params={'월간주간구분코드': cycle, '메뉴코드': menu, '기간': '2'},
-                               headers={'osType': 'HUB', 'Referer': 'https://data.kbland.kr/'}, timeout=25)
+                               headers=HEADERS, timeout=25)
         response.raise_for_status()
         return name, parse_series(response.json(), name)
 

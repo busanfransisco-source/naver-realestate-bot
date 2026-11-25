@@ -89,7 +89,7 @@ def load_report(root=Path('.'), now=None):
         failed = True
     try:
         raw = (root/'shortnews.txt').read_bytes()
-        body = raw.decode('utf-8').strip()
+        body = raw.decode('utf-8').replace("\r\n", "\n").replace("\r", "\n").strip()
     except (OSError, UnicodeError):
         return EMPTY
     # The existing Apps Script backup exports verified headlines, not polite

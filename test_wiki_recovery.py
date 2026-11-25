@@ -223,7 +223,12 @@ assert.equal(ta.value, EXPECTED);
     def test_existing_daytime_workflows_recheck_wiki_and_keep_cache(self):
         for workflow in ('manual-briefing', 'daily-data-cards'):
             text = Path(f'.github/workflows/{workflow}.yml').read_text(encoding='utf-8')
-            self.assertIn('python ensure_wiki_daily.py', text)
+            if workflow == 'manual-briefing':
+                from collect_briefing import GROUPS
+                self.assertIn('python collect_briefing.py', text)
+                self.assertIn(('data_cards', ('ensure_wiki_daily.py', 'ensure_seoul_daily.py')), GROUPS)
+            else:
+                self.assertIn('python ensure_wiki_daily.py', text)
             self.assertIn('git add data-cards.json', text)
         text = Path('.github/workflows/naver-realestate.yml').read_text(encoding='utf-8')
         self.assertIn('git add data-cards.json', text[text.index('briefing_health.py --repair'):])

@@ -50,6 +50,7 @@ jobs:
         if: steps.window.outputs.eligible == 'true'
         with:
           python-version: '3.11'
+          cache: pip
       - name: Install collection dependencies
         if: steps.window.outputs.eligible == 'true'
         run: pip install -r requirements.txt
@@ -99,6 +100,7 @@ jobs:
                   validate_snapshot(json.loads(Path('morning-briefing-ready.json').read_text(encoding='utf-8')), datetime.now(KST))
                   shutil.copyfile('morning-briefing-ready.json', target/'morning-briefing-ready.json')
           with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write('weather_status='+str(weather_status).lower()+'\n')
               output.write('quicknews_status='+str(quicknews_status).lower()+'\n')
               output.write('publication='+str(publication).lower()+'\nready='+str(ready).lower()+'\n')
           PY
@@ -167,6 +169,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: pip
       - run: pip install -r requirements.txt
       - uses: actions/download-artifact@v4
         if: needs.collect.outputs.publication == 'true'

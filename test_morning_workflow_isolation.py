@@ -22,6 +22,30 @@ class MorningWorkflowIsolationTests(unittest.TestCase):
         self.assertIn("if: steps.apply.outputs.ready_applied == 'true'",text)
         self.assertIn('no validated sender snapshot was available',text)
 
+    def test_weather_failure_state_is_exposed_to_the_publication_job(self):
+        from datetime import datetime
+        import json, os, tempfile, yaml
+        from unittest.mock import patch
+        from weather_fetch import KST
+        workflow = yaml.safe_load(Path('.github/workflows/morning-briefing.yml').read_text(encoding='utf8'))
+        stage = next(step['run'] for step in workflow['jobs']['collect']['steps']
+                     if step.get('id') == 'stage')
+        code = stage.split("python - <<'PY'\n", 1)[1].rsplit("\nPY", 1)[0]
+        previous = os.getcwd()
+        with tempfile.TemporaryDirectory() as directory:
+            try:
+                os.chdir(directory)
+                now = datetime.now(KST)
+                Path('weather-status.txt').write_text(json.dumps(dict(
+                    forecastDate=now.date().isoformat(), attemptedAtKst=now.isoformat(), status='failed')))
+                with patch.dict(os.environ, {'GITHUB_OUTPUT': str(Path(directory)/'outputs')}), \
+                     patch('subprocess.check_output', return_value=' M weather-status.txt'):
+                    exec(compile(code, '<stage>', 'exec'), {})
+                self.assertIn('weather_status=true', Path('outputs').read_text())
+                self.assertTrue(Path('tmp/weather-status/weather-status.txt').exists())
+            finally:
+                os.chdir(previous)
+
     def test_official_recovery_does_not_wait_for_morning_collection(self):
         text = Path('.github/workflows/morning-briefing.yml').read_text(encoding='utf-8')
         recovery = text.split('  transactions:\n',1)[1]
