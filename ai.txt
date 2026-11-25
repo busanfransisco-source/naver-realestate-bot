@@ -1,5 +1,8 @@
 🤖 26년 11월 25일 수요일 AI 뉴스
 
+트럼프가 젠슨 황을 복귀시킨 이유…"미국 오픈웨이트 AI 수호자"
+https://www.aitimes.com/news/articleView.html?idxno=217764
+
 MS, 대규모 시스템 장애에 '코드 레드' 발령…1시간 내 복구 목표
 https://www.aitimes.com/news/articleView.html?idxno=217761
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217751
 
 삼성SDS, 임원 인사 AX 진용 재편…부사장 4명·상무 6명 승진
 https://www.aitimes.com/news/articleView.html?idxno=217750
-
-젠슨 황 부활에 국내 AI 인프라 서비스 관련 주가도 반등
-https://www.aitimes.com/news/articleView.html?idxno=217749
