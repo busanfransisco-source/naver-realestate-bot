@@ -1,5 +1,8 @@
 🤖 26년 11월 25일 수요일 AI 뉴스
 
+딥핑소스, 오사카 지하철역 구내 상담부스에 AI 영상분석 솔루션 공급
+https://www.aitimes.com/news/articleView.html?idxno=217757
+
 앤트로픽, 상장 4거래일 만에 공모가 붕괴…시총 5000억달러 증발
 https://www.aitimes.com/news/articleView.html?idxno=217753
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217746
 
 [게시판] KT, 육군교육사령부와 AI 기반 지휘통제체계 고도화 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=217745
-
-[AI 모델 신작] 호요버스의 게임 AI·엔비디아의 확산언어모델 등 7종
-https://www.aitimes.com/news/articleView.html?idxno=217742

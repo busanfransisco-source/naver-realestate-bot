@@ -1,8 +1,24 @@
 {
-  "updated_at_kst": "2026-11-25 11:53:31",
+  "updated_at_kst": "2026-11-25 12:05:23",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 25일 수요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "집값 부담에 ‘탈서울’…10월 5560명 순유출",
+      "url": "https://n.news.naver.com/mnews/article/029/0003061056"
+    },
+    {
+      "title": "10월 국내 이동자 45만3천명…'반도체 밀집' 충청권 순유입",
+      "url": "https://n.news.naver.com/mnews/article/001/0016462531"
+    },
+    {
+      "title": "가계대출 금리 5% 돌파…고정형 주담대 역대 최장기간 상승",
+      "url": "https://n.news.naver.com/mnews/article/029/0003061053"
+    },
+    {
+      "title": "은행 가계대출 금리 '5% 돌파'…주담대 평균 14년 7개월 만에 최고",
+      "url": "https://n.news.naver.com/mnews/article/421/0009309087"
+    },
     {
       "title": "민형배 전남광주시장 \"반도체 팹 건설인력 1만호 공공임대 필요\"",
       "url": "https://n.news.naver.com/mnews/article/001/0016462472"
@@ -26,22 +42,6 @@
     {
       "title": "세종스마트시티 국가시범도시 기공…선도지구 조성 시작",
       "url": "https://n.news.naver.com/mnews/article/018/0006415280"
-    },
-    {
-      "title": "[그래픽] 모두의카드 청소년 이용 확대",
-      "url": "https://n.news.naver.com/mnews/article/421/0009309024"
-    },
-    {
-      "title": "에스앤아이, 건물관리업 중대재해 예방 앞장...안전교육 역량 공유",
-      "url": "https://n.news.naver.com/mnews/article/014/0005609498"
-    },
-    {
-      "title": "불광역 앞에 최고 45층·4092가구…재개발 정비구역 지정",
-      "url": "https://n.news.naver.com/mnews/article/008/0005446126"
-    },
-    {
-      "title": "교통·일자리가 ‘신도시 효과’ 갈랐다",
-      "url": "https://n.news.naver.com/mnews/article/016/0002728264"
     }
   ]
 }
