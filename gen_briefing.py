@@ -491,17 +491,33 @@ function markCopied(btn) {{
   }}, 1200);
 }}
 
-function copySection(key, btn) {{
+async function copySection(key, btn) {{
   refreshDataCardExpiry();
   if (btn.disabled) return;
-  // execCommand는 동기적으로 바로 결과가 나오고 권한 프롬프트로 멈추는 일이
-  // 없어서 이걸 기본으로 쓴다. navigator.clipboard는 일부 브라우저(특히
-  // 자동화/인앱 웹뷰 환경)에서 권한 대기 상태로 무한정 멈출 수 있어서
-  // 보조 수단으로만 쓴다.
   const ta = document.getElementById('ta-' + key);
   const previewValue = ta.value;
+  const text = window['__content_' + key] || previewValue;
+  // Prefer the actual clipboard API; some embedded browsers return true from
+  // execCommand without changing the clipboard. Bound permission waits.
+  if (navigator.clipboard && navigator.clipboard.writeText) {{
+    let timer;
+    try {{
+      await Promise.race([
+        navigator.clipboard.writeText(text),
+        new Promise((resolve, reject) => {{
+          timer = setTimeout(() => reject(new Error('clipboard timeout')), 1500);
+        }})
+      ]);
+      markCopied(btn);
+      return;
+    }} catch (e) {{
+      // Older browsers and denied permissions retain the existing fallback.
+    }} finally {{
+      clearTimeout(timer);
+    }}
+  }}
   const previousStyle = ta.style.cssText;
-  ta.value = window['__content_' + key] || previewValue;
+  ta.value = text;
   let copied = false;
   try {{
     ta.style.position = 'fixed';
@@ -516,17 +532,8 @@ function copySection(key, btn) {{
     ta.value = previewValue;
     ta.style.cssText = previousStyle;
   }}
-
   if (copied) {{
     markCopied(btn);
-    return;
-  }}
-
-  const text = window['__content_' + key];
-  if (navigator.clipboard && navigator.clipboard.writeText) {{
-    navigator.clipboard.writeText(text).then(() => markCopied(btn)).catch(() => {{
-      alert('복사에 실패했습니다. 아래 미리보기 텍스트를 직접 길게 눌러 복사해주세요.');
-    }});
   }} else {{
     alert('복사에 실패했습니다. 아래 미리보기 텍스트를 직접 길게 눌러 복사해주세요.');
   }}
