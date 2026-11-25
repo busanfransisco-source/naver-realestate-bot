@@ -1,5 +1,8 @@
 🤖 26년 11월 25일 수요일 AI 뉴스
 
+MS, 대규모 시스템 장애에 '코드 레드' 발령…1시간 내 복구 목표
+https://www.aitimes.com/news/articleView.html?idxno=217761
+
 과기부, 3차 미래전략회의…"AI 경제적 가치 창출이 국가 경쟁력 좌우"
 https://www.aitimes.com/news/articleView.html?idxno=217760
 
@@ -8,6 +11,9 @@ https://www.aitimes.com/news/articleView.html?idxno=217757
 
 화웨이, 미 형사재판서 10개 혐의 유죄…핵심 조직범죄 혐의는 무죄
 https://www.aitimes.com/news/articleView.html?idxno=217756
+
+오픈AI·앤트로픽 내부서 AI 개발 중단론…"최고 모델 통제 어려워"
+https://www.aitimes.com/news/articleView.html?idxno=217755
 
 앤트로픽, 상장 4거래일 만에 공모가 붕괴…시총 5000억달러 증발
 https://www.aitimes.com/news/articleView.html?idxno=217753
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217750
 
 젠슨 황 부활에 국내 AI 인프라 서비스 관련 주가도 반등
 https://www.aitimes.com/news/articleView.html?idxno=217749
-
-말레이시아, 미국 제재 기업 데이터센터 제한…싱가포르도 칩 우회 차단
-https://www.aitimes.com/news/articleView.html?idxno=217748
-
-고객 서비스 AI 기업 시에라, 17.5억달러 투자 유치…기업가치 두 배로
-https://www.aitimes.com/news/articleView.html?idxno=217747
