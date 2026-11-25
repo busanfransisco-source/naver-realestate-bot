@@ -1,5 +1,8 @@
 🤖 26년 11월 25일 수요일 AI 뉴스
 
+과기부, 3차 미래전략회의…"AI 경제적 가치 창출이 국가 경쟁력 좌우"
+https://www.aitimes.com/news/articleView.html?idxno=217760
+
 딥핑소스, 오사카 지하철역 구내 상담부스에 AI 영상분석 솔루션 공급
 https://www.aitimes.com/news/articleView.html?idxno=217757
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217748
 
 고객 서비스 AI 기업 시에라, 17.5억달러 투자 유치…기업가치 두 배로
 https://www.aitimes.com/news/articleView.html?idxno=217747
-
-멤텐서·엔비디아, 기억 내장 AI ‘멤T-1.0 프로’ 공개…과거 대화 재입력 줄인다
-https://www.aitimes.com/news/articleView.html?idxno=217746

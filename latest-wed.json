@@ -1,8 +1,16 @@
 {
-  "updated_at_kst": "2026-11-25 12:14:19",
+  "updated_at_kst": "2026-11-25 12:35:17",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 25일 수요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "LH, 스마트건설 엑스포서 로봇 순찰·'AI 모듈러 홈' 선보여",
+      "url": "https://n.news.naver.com/mnews/article/014/0005609523"
+    },
+    {
+      "title": "도로공사, '휘슬'과 미납통행료 납부 간소화…윈윈 아너스 선정",
+      "url": "https://n.news.naver.com/mnews/article/014/0005609520"
+    },
     {
       "title": "분당 상록우성, 보유세 346만원→424만원, 경기남부 내년 보유세 20% 뛴다",
       "url": "https://n.news.naver.com/mnews/article/277/0005847609"
@@ -16,7 +24,7 @@
       "url": "https://n.news.naver.com/mnews/article/001/0016462531"
     },
     {
-      "title": "가계대출 금리 5% 돌파…고정형 주담대 역대 최장기간 상승",
+      "title": "가계대출 금리 5% 돌파…주담대 14년 7개월만에 최고",
       "url": "https://n.news.naver.com/mnews/article/029/0003061053"
     },
     {
@@ -34,14 +42,6 @@
     {
       "title": "‘닥공’ 발목 잡는 표준건축비…정부, 폐지 검토",
       "url": "https://n.news.naver.com/mnews/article/016/0002728312"
-    },
-    {
-      "title": "“전세 살이보다 월세 살이가 훨씬 많다”··· 서울은 3집 중 1집이 월세",
-      "url": "https://n.news.naver.com/mnews/article/022/0004177960"
-    },
-    {
-      "title": "인사",
-      "url": "https://n.news.naver.com/mnews/article/016/0002728303"
     }
   ]
 }
