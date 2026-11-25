@@ -1,5 +1,8 @@
 🤖 26년 11월 25일 수요일 AI 뉴스
 
+"AI에 월 25달러 쓰면 물 7.2ℓ 소비…아몬드 우유의 162분의 1"
+https://www.aitimes.com/news/articleView.html?idxno=217769
+
 트럼프가 젠슨 황을 복귀시킨 이유…"미국 오픈웨이트 AI 수호자"
 https://www.aitimes.com/news/articleView.html?idxno=217764
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217752
 
 내년 정부 AI 예산 1.6배 확대…풀스택 AX 수출 추진
 https://www.aitimes.com/news/articleView.html?idxno=217751
-
-삼성SDS, 임원 인사 AX 진용 재편…부사장 4명·상무 6명 승진
-https://www.aitimes.com/news/articleView.html?idxno=217750
