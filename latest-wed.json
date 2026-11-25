@@ -1,8 +1,20 @@
 {
-  "updated_at_kst": "2026-11-25 13:25:14",
+  "updated_at_kst": "2026-11-25 13:37:35",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 25일 수요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "'동탄호수공원 대방 엘리움 레이크파크', 시행사 보유분 분양·임대",
+      "url": "https://n.news.naver.com/mnews/article/119/0003159327"
+    },
+    {
+      "title": "10월에만 45만명 거주지 이동…반도체 밀집 ‘이 지역’ 향했다",
+      "url": "https://n.news.naver.com/mnews/article/029/0003061069"
+    },
+    {
+      "title": "더 큰 사고 날라…'위험천만' 미끄럼방지 도로 사후관리 강화",
+      "url": "https://n.news.naver.com/mnews/article/003/0014344368"
+    },
     {
       "title": "LH, ‘스마트건설·안전·AI’ 엑스포서 사족보행 로봇 선봬",
       "url": "https://n.news.naver.com/mnews/article/016/0002728332"
@@ -30,18 +42,6 @@
     {
       "title": "도로공사, '휘슬'과 미납통행료 납부 간소화…윈윈 아너스 선정",
       "url": "https://n.news.naver.com/mnews/article/014/0005609520"
-    },
-    {
-      "title": "분당 상록우성, 보유세 346만원→424만원, 경기남부 내년 보유세 20% 뛴다",
-      "url": "https://n.news.naver.com/mnews/article/277/0005847609"
-    },
-    {
-      "title": "집값 부담에 ‘탈서울’…10월 5560명 순유출",
-      "url": "https://n.news.naver.com/mnews/article/029/0003061056"
-    },
-    {
-      "title": "10월 국내 이동자 45만3천명…'반도체 밀집' 충청권 순유입",
-      "url": "https://n.news.naver.com/mnews/article/001/0016462531"
     }
   ]
 }
