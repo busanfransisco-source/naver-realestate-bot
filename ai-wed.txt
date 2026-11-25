@@ -3,6 +3,9 @@
 딥핑소스, 오사카 지하철역 구내 상담부스에 AI 영상분석 솔루션 공급
 https://www.aitimes.com/news/articleView.html?idxno=217757
 
+화웨이, 미 형사재판서 10개 혐의 유죄…핵심 조직범죄 혐의는 무죄
+https://www.aitimes.com/news/articleView.html?idxno=217756
+
 앤트로픽, 상장 4거래일 만에 공모가 붕괴…시총 5000억달러 증발
 https://www.aitimes.com/news/articleView.html?idxno=217753
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217747
 
 멤텐서·엔비디아, 기억 내장 AI ‘멤T-1.0 프로’ 공개…과거 대화 재입력 줄인다
 https://www.aitimes.com/news/articleView.html?idxno=217746
-
-[게시판] KT, 육군교육사령부와 AI 기반 지휘통제체계 고도화 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=217745
