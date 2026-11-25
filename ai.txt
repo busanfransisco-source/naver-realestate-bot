@@ -1,31 +1,31 @@
 🤖 26년 11월 25일 수요일 AI 뉴스
 
-"AI에 월 25달러 쓰면 물 7.2ℓ 소비…아몬드 우유의 162분의 1"
-https://www.aitimes.com/news/articleView.html?idxno=217769
+로이터 "앨리스 황 관련 기업, 중국서 3억달러 규모 AI 장비 금융 거래 확인"
+https://www.aitimes.com/news/articleView.html?idxno=217784
 
-트럼프가 젠슨 황을 복귀시킨 이유…"미국 오픈웨이트 AI 수호자"
-https://www.aitimes.com/news/articleView.html?idxno=217764
+MS, 자체 강화학습 인프라 '로켓' 공개…"외부 모델 증류 없이 성능 향상"
+https://www.aitimes.com/news/articleView.html?idxno=217783
 
-MS, 대규모 시스템 장애에 '코드 레드' 발령…1시간 내 복구 목표
-https://www.aitimes.com/news/articleView.html?idxno=217761
+음악 플랫폼 타이달, AI 생성곡 전면 금지…연말까지 2900만곡 삭제
+https://www.aitimes.com/news/articleView.html?idxno=217782
 
-과기부, 3차 미래전략회의…"AI 경제적 가치 창출이 국가 경쟁력 좌우"
-https://www.aitimes.com/news/articleView.html?idxno=217760
+[게시판] LGU+, AI 통화 앱 '익시오' 보이스피싱 기능 강화 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=217781
 
-딥핑소스, 오사카 지하철역 구내 상담부스에 AI 영상분석 솔루션 공급
-https://www.aitimes.com/news/articleView.html?idxno=217757
+브릴스, 디와이에이에 로봇 솔루션 공급...AI 고속 비전 로봇으로 공정 고도화
+https://www.aitimes.com/news/articleView.html?idxno=217780
 
-화웨이, 미 형사재판서 10개 혐의 유죄…핵심 조직범죄 혐의는 무죄
-https://www.aitimes.com/news/articleView.html?idxno=217756
+xAI 창립 멤버들, 미래 예측 AI 개발 나서…30년치 인터넷 활용
+https://www.aitimes.com/news/articleView.html?idxno=217779
 
-오픈AI·앤트로픽 내부서 AI 개발 중단론…"최고 모델 통제 어려워"
-https://www.aitimes.com/news/articleView.html?idxno=217755
+오픈AI, 기업용 AI 에이전트 정확도 높이는 데이터 도구 '아테나' 개발 중
+https://www.aitimes.com/news/articleView.html?idxno=217778
 
-앤트로픽, 상장 4거래일 만에 공모가 붕괴…시총 5000억달러 증발
-https://www.aitimes.com/news/articleView.html?idxno=217753
+정부, 공공 AI 상담 기준 마련…뉴욕선 같은 질문에도 다른 답변
+https://www.aitimes.com/news/articleView.html?idxno=217777
 
-젠슨 황, 복귀 후 첫 직원회의서 사과…복귀 정당성 강조
-https://www.aitimes.com/news/articleView.html?idxno=217752
+네이버클라우드, 한수원·한전KDN과 원전 AX 체계 구축
+https://www.aitimes.com/news/articleView.html?idxno=217776
 
-내년 정부 AI 예산 1.6배 확대…풀스택 AX 수출 추진
-https://www.aitimes.com/news/articleView.html?idxno=217751
+앤트로픽 "AI 도입 기업, 직원 해고보다 신규 채용 줄여"
+https://www.aitimes.com/news/articleView.html?idxno=217775
