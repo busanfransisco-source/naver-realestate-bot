@@ -1,5 +1,8 @@
 🤖 26년 11월 25일 수요일 AI 뉴스
 
+최첨단 AI, 글 하나만으로 작성자 실명까지 알아내…익명성 위협
+https://www.aitimes.com/news/articleView.html?idxno=217785
+
 로이터 "앨리스 황 관련 기업, 중국서 3억달러 규모 AI 장비 금융 거래 확인"
 https://www.aitimes.com/news/articleView.html?idxno=217784
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217777
 
 네이버클라우드, 한수원·한전KDN과 원전 AX 체계 구축
 https://www.aitimes.com/news/articleView.html?idxno=217776
-
-앤트로픽 "AI 도입 기업, 직원 해고보다 신규 채용 줄여"
-https://www.aitimes.com/news/articleView.html?idxno=217775
