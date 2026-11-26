@@ -1,6 +1,9 @@
 🤖 26년 11월 27일 금요일 AI 뉴스
 
-Z.ai &apos;GLM-5.5&apos; 출시 지연…문샷 AI도 개발 주기 두배 전망
+미 정보당국 "중국, 젠슨 황 사건 배후 조종 증거 없어"…간첩 의혹 판단은 엇갈려
+https://www.aitimes.com/news/articleView.html?idxno=217839
+
+Z.ai 'GLM-5.5' 출시 지연…문샷 AI도 개발 주기 두배 전망
 https://www.aitimes.com/news/articleView.html?idxno=217838
 
 엔비디아, 동남아 4개국 AI 서버 출하 중단…중국 우회 접근 차단
@@ -15,17 +18,14 @@ https://www.aitimes.com/news/articleView.html?idxno=217834
 뉴욕주, 어린이용 AI 챗봇 장난감 제조·판매 5년간 금지
 https://www.aitimes.com/news/articleView.html?idxno=217833
 
-아마존·메타, AI 에이전트 &apos;뮤즈&apos; 접근 차단 해제 협상
+아마존·메타, AI 에이전트 '뮤즈' 접근 차단 해제 협상
 https://www.aitimes.com/news/articleView.html?idxno=217831
 
-오픈AI, 기업 데이터 보호 강화한 &apos;프라이빗 추론&apos; 테스트
+오픈AI, 기업 데이터 보호 강화한 '프라이빗 추론' 테스트
 https://www.aitimes.com/news/articleView.html?idxno=217828
 
-[게시판] 인핸스, 국방정보본부 &apos;AI 민간자문기업&apos; 위촉 등 단신
+[게시판] 인핸스, 국방정보본부 'AI 민간자문기업' 위촉 등 단신
 https://www.aitimes.com/news/articleView.html?idxno=217827
 
-코그니션, 코딩 모델 &apos;SWE-2.1&apos; 출시…장기 작업·사이버 보안 성능 강화
+코그니션, 코딩 모델 'SWE-2.1' 출시…장기 작업·사이버 보안 성능 강화
 https://www.aitimes.com/news/articleView.html?idxno=217826
-
-구글, 맞춤형 AI TV 채널 구상…사용자가 영상 속 주인공
-https://www.aitimes.com/news/articleView.html?idxno=217825

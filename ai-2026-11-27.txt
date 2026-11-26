@@ -1,5 +1,14 @@
 🤖 26년 11월 27일 금요일 AI 뉴스
 
+미 정보당국 "중국, 젠슨 황 사건 배후 조종 증거 없어"…간첩 의혹 판단은 엇갈려
+https://www.aitimes.com/news/articleView.html?idxno=217839
+
+Z.ai 'GLM-5.5' 출시 지연…문샷 AI도 개발 주기 두배 전망
+https://www.aitimes.com/news/articleView.html?idxno=217838
+
+엔비디아, 동남아 4개국 AI 서버 출하 중단…중국 우회 접근 차단
+https://www.aitimes.com/news/articleView.html?idxno=217837
+
 오픈AI 노엄 브라운 "AI 재귀적 자기개선, 인류 기술 진화와 같은 원리"
 https://www.aitimes.com/news/articleView.html?idxno=217835
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217827
 
 코그니션, 코딩 모델 'SWE-2.1' 출시…장기 작업·사이버 보안 성능 강화
 https://www.aitimes.com/news/articleView.html?idxno=217826
-
-구글, 맞춤형 AI TV 채널 구상…사용자가 영상 속 주인공
-https://www.aitimes.com/news/articleView.html?idxno=217825
-
-아모데이 "인간 통제권 AI에 넘긴다는 주장 터무니없어"…경쟁사도 비판
-https://www.aitimes.com/news/articleView.html?idxno=217824
-
-구글, 외부 AI 에이전트에 지메일·드라이브 이용료 부과
-https://www.aitimes.com/news/articleView.html?idxno=217820
