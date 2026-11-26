@@ -1,5 +1,11 @@
 🤖 26년 11월 26일 목요일 AI 뉴스
 
+오픈AI, 57년 된 행렬 곱셈 난제 해결 주장…연산량 한계 규명
+https://www.aitimes.com/news/articleView.html?idxno=217818
+
+S&P, 엔비디아 신용등급 하향 검토…황 복귀에도 지배구조 불안
+https://www.aitimes.com/news/articleView.html?idxno=217811
+
 미국, 스페이스X 우주 데이터센터용 위성 최대 100만기 배치 승인
 https://www.aitimes.com/news/articleView.html?idxno=217807
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217797
 
 한컴위드, 통합 보안관리 플랫폼 '한컴 엑사임스' 출시
 https://www.aitimes.com/news/articleView.html?idxno=217795
-
-AI 투자 불안에 기술주 하락 지속…앤트로픽 장중 74달러까지 밀려
-https://www.aitimes.com/news/articleView.html?idxno=217790
-
-앤트로픽, 클로드로 누구나 PC 앱 제작·배포하도록 지원
-https://www.aitimes.com/news/articleView.html?idxno=217786
