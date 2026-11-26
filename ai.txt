@@ -1,31 +1,31 @@
 🤖 26년 11월 26일 목요일 AI 뉴스
 
+오픈AI 노엄 브라운 "AI 재귀적 자기개선, 인류 기술 진화와 같은 원리"
+https://www.aitimes.com/news/articleView.html?idxno=217835
+
+뉴욕주, 어린이용 AI 챗봇 장난감 제조·판매 5년간 금지
+https://www.aitimes.com/news/articleView.html?idxno=217833
+
+아마존·메타, AI 에이전트 '뮤즈' 접근 차단 해제 협상
+https://www.aitimes.com/news/articleView.html?idxno=217831
+
+오픈AI, 기업 데이터 보호 강화한 '프라이빗 추론' 테스트
+https://www.aitimes.com/news/articleView.html?idxno=217828
+
+[게시판] 인핸스, 국방정보본부 'AI 민간자문기업' 위촉 등 단신
+https://www.aitimes.com/news/articleView.html?idxno=217827
+
+코그니션, 코딩 모델 'SWE-2.1' 출시…장기 작업·사이버 보안 성능 강화
+https://www.aitimes.com/news/articleView.html?idxno=217826
+
+구글, 맞춤형 AI TV 채널 구상…사용자가 영상 속 주인공
+https://www.aitimes.com/news/articleView.html?idxno=217825
+
+아모데이 "인간 통제권 AI에 넘긴다는 주장 터무니없어"…경쟁사도 비판
+https://www.aitimes.com/news/articleView.html?idxno=217824
+
+구글, 외부 AI 에이전트에 지메일·드라이브 이용료 부과
+https://www.aitimes.com/news/articleView.html?idxno=217820
+
 오픈AI, 57년 된 행렬 곱셈 난제 해결 주장…연산량 한계 규명
 https://www.aitimes.com/news/articleView.html?idxno=217818
-
-S&P, 엔비디아 신용등급 하향 검토…황 복귀에도 지배구조 불안
-https://www.aitimes.com/news/articleView.html?idxno=217811
-
-미국, 스페이스X 우주 데이터센터용 위성 최대 100만기 배치 승인
-https://www.aitimes.com/news/articleView.html?idxno=217807
-
-이재혁 마키나락스 공동 창업자, 식품제조 AX로 시드 투자 유치
-https://www.aitimes.com/news/articleView.html?idxno=217805
-
-인천공항, AI 에이전트 운영 검증 완료…상황 대응 시간 최대 65% 단축 기대
-https://www.aitimes.com/news/articleView.html?idxno=217802
-
-오픈AI, 챗GPT·코덱스 사용량 통합…"헤비 유저 한도 조기 소진 가능"
-https://www.aitimes.com/news/articleView.html?idxno=217800
-
-"공무원도 AI로 포스터 만든다"...범정부 AI에 이미지 생성 모델 적용
-https://www.aitimes.com/news/articleView.html?idxno=217799
-
-중국 AI 기업, 모델 개발 포기까지 검토…미국과 기술 격차 9개월 전망
-https://www.aitimes.com/news/articleView.html?idxno=217798
-
-27일부터 'AI 가짜 의사·교수' 추천 광고 금지…위반 시 영업정지
-https://www.aitimes.com/news/articleView.html?idxno=217797
-
-한컴위드, 통합 보안관리 플랫폼 '한컴 엑사임스' 출시
-https://www.aitimes.com/news/articleView.html?idxno=217795
