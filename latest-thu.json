@@ -1,8 +1,12 @@
 {
-  "updated_at_kst": "2026-11-26 20:53:21",
+  "updated_at_kst": "2026-11-26 21:12:25",
   "source": "https://news.naver.com/breakingnews/section/101/260",
   "headline": "26년 11월 26일 목요일 부동산 주요뉴스",
   "articles": [
+    {
+      "title": "‘한남 3구역’ 뉴타운 지정 23년 만에 첫 삽",
+      "url": "https://n.news.naver.com/mnews/article/032/0003485413"
+    },
     {
       "title": "집값 급등에 종부세 대상 19만명 늘었다",
       "url": "https://n.news.naver.com/mnews/article/032/0003485405"
@@ -38,10 +42,6 @@
     {
       "title": "오세훈·김은혜, 부동산 정책 공조…내달 1일 세미나 공동 개최(종합)",
       "url": "https://n.news.naver.com/mnews/article/001/0016466621"
-    },
-    {
-      "title": "\"고가주택 주담대에 별도 부담금\"…HUG 포럼서 가격 기반 대출규제 제안",
-      "url": "https://n.news.naver.com/mnews/article/374/0000546179"
     }
   ]
 }
