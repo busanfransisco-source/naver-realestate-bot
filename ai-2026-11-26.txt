@@ -1,5 +1,8 @@
 🤖 26년 11월 26일 목요일 AI 뉴스
 
+AI 투자 불안에 기술주 하락 지속…앤트로픽 장중 74달러까지 밀려
+https://www.aitimes.com/news/articleView.html?idxno=217790
+
 앤트로픽, 클로드로 누구나 PC 앱 제작·배포하도록 지원
 https://www.aitimes.com/news/articleView.html?idxno=217786
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217779
 
 오픈AI, 기업용 AI 에이전트 정확도 높이는 데이터 도구 '아테나' 개발 중
 https://www.aitimes.com/news/articleView.html?idxno=217778
-
-정부, 공공 AI 상담 기준 마련…뉴욕선 같은 질문에도 다른 답변
-https://www.aitimes.com/news/articleView.html?idxno=217777
