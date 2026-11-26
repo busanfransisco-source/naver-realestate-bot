@@ -3,6 +3,9 @@
 오픈AI 노엄 브라운 "AI 재귀적 자기개선, 인류 기술 진화와 같은 원리"
 https://www.aitimes.com/news/articleView.html?idxno=217835
 
+AI가 작성한 코드, 같은 AI가 검토...개발 조직 절반 가까이 활용
+https://www.aitimes.com/news/articleView.html?idxno=217834
+
 뉴욕주, 어린이용 AI 챗봇 장난감 제조·판매 5년간 금지
 https://www.aitimes.com/news/articleView.html?idxno=217833
 
@@ -26,6 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217824
 
 구글, 외부 AI 에이전트에 지메일·드라이브 이용료 부과
 https://www.aitimes.com/news/articleView.html?idxno=217820
-
-오픈AI, 57년 된 행렬 곱셈 난제 해결 주장…연산량 한계 규명
-https://www.aitimes.com/news/articleView.html?idxno=217818
