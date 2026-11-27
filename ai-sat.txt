@@ -1,31 +1,31 @@
-🤖 26년 11월 21일 토요일 AI 뉴스
+🤖 26년 11월 28일 토요일 AI 뉴스
 
-머스크의 우주 데이터센터, 첫 금융 장벽…채권단 "GPU 반입 제한"
-https://www.aitimes.com/news/articleView.html?idxno=217650
+AI 기반 해킹 확산에 올해 개인정보유출 신고 전년 2배 훌쩍
+https://www.aitimes.com/news/articleView.html?idxno=217882
 
-AI 작업 능력, 6개월 만에 16시간→40시간…"판단력 여전히 한계"
-https://www.aitimes.com/news/articleView.html?idxno=217649
+무디스 "젠슨 황 복귀로 엔비디아 불확실성 완화"…신용등급 유지
+https://www.aitimes.com/news/articleView.html?idxno=217878
 
-구글, 제미나이 앱에 GIF 생성 기능 출시…오픈AI 이어 도입
-https://www.aitimes.com/news/articleView.html?idxno=217648
+뉴럴링크, 미 최초 BCI 핵심 임상시험 승인…상용화 검증 돌입
+https://www.aitimes.com/news/articleView.html?idxno=217875
 
-유튜브, 미 교육청들과 '중독 소송' 4조원 합의 추진
-https://www.aitimes.com/news/articleView.html?idxno=217647
+"막을 테면 막아봐!"...AI 안경 부정행위 차단, 해커톤서 역부족 확인
+https://www.aitimes.com/news/articleView.html?idxno=217874
 
-트럼프 "젠슨 황에 두 번째 기회 줘야"…CEO 복귀 재촉구
-https://www.aitimes.com/news/articleView.html?idxno=217646
+래블업, 로컬AI PC 앱 '에이아이고 2.0' 출시
+https://www.aitimes.com/news/articleView.html?idxno=217872
 
-엔비디아, SEC 회계 조사에 주가 14% 폭락…시총 4위 추락
-https://www.aitimes.com/news/articleView.html?idxno=217645
+EU, AI·양자컴퓨팅 육성에 최대 73조원 '기술 주권 펀드' 추진
+https://www.aitimes.com/news/articleView.html?idxno=217871
 
-"젠슨 황, 20여년 전부터 직원들에게 폭언·위협"…불만 제기 이어져
-https://www.aitimes.com/news/articleView.html?idxno=217644
+애플, 미니맥스 AI 동반자 '토키' 앱스토어에서 삭제…아동 안전 논란
+https://www.aitimes.com/news/articleView.html?idxno=217870
 
-스페이스X, '커서'의 중국 AI 모델 퇴출 검토
-https://www.aitimes.com/news/articleView.html?idxno=217643
+중국 기업, 미국 법인 통해 엔비디아 첨단 AI 칩 확보…또 다른 규제 허점
+https://www.aitimes.com/news/articleView.html?idxno=217869
 
-트럼프 "해외에 데이터센터 짓는 미국 기업에 막대한 세금 부과"
-https://www.aitimes.com/news/articleView.html?idxno=217642
+브이엠에스 솔루션스, AI·디지털 트윈 기반 생산계획 최적화 기술 공개
+https://www.aitimes.com/news/articleView.html?idxno=217868
 
-미 민주당, 엔비디아의 메가스피드 조사 개입 의혹 조사 착수
-https://www.aitimes.com/news/articleView.html?idxno=217641
+구글도 AI 수학 연구 경쟁 가세…소인수분해 34년 기록 경신 주장
+https://www.aitimes.com/news/articleView.html?idxno=217867
