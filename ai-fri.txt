@@ -1,7 +1,19 @@
 🤖 26년 11월 27일 금요일 AI 뉴스
 
+EU, AI·양자컴퓨팅 육성에 최대 73조원 '기술 주권 펀드' 추진
+https://www.aitimes.com/news/articleView.html?idxno=217871
+
+네덜란드 시민단체, 메타 AI 안경 판매 금지 요구…독일서도 법적 대응
+https://www.aitimes.com/news/articleView.html?idxno=217865
+
 'GPT-6 아스트라'로 양자 중력 이론 제안…'클로드'로 반박도 등장
 https://www.aitimes.com/news/articleView.html?idxno=217864
+
+앤트로픽, AI 내부 뉴런 직접 분석…숨겨진 위험 행동 탐지 기술 연구
+https://www.aitimes.com/news/articleView.html?idxno=217863
+
+'GPT-6.2 아스트라', 218년 된 스케치북 작가 22분 만에 찾아
+https://www.aitimes.com/news/articleView.html?idxno=217862
 
 SAP, AI 중심 구조조정 추진…최소 1만명 감원 검토
 https://www.aitimes.com/news/articleView.html?idxno=217860
@@ -17,15 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217851
 
 SK증권, LG CNS AIDC 매출 본격화로 내년 성장 가속화 전망
 https://www.aitimes.com/news/articleView.html?idxno=217850
-
-화웨이, 삼성·하이닉스에 도전…HBM4 대비 데이터 핀 두배 설계
-https://www.aitimes.com/news/articleView.html?idxno=217848
-
-앤트로픽, MCP 서버에 '스킬' 도입…AI 에이전트에 업무 노하우까지 전달
-https://www.aitimes.com/news/articleView.html?idxno=217847
-
-LGU+, 현대차·기아 배송로봇에 5G 단독모드 실증
-https://www.aitimes.com/news/articleView.html?idxno=217845
-
-[기고]AI가 탐낸 것은 정답이 아니라 경험이었다
-https://www.aitimes.com/news/articleView.html?idxno=217842
