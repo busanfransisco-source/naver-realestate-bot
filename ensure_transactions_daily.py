@@ -58,6 +58,8 @@ def check_today(directory=Path('.'), today=None):
 
 def recover(today, directory=Path('.'), fetch=fetch_page_html, sleeper=time.sleep):
     directory = Path(directory)
+    from transaction_presale import repair_outputs
+    repair_outputs(today, directory)
     dated = directory / f'transactions-{today.isoformat()}.txt'
     try:
         content = dated.read_text(encoding='utf-8')

@@ -57,6 +57,9 @@ jobs:
         run: |
           # Preserve a verified daily source, or recover the complete 05:00 batch.
           if python ensure_transactions_daily.py; then
+            # Retry only the auxiliary CSV under its own 20-second wall-clock budget.
+            # Its failure does not block publication or trigger nationwide recollection.
+            python realestate_transactions_fetch.py --refresh-presale-only || echo "Presale remains unconfirmed; publish verified apartments"
             exit 0
           fi
           for attempt in 1 2; do

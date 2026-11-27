@@ -12,6 +12,7 @@ from pathlib import Path
 
 from transaction_area_format import approximate_pyeong_type
 from transaction_region_order import population_order_key, region_heading
+from transaction_presale import count_line
 
 
 KST = timezone(timedelta(hours=9))
@@ -227,12 +228,12 @@ def build_digest(summary):
     target_date = summary_date(summary)
     total = int(summary.get("totalCount") or 0)
     record_count = int(summary.get("allTimeHighCount") or 0)
-    presale_count = int(summary.get("preconstructedSaleCount") or 0)
+    presale_count = summary.get("preconstructedSaleCount")
     lines = [
         f"{target_date.month}/{target_date.day}({WEEKDAY_KR_SHORT[target_date.weekday()]}) 신규 등록 실거래가",
         "",
         f"전국 {total:,}건 (🔥{record_count:,})",
-        f"분양권/입주권 {presale_count:,}건",
+        count_line(presale_count),
         f"🚀 1억클럽 신고가 {int(summary.get('oneHundredMillionClubAllTimeHighCount') or 0):,}건",
         f"💎 1억클럽 {int(summary.get('oneHundredMillionClubCount') or 0):,}건",
         "",
@@ -301,7 +302,7 @@ def main():
     print(
         f"05시 실거래 집계 완료: 전국 {summary.get('totalCount', 0):,}건, "
         f"신고가 {summary.get('allTimeHighCount', 0):,}건, "
-        f"분양권/입주권 {summary.get('preconstructedSaleCount', 0):,}건"
+        + count_line(summary.get('preconstructedSaleCount'))
     )
 
 

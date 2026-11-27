@@ -16,6 +16,7 @@ import json
 import os
 import threading
 import time
+import sys
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -459,9 +460,11 @@ def record_display_sort_key(row):
     )
 
 
-def build_digest(today, records):
+def build_digest(today, records, *, presale_status='ok'):
     records = list(records)
     presale_count = sum(1 for row in records if row.get("is_presale"))
+    records = [row for row in records if not row.get('is_presale')]
+    from transaction_presale import count_line
     record_highs = [row for row in records if row.get("is_record")]
     one_eok_club = [
         row for row in records
@@ -474,14 +477,15 @@ def build_digest(today, records):
         "",
         f"전국 {len(records):,}건 (🔥{len(record_highs):,})",
         "",
-        f"분양권/입주권 {presale_count:,}건",
+        count_line(presale_count, presale_status),
         f"🚀 1억클럽 신고가 {len(one_eok_record_highs):,}건",
         f"💎 1억클럽 {len(one_eok_regular):,}건",
         "",
         "※ 평형은 전용면적 기반 통상형 추정치(59㎡≈26평형, 84㎡≈34평형), 평당가는 전용면적 기준",
     ]
     if not records:
-        lines.extend(["", "전날 저장본과 비교해 새로 추가된 거래가 없습니다."])
+        lines.extend(["", "전날 저장본과 비교해 새로 추가된 아파트 거래가 없습니다."
+                      if presale_count else "전날 저장본과 비교해 새로 추가된 거래가 없습니다."])
         return "\n".join(lines)
 
     by_region = defaultdict(list)
@@ -564,23 +568,25 @@ def already_collected_today(today):
 def collect_transaction_rows(today, service_key):
     """아파트 API가 성공하면 보조 분양권 CSV 장애로 결과 전체를 버리지 않는다."""
     auxiliary_complete = True
+    presale_status = 'ok'
     if service_key:
         rows = fetch_nationwide_api(today, service_key)
         try:
-            rows.extend(
-                fetch_nationwide_transactions(
-                    today, thing_no="E", property_type="분양권/입주권"
-                )
-            )
+            from transaction_presale import fetch_rows
+            rows.extend(fetch_rows(today))
             source_name = "국토교통부 공공데이터 API + 실거래가 공개시스템 전국 CSV"
         except Exception as exc:
+            from transaction_presale import failure_status
+            presale_status = failure_status(exc)
             auxiliary_complete = False
             source_name = "국토교통부 공공데이터 API (분양권 CSV 일시 실패)"
-            print(f"분양권/입주권 보조 수집 실패: {exc} - 아파트 신고가는 계속 발행합니다")
+            print(f"분양권/입주권 보조 수집 실패: {presale_status} - 아파트 신고가는 계속 발행합니다")
     else:
         rows = fetch_nationwide_transactions(today)
         source_name = "국토교통부 실거래가 공개시스템 전국 CSV"
-    return rows, source_name, auxiliary_complete
+        auxiliary_complete = False
+        presale_status = 'failed'
+    return rows, source_name, auxiliary_complete, presale_status
 
 
 def seen_tokens_for_state(current_tokens, previous_tokens, auxiliary_complete):
@@ -593,25 +599,43 @@ def seen_tokens_for_state(current_tokens, previous_tokens, auxiliary_complete):
 
 def main(argv=None):
     parser = argparse.ArgumentParser()
+    parser.add_argument('--presale-payload', type=date.fromisoformat)
+    parser.add_argument('--refresh-presale-only', action='store_true')
     parser.add_argument(
         "--skip-if-collected-today",
         action="store_true",
         help="오늘 정상 산출물이 있으면 API 호출 없이 종료합니다.",
     )
     args = parser.parse_args(argv)
+    if args.presale_payload:
+        from transaction_presale import fetch_payload
+        sys.stdout.write(json.dumps(fetch_payload(args.presale_payload), ensure_ascii=False))
+        return
     now = datetime.now(KST)
     today = now.date()
+    if args.refresh_presale_only:
+        from transaction_presale import refresh
+        refresh(today)
+        return
     if args.skip_if_collected_today and already_collected_today(today):
         print(f"{today.isoformat()} 실거래가 수집이 이미 완료되어 건너뜁니다")
         return
     service_key = os.environ.get("MOLIT_API_KEY", "").strip()
-    rows, source_name, auxiliary_complete = collect_transaction_rows(today, service_key)
+    rows, source_name, auxiliary_complete, presale_status = collect_transaction_rows(today, service_key)
     current = tokenized_rows(rows)
 
     if STATE_PATH.exists():
         state = json.loads(STATE_PATH.read_text(encoding="utf-8"))
     else:
         state = {}
+    presale_baseline_date = state.get('presale_baseline_date')
+    presale_baseline_started_date = state.get('presale_baseline_started_date')
+    if auxiliary_complete:
+        if (presale_baseline_date not in ((today-timedelta(days=1)).isoformat(), today.isoformat())
+                or presale_baseline_started_date == today.isoformat()):
+            presale_status = 'baseline_pending'
+            presale_baseline_started_date = today.isoformat()
+        presale_baseline_date = today.isoformat()
     previous_version = state.get("version")
     if previous_version not in (4, 5, STATE_VERSION):
         state = {}
@@ -642,10 +666,10 @@ def main(argv=None):
             existing = state.get("today_new_records", [])
             merged = tokenized_rows([*existing, *classified])
             today_records = list(merged.values())
-            write_outputs(today, build_digest(today, today_records))
+            write_outputs(today, build_digest(today, today_records, presale_status=presale_status))
         else:
             today_records = classified
-            write_outputs(today, build_digest(today, today_records))
+            write_outputs(today, build_digest(today, today_records, presale_status=presale_status))
     else:
         # 첫날은 기준점만 만든다. 이미 오늘 검증된 수동 집계가 있으면 덮어쓰지 않는다.
         today_records = []
@@ -667,6 +691,10 @@ def main(argv=None):
     state = {
         "version": STATE_VERSION,
         "source": source_name,
+        "auxiliary_complete": auxiliary_complete,
+        "presale_status": presale_status,
+        "presale_baseline_date": presale_baseline_date,
+        "presale_baseline_started_date": presale_baseline_started_date,
         "collected_at": now.isoformat(timespec="seconds"),
         "contract_date_range": [
             (today - timedelta(days=30)).isoformat(),

@@ -256,14 +256,15 @@ class TransactionDigestTests(unittest.TestCase):
             "realestate_transactions_fetch.fetch_nationwide_api",
             return_value=[apartment],
         ), mock.patch(
-            "realestate_transactions_fetch.fetch_nationwide_transactions",
+            "transaction_presale.fetch_rows",
             side_effect=TimeoutError("CSV timeout"),
         ):
-            rows, source, complete = collect_transaction_rows(
+            rows, source, complete, status = collect_transaction_rows(
                 date(2026, 9, 18), "service-key"
             )
         self.assertEqual(rows, [apartment])
         self.assertFalse(complete)
+        self.assertEqual(status, 'timeout')
         self.assertIn("분양권 CSV 일시 실패", source)
 
     def test_partial_collection_preserves_previous_seen_tokens(self):

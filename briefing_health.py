@@ -154,7 +154,12 @@ def inspect(page, now=None):
             issues.append('coin top 10 incomplete')
         if key in ('realestate', 'world', 'finance', 'ai') and text.count('https://') < 2:
             issues.append('news links incomplete')
+        auxiliary_unconfirmed = key == 'transactions' and '분양권/입주권 집계 미확인(' in text
+        partial_transactions = auxiliary_unconfirmed and not issues
+        if auxiliary_unconfirmed:
+            issues.append('presale count unverified; verified apartment body retained')
         results.append(dict(slot=slot, key=key, status=('omitted' if optional_books_omitted else
+                                                       'partial' if partial_transactions else
                                                        ('failed' if now.hour >= due else 'pending') if issues
                                                        else 'delayed' if delayed_wiki else 'ok'),
                             sourceDelayed=delayed_wiki,
