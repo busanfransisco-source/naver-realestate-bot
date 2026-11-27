@@ -1,7 +1,13 @@
 🤖 26년 11월 27일 금요일 AI 뉴스
 
+SAP, AI 중심 구조조정 추진…최소 1만명 감원 검토
+https://www.aitimes.com/news/articleView.html?idxno=217860
+
 벤타엑스·스톤브이스튜디오, 영화 '한산'에 AI 접목한 VR 콘텐츠 내년 출시
 https://www.aitimes.com/news/articleView.html?idxno=217857
+
+스위스 정부 "AI 에이전트 활용 사이버 공격 5건 확인…4건 침해 성공"
+https://www.aitimes.com/news/articleView.html?idxno=217851
 
 SK증권, LG CNS AIDC 매출 본격화로 내년 성장 가속화 전망
 https://www.aitimes.com/news/articleView.html?idxno=217850
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217838
 
 엔비디아, 동남아 4개국 AI 서버 출하 중단…중국 우회 접근 차단
 https://www.aitimes.com/news/articleView.html?idxno=217837
-
-오픈AI 노엄 브라운 "AI 재귀적 자기개선, 인류 기술 진화와 같은 원리"
-https://www.aitimes.com/news/articleView.html?idxno=217835
-
-AI가 작성한 코드, 같은 AI가 검토...개발 조직 절반 가까이 활용
-https://www.aitimes.com/news/articleView.html?idxno=217834
