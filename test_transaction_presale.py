@@ -19,7 +19,7 @@ RIGHT = {**APT,'building_name':'검증분양권','is_presale':True,'property_typ
 class PresaleTests(TestCase):
     def write_fixture(self, folder, **changes):
         root=Path(folder)
-        state=dict(last_output_date=TODAY.isoformat(),source='국토교통부 공공데이터 API (분양권 CSV 일시 실패)',
+        state=dict(version=6,last_output_date=TODAY.isoformat(),source='국토교통부 공공데이터 API (분양권 CSV 일시 실패)',
                    today_new_records=[APT],seen_tokens=list(tokenized_rows([APT,RIGHT])),history_max={},
                    auxiliary_complete=False,presale_status='timeout')
         state.update(changes)
@@ -52,6 +52,9 @@ class PresaleTests(TestCase):
         self.assertIn('전국 1건 (🔥1)',text)
         self.assertIn('서울 1건 (🔥1)',text)
         self.assertIn('분양권/입주권 1건',text)
+        summary=build_digest(TODAY,[APT],presale_count=110)
+        self.assertIn('전국 1건 (🔥1)',summary)
+        self.assertIn('분양권/입주권 110건',summary)
 
     def test_health_records_partial_auxiliary_status_without_failing_apartment_publication(self):
         from datetime import datetime
@@ -104,6 +107,24 @@ class PresaleTests(TestCase):
             self.assertEqual((Path(folder)/'transactions.txt').read_text(encoding='utf8'),before)
             state=json.loads((Path(folder)/'transactions-state.json').read_text(encoding='utf8'))
             self.assertEqual(state['presale_status'],'ok')
+
+    def test_same_day_full_collection_keeps_a_verified_auxiliary_count(self):
+        import os
+        from datetime import datetime
+        import realestate_transactions_fetch as collection
+        with TemporaryDirectory() as folder:
+            self.write_fixture(folder,presale_baseline_date='2026-11-26',presale_baseline_started_date='2026-11-25',today_presale_count=110)
+            previous=os.getcwd()
+            try:
+                os.chdir(folder)
+                with patch.object(collection,'STATE_PATH',Path('transactions-state.json')), \
+                     patch.object(collection,'collect_transaction_rows',return_value=([APT,RIGHT],'verified sources',True,'ok')), \
+                     patch.object(collection,'datetime') as clock:
+                    clock.now.return_value=datetime(2026,11,27,12,tzinfo=collection.KST)
+                    collection.main([])
+                self.assertIn('분양권/입주권 110건',Path('transactions.txt').read_text(encoding='utf8'))
+            finally:
+                os.chdir(previous)
 
     def test_download_without_previous_baseline_is_not_fabricated_daily_zero(self):
         with TemporaryDirectory() as folder:

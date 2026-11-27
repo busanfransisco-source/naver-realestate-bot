@@ -460,9 +460,10 @@ def record_display_sort_key(row):
     )
 
 
-def build_digest(today, records, *, presale_status='ok'):
+def build_digest(today, records, *, presale_status='ok', presale_count=None):
     records = list(records)
-    presale_count = sum(1 for row in records if row.get("is_presale"))
+    if presale_count is None:
+        presale_count = sum(1 for row in records if row.get("is_presale"))
     records = [row for row in records if not row.get('is_presale')]
     from transaction_presale import count_line
     record_highs = [row for row in records if row.get("is_record")]
@@ -640,6 +641,11 @@ def main(argv=None):
     if previous_version not in (4, 5, STATE_VERSION):
         state = {}
     previous_tokens = set(state.get("seen_tokens", []))
+    carried_presale_count = (state.get('today_presale_count')
+                             if state.get('last_output_date') == today.isoformat() else None)
+    verified_presale_count = (carried_presale_count + sum(bool(current[token].get('is_presale'))
+                               for token in current.keys()-previous_tokens)
+                              if type(carried_presale_count) is int else None)
     history_max = state.get("history_max", {})
     bootstrap_preserve_date = state.get("bootstrap_preserve_date")
 
@@ -666,10 +672,12 @@ def main(argv=None):
             existing = state.get("today_new_records", [])
             merged = tokenized_rows([*existing, *classified])
             today_records = list(merged.values())
-            write_outputs(today, build_digest(today, today_records, presale_status=presale_status))
+            write_outputs(today, build_digest(today, today_records, presale_status=presale_status,
+                                             presale_count=verified_presale_count))
         else:
             today_records = classified
-            write_outputs(today, build_digest(today, today_records, presale_status=presale_status))
+            write_outputs(today, build_digest(today, today_records, presale_status=presale_status,
+                                             presale_count=verified_presale_count))
     else:
         # 첫날은 기준점만 만든다. 이미 오늘 검증된 수동 집계가 있으면 덮어쓰지 않는다.
         today_records = []
@@ -695,6 +703,9 @@ def main(argv=None):
         "presale_status": presale_status,
         "presale_baseline_date": presale_baseline_date,
         "presale_baseline_started_date": presale_baseline_started_date,
+        "today_presale_count": (verified_presale_count if verified_presale_count is not None else
+                                sum(bool(row.get('is_presale')) for row in today_records))
+                               if presale_status == 'ok' else carried_presale_count,
         "collected_at": now.isoformat(timespec="seconds"),
         "contract_date_range": [
             (today - timedelta(days=30)).isoformat(),

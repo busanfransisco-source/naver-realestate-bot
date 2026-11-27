@@ -4,7 +4,7 @@ import os
 import re
 import subprocess
 import sys
-from datetime import timedelta
+from datetime import datetime, timedelta
 from pathlib import Path
 
 PRESALE_BUDGET_SECONDS = 20
@@ -116,7 +116,7 @@ def fetch_payload(today):
 
 def refresh(today, directory=Path('.'), fetcher=fetch_rows):
     """Retry only the missing auxiliary part in the existing scheduled job."""
-    from realestate_transactions_fetch import tokenized_rows, classify_records, update_history_max
+    from realestate_transactions_fetch import KST, tokenized_rows, classify_records, update_history_max
     directory = Path(directory)
     path = directory/'transactions-state.json'
     state = json.loads(path.read_text(encoding='utf-8'))
@@ -134,6 +134,9 @@ def refresh(today, directory=Path('.'), fetcher=fetch_rows):
         print('Presale retry unresolved:', state['presale_status'], '; verified apartments retained')
         return False
     current = tokenized_rows(rows)
+    state['presale_collected_at'] = datetime.now(KST).isoformat()
+    state['source'] = state.get('source', '').replace(' (분양권 CSV 일시 실패)',
+                                                    ' + 실거래가 공개시스템 전국 CSV')
     yesterday = (today-timedelta(days=1)).isoformat()
     baseline_valid = (state.get('presale_baseline_date') in (yesterday, today.isoformat())
                       and state.get('presale_baseline_started_date') != today.isoformat())
@@ -141,6 +144,9 @@ def refresh(today, directory=Path('.'), fetcher=fetch_rows):
         previous = set(state.get('seen_tokens', []))
         added = classify_records([r for token, r in current.items() if token not in previous], state.get('history_max', {}))
         state['today_new_records'] = list(tokenized_rows([*state.get('today_new_records', []), *added]).values())
+        carried = state.get('today_presale_count')
+        state['today_presale_count'] = (carried+len(added) if type(carried) is int else
+                                        sum(bool(r.get('is_presale')) for r in state['today_new_records']))
         state['presale_status'] = 'ok'
     else:
         # A fresh month-long file alone cannot prove today's newly registered count.
@@ -156,7 +162,7 @@ def refresh(today, directory=Path('.'), fetcher=fetch_rows):
     else:
         from realestate_transactions_fetch import WEEKDAY_EN
         text = (directory/f'transactions-{today.isoformat()}.txt').read_text(encoding='utf-8')
-        total = sum(bool(r.get('is_presale')) for r in state['today_new_records'])
+        total = state['today_presale_count']
         fixed = re.sub(r'^분양권/입주권 [^\n]*', count_line(total), text, count=1, flags=re.M)
         for name in ('transactions.txt', f'transactions-{WEEKDAY_EN[today.weekday()]}.txt', f'transactions-{today.isoformat()}.txt'):
             (directory/name).write_text(fixed, encoding='utf-8')
