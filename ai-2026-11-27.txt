@@ -3,6 +3,15 @@
 벤타엑스·스톤브이스튜디오, 영화 '한산'에 AI 접목한 VR 콘텐츠 내년 출시
 https://www.aitimes.com/news/articleView.html?idxno=217857
 
+SK증권, LG CNS AIDC 매출 본격화로 내년 성장 가속화 전망
+https://www.aitimes.com/news/articleView.html?idxno=217850
+
+화웨이, 삼성·하이닉스에 도전…HBM4 대비 데이터 핀 두배 설계
+https://www.aitimes.com/news/articleView.html?idxno=217848
+
+LGU+, 현대차·기아 배송로봇에 5G 단독모드 실증
+https://www.aitimes.com/news/articleView.html?idxno=217845
+
 [기고]AI가 탐낸 것은 정답이 아니라 경험이었다
 https://www.aitimes.com/news/articleView.html?idxno=217842
 
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217835
 
 AI가 작성한 코드, 같은 AI가 검토...개발 조직 절반 가까이 활용
 https://www.aitimes.com/news/articleView.html?idxno=217834
-
-뉴욕주, 어린이용 AI 챗봇 장난감 제조·판매 5년간 금지
-https://www.aitimes.com/news/articleView.html?idxno=217833
-
-아마존·메타, AI 에이전트 '뮤즈' 접근 차단 해제 협상
-https://www.aitimes.com/news/articleView.html?idxno=217831
-
-오픈AI, 기업 데이터 보호 강화한 '프라이빗 추론' 테스트
-https://www.aitimes.com/news/articleView.html?idxno=217828
