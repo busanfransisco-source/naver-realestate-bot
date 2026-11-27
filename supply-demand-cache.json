@@ -3,7 +3,7 @@
   "providerId": "kb",
   "provider": "KB부동산",
   "housingType": "중개업소 시장동향 설문",
-  "checkedAtKst": "2026-11-27T10:59:19.216750+09:00",
+  "checkedAtKst": "2026-11-27T13:23:46.006753+09:00",
   "accessMode": "public_kb_datahub",
   "tableIds": {
     "weekly_jeonse": "weekRentSupInx",
