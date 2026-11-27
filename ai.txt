@@ -1,5 +1,11 @@
 🤖 26년 11월 27일 금요일 AI 뉴스
 
+벤타엑스·스톤브이스튜디오, 영화 '한산'에 AI 접목한 VR 콘텐츠 내년 출시
+https://www.aitimes.com/news/articleView.html?idxno=217857
+
+[기고]AI가 탐낸 것은 정답이 아니라 경험이었다
+https://www.aitimes.com/news/articleView.html?idxno=217842
+
 미 정보당국 "중국, 젠슨 황 사건 배후 조종 증거 없어"…간첩 의혹 판단은 엇갈려
 https://www.aitimes.com/news/articleView.html?idxno=217839
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217831
 
 오픈AI, 기업 데이터 보호 강화한 '프라이빗 추론' 테스트
 https://www.aitimes.com/news/articleView.html?idxno=217828
-
-[게시판] 인핸스, 국방정보본부 'AI 민간자문기업' 위촉 등 단신
-https://www.aitimes.com/news/articleView.html?idxno=217827
-
-코그니션, 코딩 모델 'SWE-2.1' 출시…장기 작업·사이버 보안 성능 강화
-https://www.aitimes.com/news/articleView.html?idxno=217826
