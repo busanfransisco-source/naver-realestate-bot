@@ -3,6 +3,9 @@
 SAP, AI 중심 구조조정 추진…최소 1만명 감원 검토
 https://www.aitimes.com/news/articleView.html?idxno=217860
 
+영국 중앙은행 총재 "미공개 최첨단 AI, 암호화 체계 위협 가능성"
+https://www.aitimes.com/news/articleView.html?idxno=217858
+
 벤타엑스·스톤브이스튜디오, 영화 '한산'에 AI 접목한 VR 콘텐츠 내년 출시
 https://www.aitimes.com/news/articleView.html?idxno=217857
 
@@ -15,6 +18,9 @@ https://www.aitimes.com/news/articleView.html?idxno=217850
 화웨이, 삼성·하이닉스에 도전…HBM4 대비 데이터 핀 두배 설계
 https://www.aitimes.com/news/articleView.html?idxno=217848
 
+앤트로픽, MCP 서버에 '스킬' 도입…AI 에이전트에 업무 노하우까지 전달
+https://www.aitimes.com/news/articleView.html?idxno=217847
+
 LGU+, 현대차·기아 배송로봇에 5G 단독모드 실증
 https://www.aitimes.com/news/articleView.html?idxno=217845
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217842
 
 미 정보당국 "중국, 젠슨 황 사건 배후 조종 증거 없어"…간첩 의혹 판단은 엇갈려
 https://www.aitimes.com/news/articleView.html?idxno=217839
-
-Z.ai 'GLM-5.5' 출시 지연…문샷 AI도 개발 주기 두배 전망
-https://www.aitimes.com/news/articleView.html?idxno=217838
-
-엔비디아, 동남아 4개국 AI 서버 출하 중단…중국 우회 접근 차단
-https://www.aitimes.com/news/articleView.html?idxno=217837
