@@ -1,5 +1,11 @@
 🤖 26년 11월 28일 토요일 AI 뉴스
 
+텐센트, AI로 비만·암 치료 후보물질 설계…네이처에 연구 성과
+https://www.aitimes.com/news/articleView.html?idxno=217890
+
+미국·유럽 잇단 사이버 공격…AI 시대 디지털 인프라 취약성 드러나
+https://www.aitimes.com/news/articleView.html?idxno=217888
+
 AI 기반 해킹 확산에 올해 개인정보유출 신고 전년 2배 훌쩍
 https://www.aitimes.com/news/articleView.html?idxno=217882
 
@@ -23,9 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217870
 
 중국 기업, 미국 법인 통해 엔비디아 첨단 AI 칩 확보…또 다른 규제 허점
 https://www.aitimes.com/news/articleView.html?idxno=217869
-
-브이엠에스 솔루션스, AI·디지털 트윈 기반 생산계획 최적화 기술 공개
-https://www.aitimes.com/news/articleView.html?idxno=217868
-
-구글도 AI 수학 연구 경쟁 가세…소인수분해 34년 기록 경신 주장
-https://www.aitimes.com/news/articleView.html?idxno=217867
