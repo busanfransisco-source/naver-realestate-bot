@@ -1,9 +1,18 @@
 🤖 26년 11월 28일 토요일 AI 뉴스
 
+유발 하라리 "AI 최대 위협은 '집단적 치매'...인류, 세상 이해 못할 것"
+https://www.aitimes.com/news/articleView.html?idxno=217900
+
+샤오펑 "휴머노이드 가격 전기차 수준"...자동차 기술로 양산·수익화
+https://www.aitimes.com/news/articleView.html?idxno=217899
+
+앤트로픽, 주가 11% 급등해 공모가 회복…12월 보호예수 해제가 변수
+https://www.aitimes.com/news/articleView.html?idxno=217898
+
 스페이스X 우주 데이터센터 100만기 승인에 과학계 반발
 https://www.aitimes.com/news/articleView.html?idxno=217897
 
-앤트로픽 전·현직 50여명 '수입 10% 기부' 서약…창업자들은 지분 80% 기부
+앤트로픽 전·현직 50여명 '수입 10% 기부' 서약…창업자 지분 80% 기부
 https://www.aitimes.com/news/articleView.html?idxno=217896
 
 [AI카툰] Bob, Senior IT guy - 밥, 휴먼러닝하기
@@ -20,12 +29,3 @@ https://www.aitimes.com/news/articleView.html?idxno=217892
 
 앨리스 황 관련 중국 데이터센터서 블랙웰 확인…일련번호까지 추적
 https://www.aitimes.com/news/articleView.html?idxno=217891
-
-텐센트, AI로 비만·암 치료 후보물질 설계…네이처에 연구 성과
-https://www.aitimes.com/news/articleView.html?idxno=217890
-
-오픈AI, 애플에 맞소송…"협력업체 압박해 AI 기기 생산 방해"
-https://www.aitimes.com/news/articleView.html?idxno=217889
-
-미국·유럽 잇단 사이버 공격…AI 시대 디지털 인프라 취약성 드러나
-https://www.aitimes.com/news/articleView.html?idxno=217888
